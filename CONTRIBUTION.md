@@ -4,7 +4,7 @@ Thank you for your interest in contributing to informatician! This project aims 
 
 ## Code of Conduct
 
-By participating in this project, you agree to abide by our [Code of Conduct](CODE_OF_CONDUCT.md). This code of conduct outlines the expectations for behavior, language, and interactions with other contributors in this project. We want to create a positive and respectful environment for everyone involved. Please report any unacceptable behavior to `rohanshx@gmail.com`.
+By participating in this project, you agree to abide by our [Code of Conduct](CODE_OF_CONDUCT.md). This code of conduct outlines the expectations for behavior, language, and interactions with other contributors in this project. We want to create a positive and respectful environment for everyone involved. Please report any unacceptable behavior to rohanshx@gmail.com.
 
 ## How to Contribute
 
@@ -59,7 +59,7 @@ Thank you for helping us improve our documentation!
 
 ## How to Get Help
 
-If you have any questions or need any help with informatician, please feel free to reach out to us at `rohanshx@gmail.com` or join our `discussion forum`. You can also find more information on how to use informatician in our `documentation`. We are happy to assist you with any issues or inquiries.
+If you have any questions or need any help with informatician, please feel free to reach out to us at rohanshx@gmail.com or join our `discussion forum`. You can also find more information on how to use informatician in our `documentation`. We are happy to assist you with any issues or inquiries.
 
 ## Thank You
 

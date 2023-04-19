@@ -6,7 +6,7 @@ This style guide provides some general rules and recommendations for writing cod
 
 You can use [Prettier](https://prettier.io/) to format our code automatically. Please install Prettier in your editor or run it before committing your changes. You can also use `npm run format` to format all the files in the project.
 
-YOu can use [ESLint](https://eslint.org/) to enforce some code style rules and catch common errors. Please install ESLint in your editor or run it before committing your changes. You can also use `npm run lint` to check all the files in the project.
+You can use [ESLint](https://eslint.org/) to enforce some code style rules and catch common errors. Please install ESLint in your editor or run it before committing your changes. You can also use `npm run lint` to check all the files in the project.
 
 Some general code style rules are:
 
@@ -52,4 +52,4 @@ Some general documentation style rules are:
 - Provide links to relevant resources and references
 - Provide feedback and contact information at the end of each document
 
-For more details and examples, see the [Microsoft Style Guide](https://docs.microsoft.com/en-us/style-guide/welcome/).
+For more details and examples, see the [Microsoft Style Guide](https://docs.microsoft.com/en-us/style-guide/welcome/). If you have any feedback or questions, please feel free to reach out to us at rohanshx@gmail.com or join our `discussion forum` . We would love to hear from you!
