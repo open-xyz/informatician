@@ -52,4 +52,6 @@ Some general documentation style rules are:
 - Provide links to relevant resources and references
 - Provide feedback and contact information at the end of each document
 
-For more details and examples, see the [Microsoft Style Guide](https://docs.microsoft.com/en-us/style-guide/welcome/). If you have any feedback or questions, please feel free to reach out to us at rohanshx@gmail.com or join our `discussion forum` . We would love to hear from you!
+For more details and examples, see the [Microsoft Style Guide](https://docs.microsoft.com/en-us/style-guide/welcome/).
+
+If you have any feedback or questions, please feel free to reach out to us at rohanshx@gmail.com or join our `discussion forum` . We would love to hear from you!
