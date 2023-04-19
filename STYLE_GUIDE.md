@@ -4,9 +4,9 @@ This style guide provides some general rules and recommendations for writing cod
 
 ## Code Style
 
-You can use [Prettier] (https://prettier.io/) to format our code automatically. Please install Prettier in your editor or run it before committing your changes. You can also use `npm run format` to format all the files in the project.
+You can use [Prettier](https://prettier.io/) to format our code automatically. Please install Prettier in your editor or run it before committing your changes. You can also use `npm run format` to format all the files in the project.
 
-YOu can use [ESLint] (https://eslint.org/) to enforce some code style rules and catch common errors. Please install ESLint in your editor or run it before committing your changes. You can also use `npm run lint` to check all the files in the project.
+YOu can use [ESLint](https://eslint.org/) to enforce some code style rules and catch common errors. Please install ESLint in your editor or run it before committing your changes. You can also use `npm run lint` to check all the files in the project.
 
 Some general code style rules are:
 
@@ -27,15 +27,15 @@ Some general code style rules are:
 - Avoid using magic numbers or hard-coded values
 - Avoid using console.log or debugger statements
 - Add comments to explain complex or unclear logic
-- Document your code using [JSDoc] (https://jsdoc.app/) syntax
+- Document your code using [JSDoc](https://jsdoc.app/) syntax
 
-For more details and examples, see the [Prettier] (https://prettier.io/docs/en/options.html) and [ESLint] (https://eslint.org/docs/rules/) documentation.
+For more details and examples, see the [Prettier](https://prettier.io/docs/en/options.html) and [ESLint](https://eslint.org/docs/rules/) documentation.
 
 ## Documentation Style
 
-We use [Markdown] (https://daringfireball.net/projects/markdown/) to write our documentation. Please follow the [Markdown style guide] (https://google.github.io/styleguide/docguide/style.html) for general rules and recommendations on how to write Markdown files.
+We use [Markdown](https://daringfireball.net/projects/markdown/) to write our documentation. Please follow the [Markdown style guide](https://google.github.io/styleguide/docguide/style.html) for general rules and recommendations on how to write Markdown files.
 
-We also use some custom markup syntax for specific features on docs.github.com, such as alerts, tables, images, links, and more. Please see our [markup reference guide] (https://github.com/github/docs/blob/main/contributing/content-markup-reference.md) for more details and examples on how to use these features.
+We also use some custom markup syntax for specific features on docs.github.com, such as alerts, tables, images, links, and more. Please see our [markup reference guide](https://github.com/github/docs/blob/main/contributing/content-markup-reference.md) for more details and examples on how to use these features.
 
 Some general documentation style rules are:
 
@@ -52,4 +52,4 @@ Some general documentation style rules are:
 - Provide links to relevant resources and references
 - Provide feedback and contact information at the end of each document
 
-For more details and examples, see the [Microsoft Style Guide] (https://docs.microsoft.com/en-us/style-guide/welcome/).
+For more details and examples, see the [Microsoft Style Guide](https://docs.microsoft.com/en-us/style-guide/welcome/).
