@@ -1,10 +1,10 @@
 # Contributing to informatician
 
-Thank you for your interest in contributing to informatician! This project aims to provide useful tools and resources for information science researchers and practitioners. We welcome all types of contributions, such as bug reports, feature requests, documentation improvements, code enhancements, and more. Please read this guide carefully before making your contribution.
+Thank you for your interest in contributing to informatician! This project aims to provide useful resources i.e., Books for information and research purposes to its users. You can learn more about the purpose and features of this project by reading the [README.md] (README.md) file. We welcome all types of contributions, such as bug reports, feature requests, documentation improvements, code enhancements, and more. Please read this guide carefully before making your contribution.
 
 ## Code of Conduct
 
-By participating in this project, you agree to abide by our [Code of Conduct] (CODE_OF_CONDUCT.md). Please report any unacceptable behavior to informatixian@gmail.com.
+By participating in this project, you agree to abide by our [Code of Conduct] (CODE_OF_CONDUCT.md). This code of conduct outlines the expectations for behavior, language, and interactions with other contributors in this project. We want to create a positive and respectful environment for everyone involved. Please report any unacceptable behavior to `rohanshx@gmail.com`.
 
 ## How to Contribute
 
@@ -37,7 +37,6 @@ We will review your suggestion and discuss its feasibility and implementation. T
 If you want to contribute code to informatician, please follow these steps:
 
 - Fork the repository and create a new branch for your feature or bug fix
-- Make sure your code follows our [style guide] (STYLE_GUIDE.md) and passes our tests
 - Commit your changes with a clear and descriptive message
 - Push your branch to your fork and open a [pull request] (https://github.com/informatixian/informatician/pulls) against the main branch
 - Wait for our review and feedback. We may ask you to make some changes or additions before merging your pull request.
@@ -58,22 +57,10 @@ If you want to improve the documentation of informatician, such as the README, t
 
 Thank you for helping us improve our documentation!
 
-## Style Guide
+## How to Get Help
 
-Please refer to our [style guide] (STYLE_GUIDE.md) for more information on how we write our code and documentation.
-
-## Join The Project Team
-
-If you are interested in joining the informatician project team and become a maintainer or a collaborator, please contact us at informatixian@gmail.com. We are looking for people who are passionate about information science and have some experience with web development, data analysis, or user interface design. As a project team member, you will have more responsibilities and privileges, such as:
-
-- Reviewing and merging pull requests
-- Creating and closing issues
-- Managing the project roadmap and milestones
-- Updating the project website and wiki
-- Promoting the project and engaging with the community
-
-We appreciate your interest and enthusiasm for informatician!
+If you have any questions or need any help with informatician, please feel free to reach out to us at `rohanshx@gmail.com` or join our `discussion forum`. You can also find more information on how to use informatician in our `documentation`. We are happy to assist you with any issues or inquiries.
 
 ## Thank You
 
-We would like to thank all the contributors who have helped us improve informatician. Your contributions are valuable and make this project better for everyone. We hope you enjoy using informatician and find it helpful for your information science projects. If you have any feedback or questions, please feel free to reach out to us at informatixian@gmail.com or join our [discussion forum] (https://github.com/informatixian/informatician/discussions). We would love to hear from you!
+We would like to thank all the contributors who have helped us improve informatician. Your contributions are valuable and make this project better for everyone. We hope you enjoy using informatician and find it helpful for your information projects. If you have any feedback or questions, please feel free to reach out to us at rohanshx@gmail.com or join our `discussion forum` . We would love to hear from you!
