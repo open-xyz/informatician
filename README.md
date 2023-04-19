@@ -51,8 +51,6 @@ Contributions to this project are welcome. To contribute, please follow these st
 
 ## License
 
-This project is licensed under the MIT License. See the `LICENSE` file for more information.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
 
-
-
-
+If you have any feedback or questions, please feel free to reach out to us at rohanshx@gmail.com or join our `discussion forum` . We would love to hear from you!
