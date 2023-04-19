@@ -1,65 +1,57 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>INFORMATICIAN</title>
-</head>
-<body>
-    <h1>Open Source Book Listing Web Application</h1>
+# Node.js Open Source Book Listing Web Application
 
-    <p>This is an open source web application built using Node.js for listing and categorizing books. This application allows users to search for books, add new books to the database, and rate and review books. The application is built using Node.js, Express.js, and MongoDB.</p>
+This is an open source web application built using Node.js for listing and categorizing books. This application allows users to search for books, add new books to the database, and rate and review books. The application is built using Node.js, Express.js, and MongoDB.
 
-    <h2>Features</h2>
+## Features
 
-    <ul>
-        <li>Search for books by title, author, or category</li>
-        <li>Add new books to the database</li>
-        <li>Rate and review books</li>
-        <li>Admin panel for managing books and users</li>
-        <li>Authentication and authorization</li>
-        <li>Responsive design for mobile devices</li>
-    </ul>
+- Search for books by title, author, or category
+- Add new books to the database
+- Rate and review books
+- Admin panel for managing books and users
+- Authentication and authorization
+- Responsive design for mobile devices
 
-    <h2>Installation</h2>
+## Installation
 
-    <ol>
-        <li>Clone the repository:</li>
+1. Clone the repository:
+ ```sh
+ $ git clone https://github.com/informatixian/informatician.git
+ ```
 
-        <code>git clone https://github.com/informatixian/informatician.git</code>
+2. Install dependencies:
+```sh
+ $ npm install
+```
 
-        <li>Install dependencies:</li>
+3. Configure environment variables:
+```sh
+ $ cp .env.example .env
+```
 
-        <code>npm install</code>
+4. Start the application:
+```sh
+ $ npm start
+```
 
-        <li>Configure environment variables:</li>
 
-        <code>cp .env.example .env</code>
+## Usage
 
-        <li>Start the application:</li>
+The application can be accessed in a web browser at `http://localhost:3000`.
 
-        <code>npm start</code>
-    </ol>
+## Contributing
 
-    <h2>Usage</h2>
+Contributions to this project are welcome. To contribute, please follow these steps:
 
-    <p>The application can be accessed in a web browser at <code>http://localhost:3000</code>.</p>
+1. Fork the repository
+2. Create a new branch for your feature or bug fix
+3. Make your changes and commit them
+4. Push your changes to your fork
+5. Submit a pull request to the main repository
 
-    <h2>Contributing</h2>
+## License
 
-    <p>Contributions to this project are welcome. To contribute, please follow these steps:</p>
+This project is licensed under the MIT License. See the `LICENSE` file for more information.
 
-    <ol>
-        <li>Fork the repository</li>
-        <li>Create a new branch for your feature or bug fix</li>
-        <li>Make your changes and commit them</li>
-        <li>Push your changes to your fork</li>
-        <li>Submit a pull request to the main repository</li>
-    </ol>
 
-    <h2>License</h2>
 
-    <p>This project is licensed under the MIT License. See the <code>LICENSE</code> file for more information.</p>
-</body>
-</html>
+
