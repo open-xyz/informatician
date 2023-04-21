@@ -1,7 +1,7 @@
 # INFORMATICIAN
-## Node.js Open Source Book Listing Web Application
+## An Open Source Book Listing Web Application
 
-This is an open source web application built using Node.js for listing and categorizing books. This application allows users to search for books, add new books to the database, and rate and review books. The application is built using Node.js, Express.js, and MongoDB.
+This is an open source web application built for listing and categorizing books. This application allows users to search for books, add new books to the database, and rate and review books. The application is built using Node.js, Express.js, React.js and MongoDB.
 
 ## Features
 
