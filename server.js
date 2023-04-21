@@ -1,8 +1,9 @@
+require('./App.css');
 const express = require('express');
 const app = express();
 
 
-app.get('/', (req, res) => {
+app.get('./App.css', (req, res) => {
     res.send('Hello, World!');
   });
 
