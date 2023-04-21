@@ -16,17 +16,12 @@ This is an open source web application built using Node.js for listing and categ
 
 1. Clone the repository:
  ```sh
- $ git clone https://github.com/informatixian/informatician.git
+ $ git clone https://github.com/openeon/informatician.git
  ```
 
 2. Install dependencies:
 ```sh
  $ npm install
-```
-
-3. Configure environment variables:
-```sh
- $ cp .env.example .env
 ```
 
 4. Start the application:
