@@ -46,7 +46,7 @@ Contributions to this project are welcome. To contribute, please follow these st
 
 ## License
 
-This project is licensed under the MIT License. See the ![LICENSE] file for more information.
+This project is licensed under the MIT License. See the LICENSE file for more information.
 
 1. For feature branches: feature/{short-description-of-feature}
 Example: feature/add-user-login
