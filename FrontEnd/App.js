@@ -1,5 +1,5 @@
-import React from 'react';
-import './App.css';
+require('./App.css');
+const React = require('react');
 
 function App() {
   return (
