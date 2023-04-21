@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/informatixian/informatician.git"
+    "url": "git+https://github.com/openeon/informatician.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/informatixian/informatician/issues"
+    "url": "https://github.com/openeon/informatician/issues"
   },
-  "homepage": "https://github.com/informatixian/informatician#readme",
+  "homepage": "https://github.com/openeon/informatician#readme",
   "dependencies": {
     "ejs": "^3.1.9",
     "express": "^4.18.2",
