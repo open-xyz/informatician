@@ -1,7 +1,7 @@
-# INFORMATICIAN 
-## _An Open Source Book Listing Web Application_
+# INFORMATICIAN
+## An Open Source Book Listing Web Application
 
-This is an open source web application built using Node.js for listing and categorizing books. This application allows users to search for books, add new books to the database, and rate and review books. The application is built using Node.js, Express.js, and MongoDB.
+This is an open source web application built for listing and categorizing books. This application allows users to search for books, add new books to the database, and rate and review books. The application is built using Node.js, Express.js, React.js and MongoDB.
 
 ## Features
 
@@ -16,17 +16,12 @@ This is an open source web application built using Node.js for listing and categ
 
 1. Clone the repository:
  ```sh
- $ git clone https://github.com/informatixian/informatician.git
+ $ git clone https://github.com/openeon/informatician.git
  ```
 
 2. Install dependencies:
 ```sh
  $ npm install
-```
-
-3. Configure environment variables:
-```sh
- $ cp .env.example .env
 ```
 
 4. Start the application:
@@ -51,6 +46,19 @@ Contributions to this project are welcome. To contribute, please follow these st
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
+This project is licensed under the MIT License. See the `LICENSE` file for more information.
 
-If you have any feedback or questions, please feel free to reach out to us at rohanshx@gmail.com or join our `discussion forum` . We would love to hear from you!
+1. For feature branches: feature/{short-description-of-feature}
+Example: feature/add-user-login
+
+2. For bugfix branches: bugfix/{short-description-of-bug}
+Example: bugfix/fix-broken-link
+
+3. For release branches: release/{version-number}
+Example: release/1.0.0
+
+4. For hotfix branches: hotfix/{short-description-of-fix}
+Example: hotfix/fix-security-vulnerability
+
+
+
