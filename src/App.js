@@ -1,17 +1,15 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Home from './components/Home';
-import BookDetails from './components/BookDetails';
+import BookList from './components/BookList';
 
-function App() {
-  return (
-    <Router>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/book/:id" component={BookDetails} />
-      </Switch>
-    </Router>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1>My App</h1>
+        <BookList />
+      </div>
+    );
+  }
 }
 
 export default App;
