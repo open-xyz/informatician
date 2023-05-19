@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import BookList from './components/BookList';
+import Footer from './components/Footer';
 
 class App extends React.Component {
   render() {
@@ -9,6 +10,7 @@ class App extends React.Component {
         <Navbar />
         <h1>My App</h1>
         <BookList />
+        <Footer />
       </div>
     );
   }
