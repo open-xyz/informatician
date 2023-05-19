@@ -1,5 +1,3 @@
-/* Navbar.css */
-
 .navbar {
     background-color: #000;
     padding: 10px 0;
@@ -23,6 +21,30 @@
   .navbar-items {
     display: flex;
     align-items: center;
+  }
+  
+  .navbar-search {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+  
+  .navbar-search-input {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+    font-size: 14px;
+  }
+  
+  .navbar-search-button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #ccc;
+    color: #000;
+    font-size: 14px;
+    cursor: pointer;
   }
   
   .navbar-link {

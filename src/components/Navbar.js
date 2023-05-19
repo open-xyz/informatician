@@ -9,6 +9,10 @@ class Navbar extends Component {
           <div className="container">
             <div className="navbar-brand">Book Listing App</div>
             <div className="navbar-items">
+              <div className="navbar-search">
+                <input type="text" placeholder="Search" className="navbar-search-input" />
+                <button className="navbar-search-button">Search</button>
+              </div>
               <a className="navbar-link" href="/">Home</a>
               <a className="navbar-link" href="/books">Books</a>
               <a className="navbar-link" href="/about">About</a>
