@@ -5,8 +5,6 @@ import Footer from './components/Layout/Header/Footer';
 import About from './components/About';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from './components/Layout/Layout';
-
-
 class App extends React.Component {
   render() {
     return (
