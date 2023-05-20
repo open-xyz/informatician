@@ -1,60 +1,71 @@
 .navbar {
-    background-color: #000;
-    padding: 10px 0;
-    color: #fff;
-  }
-  
-  .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  
-  .navbar-brand {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  .navbar-items {
-    display: flex;
-    align-items: center;
-  }
-  
-  .navbar-search {
-    display: flex;
-    align-items: center;
-    margin-right: 20px;
-  }
-  
-  .navbar-search-input {
-    padding: 6px 10px;
-    border: none;
-    border-radius: 4px;
-    margin-right: 10px;
-    font-size: 14px;
-  }
-  
-  .navbar-search-button {
-    padding: 8px 12px;
-    border: none;
-    border-radius: 4px;
-    background-color: #ccc;
-    color: #000;
-    font-size: 14px;
-    cursor: pointer;
-  }
-  
-  .navbar-link {
-    color: #fff;
-    font-size: 16px;
-    text-decoration: none;
-    margin-left: 20px;
-  }
-  
-  .navbar-link:hover {
-    color: #ccc;
-  }
-  
+  background-color: #000;
+  padding: 10px 0;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar-items {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-search {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.navbar-search-input {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.navbar-search-button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #ccc;
+  color: #000;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.navbar-link {
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.navbar-link:hover {
+  color: #ccc;
+}
+
+/* Additional CSS for links */
+.navbar-items > a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  margin-left: 20px;
+}
+
+.navbar-items > a:hover {
+  color: #ccc;
+}
