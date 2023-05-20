@@ -1,0 +1,43 @@
+.about {
+  background-color: #f8f8f8;
+  padding: 40px 0;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+}
+
+.about-text {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.about-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.about-description {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.about-image {
+  flex: 1;
+  text-align: center;
+}
+
+.book-image {
+  max-width: 500px;
+  height: auto;
+}

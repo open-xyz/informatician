@@ -1,6 +1,6 @@
 # INFORMATICIAN
 ## An Open Source Book Listing Web Application
-
+           
 This is an open source web application built for listing and categorizing books. This application allows users to search for books, add new books to the database, and rate and review books. The application is built using Node.js, Express.js, React.js and MongoDB.
 
 ## Features
@@ -44,21 +44,22 @@ Contributions to this project are welcome. To contribute, please follow these st
 4. Push your changes to your fork
 5. Submit a pull request to the main repository
 
-## License
 
-This project is licensed under the MIT License. See the LICENSE file for more information.
-
-1. For feature branches: feature/{short-description-of-feature}
-Example: feature/add-user-login
-
-2. For bugfix branches: bugfix/{short-description-of-bug}
-Example: bugfix/fix-broken-link
-
-3. For release branches: release/{version-number}
-Example: release/1.0.0
-
-4. For hotfix branches: hotfix/{short-description-of-fix}
-Example: hotfix/fix-security-vulnerability
-
+<div align="center">
+<img src="https://forthebadge.com/images/badges/built-with-love.svg" />
+<img src="https://forthebadge.com/images/badges/uses-brains.svg" />
+<img src="https://forthebadge.com/images/badges/powered-by-responsibility.svg" />
+   </div>
+   <div align="center">
+<img src="https://img.shields.io/github/license/rohansx/informatician?style=for-the-badge" />
+<img src="https://img.shields.io/github/repo-size/rohansx/informatician?style=for-the-badge" />
+<img src="https://img.shields.io/github/issues/rohansx/informatician?style=for-the-badge" /><br>
+<img src="https://img.shields.io/github/issues-pr/rohansx/informatician?style=for-the-badge" />
+ <img src="https://img.shields.io/github/forks/rohansx/informatician?style=for-the-badge" />
+ <img src="https://img.shields.io/github/issues-closed-raw/rohansx/informatician?style=for-the-badge" />
+  <img src="https://img.shields.io/github/contributors/rohansx/informatician?style=for-the-badge" />
+ <img src="https://img.shields.io/github/stars/rohansx/informatician?style=for-the-badge" />
+ <img src="https://img.shields.io/github/last-commit/rohansx/informatician?style=for-the-badge" />
+</div>
 
 
