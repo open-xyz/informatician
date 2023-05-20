@@ -1,9 +1,13 @@
-import React from 'react';
-import './Footer.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import playstore from '../assets/logo_play_store.png';
-import appstore from '../assets/AppStore_Icon.png';
+import React from "react";
+import "./Footer.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebookF,
+  faTwitter,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons";
+import playstore from "../assets/logo_play_store.png";
+import appstore from "../assets/AppStore_Icon.png";
 
 class Footer extends React.Component {
   render() {
@@ -13,25 +17,43 @@ class Footer extends React.Component {
           <div className="footer-section">
             <h3 className="footer-section-title">About</h3>
             <ul className="footer-section-list">
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Our Team</a></li>
-              <li><a href="#">Contact Us</a></li>
+              <li>
+                <a href="#">About Us</a>
+              </li>
+              <li>
+                <a href="#">Our Team</a>
+              </li>
+              <li>
+                <a href="#">Contact Us</a>
+              </li>
             </ul>
           </div>
           <div className="footer-section">
             <h3 className="footer-section-title">Support</h3>
             <ul className="footer-section-list">
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">Help Center</a></li>
-              <li><a href="#">Report a Bug</a></li>
+              <li>
+                <a href="#">FAQ</a>
+              </li>
+              <li>
+                <a href="#">Help Center</a>
+              </li>
+              <li>
+                <a href="#">Report a Bug</a>
+              </li>
             </ul>
           </div>
           <div className="footer-section">
             <h3 className="footer-section-title">Legal</h3>
             <ul className="footer-section-list">
-              <li><a href="#">Terms of Service</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Cookie Policy</a></li>
+              <li>
+                <a href="#">Terms of Service</a>
+              </li>
+              <li>
+                <a href="#">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="#">Cookie Policy</a>
+              </li>
             </ul>
           </div>
           <div className="footer-section">
@@ -60,15 +82,23 @@ class Footer extends React.Component {
             </div>
           </div>
           <div className="footer-section">
-            <h3 className="footer-section-title">Subscribe to Our Newsletter</h3>
+            <h3 className="footer-section-title">
+              Subscribe to Our Newsletter
+            </h3>
             <form className="footer-newsletter-form">
-              <input type="email" placeholder="Enter your email" className="footer-newsletter-input" />
-              <button type="submit" className="footer-newsletter-submit">Subscribe</button>
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="footer-newsletter-input"
+              />
+              <button type="submit" className="footer-newsletter-submit">
+                Subscribe
+              </button>
             </form>
           </div>
         </div>
         <div className="footer-bottom">
-          &copy; 2023 Book Listing App. All rights reserved.
+          &copy; 2023 Informatician. All rights reserved.
         </div>
       </footer>
     );
