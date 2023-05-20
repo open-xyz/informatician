@@ -1,6 +1,22 @@
 # INFORMATICIAN
 ## An Open Source Book Listing Web Application
-
+<div align="center">
+<img src="https://forthebadge.com/images/badges/built-with-love.svg" />
+<img src="https://forthebadge.com/images/badges/uses-brains.svg" />
+<img src="https://forthebadge.com/images/badges/powered-by-responsibility.svg" />
+   </div>
+   <div align="center">
+<img src="https://img.shields.io/github/license/rohansx/informatician?style=for-the-badge" />
+<img src="https://img.shields.io/github/repo-size/rohansx/informatician?style=for-the-badge" />
+<img src="https://img.shields.io/github/issues/rohansx/informatician?style=for-the-badge" /><br>
+<img src="https://img.shields.io/github/issues-pr/rohansx/informatician?style=for-the-badge" />
+ <img src="https://img.shields.io/github/forks/rohansx/informatician?style=for-the-badge" />
+ <img src="https://img.shields.io/github/issues-closed-raw/rohansx/informatician?style=for-the-badge" />
+  <img src="https://img.shields.io/github/contributors/rohansx/informatician?style=for-the-badge" />
+ <img src="https://img.shields.io/github/stars/rohansx/informatician?style=for-the-badge" />
+ <img src="https://img.shields.io/github/last-commit/rohansx/informatician?style=for-the-badge" />
+</div>
+           <br>
 This is an open source web application built for listing and categorizing books. This application allows users to search for books, add new books to the database, and rate and review books. The application is built using Node.js, Express.js, React.js and MongoDB.
 
 ## Features
