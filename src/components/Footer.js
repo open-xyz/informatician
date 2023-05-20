@@ -38,7 +38,7 @@ class Footer extends React.Component {
                 <a href="#">Help Center</a>
               </li>
               <li>
-                <a href="#">Report a Bug</a>
+                <a href="https://github.com/rohansx/informatician/issues/new">Report a Bug</a>
               </li>
             </ul>
           </div>
