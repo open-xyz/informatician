@@ -18,7 +18,7 @@ class Footer extends React.Component {
             <h3 className="footer-section-title">About</h3>
             <ul className="footer-section-list">
               <li>
-                <a href="#">About Us</a>
+                <a href="/about">About Us</a>
               </li>
               <li>
                 <a href="#">Our Team</a>
@@ -38,7 +38,7 @@ class Footer extends React.Component {
                 <a href="#">Help Center</a>
               </li>
               <li>
-                <a href="#">Report a Bug</a>
+                <a href="https://github.com/rohansx/informatician/issues/new">Report a Bug</a>
               </li>
             </ul>
           </div>
