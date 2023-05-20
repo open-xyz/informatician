@@ -3,8 +3,9 @@
 .footer {
   background-color: #1f232a;
   color: #fff;
-  padding: 30px 0;
+  padding: 30px 30px;
   font-size: 14px;
+  bottom: 0;
 }
 
 .footer-container {
@@ -76,11 +77,12 @@
 }
 
 .footer-app-link {
-  margin: 0 5px;
+  margin: 0 5px 0 0;
 }
 
 .footer-app-link img {
   width: 120px;
+  margin-left: -25px;
 }
 .footer-section-title {
   margin-left: 5px;

@@ -8,6 +8,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import playstore from "../assets/logo_play_store.png";
 import appstore from "../assets/AppStore_Icon.png";
+import { Link } from "react-router-dom";
 
 class Footer extends React.Component {
   render() {
@@ -18,13 +19,13 @@ class Footer extends React.Component {
             <h3 className="footer-section-title">About</h3>
             <ul className="footer-section-list">
               <li>
-                <a href="/about">About Us</a>
+                <Link to="/about">About Us</Link>
               </li>
               <li>
-                <a href="#">Our Team</a>
+                <Link to="#">Our Team</Link>
               </li>
               <li>
-                <a href="#">Contact Us</a>
+                <Link to="#">Contact Us</Link>
               </li>
             </ul>
           </div>
@@ -38,7 +39,9 @@ class Footer extends React.Component {
                 <a href="#">Help Center</a>
               </li>
               <li>
-                <a href="https://github.com/rohansx/informatician/issues/new">Report a Bug</a>
+                <a href="https://github.com/rohansx/informatician/issues/new">
+                  Report a Bug
+                </a>
               </li>
             </ul>
           </div>
