@@ -28,9 +28,9 @@ function Navbar() {
             <div className={`navbar-toggle-line ${isMenuOpen ? "open" : ""}`}></div>
           </div>
           <div className={`navbar-menu ${isMenuOpen ? "open" : ""}`}>
-            <Link to="/" onClick={toggleMenu}>Home</Link>
-            <Link to="/books" onClick={toggleMenu}>Books</Link>
-            <Link to="/about" onClick={toggleMenu}>About</Link>
+            <Link to="/" >Home</Link>
+            <Link to="/books">Books</Link>
+            <Link to="/about">About</Link>
           </div>
         </div>
       </div>

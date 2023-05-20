@@ -2,8 +2,8 @@ import React from 'react';
 import './Footer.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import playstore from '../assets/logo_play_store.png';
-import appstore from '../assets/AppStore_Icon.png';
+import playstore from '../../../assets/logo_play_store.png';
+import appstore from '../../../assets/AppStore_Icon.png';
 
 class Footer extends React.Component {
   render() {
