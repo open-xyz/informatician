@@ -18,7 +18,7 @@ class Footer extends React.Component {
             <h3 className="footer-section-title">About</h3>
             <ul className="footer-section-list">
               <li>
-                <a href="#">About Us</a>
+                <a href="/about">About Us</a>
               </li>
               <li>
                 <a href="#">Our Team</a>
