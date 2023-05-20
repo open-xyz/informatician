@@ -1,9 +1,9 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import BookList from './components/BookList';
-import About from './components/About';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import BookList from "./components/BookList";
+import About from "./components/About";
 
 class App extends React.Component {
   render() {
@@ -12,14 +12,7 @@ class App extends React.Component {
         <div>
           <Navbar />
           <Routes>
-            <Route
-              path="/"
-              element={
-                <>
-                  <BookList />
-                </>
-              }
-            />
+            <Route path="/" element={<BookList />} />
             <Route path="/about" element={<About />} />
           </Routes>
           <Footer />

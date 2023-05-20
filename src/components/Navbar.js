@@ -1,41 +1,55 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import "./Navbar.css";
 
-function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
+export default function Navbar() {
   return (
-    <nav className="navbar">
-      <div className="container">
-        <div className="navbar-brand">Book Listing App</div>
-        <div className={`navbar-items ${isMenuOpen ? "open" : ""}`}>
-          <div className="navbar-search">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          Book Listing App
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <Link class="nav-link" to="/">
+                Home
+              </Link>
+            </li>
+            <li class="nav-item">
+              <Link class="nav-link" to="/books">
+                Books
+              </Link>
+            </li>
+            <li class="nav-item">
+              <Link class="nav-link" to="/about">
+                About
+              </Link>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
             <input
-              type="text"
+              class="form-control me-2"
+              type="search"
               placeholder="Search"
-              className="navbar-search-input"
+              aria-label="Search"
             />
-            <button className="navbar-search-button">Search</button>
-          </div>
-          <div className="navbar-toggle" onClick={toggleMenu}>
-            <div className={`navbar-toggle-line ${isMenuOpen ? "open" : ""}`}></div>
-            <div className={`navbar-toggle-line ${isMenuOpen ? "open" : ""}`}></div>
-            <div className={`navbar-toggle-line ${isMenuOpen ? "open" : ""}`}></div>
-          </div>
-          <div className={`navbar-menu ${isMenuOpen ? "open" : ""}`}>
-            <Link to="/" onClick={toggleMenu}>Home</Link>
-            <Link to="/books" onClick={toggleMenu}>Books</Link>
-            <Link to="/about" onClick={toggleMenu}>About</Link>
-          </div>
+            <button class="btn btn-outline-dark" type="submit">
+              Search
+            </button>
+          </form>
         </div>
       </div>
     </nav>
   );
 }
-
-export default Navbar;
