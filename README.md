@@ -62,4 +62,9 @@ Contributions to this project are welcome. To contribute, please follow these st
  <img src="https://img.shields.io/github/last-commit/rohansx/informatician?style=for-the-badge" />
 </div>
 
-
+## Contributors
+<p align="center">
+<a href="https://github.com/rohansx/informatician/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=rohansx/informatician" />
+</a>
+</p>
