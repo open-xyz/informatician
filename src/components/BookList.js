@@ -1,18 +1,19 @@
-import React, { useState } from "react";
+import React from 'react';
+import './BookList.css';
 
-export default function BookList() {
-  const [books, setBooks] = useState([{ name: "Book1" }, { name: "book2" }]);
-
-  let bookComponent = books.map((book) => (
-    <li className="book-list-item">{book.name}</li>
-  ));
-
-  return (
-    <div className="body">
+class BookList extends React.Component {
+  render() {
+    return (
       <div className="book-list-container">
         <h1 className="book-list-title">Book List</h1>
-        <ul className="book-list">{bookComponent}</ul>
+        <ul className="book-list">
+          <li className="book-list-item">Book 1</li>
+          <li className="book-list-item">Book 2</li>
+          <li className="book-list-item">Book 3</li>
+        </ul>
       </div>
-    </div>
-  );
+    );
+  }
 }
+
+export default BookList;
