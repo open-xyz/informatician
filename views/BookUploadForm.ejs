@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Upload a Book</title>
+</head>
+<body>
+    <div class="container">
+        <br>
+        <h2>Upload a Book!</h2>
+        <form class ='needs-validation" novalidate' action="/add" method="post" >
+            <br>
+            <div class="mb-3">
+                <label for="bookNameInput" class="form-label">Enter Book Name</label>
+                <input type="text" class="form-control" id="bookNameInput" placeholder="Murder on the Orient Express" name="bookName" required>
+
+            </div>
+    
+
+              <div class="col-md-4">
+                <label for="inputState" class="form-label">Book Category</label>
+                <select id="inputState" class="form-select" name="bookGenre" required>
+                    <option>Children's</option>
+                    <option>Classic</option>
+                    <option>Drama</option>
+                    <option>Crime</option>
+                    <option>Fantasy</option>
+                    <option>Comic Book</option>
+                    <option>Mystery</option>
+                    <option>Horror</option>
+                    <option>Cookbook</option>
+                    <option>Hobbies</option>
+                    <option>Religion</option>
+                    <option>Science</option>
+                    <option>Autobiography</option>
+                    <option>Art</option>
+                    <option>History</option>
+                    <option>Humour</option>
+                    <option>Sports and leisure</option>
+
+                </select>
+            </div>
+            <br>
+
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">What is the Book About?</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="What is the book about?" name="about" required></textarea>
+              </div>
+
+              <br>
+              <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
