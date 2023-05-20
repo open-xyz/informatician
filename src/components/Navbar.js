@@ -1,53 +1,55 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import "./Navbar.css";
 
-function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
+export default function Navbar() {
   return (
-    <nav className="navbar">
-      <div className="container">
-        <div className="navbar-brand">Informatician</div>
-        <div className={`navbar-items ${isMenuOpen ? "open" : ""}`}>
-          <div className="navbar-search">
+    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <div className="container-fluid">
+        <a className="navbar-brand" href="#">
+          Informatician
+        </a>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <li className="nav-item">
+              <Link className="nav-link" to="/">
+                Home
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/books">
+                Books
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/about">
+                About
+              </Link>
+            </li>
+          </ul>
+          <form className="d-flex" role="search">
             <input
-              type="text"
+              className="form-control me-2"
+              type="search"
               placeholder="Search"
-              className="navbar-search-input"
+              aria-label="Search"
             />
-            <button className="navbar-search-button">Search</button>
-          </div>
-          <div className="navbar-toggle" onClick={toggleMenu}>
-            <div
-              className={`navbar-toggle-line ${isMenuOpen ? "open" : ""}`}
-            ></div>
-            <div
-              className={`navbar-toggle-line ${isMenuOpen ? "open" : ""}`}
-            ></div>
-            <div
-              className={`navbar-toggle-line ${isMenuOpen ? "open" : ""}`}
-            ></div>
-          </div>
-          <div className={`navbar-menu ${isMenuOpen ? "open" : ""}`}>
-            <Link to="/" onClick={toggleMenu}>
-              Home
-            </Link>
-            <Link to="/books" onClick={toggleMenu}>
-              Books
-            </Link>
-            <Link to="/about" onClick={toggleMenu}>
-              About
-            </Link>
-          </div>
+            <button className="btn btn-outline-dark" type="submit">
+              Search
+            </button>
+          </form>
         </div>
       </div>
     </nav>
   );
 }
-
-export default Navbar;
