@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
+
 import {AiOutlineSearch,AiOutlineCloseSquare} from "react-icons/ai"
 import {GiHamburgerMenu} from "react-icons/gi"
 import {IoCloseSharp} from "react-icons/io5"
@@ -87,10 +88,10 @@ function Navbar() {
        
     </div>
 </form>
+
+
         </div>
     </div>
 </nav>
   );
 }
-
-export default Navbar;

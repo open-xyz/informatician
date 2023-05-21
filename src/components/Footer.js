@@ -1,3 +1,4 @@
+
 import React from 'react';
 import './Custom.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -9,6 +10,7 @@ import{BsFacebook,BsInstagram,BsTwitter,BsGithub} from "react-icons/bs"
 class Footer extends React.Component {
   render() {
     return (
+
    
 <footer className="bg-slate-800 rounded-t-lg ">
     <div className="mx-auto w-full max-w-screen-xl">
@@ -103,6 +105,7 @@ class Footer extends React.Component {
                 <span class="sr-only">GitHub account</span>
             </a>
            
+
         </div>
       </div>
     </div>

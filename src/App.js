@@ -1,32 +1,19 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import BookList from './components/BookList';
-import About from './components/About';
+import React from "react";
+import Body from "./components/Body";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import { BrowserRouter } from "react-router-dom";
 
-class App extends React.Component {
-  render() {
-    return (
-      <Router>
-        <div>
-          <Navbar />
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <>
-                  <BookList />
-                </>
-              }
-            />
-            <Route path="/about" element={<About />} />
-          </Routes>
-          <Footer />
+export default function App() {
+  return (
+    <div>
+      <BrowserRouter>
+        <Navbar />
+        <div className="app-body">
+          <Body />
         </div>
-      </Router>
-    );
-  }
+      </BrowserRouter>
+      <Footer />
+    </div>
+  );
 }
-
-export default App;
