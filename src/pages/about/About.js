@@ -1,8 +1,8 @@
 import React from "react";
+import bookImage from "../../assets/books.webp";
 import "./About.css";
-import bookImage from "../assets/books.webp";
 
-const About = () => {
+export default function About() {
   return (
     <div className="about">
       <div className="container">
@@ -39,6 +39,4 @@ const About = () => {
       </div>
     </div>
   );
-};
-
-export default About;
+}

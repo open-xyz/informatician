@@ -1,9 +1,9 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import BookList from './components/BookList';
-import About from './components/About';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/common/navbar/Navbar";
+import Footer from "./components/common/footer/Footer";
+import BookList from "./pages/books/BookList";
+import About from "./pages/about/About";
 
 class App extends React.Component {
   render() {

@@ -46,7 +46,7 @@
 
 .footer-social-icons {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   margin-bottom: 10px;
 }
 
@@ -70,7 +70,7 @@
 
 .footer-app-links {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   margin-top: 10px;
   align-items: center;
 }
