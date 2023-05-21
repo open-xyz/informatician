@@ -1,7 +1,9 @@
 # INFORMATICIAN
 ## An Open Source Book Listing Web Application
-           
-This is an open source web application built for listing and categorizing books. This application allows users to search for books, add new books to the database, and rate and review books. The application is built using Node.js, Express.js, React.js and MongoDB.
+ 
+
+
+Informatician is an open-source web application built for listing and categorizing books. It provides users with the ability to search for books, add new books to the database, rate and review books, and offers an admin panel for managing books and users. The application is built using Node.js, Express.js, React.js, and MongoDB.
 
 ## Features
 
@@ -12,7 +14,7 @@ This is an open source web application built for listing and categorizing books.
 - Authentication and authorization
 - Responsive design for mobile devices
 
-## Installation
+## Installationn 🏗️
 
 1. Clone the repository:
  ```sh
@@ -32,9 +34,9 @@ This is an open source web application built for listing and categorizing books.
 
 ## Usage
 
-The application can be accessed in a web browser at `http://localhost:3000`.
+💻 The application can be accessed in a web browser at `http://localhost:3000`.
 
-## Contributing
+## Contributing 🚀🚀
 
 Contributions to this project are welcome. To contribute, please follow these steps:
 
@@ -62,4 +64,69 @@ Contributions to this project are welcome. To contribute, please follow these st
  <img src="https://img.shields.io/github/last-commit/rohansx/informatician?style=for-the-badge" />
 </div>
 
+
+
+## License
+
+✅ This project is licensed under the [MIT License](https://github.com/rohansx/informatician/blob/main/LICENSE)
+
+# Support
+
+If you have any questions or need assistance, feel free to open an issue in the repository.
+
+# Acknowledgement
+
+✅ We would like to acknowledge the following libraries and frameworks used in this project:
+
+• [Node.js](https://nodejs.org/en)
+
+• [Express.js](https://expressjs.com/)
+
+• [React.js](https://react.dev/)
+
+• [MongoDB](https://www.mongodb.com/)
+
+# Roadmap
+
+Here are some potential features and improvements that can be added to the application in the future:
+
+• User profile pages
+
+• Social sharing options for books
+
+• Book recommendation system based on user preferences
+
+• Advanced search filters (e.g., by publication year, language)
+
+• Book wishlist functionality
+
+• Integration with external book  APIs (e.g., Goodreads, Open Library)
+• Support for multiple languages
+
+Feel free to contribute to any of these ideas or suggest new ones!
+
+# Authors
+
+✅ [Rohan Sharma](https://github.com/rohansx) - Main Developer
+
+# Changelog
+
+✅ See the Changelog file for details about the changes in each version of the application.
+
+# Credits
+
+✅ This project was inspired by Bookster, an open-source book cataloging application.
+
+# Disclaimer
+
+✅ The information provided in this application is for educational and informational purposes only. The authors and contributors are not responsible for any actions taken based on the information provided.
+
+# Stay Connected 
+
+
+✅Web:https://www.informatician.in/
+
+
+
+🚀🚀 We appreciate your interest and hope you find this application
 
