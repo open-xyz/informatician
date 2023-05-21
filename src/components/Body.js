@@ -8,6 +8,7 @@ import Team from "./Team";
 import TermsAndService from "./Terms&Service";
 import PrivacyPolicy from "./PrivacyPolicy";
 import CookiePolicy from "./Cookie";
+import FaqHelp from "./faq";
 
 function Body() {
   return (
@@ -21,6 +22,8 @@ function Body() {
         <Route path="/terms" element={<TermsAndService/>}/>
         <Route path="/privacy" element={<PrivacyPolicy/>}/>
         <Route path="/cookie" element={<CookiePolicy/>}/>
+        <Route path="/faq" element={<FaqHelp/>}/>
+
 
 
       </Routes>
