@@ -1,0 +1,61 @@
+.terms {
+    padding: 50px 0;
+    background-color: #f8f8f8;
+  }
+  
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .terms-title {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .terms-content {
+    text-align: justify;
+    line-height: 1.5;
+  }
+  
+  .terms-content h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 30px 0 15px;
+  }
+  
+  .terms-content p {
+    margin-bottom: 20px;
+  }
+  
+  .terms-content ul {
+    margin-bottom: 20px;
+    padding-left: 20px;
+  }
+  
+  .terms-content ul li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .terms-content ul li .icon {
+    margin-right: 10px;
+  }
+  
+  .terms-content a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .terms-content a:hover {
+    text-decoration: underline;
+  }
+  
+  .terms-content .contact-email {
+    font-weight: bold;
+  }
+  
