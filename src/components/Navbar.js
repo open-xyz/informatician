@@ -34,6 +34,7 @@ export default function Navbar() {
             </div>
           </div>
         </div>
+        </div>
         <div>
 
             <div
@@ -64,7 +65,7 @@ export default function Navbar() {
               navbar ? "block" : "hidden"
             }`}
           >
-            <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
+            {/* <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
               <li className="text-white hover:text-indigo-200">
                 <a href="javascript:void(0)">Home</a>
               </li>
@@ -77,7 +78,7 @@ export default function Navbar() {
               <li className="text-white hover:text-indigo-200">
                 <a href="javascript:void(0)">Contact US</a>
               </li>
-            </ul>
+            </ul> */}
 
 
             <div className="mt-3 space-y-2 lg:hidden md:hidden">

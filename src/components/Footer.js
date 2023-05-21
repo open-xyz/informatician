@@ -65,7 +65,7 @@ class Footer extends React.Component {
             <ul className="text-gray-400 dfont-medium">
                 <li className="mb-4">
                     <a href="/faq" className="hover:text-gray-200">FAQ</a>
-
+                </li>
               </ul>
             </div>
             <div>
