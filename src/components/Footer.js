@@ -21,10 +21,10 @@ class Footer extends React.Component {
                 <a href="/about">About Us</a>
               </li>
               <li>
-                <a href="#">Our Team</a>
+                <a href="/">Our Team</a>
               </li>
               <li>
-                <a href="#">Contact Us</a>
+                <a href="/">Contact Us</a>
               </li>
             </ul>
           </div>
@@ -32,10 +32,10 @@ class Footer extends React.Component {
             <h3 className="footer-section-title">Support</h3>
             <ul className="footer-section-list">
               <li>
-                <a href="#">FAQ</a>
+                <a href="/">FAQ</a>
               </li>
               <li>
-                <a href="#">Help Center</a>
+                <a href="/">Help Center</a>
               </li>
               <li>
                 <a href="https://github.com/rohansx/informatician/issues/new">Report a Bug</a>
@@ -46,26 +46,26 @@ class Footer extends React.Component {
             <h3 className="footer-section-title">Legal</h3>
             <ul className="footer-section-list">
               <li>
-                <a href="#">Terms of Service</a>
+                <a href="/">Terms of Service</a>
               </li>
               <li>
-                <a href="#">Privacy Policy</a>
+                <a href="/">Privacy Policy</a>
               </li>
               <li>
-                <a href="#">Cookie Policy</a>
+                <a href="/">Cookie Policy</a>
               </li>
             </ul>
           </div>
           <div className="footer-section">
             <h3 className="footer-section-title">Social</h3>
             <div className="footer-social-icons">
-              <a href="#" className="footer-social-icon">
+              <a href="/" className="footer-social-icon">
                 <FontAwesomeIcon icon={faFacebookF} />
               </a>
-              <a href="#" className="footer-social-icon">
+              <a href="/" className="footer-social-icon">
                 <FontAwesomeIcon icon={faTwitter} />
               </a>
-              <a href="#" className="footer-social-icon">
+              <a href="/" className="footer-social-icon">
                 <FontAwesomeIcon icon={faInstagram} />
               </a>
             </div>
@@ -73,10 +73,10 @@ class Footer extends React.Component {
           <div className="footer-section">
             <h3 className="footer-section-title">Get Our Free Apps</h3>
             <div className="footer-app-links">
-              <a href="#" className="footer-app-link">
+              <a href="/" className="footer-app-link">
                 <img src={playstore} alt="Play Store" />
               </a>
-              <a href="#" className="footer-app-link">
+              <a href="/" className="footer-app-link">
                 <img src={appstore} alt="App Store" />
               </a>
             </div>

@@ -1,18 +1,25 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
+
+
 
 export default function Navbar() {
+  const { loginWithRedirect } = useAuth0();
+  const { logout } = useAuth0();
+  const { user, isAuthenticated, isLoading } = useAuth0();
+
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand" href="/">
           Informatician
         </a>
         <button
           className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
+          data-bs-target="/navbarSupportedContent"
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
@@ -36,6 +43,7 @@ export default function Navbar() {
                 About
               </Link>
             </li>
+          
           </ul>
           <form className="d-flex" role="search">
             <input
@@ -47,6 +55,9 @@ export default function Navbar() {
             <button className="btn btn-outline-dark" type="submit">
               Search
             </button>
+              {
+                isAuthenticated ? <button className="btn btn-outline-dark" onClick={() => logout({ returnTo: window.location.origin })}>Log Out</button> : <button className="btn btn-outline-dark" onClick={() => loginWithRedirect()}>Log In</button>
+              }
           </form>
         </div>
       </div>
