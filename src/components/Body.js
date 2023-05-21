@@ -6,6 +6,7 @@ import Home from "./Home";
 import Contact from "./Contactus";
 import Team from "./Team";
 import TermsAndService from "./Terms&Service";
+import PrivacyPolicy from "./PrivacyPolicy";
 
 function Body() {
   return (
@@ -17,6 +18,8 @@ function Body() {
         <Route path="/contact" element={<Contact/>}/>
         <Route path="/team" element={<Team/>}/>
         <Route path="/terms" element={<TermsAndService/>}/>
+        <Route path="/privacy" element={<PrivacyPolicy/>}/>
+
       </Routes>
     </div>
   );
