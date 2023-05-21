@@ -34,13 +34,38 @@ export default function Navbar() {
             </div>
           </div>
         </div>
+        </div>
         <div>
+
+            <div
+                className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
+                    navbar ? "block" : "hidden"
+                }`}
+            >
+                <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
+                    <li className="text-white hover:text-indigo-200">
+                        <a href="javascript:void(0)">Home</a>
+                    </li>
+                    <li className="text-white hover:text-indigo-200">
+                        <a href="javascript:void(0)">Books</a>
+                    </li>
+                    <li className="text-white hover:text-indigo-200">
+                        <a href="javascript:void(0)">About</a>
+                    </li>
+                    <li className="text-white hover:text-indigo-200">
+                        <a href="javascript:void(0)">Contact US</a>
+                    </li>
+                    <li className="text-white hover:text-indigo-200">
+                        <a href="/faq">FAQ</a>
+                    </li>
+                </ul>
+
           <div
             className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
               navbar ? "block" : "hidden"
             }`}
           >
-            <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
+            {/* <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
               <li className="text-white hover:text-indigo-200">
                 <a href="javascript:void(0)">Home</a>
               </li>
@@ -53,7 +78,8 @@ export default function Navbar() {
               <li className="text-white hover:text-indigo-200">
                 <a href="javascript:void(0)">Contact US</a>
               </li>
-            </ul>
+            </ul> */}
+
 
             <div className="mt-3 space-y-2 lg:hidden md:hidden">
               <form>
