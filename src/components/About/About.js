@@ -1,6 +1,6 @@
 import React from "react";
 import "./About.css";
-import bookImage from "../assets/books.webp";
+import bookImage from "../../assets/books.webp";
 
 const About = () => {
   return (
