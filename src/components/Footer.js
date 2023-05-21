@@ -1,7 +1,5 @@
 import React from "react";
 import "./Custom.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import playstore from "../assets/logo_play_store.png";
 import appstore from "../assets/AppStore_Icon.png";
 import { BsFacebook, BsInstagram, BsTwitter, BsGithub } from "react-icons/bs";
