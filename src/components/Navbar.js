@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 import {AiOutlineSearch,AiOutlineCloseSquare} from "react-icons/ai"
 import {GiHamburgerMenu} from "react-icons/gi"
@@ -7,7 +8,7 @@ import {IoCloseSharp} from "react-icons/io5"
 import './Custom.css';
 // import "./Navbar.css";
 
-function Navbar() {
+export default function Navbar() {
 
   const [navbar, setNavbar] = useState(false);
   return (
@@ -54,7 +55,7 @@ function Navbar() {
                     </li>
                 </ul>
 
-                <div className="mt-3 space-y-2 lg:hidden md:inline-block">
+                <div className="mt-3 space-y-2 lg:hidden md:hidden">
                 <form>   
     <label for="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
     <div class="relative">
