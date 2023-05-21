@@ -5,28 +5,16 @@ import Footer from "./components/common/footer/Footer";
 import BookList from "./pages/books/BookList";
 import About from "./pages/about/About";
 
-class App extends React.Component {
-  render() {
-    return (
-      <Router>
-        <div>
-          <Navbar />
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <>
-                  <BookList />
-                </>
-              }
-            />
-            <Route path="/about" element={<About />} />
-          </Routes>
-          <Footer />
+export default function App() {
+  return (
+    <div>
+      <BrowserRouter>
+        <Navbar />
+        <div className="app-body">
+          <Body />
         </div>
-      </Router>
-    );
-  }
+      </BrowserRouter>
+      <Footer />
+    </div>
+  );
 }
-
-export default App;
