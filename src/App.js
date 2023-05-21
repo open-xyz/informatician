@@ -3,6 +3,7 @@ import Body from "./components/Body";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { BrowserRouter } from "react-router-dom";
+import ScrollToTopButton from "./components/ScrollButton";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
         </div>
       </BrowserRouter>
       <Footer />
+      <ScrollToTopButton />
     </div>
   );
 }
