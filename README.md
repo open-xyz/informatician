@@ -120,9 +120,7 @@ Feel free to contribute to any of these ideas or suggest new ones!
 
 ✅ See the Changelog file for details about the changes in each version of the application.
 
-# Credits
 
-✅ This project was inspired by Bookster, an open-source book cataloging application.
 
 # Disclaimer
 
