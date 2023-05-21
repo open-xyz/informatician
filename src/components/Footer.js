@@ -40,13 +40,14 @@ class Footer extends React.Component {
                     <a href="#" className=" hover:text-gray-200">Contact us</a>
                 </li>
                 
+                
             </ul>
         </div>
         <div>
             <h2 className="mb-6 text-sm font-semibold text-white uppercase ">Support</h2>
             <ul className="text-gray-400 dfont-medium">
                 <li className="mb-4">
-                    <a href="#" className="hover:text-gray-200">FAQ</a>
+                    <a href="/faq" className="hover:text-gray-200">FAQ</a>
                 </li>
                 <li className="mb-4">
                     <a href="#" className="hover:text-gray-200">Help Center</a>

@@ -53,6 +53,9 @@ export default function Navbar() {
                     <li className="text-white hover:text-indigo-200">
                         <a href="javascript:void(0)">Contact US</a>
                     </li>
+                    <li className="text-white hover:text-indigo-200">
+                        <a href="/faq">FAQ</a>
+                    </li>
                 </ul>
 
                 <div className="mt-3 space-y-2 lg:hidden md:hidden">
