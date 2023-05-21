@@ -1,106 +1,116 @@
-import React from "react";
-import "./Footer.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFacebookF,
-  faTwitter,
-  faInstagram,
-} from "@fortawesome/free-brands-svg-icons";
-import playstore from "../assets/logo_play_store.png";
-import appstore from "../assets/AppStore_Icon.png";
+
+import React from 'react';
+import './Custom.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import playstore from '../assets/logo_play_store.png';
+import appstore from '../assets/AppStore_Icon.png';
+import{BsFacebook,BsInstagram,BsTwitter,BsGithub} from "react-icons/bs"
 
 class Footer extends React.Component {
   render() {
     return (
-      <footer className="footer">
-        <div className="footer-container">
-          <div className="footer-section">
-            <h3 className="footer-section-title">About</h3>
-            <ul className="footer-section-list">
-              <li>
-                <a href="/about">About Us</a>
-              </li>
-              <li>
-                <a href="#">Our Team</a>
-              </li>
-              <li>
-                <a href="#">Contact Us</a>
-              </li>
+
+   
+<footer className="bg-slate-800 rounded-t-lg ">
+    <div className="mx-auto w-full max-w-screen-xl">
+    <p class="text-center text-lg font-semibold text-white pt-3">Subscribe to newsletter</p>
+    <form className="flex justify-center mt-5 mb-5 ml-2 mr-2">   
+    <label for="simple-search" className="sr-only">Email</label>
+    <div className="relative">     
+        <input type="text" id="simple-search" className=" border w-64 lg:w-96  border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  pl-10 p-2.5  bg-gray-200  " placeholder="Email address" required/>
+    </div>
+
+    <a href="#_" className="px-4 py-2 ml-3 relative rounded group overflow-hidden font-medium bg-purple-50 text-gray-700 inline-block">
+<span className="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-slate-500 group-hover:h-full opacity-90"></span>
+<span className="relative group-hover:text-white">Submit</span>
+</a>
+</form>
+      <div className="grid grid-cols-1 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
+        <div>
+            <h2 className="mb-6 text-sm font-semibold text-white uppercase cursor-pointer">About</h2>
+            <ul className="text-gray-400  font-medium ">
+                <li className="mb-4">
+                    <a href="#" className=" hover:text-gray-200">About us</a>
+                </li>
+                <li className="mb-4">
+                    <a href="#" className=" hover:text-gray-200">Our team</a>
+                </li>
+                <li className="mb-4">
+                    <a href="#" className=" hover:text-gray-200">Contact us</a>
+                </li>
+                
             </ul>
-          </div>
-          <div className="footer-section">
-            <h3 className="footer-section-title">Support</h3>
-            <ul className="footer-section-list">
-              <li>
-                <a href="#">FAQ</a>
-              </li>
-              <li>
-                <a href="#">Help Center</a>
-              </li>
-              <li>
-                <a href="https://github.com/rohansx/informatician/issues/new">Report a Bug</a>
-              </li>
-            </ul>
-          </div>
-          <div className="footer-section">
-            <h3 className="footer-section-title">Legal</h3>
-            <ul className="footer-section-list">
-              <li>
-                <a href="#">Terms of Service</a>
-              </li>
-              <li>
-                <a href="#">Privacy Policy</a>
-              </li>
-              <li>
-                <a href="#">Cookie Policy</a>
-              </li>
-            </ul>
-          </div>
-          <div className="footer-section">
-            <h3 className="footer-section-title">Social</h3>
-            <div className="footer-social-icons">
-              <a href="#" className="footer-social-icon">
-                <FontAwesomeIcon icon={faFacebookF} />
-              </a>
-              <a href="#" className="footer-social-icon">
-                <FontAwesomeIcon icon={faTwitter} />
-              </a>
-              <a href="#" className="footer-social-icon">
-                <FontAwesomeIcon icon={faInstagram} />
-              </a>
-            </div>
-          </div>
-          <div className="footer-section">
-            <h3 className="footer-section-title">Get Our Free Apps</h3>
-            <div className="footer-app-links">
-              <a href="#" className="footer-app-link">
-                <img src={playstore} alt="Play Store" />
-              </a>
-              <a href="#" className="footer-app-link">
-                <img src={appstore} alt="App Store" />
-              </a>
-            </div>
-          </div>
-          <div className="footer-section">
-            <h3 className="footer-section-title">
-              Subscribe to Our Newsletter
-            </h3>
-            <form className="footer-newsletter-form">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="footer-newsletter-input"
-              />
-              <button type="submit" className="footer-newsletter-submit">
-                Subscribe
-              </button>
-            </form>
-          </div>
         </div>
-        <div className="footer-bottom">
-          &copy; 2023 Informatician. All rights reserved.
+        <div>
+            <h2 className="mb-6 text-sm font-semibold text-white uppercase ">Support</h2>
+            <ul className="text-gray-400 dfont-medium">
+                <li className="mb-4">
+                    <a href="#" className="hover:text-gray-200">FAQ</a>
+                </li>
+                <li className="mb-4">
+                    <a href="#" className="hover:text-gray-200">Help Center</a>
+                </li>
+                <li className="mb-4">
+                    <a href="#" className="hover:text-gray-200">Report a Bug</a>
+                </li>
+               
+            </ul>
         </div>
-      </footer>
+        <div>
+            <h2 className="mb-6 text-sm font-semibold text-white uppercase ">Legal</h2>
+            <ul className="text-gray-400  font-medium">
+                <li className="mb-4">
+                    <a href="#" className="hover:text-gray-200">Privacy Policy</a>
+                </li>
+                <li className="mb-4">
+                    <a href="#" className="hover:text-gray-200">Terms and Service</a>
+                </li>
+                <li className="mb-4">
+                    <a href="#" className="hover:text-gray-200">Cookie Policy</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h2 className="mb-6 text-sm font-semibold text-white uppercase ">Get our apps</h2>
+            <ul className="text-gray-500  font-medium">
+                <li className="mb-4">
+                    <a href="#" className="hover:underline"><img src={appstore} className='h-10' alt="App Store" /></a>
+                </li>
+                <li className="mb-4">
+                    <a href="#"  ><img className='h-7' src={playstore} alt="Play Store" /></a>
+                </li>
+              
+            </ul>
+        </div>
+    </div>
+    <div className="px-4 py-6 bg-slate-800 md:flex md:items-center md:justify-between">
+        <span className="text-sm text-gray-200  sm:text-center">© 2023 Book Listing app™. All Rights Reserved.
+        </span>
+        <div className="flex mt-4 space-x-6 sm:justify-center md:mt-0">
+            <a href="#" className="text-gray-400 hover:text-white hover:scale-125 ">
+                <BsFacebook/>
+                <span className="sr-only">Facebook page</span>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white hover:scale-125 ">
+                <BsInstagram/>
+                <span class="sr-only">Instagram page</span>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white hover:scale-125 ">
+                <BsTwitter/>
+                <span class="sr-only">Twitter page</span>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white hover:scale-125 ">
+               <BsGithub/>
+                <span class="sr-only">GitHub account</span>
+            </a>
+           
+
+        </div>
+      </div>
+    </div>
+</footer>
+
     );
   }
 }
