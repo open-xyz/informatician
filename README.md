@@ -1,18 +1,25 @@
 # INFORMATICIAN
-## An Open Source Book Listing Web Application
- 
+## An Open Source Book Listing Web Application 
 
-
-Informatician is an open-source web application built for listing and categorizing books. It provides users with the ability to search for books, add new books to the database, rate and review books, and offers an admin panel for managing books and users. The application is built using Node.js, Express.js, React.js, and MongoDB.
+Informatician is an open-source web application designed to provide users with a comprehensive book listing and reading platform, offering a similar experience to popular platforms like Kindle and Scribd. The application allows users to search for books, add new books to the platform, rate and review books, and seamlessly read them within the application. Built using Node.js, Express.js, React.js, and MongoDB, Informatician aims to create an immersive and user-friendly environment for book enthusiasts.
 
 ## Features
 
-- Search for books by title, author, or category
+
 - Add new books to the database
-- Rate and review books
+
 - Admin panel for managing books and users
-- Authentication and authorization
-- Responsive design for mobile devices
+- Extensive Book Search: Utilize the powerful search functionality to discover books by title, author, or category, enabling users to find their desired reading material effortlessly.
+
+- Personal Library: Users can curate their own digital library by adding new books to the platform.
+
+-Rating and Review: Share opinions and insights by rating and reviewing books.
+
+- Seamless Reading Experience: Enjoy a comfortable reading experience within the application.
+
+- Authentication and Authorization: User accounts with secure authentication and authorisation.
+
+- Responsive Design: The application features a responsive design, making it accessible and visually appealing across various devices, including desktops, tablets, and mobile phones.
 
 ## Installationn 🏗️
 
