@@ -95,3 +95,7 @@
   margin-bottom: 5px;
   text-align: left;
 }
+.faq-help {
+  padding: 50px 50px; /* Add margin from left and right */
+  text-align: center;
+}
