@@ -1,15 +1,21 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import BookList from './components/BookList';
+import React from "react";
+import Body from "./components/Body";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import { BrowserRouter } from "react-router-dom";
+import ScrollToTopButton from "./components/ScrollButton";
 
-class App extends React.Component {
-  render() {
-    return (
-        <div>
-          <BookList></BookList>
+export default function App() {
+  return (
+    <div>
+      <BrowserRouter>
+        <Navbar />
+        <div className="app-body">
+          <Body />
         </div>
-    );
-  }
+      </BrowserRouter>
+      <Footer />
+      <ScrollToTopButton />
+    </div>
+  );
 }
-
-export default App;
