@@ -13,7 +13,7 @@ Informatician is an open-source web application designed to provide users with a
 
 - Personal Library: Users can curate their own digital library by adding new books to the platform.
 
--Rating and Review: Share opinions and insights by rating and reviewing books.
+- Rating and Review: Share opinions and insights by rating and reviewing books.
 
 - Seamless Reading Experience: Enjoy a comfortable reading experience within the application.
 
@@ -44,10 +44,6 @@ Informatician is an open-source web application designed to provide users with a
 💻 The application can be accessed in a web browser at `http://localhost:3000`.
 
 
-Certainly! Here's the updated "Contributing" section with the raw code:
-
-markdown
-Copy code
 # Contributing 🚀
 
 Thank you for your interest in contributing to Informatician! We welcome contributions from the community to help improve the project. To contribute, please follow these steps:
@@ -70,6 +66,8 @@ Thank you for your interest in contributing to Informatician! We welcome contrib
 
 When submitting a pull request, please ensure the following:
 
+- **Sync with Main Branch**: Before creating a pull request, make sure to sync your branch with the main branch to incorporate any updates or changes that have been made since you started working on your code.
+
 - **Detailed Description**: Provide a brief but comprehensive description of the issue you are addressing with your pull request. Include any relevant information or context that can help the maintainers understand the purpose of your changes.
 
 - **Screenshots**: If your changes involve any visual modifications, consider providing screenshots or GIFs to showcase the before and after state of the application.
@@ -77,25 +75,6 @@ When submitting a pull request, please ensure the following:
 - **Testing**: Make sure to test your changes thoroughly to ensure they work as expected and do not introduce any new issues. If applicable, include details of your testing process or steps followed to validate the changes.
 
 - **Maintain Good Practices**: Follow the established coding conventions, formatting guidelines, and best practices of the project. Ensure your code is readable, well-documented, and maintainable.
-
-Thank you for your contribution! We appreciate your efforts in helping make Informatician better.
-
-<div align="center">
-<img src="https://forthebadge.com/images/badges/built-with-love.svg" />
-<img src="https://forthebadge.com/images/badges/uses-brains.svg" />
-<img src="https://forthebadge.com/images/badges/powered-by-responsibility.svg" />
-   </div>
-   <div align="center">
-<img src="https://img.shields.io/github/license/rohansx/informatician?style=for-the-badge" />
-<img src="https://img.shields.io/github/repo-size/rohansx/informatician?style=for-the-badge" />
-<img src="https://img.shields.io/github/issues/rohansx/informatician?style=for-the-badge" /><br>
-<img src="https://img.shields.io/github/issues-pr/rohansx/informatician?style=for-the-badge" />
- <img src="https://img.shields.io/github/forks/rohansx/informatician?style=for-the-badge" />
- <img src="https://img.shields.io/github/issues-closed-raw/rohansx/informatician?style=for-the-badge" />
-  <img src="https://img.shields.io/github/contributors/rohansx/informatician?style=for-the-badge" />
- <img src="https://img.shields.io/github/stars/rohansx/informatician?style=for-the-badge" />
- <img src="https://img.shields.io/github/last-commit/rohansx/informatician?style=for-the-badge" />
-</div>
 
 
 
@@ -106,18 +85,6 @@ Thank you for your contribution! We appreciate your efforts in helping make Info
 # Support
 
 If you have any questions or need assistance, feel free to open an issue in the repository.
-
-# Acknowledgement
-
-✅ We would like to acknowledge the following libraries and frameworks used in this project:
-
-• [Node.js](https://nodejs.org/en)
-
-• [Express.js](https://expressjs.com/)
-
-• [React.js](https://react.dev/)
-
-• [MongoDB](https://www.mongodb.com/)
 
 # Roadmap
 
@@ -147,17 +114,23 @@ Feel free to contribute to any of these ideas or suggest new ones!
 ✅ See the Changelog file for details about the changes in each version of the application.
 
 
+Thank you for your contribution! We appreciate your efforts in helping make Informatician better.
 
-# Disclaimer
+<div align="center">
+<img src="https://forthebadge.com/images/badges/built-with-love.svg" />
+<img src="https://forthebadge.com/images/badges/uses-brains.svg" />
+<img src="https://forthebadge.com/images/badges/powered-by-responsibility.svg" />
+   </div>
+   <div align="center">
+<img src="https://img.shields.io/github/license/rohansx/informatician?style=for-the-badge" />
+<img src="https://img.shields.io/github/repo-size/rohansx/informatician?style=for-the-badge" />
+<img src="https://img.shields.io/github/issues/rohansx/informatician?style=for-the-badge" /><br>
+<img src="https://img.shields.io/github/issues-pr/rohansx/informatician?style=for-the-badge" />
+ <img src="https://img.shields.io/github/forks/rohansx/informatician?style=for-the-badge" />
+ <img src="https://img.shields.io/github/issues-closed-raw/rohansx/informatician?style=for-the-badge" />
+  <img src="https://img.shields.io/github/contributors/rohansx/informatician?style=for-the-badge" />
+ <img src="https://img.shields.io/github/stars/rohansx/informatician?style=for-the-badge" />
+ <img src="https://img.shields.io/github/last-commit/rohansx/informatician?style=for-the-badge" />
+</div>
 
-✅ The information provided in this application is for educational and informational purposes only. The authors and contributors are not responsible for any actions taken based on the information provided.
-
-# Stay Connected 
-
-
-✅Web:https://www.informatician.in/
-
-
-
-🚀🚀 We appreciate your interest and hope you find this application
 
