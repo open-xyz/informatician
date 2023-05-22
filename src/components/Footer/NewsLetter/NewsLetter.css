@@ -1,0 +1,22 @@
+.news{
+    background-image: url(../../../assets/newsletter.jpg);
+    min-height: 180px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.black{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    min-height: 180px;
+}
+
+.head{
+    text-align: center;
+    padding: 17px 0px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
