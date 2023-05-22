@@ -61,10 +61,13 @@ class Footer extends React.Component {
             </ul>
         </div>
         <div className="text-center min-[500px]:w-1/5">
-            <h2 className="mb-6 text-sm font-semibold text-white uppercase ">Support</h2>
+        <h2 className="mb-6 text-sm font-semibold text-white uppercase ">Customer Helpline</h2>
             <ul className="text-gray-400 dfont-medium">
+            <li className="mb-4">
+                    <a href="#" className="hover:text-gray-200">+91 9000000000</a>
+                </li>
                 <li className="mb-4">
-                    <a href="/faq" className="hover:text-gray-200">FAQ</a>
+                    <a href="#" className="hover:text-gray-200">helpline@informatician.com</a>
                 </li>
               </ul>
             </div>
