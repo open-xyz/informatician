@@ -1,6 +1,7 @@
 .logo{
     text-transform: uppercase;
     font-weight: bolder;
+    color: white;
 }
 
 .cover{
@@ -14,6 +15,27 @@
 .btn-login{
     margin-left: auto;
     margin-top: 0px;
+}
+
+.nav-link{
+    color: white;
+}
+
+.nav-link:hover {
+    border-bottom: 1px solid blue;
+    color: white;
+}
+.nav-link:active {
+    color: white;
+    background-color: red;
+}
+.nav-link:visited {
+    color: white;
+    background-color: red;
+}
+
+.navbar-toggler{
+    background-color: white;
 }
 
 @media (max-width: 991px) {

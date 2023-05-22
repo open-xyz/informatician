@@ -4,7 +4,7 @@ import "./Navbar.css"
 
 export default function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg" style={{backgroundColor: '#e3f2fd'}}>
+    <nav className="navbar navbar-expand-lg bg-dark">
       <div className="container">
         <a className="navbar-brand logo" href="/">
           Informatician
@@ -47,7 +47,7 @@ export default function Navbar() {
                 aria-label="Search"
                 style={{ borderRadius: '23px' }}
               />
-              <button className="btn btn-outline-dark" type="submit">
+              <button className="btn btn-success" type="submit">
                 Search
               </button>
             </form>
