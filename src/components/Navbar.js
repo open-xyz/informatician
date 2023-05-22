@@ -44,16 +44,16 @@ export default function Navbar() {
             >
                 <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
                     <li className="text-white hover:text-indigo-200">
-                        <a href="javascript:void(0)">Home</a>
+                        <a href="/home">Home</a>
                     </li>
                     <li className="text-white hover:text-indigo-200">
-                        <a href="javascript:void(0)">Books</a>
+                        <a href="/books">Books</a>
                     </li>
                     <li className="text-white hover:text-indigo-200">
-                        <a href="javascript:void(0)">About</a>
+                        <a href="/about">About</a>
                     </li>
                     <li className="text-white hover:text-indigo-200">
-                        <a href="javascript:void(0)">Contact US</a>
+                        <a href="/contact">Contact US</a>
                     </li>
                     <li className="text-white hover:text-indigo-200">
                         <a href="/faq">FAQ</a>
