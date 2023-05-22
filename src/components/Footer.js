@@ -75,14 +75,9 @@ class Footer extends React.Component {
               <ul className="text-gray-400 dfont-medium">
                 <li className="mb-4">
                   <a href="#" className="hover:text-gray-200">
-                    FAQ
+                    FAQ/Help
                   </a>
 
-                </li>
-                <li className="mb-4">
-                  <a href="#" className="hover:text-gray-200">
-                    Help Center
-                  </a>
                 </li>
                 <li className="mb-4">
                   <a href="https://github.com/rohansx/informatician/issues" target="blank" className="hover:text-gray-200">
