@@ -34,31 +34,30 @@ export default function Navbar() {
             </div>
           </div>
         </div>
-        </div>
-        <div>
-
-            <div
-                className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
-                    navbar ? "block" : "hidden"
-                }`}
-            >
-                <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-                    <li className="text-white hover:text-indigo-200">
-                        <a href="javascript:void(0)">Home</a>
-                    </li>
-                    <li className="text-white hover:text-indigo-200">
-                        <a href="javascript:void(0)">Books</a>
-                    </li>
-                    <li className="text-white hover:text-indigo-200">
-                        <a href="javascript:void(0)">About</a>
-                    </li>
-                    <li className="text-white hover:text-indigo-200">
-                        <a href="javascript:void(0)">Contact US</a>
-                    </li>
-                    <li className="text-white hover:text-indigo-200">
-                        <a href="/faq">FAQ</a>
-                    </li>
-                </ul>
+      </div>
+      <div>
+        <div
+          className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
+            navbar ? "block" : "hidden"
+          }`}
+        >
+          <ul className="items-center justify-center p-3 space-y-8 md:flex md:space-x-6 md:space-y-0">
+            <li className="text-white hover:text-indigo-200">
+              <a href="javascript:void(0)">Home</a>
+            </li>
+            <li className="text-white hover:text-indigo-200">
+              <a href="javascript:void(0)">Books</a>
+            </li>
+            <li className="text-white hover:text-indigo-200">
+              <a href="javascript:void(0)">About</a>
+            </li>
+            <li className="text-white hover:text-indigo-200">
+              <a href="javascript:void(0)">Contact US</a>
+            </li>
+            <li className="text-white hover:text-indigo-200">
+              <a href="/faq">FAQ</a>
+            </li>
+          </ul>
 
           <div
             className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
@@ -80,8 +79,7 @@ export default function Navbar() {
               </li>
             </ul> */}
 
-
-            <div className="mt-3 space-y-2 lg:hidden md:hidden">
+            <div className="mt-3 space-y-2 lg:hidden md:hidden ">
               <form>
                 <label
                   for="default-search"
@@ -101,7 +99,7 @@ export default function Navbar() {
 
                   <button
                     type="submit"
-                    className="text-white flex absolute right-2 top-1 bottom-1 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-3 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 "
+                    className="text-white  absolute right-2 top-1 bottom-1 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-3 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 flex items-center justify-center"
                   >
                     <AiOutlineSearch />
                   </button>
@@ -110,7 +108,7 @@ export default function Navbar() {
             </div>
           </div>
         </div>
-        <div className="hidden space-x-2 md:inline-block">
+        <div className="hidden space-x-2 md:inline-block  m-3">
           <form>
             <label
               for="default-search"
@@ -119,7 +117,7 @@ export default function Navbar() {
               Search
             </label>
             <div className="relative">
-              <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"></div>
+              <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"></div>  
               <input
                 type="search"
                 id="default-search"
