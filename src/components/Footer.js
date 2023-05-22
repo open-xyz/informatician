@@ -153,7 +153,7 @@ class Footer extends React.Component {
                 <span className="sr-only">Twitter page</span>
               </a>
               <a
-                href="#"
+                href="https://github.com/rohansx/informatician"
                 className="text-gray-400 hover:text-white hover:scale-125 "
               >
                 <BsGithub />
