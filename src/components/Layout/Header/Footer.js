@@ -1,7 +1,7 @@
 import React from "react";
-import "./Custom.css";
-import playstore from "../assets/logo_play_store.png";
-import appstore from "../assets/AppStore_Icon.png";
+import "../../Custom.css";
+import playstore from "../../../assets/logo_play_store.png";
+import appstore from "../../../assets/AppStore_Icon.png";
 import { BsFacebook, BsInstagram, BsTwitter, BsGithub } from "react-icons/bs";
 
 class Footer extends React.Component {
