@@ -9,7 +9,7 @@ export default function App() {
     <div>
       <BrowserRouter>
         <Navbar />
-        <div className="app-body" style={{margin: '77px 0px'}}>
+        <div className="app-body">
           <Body />
         </div>
       </BrowserRouter>

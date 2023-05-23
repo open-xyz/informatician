@@ -1,0 +1,110 @@
+.img-section {
+    margin-top: 56px;
+    /* background-image: url(../../../assets/home.jpg); */
+    background-color: #115289f7;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 16.10em;
+    background-size: cover;
+    object-fit: cover;
+}
+
+.img-black{
+    background-color: rgba(0, 0, 0, 0.5);
+    min-height: 16.10em;
+    width: 100%;
+}
+
+.inner {
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 56px;
+    min-height: 16.10em;
+    position: relative;
+}
+
+.inner-one{
+    width: 20.125em;
+    height: 17.5em;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    align-self: flex-end;
+    position: absolute;
+    display: block;
+}
+
+.inner-two{
+    left: 0;
+    display: block;
+    bottom: -54px;
+    background-image: url(../../../assets/start.png);
+}
+
+.inner-content{
+    align-items: center;
+    justify-content: end;
+    color: white;
+    display: flex;
+    flex-flow: column;
+    margin: 32px 0px;
+    max-width: 587px;
+    text-align: center;
+}
+
+.inner-head{
+    font-weight: 600;
+    font-family: 'Merriweather', serif;
+    font-style: normal;
+    line-height: 1.3;
+    font-size: 2.25rem;
+    color: white;
+    margin: 0 0 8px;
+}
+
+.inner-span{
+    margin-bottom: 40px;
+}
+
+.inner-para{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    color: inherit;
+    margin: 0;
+}
+
+.last-two{
+    right: 0;
+    background-image: url(../../../assets/start2.png);
+}
+
+.last-one{
+    width: 20.125em;
+    height: 16.5em;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    align-self: flex-end;
+    position: absolute;
+    bottom: -56px;
+}
+
+@media (max-width: 1050px) {
+    .inner-one {
+        display: none;
+    }
+    .inner-two {
+        display: none;
+    }
+    .inner-content {
+        align-items: flex-start;
+        text-align: left;
+    }
+    .inner-head {
+        font-size: 2.0rem;
+    }
+}
