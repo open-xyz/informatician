@@ -4,6 +4,7 @@ import playstore from "../assets/logo_play_store.png";
 import appstore from "../assets/AppStore_Icon.png";
 import { BsFacebook, BsInstagram, BsTwitter, BsGithub } from "react-icons/bs";
 import Newsletter from "./Newsletter";
+import { Link } from "react-router-dom";
 
 class Footer extends React.Component {
   render() {
@@ -18,19 +19,19 @@ class Footer extends React.Component {
               </h2>
               <ul className="text-gray-400  font-medium ">
                 <li className="mb-4">
-                  <a href="./about" className=" hover:text-gray-200">
+                  <Link to="./about" className=" hover:text-gray-200">
                     About us
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-4">
-                  <a href="./team" className=" hover:text-gray-200">
+                  <Link to="./team" className=" hover:text-gray-200">
                     Our team
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-4">
-                  <a href="./contact" className=" hover:text-gray-200">
+                  <Link to="./contact" className=" hover:text-gray-200">
                     Contact us
-                  </a>
+                  </Link>
                 </li>
 
                 
@@ -41,10 +42,10 @@ class Footer extends React.Component {
         <h2 className="mb-6 text-sm font-semibold text-white uppercase ">Customer Helpline</h2>
             <ul className="text-gray-400 dfont-medium">
             <li className="mb-4">
-                    <a href="#" className="hover:text-gray-200">+91 9000000000</a>
+                    <Link to="#" className="hover:text-gray-200">+91 9000000000</Link>
                 </li>
                 <li className="mb-4">
-                    <a href="#" className="hover:text-gray-200">helpline@informatician.com</a>
+                    <Link to="#" className="hover:text-gray-200">helpline@informatician.com</Link>
                 </li>
               </ul>
             </div>
@@ -54,9 +55,9 @@ class Footer extends React.Component {
               </h2>
               <ul className="text-gray-400 dfont-medium">
                 <li className="mb-4">
-                  <a href="./faq" className="hover:text-gray-200">
+                  <Link to="./faq" className="hover:text-gray-200">
                     FAQ/Help
-                  </a>
+                  </Link>
 
                 </li>
                 <li className="mb-4">
@@ -72,19 +73,19 @@ class Footer extends React.Component {
               </h2>
               <ul className="text-gray-400  font-medium">
                 <li className="mb-4">
-                  <a href="./privacy" className="hover:text-gray-200">
+                  <Link to="./privacy" className="hover:text-gray-200">
                     Privacy Policy
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-4">
-                  <a href="./terms" className="hover:text-gray-200">
+                  <Link to="./terms" className="hover:text-gray-200">
                     Terms and Service
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-4">
-                  <a href="./cookie" className="hover:text-gray-200">
+                  <Link to="./cookie" className="hover:text-gray-200">
                     Cookie Policy
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -94,14 +95,14 @@ class Footer extends React.Component {
               </h2>
               <ul className="text-gray-500  font-medium">
                 <li className="mb-4 flex justify-center">
-                  <a href="#" className="hover:underline">
+                  <Link to="#" className="hover:underline">
                     <img src={appstore} className="h-10" alt="App Store" />
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-4 flex justify-center">
-                  <a href="#">
+                  <Link to="#">
                     <img className="h-7" src={playstore} alt="Play Store" />
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -111,29 +112,29 @@ class Footer extends React.Component {
               © 2023 Book Listing app™. All Rights Reserved.
             </span>
             <div className="flex mt-4 space-x-6 sm:justify-center md:mt-0">
-              <a
-                href="#"
+              <Link
+                to="#"
                 className="text-gray-400 hover:text-white hover:scale-125 "
               >
                 <BsFacebook />
                 <span className="sr-only">Facebook page</span>
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                to="#"
                 className="text-gray-400 hover:text-white hover:scale-125 "
               >
                 <BsInstagram />
                 <span className="sr-only">Instagram page</span>
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                to="#"
                 className="text-gray-400 hover:text-white hover:scale-125 "
               >
                 <BsTwitter />
                 <span className="sr-only">Twitter page</span>
-              </a>
+              </Link>
               <a
-                href="https://github.com/rohansx/informatician"
+                to="https://github.com/rohansx/informatician"
                 className="text-gray-400 hover:text-white hover:scale-125 "
               >
                 <BsGithub />
