@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import { BrowserRouter } from "react-router-dom";
 import ScrollToTopButton from "./components/ScrollButton";
 
+
 export default function App() {
   return (
     <div>
@@ -12,6 +13,7 @@ export default function App() {
         <Navbar />
         <div className="app-body">
           <Body />
+          
         </div>
       </BrowserRouter>
       <Footer />
