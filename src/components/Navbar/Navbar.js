@@ -63,11 +63,7 @@ export default function Navbar() {
                   Search
                 </button>
               </form>
-              <div className="btn-login">
-                <button type="button" class="btn btn-danger" >
-                  Sign In
-                </button>
-              </div>
+              
             </div>
           </div>
         </div>
