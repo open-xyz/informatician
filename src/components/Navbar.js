@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 
 import { AiOutlineSearch, AiOutlineCloseSquare } from "react-icons/ai";
@@ -44,19 +44,29 @@ export default function Navbar() {
             >
                 <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
                     <li className="text-white hover:text-indigo-200">
-                        <a href="/home">Home</a>
+                      <NavLink to='/'>
+                        <p>Home</p>
+                      </NavLink>
                     </li>
                     <li className="text-white hover:text-indigo-200">
-                        <a href="/books">Books</a>
+                      <NavLink to='/books'>
+                        <p>Books</p>
+                      </NavLink>
                     </li>
                     <li className="text-white hover:text-indigo-200">
-                        <a href="/about">About</a>
+                      <NavLink to='/about'>
+                        <p>About</p>
+                      </NavLink>
                     </li>
                     <li className="text-white hover:text-indigo-200">
-                        <a href="/contact">Contact US</a>
+                      <NavLink to='/contact'>
+                        <p>Contact US</p>
+                      </NavLink>
                     </li>
                     <li className="text-white hover:text-indigo-200">
-                        <a href="/faq">FAQ</a>
+                      <NavLink to='/faq'>
+                        <p>FAQ</p>
+                      </NavLink>
                     </li>
                 </ul>
 
