@@ -1,7 +1,6 @@
 import React from 'react'
 import "./BookCard.css"
 const BookCard = ({ title, description, publisher, pages, imgLink }) => {
-    console.log(imgLink);
     return (
         <div id="container">
             <div className="product-details">

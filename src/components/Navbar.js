@@ -63,26 +63,13 @@ export default function Navbar() {
             className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${navbar ? "block" : "hidden"
               }`}
           >
-            {/* <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-              <li className="text-white hover:text-indigo-200">
-                <Link to="/">Home</Link>
-              </li>
-              <li className="text-white hover:text-indigo-200">
-                <Link to="/">Books</Link>
-              </li>
-              <li className="text-white hover:text-indigo-200">
-                <Link to="/">About</Link>
-              </li>
-              <li className="text-white hover:text-indigo-200">
-                <Link to="/">Contact US</Link>
-              </li>
-            </ul> */}
 
 
-            {/* <div className="mt-3 space-y-2 lg:hidden md:hidden">
+
+            <div className="mt-3 space-y-2 lg:hidden md:hidden">
               <form>
                 <label
-                  for="default-search"
+                  htmlFor="default-search"
                   className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
                 >
                   Search
@@ -105,7 +92,7 @@ export default function Navbar() {
                   </button>
                 </div>
               </form>
-            </div> */}
+            </div>
           </div>
         </div>
         {/* <div className="hidden space-x-2 md:inline-block">

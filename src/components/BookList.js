@@ -11,21 +11,18 @@ export default function BookList() {
   const [bookName, setBookName] = useState("");
 
   useEffect(() => {
-    console.log(process.env.API_KEY)
     fetch(`https://www.googleapis.com/books/v1/volumes?q=${bookName}&key=AIzaSyA3VMjWK06KCqs_wiiLa0bWowWmRIYs8Ds`)
       .then(response => response.json())
       .then(result => {
-        console.log(result?.items);
-        setBooks([...result?.items])
+        setBooks([...result.items])
       })
-    console.log(books);
   }, [bookName]);
 
   return (
     <>
       <form className="w-[100vw] bg-white p-10">
         <label
-          for="default-search"
+          htmlFor="default-search"
           className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
         >
           Search
@@ -61,10 +58,10 @@ export default function BookList() {
           <div className="book-list-container">
 
             {
-              books.map((book) => {
+              books.map((book, key) => {
                 return (
 
-                  <BookCard title={book.volumeInfo.title} description={book.volumeInfo.description} publisher={book.volumeInfo.publisher} pages={book.volumeInfo.pageCount} imgLink={book.volumeInfo.imageLinks} />
+                  <BookCard key={key} title={book.volumeInfo.title} description={book.volumeInfo.description} publisher={book.volumeInfo.publisher} pages={book.volumeInfo.pageCount} imgLink={book.volumeInfo.imageLinks} />
                 );
               })
             }
