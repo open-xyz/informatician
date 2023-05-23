@@ -28,7 +28,7 @@ class Footer extends React.Component {
                     <a href="/">Our Team</a>
                   </li>
                   <li>
-                    <a href="/">Contact Us</a>
+                    <a href="/contact">Contact Us</a>
                   </li>
                 </ul>
               </div>
@@ -36,13 +36,10 @@ class Footer extends React.Component {
                 <h3 className="footer-section-title">Support</h3>
                 <ul className="footer-section-list">
                   <li>
-                    <a href="/">FAQ</a>
+                    <a href="/faq">FAQ/Help</a>
                   </li>
                   <li>
-                    <a href="/">Help Center</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/rohansx/informatician/issues/new">Report a Bug</a>
+                    <a target="_blank" rel="noreferrer" href="https://github.com/rohansx/informatician/issues">Report a Bug</a>
                   </li>
                 </ul>
               </div>
@@ -50,13 +47,13 @@ class Footer extends React.Component {
                 <h3 className="footer-section-title">Legal</h3>
                 <ul className="footer-section-list">
                   <li>
-                    <a href="/">Terms of Service</a>
+                    <a href="/terms">Terms of Service</a>
                   </li>
                   <li>
-                    <a href="/">Privacy Policy</a>
+                    <a href="/privacy">Privacy Policy</a>
                   </li>
                   <li>
-                    <a href="/">Cookie Policy</a>
+                    <a href="/cookie">Cookie Policy</a>
                   </li>
                 </ul>
               </div>

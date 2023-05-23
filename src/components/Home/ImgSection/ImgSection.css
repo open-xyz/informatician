@@ -79,6 +79,7 @@
 
 .last-two{
     right: 0;
+    display: block;
     background-image: url(../../../assets/start2.png);
 }
 
@@ -106,5 +107,11 @@
     }
     .inner-head {
         font-size: 2.0rem;
+    }
+}
+
+@media (max-width: 840px) {
+    .last-two {
+        display: none;
     }
 }

@@ -1,0 +1,43 @@
+.privacy {
+    padding: 50px 0;
+    background-color: #f8f8f8;
+  }
+  
+  .privacy-container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .privacy-title {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin: 30px 0px;
+  }
+  
+  .privacy-section {
+    margin-bottom: 40px;
+  }
+  
+  .privacy-section-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .privacy-content {
+    margin-top: 10px;
+  }
+  
+  .privacy-content p {
+    margin-bottom: 15px;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+  
+  .contact-email {
+    color: #007bff;
+    text-decoration: none;
+  }
+  

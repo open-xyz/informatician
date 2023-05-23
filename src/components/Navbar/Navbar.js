@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css"
-import NewsLetter from "../Footer/NewsLetter/NewsLetter";
+
 
 export default function Navbar() {
   return (
     <>
       <nav className="navbar fixed-top navbar-expand-lg bg-dark">
-        <div className="container">
+        <div className="container-fluid">
           <a className="navbar-brand logo" href="/">
             Informatician
           </a>
@@ -40,8 +40,18 @@ export default function Navbar() {
                     About
                   </Link>
                 </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/contact">
+                    Contact Us
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/faq">
+                    FAQ
+                  </Link>
+                </li>
               </ul>
-              <form className="d-flex" role="search" style={{ width: '60%' }}>
+              <form className="d-flex" role="search" style={{ width: '42%' }}>
                 <input
                   className="form-control me-2"
                   type="search"
@@ -62,7 +72,7 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
-      
+
     </>
   );
 }

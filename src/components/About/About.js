@@ -1,6 +1,8 @@
 import React from "react";
 import "./About.css";
 import bookImage from "../../assets/books.webp";
+// import bookImage from "../assets/books.webp";
+import ScrollToTopButton from "../ScrollButton";
 
 const About = () => {
   return (
@@ -37,6 +39,7 @@ const About = () => {
           </div>
         </div>
       </div>
+      <ScrollToTopButton />
     </div>
   );
 };
