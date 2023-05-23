@@ -21,7 +21,7 @@ Informatician is an open-source web application designed to provide users with a
 
 - Responsive Design: The application features a responsive design, making it accessible and visually appealing across various devices, including desktops, tablets, and mobile phones.
 
-## Installationn 🏗️
+## Installation 🏗️
 
 1. Clone the repository:
  ```sh
@@ -38,11 +38,16 @@ Informatician is an open-source web application designed to provide users with a
  $ npm start
 ```
 
-
 ## Usage
 
 💻 The application can be accessed in a web browser at `http://localhost:3000`.
 
+## 💪 Contributions
+
+Informatician is powered by major contributions from the community.
+[Template contributions ](https://github.com/rohansx/informatician/issues/new?assignees=&labels=&template=submit-template.md&title=%5Bnuclei-template%5D+), [Feature Requests](https://github.com/rohansx/informatician/issues/new?assignees=&labels=&template=feature_request.md&title=%5BFeature%5D+) and [Bug Reports](https://github.com/rohansx/informatician/issues/new?assignees=&labels=&template=bug_report.md&title=%5BBug%5D+) are more than welcome.
+
+![Alt](https://repobeats.axiom.co/api/embed/37dcb7fdf50f4359cc5c60460b0a4a0edb4cc2b8.svg "Repobeats analytics image")
 
 # Contributing 🚀
 

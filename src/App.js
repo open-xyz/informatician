@@ -13,8 +13,8 @@ export default function App() {
         <div className="app-body">
           <Body />
         </div>
-      </BrowserRouter>
       <Footer />
+      </BrowserRouter>
       <ScrollToTopButton />
     </div>
   );

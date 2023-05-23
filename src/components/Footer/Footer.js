@@ -9,6 +9,7 @@ import {
 import playstore from "../../assets/logo_play_store.png";
 import appstore from "../../assets/AppStore_Icon.png";
 import NewsLetter from "./NewsLetter/NewsLetter";
+import { Link } from "react-router-dom";
 
 class Footer extends React.Component {
   render() {
@@ -22,13 +23,13 @@ class Footer extends React.Component {
                 <h3 className="footer-section-title">About</h3>
                 <ul className="footer-section-list">
                   <li>
-                    <a href="/about">About Us</a>
+                    <Link to="/about">About Us</Link>
                   </li>
                   <li>
-                    <a href="/">Our Team</a>
+                    <Link to="/">Our Team</Link>
                   </li>
                   <li>
-                    <a href="/contact">Contact Us</a>
+                    <Link to="/contact">Contact Us</Link>
                   </li>
                 </ul>
               </div>
@@ -36,7 +37,7 @@ class Footer extends React.Component {
                 <h3 className="footer-section-title">Support</h3>
                 <ul className="footer-section-list">
                   <li>
-                    <a href="/faq">FAQ/Help</a>
+                    <Link to="/faq">FAQ/Help</Link>
                   </li>
                   <li>
                     <a target="_blank" rel="noreferrer" href="https://github.com/rohansx/informatician/issues">Report a Bug</a>
@@ -47,56 +48,42 @@ class Footer extends React.Component {
                 <h3 className="footer-section-title">Legal</h3>
                 <ul className="footer-section-list">
                   <li>
-                    <a href="/terms">Terms of Service</a>
+                    <Link to="/terms">Terms of Service</Link>
                   </li>
                   <li>
-                    <a href="/privacy">Privacy Policy</a>
+                    <Link to="/privacy">Privacy Policy</Link>
                   </li>
                   <li>
-                    <a href="/cookie">Cookie Policy</a>
+                    <Link to="/cookie">Cookie Policy</Link>
                   </li>
                 </ul>
               </div>
               <div className="col-md-2">
                 <h3 className="footer-section-title">Social</h3>
                 <div className="footer-social-icons">
-                  <a href="/" className="footer-social-icon">
+                  <Link to="/" className="footer-social-icon">
                     <FontAwesomeIcon icon={faFacebookF} />
-                  </a>
-                  <a href="/" className="footer-social-icon">
+                  </Link>
+                  <Link to="/" className="footer-social-icon">
                     <FontAwesomeIcon icon={faTwitter} />
-                  </a>
-                  <a href="/" className="footer-social-icon">
+                  </Link>
+                  <Link to="/" className="footer-social-icon">
                     <FontAwesomeIcon icon={faInstagram} />
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="col-md-2">
                 <h3 className="footer-section-title">Get Our Free Apps</h3>
                 <div className="footer-app-links">
-                  <a href="/" className="footer-app-link">
+                  <Link to="/" className="footer-app-link">
                     <img src={playstore} alt="Play Store" />
-                  </a>
-                  <a href="/" className="footer-app-link">
+                  </Link>
+                  <Link to="/" className="footer-app-link">
                     <img src={appstore} alt="App Store" />
-                  </a>
+                  </Link>
                 </div>
               </div>
-              {/* <div className="col-md-2">
-              <h3 className="footer-section-title">
-                Subscribe to Our Newsletter
-              </h3>
-              <form className="footer-newsletter-form">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="footer-newsletter-input"
-                />
-                <button type="submit" className="footer-newsletter-submit">
-                  Subscribe
-                </button>
-              </form>
-            </div> */}
+              
             </div>
             <div className="footer-bottom">
               &copy; 2023 Informatician. All rights reserved.
