@@ -1,55 +1,89 @@
-.logo{
+.logo {
     text-transform: uppercase;
     font-weight: bolder;
     color: white;
-}
-
-.cover{
+  }
+  
+  .cover {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 90%;
-}
-
-.btn-login{
+  }
+  
+  .btn-login {
     margin-left: auto;
     margin-top: 0px;
-}
-
-.nav-link{
+  }
+  
+  .nav-link {
     color: white;
-}
-
-.nav-link:hover {
+  }
+  
+  .nav-link:hover {
     border-bottom: 1px solid blue;
     color: white;
-}
-.nav-link:active {
+  }
+  
+  .nav-link:active {
     color: white;
     background-color: red;
-}
-.nav-link:visited {
+  }
+  
+  .nav-link:visited {
     color: white;
     background-color: red;
-}
-
-.navbar-toggler{
+  }
+  
+  .navbar-toggler {
     background-color: white;
-}
-
-.logo:hover {
+  }
+  
+  .logo:hover {
     color: white;
-}
-
-@media (max-width: 991px) {
-    .cover{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+  }
+  
+  @media (max-width: 991px) {
+    .cover {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
     }
-    .btn-login{
-        margin-left: 0px;
-        margin-top: 12px;
+    .btn-login {
+      margin-left: 0px;
+      margin-top: 12px;
     }
+  }
+  
+  .navbar-nav {
+    position: relative;
+  }
+  
+  .form-control {
+    padding-right: 40px; /* Adjust this value to leave space for the search symbol */
+  }
+  
+  .search-bar {
+    position: relative;
+  }
+  
+  .search-bar input {
+    padding-right: 40px; /* Adjust this value to leave space for the search symbol */
+  }
+  
+  .search-bar .btn-success {
+    position: absolute;
+    right: 10px; /* Adjust this value to position the search symbol */
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  img, svg {
+    vertical-align: middle;
+    color: black;
 }
+  
