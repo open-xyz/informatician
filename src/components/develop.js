@@ -6,7 +6,7 @@ const Develop = () => {
     <div className="container">
       <h1>Under Development</h1>
       <div className="image-container">
-        <img src={construct} alt="Under Development Image" className="development-image" />
+        <img src={construct} alt="Under Development" className="development-image" />
       </div>
       <p>This page is currently under development. Please check back later.</p>
 
