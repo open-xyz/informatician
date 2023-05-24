@@ -65,6 +65,7 @@
   align-items: center;
   background-color: white;
   border-radius: 4px;
+  margin-left: 0.5rem;
 }
 
 .navbar-search-input {
@@ -114,7 +115,7 @@
 
   .navbar-menu {
     position: absolute;
-    top: 100%;
+    top: 0%;
     right: 0;
     width: 100%;
     background-color: #1e293b;
@@ -124,9 +125,11 @@
     opacity: 0;
     visibility: hidden;
     z-index: 1;
+    flex-direction: column;
   }
 
   .navbar-menu.active {
+    top: 100%;
     opacity: 1;
     visibility: visible;
   }
