@@ -1,0 +1,55 @@
+.logo{
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: white;
+}
+
+.cover{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+
+.btn-login{
+    margin-left: auto;
+    margin-top: 0px;
+}
+
+.nav-link{
+    color: white;
+}
+
+.nav-link:hover {
+    border-bottom: 1px solid blue;
+    color: white;
+}
+.nav-link:active {
+    color: white;
+    background-color: red;
+}
+.nav-link:visited {
+    color: white;
+    background-color: red;
+}
+
+.navbar-toggler{
+    background-color: white;
+}
+
+.logo:hover {
+    color: white;
+}
+
+@media (max-width: 991px) {
+    .cover{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .btn-login{
+        margin-left: 0px;
+        margin-top: 12px;
+    }
+}

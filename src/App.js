@@ -1,7 +1,7 @@
 import React from "react";
 import Body from "./components/Body";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
 import { BrowserRouter } from "react-router-dom";
 import ScrollToTopButton from "./components/ScrollButton";
 

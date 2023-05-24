@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./BookList.css";
-import ScrollToTopButton from "./ScrollButton";
-import Card from "./Card";
+import ScrollToTopButton from "../ScrollButton";
+import Card from "../Card";
 export default function BookList() {
   const [books, setBooks] = useState([
     { name: "Book1" , author:"Author1" },

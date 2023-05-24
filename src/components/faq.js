@@ -6,7 +6,7 @@ const FaqHelp = () => {
   return (
     <div className="faq-help">
       <div className="faq-help-header">
-        <h1 className="faq-help-title">Book Listing App Help Center</h1>
+        <h1 className="faq-help-title">Informatician Help Center</h1>
         <img src={helpImage} alt="Help" className="faq-help-image" />
       </div>
       <div className="faq-help-description">

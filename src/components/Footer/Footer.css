@@ -7,9 +7,14 @@
   font-size: 14px;
 }
 
+.footer .row{
+  justify-content: center;
+  text-align: center;
+}
+
 .footer-container {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   justify-content: space-between;
 }
 
@@ -46,7 +51,7 @@
 
 .footer-social-icons {
   display: flex;
-  justify-content: start;
+  justify-content: center;
   margin-bottom: 10px;
 }
 
@@ -70,9 +75,10 @@
 
 .footer-app-links {
   display: flex;
+  flex-direction: column;
   justify-content: start;
   margin-top: 10px;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .footer-app-link {
