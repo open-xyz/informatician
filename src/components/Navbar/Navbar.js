@@ -57,7 +57,7 @@ export default function Navbar() {
                   type="search"
                   placeholder="Search"
                   aria-label="Search"
-                  style={{ borderRadius: '23px' }}
+                  style={{ borderRadius: '7px' }}
                 />
                 <button className="btn btn-success" type="submit">
                   Search
