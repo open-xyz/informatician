@@ -13,6 +13,8 @@ import PrivacyPolicy from "./PrivacyPolicy";
 import CookiePolicy from "./Cookie";
 import FaqHelp from "./faq";
 import Develop from "./develop";
+import Error from "./Error";
+
 function Body() {
   return (
     <div>
@@ -27,7 +29,8 @@ function Body() {
         <Route path="/cookie" element={<CookiePolicy/>}/>
         <Route path="/faq" element={<FaqHelp/>}/>
         <Route path="/develop" element={<Develop/>}/>
-
+        
+        <Route path="*" element={<Error/>}/>
 
 
       </Routes>
