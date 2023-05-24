@@ -51,13 +51,13 @@ export default function Navbar() {
                   </Link>
                 </li>
               </ul>
-              <form className="d-flex" role="search" style={{ width: '42%' }}>
+              <form className="d-flex" role="search" style={{ width: '35%' }}>
                 <input
                   className="form-control me-2"
                   type="search"
                   placeholder="Search"
                   aria-label="Search"
-                  style={{ borderRadius: '7px' }}
+                  style={{ borderRadius: '50px' }}
                 />
                 <button className="btn btn-success" type="submit">
                   Search
