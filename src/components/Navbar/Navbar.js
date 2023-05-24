@@ -1,74 +1,42 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import "./Navbar.css"
-
+import { useState } from "react";
+import './Navbar.css'
 
 export default function Navbar() {
-  return (
-    <>
-      <nav className="navbar fixed-top navbar-expand-lg bg-dark">
-        <div className="container-fluid">
-          <a className="navbar-brand logo" href="/">
-            Informatician
-          </a>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-            <div className="cover">
-              <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                <li className="nav-item">
-                  <Link className="nav-link" to="/">
-                    Home
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/books">
-                    Books
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/about">
-                    About
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/contact">
-                    Contact Us
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/faq">
-                    FAQ
-                  </Link>
-                </li>
-              </ul>
-              <form className="d-flex" role="search" style={{ width: '35%' }}>
-                <input
-                  className="form-control me-2"
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search"
-                  style={{ borderRadius: '50px' }}
-                />
-                <button className="btn btn-success" type="submit">
-                  Search
-                </button>
-              </form>
-              
-            </div>
-          </div>
-        </div>
-      </nav>
+    const [clicked, setClicked] = useState(false);
+    const [selectedOption, setSelectedOption] = useState('Home');
 
-    </>
-  );
+    const handleOptionClick = (option) => {
+      setSelectedOption(option);
+    };
+    return (
+        <nav>
+            <a href="" className="logo">informatician</a>
+            <div>
+                <ul id="nav-items" className={clicked? "#nav-items nav-active": "#nav-items"} style={{marginBottom:0}}>
+                    <li><a href="/" className={selectedOption === 'Home' ? 'active' : ''} onClick={() => handleOptionClick('Home')}>Home</a></li>
+                    <li><a href="/books" className={selectedOption === 'books' ? 'active' : ''} onClick={() => handleOptionClick('books')}>Books</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact Us</a></li>
+                    <li><a href="/faq">FAQ</a></li>
+                    <div className="search-container search-mobile-view">
+                        <form action="" className="search-bar">
+                            <input type="text" placeholder="search..." name="q" />
+                            <button type="submit"><i className="fa-solid fa-search"></i></button>
+                        </form>
+                    </div>
+                </ul>
+            </div>
+            <div className="search-container search-web-view">
+                <form action="" className="search-bar">
+                    <input type="text" placeholder="search..." name="q" />
+                    <button type="submit"><i className="fa-solid fa-search"></i></button>
+                </form>
+            </div>
+            
+            <div id="mobile">
+            <i id="bar" className={clicked ? "fa-solid fa-times" : "fa-solid fa-bars"} onClick={() => setClicked(!clicked)}></i>
+            </div>
+        </nav>
+    );
 }
