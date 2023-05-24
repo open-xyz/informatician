@@ -110,8 +110,34 @@
     }
 }
 
+.last-three{
+    width: 20.125em;
+    height: 16.5em;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    align-self: flex-end;
+    position: absolute;
+    bottom: -171px;
+    display: block;
+    right: -25px;
+    background-image: url(../../../assets/start3.png);
+}
+
+@media (max-width: 478px) {
+    .inner-content {
+        margin: 64px 0px;
+    }
+}
+
 @media (max-width: 840px) {
     .last-two {
+        display: none;
+    }
+}
+
+@media (min-width: 840px) {
+    .last-three {
         display: none;
     }
 }

@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css"
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 export default function Navbar() {
   return (
@@ -60,10 +61,12 @@ export default function Navbar() {
                   style={{ borderRadius: '7px' }}
                 />
                 <button className="btn btn-success" type="submit">
-                  Search
+                  <FontAwesomeIcon icon={faMagnifyingGlass}>
+                    <Link to="/" className="nav-link" />
+                  </FontAwesomeIcon>
                 </button>
               </form>
-              
+
             </div>
           </div>
         </div>

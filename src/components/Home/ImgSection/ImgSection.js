@@ -26,6 +26,7 @@ export default function ImgSection() {
                                 </div>
                             </div>
                             <div className="last-one last-two"></div>
+                            <div className="last-three"></div>
                         </div>
                     </div>
                 </div>
