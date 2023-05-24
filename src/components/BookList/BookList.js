@@ -9,7 +9,7 @@ export default function BookList() {
   useEffect(() => {
     if (bookName !== "") {
 
-      fetch(`https://www.googleapis.com/books/v1/volumes?q=${bookName}&key=AIzaSyA3VMjWK06KCqs_wiiLa0bWowWmRIYs8Ds`)
+      fetch(`https://www.googleapis.com/books/v1/volumes?q=${bookName}&key=API_KEY`)
         .then(response => response.json())
         .then(result => {
           setBooks([...result?.items])
