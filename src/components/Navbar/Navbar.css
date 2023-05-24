@@ -20,6 +20,14 @@ nav {
     color: #fff;
 font-size: 1.5rem;
 }
+
+#nav-items{
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
 #nav-items li{
     list-style: none;
     margin: 10px 20px;
