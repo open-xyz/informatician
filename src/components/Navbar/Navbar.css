@@ -1,55 +1,147 @@
-.logo{
-    text-transform: uppercase;
-    font-weight: bolder;
-    color: white;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: rgb(22 19 42);
+    padding: 0.75rem 2rem;
+    font-family: 'Poppins', sans-serif !important;
 }
 
-.cover{
+.logo{
+    text-decoration: none;
+    font-weight: 900;
+    color: #fff;
+font-size: 1.5rem;
+}
+#nav-items li{
+    list-style: none;
+    margin: 10px 20px;
+    position: relative;
+}
+
+#nav-items li a{
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+    text-decoration: none;
+}
+#nav-items li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: #80a1e8;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+#nav-items li a:hover{
+    cursor: pointer;
+}
+#nav-items li a:hover::after,
+#nav-items li a.active::after{
+    width: 50%;
+}
+#nav-items li a.active{
+    color: #80a1e8;
+}
+#mobile{
+    display: none;
+}
+
+.search-mobile-view{
+    display: none;
+}
+
+.search-bar{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+}
+.search-bar input{
+    /* width: 100%; */
+    max-width: 300px;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    border: none;
     align-items: center;
-    width: 90%;
+    border-radius: 60px;
+    padding: 0.75rem 0.75rem;
+
 }
 
-.btn-login{
-    margin-left: auto;
-    margin-top: 0px;
+::placeholder{
+    color: #cac7ff;
 }
 
-.nav-link{
-    color: white;
+.search-bar button i {
+    width: 2rem;
+}
+.search-bar button {
+    border: 0;
+    border-radius: 50%;
+    background: #58629b;
+    cursor: pointer;
+    height: 48px;
+    width: 48px;
+    position: relative;
+    right: 39px;
 }
 
-.nav-link:hover {
-    border-bottom: 1px solid blue;
-    color: white;
-}
-.nav-link:active {
-    color: white;
-    background-color: red;
-}
-.nav-link:visited {
-    color: white;
-    background-color: red;
-}
-
-.navbar-toggler{
-    background-color: white;
-}
-
-.logo:hover {
-    color: white;
-}
-
-@media (max-width: 991px) {
-    .cover{
+@media screen and (max-width:768px){
+    nav{
+        padding: 1rem 2rem;
+        
+    }
+    #nav-items{
+        z-index: 100;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 65px;
+        right: -167px;
+        width: 167px;
+        height: 100vh;
+        padding: 14px 0 0 4px;
+        background-color: #23233f;
+        transition: 0.3s;
     }
-    .btn-login{
-        margin-left: 0px;
-        margin-top: 12px;
+    #mobile{
+        display: block;
+    }
+    #mobile i{
+        cursor: pointer;
+        font-size: 2rem;
+        color: #ccd0d7;
+    }
+    #nav-items.nav-active{
+        right: -5px;
+    }
+    .search-web-view{
+        display: none;
+    }
+    .search-mobile-view{
+        display: block;
+    }
+    .search-bar input{
+        position: relative;
+        left: 1rem;
+        padding: 0.75rem 0.75rem;
+        width: 95%;
+    }
+    .search-bar button{
+        right: 1rem;
+        height: 39px;
+        width: 53px;
     }
 }

@@ -68,10 +68,6 @@ export default function Navbar() {
               </form>
 
             </div>
-          </div>
-        </div>
-      </nav>
-
-    </>
-  );
+        </nav>
+    );
 }

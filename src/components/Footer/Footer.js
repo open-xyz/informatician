@@ -41,7 +41,7 @@ class Footer extends React.Component {
                     <Link to="/faq">FAQ/Help</Link>
                   </li>
                   <li>
-                    <a target="_blank" rel="noreferrer" href="https://github.com/rohansx/informatician/issues">Report a Bug</a>
+                    <a target="_blank" rel="noreferrer" href="https://github.com/rohansx/informatician/issues/new">Report a Bug</a>
                   </li>
                 </ul>
               </div>

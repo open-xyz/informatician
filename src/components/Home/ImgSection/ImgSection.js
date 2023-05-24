@@ -11,13 +11,12 @@ export default function ImgSection() {
                             <div className="inner-one inner-two"></div>
                             <div className="inner-content">
                                 <h3 className="inner-head">
-                                    Read Anywhere. Anytime
+                                    Read anywhere. Anytime.
                                 </h3>
                                 <span className="inner-span">
                                     <p className="inner-para">
-                                        Discover the best books in various categories.
+                                    Unveil the finest literary treasures across diverse genres.
                                     </p>
-                                    <p className="inner-para">Cancel anytime.</p>
                                 </span>
                                 <div>
                                     <button className="btn btn-success">
