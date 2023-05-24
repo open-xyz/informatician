@@ -1,16 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Navbar.css"
-
+import { FaSearch } from "react-icons/fa";
+import "./Navbar.css";
 
 export default function Navbar() {
   return (
     <>
       <nav className="navbar fixed-top navbar-expand-lg bg-dark">
         <div className="container-fluid">
-          <a className="navbar-brand logo" href="/">
+          <Link className="navbar-brand logo" to="/">
             Informatician
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -22,53 +22,54 @@ export default function Navbar() {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-            <div className="cover">
-              <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                <li className="nav-item">
-                  <Link className="nav-link" to="/">
-                    Home
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/books">
-                    Books
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/about">
-                    About
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/contact">
-                    Contact Us
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/faq">
-                    FAQ
-                  </Link>
-                </li>
-              </ul>
-              <form className="d-flex" role="search" style={{ width: '35%' }}>
+          <div
+            className="collapse navbar-collapse justify-content-center"
+            id="navbarSupportedContent"
+          >
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                <Link className="nav-link" to="/">
+                  Home
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/books">
+                  Books
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/about">
+                  About
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/contact">
+                  Contact Us
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/faq">
+                  FAQ
+                </Link>
+              </li>
+            </ul>
+            <form className="d-flex" role="search">
+              <div className="search-bar">
                 <input
                   className="form-control me-2"
                   type="search"
                   placeholder="Search"
                   aria-label="Search"
-                  style={{ borderRadius: '50px' }}
+                  style={{ borderRadius: "50px" }}
                 />
                 <button className="btn btn-success" type="submit">
-                  Search
+                  <FaSearch />
                 </button>
-              </form>
-              
-            </div>
+              </div>
+            </form>
           </div>
         </div>
       </nav>
-
     </>
   );
 }
