@@ -1,32 +1,66 @@
 import React from "react";
 import "./faq.css";
-const faq = () => {
-    return (
-        <>
-          <div class="faq">
-    <h1 style={{textAlign: "center",  backgroundColor: "#f8f8f8", fontSize:"30px"}}> Frequently Asked Questions <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJOnysHgTp-CNoSk1DTPakxzP7GDaSvbRbqg&usqp=CAU"></img></h1>
-    <div className="container"><h4><b>Q: How can one develop a habit of reading regularly?</b></h4>
-    <p class="question"><b>A:</b> One can start by setting aside dedicated time for reading each day. Creating a comfortable reading environment, choosing books genuinely can interest one.</p>
+import helpImage from "../assets/help.png";
+
+const FaqHelp = () => {
+  return (
+    <div className="faq-help">
+      <div className="faq-help-header">
+        <h1 className="faq-help-title">Book Listing App Help Center</h1>
+        <img src={helpImage} alt="Help" className="faq-help-image" />
+      </div>
+      <div className="faq-help-description">
+        <h2 className="faq-help-description-title">
+          What can we help you with?
+        </h2>
+        <p className="faq-help-description-text">
+          If you have any questions or need assistance, our support team is here
+          to help. Select a category below to find answers to common queries or
+          contact us directly for personalized assistance.
+        </p>
+      </div>
+      <div className="faq-section">
+        <h2 className="faq-section-title">Frequently Asked Questions</h2>
+        <div className="faq-item">
+          <h4 className="faq-question">
+            <b>Q: How can one develop a habit of reading regularly?</b>
+          </h4>
+          <p className="faq-answer">
+            <b>A:</b> One can start by setting aside dedicated time for reading
+            each day. Creating a comfortable reading environment and choosing
+            books that genuinely interest you can also help.
+          </p>
+        </div>
+        <div className="faq-item">
+          <h4 className="faq-question">
+            <b>
+              Q: What are some common reasons why people abandon books midway?
+            </b>
+          </h4>
+          <p className="faq-answer">
+            <b>A:</b> Some reasons include a lack of interest in the content or
+            finding it difficult to connect with the writing style. However,
+            there are many other books to choose from.
+          </p>
+        </div>
+      </div>
+      <div className="help-section">
+        <h2 className="help-section-title">Need More Help?</h2>
+        <p className="help-description">
+          If you have any other questions or need further assistance, please
+          don't hesitate to contact our customer support team. We are here to
+          help you!
+        </p>
+        <div className="help-contact">
+          <p className="help-contact-text">Contact us:</p>
+          <ul className="help-contact-list">
+            <li>Email: support@example.com</li>
+            <li>Phone: 123-456-7890</li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <div className="container">
-    <h4><b>Q: What are some common reasons why people abandon books midway?</b></h4>
-    <p class="question"><b>A:</b> Some reasons include lack of interest in the content or finding it difficult to connect with the writing style. However, there are many other books to choose from.</p>
-    </div>
-    <div className="container">
-    <h4><b>Q: Principal work of this website.</b> </h4>
-    <p class="question"><b>A:</b> Our website is an online platform that helps users discover and locate books based on their interests. Solely to escalate their likings towards books.</p>
-    </div>
-    <div className="container">
-     <h4><b>Q: Can I find both new and old books on a book finding website?</b></h4>
-     <p class="question"><b>A:</b> Yes, our websites include listings for both new and old books. Users can search based on their preferences.</p>
-     </div>
-     <div className="container">
-     <h4><b>Q: Can I get a hard copy of the books?</b></h4>
-     <p class="question"><b>A:</b> You will get to see a soft copy of the book. However, one can procure the books from outside </p>
-     </div>
-     </div>
-     </>
-    );
-  };
-  
-  export default faq;
+  );
+};
+
+export default FaqHelp;

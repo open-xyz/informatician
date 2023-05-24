@@ -1,12 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { useState } from "react";
-
-import { AiOutlineSearch } from "react-icons/ai";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { IoCloseSharp } from "react-icons/io5";
-import "./Custom.css";
-// import "./Navbar.css";
+import { AiOutlineSearch } from "react-icons/ai";
+import "./Navbar.css";
 
 export default function Navbar() {
   const [navbar, setNavbar] = useState(false);
@@ -123,6 +119,9 @@ export default function Navbar() {
             </div>
           </form>
         </div> */}
+
+
+
       </div>
     </nav>
   );
