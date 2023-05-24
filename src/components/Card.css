@@ -1,0 +1,121 @@
+.cardhead{
+    font-family: 'Barlow Condensed';
+font-style: normal;
+font-weight: 300;
+font-size: 3vw;
+line-height: 2.4vw;
+
+/* Dark Blue */
+
+color: #224259;
+}
+.carddate
+{
+    font-family: 'Barlow Condensed';
+font-style: normal;
+font-weight: 600;
+font-size: 1.8vw;
+line-height: 2vw;
+/* identical to box height */
+
+
+/* Text Color */
+
+color: #505050;
+
+}
+.cardimage{
+    border-radius: 9px 9px 0px 0px;
+
+}
+.cardlocation
+{
+    font-family: 'Barlow Condensed';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.2vw;
+    line-height: 1.5vw;
+    
+    /* Text Color */
+    
+    color: #505050; 
+}
+.eventstitle
+{
+    font-family: 'Barlow Condensed';
+font-style: normal;
+font-weight: 600;
+font-size: 70px;
+line-height: 84px;
+text-align: center;
+
+/* Dark Blue */
+
+color: #224259;
+
+text-shadow: 2px 2px 4px rgba(245, 92, 5, 0.5);
+
+
+}
+/* .eventcard{
+    margin: 0 auto;
+} */
+.card-body
+{
+    
+    border: 1px solid #232323;
+    border-radius: 0px 0px 9px 9px
+}
+.card{
+  flex: 0 1 calc(25% - 1em);
+  margin: auto;
+  margin-top: 1rem;
+}
+/* .card{
+    display: grid;
+  
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px 10px;
+} */
+
+@media only screen and (max-width:1350px) {
+
+  
+}
+@media only screen and (max-width:600px) {
+  .card{
+    width: 100%;
+  }
+  .cardhead{
+    font-size: 3vw;
+    line-height: 4.4vw;
+  }
+  .carddate{
+    font-size:4vw;
+    line-height: 3vw;
+  }
+  .cardlocation
+  {
+    font-size: 1.5vw;
+    line-height: 1vw;
+  }
+}
+@media only screen and (max-width:480px) {
+  .card{
+    width: 80%;
+  }
+  .cardhead{
+    font-size: 2vw;
+    line-height: 4.4vw;
+  }
+  .cardlocation
+  {
+    font-size: 1.5vw;
+    line-height: 1vw;
+  }
+}
+@media only screen and (max-width:280px) {
+  .card{
+    width: 80%;
+  }
+}
