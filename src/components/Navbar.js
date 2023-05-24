@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-import { AiOutlineSearch, AiOutlineCloseSquare } from "react-icons/ai";
+import { AiOutlineSearch } from "react-icons/ai";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoCloseSharp } from "react-icons/io5";
 import "./Custom.css";
@@ -11,15 +11,15 @@ import "./Custom.css";
 export default function Navbar() {
   const [navbar, setNavbar] = useState(false);
   return (
-    <nav className="w-full bg-slate-800  shadow">
-      <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
+    <nav className="flex flex-col md:flex-row justify-between w-full bg-slate-800  shadow">
+      <div className="justify-between px-4 lg:max-w-7xl md:items-center md:flex md:px-0">
         <div>
-          <div className="flex items-center justify-between py-3 md:py-5 md:block">
-            <a href="javascript:void(0)">
+          <div className="flex items-center justify-between py-3 md:py-5 md:inline">
+            <Link to="/">
               <h2 className="text-2xl font-bold text-white">
                 Book Listing App
               </h2>
-            </a>
+            </Link>
             <div className="md:hidden">
               <button
                 className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
@@ -34,57 +34,42 @@ export default function Navbar() {
             </div>
           </div>
         </div>
-        </div>
-        <div>
+      </div>
+      <div>
 
-            <div
-                className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
-                    navbar ? "block" : "hidden"
-                }`}
-            >
-                <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-                    <li className="text-white hover:text-indigo-200">
-                        <a href="javascript:void(0)">Home</a>
-                    </li>
-                    <li className="text-white hover:text-indigo-200">
-                        <a href="javascript:void(0)">Books</a>
-                    </li>
-                    <li className="text-white hover:text-indigo-200">
-                        <a href="javascript:void(0)">About</a>
-                    </li>
-                    <li className="text-white hover:text-indigo-200">
-                        <a href="javascript:void(0)">Contact US</a>
-                    </li>
-                    <li className="text-white hover:text-indigo-200">
-                        <a href="/faq">FAQ</a>
-                    </li>
-                </ul>
+        <div
+          className={`flex-1 justify-self-center w-[40vw] pb-3 mt-8 md:block md:pb-0 md:mt-6 ${navbar ? "block" : "hidden"
+            }`}
+        >
+          <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
+            <li className="text-white hover:text-indigo-200">
+              <Link to="/">Home</Link>
+            </li>
+            <li className="text-white hover:text-indigo-200">
+              <Link to="/books">Books</Link>
+            </li>
+            <li className="text-white hover:text-indigo-200">
+              <Link to="/about">About</Link>
+            </li>
+            <li className="text-white hover:text-indigo-200">
+              <Link to="/contact">Contact US</Link>
+            </li>
+            <li className="text-white hover:text-indigo-200">
+              <Link to="/faq">FAQ</Link>
+            </li>
+          </ul>
 
           <div
-            className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
-              navbar ? "block" : "hidden"
-            }`}
+            className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${navbar ? "block" : "hidden"
+              }`}
           >
-            {/* <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-              <li className="text-white hover:text-indigo-200">
-                <a href="javascript:void(0)">Home</a>
-              </li>
-              <li className="text-white hover:text-indigo-200">
-                <a href="javascript:void(0)">Books</a>
-              </li>
-              <li className="text-white hover:text-indigo-200">
-                <a href="javascript:void(0)">About</a>
-              </li>
-              <li className="text-white hover:text-indigo-200">
-                <a href="javascript:void(0)">Contact US</a>
-              </li>
-            </ul> */}
+
 
 
             <div className="mt-3 space-y-2 lg:hidden md:hidden">
               <form>
                 <label
-                  for="default-search"
+                  htmlFor="default-search"
                   className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
                 >
                   Search
@@ -110,7 +95,7 @@ export default function Navbar() {
             </div>
           </div>
         </div>
-        <div className="hidden space-x-2 md:inline-block">
+        {/* <div className="hidden space-x-2 md:inline-block">
           <form>
             <label
               for="default-search"
@@ -137,7 +122,7 @@ export default function Navbar() {
               </button>
             </div>
           </form>
-        </div>
+        </div> */}
       </div>
     </nav>
   );
