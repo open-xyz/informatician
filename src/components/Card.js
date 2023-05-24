@@ -1,20 +1,31 @@
 import React from 'react'
-
 import "./Card.css"
-const Card = (props) => {
+const Card = ({ title, description, publisher, pages, imgLink }) => {
   return (
-    <div className="card">
-    <div className="eventcard" style={{ width: "100%" }}>
-      <img src="https://images.unsplash.com/photo-1592496431122-2349e0fbc666?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Ym9vayUyMGNvdmVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60" className="card-img-top cardimage" alt="..." />
-      <div className="card-body">
-        <div className="card-text">
-          <p className="cardhead">{props.name}</p>
-          <p className="carddate">{props.date}</p>
-          <p className="cardlocation">Location</p>
+    <div id="container">
+      <div className="product-details">
+        <h1>{title}</h1>
+        <ul>
+          <li><strong>Pages: </strong>{pages}</li>
+          <li><strong>Publisher: </strong>{publisher}</li>
+        </ul>
+      </div>
+
+
+      <div className="product-image">
+
+        <img src={imgLink?.thumbnail} alt={title} />
+
+        <div className="info">
+          <h2>The Description</h2>
+          <ul>
+            <li><p><strong>{description}</strong></p></li>
+          </ul>
         </div>
       </div>
+
+
     </div>
-  </div>
   )
 }
 
