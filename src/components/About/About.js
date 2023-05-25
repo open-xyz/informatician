@@ -1,10 +1,12 @@
 import React from "react";
 import "./About.css";
 import bookImage from "../../assets/books.webp";
-// import bookImage from "../assets/books.webp";
+import { useMediaQuery } from "react-responsive";
 import ScrollToTopButton from "../ScrollButton";
 
 const About = () => {
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+
   return (
     <div className="about">
       <div className="container">
