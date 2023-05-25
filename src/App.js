@@ -7,7 +7,7 @@ import ScrollToTopButton from "./components/ScrollButton";
 
 export default function App() {
   return (
-    <div>
+    <>
       <BrowserRouter>
         <Navbar />
         <div className="app-body">
@@ -16,7 +16,7 @@ export default function App() {
       <Footer />
       </BrowserRouter>
       <ScrollToTopButton />
-    </div>
+    </>
   );
 }
 

@@ -6,6 +6,7 @@ import {
   faTwitter,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
+
 import playstore from "../../assets/logo_play_store.png";
 import appstore from "../../assets/AppStore_Icon.png";
 import NewsLetter from "./NewsLetter/NewsLetter";

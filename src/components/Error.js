@@ -9,7 +9,7 @@ const Error = () => {
   return (
     <div className='Error'>
         <img src={pnf} alt='page not found' className='img' />
-        <button className='btn' onClick={() => navigate("/")}>Go To HomePage</button>
+        <button className='navigate' onClick={() => navigate("/")}>Go To HomePage</button>
     </div>
   )
 }
