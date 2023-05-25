@@ -1,22 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import "./About.css";
 import bookImage from "../../assets/books.webp";
-import gifImage from "../../assets/giphy.gif";
 import { useMediaQuery } from "react-responsive";
-import GifPlayer from "react-gif-player";
 import ScrollToTopButton from "../ScrollButton";
 
 const About = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
-  const [imageSrc, setImageSrc] = useState(bookImage);
-
-  const handleImageClick = () => {
-    setImageSrc(gifImage);
-
-    setTimeout(() => {
-      setImageSrc(bookImage);
-    }, 3000);
-  };
 
   return (
     <div className="about">
@@ -48,11 +37,7 @@ const About = () => {
             </p>
           </div>
           <div className="about-image">
-            {isMobile ? (
-              <GifPlayer gif={gifImage} still={bookImage} className="book-image" />
-            ) : (
-              <img src={imageSrc} alt="Books" className="book-image" onClick={handleImageClick} />
-            )}
+            <img src={bookImage} alt="Books" className="book-image" />
           </div>
         </div>
       </div>
