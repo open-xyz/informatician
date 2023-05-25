@@ -45,7 +45,8 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "tailwindcss": "^3.3.2"
+  "resolutions": {
+    "react": "16.8.6"
   }
+  
 }
