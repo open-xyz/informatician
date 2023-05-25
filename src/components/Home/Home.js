@@ -7,7 +7,9 @@ export default function Home() {
   return (
     <>
       <ImgSection />
-      <BkCards />
+      <BkCards bkhead="Bestselling Books & Audiobooks" />
+      <BkCards 
+        bkhead="Current New York Times Bestsellers" />
     </>
   );
 }
