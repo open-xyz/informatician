@@ -62,13 +62,13 @@ class Footer extends React.Component {
               <div className="col-md-2">
                 <h3 className="footer-section-title">Social</h3>
                 <div className="footer-social-icons">
-                  <Link to="/" className="footer-social-icon">
+                  <Link to="/develop" className="footer-social-icon">
                     <FontAwesomeIcon icon={faFacebookF} />
                   </Link>
-                  <Link to="/" className="footer-social-icon">
+                  <Link to="/develop" className="footer-social-icon">
                     <FontAwesomeIcon icon={faTwitter} />
                   </Link>
-                  <Link to="/" className="footer-social-icon">
+                  <Link to="/develop" className="footer-social-icon">
                     <FontAwesomeIcon icon={faInstagram} />
                   </Link>
                 </div>
@@ -76,10 +76,10 @@ class Footer extends React.Component {
               <div className="col-md-2">
                 <h3 className="footer-section-title">Get Our Free Apps</h3>
                 <div className="footer-app-links">
-                  <Link to="/" className="footer-app-link">
+                  <Link to="/develop" className="footer-app-link">
                     <img src={playstore} alt="Play Store" />
                   </Link>
-                  <Link to="/" className="footer-app-link">
+                  <Link to="/develop" className="footer-app-link">
                     <img src={appstore} alt="App Store" />
                   </Link>
                 </div>
