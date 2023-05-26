@@ -1,9 +1,24 @@
+<div id="top">
+ 
 # INFORMATICIAN
 ## An Open Source Book Listing Web Application 
 
 Informatician is an open-source web application designed to provide users with a comprehensive book listing and reading platform, offering a similar experience to popular platforms like Kindle and Scribd. The application allows users to search for books, add new books to the platform, rate and review books, and seamlessly read them within the application. Built using Node.js, Express.js, React.js, and MongoDB, Informatician aims to create an immersive and user-friendly environment for book enthusiasts.
 
-## Features
+ 
+ # Table of contents
+  - [Features](#features)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Contributions](#contributions)
+  - [Contributing](#contributing)
+  - [Things Necessary for Pull Requests](#PR)
+  - [Roadmap](#roadmap)
+  - [Authors](#authors)
+  - [Changelog](#changelog)
+ 
+<a name="features"></a> 
+## Features 
 
 
 - Add new books to the database
@@ -20,7 +35,9 @@ Informatician is an open-source web application designed to provide users with a
 - Authentication and Authorization: User accounts with secure authentication and authorisation.
 
 - Responsive Design: The application features a responsive design, making it accessible and visually appealing across various devices, including desktops, tablets, and mobile phones.
-
+ 
+<a name="installation"></a>
+                      
 ## Installation 🏗️
 
 1. Clone the repository:
@@ -38,17 +55,22 @@ Informatician is an open-source web application designed to provide users with a
  $ npm start
 ```
 
+ <p align="right"><a href="#top">Back to top</a></p>
+ 
 ## Usage
 
 💻 The application can be accessed in a web browser at `http://localhost:3000`.
 
+<a name="contributions"></a>
+                                
 ## 💪 Contributions
 
 Informatician is powered by major contributions from the community.
 [Template contributions ](https://github.com/rohansx/informatician/issues/new?assignees=&labels=&template=submit-template.md&title=%5Bnuclei-template%5D+), [Feature Requests](https://github.com/rohansx/informatician/issues/new?assignees=&labels=&template=feature_request.md&title=%5BFeature%5D+) and [Bug Reports](https://github.com/rohansx/informatician/issues/new?assignees=&labels=&template=bug_report.md&title=%5BBug%5D+) are more than welcome.
 
 ![Alt](https://repobeats.axiom.co/api/embed/37dcb7fdf50f4359cc5c60460b0a4a0edb4cc2b8.svg "Repobeats analytics image")
-
+<a name="contributing"></a>
+                       
 # Contributing 🚀
 
 Thank you for your interest in contributing to Informatician! We welcome contributions from the community to help improve the project. To contribute, please follow these steps:
@@ -67,6 +89,8 @@ Thank you for your interest in contributing to Informatician! We welcome contrib
 
 7. **Submit a pull request**: Go to the main repository of Informatician, and submit a pull request. Provide a clear and concise description of your changes, including any relevant information or context that can help the maintainers understand your contribution.
 
+<a name="PR"></a>   
+                      
 ## Things Necessary for Pull Requests
 
 When submitting a pull request, please ensure the following:
@@ -81,7 +105,7 @@ When submitting a pull request, please ensure the following:
 
 - **Maintain Good Practices**: Follow the established coding conventions, formatting guidelines, and best practices of the project. Ensure your code is readable, well-documented, and maintainable.
 
-
+<p align="right"><a href="#top">Back to top</a></p>
 
 ## License
 
@@ -90,7 +114,8 @@ When submitting a pull request, please ensure the following:
 # Support
 
 If you have any questions or need assistance, feel free to open an issue in the repository.
-
+<a name="roadmap"</a>
+                 
 # Roadmap
 
 Here are some potential features and improvements that can be added to the application in the future:
@@ -109,11 +134,13 @@ Here are some potential features and improvements that can be added to the appli
 • Support for multiple languages
 
 Feel free to contribute to any of these ideas or suggest new ones!
-
+<a name="authors"></a>
+                 
 # Authors
 
 ✅ [Rohan Sharma](https://github.com/rohansx) - Main Developer
-
+<a name="changelog"></a>
+                   
 # Changelog
 
 ✅ See the Changelog file for details about the changes in each version of the application.
@@ -137,5 +164,6 @@ Thank you for your contribution! We appreciate your efforts in helping make Info
  <img src="https://img.shields.io/github/stars/rohansx/informatician?style=for-the-badge" />
  <img src="https://img.shields.io/github/last-commit/rohansx/informatician?style=for-the-badge" />
 </div>
-
-
+<br>
+ <p align="right"><a href="#top">Back to top</a></p>
+</div>
