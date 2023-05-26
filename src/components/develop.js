@@ -14,7 +14,8 @@ const Develop = () => {
         .container {
           background-color: #fff;
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-          padding: 20px;
+          padding: 30px;
+          margin-top:60px;
           border-radius: 8px;
           text-align: center;
         }
@@ -30,7 +31,7 @@ const Develop = () => {
         }
 
         .development-image {
-          max-width: 100%;
+          max-width: 55%;
           height: auto;
           border-radius: 8px;
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
