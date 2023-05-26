@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.outer{
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  background-image: url('https://i.postimg.cc/CLfGhd7v/bg2.jpg');
+}
+
+.box {
+  max-width: 75%;
+  margin: auto;
+}
+
+.nav_btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  z-index: 4;
+  border: none;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  
+}
+.nav_btn > svg {
+  fill: #f1e7e7;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  opacity: 0.6;
+}
+
+.nav_btn_left {
+  left: 0;
+}
+.nav_btn_right {
+  right: 0;
+}
+
+.slide {
+  padding-top: 2rem;
+}
+
+.carousel .control-dots {
+  z-index: 3;
+}
+
+.ind {
+  width: 20px;
+  height: 20px;
+  list-style: none;
+  border: 4px solid #f5f5f5;
+  transform: rotate(135deg);
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  z-index: 100;
+}
+
+.ind.active {
+  background-color: #000;
+  transition: 500ms 200ms;
+}
+
+.ind:not(:last-child) {
+  margin-right: 1.4rem;
+}
+
+.carousel .carousel-status {
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #000;
+  font-size: 1.4rem;
+  text-shadow: none;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+@media (max-width:800px) {
+  .box{
+    width: 100%;
+  }
+}

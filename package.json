@@ -16,6 +16,7 @@
     "react-icons": "^4.8.0",
     "react-rating-stars-component": "^2.2.0",
     "react-responsive": "^9.0.2",
+    "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.1.1",
     "react-scripts": "5.0.1",
     "swiper": "^9.3.2",
