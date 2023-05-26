@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 
 // import playstore from "../../assets/logo_play_store.png";
 // import appstore from "../../assets/AppStore_Icon.png";
 import NewsLetter from "./NewsLetter/NewsLetter";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function ScrollToTop() {
     const { pathname } = useLocation();
