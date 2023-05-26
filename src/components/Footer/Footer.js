@@ -12,10 +12,22 @@ import appstore from "../../assets/AppStore_Icon.png";
 import NewsLetter from "./NewsLetter/NewsLetter";
 import { Link } from "react-router-dom";
 
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 class Footer extends React.Component {
   render() {
     return (
       <>
+        <ScrollToTop/>
         <NewsLetter />
         <footer className="footer">
           <div className="container-fluid">
