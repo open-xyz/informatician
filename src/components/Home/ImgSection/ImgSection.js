@@ -7,6 +7,7 @@ export default function ImgSection() {
             <div className="img-black">
                 <div className="container-fluid" style={{ padding: '0px 30px' }}>
                     <div className="row">
+                        <div style={{height: '60px'}}></div>
                         <div className="inner">
                             <div className="inner-one inner-two"></div>
                             <div className="inner-content">

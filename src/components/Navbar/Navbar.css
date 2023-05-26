@@ -9,8 +9,8 @@ nav {
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
-    background-color: rgb(22 19 42);
-    padding: 0.75rem 2rem;
+    background-color: rgb(18 16 33);
+    padding: 10px 5px;
     font-family: 'Poppins', sans-serif !important;
 }
 
@@ -18,7 +18,8 @@ nav {
     text-decoration: none;
     font-weight: 900;
     color: #fff;
-font-size: 1.5rem;
+    font-size: 20px;
+    text-transform: uppercase;
 }
 
 #nav-items{
@@ -30,12 +31,12 @@ font-size: 1.5rem;
 
 #nav-items li{
     list-style: none;
-    margin: 10px 20px;
+    margin: 7px 14px;
     position: relative;
 }
 
 #nav-items li a{
-    font-size: 1.25rem;
+    font-size: 15px;
     font-weight: 400;
     color: #fff;
     transition: 0.3s ease-in-out;
@@ -82,7 +83,7 @@ font-size: 1.5rem;
     border: none;
     align-items: center;
     border-radius: 60px;
-    padding: 0.75rem 0.75rem;
+    padding: 10px 10px;
 
 }
 
@@ -104,10 +105,24 @@ font-size: 1.5rem;
     right: 39px;
 }
 
-@media screen and (max-width:768px){
+.mobile-nav{
+    display: none;
+}
+
+.desktop-nav{
+    display: block;
+}
+
+@media screen and (max-width: 911px){
     nav{
-        padding: 1rem 2rem;
+        padding: 13px;
         
+    }
+    .mobile-nav {
+        display: block;
+    }
+    .desktop-nav{
+        display: none;
     }
     #nav-items{
         z-index: 100;
@@ -115,17 +130,20 @@ font-size: 1.5rem;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
-        position: fixed;
-        top: 65px;
-        right: -167px;
-        width: 167px;
-        height: 100vh;
-        padding: 14px 0 0 4px;
-        background-color: #23233f;
-        transition: 0.3s;
+        position: absolute;
+        top: 73px;
+        right: 0px;
+        width: 277px;
+        height: 51vh;
+        padding: 14px 0 0 0px;
+        background-color: rgb(18 16 33);
+        transform: translateX(0);
+        transition: transform 0.3s ease-out;
+        /* transition: 0.3s; */
     }
     #mobile{
         display: block;
+        z-index: 300;
     }
     #mobile i{
         cursor: pointer;
@@ -133,7 +151,10 @@ font-size: 1.5rem;
         color: #ccd0d7;
     }
     #nav-items.nav-active{
-        right: -5px;
+        right: 8px;
+    }
+    .search-bar{
+        margin-top: 16px;
     }
     .search-web-view{
         display: none;
@@ -148,8 +169,8 @@ font-size: 1.5rem;
         width: 95%;
     }
     .search-bar button{
-        right: 1rem;
-        height: 39px;
+        right: 2rem;
+        height: 47px;
         width: 53px;
     }
 }
