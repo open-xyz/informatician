@@ -24,6 +24,7 @@
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 20px;
+  margin-top: 35px;
 }
 
 .about-description {
@@ -41,6 +42,7 @@
 .book-image {
   max-width: 100%;
   height: auto;
+  padding-bottom: 100px;
 }
 
 .giphy-image {

@@ -58,15 +58,6 @@ export default function NavItems(props) {
                         Contact Us
                     </Link>
                 </li>
-                <li>
-                    <Link
-                        to="/faq"
-                        className={props.location.pathname === "/faq" ? "active" : ""}
-                        onClick={props.handleOptionClick}
-                    >
-                        FAQ
-                    </Link>
-                </li>
                 <div className="search-container search-mobile-view">
                     <form action="" className="search-bar">
                         <input type="text" placeholder="search..." name="q" />
