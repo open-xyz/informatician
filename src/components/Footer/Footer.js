@@ -18,6 +18,8 @@ function ScrollToTop() {
 
 const Footer = () => {
 
+  let year = new Date().getFullYear();
+
     return (
         <>
             <ScrollToTop />
@@ -94,7 +96,7 @@ const Footer = () => {
                     </div>
                     <hr className="my-6 border-black sm:mx-auto  lg:my-8" />
                     <div className="sm:flex sm:items-center sm:justify-between">
-                        <span className="text-sm font-bold text-gray-900  sm:text-center ">© 2023 <a href="#" className="hover:underline  hover:text-gray-600">Informatician™</a>. All Rights Reserved.
+                        <span className="text-sm font-bold text-gray-900  sm:text-center ">© {year} <a href="#" className="hover:underline  hover:text-gray-600">Informatician™</a>. All Rights Reserved.
                         </span>
                         <div className="flex mt-0 space-x-6 sm:justify-center sm:mt-0">
 
