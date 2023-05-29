@@ -167,5 +167,6 @@ textarea:focus {
   }
   .contact-image {
     max-width: 330px;
+    width: 100%;
   }
 }
