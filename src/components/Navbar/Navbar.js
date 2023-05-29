@@ -42,7 +42,7 @@ export default function Navbar() {
       </div>
 
       <div className=" flex search-container search-web-view">
-        <Link to="/" className="flex ">
+        <Link to="/addBooks" className="flex ">
           <img
             src={uploadicon}
             alt="uploadicon"

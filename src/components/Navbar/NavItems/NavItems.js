@@ -33,15 +33,6 @@ export default function NavItems(props) {
                 </li>
                 <li>
                     <Link
-                        to="/addBooks"
-                        className={props.location.pathname === "/books" ? "active" : ""}
-                        onClick={props.handleOptionClick}
-                    >
-                        Add Books
-                    </Link>
-                </li>
-                <li>
-                    <Link
                         to="/about"
                         className={props.location.pathname === "/about" ? "active" : ""}
                         onClick={props.handleOptionClick}
