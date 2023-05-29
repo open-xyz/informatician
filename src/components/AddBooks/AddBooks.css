@@ -1,0 +1,68 @@
+.container {
+	height: 90vh;
+	width: 100vw;
+}
+
+.form-title {
+	font-size: 30px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.text-white {
+	color: white;
+}
+
+.add-books {
+	margin-top: 10vh;
+	height: 90vh;
+	width: 60vw;
+	border-radius: 3%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.add-books .group {
+	margin-bottom: 15px;
+	width: 40vw;
+}
+
+.add-books .group .label {
+	padding-left: 10px;
+	padding-bottom: 5px;
+}
+
+.add-books .group .label,
+.add-books .group .input,
+.add-books .group .button {
+	width: 100%;
+	color: #fff;
+	display: block;
+}
+.add-books .group .button {
+	border: none;
+	padding: 15px 20px;
+	border-radius: 25px;
+	background: #1161ee;
+}
+.add-books .group .button:hover {
+	background: #5387e2;
+}
+
+.add-books .group .input {
+	border: none;
+	padding: 15px 20px;
+	border-radius: 25px;
+	background: rgba(255, 255, 255, 0.5);
+}
+
+@media screen and (max-width: 720px) {
+	.add-books {
+		width: 90vw;
+	}
+	.add-books .group {
+		width: 70vw;
+	}
+}
