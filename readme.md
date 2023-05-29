@@ -1,4 +1,4 @@
-### INFORMATICIAN - An open source book reading platform 
+## INFORMATICIAN - An open source book reading platform 
 ---
 
 - Welcome to Informatician, an open-source book platform where literature meets community, and knowledge knows no bounds. Our web application is designed to revolutionize the way you engage with books, offering a comprehensive book listing and reading experience similar to popular platforms like Kindle and Scribd.
