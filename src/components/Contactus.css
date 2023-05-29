@@ -78,7 +78,8 @@ textarea:focus {
 }
 
 .submit-btn:hover {
-  background-color: #b5b5b5;
+  color: #fff;
+  background-color: black;
 }
 
 .contact-image {
