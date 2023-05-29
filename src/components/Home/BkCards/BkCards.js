@@ -19,7 +19,7 @@ import abk4 from "../../../assets/audiobks/abk4.webp";
 export default function BkCards(props) {
     return (
         <>
-            <div className="container-xl">
+            <div className="container-xl ">
                 <div className="row justify-content-center">
                     <div className="books">
                         <h2 className="bk-head">{props.bkhead}</h2>
@@ -57,7 +57,8 @@ export default function BkCards(props) {
                                     imgName={ebk1}
                                     type="Ebook"
                                     title="The Perfect Marriage: A Completely Gripping Psychological Suspense"
-                                    author="Jeneva Rose" />
+                                    author="Jeneva Rose"
+                                    />
                             </SwiperSlide>
                             <SwiperSlide>
                                 <CardContent 

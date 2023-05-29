@@ -14,7 +14,7 @@ export default function CardContent(props) {
 
     return (
         <>
-            <div className="bg-color" style={{ backgroundColor: random_color }}>
+            <div className="bg-color " style={{ backgroundColor: random_color }}>
             </div>
             <div className="bk-img">
                 <img src={props.imgName} alt="" />
