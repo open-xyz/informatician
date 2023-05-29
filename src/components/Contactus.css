@@ -69,15 +69,16 @@ textarea:focus {
   padding: 10px 20px;
   font-size: 16px;
   font-weight: 600;
-  background-color: #1fb6ff;
-  color: #fff;
+  background-color: lightgray;
+  color: black;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
 
 .submit-btn:hover {
-  background-color: #1fb6ff;
+  background-color: #b5b5b5;
 }
 
 .contact-image {
@@ -100,21 +101,63 @@ textarea:focus {
   gap: 10px;
 }
 
-.social-icon {
+.social-icon-twitter {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 40px;
   height: 40px;
   font-size: 24px;
-  background-color: #007bff;
+  background-color: black;
   color: #fff;
   border-radius: 50%;
   text-decoration: none;
+  transition: all 0.2s ease-in-out;
 }
 
-.social-icon:hover {
-  background-color: #0056b3;
+.social-icon-twitter:hover {
+  background-color: #00acee;
+  transform: scale(1.2);
+}
+
+.social-icon-github {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  background-color: black;
+  color: #fff;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.social-icon-github:hover {
+  color: black;
+  background-color: lightgray;
+  transform: scale(1.2);
+}
+
+.social-icon-discord {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  background-color: black;
+  color: #fff;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.social-icon-discord:hover {
+  /* color: black; */
+  background-color: #7289da;
+  transform: scale(1.2);
 }
 
 @media only screen and (max-width: 700px) {
