@@ -3,6 +3,12 @@
 	width: 100vw;
 }
 
+.form-title {
+	font-size: 30px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
 .text-white {
 	color: white;
 }

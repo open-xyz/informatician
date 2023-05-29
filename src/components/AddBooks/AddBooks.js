@@ -9,7 +9,7 @@ const AddBooks = () => {
                 background: `rgba(25, 25, 112, 0.2)
                 url(${BookImg}) no-repeat center center`
             }}>
-                <h1>Add Books</h1>
+                <h1 className='form-title'>Add Books</h1>
                 <div className="group">
                     <label for="book_name" className="label">Book Name</label>
                     <input id="book_name" type="text" className="input" />
