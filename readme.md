@@ -7,11 +7,6 @@ Welcome to Informatician, an open-source book platform where literature meets co
 ![informatician]()
 
 <div align="center">
-<img src="https://forthebadge.com/images/badges/built-with-love.svg" />
-<img src="https://forthebadge.com/images/badges/uses-brains.svg" />
-<img src="https://forthebadge.com/images/badges/powered-by-responsibility.svg" />
-   </div>
-   <div align="center">
 <img src="https://img.shields.io/github/license/rohansx/informatician?style=for-the-badge" />
 <img src="https://img.shields.io/github/repo-size/rohansx/informatician?style=for-the-badge" />
 <img src="https://img.shields.io/github/issues/rohansx/informatician?style=for-the-badge" /><br>
@@ -21,9 +16,6 @@ Welcome to Informatician, an open-source book platform where literature meets co
   <img src="https://img.shields.io/github/contributors/rohansx/informatician?style=for-the-badge" />
  <img src="https://img.shields.io/github/stars/rohansx/informatician?style=for-the-badge" />
  <img src="https://img.shields.io/github/last-commit/rohansx/informatician?style=for-the-badge" />
-</div>
-<br>
- <p align="right"><a href="#top">Back to top</a></p>
 </div>
 
 ## ✨ Features
