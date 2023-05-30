@@ -31,7 +31,7 @@ const Footer = () => {
                 <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
                     <div className="md:flex md:justify-between">
                         <div className="mb-6 md:mb-0">
-                            <Link to="#" className="flex items-center">
+                            <Link to="/" className="flex items-center">
                                 <img src="https://user-images.githubusercontent.com/33249782/240937486-d84c477d-63f4-4558-ae04-454d803a5b1f.png" className="h-8 mr-3 " alt=" Logo" />
                                 <span className="self-center text-3xl font-bold hover:text-gray-600 whitespace-nowrap">Informatician</span>
                             </Link>
