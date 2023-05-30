@@ -1,47 +1,36 @@
-## INFORMATICIAN - An open source book reading platform 
+# INFORMATICIAN - An open source book reading platform
 
-- Welcome to Informatician, an open-source book platform where literature meets community, and knowledge knows no bounds. Our web application is designed to revolutionize the way you engage with books, offering a comprehensive book listing and reading experience similar to popular platforms like Kindle and Scribd.
-- The application goes beyond a mere reading experience, as it allows you to rate and review books, fostering a sense of community and sharing insights with fellow book enthusiasts. You can explore a vast collection of books, search for your favorite titles, and even contribute by adding new books to the platform. Whether you're an avid reader, a literary connoisseur, or simply seeking new knowledge, Informatician is here to provide you with an exceptional platform to explore, learn, and connect.</p>
-
-
+Welcome to Informatician, an open-source book platform where literature meets community, and knowledge knows no bounds. Our web application is designed to revolutionize the way you engage with books, offering a comprehensive book listing and reading experience similar to popular platforms like Kindle and Scribd. The application goes beyond a mere reading experience, as it allows you to rate and review books, fostering a sense of community and sharing insights with fellow book enthusiasts. You can explore a vast collection of books, search for your favorite titles, and even contribute by adding new books to the platform. Whether you're an avid reader, a literary connoisseur, or simply seeking new knowledge, Informatician is here to provide you with an exceptional platform to explore, learn, and connect.
 
 ---
 
-<div align="center">
-<img src="https://img.shields.io/github/license/rohansx/informatician?style=for-the-badge" />
-<img src="https://img.shields.io/github/repo-size/rohansx/informatician?style=for-the-badge" />
-<img src="https://img.shields.io/github/issues/rohansx/informatician?style=for-the-badge" /><br>
-<img src="https://img.shields.io/github/issues-pr/rohansx/informatician?style=for-the-badge" />
- <img src="https://img.shields.io/github/forks/rohansx/informatician?style=for-the-badge" />
- <img src="https://img.shields.io/github/issues-closed-raw/rohansx/informatician?style=for-the-badge" />
-  <img src="https://img.shields.io/github/contributors/rohansx/informatician?style=for-the-badge" />
- <img src="https://img.shields.io/github/stars/rohansx/informatician?style=for-the-badge" />
- <img src="https://img.shields.io/github/last-commit/rohansx/informatician?style=for-the-badge" />
-</div>
+## Table of Contents
 
-## ✨ Features
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Installation](#installation)
+- [Contributing](#contributing)
+- [Authors](#authors)
+- [License](#license)
 
-- **Book Contribution**: Contribute to the platform by adding new books, enriching the library for the entire community to enjoy. 
+---
 
+## Features
+
+- **Book Contribution**: Contribute to the platform by adding new books, enriching the library for the entire community to enjoy.
 - **Comprehensive Book Listing**: Explore a vast collection of books from various genres and categories, including fiction, non-fiction, science fiction, fantasy, biographies, and more.
-
 - **Personal Library**: Users can curate their own digital library by adding new books to the platform.
-
 - **Rating and Review**: Share opinions and insights by rating and reviewing books.
-
 - **Seamless Reading Experience**: Enjoy a comfortable reading experience within the application.
-
-- **Authentication and Authorization**: User accounts with secure authentication and authorisation.
-
+- **Authentication and Authorization**: User accounts with secure authentication and authorization.
 - **Responsive Design**: The application features a responsive design, making it accessible and visually appealing across various devices, including desktops, tablets, and mobile phones.
 
+## Tech Stack
 
-## 💻 Tech Stack 
-
-  ![reactjs](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)&nbsp;
-  ![nodejs](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)&nbsp;
-  ![expressjs](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)&nbsp;
-  ![mongodb](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)&nbsp;
+![reactjs](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![nodejs](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
+![expressjs](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
+![mongodb](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
 
 
 ## ✨ How to install it? 
@@ -97,4 +86,7 @@ Join us on this open-source journey, and let your love for books flourish in a l
 
 The project is licensed under the [MIT License](https://github.com/rohansx/informatician/blob/main/LICENSE).
 
+<div align="center">
+  <a href="#table-of-contents">Back to Top</a>
+</div>
 ---
