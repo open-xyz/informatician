@@ -13,7 +13,8 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
-    "mongoose": "^7.2.0",
+    "mongodb": "^5.5.0",
+    "mongoose": "^7.2.1",
     "node-cron": "^3.0.2",
     "nodemailer": "^6.9.2"
   }

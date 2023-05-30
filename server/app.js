@@ -7,11 +7,11 @@ const { sendNewsletter } = require("./controller/newsletter");
 const newsLetter = require('./router/newsletter');
 const mailRouter = require('./router/contact')
 
-// mongoose.connect(process.env.MONGODB).then(()=>{
-//   console.log("DataBase Connected");
-// }).catch((err)=>{
-//   console.log(err);
-// })
+mongoose.connect(process.env.MONGODB).then(() => {
+  console.log("Database Connected");
+}).catch((err) => {
+  console.log(err);
+});
 
 const app = express();
 
@@ -22,7 +22,6 @@ app.use('/sendMail',mailRouter)
 
 cron.schedule("0 0 * * 0", sendNewsletter);
 
-
-app.listen(process.env.PORT||5000,()=>{
-  console.log("Server Started")
-})
+app.listen(process.env.PORT || 5000, () => {
+  console.log("Server Started");
+});

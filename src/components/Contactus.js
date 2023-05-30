@@ -86,7 +86,7 @@ const Contact = () => {
           </div>
         </div>
         <div className="contact-social-icons">
-          <h1>Connect with us:</h1>
+          <h1 style={{marginTop: 20, marginBottom: 20, fontSize: 30}}>Connect with us:</h1>
           <div className="social-icons">
             <a href="#!" className="social-icon-twitter">
               <FaTwitter />
