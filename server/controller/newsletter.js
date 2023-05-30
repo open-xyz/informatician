@@ -1,5 +1,7 @@
 const nodemailer = require("nodemailer");
 const { Newsletter } = require("../model/newsletter");
+const { createCustomError } = require('../errors/customAPIError');
+const notFound = require("../error.js/notfound");
 
 exports.addUser = async (req, res) => {
   try {
@@ -8,9 +10,7 @@ exports.addUser = async (req, res) => {
     res.status(200).json(newUser);
   } catch (err) {
     console.log(err);
-    res.status(500).json({
-      message: "Already Exist",
-    });
+    return res.json(createCustomError('notFound',500));
   }
 };
 
@@ -37,6 +37,7 @@ exports.sendNewsletter = async () => {
     });
   } catch (err) {
     console.error(err);
+    return res.json(createCustomError(err));
   }
 };
 
@@ -56,5 +57,6 @@ async function getBooks() {
     return result;
   } catch (error) {
     console.error(error);
+    return res.json(createCustomError(error));
   }
 }
