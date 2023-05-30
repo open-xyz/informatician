@@ -1,9 +1,35 @@
-import React from 'react';
+import {React, useState, useEffect} from 'react';
 import { FaDiscord, FaTwitter, FaGithub } from 'react-icons/fa';
 import contactImage from '../assets/contact-us.png';
 import './Contactus.css';
 
 const Contact = () => {
+
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [msg, setMsg] = useState('')
+
+  const handleResponse = async (e) => {
+    e.preventDefault()
+
+    var formData = {
+      name: name,
+      email: email,
+      message: msg
+    }
+
+    
+    await fetch('http://localhost:5000/sendMail', {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(formData)
+    })
+
+    alert("Contact Request Sent Successfully")
+  }
+
   return (
     <div className="contact">
       <div className="container">
@@ -14,7 +40,7 @@ const Contact = () => {
               We'd love to hear from you! Reach out to us for any inquiries,
               feedback, or collaboration opportunities.
             </p>
-            <form className="contact-form">
+            <form className="contact-form" onSubmit={handleResponse}>
               <div
                 style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}
               >
@@ -24,6 +50,7 @@ const Contact = () => {
                   placeholder="Name"
                   className="form-input"
                   required
+                  onChange={(e) => setName(e.target.value)}
                 />
               </div>
               <div
@@ -35,6 +62,7 @@ const Contact = () => {
                   placeholder="Email"
                   className="form-input"
                   required
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
               <div
@@ -45,6 +73,7 @@ const Contact = () => {
                   placeholder="Message"
                   className="form-input message-input"
                   required
+                  onChange={(e) => setMsg(e.target.value)}
                 />
               </div>
               <button type="submit" className="submit-btn">
