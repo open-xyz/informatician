@@ -99,7 +99,7 @@ textarea:focus {
 .social-icons {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 20px;
 }
 
 .social-icon-twitter {
