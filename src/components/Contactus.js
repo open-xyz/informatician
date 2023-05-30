@@ -1,4 +1,4 @@
-import {React, useState, useEffect} from 'react';
+import {React, useState} from 'react';
 import { FaDiscord, FaTwitter, FaGithub } from 'react-icons/fa';
 import contactImage from '../assets/contact-us.png';
 import './Contactus.css';
