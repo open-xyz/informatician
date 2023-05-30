@@ -1,8 +1,7 @@
 .about {
   background-color: #f8f8f8;
-  /* padding: 40px 0; */
+  padding: 20px 0;
   color: #333;
-  margin: 77px 0px;
 }
 
 .container {
@@ -18,17 +17,18 @@
 
 .about-text {
   flex: 1;
-  padding-right: 20px;
-}
-
-.about-title {
-  font-size: 24px;
-  font-weight: bold;
   margin-bottom: 20px;
 }
 
+.about-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 35px;
+}
+
 .about-description {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.6;
   margin-bottom: 20px;
 }
@@ -36,9 +36,31 @@
 .about-image {
   flex: 1;
   text-align: center;
+  margin: 20px;
 }
 
 .book-image {
-  max-width: 500px;
+  max-width: 100%;
   height: auto;
+  padding-bottom: 100px;
+}
+
+.giphy-image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+  }
+
+  .about-text {
+    margin-top: 20px;
+  }
+
+  .about-description {
+    font-size: 16px;
+  }
 }
