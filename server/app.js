@@ -5,18 +5,20 @@ const cors = require('cors');
 const cron = require("node-cron");
 const { sendNewsletter } = require("./controller/newsletter");
 const newsLetter = require('./router/newsletter');
+const mailRouter = require('./router/contact')
 
-mongoose.connect(process.env.MONGODB).then(()=>{
-  console.log("DataBase Connected");
-}).catch((err)=>{
-  console.log(err);
-})
+// mongoose.connect(process.env.MONGODB).then(()=>{
+//   console.log("DataBase Connected");
+// }).catch((err)=>{
+//   console.log(err);
+// })
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 app.use('/api',newsLetter.router)
+app.use('/sendMail',mailRouter)
 
 cron.schedule("0 0 * * 0", sendNewsletter);
 
