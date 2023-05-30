@@ -1,6 +1,7 @@
-.container {
-	/* height: 90vh; */
-	width: 100vw;
+.addBooks-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .form-title {
@@ -10,14 +11,15 @@
 }
 
 .text-white {
-	color: white;
+	color: black;
 }
 
 .add-books {
-	margin-top: 10vh;
-	height: 90vh;
-	width: 60vw;
-	border-radius: 3%;
+	margin-top: 6rem;
+	/* height: 90vh; */
+	width: 50rem;
+	padding: 1rem 2rem;
+	border-radius: 1rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -25,44 +27,51 @@
 }
 
 .add-books .group {
-	margin-bottom: 15px;
-	width: 40vw;
+	margin: 1rem auto;
+	width: 80%;
+	border: 1px solid black;
+}
+.add-books .group-btn {
+	margin: 1rem auto;
+	width: 80%;
 }
 
-.add-books .group .label {
-	padding-left: 10px;
-	padding-bottom: 5px;
-}
-
-.add-books .group .label,
 .add-books .group .input,
-.add-books .group .button {
+.add-books .group-btn .button {
 	width: 100%;
-	color: #fff;
+	color: #000;
 	display: block;
 }
-.add-books .group .button {
-	border: none;
+.add-books .group-btn .button {
+	border: 0;
 	padding: 15px 20px;
-	border-radius: 25px;
-	background: #1161ee;
+	border-radius: 1rem;
+	background: #a9afd1;
+	transition: 0.3s;
+	color: #fff;
 }
-.add-books .group .button:hover {
-	background: #5387e2;
+.add-books .group-btn .button:hover {
+	background: #7881b4;
 }
 
 .add-books .group .input {
 	border: none;
 	padding: 15px 20px;
-	border-radius: 25px;
-	background: rgba(255, 255, 255, 0.5);
+	border-radius: 0.75rem;
 }
 
 @media screen and (max-width: 720px) {
-	.add-books {
-		width: 90vw;
-	}
 	.add-books .group {
-		width: 70vw;
+		margin: 1rem auto;
+		width: 95%;
+		border: 1px solid black;
 	}
+	.add-books .group-btn {
+		margin: 1rem auto;
+		width: 95%;
+	}
+	.add-books{
+		margin-top: 5rem;
+	}
+	
 }
