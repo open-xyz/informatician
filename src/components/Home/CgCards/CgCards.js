@@ -22,47 +22,24 @@ export default function CgCards() {
             responsive={{
               0: { items: 1 },
               568: { items: 2 },
-              1024: { items: 3},
+              1024: { items: 3 },
               1500: { items: 4 },
             }}
             disableButtonsControls
             autoPlay={true}
             autoPlayStrategy="default"
+            animationDuration={1200}
           >
-            <CardContent
-              image={ebk1}
-              title="Biography & Memoir"
-            />
+            <CardContent image={ebk1} title="Biography & Memoir" />
             <CardContent image={abk1} title="Politics" />
             <CardContent image={abk2} title="Career & Growth" />
-            <CardContent
-              image={abk3}
-              title="Contemporary Fiction"
-            />
-            <CardContent
-              image={abk4}
-              title="Science & Mathematics"
-            />
-            <CardContent
-              image={ebk2}
-              title="Cooking & Food"
-            />
-            <CardContent
-              image={ebk3}
-              title="Self-Improvment"
-            />
-            <CardContent
-              image={ebk4}
-              title="Travel"
-            />
-            <CardContent
-              image={ebk5}
-              title="Mystery, Thriller & Crime"
-            />
-            <CardContent
-              image={ebk6}
-              title="Home & Garden"
-            />
+            <CardContent image={abk3} title="Contemporary Fiction" />
+            <CardContent image={abk4} title="Science & Mathematics" />
+            <CardContent image={ebk2} title="Cooking & Food" />
+            <CardContent image={ebk3} title="Self-Improvment" />
+            <CardContent image={ebk4} title="Travel" />
+            <CardContent image={ebk5} title="Mystery, Thriller & Crime" />
+            <CardContent image={ebk6} title="Home & Garden" />
           </AliceCarousel>
         </div>
       </div>
