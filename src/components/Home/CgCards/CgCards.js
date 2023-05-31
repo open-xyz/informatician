@@ -25,6 +25,9 @@ export default function CgCards() {
               1024: { items: 3},
               1500: { items: 4 },
             }}
+            disableButtonsControls
+            autoPlay={true}
+            autoPlayStrategy="default"
           >
             <CardContent
               image={ebk1}
