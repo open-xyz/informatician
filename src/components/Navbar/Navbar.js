@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import { Link, Navigate, useLocation } from "react-router-dom";
 import "./Navbar.css";
 import uploadicon from "../../assets/icon.png";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faArrowUpFromBracket} from '@fortawesome/fontawesome-svg-core/import.macro'
-import NavItems from "./NavItems/NavItems";
+import NavItems from "./NavItems/NavItems.js";
 import { searchBooks } from "../../utils/searchBooks";
 
 export default function Navbar() {
@@ -30,11 +28,11 @@ export default function Navbar() {
         <img
           src="https://user-images.githubusercontent.com/33249782/240937486-d84c477d-63f4-4558-ae04-454d803a5b1f.png"
           className=" h-11 w-15 ml-8  hover:shadow "
-          alt=" Logo"
+          alt="Logo"
         />
       </Link>
 
-      <div className="mobile-nav ">
+      <div className="mobile-nav">
         <NavItems
           clicked={clicked}
           location={location}
@@ -49,9 +47,9 @@ export default function Navbar() {
           handleOptionClick={handleOptionClick}
         />
       </div>
+      <div className="flex search-container search-web-view">
+        <Link to="/addBooks" className="flex">
 
-      <div className=" flex search-container search-web-view">
-        <Link to="/addBooks" className="flex ">
           <img
             src={uploadicon}
             alt="uploadicon"
@@ -60,7 +58,7 @@ export default function Navbar() {
         </Link>
         <div>
           <form className="search-bar">
-            <input type="text" placeholder="" name="q" onChange={search} />
+            <input type="text" placeholder="search" name="q" onChange={search} />
             <button type="submit">
               <i className="fa-solid fa-search"></i>
             </button>
