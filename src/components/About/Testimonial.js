@@ -8,8 +8,8 @@ export default function Testimonial() {
     <div className="testimonial">
       <div className="top d-flex">
         <div className="left">
-          <h1 className="fw-bold fs-1 text-white">Our Testimonial</h1>
-          <p className="text-white mt-2 mb-5">
+          <h1 className="fw-bold fs-1">Our Testimonial</h1>
+          <p className="mt-2 mb-5">
             What Our Client Say About The Books. Reviews And Comments
           </p>
         </div>
