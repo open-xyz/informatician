@@ -14,6 +14,7 @@ import CookiePolicy from "./Cookie";
 import FaqHelp from "./faq";
 import Develop from "./develop";
 import Error from "./Error";
+import SingleBk from "./Home/SingleBk/SingleBk";
 import AddBooks from "./AddBooks/AddBooks";
 import Success from "./Success";
 
@@ -23,6 +24,7 @@ function Body() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/books" element={<BookList />} />
+        <Route path="/books/id" element={<SingleBk />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/team" element={<Team />} />
