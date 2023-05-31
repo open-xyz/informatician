@@ -27,6 +27,9 @@ body:
 
         - label: "I have read the [Contributing Guidelines]"
           required: true
+          
+        - label: "I have read the discussion tab thoroughly and got the project idea "
+          required: true
 
         - label: "I am willing to work on this issue (optional)"
           required: false
