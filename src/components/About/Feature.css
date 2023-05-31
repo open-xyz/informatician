@@ -1,0 +1,114 @@
+/* feature styles */
+
+.feature {
+  padding: 2% 5%;
+}
+
+.feature .card {
+  margin: 10px;
+  padding: 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.feature .card .icons {
+  margin-bottom: 20px;
+  font-size: 50px;
+  transition: all 0.3s ease;
+}
+
+.feature .card .book {
+  color: rgb(30, 41, 59);
+}
+
+.feature .card .reader {
+  color: crimson;
+}
+
+.feature .card .dollar {
+  transition: all 0.5s ease;
+}
+
+.feature .card:hover .book {
+  animation: zoom 1s linear 0s infinite alternate;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.25);
+  }
+}
+
+.feature .card:hover .upload {
+  animation: moveUp 0.7s linear 0s infinite alternate;
+}
+
+.feature .card:hover .dollar {
+  animation: rotate 1s linear 0s infinite;
+}
+
+.feature .card:hover .reader {
+  animation: vibrate 0.5s linear 0s infinite;
+}
+.feature .letter:hover .letterClose {
+  display: none;
+}
+
+.feature .letter:hover .letterOpen {
+  display: flex !important;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes vibrate {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-25deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(25deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes moveUp {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-30px);
+  }
+}
+
+/* @media screen and (max-width: 992px) {
+  .feature .card {
+    margin: 10px;
+    width: 30%;
+  }
+} */
+
+@media screen and (max-width: 576px) {
+  .feature .card {
+    margin: 10px;
+    width: 50%;
+  }
+}
