@@ -1,56 +1,57 @@
-import "./CardContent.css"
+import "./CardContent.css";
 import ReactStars from "react-rating-stars-component";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark } from "@fortawesome/free-regular-svg-icons";
 import { Link } from "react-router-dom";
 
 export default function CardContent(props) {
+  const bgColors = ["#daeff1", "#f6f6e7", "#f6e7e7", "#eaf6e7", "#e7ecf6"];
+  var random_color = bgColors[Math.floor(Math.random() * bgColors.length)];
 
-    const bgColors = ['#daeff1', '#f6f6e7', '#f6e7e7', '#eaf6e7', '#e7ecf6'];
-    var random_color = bgColors[(Math.floor(Math.random() * bgColors.length))];
+  const ratingChanged = (newRating) => {
+    console.log(newRating);
+  };
 
-    const ratingChanged = (newRating) => {
-        console.log(newRating);
-    };
-
-    return (
-        <>
-            <div className="bg-color " style={{ backgroundColor: random_color }}>
+  return (
+    <>
+      <div
+        className="bg-color "
+        style={{ backgroundColor: random_color }}
+      ></div>
+      <div className="bk-img h-2/5">
+        <Link to="/books/id">
+          <img src={props.imgName} alt="" />
+        </Link>
+      </div>
+      <div className="bk-details">
+        <Link to="/books/id">
+          <p className="type">{props.type}</p>
+          <p className="title">{props.title}</p>
+          <span className="author">
+            <span>{props.author}</span>
+          </span>
+        </Link>
+      </div>
+      <div className="reviews">
+        <div className="rating">
+          <Link to="/books/id">
+            <ReactStars
+              count={5}
+              onChange={ratingChanged}
+              size={24}
+              value={4}
+              activeColor="#ffd700"
+            />
+          </Link>
+        </div>
+        <div className="save">
+          <Link to="/books/id">
+            <div className="later">
+              <FontAwesomeIcon icon={faBookmark} />
             </div>
-            <div className="bk-img">
-                <Link to="/books/id">
-                    <img src={props.imgName} alt="" />
-                </Link>
-            </div>
-            <div className="bk-details">
-                <Link to="/books/id">
-                    <p className="type">{props.type}</p>
-                    <p className="title">{props.title}</p>
-                    <span className="author">
-                        <span>{props.author}</span>
-                    </span>
-                </Link>
-            </div>
-            <div className="reviews">
-                <div className="rating">
-                    <Link to="/books/id">
-                        <ReactStars
-                            count={5}
-                            onChange={ratingChanged}
-                            size={24}
-                            value={4}
-                            activeColor="#ffd700"
-                        />
-                    </Link>
-                </div>
-                <div className="save">
-                    <Link to="/books/id">
-                        <div className="later">
-                            <FontAwesomeIcon icon={faBookmark} />
-                        </div>
-                    </Link>
-                </div>
-            </div>
-        </>
-    )
+          </Link>
+        </div>
+      </div>
+    </>
+  );
 }
