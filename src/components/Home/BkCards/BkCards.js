@@ -19,6 +19,13 @@ import { Link } from "react-router-dom";
 import SingleBk from "../SingleBk/SingleBk";
 
 export default function BkCards(props) {
+
+    const singleBookView = () => {
+        return (
+            <SingleBk />
+        )
+    }
+
     return (
         <>
             <div className="container-xl ">
@@ -55,79 +62,79 @@ export default function BkCards(props) {
                             className="mySwiper"
                         >
 
-                            <SwiperSlide onClick={() => <SingleBk />}>
+                            <SwiperSlide>
                                 <CardContent
                                     imgName={ebk1}
                                     type="Ebook"
                                     title="The Perfect Marriage: A Completely Gripping Psychological Suspense"
-                                    author="Jeneva Rose"
-                                    />
-                            </SwiperSlide>
-
-                                <SwiperSlide>
-                                    <CardContent
-                                        imgName={abk1}
-                                        type="Audiobook"
-                                        title="The Last Mrs. Parrish: A Novel"
-                                        author="Liv Constantine" />
-                                </SwiperSlide>
-
-                            <SwiperSlide>
-                                    <CardContent
-                                        imgName={abk2}
-                                        type="Audiobook"
-                                        title="The Guest List: A Novel"
-                                        author="Lucy Foley" />
+                                    author="Jeneva Rose" />
+                                
                             </SwiperSlide>
 
                             <SwiperSlide>
-                                    <CardContent
-                                        imgName={abk3}
-                                        type="Audiobook"
-                                        title="The Subtle Art of Not Giving a F*ck: A Counterintuitive Approach to Living a Good Life"
-                                        author="Mark Manson" />
+                                <CardContent
+                                    imgName={abk1}
+                                    type="Audiobook"
+                                    title="The Last Mrs. Parrish: A Novel"
+                                    author="Liv Constantine" />
                             </SwiperSlide>
 
                             <SwiperSlide>
-                                    <CardContent
-                                        imgName={abk4}
-                                        type="Audiobook"
-                                        title="Building a StoryBrand: Clarify Your Message So Customers Will Listen"
-                                        author="Findaway" />
+                                <CardContent
+                                    imgName={abk2}
+                                    type="Audiobook"
+                                    title="The Guest List: A Novel"
+                                    author="Lucy Foley" />
                             </SwiperSlide>
 
                             <SwiperSlide>
-                                    <CardContent
-                                        imgName={ebk2}
-                                        type="Ebook"
-                                        title="An Ugly Truth: Inside Facebook's Battle for Domination"
-                                        author="Sheera Frenkel" />
+                                <CardContent
+                                    imgName={abk3}
+                                    type="Audiobook"
+                                    title="The Subtle Art of Not Giving a F*ck: A Counterintuitive Approach to Living a Good Life"
+                                    author="Mark Manson" />
                             </SwiperSlide>
 
                             <SwiperSlide>
-                                    <CardContent
-                                        imgName={ebk3}
-                                        type="Ebook"
-                                        title="Never Split the Difference: Negotiating As If Your Life Depended On It"
-                                        author="Chris Voss" />
+                                <CardContent
+                                    imgName={abk4}
+                                    type="Audiobook"
+                                    title="Building a StoryBrand: Clarify Your Message So Customers Will Listen"
+                                    author="Findaway" />
                             </SwiperSlide>
 
                             <SwiperSlide>
-                                    <CardContent
-                                        imgName={ebk4}
-                                        type="Ebook"
-                                        title="Everything Is F*cked: A Book About Hope"
-                                        author="Mark Manson" />
+                                <CardContent
+                                    imgName={ebk2}
+                                    type="Ebook"
+                                    title="An Ugly Truth: Inside Facebook's Battle for Domination"
+                                    author="Sheera Frenkel" />
                             </SwiperSlide>
 
                             <SwiperSlide>
-                                    <CardContent
-                                        imgName={ebk5}
-                                        type="Ebook"
-                                        title="The Intelligent Investor, Rev. Ed: The Definitive Book on Value Investing"
-                                        author="Benjamin Graham" />
+                                <CardContent
+                                    imgName={ebk3}
+                                    type="Ebook"
+                                    title="Never Split the Difference: Negotiating As If Your Life Depended On It"
+                                    author="Chris Voss" />
                             </SwiperSlide>
-                            
+
+                            <SwiperSlide>
+                                <CardContent
+                                    imgName={ebk4}
+                                    type="Ebook"
+                                    title="Everything Is F*cked: A Book About Hope"
+                                    author="Mark Manson" />
+                            </SwiperSlide>
+
+                            <SwiperSlide>
+                                <CardContent
+                                    imgName={ebk5}
+                                    type="Ebook"
+                                    title="The Intelligent Investor, Rev. Ed: The Definitive Book on Value Investing"
+                                    author="Benjamin Graham" />
+                            </SwiperSlide>
+
                             <SwiperSlide>
                                 <CardContent
                                     imgName={ebk6}

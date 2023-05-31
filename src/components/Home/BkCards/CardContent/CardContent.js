@@ -1,7 +1,8 @@
 import "./CardContent.css"
 import ReactStars from "react-rating-stars-component";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBookmark } from "@fortawesome/free-regular-svg-icons";   
+import { faBookmark } from "@fortawesome/free-regular-svg-icons";
+import { Link } from "react-router-dom";
 
 export default function CardContent(props) {
 
@@ -17,29 +18,37 @@ export default function CardContent(props) {
             <div className="bg-color " style={{ backgroundColor: random_color }}>
             </div>
             <div className="bk-img">
-                <img src={props.imgName} alt="" />
+                <Link to="/books/id">
+                    <img src={props.imgName} alt="" />
+                </Link>
             </div>
             <div className="bk-details">
-                <p className="type">{props.type}</p>
-                <p className="title">{props.title}</p>
-                <span className="author">
-                    <span>{props.author}</span>
-                </span>
+                <Link to="/books/id">
+                    <p className="type">{props.type}</p>
+                    <p className="title">{props.title}</p>
+                    <span className="author">
+                        <span>{props.author}</span>
+                    </span>
+                </Link>
             </div>
             <div className="reviews">
                 <div className="rating">
-                    <ReactStars
-                        count={5}
-                        onChange={ratingChanged}
-                        size={24}
-                        value={4}
-                        activeColor="#ffd700"
-                    />
+                    <Link to="/books/id">
+                        <ReactStars
+                            count={5}
+                            onChange={ratingChanged}
+                            size={24}
+                            value={4}
+                            activeColor="#ffd700"
+                        />
+                    </Link>
                 </div>
                 <div className="save">
-                    <div className="later">
-                    <FontAwesomeIcon icon={faBookmark} />
-                    </div>
+                    <Link to="/books/id">
+                        <div className="later">
+                            <FontAwesomeIcon icon={faBookmark} />
+                        </div>
+                    </Link>
                 </div>
             </div>
         </>

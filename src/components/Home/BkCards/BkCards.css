@@ -36,9 +36,9 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  -webkit-transition-property: all;
+  /* -webkit-transition-property: all;
   -webkit-transition-duration: 0.4s;
-  -webkit-transition-timing-function: ease-in;
+  -webkit-transition-timing-function: ease-in; */
 }
 
 .swiper-slide:hover {
