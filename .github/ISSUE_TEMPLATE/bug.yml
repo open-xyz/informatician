@@ -41,7 +41,10 @@ body:
 
         - label: "I have read the [Contributing Guidelines](https://github.com/rupali-codes/LinksHub/blob/main/CONTRIBUTING.md)"
           required: true
-
+          
+         - label: "I have read the discussion tab thoroughly and got the project idea "
+          required: true
+          
         - label: "I am willing to work on this issue (optional)"
           required: false
         
