@@ -32,6 +32,9 @@ Welcome to Informatician, an open-source book platform where literature meets co
 ![expressjs](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
 ![mongodb](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
 
+##Note:
+ Before proceeding with any implementation or changes, it is crucial to thoroughly review the discussion tab and familiarize yourself with the site plan. By doing so, you can align your work with the intended direction of the platform and contribute effectively. Please take the time to read through the discussions and gather necessary information before proceeding. Thank you! 
+#330 you can refer
 
 ## ✨ How to install it? 
 
