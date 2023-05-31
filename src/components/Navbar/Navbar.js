@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, Navigate, useLocation } from "react-router-dom";
 import "./Navbar.css";
 import uploadicon from "../../assets/icon.png";
-import NavItems from "./NavItems/NavItems";
+import NavItems from "./NavItems/NavItems.js";
 import { searchBooks } from "../../utils/searchBooks";
 
 export default function Navbar() {
