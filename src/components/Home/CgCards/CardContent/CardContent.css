@@ -1,0 +1,23 @@
+.cg-card {
+    overflow: hidden;
+    border: 1px solid lightblue;
+    border-radius: 6px;
+    transition: all 0.4s ease;
+}
+
+.cg-card img {
+    right: 20px;
+    top: 20px;
+    width: 80px;
+    transform: rotate(20deg);
+    transition: all 0.4s ease;
+}
+
+.cg-card:hover {
+    box-shadow: 1px 2px 8px 3px lightgray;
+    transform: scale(1.002);
+}
+
+.cg-card:hover img {
+    transform: scale(1.1) rotate(20deg);
+}

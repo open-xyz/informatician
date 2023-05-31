@@ -9,7 +9,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
-    background-color: hwb(0 95% 5%);
+    background-color:#eff6ff;
     padding: 10px 5px;
     font-family: 'Poppins', sans-serif !important;
 }
@@ -86,7 +86,7 @@ nav {
 .search-bar input{
     /* width: 100%; */
     max-width: 300px;
-    background: rgba(160, 176, 177, 0.2);
+    background: #eff6ff;
     display: flex;
     border: 1px  solid black;
     align-items: center;
@@ -105,10 +105,10 @@ nav {
 .search-bar button {
     border: 0;
     border-radius: 50%;
-    background: #a9afd1;
+    background: #eff6ff;
     cursor: pointer;
-    height: 46px;
-    width: 47px;
+    height: 39px;
+    width: 20px;
     position: relative;
     right: 48px;
 }
@@ -144,7 +144,7 @@ nav {
         width: 277px;
         height: 51vh;
         padding: 14px 0 0 0px;
-        background-color: hwb(0 95% 5%);
+        background-color: #eff6ff;
         transform: translateX(0);
         transition: transform 0.3s ease-out;
         /* transition: 0.3s; */

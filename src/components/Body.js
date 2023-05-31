@@ -16,6 +16,7 @@ import Develop from "./develop";
 import Error from "./Error";
 import SingleBk from "./Home/SingleBk/SingleBk";
 import AddBooks from "./AddBooks/AddBooks";
+import Success from "./Success";
 
 function Body() {
   return (
@@ -33,6 +34,7 @@ function Body() {
         <Route path="/faq" element={<FaqHelp />} />
         <Route path="/develop" element={<Develop />} />
         <Route path="/addBooks" element={<AddBooks />} />
+        <Route path="/success" element={<Success />} />
 
         <Route path="*" element={<Error />} />
 
