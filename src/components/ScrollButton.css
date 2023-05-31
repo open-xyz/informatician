@@ -1,7 +1,7 @@
 .scrollToTopButton {
     position: fixed;
-    right: 10px;
-    top: 35px;
+    bottom: 20px;
+    right: 20px;
     z-index: 999;
     width: 40px;
     height: 40px;
@@ -26,22 +26,3 @@
     font-size: 20px;
   }
   
-  @keyframes hide {
-    from {
-        transform: translateY(calc(100vh - 85px));
-    }
-
-    to {
-        transform: translateY(0);
-    }
-}
-
-@keyframes show {
-    from {
-        transform: translateY(0);
-    }
-
-    to {
-        transform: translateY(calc(100vh - 85px));
-    }
-}
