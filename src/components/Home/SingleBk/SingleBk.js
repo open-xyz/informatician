@@ -110,7 +110,7 @@ export default function SingleBk() {
                                         </div>
                                     </div>
                                     <div style={{ marginBottom: '16px' }}>
-                                        <button type="button" class="btn btn-outline-success" style={{ backgroundColor: "#1e7b85", color: "white", width: '100%', marginBottom: '12px', fontWeight: 600 }}>Start your free 30 days</button>
+                                        <button type="button" class="btn btn-outline-success" style={{ backgroundColor: "#1e7b85", color: "white", width: '100%', marginBottom: '12px', fontWeight: 600 }}>Start Reading</button>
                                         <button type="button" class="btn btn-outline-success" style={{ width: '100%', marginBottom: '12px', fontWeight: 600 }}>Sample</button>
                                     </div>
                                     <div className="right-last">
