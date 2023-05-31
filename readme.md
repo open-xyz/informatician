@@ -34,7 +34,7 @@
 ![expressjs](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
 ![mongodb](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
 
-##Note:
+## Note:
  Before proceeding with any implementation or changes, it is crucial to thoroughly review the discussion tab and familiarize yourself with the site plan. By doing so, you can align your work with the intended direction of the platform and contribute effectively. Please take the time to read through the discussions and gather necessary information before proceeding. Thank you! 
 #330 you can refer
 
@@ -63,7 +63,7 @@
  - Go through the [CONTRIBUTING.md](https://github.com/poorvika11/informatician/blob/main/CONTRIBUTING.md) file, where all the guidelines have been mentioned that will guide you to make your contribution.
  - Do checkout the [Code of Conduct](https://github.com/poorvika11/informatician/blob/main/STYLE_GUIDE.md) section.
 
- ✨ If you have any questions or need assistance, feel free to open an issue in the repository. <a name="roadmap"
+ ✨ If you have any questions or need assistance, feel free to open an issue in the repository.
 
 Join us on this open-source journey, and let your love for books flourish in a limitless world of possibilities.
 
