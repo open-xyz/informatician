@@ -7,7 +7,8 @@ export default function NavItems(props) {
             <ul
                 id="nav-items"
                 // className={props.clicked ? "nav-active" : ""}
-                style={{ marginBottom: 0, 
+                style={{
+                    marginBottom: 0,
                     transform: (!props.clicked & props.drawer) ? 'translateX(277px)' : 'translateX(0px)',
                     transition: (props.clicked & props.drawer) ? 'transform 0.3s ease-out' : 'transform 0.3s ease-in'
                 }}
@@ -46,15 +47,6 @@ export default function NavItems(props) {
                         onClick={props.handleOptionClick}
                     >
                         Contact Us
-                    </Link>
-                </li>
-                <li>
-                    <Link
-                        to="/faq"
-                        className={props.location.pathname === "/faq" ? "active" : ""}
-                        onClick={props.handleOptionClick}
-                    >
-                        FAQ
                     </Link>
                 </li>
                 <div className="search-container search-mobile-view">

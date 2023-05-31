@@ -2,18 +2,16 @@ import React, { useState, useEffect } from "react";
 import "./BookList.css";
 import ScrollToTopButton from "../ScrollButton";
 import Card from "../Card";
+import { searchBooks } from "../../utils/searchBooks";
 export default function BookList() {
   const [books, setBooks] = useState([]);
   const [bookName, setBookName] = useState("");
 
   useEffect(() => {
     if (bookName !== "") {
-
-      fetch(`https://www.googleapis.com/books/v1/volumes?q=${bookName}&key=API_KEY`)
-        .then(response => response.json())
-        .then(result => {
-          setBooks([...result?.items])
-        })
+      searchBooks(bookName)
+      .then(result=>setBooks(result))
+      .catch(err=>{throw err})
     }
   }, [bookName]);
 

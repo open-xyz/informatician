@@ -14,6 +14,7 @@ import CookiePolicy from "./Cookie";
 import FaqHelp from "./faq";
 import Develop from "./develop";
 import Error from "./Error";
+import AddBooks from "./AddBooks/AddBooks";
 
 function Body() {
   return (
@@ -22,15 +23,16 @@ function Body() {
         <Route path="/" element={<Home />} />
         <Route path="/books" element={<BookList />} />
         <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact/>}/>
-        <Route path="/team" element={<Team/>}/>
-        <Route path="/terms" element={<TermsAndService/>}/>
-        <Route path="/privacy" element={<PrivacyPolicy/>}/>
-        <Route path="/cookie" element={<CookiePolicy/>}/>
-        <Route path="/faq" element={<FaqHelp/>}/>
-        <Route path="/develop" element={<Develop/>}/>
-        
-        <Route path="*" element={<Error/>}/>
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/team" element={<Team />} />
+        <Route path="/terms" element={<TermsAndService />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
+        <Route path="/cookie" element={<CookiePolicy />} />
+        <Route path="/faq" element={<FaqHelp />} />
+        <Route path="/develop" element={<Develop />} />
+        <Route path="/addBooks" element={<AddBooks />} />
+
+        <Route path="*" element={<Error />} />
 
 
       </Routes>

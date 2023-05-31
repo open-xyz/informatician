@@ -1,13 +1,35 @@
-import React from "react";
-import {
-  AiFillFacebook,
-  AiFillInstagram,
-  AiFillTwitterSquare,
-} from "react-icons/ai";
-import contactImage from "../assets/contact-us.png";
-import "./Contactus.css";
+import {React, useState} from 'react';
+import { FaDiscord, FaTwitter, FaGithub } from 'react-icons/fa';
+import contactImage from '../assets/contact-us.png';
+import './Contactus.css';
 
 const Contact = () => {
+
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [msg, setMsg] = useState('')
+
+  const handleResponse = async (e) => {
+    e.preventDefault()
+
+    var formData = {
+      name: name,
+      email: email,
+      message: msg
+    }
+
+    
+    await fetch('http://localhost:5000/sendMail', {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(formData)
+    })
+
+    alert("Contact Request Sent Successfully")
+  }
+
   return (
     <div className="contact">
       <div className="container">
@@ -18,18 +40,41 @@ const Contact = () => {
               We'd love to hear from you! Reach out to us for any inquiries,
               feedback, or collaboration opportunities.
             </p>
-            <form className="contact-form">
-              <div style={{ display: "flex", flexDirection: "column", gap: "5px" }}>
-                <label style={{ display: "flex" }}>Full Name</label>
-                <input type="text" placeholder="Name" className="form-input" required />
+            <form className="contact-form" onSubmit={handleResponse}>
+              <div
+                style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}
+              >
+                <label style={{ display: 'flex' }}>Full Name</label>
+                <input
+                  type="text"
+                  placeholder="Name"
+                  className="form-input"
+                  required
+                  onChange={(e) => setName(e.target.value)}
+                />
               </div>
-              <div style={{ display: "flex", flexDirection: "column", gap: "5px" }}>
-                <label style={{ display: "flex" }}>Email</label>
-                <input type="email" placeholder="Email" className="form-input" required />
+              <div
+                style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}
+              >
+                <label style={{ display: 'flex' }}>Email</label>
+                <input
+                  type="email"
+                  placeholder="Email"
+                  className="form-input"
+                  required
+                  onChange={(e) => setEmail(e.target.value)}
+                />
               </div>
-              <div style={{ display: "flex", flexDirection: "column", gap: "5px" }}>
-                <label style={{ display: "flex" }}>Message</label>
-                <textarea placeholder="Message" className="form-input message-input" required />
+              <div
+                style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}
+              >
+                <label style={{ display: 'flex' }}>Message</label>
+                <textarea
+                  placeholder="Message"
+                  className="form-input message-input"
+                  required
+                  onChange={(e) => setMsg(e.target.value)}
+                />
               </div>
               <button type="submit" className="submit-btn">
                 Submit
@@ -41,11 +86,18 @@ const Contact = () => {
           </div>
         </div>
         <div className="contact-social-icons">
-          <h4>Connect with us:</h4>
+          <h1 style={{marginTop: 20, marginBottom: 20, fontSize: 30}}>Connect with us:</h1>
           <div className="social-icons">
-            <a href="#!" className="social-icon"><AiFillFacebook /></a>
-            <a href="#!" className="social-icon"><AiFillTwitterSquare /></a>
-            <a href="#!" className="social-icon"><AiFillInstagram /></a>
+            <a href="#!" className="social-icon-twitter">
+              <FaTwitter />
+            </a>
+            <a href="#!" className="social-icon-github">
+              <FaGithub />
+            </a>
+
+            <a href="#!" className="social-icon-discord">
+              <FaDiscord />
+            </a>
           </div>
         </div>
       </div>
