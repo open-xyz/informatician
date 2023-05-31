@@ -30,6 +30,7 @@ export default function CgCards() {
             autoPlayStrategy="default"
             animationDuration={1200}
             infinite={true}
+            mouseTracking={true}
           >
             <CardContent image={ebk1} title="Biography & Memoir" />
             <CardContent image={abk1} title="Politics" />
