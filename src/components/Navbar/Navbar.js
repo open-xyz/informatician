@@ -58,7 +58,7 @@ export default function Navbar() {
         </Link>
         <div>
           <form className="search-bar">
-            <input type="text" placeholder="" name="q" onChange={search} />
+            <input type="text" placeholder="search" name="q" onChange={search} />
             <button type="submit">
               <i className="fa-solid fa-search"></i>
             </button>
