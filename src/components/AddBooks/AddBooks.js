@@ -3,34 +3,30 @@ import "./AddBooks.css"
 import BookImg from "../../assets/book2.jpg"
 const AddBooks = () => {
     return (
-        <div className="container">
+        <div className="addBooks-container">
 
-            <div className='add-books text-white' style={{
-                background: `rgba(25, 25, 112, 0.2)
-                url(${BookImg}) no-repeat center center`
-            }}>
-                <h1 className='form-title'>Add Books</h1>
+            <div className='add-books text-white' style={{}}>
+                <h1 className='form-title' style={{color: "black"}}>Add Books</h1>
                 <div className="group">
-                    <label for="book_name" className="label">Book Name</label>
-                    <input id="book_name" type="text" className="input" />
+                    
+                    <input id="book_name" type="text" className="input" placeholder='Book Name'/>
                 </div>
                 <div className="group">
-                    <label for="author_name" className="label">Author Name</label>
-                    <input id="author_name" type="text" className="input" />
+                    
+                    <input id="author_name" type="text" className="input" placeholder='Author Name'/>
                 </div>
                 <div className="group">
-                    <label for="publisher" className="label">Publisher</label>
-                    <input id="publisher" type="text" className="input" />
+                    
+                    <input id="publisher" type="text" className="input" placeholder='Publisher'/>
                 </div>
                 <div className="group">
-                    <label for="pages" className="label">Pages</label>
-                    <input id="pages" type="number" className="input" />
+                    
+                    <input id="pages" type="number" className="input" placeholder='Pages'/>
                 </div>
                 <div className="group">
-                    <label for="img_url" className="label">Img_Url</label>
-                    <input id="img_url" type="text" className="input" />
+                    <input id="img_url" type="text" className="input" placeholder='Img_url'/>
                 </div>
-                <div className="group">
+                <div className="group-btn">
                     <input type="submit" className="button" value="Add Books" />
                 </div>
             </div>

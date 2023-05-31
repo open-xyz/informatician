@@ -1,6 +1,8 @@
-# INFORMATICIAN - An open source book reading platform
+## INFORMATICIAN - An open source book reading platform
 
-Welcome to Informatician, an open-source book platform where literature meets community, and knowledge knows no bounds. Our web application is designed to revolutionize the way you engage with books, offering a comprehensive book listing and reading experience similar to popular platforms like Kindle and Scribd. The application goes beyond a mere reading experience, as it allows you to rate and review books, fostering a sense of community and sharing insights with fellow book enthusiasts. You can explore a vast collection of books, search for your favorite titles, and even contribute by adding new books to the platform. Whether you're an avid reader, a literary connoisseur, or simply seeking new knowledge, Informatician is here to provide you with an exceptional platform to explore, learn, and connect.
+- Welcome to Informatician, an open-source book platform where literature meets community, and knowledge knows no bounds. Our web application is designed to revolutionize the way you engage with books, offering a comprehensive book listing and reading experience similar to popular platforms like Kindle and Scribd. 
+- The application goes beyond a mere reading experience, as it allows you to rate and review books, fostering a sense of community and sharing insights with fellow book enthusiasts. 
+- You can explore a vast collection of books, search for your favorite titles, and even contribute by adding new books to the platform. Whether you're an avid reader, a literary connoisseur, or simply seeking new knowledge, Informatician is here to provide you with an exceptional platform to explore, learn, and connect.
 
 ---
 
@@ -32,6 +34,9 @@ Welcome to Informatician, an open-source book platform where literature meets co
 ![expressjs](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
 ![mongodb](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
 
+##Note:
+ Before proceeding with any implementation or changes, it is crucial to thoroughly review the discussion tab and familiarize yourself with the site plan. By doing so, you can align your work with the intended direction of the platform and contribute effectively. Please take the time to read through the discussions and gather necessary information before proceeding. Thank you! 
+#330 you can refer
 
 ## ✨ How to install it? 
 
