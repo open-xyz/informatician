@@ -1,0 +1,96 @@
+/* testimonial styles */
+
+.testimonial {
+  padding: 2% 2%;
+}
+
+.testimonial .top {
+  background: transparent;
+}
+
+.testimonial .top .left {
+  padding: 30px 70px 0px;
+}
+
+.testimonial .top .right {
+  width: 50%;
+}
+
+.testimonial .top .right button {
+  margin: 10px;
+  padding: 15px 30px;
+}
+
+.testimonial .top .right .prev {
+  background-color: #ccc;
+  border-top-left-radius: 30px !important;
+  border-bottom-left-radius: 30px !important;
+}
+
+.testimonial .top .right .prev:hover .arrow-back {
+  animation: left 1s linear 0s infinite alternate-reverse;
+}
+
+.testimonial .top .right .next {
+  background-color: #442472;
+  color: #fff;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.testimonial .top .right .next:hover .arrow-fwd {
+  animation: right 1s linear 0s infinite alternate-reverse;
+}
+
+.testimonial .bottom .card {
+  padding: 30px;
+  margin: 10px;
+}
+
+.testimonial .bottom .card .des img {
+  float: left;
+  margin: -15px 20px 20px 0;
+}
+
+.testimonial .bottom .card .des h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+@keyframes left {
+  from {
+    transform: translate(-20px);
+  }
+  to {
+    transform: translate(0);
+  }
+}
+
+@keyframes right {
+  from {
+    transform: translate(20px);
+  }
+  to {
+    transform: translate(0);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .testimonial .top {
+    flex-direction: column;
+  }
+
+  .testimonial .top .left {
+    padding: 0;
+    padding-top: 30px;
+    text-align: center;
+  }
+
+  .testimonial .top .right {
+    width: 100%;
+  }
+
+  .testimonial .bottom .card {
+    width: 70%;
+  }
+}

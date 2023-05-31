@@ -3,6 +3,9 @@ import "./About.css";
 import bookImage from "../../assets/books.webp";
 import { useMediaQuery } from "react-responsive";
 import ScrollToTopButton from "../ScrollButton";
+import Feature from "./Feature";
+import Testimonial from "./Testimonial";
+import Download from "./Download";
 
 const About = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
@@ -42,6 +45,9 @@ const About = () => {
         </div>
       </div>
       <ScrollToTopButton />
+      <Feature />
+      <Testimonial />
+      <Download />
     </div>
   );
 };
