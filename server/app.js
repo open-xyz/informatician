@@ -5,8 +5,8 @@ const cors = require("cors");
 const cron = require("node-cron");
 const { sendNewsletter } = require("./controller/newsletter");
 const mailRouter = require('./router/contact')
-const notFound = require("./errors/customAPIError");
-const errorHandler = require("./errors/customAPIError");
+const notFound = require("./errors/notfound");
+const { customAPIError } = require("./errors/customAPTError");
 const newsLetter = require("./router/newsletter");
 const rateLimiter = require("express-rate-limit");
 
@@ -24,8 +24,8 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
-app.use('/api',newsLetter.router)
-app.use('/sendMail',mailRouter)
+app.use('/api', newsLetter.router)
+app.use('/sendMail', mailRouter)
 
 const limiter = rateLimiter({
   windowMs: 60 * 1000, // 1 minute
@@ -41,7 +41,7 @@ cron.schedule("0 0 * * 0", sendNewsletter);
 
 // Error handling
 app.use(notFound);
-app.use(errorHandler);
+app.use(customAPIError);
 
 app.listen(process.env.PORT || 5000, () => {
   console.log("Server Started");
