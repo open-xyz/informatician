@@ -1,7 +1,7 @@
 const nodemailer = require("nodemailer");
 const { Newsletter } = require("../model/newsletter");
-const { createCustomError } = require('../errors/customAPIError');
-const notFound = require("../error.js/notfound");
+const { createCustomError } = require("../errors/customAPTError");
+const notFound = require("../errors/notfound");
 
 exports.addUser = async (req, res) => {
   try {
