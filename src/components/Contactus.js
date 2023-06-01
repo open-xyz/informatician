@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FaDiscord, FaTwitter, FaGithub } from 'react-icons/fa';
 import contactImage from '../assets/contact-us.png';
 import './Contactus.css';
+import { Link } from 'react-router-dom';
 
 const Contact = () => {
   const [name, setName] = useState('');
@@ -82,15 +83,15 @@ const Contact = () => {
         <div className="contact-social-icons">
           <h1 style={{ marginTop: 20, marginBottom: 20, fontSize: 30 }}>Connect with us:</h1>
           <div className="social-icons">
-            <a href="#!" className="social-icon-twitter">
+            <Link to="/develop" className="social-icon-twitter">
               <FaTwitter />
-            </a>
-            <a href="#!" className="social-icon-github">
+            </Link>
+            <Link to="https://github.com/rohansx/informatician" target='blank' className="social-icon-github">
               <FaGithub />
-            </a>
-            <a href="#!" className="social-icon-discord">
+            </Link>
+            <Link to="/develop" className="social-icon-discord">
               <FaDiscord />
-            </a>
+            </Link>
           </div>
         </div>
       </div>
