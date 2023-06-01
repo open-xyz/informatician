@@ -1,6 +1,6 @@
 import React from "react";
 import "./About.css";
-import bookImage from "../../assets/books.webp";
+import aboutUs from "../../assets/aboutUs.png";
 import { useMediaQuery } from "react-responsive";
 import ScrollToTopButton from "../ScrollButton";
 import Feature from "./Feature";
@@ -12,36 +12,22 @@ const About = () => {
 
   return (
     <div className="about">
-      <div className="container">
-        <div className="about-content">
-          <div className="about-text">
-            <h2 className="about-title">About Us</h2>
-            <p className="about-description">
-              At Book Listing App, we believe in the power of books to inspire,
-              educate, and entertain. Books have the ability to transport us to
-              different worlds, expand our horizons, and ignite our imagination.
-              They hold knowledge, stories, and ideas that have the potential to
-              transform lives.
-            </p>
-            <p className="about-description">
-              Our vision is to create a platform that connects book lovers and
-              provides a space for discovering, discussing, and sharing the joy
-              of reading. We aim to foster a vibrant community where readers can
-              explore diverse genres, engage in meaningful conversations, and
-              connect with authors and fellow book enthusiasts.
-            </p>
-            <p className="about-description">
-              As the co-founders of Book Listing App, we are passionate about
-              promoting literacy, encouraging reading habits, and building a
-              community around books. Our mission is to make reading more
-              accessible, enjoyable, and interactive for everyone. We strive to
-              curate a collection of books that cater to various interests and
-              preferences, ensuring there's something for every reader.
-            </p>
-          </div>
-          <div className="about-image">
-            <img src={bookImage} alt="Books" className="book-image" />
-          </div>
+      <div className="w-11/12 flex flex-wrap mx-auto justify-center items-center mt-28 mb-5 max-w-screen-2xl">
+        <div className="md:w-1/2 w-11/12">
+          <img src={aboutUs} className="w-11/12" />
+        </div>
+        <div className="md:w-1/2 p-3 w-11/12">
+          <h1 className="text-5xl mb-6 font-bold">About Us</h1>
+          <p className="leading-6">
+            Book Listing App connects book lovers, fostering a vibrant community
+            of diverse genres. Our mission is to make reading accessible,
+            enjoyable, and interactive for all, promoting literacy and building
+            a strong book-centric community. Discover new books, engage in
+            discussions, and share the joy of reading. Our curated collection
+            caters to various interests, ensuring there's something for every
+            reader. Join us to explore, connect, and celebrate the magic of
+            reading!
+          </p>
         </div>
       </div>
       <ScrollToTopButton />
