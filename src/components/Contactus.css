@@ -8,16 +8,6 @@
   padding: 0 20px;
 }
 
-.contact-content {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-}
-
-.contact-text {
-  text-align: center;
-}
-
 .contact-title {
   font-size: 30px;
   font-weight: bold;
@@ -30,10 +20,10 @@
   margin-bottom: 30px;
 }
 
-.contact-form {
+.form-field {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 5px;
 }
 
 .form-input {
@@ -42,26 +32,11 @@
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  outline: none;
 }
 
 .message-input {
   height: 120px;
-}
-
-input {
-  outline: none;
-}
-
-textarea {
-  outline: none;
-}
-
-input:focus {
-  border: 2px solid #1fb6ff;
-}
-
-textarea:focus {
-  border: 2px solid #1fb6ff;
 }
 
 .submit-btn {
@@ -69,8 +44,8 @@ textarea:focus {
   padding: 10px 20px;
   font-size: 16px;
   font-weight: 600;
-  background-color: lightgray;
-  color: black;
+  background-color: black;
+  color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -78,12 +53,8 @@ textarea:focus {
 }
 
 .submit-btn:hover {
-  color: #fff;
-  background-color: black;
-}
-
-.contact-image {
-  max-width: 450px;
+  background-color: lightgray;
+  color: black;
 }
 
 .contact-social-icons {
@@ -91,9 +62,10 @@ textarea:focus {
   margin-top: 40px;
 }
 
-.contact-social-icons h4 {
-  font-size: 18px;
-  margin-bottom: 10px;
+.contact-social-icons h1 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 30px;
 }
 
 .social-icons {
@@ -102,7 +74,9 @@ textarea:focus {
   gap: 20px;
 }
 
-.social-icon-twitter {
+.social-icon-twitter,
+.social-icon-github,
+.social-icon-discord {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -110,7 +84,7 @@ textarea:focus {
   height: 40px;
   font-size: 24px;
   background-color: black;
-  color: #fff;
+  color: white;
   border-radius: 50%;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
@@ -121,52 +95,56 @@ textarea:focus {
   transform: scale(1.2);
 }
 
-.social-icon-github {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  font-size: 24px;
-  background-color: black;
-  color: #fff;
-  border-radius: 50%;
-  text-decoration: none;
-  transition: all 0.2s ease-in-out;
-}
-
 .social-icon-github:hover {
-  color: black;
   background-color: lightgray;
   transform: scale(1.2);
 }
 
-.social-icon-discord {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  font-size: 24px;
-  background-color: black;
-  color: #fff;
-  border-radius: 50%;
-  text-decoration: none;
-  transition: all 0.2s ease-in-out;
-}
-
 .social-icon-discord:hover {
-  /* color: black; */
   background-color: #7289da;
   transform: scale(1.2);
 }
 
+.contact-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+.contact-text {
+  text-align: center;
+  flex: 1;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+.contact-image {
+  max-width: 100%;
+  height: auto;
+  flex: 1;
+}
+
 @media only screen and (max-width: 700px) {
   .contact-content {
-    flex-wrap: wrap;
+    flex-direction: column-reverse;
   }
+  
+  .contact-text {
+    order: 2;
+    margin-bottom: 40px;
+  }
+  
   .contact-image {
-    max-width: 330px;
+    max-width: 100%;
     width: 100%;
+    margin-top: 0;
   }
 }
+
+
