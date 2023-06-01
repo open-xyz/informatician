@@ -142,7 +142,8 @@ nav {
         top: 73px;
         right: 0px;
         width: 277px;
-        height: 79vh;
+        /* height: 79vh; */
+        height:fit-content;
         padding: 14px 0 0 0px;
         background-color: hwb(0 95% 5%);
         transform: translateX(0);
