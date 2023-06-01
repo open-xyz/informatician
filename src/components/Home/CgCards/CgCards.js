@@ -15,7 +15,7 @@ import abk4 from "../../../assets/audiobks/abk4.webp";
 export default function CgCards() {
   return (
     <>
-      <div className="container-xl mt-20">
+      <div className="container-xl mt-20 select-none">
         <h1 className="bk-head">Popular Categories</h1>
         <div className="d-flex">
           <AliceCarousel
