@@ -17,7 +17,6 @@ function ScrollToTop() {
 
 const Footer = () => {
   let year = new Date().getFullYear();
-
   return (
     <>
       <ScrollToTop />
@@ -71,7 +70,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      to="#"
+                      to="/develop"
                       className="hover:underline  hover:text-gray-900"
                     >
                       Join our team!
@@ -94,7 +93,7 @@ const Footer = () => {
                   </li>
                   <li className="mb-4">
                     <Link
-                      to="#"
+                      to="/develop"
                       className="hover:underline  hover:text-gray-900"
                     >
                       Accessibility
@@ -102,7 +101,7 @@ const Footer = () => {
                   </li>
                   <li className="mb-4">
                     <Link
-                      to="#"
+                      to="/develop"
                       className="hover:underline   hover:text-gray-900"
                     >
                       Publishers
@@ -110,7 +109,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      to="#"
+                      to="/develop"
                       className="hover:underline  hover:text-gray-900"
                     >
                       AdChoices
@@ -163,13 +162,13 @@ const Footer = () => {
           <div className="sm:flex sm:items-center sm:justify-between">
             <span className="text-sm font-bold text-gray-900  sm:text-center ">
               © {year}{" "}
-              <a href="#" className="hover:underline  hover:text-gray-600">
+              <a href="/" className="hover:underline  hover:text-gray-600">
                 Informatician™
               </a>
               . All Rights Reserved.
             </span>
             <div className="flex mt-0 space-x-6 sm:justify-center sm:mt-0 mr-14 2xl:mr-0">
-              <Link to="#" className="text-gray-900 hover:text-blue-600 ">
+              <Link to="/develop" className="text-gray-900 hover:text-blue-600 ">
                 <svg
                   className="w-6 h-6"
                   fill="currentColor"
