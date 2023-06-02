@@ -1,75 +1,107 @@
-import React from "react";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import "./Testimonial.css";
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import './Testimonial.css';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import { Pagination, Navigation } from 'swiper';
 
 export default function Testimonial() {
   return (
-    <div className="testimonial">
-      <div className="top d-flex">
-        <div className="left">
-          <h1 className="fw-bold fs-1">Our Testimonial</h1>
-          <p className="mt-2 mb-5">
-            What Our Client Say About The Books. Reviews And Comments
-          </p>
-        </div>
-        <div className="right d-flex justify-content-center align-items-center mb-4">
-          <button className="prev">
-            <ArrowBackIcon className="arrow-back" /> Prev
-          </button>
-          <button className="next">
-            Next <ArrowForwardIcon className="arrow-fwd" />
-          </button>
-        </div>
-      </div>
-      <div className="row bottom d-flex justify-content-evenly pb-3">
-        <div className="col-lg-3 col-md-5 card">
-          <div className="des">
-            <img
-              className="rounded-circle w-20"
-              src="https://avatars.githubusercontent.com/u/100675296?v=4"
-              alt=""
-            />
-            <h3>Sumit</h3>
-            <p>Contributor</p>
+    <div className="mt-20 mb-28">
+      <h1 className="text-center fw-bold fs-1 ">Our Testimonials</h1>
+      <p className="text-center mt-2 mb-5">
+        What Our Client Say About The Books. Reviews And Comments
+      </p>
+      <Swiper
+        slidesPerView={1}
+        spaceBetween={30}
+        loop={true}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Pagination, Navigation]}
+        className="mySwiper custom"
+      >
+        <SwiperSlide>
+          <div className="testimonial max-w-5xl relative w-full py-0 px-0 ">
+            <div className="slide flex items-center justify-center flex-col gap-y-6  py-6 ">
+              <img
+                className="image h-44 w-40 object-cover rounded-full"
+                src="https://avatars.githubusercontent.com/u/33249782?v=4"
+                alt=""
+              />
+              <p className="py-0  px-[100px] text-center text-lg font-medium text-slate-800 ">
+                This app is great! Its like the Netflix of books! As a college
+                student, this app has helped me a lot in reading science and
+                mathematics. I have had zero issues and found most of the books
+                I needed. Thanks! I truly love this app!
+              </p>
+              <i className="bx bxs-quote-alt-left quote-icon text-3xl text-blue-600"></i>
+              <div className="details flex flex-col items-center">
+                <span className="name text-lg font-semibold text-slate-800">
+                  Rohan
+                </span>
+                <span className="job text-base font-normal text-slate-800">
+                  Mentor
+                </span>
+              </div>
+            </div>
           </div>
-          <div className="test">
-            From major literary works and detailed historical and scientific
-            studies to popular fiction and self-help books, it’s incredible how much there is to find on
-            Informatician. Fantastic!
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="testimonial max-w-5xl relative w-full py-0 px-0 ">
+            <div className="slide flex items-center justify-center flex-col gap-y-6  py-6 ">
+              <img
+                className="image h-44 w-40 object-cover rounded-full"
+                src="https://avatars.githubusercontent.com/u/96341431?v=4"
+                alt=""
+              />
+              <p className="py-0  px-[100px] text-center text-lg font-medium text-slate-800 ">
+                The selection of ebooks and audiobooks is plentiful. I have
+                found and saved so many books to read and listen to that would
+                have otherwise cost me a fortune anywhere else. There’s no
+                contest at all!
+              </p>
+              <i className="bx bxs-quote-alt-left quote-icon text-3xl text-blue-600"></i>
+              <div className="details flex flex-col items-center">
+                <span className="name text-lg font-semibold text-slate-800">
+                  Deepak
+                </span>
+                <span className="job text-base font-normal text-slate-800">
+                  Project Admin
+                </span>
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="col-lg-3 col-md-5 card">
-          <div className="des">
-            <img
-              className="rounded-circle w-20"
-              src="https://avatars.githubusercontent.com/u/96341431?v=4"
-              alt=""
-            />
-            <dif className="name">
-              <h3>Deepak</h3>
-              <p>Project Admin</p>
-            </dif>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="testimonial max-w-5xl relative w-full py-0 px-0 ">
+            <div className="slide flex items-center justify-center flex-col gap-y-6  py-6 ">
+              <img
+                className="image h-44 w-40 object-cover rounded-full"
+                src="https://avatars.githubusercontent.com/u/100675296?v=4"
+                alt=""
+              />
+              <p className="py-0  px-[100px] text-center text-lg font-medium text-slate-800 ">
+                From major literary works and detailed historical and scientific
+                studies to popular fiction and self-help books, it’s incredible
+                how much there is to find on Informatician. Fantastic!
+              </p>
+              <i className="bx bxs-quote-alt-left quote-icon text-3xl text-blue-600"></i>
+              <div className="details flex flex-col items-center">
+                <span className="name text-lg font-semibold text-slate-800">
+                  Sumit
+                </span>
+                <span className="job text-base font-normal text-slate-800">
+                  Contributor
+                </span>
+              </div>
+            </div>
           </div>
-          <div className="test">
-          The selection of ebooks and audiobooks is plentiful. I have found and saved so many books to read and listen to that would have otherwise cost me a fortune anywhere else. There’s no contest at all!
-          </div>
-        </div>
-        <div className="col-lg-3 col-md-5 card">
-          <div className="des">
-            <img
-              className="rounded-circle w-20"
-              src="https://avatars.githubusercontent.com/u/33249782?v=4"
-              alt=""
-            />
-            <h3>Rohan</h3>
-            <p>Mentor</p>
-          </div>
-          <div className="test">
-          This app is great! Its like the Netflix of books! As a college student, this app has helped me a lot in reading science and mathematics. I have had zero issues and found most of the books I needed. Thanks! I truly love this app!
-          </div>
-        </div>
-      </div>
+        </SwiperSlide>
+      </Swiper>
     </div>
   );
 }
