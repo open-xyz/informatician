@@ -42,7 +42,7 @@
 
 1. Clone the repository:
  ```sh
- $ git clone https://github.com/openeon/informatician.git
+ $ git clone https://github.com/rohansx/informatician.git
  ```
 
 2. Install dependencies:
