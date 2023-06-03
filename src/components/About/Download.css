@@ -52,6 +52,10 @@
   color: palevioletred;
 }
 
+.download .right button:hover > svg{
+  color: palevioletred;
+}
+
 .download .right button .apple {
   font-size: 2rem;
   margin: 0 10px 2px 0;
