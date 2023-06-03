@@ -7,7 +7,7 @@ import Home from "./Home/Home";
 // import About from "./About";
 // import Home from "./Home";
 import Contact from "./Contactus";
-import Team from "./Team";
+import Team from "./Team/Team";
 import TermsAndService from "./Terms&Service";
 import PrivacyPolicy from "./PrivacyPolicy";
 import CookiePolicy from "./Cookie";
