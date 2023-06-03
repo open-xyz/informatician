@@ -52,11 +52,11 @@ export default function BkCards(props) {
 
   return (
     <>
-      <div className="container-2xl px-10">
+      <div className="container-2xl px-2 md:px-10">
         <div className="row justify-content-center">
           <div className="books">
             <h2 className="bk-head">{props.bkhead}</h2>
-            <div className="flex items-center gap-10">
+            <div className="flex items-center gap-2 md:gap-10">
               <div
                 onClick={() => prevButton.current.click()}
                 className="cursor-pointer"
@@ -90,7 +90,7 @@ export default function BkCards(props) {
                     spaceBetween: 20,
                   },
                   768: {
-                    slidesPerView: 4,
+                    slidesPerView: 3,
                     spaceBetween: 40,
                   },
                   1024: {
