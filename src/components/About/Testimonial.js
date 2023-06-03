@@ -5,6 +5,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Pagination, Navigation } from 'swiper';
+import "aos/dist/aos.css"
 
 export default function Testimonial() {
   return (
@@ -25,7 +26,7 @@ export default function Testimonial() {
         className="mySwiper custom"
       >
         <SwiperSlide>
-          <div className="testimonial max-w-5xl relative w-full py-0 px-0 ">
+          <div className="testimonial max-w-5xl relative w-full py-0 px-0" data-aos="fade-up" data-aos-duration="500">
             <div className="slide flex items-center justify-center flex-col gap-y-6  py-6 ">
               <img
                 className="image h-44 w-40 object-cover rounded-full"

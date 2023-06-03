@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./About.css";
 import aboutUs from "../../assets/aboutUs.png";
 import { useMediaQuery } from "react-responsive";
@@ -6,17 +6,26 @@ import ScrollToTopButton from "../ScrollButton";
 import Feature from "./Feature";
 import Testimonial from "./Testimonial";
 import Download from "./Download";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const About = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
+  useEffect(() => {
+    AOS.init({
+      once: false,
+    });
+    AOS.refresh();
+  }, []);
+
   return (
     <div className="about">
       <div className="w-11/12 flex flex-wrap mx-auto justify-center items-center mt-28 mb-5 max-w-screen-2xl">
-        <div className="md:w-1/2 w-11/12">
+        <div className="md:w-1/2 w-11/12" data-aos="fade-left" data-aos-duration="500">
           <img src={aboutUs} className="w-11/12" />
         </div>
-        <div className="md:w-1/2 p-3 w-11/12">
+        <div className="md:w-1/2 p-3 w-11/12" data-aos="fade-right" data-aos-duration="500">
           <h1 className="text-5xl mb-6 font-bold">About Us</h1>
           <p className="leading-6">
             Book Listing App connects book lovers, fostering a vibrant community
