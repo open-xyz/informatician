@@ -10,6 +10,11 @@
   margin-bottom: 35px;
 }
 
+.swiper-button-next,
+.swiper-button-prev {
+  display: none;
+}
+
 .sub-head {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 400;
