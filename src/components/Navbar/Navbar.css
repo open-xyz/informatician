@@ -101,7 +101,7 @@ nav {
 }
 
 .search-bar button i {
-    width: 2rem;
+    width: 4rem;
 }
 .search-bar button {
     border: 0;
@@ -137,18 +137,17 @@ nav {
         z-index: 100;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        /* align-items: flex-start; */
         justify-content: flex-start;
         position: absolute;
         top: 73px;
         right: 0px;
         width: 277px;
-        /* height: 79vh; */
-        height:fit-content;
+        height: 58vh;
         padding: 14px 0 0 0px;
         background-color: #eff6ff;
         transform: translateX(0);
-        transition: transform 0.3s ease-out;
+        transition: transform 0.4s ease-out;
         /* transition: 0.3s; */
     }
     #mobile{
