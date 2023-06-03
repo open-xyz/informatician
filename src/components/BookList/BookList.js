@@ -22,14 +22,16 @@ export default function BookList() {
 
   return (
     <>
-      <div className="book-list-container flex flex-col items-center">
+      <div className="book-list-container">
         <form>
-          <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
-          <div className="relative w-[80vw]">
-            <input id="default-search" className="block p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-xl bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          <label htmlFor="default-search" className="mb-200 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+          <div className="flex mb-2 w-full justify-between">
+            <input id="default-search" className=" mr-2 p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-xl bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               onChange={(event) => setBookName(event.target.value)}
               placeholder="Search Books" required />
-            <button type="button" className="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
+            <div>
+            <button type="button" className=" text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
+            </div>
           </div>
         </form>
         <h1 className="book-list-title text-center">Book List</h1>
