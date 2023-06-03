@@ -11,7 +11,7 @@ export default function Feature() {
   return (
     <div className="row feature d-flex justify-content-evenly text-center">
       <h1 className="text-center fw-bold fs-1">Feature</h1>
-      <p className="text-center mt-2 mb-5">Feature We Provide</p>
+      <p className="text-center mt-4 mb-5 font-medium">Features We provide</p>
       <div className="card col-lg-2 cl-md-3 col-sm-4">
         <MenuBookIcon className="icons book" />
         Read Books
