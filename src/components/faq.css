@@ -1,7 +1,3 @@
-.faq-help {
-  padding: 50px 0;
-  text-align: center;
-}
 
 .faq-help-header {
   display: flex;
@@ -69,7 +65,7 @@
 
 
 .faq-help {
-  padding: 50px 50px; /* Add margin from left and right */
+  padding: 50px 30px; /* Add margin from left and right */
   text-align: center;
 }
 
@@ -207,7 +203,7 @@
   .faqcontainer,
   .container {
     padding: 1rem;
-    width: auto;
+    width: fit-content;
   }
 
   .faqh2 {
