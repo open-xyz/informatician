@@ -217,7 +217,8 @@
   }
 
   .accordion .accordion-item button .icon {
-    top: 14px;
+    top: 23px;
+    right: -30px;
   }
 
   .accordion .accordion-content p {
