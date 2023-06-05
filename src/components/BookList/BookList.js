@@ -204,7 +204,7 @@ export default function BookList() {
           <div className="card-container" ref={cardContainerRef}>
             <div className="card">
               <div className="card-content">
-              <img src="https://stephenking.com/images/press/stephenking-sm.jpg" alt="Card Image" />
+              <img src="https://lit216.pbworks.com/f/1363869393/stephen%20king.jpg" alt="Card Image" />
               <h4>- Stephen King</h4>
                 <p>"If you don't have time to read, you don't have the time to write. Simple as that."</p>
                 
