@@ -1,4 +1,26 @@
 /* download styles */
+#mobile-image-container {
+  z-index: 10;
+  perspective: 40px;
+  transition: transform 100ms;
+  padding: 17px 15px;
+  background-color: pink;
+  border-radius: 40px;
+}
+
+#mobile-image {
+  z-index: 10;
+  transition: transform 0.5s;
+}
+
+#mobile-image-container:hover {
+  transform: rotate(-10deg);
+}
+
+#mobile-image-container:hover + .box,
+#mobile-image-container:hover + .box + .box {
+  transform: scale(1.5);
+}
 
 .download {
   margin: 6% 2%;
@@ -15,18 +37,20 @@
   position: absolute;
   background-color: pink;
   border-radius: 100%;
-  z-index: 1;
+  z-index: 0;
   opacity: 0.7;
+
+  transition: transform 100ms;
 }
 
 .download .left .box1 {
   bottom: 350px;
-  left: 170px;
+  left: 75px;
 }
 
 .download .left .box2 {
   top: 350px;
-  right: 170px;
+  right: 100px;
 }
 
 .download .right {
@@ -52,7 +76,7 @@
   color: palevioletred;
 }
 
-.download .right button:hover > svg{
+.download .right button:hover > svg {
   color: palevioletred;
 }
 
