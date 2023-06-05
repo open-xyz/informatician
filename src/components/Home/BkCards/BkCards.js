@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper";
 import "swiper/css";
@@ -15,7 +15,6 @@ import abk1 from "../../../assets/audiobks/abk1.webp";
 import abk2 from "../../../assets/audiobks/abk2.webp";
 import abk3 from "../../../assets/audiobks/abk3.webp";
 import abk4 from "../../../assets/audiobks/abk4.webp";
-import { Link } from "react-router-dom";
 import SingleBk from "../SingleBk/SingleBk";
 import { useSwiper } from "swiper/react";
 
