@@ -8,7 +8,8 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install app dependencies
-RUN npm ci --only=production
+# RUN npm ci --only=production
+RUN npm install
 
 # Copy the rest of the app files
 COPY . .
@@ -17,7 +18,7 @@ COPY . .
 EXPOSE 5000
 
 # Setting environment variables from the .env file
-#docker build --build-arg ENV_FILE=.env -t your-image-name .
+# docker build --build-arg ENV_FILE=.env -t your-image-name .
 # Build with above command if you need to use new env variables
 ARG ENV_FILE
 ENV ENV_FILE ${ENV_FILE}
