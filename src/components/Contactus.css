@@ -36,7 +36,10 @@
 }
 
 .message-input {
+  width: 100%;
   height: 120px;
+  min-height: 44px;
+  overflow-y:unset;
 }
 
 .submit-btn {

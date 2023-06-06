@@ -13,11 +13,8 @@ export default function CardContent(props) {
   };
 
   return (
-    <>
-      <div
-        className="bg-color "
-        style={{ backgroundColor: random_color }}
-      ></div>
+    <div className="bk-view flex flex-col items-center rounded-[10px] overflow-hidden">
+      <div className="bg-color" style={{ backgroundColor: random_color }}></div>
       <div className="bk-img h-2/5">
         <Link to="/books/id">
           <img src={props.imgName} alt="" />
@@ -30,6 +27,7 @@ export default function CardContent(props) {
           <span className="author">
             <span>{props.author}</span>
           </span>
+          <p className="description">{props.description}</p>
         </Link>
       </div>
       <div className="reviews">
@@ -52,6 +50,6 @@ export default function CardContent(props) {
           </Link>
         </div>
       </div>
-    </>
+    </div>
   );
 }

@@ -7,23 +7,23 @@ import { searchBooks } from "../../utils/searchBooks";
 
 export default function Navbar() {
   const [clicked, setClicked] = useState(false);
-  const [books,setBooks] = useState([]);
+  const [books, setBooks] = useState([]);
   const location = useLocation();
 
   const handleOptionClick = () => {
     setClicked(false);
   };
   const search = async (e) => {
-    try{
+    try {
       const result = await searchBooks(e.target.value);
-      result.length>0 && setBooks(result.slice(0,5));
-    }catch(err){
+      result.length > 0 && setBooks(result.slice(0, 5));
+    } catch (err) {
       throw err;
     }
   };
 
   return (
-    <nav className="fixed-top box-shadow: 0 4px 6px -1px">
+    <nav className="rounded-t-none fixed-top box-shadow: 0 4px 6px -1px">
       <Link to="/" className="logo">
         <img
           src="https://user-images.githubusercontent.com/33249782/240937486-d84c477d-63f4-4558-ae04-454d803a5b1f.png"
@@ -49,7 +49,6 @@ export default function Navbar() {
       </div>
       <div className="flex search-container search-web-view">
         <Link to="/addBooks" className="flex">
-
           <img
             src={uploadicon}
             alt="uploadicon"
@@ -58,18 +57,27 @@ export default function Navbar() {
         </Link>
         <div>
           <form className="search-bar">
-            <input type="text" placeholder="search" name="q" onChange={search} />
+            <input
+              type="text"
+              placeholder="search"
+              name="q"
+              onChange={search}
+            />
             <button type="submit">
               <i className="fa-solid fa-search"></i>
             </button>
           </form>
 
           <div className="w-52 bg-gray-100 absolute mx-auto px-2">
-            {books.length>0 && books.map((book,index)=>(
-              <div className="flex justify-center items-center p-3 border-b-4 my-2 transition duration-200 hover:bg-gray-300" key={index}>
-                <h1>{book?.volumeInfo.title}</h1>
-              </div>
-            ))}
+            {books.length > 0 &&
+              books.map((book, index) => (
+                <div
+                  className="flex justify-center items-center p-3 border-b-4 my-2 transition duration-200 hover:bg-gray-300"
+                  key={index}
+                >
+                  <h1>{book?.volumeInfo.title}</h1>
+                </div>
+              ))}
           </div>
         </div>
       </div>
