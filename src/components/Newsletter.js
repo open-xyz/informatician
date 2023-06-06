@@ -5,7 +5,6 @@ class Newsletter extends React.Component {
     e.preventDefault();
     const emailInput = document.getElementById("simple-search");
     const email = emailInput.value;
-    console.log(email);
 
     try {
       const requestOptions = {
@@ -18,7 +17,6 @@ class Newsletter extends React.Component {
         "http://localhost:5000/api/addUser",
         requestOptions
       );
-      console.log(response)
 
       if(response.status===200){
         alert("Subscribed");

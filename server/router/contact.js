@@ -4,7 +4,6 @@ const mailRouter = express.Router()
 const dotenv  = require('dotenv').config()
 
 mailRouter.post('/', (req, res) => {
-    console.log(req.body)
     var transporter = mailer.createTransport({
         service: 'gmail',
         auth: {
@@ -36,7 +35,6 @@ mailRouter.post('/', (req, res) => {
             res.json('Couldnot send Email')
         }
         else {
-            console.log("Email Sent Successfully")
             res.json('Email Sent Successfully')
         }
 

@@ -9,7 +9,6 @@ export default function CardContent(props) {
   var random_color = bgColors[Math.floor(Math.random() * bgColors.length)];
 
   const ratingChanged = (newRating) => {
-    console.log(newRating);
   };
 
   return (
