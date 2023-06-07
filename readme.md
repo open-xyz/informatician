@@ -59,7 +59,46 @@ $ git clone https://github.com/rohansx/informatician.git
  $ npm start
 ```
 
-💻 The application can be accessed in a web browser at `http://localhost:3000`.
+ 💻 The application can be accessed in a web browser at `http://localhost:3000`.
+
+### ✨ Running the Application with Docker
+
+**Prerequisites:**
+
+Before running the application with Docker, make sure you have the following prerequisites installed on your machine:
+
+**Docker:** Follow the instructions specific to your operating system to install Docker. You can find the installation guide at `https://docs.docker.com/get-docker/`.
+
+**Docker Compose:** Docker Compose is typically installed along with Docker. However, if you don't have it installed, you can find installation instructions at `https://docs.docker.com/compose/install/`.
+
+Clone the repository:
+
+```sh
+git clone https://github.com/rohansx/informatician.git
+```
+
+Navigate to the project directory:
+
+```sh
+cd informatician
+```
+
+Start the application using Docker Compose:
+
+```sh
+docker-compose up
+```
+
+*Docker Compose* will build the necessary containers and start the application. It may take a few moments to download and configure all the required dependencies.
+
+Once the containers are up and running, you can access the application in a web browser at `http://localhost:3000`.
+That's it! Now you have the app running locally using Docker. Enjoy exploring the application!
+
+Note: If you make any changes to the codebase, you will need to rebuild the Docker containers using the below command to apply the changes.
+
+```sh
+docker-compose up --build
+```
 
 ## ✨ Contributing Roadmap
 
