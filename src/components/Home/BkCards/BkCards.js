@@ -51,7 +51,7 @@ export default function BkCards(props) {
 
   return (
     <>
-      <div className="container-2xl px-2 md:px-10">
+      <div className="container-xl">
         <div className="row justify-content-center">
           <div className="books">
             <h2 className="bk-head">{props.bkhead}</h2>
@@ -75,7 +75,7 @@ export default function BkCards(props) {
                 slidesPerView={1}
                 spaceBetween={10}
                 autoplay={{
-                  delay: 20000,
+                  delay: 2000,
                   disableOnInteraction: false,
                   pauseOnMouseEnter: true,
                 }}
@@ -92,7 +92,7 @@ export default function BkCards(props) {
                     slidesPerView: 3,
                     spaceBetween: 40,
                   },
-                  1024: {
+                  1096: {
                     slidesPerView: 5,
                     spaceBetween: 50,
                   },
