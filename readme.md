@@ -59,7 +59,7 @@
 
 ### ✨ Running the Application with Docker
 
-Prerequisites;
+**Prerequisites:**
 
 Before running the application with Docker, make sure you have the following prerequisites installed on your machine:
 
