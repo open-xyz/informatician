@@ -2,7 +2,32 @@
   margin-bottom: 40px !important;
   border: none !important;
 }
-
+.titles   h1 {
+color: blue;
+margin-bottom: -20px;
+}
+.titles p{
+  font-size: 1.2rem;
+}
+.titles .testimonial p{
+  font-size: 1.2rem;
+  text-align: center;
+}
+.testimonial{
+  padding-top: 20px;
+   height: 500px;
+   width: 500px;
+  background-color: whitesmoke;
+    padding-bottom: 30px; 
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+}
+.images img{
+  height:0px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.testimonial:hover{
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
 .swiper-slide:hover {
   box-shadow: none !important;
   transform: none !important;
@@ -10,15 +35,18 @@
 
 .swiper-slide .image {
   display: block;
-  width: 10rem;
-  height: 11rem;
+  width: 8rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  height: 9rem;
+  margin-bottom: -20px;
   object-fit: cover;
 }
 .custom .swiper-button-prev,
 .custom .swiper-button-next {
-  height: 60px;
-  width: 60px;
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
+  margin-top: -20px;
   transform: translateY(30px);
   background-color: rgba(0, 0, 0, 0.1);
   margin: 0 80px;
