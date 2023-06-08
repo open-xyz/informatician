@@ -83,7 +83,7 @@ export default function Testimonial() {
                     src="https://avatars.githubusercontent.com/u/33249782?v=4"
                     alt=""
                   />
-                  <p className="py-0  px-[100px] text-center text-lg font-medium text-slate-800 ">
+                  <p className="py-0  px-[100px] text-center text-lg font-medium  ">
                     This app is great! Its like the Netflix of books! As a
                     college student, this app has helped me a lot in reading
                     science and mathematics. I have had zero issues and found
@@ -91,10 +91,10 @@ export default function Testimonial() {
                   </p>
                   <i className="bx bxs-quote-alt-left quote-icon text-3xl text-blue-600"></i>
                   <div className="details flex flex-col items-center">
-                    <span className="name text-lg font-semibold text-slate-800">
+                    <span className="name text-lg font-semibold ">
                       Rohan
                     </span>
-                    <span className="job text-base font-normal text-slate-800">
+                    <span className="job text-base font-normal ">
                       Mentor
                     </span>
                   </div>
@@ -109,7 +109,7 @@ export default function Testimonial() {
                     src="https://avatars.githubusercontent.com/u/96341431?v=4"
                     alt=""
                   />
-                  <p className="py-0  px-[100px] text-center text-lg font-medium text-slate-800 ">
+                  <p className="py-0  px-[100px] text-center text-lg font-medium  ">
                     The selection of ebooks and audiobooks is plentiful. I have
                     found and saved so many books to read and listen to that
                     would have otherwise cost me a fortune anywhere else.
@@ -117,10 +117,10 @@ export default function Testimonial() {
                   </p>
                   <i className="bx bxs-quote-alt-left quote-icon text-3xl text-blue-600"></i>
                   <div className="details flex flex-col items-center">
-                    <span className="name text-lg font-semibold text-slate-800">
+                    <span className="name text-lg font-semibold ">
                       Deepak
                     </span>
-                    <span className="job text-base font-normal text-slate-800">
+                    <span className="job text-base font-normal ">
                       Project Admin
                     </span>
                   </div>
@@ -135,7 +135,7 @@ export default function Testimonial() {
                     src="https://avatars.githubusercontent.com/u/100675296?v=4"
                     alt=""
                   />
-                  <p className="py-0  px-[100px] text-center text-lg font-medium text-slate-800 ">
+                  <p className="py-0  px-[100px] text-center text-lg font-medium  ">
                     From major literary works and detailed historical and
                     scientific studies to popular fiction and self-help books,
                     it’s incredible how much there is to find on Informatician.
@@ -143,10 +143,10 @@ export default function Testimonial() {
                   </p>
                   <i className="bx bxs-quote-alt-left quote-icon text-3xl text-blue-600"></i>
                   <div className="details flex flex-col items-center">
-                    <span className="name text-lg font-semibold text-slate-800">
+                    <span className="name text-lg font-semibold ">
                       Sumit
                     </span>
-                    <span className="job text-base font-normal text-slate-800">
+                    <span className="job text-base font-normal ">
                       Contributor
                     </span>
                   </div>

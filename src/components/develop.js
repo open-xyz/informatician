@@ -1,9 +1,9 @@
 import React from 'react';
 import construct from '../assets/construct.png';
 
-const Develop = () => {
+const Develop = (props) => {
   return (
-    <div className="container">
+    <div className="container" style={{background: props.theme==="dark"?"black":"#f8f8f8", color: props.theme==="dark"?"white":"#333"}}>
       <h1>Under Development</h1>
       <div className="image-container">
         <img src={construct} alt="Under Development" className="development-image" />
