@@ -10,21 +10,33 @@ export default function BookList() {
   const cardContainerRef = useRef(null);
   const cardWidthRef = useRef(0);
 
-  useEffect(() => {
-    if (bookName !== "") {
-      searchBooks(bookName)
-        .then((result) => {
-          if (Array.isArray(result)) {
-            setBooks(result);
-          } else {
-            setBooks([]); // Set books to an empty array if the result is not an array
-          }
-        })
-        .catch((err) => {
-          throw err;
-        });
-    }
-  }, [bookName]);
+  // useEffect(() => {
+  //   if (bookName !== "") {
+  //     searchBooks(bookName)
+  //       .then((result) => {
+  //         if (Array.isArray(result)) {
+  //           setBooks(result);
+  //         } else {
+  //           setBooks([]); // Set books to an empty array if the result is not an array
+  //         }
+  //       })
+  //       .catch((err) => {
+  //         throw err;
+  //       });
+  //   }
+  // }, [bookName]);
+
+  async function handleClick(e){
+    e.preventDefault();
+    try{
+      const result=await searchBooks(bookName)
+    
+    setBooks(result);
+  }catch(err){
+    console.log(err);
+  }
+
+  }
 
   useEffect(() => {
     const cardContainer = cardContainerRef.current;
@@ -76,7 +88,7 @@ export default function BookList() {
               placeholder="Title / Author / ISBN"
               required
             />
-            <button type="submit" id="search-button-2">
+            <button type="submit" id="search-button-2" onClick={handleClick}>
               <div className="search-icon">
                 <img src="/search.png" alt="search"/>
               </div>
@@ -193,6 +205,7 @@ export default function BookList() {
                     <Card key={key} title={book.volumeInfo.title} description={book.volumeInfo.description} publisher={book.volumeInfo.publisher} pages={book.volumeInfo.pageCount} imgLink={book.volumeInfo.imageLinks} />
                   );
                 })
+
               }
             </div>
         }
