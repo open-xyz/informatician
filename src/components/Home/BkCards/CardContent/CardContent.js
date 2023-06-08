@@ -27,6 +27,7 @@ export default function CardContent(props) {
           <span className="author">
             <span>{props.author}</span>
           </span>
+          <p className="description">{props.description}</p>
         </Link>
       </div>
       <div className="reviews">

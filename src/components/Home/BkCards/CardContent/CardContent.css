@@ -63,6 +63,20 @@
   transition: all 0.8s ease-in-out;
 }
 
+.description{
+  font-family: "Source Sans Pro", sans-serif;
+  line-height: 1.5;
+  color: #596280;
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-bottom: 4px;
+  display: -webkit-box;
+  overflow: hidden;
+  font-style: normal;
+  text-align: left;
+  display: none;
+  transition: all 0.8s ease-in-out;
+}
 
 .author {
   display: -webkit-box;
@@ -113,7 +127,6 @@
 .bk-view:hover .bk-img{
   transform: translateX(1000px);
   transform: translateY(-35px);
-  box-shadow: 2px 1px 6px 2px lightgrey;
 }
 
 .bk-view:hover .bk-details{
@@ -124,6 +137,9 @@
   opacity: 0;
 }
 
+.bk-view:hover .description{
+  display:block;
+}
 
 .bk-view:hover .reviews{
   transform: translateY(-15px);
