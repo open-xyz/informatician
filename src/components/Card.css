@@ -2,8 +2,6 @@
 @import url("https://fonts.googleapis.com/css?family=Abel|Aguafina+Script|Artifika|Athiti|Condiment|Dosis|Droid+Serif|Farsan|Gurajada|Josefin+Sans|Lato|Lora|Merriweather|Noto+Serif|Open+Sans+Condensed:300|Playfair+Display|Rasa|Sahitya|Share+Tech|Text+Me+One|Titillium+Web");
 
 body {
-	/* background: #dfc2f2; */
-	/* background-image: linear-gradient(135deg, #ce9ffc 10%, #7367f0 100%); */
 	background-attachment: fixed;
 	background-size: cover;
 }
