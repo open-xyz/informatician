@@ -55,14 +55,14 @@ export default function BkCards(props) {
         <div className="row justify-content-center">
           <div className="books">
             <h2 className="bk-head">{props.bkhead}</h2>
-            <div className="flex items-center gap-2 md:gap-10">
+            <div className="flex items-center gap-2 md:gap-10 ">
               <div
                 onClick={() => prevButton.current.click()}
-                className="cursor-pointer"
+                className=" cursor-pointer"
               >
                 <svg
                   height="50"
-                  width="50"
+                  width="80"
                   viewBox="0 0 512 512"
                   xmlSpace="preserve"
                   xmlns="http://www.w3.org/2000/svg"
@@ -101,8 +101,8 @@ export default function BkCards(props) {
                 className="mySwiper"
               >
                 <GhostPrevButton refprop={prevButton} />
-                <SwiperSlide>
-                  <CardContent
+                <SwiperSlide > 
+                  <CardContent  className="columnn"
                     imgName={ebk1}
                     type="Ebook"
                     title="The Perfect Marriage: A Completely Gripping Psychological Suspense"
