@@ -1,3 +1,14 @@
+.swiper-button-next,
+.swiper-button-prev {
+  display: none;
+}
+
+.swiper-container {
+  display: flex;
+  align-items: center;
+  width: clamp(280px, 95%, 1200px);
+}
+
 .swiper-slide {
   margin-bottom: 40px !important;
   border: none !important;

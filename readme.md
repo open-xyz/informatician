@@ -1,7 +1,7 @@
 ## INFORMATICIAN - An open source book reading platform
 
-- Welcome to Informatician, an open-source book platform where literature meets community, and knowledge knows no bounds. Our web application is designed to revolutionize the way you engage with books, offering a comprehensive book listing and reading experience similar to popular platforms like Kindle and Scribd. 
-- The application goes beyond a mere reading experience, as it allows you to rate and review books, fostering a sense of community and sharing insights with fellow book enthusiasts. 
+- Welcome to Informatician, an open-source book platform where literature meets community, and knowledge knows no bounds. Our web application is designed to revolutionize the way you engage with books, offering a comprehensive book listing and reading experience similar to popular platforms like Kindle and Scribd.
+- The application goes beyond a mere reading experience, as it allows you to rate and review books, fostering a sense of community and sharing insights with fellow book enthusiasts.
 - You can explore a vast collection of books, search for your favorite titles, and even contribute by adding new books to the platform. Whether you're an avid reader, a literary connoisseur, or simply seeking new knowledge, Informatician is here to provide you with an exceptional platform to explore, learn, and connect.
 
 ---
@@ -35,57 +35,97 @@
 ![mongodb](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
 
 ## Note:
- Before proceeding with any implementation or changes, it is crucial to thoroughly review the discussion tab and familiarize yourself with the site plan. By doing so, you can align your work with the intended direction of the platform and contribute effectively. Please take the time to read through the discussions and gather necessary information before proceeding. Thank you! 
+
+Before proceeding with any implementation or changes, it is crucial to thoroughly review the discussion tab and familiarize yourself with the site plan. By doing so, you can align your work with the intended direction of the platform and contribute effectively. Please take the time to read through the discussions and gather necessary information before proceeding. Thank you!
 #330 you can refer
 
-## ✨ How to install it? 
+## ✨ How to install it?
 
 1. Clone the repository:
- ```sh
- $ git clone https://github.com/rohansx/informatician.git
- ```
+
+```sh
+$ git clone https://github.com/rohansx/informatician.git
+```
 
 2. Install dependencies:
+
 ```sh
  $ npm install
 ```
 
 4. Start the application:
+
 ```sh
  $ npm start
 ```
 
  💻 The application can be accessed in a web browser at `http://localhost:3000`.
 
+### ✨ Running the Application with Docker
+
+**Prerequisites:**
+
+Before running the application with Docker, make sure you have the following prerequisites installed on your machine:
+
+**Docker:** Follow the instructions specific to your operating system to install Docker. You can find the installation guide at `https://docs.docker.com/get-docker/`.
+
+**Docker Compose:** Docker Compose is typically installed along with Docker. However, if you don't have it installed, you can find installation instructions at `https://docs.docker.com/compose/install/`.
+
+Clone the repository:
+
+```sh
+git clone https://github.com/rohansx/informatician.git
+```
+
+Navigate to the project directory:
+
+```sh
+cd informatician
+```
+
+Start the application using Docker Compose:
+
+```sh
+docker-compose up
+```
+
+*Docker Compose* will build the necessary containers and start the application. It may take a few moments to download and configure all the required dependencies.
+
+Once the containers are up and running, you can access the application in a web browser at `http://localhost:3000`.
+That's it! Now you have the app running locally using Docker. Enjoy exploring the application!
+
+Note: If you make any changes to the codebase, you will need to rebuild the Docker containers using the below command to apply the changes.
+
+```sh
+docker-compose up --build
+```
 
 ## ✨ Contributing Roadmap
 
- - Go through the [CONTRIBUTING.md](https://github.com/poorvika11/informatician/blob/main/CONTRIBUTING.md) file, where all the guidelines have been mentioned that will guide you to make your contribution.
- - Do checkout the [Code of Conduct](https://github.com/poorvika11/informatician/blob/main/STYLE_GUIDE.md) section.
+- Go through the [CONTRIBUTING.md](https://github.com/poorvika11/informatician/blob/main/CONTRIBUTING.md) file, where all the guidelines have been mentioned that will guide you to make your contribution.
+- Do checkout the [Code of Conduct](https://github.com/poorvika11/informatician/blob/main/STYLE_GUIDE.md) section.
 
- ✨ If you have any questions or need assistance, feel free to open an issue in the repository.
+✨ If you have any questions or need assistance, feel free to open an issue in the repository.
 
 Join us on this open-source journey, and let your love for books flourish in a limitless world of possibilities.
 
-
 ## ✨ Thank You for Your Contribution!
+
 <p align=center>
 <a href="https://github.com/rohansx/informatician/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=rohansx/informatician" />
 </a></p>
 
-🙏  Thank you for your exceptional contribution. We look forward to your continued involvement and collaboration as we strive to enhance Informatician and provide an exceptional book platform for users around the world.
+🙏 Thank you for your exceptional contribution. We look forward to your continued involvement and collaboration as we strive to enhance Informatician and provide an exceptional book platform for users around the world.
 
 🌟 We value the time and effort you put into contributing in improving Informatician and helping us create a vibrant and user-friendly environment for book enthusiasts, and we look forward to reviewing and merging your contributions. Your dedication, skills, and commitment have played a crucial role in making Informatician the incredible platform it is today.
 
 ✨ Once again, thank you for your contribution!
 
-
 ## ✨ Authors
 
 [Rohan Sharma](https://github.com/rohansx) - Main Developer
 <a name="changelog"></a>
-
 
 ## ✨ License
 
@@ -94,4 +134,3 @@ The project is licensed under the [MIT License](https://github.com/rohansx/infor
 <div align="center">
   <a href="#table-of-contents">Back to Top</a>
 </div>
----

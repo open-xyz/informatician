@@ -3,53 +3,223 @@
 .book-list-container {
 	background-color: #f5f5f5;
 	padding: 100px;
-	height: 100vh;
+	height: auto;
 	width: 100vw;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-content: center;
-}
-
-.book-list-title {
+	align-items:center; /* Updated alignment */
+	overflow: auto;
+	margin-top: 2rem;
+  }
+  
+  .book-list-heading {
 	font-size: 24px;
 	font-weight: bold;
 	margin-bottom: 10px;
-}
-
-.book-list {
-	margin: auto;
+	text-align: center; 
+  }
+  
+  form {
+	width: 100%;
+  }
+  
+  .search-bar {
 	display: flex;
-	flex-direction: row;
-}
+	align-items: center;
+	margin-bottom: 10px;
+	justify-content: center;
+  }
+  
+  .search-input {
+	padding: 8px;
+	font-size: 14px;
+	color: #333;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	width: 300px;
+  }
+  
+  #search-button-2 {
+	padding: 5px;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+  }
+  
+  .search-icon {
+	width: 18px;
+	height: 18px;
+	background-repeat: no-repeat;
+	background-position: center;
+  }
+  
+  .categories {
+	cursor: pointer;
+	color: rgb(15, 73, 143);
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-weight: 500;
+  }
 
-.book-list-item {
-	margin: auto;
-	display: flex;
-	flex-direction: row;
-}
 
-.book-list-item:hover {
-	background-color: #fafafa;
-}
-
-.cards {
-	background-color: #f5f5f5;
-	padding: 20px;
-	height: 70vh;
-	overflow: scroll;
+  .hypertext-links {
 	display: grid;
-	gap: 1rem;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(auto, auto);
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.3s ease-out;
+	align-items: center;
+	justify-content: center;
+  }
+  
+  .link {
+	display: block;
+	color: rgb(8, 117, 92);
+	padding: 6px;
+	text-align: left;
+	text-decoration: none;
+	margin-left: 60px;
+	margin-right: 60px;
+	font-weight: 500;
+  }
+
+  .link:hover{
+	text-decoration: underline;
+	transition: all 0.5ms;
+  }
+  
+  .show-links .hypertext-links {
+	max-height: 210px; /* Adjust the height as needed */
+	transition: max-height 0.3s ease-in;
+  }
+
+
+.book-list-title{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: large;
+	font-weight: 500;
 }
 
-@media screen and (max-width: 760px) {
-	.book-list-container {
-		padding: 100px 20px;
-	}
-	.cards {
-		width: 80vh;
-		padding: 0;
-		grid-template-columns: repeat(1, 1fr);
-	}
+#sub-head{
+	font-size: x-large;
+	font-weight: 600;
+	margin-top: 2rem;
+	text-decoration: underline;
 }
+
+  .carousel {
+	width: 100%;
+	overflow: hidden;
+	margin: auto;
+  }
+  
+  .card-container {
+	display: flex;
+	overflow-x: scroll;
+	scroll-behavior: smooth;
+	scroll-snap-type: x mandatory;
+	-webkit-overflow-scrolling: touch;
+  }
+  
+  .card {
+	flex: 0 0 300px;
+	margin-right: 20px;
+	scroll-snap-align: start;
+	background-color: #f5f5f5;
+	border-radius: 10px;
+	padding: 20px;
+  }
+  
+  .card img {
+	width: 100px; /* Adjust the size as needed */
+  height: 100px; /* Adjust the size as needed */
+  border-radius: 50%;
+  object-fit: cover;
+  }
+  
+  .card p {
+	text-align: center;
+  }
+
+  .card h4{
+	font-weight: 500;
+	margin-top: 5px;
+	margin-bottom: 5px;
+  }
+
+  .card-content {
+	margin-top: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+  }
+  
+  /* Hide scrollbars */
+  .card-container::-webkit-scrollbar {
+	display: none;
+  }
+ 
+
+  /* Responsive Styles */
+  @media (min-width: 874px)  and (max-width: 1077px)
+  {
+	.hypertext-links {
+		grid-template-columns: repeat(4, minmax(50px, 1fr));
+		margin: 0;
+		padding: 0;
+	  }
+	  
+	  .link {
+		  margin-left: 35px;
+		  margin-right: 35px;
+		  padding: 6px;
+	  }
+  }
+  @media (min-width: 768px)  and (max-width: 874px)
+  {
+	.link {
+		margin-left: 22px;
+		margin-right: 22px;
+		padding: 4px;
+	}
+  }
+  @media screen and (max-width: 768px) {
+    .book-list-container{
+		padding: 80px;
+	}
+
+	.hypertext-links {
+	  grid-template-columns: repeat(4, minmax(50px, 1fr));
+	  margin: 0;
+	  padding: 0;
+	}
+	
+	.link {
+		margin-left: 5px;
+		margin-right: 5px;
+		padding: 5px;
+	}
+  }
+
+  @media screen and (max-width: 590px)
+  {
+	.book-list-container{
+		padding: 60px;
+	}
+
+	.link {
+		margin-left: 3px;
+		margin-right: 3px;
+		padding: 2px;
+		font-size: small;
+	}
+
+	.card {
+	flex: 0 0 350px;
+	}
+  }
+  

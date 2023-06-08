@@ -1,13 +1,40 @@
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import './Testimonial.css';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-import { Pagination, Navigation } from 'swiper';
-import "aos/dist/aos.css"
+import React, { useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "./Testimonial.css";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Pagination, Navigation } from "swiper";
+import "aos/dist/aos.css";
+import { useSwiper } from "swiper/react";
+
+const GhostPrevButton = ({ refprop }) => {
+  const swiper = useSwiper();
+
+  return (
+    <div
+      ref={refprop}
+      className="hidden"
+      onClick={() => swiper.slidePrev()}
+    ></div>
+  );
+};
+const GhostNextButton = ({ refprop }) => {
+  const swiper = useSwiper();
+
+  return (
+    <div
+      ref={refprop}
+      className="hidden"
+      onClick={() => swiper.slideNext()}
+    ></div>
+  );
+};
 
 export default function Testimonial() {
+  const prevButton = useRef(null);
+  const nextButton = useRef(null);
+
   return (
     <div className="mt-20 mb-28 titles">
       <h1 className="heading text-center fw-bold fs-1" >Our Testimonials</h1>
@@ -104,11 +131,29 @@ export default function Testimonial() {
                 <span className="job text-base font-normal text-slate-800">
                   Contributor
                 </span>
-              </div>
+
+               </div>
             </div>
+              </div>
+            </SwiperSlide>
+            <GhostNextButton refprop={nextButton} />
+          </Swiper>
+          <div
+            onClick={() => nextButton.current.click()}
+            className="cursor-pointer"
+          >
+            <svg
+              height="50"
+              width="50"
+              viewBox="0 0 512 512"
+              xmlSpace="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M160 115.4L180.7 96 352 256 180.7 416 160 396.7 310.5 256z" />
+            </svg>
           </div>
-        </SwiperSlide>
-      </Swiper>
+        </div>
+      </div>
     </div>
   );
 }
