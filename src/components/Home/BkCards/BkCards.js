@@ -15,7 +15,6 @@ import abk1 from "../../../assets/audiobks/abk1.webp";
 import abk2 from "../../../assets/audiobks/abk2.webp";
 import abk3 from "../../../assets/audiobks/abk3.webp";
 import abk4 from "../../../assets/audiobks/abk4.webp";
-import SingleBk from "../SingleBk/SingleBk";
 import { useSwiper } from "swiper/react";
 
 const GhostPrevButton = ({ refprop }) => {
@@ -45,9 +44,6 @@ export default function BkCards(props) {
   const prevButton = useRef(null);
   const nextButton = useRef(null);
 
-  const singleBookView = () => {
-    return <SingleBk />;
-  };
 
   return (
     <>
@@ -92,7 +88,7 @@ export default function BkCards(props) {
                     slidesPerView: 3,
                     spaceBetween: 40,
                   },
-                  1096: {
+                  1101: {
                     slidesPerView: 5,
                     spaceBetween: 50,
                   },
@@ -107,7 +103,6 @@ export default function BkCards(props) {
                     type="Ebook"
                     title="The Perfect Marriage: A Completely Gripping Psychological Suspense"
                     author="Jeneva Rose"
-                    description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odio!"
                   />
                 </SwiperSlide>
                 <SwiperSlide>
@@ -116,7 +111,6 @@ export default function BkCards(props) {
                     type="Audiobook"
                     title="The Last Mrs. Parrish: A Novel"
                     author="Liv Constantine"
-                    description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odio!"
                   />
                 </SwiperSlide>
                 <SwiperSlide>
@@ -125,7 +119,6 @@ export default function BkCards(props) {
                     type="Audiobook"
                     title="The Guest List: A Novel"
                     author="Lucy Foley"
-                    description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odio!"
                   />
                 </SwiperSlide>
                 <SwiperSlide>
@@ -134,7 +127,6 @@ export default function BkCards(props) {
                     type="Audiobook"
                     title="The Subtle Art of Not Giving a F*ck: A Counterintuitive Approach to Living a Good Life"
                     author="Mark Manson"
-                    description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odio!"
                   />
                 </SwiperSlide>
                 <SwiperSlide>
@@ -143,7 +135,6 @@ export default function BkCards(props) {
                     type="Audiobook"
                     title="Building a StoryBrand: Clarify Your Message So Customers Will Listen"
                     author="Findaway"
-                    description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odio!"
                   />
                 </SwiperSlide>
                 <SwiperSlide>
@@ -152,7 +143,6 @@ export default function BkCards(props) {
                     type="Ebook"
                     title="An Ugly Truth: Inside Facebook's Battle for Domination"
                     author="Sheera Frenkel"
-                    description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odio!"
                   />
                 </SwiperSlide>
                 <SwiperSlide>
@@ -161,7 +151,6 @@ export default function BkCards(props) {
                     type="Ebook"
                     title="Never Split the Difference: Negotiating As If Your Life Depended On It"
                     author="Chris Voss"
-                    description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odio!"
                   />
                 </SwiperSlide>
                 <SwiperSlide>
@@ -170,7 +159,6 @@ export default function BkCards(props) {
                     type="Ebook"
                     title="Everything Is F*cked: A Book About Hope"
                     author="Mark Manson"
-                    description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odio!"
                   />
                 </SwiperSlide>
                 <SwiperSlide>
@@ -179,7 +167,6 @@ export default function BkCards(props) {
                     type="Ebook"
                     title="The Intelligent Investor, Rev. Ed: The Definitive Book on Value Investing"
                     author="Benjamin Graham"
-                    description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odio!"
                   />
                 </SwiperSlide>
                 <SwiperSlide>
@@ -188,7 +175,6 @@ export default function BkCards(props) {
                     type="Ebook"
                     title="Vanderbilt: The Rise and Fall of an American Dynasty"
                     author="Anderson Cooper"
-                    description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odio!"
                   />
                 </SwiperSlide>
                 <GhostNextButton refprop={nextButton} />
