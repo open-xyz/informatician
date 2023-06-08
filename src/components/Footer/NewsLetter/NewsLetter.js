@@ -44,7 +44,7 @@ class NewsLetter extends React.Component {
                                     <h4 className="head">Subscribe To NewsLetter</h4>
                                     <div className="d-flex p-2">
                                         <input type="email" className="form-control" id="simple-search" placeholder="Email ID" required />
-                                        <button onClick={this.handleClick} type="button" className="btn btn-danger" style={{ marginLeft: '8px' }}>
+                                        <button onClick={this.handleClick} type="button" className="btn btn-danger" style={{ marginLeft: '8px', backgroundColor: '#dc3545' }}>
                                             Subscribe
                                         </button>
                                     </div>
