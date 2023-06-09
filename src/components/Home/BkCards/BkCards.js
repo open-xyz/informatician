@@ -17,6 +17,7 @@ import abk3 from "../../../assets/audiobks/abk3.webp";
 import abk4 from "../../../assets/audiobks/abk4.webp";
 import SingleBk from "../SingleBk/SingleBk";
 import { useSwiper } from "swiper/react";
+import { Link } from "react-router-dom";
 
 const GhostPrevButton = ({ refprop }) => {
   const swiper = useSwiper();
@@ -102,6 +103,7 @@ export default function BkCards(props) {
               >
                 <GhostPrevButton refprop={prevButton} />
                 <SwiperSlide > 
+                  <Link to="books/book">
                   <CardContent  className="columnn"
                     imgName={ebk1}
                     type="Ebook"
@@ -109,8 +111,10 @@ export default function BkCards(props) {
                     author="Jeneva Rose"
                     description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odio!"
                   />
+                  </Link>
                 </SwiperSlide>
                 <SwiperSlide>
+                <Link to="books/book1">
                   <CardContent
                     imgName={abk1}
                     type="Audiobook"
@@ -118,8 +122,10 @@ export default function BkCards(props) {
                     author="Liv Constantine"
                     description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odio!"
                   />
+                  </Link>
                 </SwiperSlide>
                 <SwiperSlide>
+                <Link to="books/book2">
                   <CardContent
                     imgName={abk2}
                     type="Audiobook"
@@ -127,8 +133,10 @@ export default function BkCards(props) {
                     author="Lucy Foley"
                     description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odio!"
                   />
+                  </Link>
                 </SwiperSlide>
                 <SwiperSlide>
+                <Link to="books/book3">
                   <CardContent
                     imgName={abk3}
                     type="Audiobook"
@@ -136,8 +144,10 @@ export default function BkCards(props) {
                     author="Mark Manson"
                     description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odio!"
                   />
+                  </Link>
                 </SwiperSlide>
                 <SwiperSlide>
+                <Link to="books/book4">
                   <CardContent
                     imgName={abk4}
                     type="Audiobook"
@@ -145,8 +155,10 @@ export default function BkCards(props) {
                     author="Findaway"
                     description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odio!"
                   />
+                  </Link>
                 </SwiperSlide>
                 <SwiperSlide>
+                <Link to="books/book5">
                   <CardContent
                     imgName={ebk2}
                     type="Ebook"
@@ -154,8 +166,10 @@ export default function BkCards(props) {
                     author="Sheera Frenkel"
                     description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odio!"
                   />
+                  </Link>
                 </SwiperSlide>
                 <SwiperSlide>
+                <Link to="books/book6">
                   <CardContent
                     imgName={ebk3}
                     type="Ebook"
@@ -163,8 +177,10 @@ export default function BkCards(props) {
                     author="Chris Voss"
                     description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odio!"
                   />
+                  </Link>
                 </SwiperSlide>
                 <SwiperSlide>
+                <Link to="books/book7">
                   <CardContent
                     imgName={ebk4}
                     type="Ebook"
@@ -172,8 +188,10 @@ export default function BkCards(props) {
                     author="Mark Manson"
                     description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odio!"
                   />
+                  </Link>
                 </SwiperSlide>
                 <SwiperSlide>
+                <Link to="books/book8">
                   <CardContent
                     imgName={ebk5}
                     type="Ebook"
@@ -181,8 +199,10 @@ export default function BkCards(props) {
                     author="Benjamin Graham"
                     description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odio!"
                   />
+                  </Link>
                 </SwiperSlide>
                 <SwiperSlide>
+                <Link to="books/book9">
                   <CardContent
                     imgName={ebk6}
                     type="Ebook"
@@ -190,6 +210,7 @@ export default function BkCards(props) {
                     author="Anderson Cooper"
                     description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odio!"
                   />
+                  </Link>
                 </SwiperSlide>
                 <GhostNextButton refprop={nextButton} />
               </Swiper>

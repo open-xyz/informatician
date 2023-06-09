@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./SingleBk.css";
 import ReactStars from "react-rating-stars-component";
-import ebk1 from "../../../assets/ebooks/ebk1.webp";
+import ebk6 from "../../../assets/ebooks/ebk6.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark } from "@fortawesome/free-regular-svg-icons";
 
@@ -17,13 +17,13 @@ export default function SingleBk() {
                                 <div className="first-section">
                                     <span className="first-type">Ebook</span>
                                 </div>
-                                <h1 className="bk-name">The Perfect Marriage: A Completely Gripping Psychological Suspense</h1>
+                                <h1 className="bk-name">Vanderbilt: The Rise and Fall of an American Dynasty</h1>
                                 <div className="publication">
                                     <p className="pub-name">
                                         By
-                                        <Link className="pub-link" to="/books/book" style={{ marginLeft: '5px' }}>
+                                        <Link className="pub-link" to="/books/book9" style={{ marginLeft: '5px' }}>
                                             <span className="d-flex">
-                                                <span className="child">Jeneva Rose</span>
+                                                <span className="child">Anderson Cooper, Katherine Howe</span>
                                             </span>
                                         </Link>
                                     </p>
@@ -37,7 +37,7 @@ export default function SingleBk() {
                                             activeColor="#ffd700" />
                                     </div>
                                     <p className="rating-count">
-                                        <Link className="pub-link" to="/books/book">
+                                        <Link className="pub-link" to="/books/book9">
                                             <span className="d-flex">
                                                 <span className="child">
                                                     (1,103 ratings)
@@ -57,23 +57,12 @@ export default function SingleBk() {
                                             <p>
                                                 <strong>
                                                     <em>New York Times </em>
-                                                    The bestselling thriller with “a tantalizing premise and twists at every turn . . . a sizzling, masterful debut about betrayal and justice
-                                                </strong>
+                                                    bestselling author and journalist Anderson Cooper teams with New York Times bestselling historian and novelist Katherine Howe to chronicle the rise and fall of a legendary American dynasty—his mother’s family, the Vanderbilts.                                                </strong>
                                             </p> <br />
                                             <p>
-                                            Would you defend your husband if he was accused of killing his mistress?
-
-Sarah Morgan is a successful and powerful defense attorney in Washington D.C. At 33 years old, she is a named partner at her firm and life is going exactly how she planned.
-
-The same cannot be said for her husband, Adam. He is a struggling writer who has had little success in his career. He begins to tire of his and Sarah’s relationship as she is constantly working.
-
-Out in the secluded woods, at Adam and Sarah’s second home, Adam engages in a passionate affair with Kelly Summers.
-
-Then, one morning everything changes. Adam is arrested for Kelly’s murder. She had been found stabbed to death in Adam and Sarah’s second home.
-
-Sarah soon finds herself playing the defender for her own husband, a man accused of murdering his mistress.
-
-But is Adam guilty or is he innocent?
+                                            One of the Washington Post's Notable Works of Nonfiction of 2021When eleven-year-old Cornelius Vanderbilt began to work on his father’s small boat ferrying supplies in New York Harbor at the beginning of the nineteenth century, no one could have imagined that one day he would, through ruthlessness, cunning, and a pathological desire for money, build two empires—one in shipping and another in railroads—that would make him the richest man in America.
+                                            His staggering fortune was fought over by his heirs after his death in 1877, sowing familial discord that would never fully heal. Though his son Billy doubled the money left by “the Commodore,” subsequent generations competed to find new and ever more extraordinary ways of spending it. By 2018, when the last Vanderbilt was forced out of The Breakers—the seventy-room summer estate in Newport, Rhode Island, that Cornelius’s grandson and namesake had built—the family would 
+                                            have been unrecognizable to the tycoon who started it all.Now, the Commodore’s great-great-great-grandson Anderson Cooper, joins with historian Katherine Howe to explore the story of his legendary family and their outsized influence. Cooper and Howe breathe life into the ancestors who built the family’s empire, basked in the Commodore’s wealth, hosted lavish galas, and became synonymous with unfettered American capitalism and high society. 
                                             </p>
                                         </div>
                                     </div>
@@ -86,15 +75,15 @@ But is Adam guilty or is he innocent?
                                         </div>
                                         <div className="lang">
                                             <span className="first-lang">Publisher</span>
-                                            <Link className="pub-link" to="/books/book">
+                                            <Link className="pub-link" to="/books/book9">
                                                 <span className="d-flex">
-                                                    <span className="child">Jeneva Rose</span>
+                                                    <span className="child">Anderson Cooper, Katherine Howe</span>
                                                 </span>
                                             </Link>
                                         </div>
                                         <div className="lang">
                                             <span className="first-lang">Release Date</span>
-                                            <span className="second-lang">July 13, 2020</span>
+                                            <span className="second-lang">Oct 17, 2001</span>
                                         </div>
                                         <div className="lang">
                                             <span className="first-lang">ISBN</span>
@@ -112,7 +101,7 @@ But is Adam guilty or is he innocent?
                                         <div>
                                             <div className="book-box">
                                                 <div className="thumbnail">
-                                                    <img src={ebk1} alt="" />
+                                                    <img src={ebk6} alt="" />
                                                 </div>
                                             </div>
                                         </div>
