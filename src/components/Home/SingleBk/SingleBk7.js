@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./SingleBk.css";
 import ReactStars from "react-rating-stars-component";
-import ebk1 from "../../../assets/ebooks/ebk1.webp";
+import ebk4 from "../../../assets/ebooks/ebk4.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark } from "@fortawesome/free-regular-svg-icons";
 
@@ -17,13 +17,13 @@ export default function SingleBk() {
                                 <div className="first-section">
                                     <span className="first-type">Ebook</span>
                                 </div>
-                                <h1 className="bk-name">The Perfect Marriage: A Completely Gripping Psychological Suspense</h1>
+                                <h1 className="bk-name">Everything Is F*cked: A Book About Hope</h1>
                                 <div className="publication">
                                     <p className="pub-name">
                                         By
-                                        <Link className="pub-link" to="/books/book" style={{ marginLeft: '5px' }}>
+                                        <Link className="pub-link" to="/books/book7" style={{ marginLeft: '5px' }}>
                                             <span className="d-flex">
-                                                <span className="child">Jeneva Rose</span>
+                                                <span className="child">Mark Manson</span>
                                             </span>
                                         </Link>
                                     </p>
@@ -37,7 +37,7 @@ export default function SingleBk() {
                                             activeColor="#ffd700" />
                                     </div>
                                     <p className="rating-count">
-                                        <Link className="pub-link" to="/books/book">
+                                        <Link className="pub-link" to="/books/book7">
                                             <span className="d-flex">
                                                 <span className="child">
                                                     (1,103 ratings)
@@ -56,24 +56,15 @@ export default function SingleBk() {
                                         <div className="theory">
                                             <p>
                                                 <strong>
-                                                    <em>New York Times </em>
-                                                    The bestselling thriller with “a tantalizing premise and twists at every turn . . . a sizzling, masterful debut about betrayal and justice
-                                                </strong>
+                                                    <em>NEW YORK TIMES BESTSELLER</em>
+                                                    
+
+From the author of the international mega-bestseller The Subtle Art of Not Giving A F*ck comes a counterintuitive guide to the problems of hope.                                                </strong>
                                             </p> <br />
                                             <p>
-                                            Would you defend your husband if he was accused of killing his mistress?
+                                            We live in an interesting time. Materially, everything is the best it’s ever been—we are freer, healthier and wealthier than any people in human history. Yet, somehow everything seems to be irreparably and horribly f*cked—the planet is warming, governments are failing, economies are collapsing, and everyone is perpetually offended on Twitter. At this moment in history, when we have access to technology, education and communication our ancestors couldn’t even dream of, so many of us come back to an overriding feeling of hopelessness.
 
-Sarah Morgan is a successful and powerful defense attorney in Washington D.C. At 33 years old, she is a named partner at her firm and life is going exactly how she planned.
-
-The same cannot be said for her husband, Adam. He is a struggling writer who has had little success in his career. He begins to tire of his and Sarah’s relationship as she is constantly working.
-
-Out in the secluded woods, at Adam and Sarah’s second home, Adam engages in a passionate affair with Kelly Summers.
-
-Then, one morning everything changes. Adam is arrested for Kelly’s murder. She had been found stabbed to death in Adam and Sarah’s second home.
-
-Sarah soon finds herself playing the defender for her own husband, a man accused of murdering his mistress.
-
-But is Adam guilty or is he innocent?
+What’s going on? If anyone can put a name to our current malaise and help fix it, it’s Mark Manson. In 2016, Manson published The Subtle Art of Not Giving A F*ck, a book that brilliantly gave shape to the ever-present, low-level hum of anxiety that permeates modern living. He showed us that technology had made it too easy to care about the wrong things, that our culture had convinced us that the world owed us something when it didn’t—and worst of all, that our modern and maddening urge to always find happiness only served to make us unhappier. Instead, the “subtle art” of that title turned out to be a bold challenge: to choose your struggle; to narrow and focus and find the pain you want to sustain. The result was a book that became an international phenomenon, selling millions of copies worldwide while becoming the #1 bestseller in 13 different countries.
                                             </p>
                                         </div>
                                     </div>
@@ -86,15 +77,15 @@ But is Adam guilty or is he innocent?
                                         </div>
                                         <div className="lang">
                                             <span className="first-lang">Publisher</span>
-                                            <Link className="pub-link" to="/books/book">
+                                            <Link className="pub-link" to="/books/book7">
                                                 <span className="d-flex">
-                                                    <span className="child">Jeneva Rose</span>
+                                                    <span className="child">Mark Manson</span>
                                                 </span>
                                             </Link>
                                         </div>
                                         <div className="lang">
                                             <span className="first-lang">Release Date</span>
-                                            <span className="second-lang">July 13, 2020</span>
+                                            <span className="second-lang">Oct 17, 2001</span>
                                         </div>
                                         <div className="lang">
                                             <span className="first-lang">ISBN</span>
@@ -112,7 +103,7 @@ But is Adam guilty or is he innocent?
                                         <div>
                                             <div className="book-box">
                                                 <div className="thumbnail">
-                                                    <img src={ebk1} alt="" />
+                                                    <img src={ebk4} alt="" />
                                                 </div>
                                             </div>
                                         </div>

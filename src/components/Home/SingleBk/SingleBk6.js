@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./SingleBk.css";
 import ReactStars from "react-rating-stars-component";
-import ebk1 from "../../../assets/ebooks/ebk1.webp";
+import ebk3 from "../../../assets/ebooks/ebk3.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark } from "@fortawesome/free-regular-svg-icons";
 
@@ -17,13 +17,13 @@ export default function SingleBk() {
                                 <div className="first-section">
                                     <span className="first-type">Ebook</span>
                                 </div>
-                                <h1 className="bk-name">The Perfect Marriage: A Completely Gripping Psychological Suspense</h1>
+                                <h1 className="bk-name">Never Split the Difference: Negotiating As If Your Life Depended On</h1>
                                 <div className="publication">
                                     <p className="pub-name">
                                         By
-                                        <Link className="pub-link" to="/books/book" style={{ marginLeft: '5px' }}>
+                                        <Link className="pub-link" to="/books/book6" style={{ marginLeft: '5px' }}>
                                             <span className="d-flex">
-                                                <span className="child">Jeneva Rose</span>
+                                                <span className="child">Chris Voss,Tahl Raz </span>
                                             </span>
                                         </Link>
                                     </p>
@@ -37,7 +37,7 @@ export default function SingleBk() {
                                             activeColor="#ffd700" />
                                     </div>
                                     <p className="rating-count">
-                                        <Link className="pub-link" to="/books/book">
+                                        <Link className="pub-link" to="/books/book6">
                                             <span className="d-flex">
                                                 <span className="child">
                                                     (1,103 ratings)
@@ -56,24 +56,15 @@ export default function SingleBk() {
                                         <div className="theory">
                                             <p>
                                                 <strong>
-                                                    <em>New York Times </em>
-                                                    The bestselling thriller with “a tantalizing premise and twists at every turn . . . a sizzling, masterful debut about betrayal and justice
-                                                </strong>
+                                                    <em>A Wall Street Journal Bestseller </em>
+                                                    Life is a series of negotiations you should be prepared for: buying a car; negotiating a pay hike; buying a home; renegotiating rent; deliberating with your partner. Taking emotional intelligence and intuition to the next level, Never Split the Difference by Chris Voss and Tahl Raz aims to give you the competitive edge in any discussion.                                                </strong>
                                             </p> <br />
                                             <p>
-                                            Would you defend your husband if he was accused of killing his mistress?
+                                            A former international hostage negotiator for the FBI offers a new, field-tested approach to high-stakes negotiations—whether in the boardroom or at home.
 
-Sarah Morgan is a successful and powerful defense attorney in Washington D.C. At 33 years old, she is a named partner at her firm and life is going exactly how she planned.
+After a stint policing the rough streets of Kansas City, Missouri, Chris Voss joined the FBI, where his career as a hostage negotiator brought him face-to-face with a range of criminals, including bank robbers and terrorists. Reaching the pinnacle of his profession, he became the FBI’s lead international kidnapping negotiator. Never Split the Difference takes you inside the world of high-stakes negotiations and into Voss’s head, revealing the skills that helped him and his colleagues succeed where it mattered most: saving lives. In this practical guide, he shares the nine effective principles—counterintuitive tactics and strategies—you too can use to become more persuasive in both your professional and personal life.
 
-The same cannot be said for her husband, Adam. He is a struggling writer who has had little success in his career. He begins to tire of his and Sarah’s relationship as she is constantly working.
-
-Out in the secluded woods, at Adam and Sarah’s second home, Adam engages in a passionate affair with Kelly Summers.
-
-Then, one morning everything changes. Adam is arrested for Kelly’s murder. She had been found stabbed to death in Adam and Sarah’s second home.
-
-Sarah soon finds herself playing the defender for her own husband, a man accused of murdering his mistress.
-
-But is Adam guilty or is he innocent?
+Life is a series of negotiations you should be prepared for: buying a car, negotiating a salary, buying a home, renegotiating rent, deliberating with your partner. Taking emotional intelligence and intuition to the next level, Never Split the Difference gives you the competitive edge in any discussion.
                                             </p>
                                         </div>
                                     </div>
@@ -86,15 +77,15 @@ But is Adam guilty or is he innocent?
                                         </div>
                                         <div className="lang">
                                             <span className="first-lang">Publisher</span>
-                                            <Link className="pub-link" to="/books/book">
+                                            <Link className="pub-link" to="/books/book6">
                                                 <span className="d-flex">
-                                                    <span className="child">Jeneva Rose</span>
+                                                    <span className="child">Chris Voss,Tahl Raz</span>
                                                 </span>
                                             </Link>
                                         </div>
                                         <div className="lang">
                                             <span className="first-lang">Release Date</span>
-                                            <span className="second-lang">July 13, 2020</span>
+                                            <span className="second-lang">Oct 17, 2001</span>
                                         </div>
                                         <div className="lang">
                                             <span className="first-lang">ISBN</span>
@@ -112,7 +103,7 @@ But is Adam guilty or is he innocent?
                                         <div>
                                             <div className="book-box">
                                                 <div className="thumbnail">
-                                                    <img src={ebk1} alt="" />
+                                                    <img src={ebk3} alt="" />
                                                 </div>
                                             </div>
                                         </div>

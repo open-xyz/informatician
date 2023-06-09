@@ -4,27 +4,39 @@ import ScrollToTopButton from "../ScrollButton";
 import Card from "../Card";
 import { searchBooks } from "../../utils/searchBooks";
 
-export default function BookList() {
+export default function BookList(props) {
   const [books, setBooks] = useState([]);
   const [bookName, setBookName] = useState("");
   const cardContainerRef = useRef(null);
   const cardWidthRef = useRef(0);
 
-  useEffect(() => {
-    if (bookName !== "") {
-      searchBooks(bookName)
-        .then((result) => {
-          if (Array.isArray(result)) {
-            setBooks(result);
-          } else {
-            setBooks([]); // Set books to an empty array if the result is not an array
-          }
-        })
-        .catch((err) => {
-          throw err;
-        });
-    }
-  }, [bookName]);
+  // useEffect(() => {
+  //   if (bookName !== "") {
+  //     searchBooks(bookName)
+  //       .then((result) => {
+  //         if (Array.isArray(result)) {
+  //           setBooks(result);
+  //         } else {
+  //           setBooks([]); // Set books to an empty array if the result is not an array
+  //         }
+  //       })
+  //       .catch((err) => {
+  //         throw err;
+  //       });
+  //   }
+  // }, [bookName]);
+
+  async function handleClick(e){
+    e.preventDefault();
+    try{
+      const result=await searchBooks(bookName)
+    
+    setBooks(result);
+  }catch(err){
+    console.log(err);
+  }
+
+  }
 
   useEffect(() => {
     const cardContainer = cardContainerRef.current;
@@ -65,7 +77,7 @@ export default function BookList() {
 
   return (
     <>
-      <div className="book-list-container">
+      <div className="book-list-container" style={{background: props.theme==="dark"?"black":"#f8f8f8"}}>
         <h1 className="book-list-heading">Search and Browse Books</h1>
         <form>
           <div className="search-bar">
@@ -76,7 +88,7 @@ export default function BookList() {
               placeholder="Title / Author / ISBN"
               required
             />
-            <button type="submit" id="search-button-2">
+            <button type="submit" id="search-button-2" onClick={handleClick}>
               <div className="search-icon">
                 <img src="/search.png" alt="search"/>
               </div>
@@ -178,7 +190,7 @@ export default function BookList() {
         
         {
           books.length === 0 ?
-            <div className="flex items-center justify-center h-[53vh] bg-white px-20">
+            <div className={`flex items-center justify-center h-[53vh] bg-${props.theme} px-20`}>
               <h1 className="flex text-center items-center gap-4 text-4xl md:text-7xl">
                 Search Books
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64px" height="64px"><path d="M 24 2.8886719 C 12.365714 2.8886719 2.8886719 12.365723 2.8886719 24 C 2.8886719 35.634277 12.365714 45.111328 24 45.111328 C 29.036552 45.111328 33.664698 43.331333 37.298828 40.373047 L 52.130859 58.953125 C 52.130859 58.953125 55.379484 59.435984 57.396484 57.333984 C 59.427484 55.215984 58.951172 52.134766 58.951172 52.134766 L 40.373047 37.298828 C 43.331332 33.664697 45.111328 29.036548 45.111328 24 C 45.111328 12.365723 35.634286 2.8886719 24 2.8886719 z M 24 7.1113281 C 33.352549 7.1113281 40.888672 14.647457 40.888672 24 C 40.888672 33.352543 33.352549 40.888672 24 40.888672 C 14.647451 40.888672 7.1113281 33.352543 7.1113281 24 C 7.1113281 14.647457 14.647451 7.1113281 24 7.1113281 z" /></svg>
@@ -193,6 +205,7 @@ export default function BookList() {
                     <Card key={key} title={book.volumeInfo.title} description={book.volumeInfo.description} publisher={book.volumeInfo.publisher} pages={book.volumeInfo.pageCount} imgLink={book.volumeInfo.imageLinks} />
                   );
                 })
+
               }
             </div>
         }

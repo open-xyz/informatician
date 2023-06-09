@@ -5,18 +5,19 @@ export default function NavItems(props) {
     return (
         <div style={{}}>
             <ul
-                id="nav-items"
+                id="nav-items" 
                 // className={props.clicked ? "nav-active" : ""}
                 style={{
                     marginBottom: 0,
                     transform: (!props.clicked & props.drawer) ? 'translateX(277px)' : 'translateX(0px)',
-                    transition: (props.clicked & props.drawer) ? 'transform 0.3s ease-out' : 'transform 0.3s ease-in'
+                    transition: (props.clicked & props.drawer) ? 'transform 0.3s ease-out' : 'transform 0.3s ease-in',
+                    background: props.theme==="dark"?"#001229":"#eff6ff"
                 }}
             >
                 <li>
                     <Link
                         to="/"
-                        className={props.location.pathname === "/" ? "active" : ""}
+                        className={props.location.pathname === "/" ? "active" : props.theme==="dark"?"text-white":"text-dark"}
                         onClick={props.handleOptionClick}
                     >
                         Home
@@ -25,7 +26,7 @@ export default function NavItems(props) {
                 <li>
                     <Link
                         to="/books"
-                        className={props.location.pathname === "/books" ? "active" : ""}
+                        className={props.location.pathname === "/books" ? "active" : props.theme==="dark"?"text-white":"text-dark"}
                         onClick={props.handleOptionClick}
                     >
                         Books
@@ -34,7 +35,7 @@ export default function NavItems(props) {
                 <li>
                     <Link
                         to="/about"
-                        className={props.location.pathname === "/about" ? "active" : ""}
+                        className={props.location.pathname === "/about" ? "active" : props.theme==="dark"?"text-white":"text-dark"}
                         onClick={props.handleOptionClick}
                     >
                         About
@@ -43,7 +44,7 @@ export default function NavItems(props) {
                 <li>
                     <Link
                         to="/contact"
-                        className={props.location.pathname === "/contact" ? "active" : ""}
+                        className={props.location.pathname === "/contact" ? "active" : props.theme==="dark"?"text-white":"text-dark"}
                         onClick={props.handleOptionClick}
                     >
                         Contact Us

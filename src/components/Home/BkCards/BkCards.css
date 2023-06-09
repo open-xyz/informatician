@@ -1,6 +1,10 @@
 .books {
   margin: 70px 0px;
 }
+.columnn{
+  width: 50000px;
+
+}
 
 .bk-head {
   font-family: "Source Serif Pro", serif;
@@ -27,7 +31,6 @@
   width: 100%;
   height: 100%;
 }
-
 .swiper-slide {
   text-align: center;
   font-size: 18px;
@@ -35,10 +38,13 @@
   border: 1px solid lightblue;
   cursor: pointer;
   height: 91%;
-
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
   /* Center slide text vertically */
   display: flex;
   justify-content: center;
+  transition: all 3s ease;
   align-items: center;
   flex-direction: column;
   -webkit-transition-property: all;
@@ -46,11 +52,10 @@
   -webkit-transition-timing-function: ease-in;
 }
 
-.swiper-slide:hover {
-  box-shadow: 1px 2px 8px 3px lightgray;
+.swiper-slide:hover{
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   transform: scale(1.002);
 }
-
 .swiper-slide img {
   display: block;
   width: 100%;
