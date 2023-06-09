@@ -9,7 +9,7 @@ import Download from "./Download";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const About = () => {
+const About = (props) => {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
   useEffect(() => {
@@ -20,7 +20,7 @@ const About = () => {
   }, []);
 
   return (
-    <div className="about">
+    <div className="about" style={{background: props.theme==="dark"?"black":"#f8f8f8", color: props.theme==="dark"?"white":"#333"}}>
       <div className="w-11/12 flex flex-wrap mx-auto justify-center items-center mt-28 mb-5 max-w-screen-2xl">
         <div className="md:w-1/2 w-11/12" data-aos="fade-left" data-aos-duration="500">
           <img src={aboutUs} className="w-11/12" />
@@ -40,7 +40,7 @@ const About = () => {
         </div>
       </div>
       <ScrollToTopButton />
-      <Feature />
+      <Feature theme={props.theme} />
       <Testimonial />
       <Download />
     </div>
