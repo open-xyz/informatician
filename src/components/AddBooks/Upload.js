@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./Upload.css";
 import LibraryBooksIcon from "@mui/icons-material/LibraryBooks";
 import CloseIcon from "@mui/icons-material/Close";
@@ -29,35 +29,37 @@ export default function Upload() {
 
   const navigate = useNavigate();
 
-  const [file,setFile] = useState(null);
-  const id = localStorage.getItem("bookId")
+  const [file, setFile] = useState(null);
+  const id = localStorage.getItem("bookId");
 
-
-  const handleSubmit = async(e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if(file){
+    if (file) {
       const data = new FormData();
       const fileName = file.name;
       data.append("name", fileName);
       data.append("file", file);
-      if(id){
-        toast.loading("Uploading...")
+      if (id) {
+        toast.loading("Uploading...");
+        try {
+          await axios.post("http://localhost:5000/api/upload", data);
+          await axios.put("http://localhost:5000/api/book/" + id, {
+            bookpdf: fileName,
+          });
+          navigate("/success");
+          localStorage.clear();
+        } catch (err) {
+          toast.error("Something went wrong!");
+          console.log(err);
+        }
       }
-      try{
-        await axios.post("http://localhost:5000/api/upload", data)
-        await axios.put("http://localhost:5000/api/book/" + id, { bookpdf: fileName })
-        navigate('/success')
-        localStorage.clear();
-      }catch(err){
-        toast.error("Add book deatils!")
-        console.log(err);
+      else{
+        toast.error("Add book deatils!");
       }
+    } else {
+      toast.error("Choose a file to upload!");
     }
-    else{
-      toast.error("Choose a file to upload!")
-
-    }
-  }
+  };
 
   return (
     <div
@@ -74,21 +76,23 @@ export default function Upload() {
           name=""
           id="upload-btn"
           accept=".pdf, .txt, .doc, .ppt, .xls, .docx"
-          onChange={(e)=>setFile(e.target.files[0])}
+          onChange={(e) => setFile(e.target.files[0])}
         />
         <label className="mb-5" id="label" for="upload-btn">
           Select Books To Upload <LibraryBooksIcon className="ml-2" />
         </label>
         {file && (
-            <p className="uploaded m-1">
-              {file.name}
-              <CloseIcon
-                className="close-icon ml-10 cursor-pointer" 
-                onClick={() => setFile(null)} 
-              />
-            </p>
-          )}
-          <button className="mt-4" type="submit" onClick={handleSubmit}>Submit</button>
+          <p className="uploaded m-1">
+            {file.name}
+            <CloseIcon
+              className="close-icon ml-10 cursor-pointer"
+              onClick={() => setFile(null)}
+            />
+          </p>
+        )}
+        <button className="mt-4" type="submit" onClick={handleSubmit}>
+          Submit
+        </button>
       </div>
       <p>Supported file types: pdf, txt, doc, ppt, xls, docx, and more</p>
       <ToastContainer />
