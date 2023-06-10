@@ -70,7 +70,7 @@ const Footer = (props) => {
                   </li>
                   <li>
                     <Link
-                      to="/develop"
+                      to="/join"
                       className="hover:underline  hover:text-gray-900"
                     >
                       Join our team!
