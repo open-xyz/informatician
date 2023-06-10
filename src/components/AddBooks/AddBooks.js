@@ -1,60 +1,82 @@
 import React from "react";
 import "./AddBooks.css";
-import BookImg from "../../assets/book2.jpg";
 import Upload from "./Upload";
+import { useRef } from "react";
+import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const AddBooks = () => {
+  const bookName = useRef();
+  const authorName = useRef();
+  const publisher = useRef();
+  const pages = useRef();
+  const img = useRef();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const books = {
+      bookName: bookName.current.value,
+      authorName: authorName.current.value,
+      publisher: publisher.current.value,
+      pages: pages.current.value,
+      img: img.current.value,
+    };
+
+    try {
+      const res = await axios.post("http://localhost:5000/api/book/add", books);
+      toast.success("Book details added!!Upload the book.");
+      localStorage.setItem("bookId", res.data);
+    } catch (err) {
+      toast.error("Fill all the details!");
+      console.log(err.message);
+    }
+  };
   return (
     <div>
       <div className="addBooks-container">
         <div className="add-books text-white">
           <h1 className="text-dark form-title">Add Books</h1>
-          <div className="group">
+          <form className="Boxx" onSubmit={handleSubmit}>
             <input
-              id="book_name"
+              className="Inputt"
               type="text"
-              className="input"
               placeholder="Book Name"
+              ref={bookName}
             />
-          </div>
-          <div className="group">
             <input
-              id="author_name"
+              className="Inputt"
               type="text"
-              className="input"
               placeholder="Author Name"
+              ref={authorName}
             />
-          </div>
-          <div className="group">
             <input
-              id="publisher"
+              className="Inputt"
               type="text"
-              className="input"
               placeholder="Publisher"
+              ref={publisher}
             />
-          </div>
-          <div className="group">
             <input
-              id="pages"
+              className="Inputt"
               type="number"
-              className="input"
               placeholder="Pages"
+              ref={pages}
             />
-          </div>
-          <div className="group">
             <input
-              id="img_url"
+              className="Inputt"
               type="text"
-              className="input"
-              placeholder="Img_url"
+              placeholder="Img Url"
+              ref={img}
             />
-          </div>
-          <div className="group-btn">
-            <input type="submit" className="button" value="Add Books" />
-          </div>
+            <button className="Buttonn" type="submit">
+              Add Book
+            </button>
+          </form>
         </div>
       </div>
       <Upload />
+      <ToastContainer />
     </div>
   );
 };

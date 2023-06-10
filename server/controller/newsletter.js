@@ -22,7 +22,7 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-exports.sendNewsletter = async () => {
+exports.sendNewsletter = async (req,res) => {
   try {
     const result = await getBooks();
     const users = await Newsletter.find();
@@ -41,7 +41,7 @@ exports.sendNewsletter = async () => {
   }
 };
 
-async function getBooks() {
+async function getBooks(req,res) {
   const url = "https://hapi-books.p.rapidapi.com/week/horror/5";
   const options = {
     method: "GET",
