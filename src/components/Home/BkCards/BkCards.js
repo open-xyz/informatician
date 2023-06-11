@@ -1,6 +1,6 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper";
+import SwiperCore,{ Autoplay, Pagination, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "./BkCards.css";
@@ -18,6 +18,8 @@ import abk4 from "../../../assets/audiobks/abk4.webp";
 import SingleBk from "../SingleBk/SingleBk";
 import { useSwiper } from "swiper/react";
 import { Link } from "react-router-dom";
+
+SwiperCore.use([Autoplay]);
 
 const GhostPrevButton = ({ refprop }) => {
   const swiper = useSwiper();
@@ -50,6 +52,31 @@ export default function BkCards(props) {
     return <SingleBk />;
   };
 
+  const swiperRef = useRef(null);
+
+  useEffect(() => {
+    const swiperInstance = swiperRef.current.swiper;
+
+    const handleMouseEnter = () => {
+      swiperInstance.autoplay.stop();
+    };
+
+    const handleMouseLeave = () => {
+      swiperInstance.autoplay.start();
+    };
+
+    const swiperEl = swiperInstance.el;
+
+    swiperEl.addEventListener('mouseenter', handleMouseEnter);
+    swiperEl.addEventListener('mouseleave', handleMouseLeave);
+
+    return () => {
+      swiperEl.removeEventListener('mouseenter', handleMouseEnter);
+      swiperEl.removeEventListener('mouseleave', handleMouseLeave);
+    };
+  }, []);
+
+
   return (
     <>
       <div className="container-xl">
@@ -72,13 +99,13 @@ export default function BkCards(props) {
                   <path d="M160 115.4L180.7 96 352 256 180.7 416 160 396.7 310.5 256z" />
                 </svg>
               </div>
+              
               <Swiper
+                ref={swiperRef}
                 slidesPerView={1}
                 spaceBetween={10}
                 autoplay={{
-                  delay: 2000,
-                  disableOnInteraction: false,
-                  pauseOnMouseEnter: true,
+                  delay: 2300,
                 }}
                 pagination={{
                   clickable: true,
@@ -214,6 +241,7 @@ export default function BkCards(props) {
                 </SwiperSlide>
                 <GhostNextButton refprop={nextButton} />
               </Swiper>
+              
               <div
                 onClick={() => nextButton.current.click()}
                 className="cursor-pointer"
