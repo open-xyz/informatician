@@ -1,0 +1,26 @@
+.behind{
+    top: 44rem;
+}
+
+.behind-img{
+    height: 500px;
+    width: 500px;
+}
+
+@media (max-width: 785px) {
+    .behind-img{
+        height: 400px;
+        width: 400px;
+    }
+}
+@media (max-width: 513px) {
+    .behind-img{
+        height: 300px;
+        width: 300px;
+    }
+}
+@media (max-width: 475px) {
+    .behind{
+        top: 48rem;
+    }
+}

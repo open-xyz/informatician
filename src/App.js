@@ -13,7 +13,8 @@ export default function App() {
   const toggleTheme = ()=>{
     if(theme === "light")
     {
-      document.body.style.background = "black";
+      // document.body.style.background = "black";
+      document.body.style.background = "#1a202c";
       document.body.style.color = "white";
       setTheme("dark");
     }

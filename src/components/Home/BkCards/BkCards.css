@@ -1,6 +1,8 @@
 .books {
-  margin: 70px 0px;
+  margin: 58px 0px;
+  /* padding: 58px 0px; */
 }
+
 .columnn{
   width: 50000px;
 
@@ -38,9 +40,10 @@
   border: 1px solid lightblue;
   cursor: pointer;
   height: 91%;
-  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+  /* box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
     rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
-    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    rgba(0, 0, 0, 0.09) 0px 32px 16px; */
+    box-shadow: 2px 1px 9px 2px #e2e2e2;
   /* Center slide text vertically */
   display: flex;
   justify-content: center;
@@ -53,7 +56,7 @@
 }
 
 .swiper-slide:hover{
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  box-shadow: rgba(116, 116, 117, 0.25) 0px 50px 100px -20px, rgba(116, 116, 117, 0.3) 0px 30px 60px -30px;
   transform: scale(1.002);
 }
 .swiper-slide img {

@@ -12,10 +12,10 @@ import abk2 from "../../../assets/audiobks/abk2.webp";
 import abk3 from "../../../assets/audiobks/abk3.webp";
 import abk4 from "../../../assets/audiobks/abk4.webp";
 
-export default function CgCards() {
+export default function CgCards(props) {
   return (
     <>
-      <div className="container-xl mt-20 select-none">
+      <div className="container-xl mt-20 select-none" style={{padding: props.theme === "dark" ? "20px 12px" : "0 9px", marginBottom: "30px"}}>
         <h1 className="bk-head">Popular Categories</h1>
         <div className="d-flex">
           <AliceCarousel

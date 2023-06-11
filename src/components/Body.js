@@ -31,7 +31,7 @@ function Body(props) {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home theme={props.theme} />} />
         <Route path="/books" element={<BookList theme={props.theme} />} />
         <Route path="/books/book" element={<SingleBk />} />
         <Route path="/books/book1" element={<SingleBk1 />} />

@@ -125,12 +125,12 @@
 
 
 .bk-view:hover .bk-img{
-  /* transform: translateY(-10px); */
+  transform: translateY(-20px);
   padding-bottom: 7px;
 }
 
 .bk-view:hover .bk-details{
-  /* transform: translateY(-1px); */
+  transform: translateY(-1px);
 }
 
 .bk-view:hover .bg-color{

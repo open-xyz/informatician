@@ -79,7 +79,7 @@ export default function BkCards(props) {
 
   return (
     <>
-      <div className="container-xl">
+      <div className="container-xl" style={{zIndex: 2}}>
         <div className="row justify-content-center">
           <div className="books">
             <h2 className="bk-head">{props.bkhead}</h2>
@@ -90,11 +90,11 @@ export default function BkCards(props) {
               >
                 <svg
                   height="50"
-                  width="80"
+                  width="50"
                   viewBox="0 0 512 512"
                   xmlSpace="preserve"
                   xmlns="http://www.w3.org/2000/svg"
-                  style={{ rotate: "180deg" }}
+                  style={{ rotate: "180deg", color: "white" }}
                 >
                   <path d="M160 115.4L180.7 96 352 256 180.7 416 160 396.7 310.5 256z" />
                 </svg>
@@ -120,7 +120,7 @@ export default function BkCards(props) {
                     slidesPerView: 3,
                     spaceBetween: 40,
                   },
-                  1096: {
+                  1158: {
                     slidesPerView: 5,
                     spaceBetween: 50,
                   },
