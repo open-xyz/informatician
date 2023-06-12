@@ -26,6 +26,17 @@ import SingleBk8 from "./Home/SingleBk/SingleBk8";
 import SingleBk9 from "./Home/SingleBk/SingleBk9";
 import AddBooks from "./AddBooks/AddBooks";
 import Success from "./Success";
+import Travel from "./Categories/travel";
+import Biography from "./Categories/biography";
+import Career from "./Categories/career";
+import Contemporary from "./Categories/contemporary";
+import Cooking from "./Categories/cooking";
+import Garden from "./Categories/garden";
+import Mystery from "./Categories/mystery";
+import Politics from "./Categories/politics";
+import Science from "./Categories/science";
+import Selfhelp from "./Categories/selfhelp";
+
 
 function Body(props) {
   return (
@@ -54,6 +65,19 @@ function Body(props) {
         <Route path="/develop" element={<Develop theme={props.theme}/>} />
         <Route path="/addBooks" element={<AddBooks/>} />
         <Route path="/success" element={<Success/>} />
+
+        <Route path="/pcategories/travel" element={<Travel/>}/>
+        <Route path="/pcategories/biography" element={<Biography/>}/>
+        <Route path="/pcategories/contemporary" element={<Contemporary/>}/>
+        <Route path="/pcategories/cooking" element={<Cooking/>}/>
+        <Route path="/pcategories/garden" element={<Garden/>}/>
+        <Route path="/pcategories/mystery" element={<Mystery/>}/>
+        <Route path="/pcategories/politics" element={<Politics/>}/>
+        <Route path="/pcategories/science" element={<Science/>}/>
+        <Route path="/pcategories/selfhelp" element={<Selfhelp/>}/>
+        <Route path="/pcategories/career" element={<Career/>}/>
+
+
 
         <Route path="*" element={<Error />} />
 
