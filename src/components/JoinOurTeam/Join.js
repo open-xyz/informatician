@@ -1,17 +1,27 @@
 import React from "react";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
-const scrolldown = (e) => {
-  e.preventDefault();
+import workplace from "./workplace.jpeg";
+import workinginoffice from "./workinginoffice.png";
+
+const scrolldown = () => {
+  const jobsSection = document.getElementById("jobs-section");
+  if (jobsSection) {
+    window.scrollTo({
+      top: jobsSection.offsetTop,
+      behavior: "smooth",
+    });
+  }
 };
+
 
 const Join = () => {
   return (
-    <div className="join py-5">
-      <section className="bg-pink-900 text-white text-sm ">
-        <div className="container flex flex-col justify-start">
-          <h2 className="text-4xl font-mono">
-            WHY <strong> INFORMATICIAN? </strong>
+    <div className="join py-5 ">
+      <section className="bg-pink-900 text-white text-sm  ">
+        <div className="container flex flex-col  justify-start">
+          <h2 className="text-4xl font-mono mt-2 md:my-0">
+            WHY <strong className="text-3xl"> INFORMATICIAN? </strong>
           </h2>
           <p className=" mt-4 md:max-w-2xl">
             If you love working with smart, motivated people, you’ll love
@@ -24,7 +34,7 @@ const Join = () => {
             <Stack spacing={2} direction="row" className="">
               <Button
                 variant="contained"
-                onClick={(e) => scrolldown}
+                onClick={scrolldown}
                 className="text-white bg-orange-800 mt-5 justify-start block"
               >
                 {" "}
@@ -88,11 +98,12 @@ const Join = () => {
             />
             <div>
               <h2 className="text-2xl font-bold  font-bold text-center mt-6 mb-3">
-               Wellbeing
+                Wellbeing
               </h2>
               <p className="text-center ">
                 {" "}
-                Resources, workshops & events to support your wellbeing journey: Mind, Body & Soul.
+                Resources, workshops & events to support your wellbeing journey:
+                Mind, Body & Soul.
               </p>
             </div>
           </li>
@@ -152,6 +163,26 @@ const Join = () => {
           </li>
         </ul>
       </section>
+      <section className="mt-10">
+        <div className=" flex justify-center  items-center">
+          <ul className=" grid grid-cols-1 md:grid-cols-2">
+            <li className=" ">
+              <img
+                src={workplace}
+                className=" md:h-80 sm:h-50"
+                alt="diversity"
+              />
+            </li>
+            <li className=" ">
+              <img
+                src={workinginoffice}
+                className="md:h-80 sm:h-20"
+                alt="diversity"
+              />
+            </li>
+          </ul>
+        </div>
+      </section>
       <section className="  ">
         <div className="container flex-col">
           <h2 className=" text-4xl text-center ">
@@ -171,7 +202,7 @@ const Join = () => {
                 alt="diversity"
               />
               <div>
-                <p className="ml-5 mt-10 mb-5">
+                <p className="ml-5 mt-10 mb-5 text-slate-500">
                   {" "}
                   Everyone's ideas are valued and everyone works effectively as
                   one team, regardless of the role you have in the company.
@@ -187,7 +218,7 @@ const Join = () => {
                 alt="diversity"
               />
               <div>
-                <p className="ml-5 mt-10 mb-5">
+                <p className="ml-5 mt-10 mb-5 text-slate-500">
                   {" "}
                   If you're motivated and persistent, your impact will
                   definitely be felt by the company. There is nothing more
@@ -282,7 +313,7 @@ const Join = () => {
           </ul>
         </div>
       </section>
-      <section>
+      <section id="jobs-section">
         <div className="container flex-col">
           <h2 className="text-customColor text-4xl text-center font-mono">
             READY TO <strong> JOIN US? </strong>
@@ -294,7 +325,7 @@ const Join = () => {
           </p>
         </div>
       </section>
-      <section className="flex justify-center md:mx-20 items-center ">
+      <section className="flex justify-center md:mx-20 items-center jobs ">
         <ul className=" grid grid-cols-1 md:grid-cols-2 gap-20 md:max-w-5xl   ">
           <li className="">
             <div>
@@ -321,7 +352,6 @@ const Join = () => {
             </div>
           </li>
           <li className="">
-          
             <div>
               <h2 className="text-2xl  font-bold  text-center mt-6 mb-3">
                 Marketing
@@ -330,7 +360,6 @@ const Join = () => {
             </div>
           </li>
           <li className="  ">
-          
             <div>
               <h2 className="text-2xl  font-bold text-center mt-6 mb-3">
                 Finance and Operations
@@ -339,7 +368,6 @@ const Join = () => {
             </div>
           </li>
           <li className="">
-           
             <div>
               <h2 className="text-2xl font-bold  text-center mt-6 mb-3">
                 Product, Designs, & Analytics
@@ -348,7 +376,6 @@ const Join = () => {
             </div>
           </li>
           <li className="">
-           
             <div>
               <h2 className="text-2xl font-sans font-bold  text-center mt-6 mb-3">
                 Content Acquisition
