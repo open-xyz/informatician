@@ -38,6 +38,20 @@
     color: red;
 }
 
+.upload-box button {
+    background: #7881b4;
+    color: #fff;
+    border: 1px solid #7881b4;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.upload-box button:hover {
+    background: transparent;
+    color: #7881b4;
+}
+
 @media screen and (max-width: 1000px) {
     .upload-box {
         width: 70%;
