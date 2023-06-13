@@ -1,42 +1,53 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React from "react";
 import "./AddBooks.css";
 import Upload from "./Upload";
-import AutoStoriesOutlinedIcon from '@mui/icons-material/AutoStoriesOutlined';
+import AutoStoriesOutlinedIcon from "@mui/icons-material/AutoStoriesOutlined";
+import { useRef } from "react";
+import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const AddBooks = () => {
-  const navigate = useNavigate();
+  const bookName = useRef();
+  const authorName = useRef();
+  const publisher = useRef();
+  const pages = useRef();
+  const img = useRef();
 
-  const [bookName, setBookName] = useState('');
-  const [author, setAuthor] = useState('');
-  const [publisher, setPublisher] = useState('');
-  const [pages, setPages] = useState('');
-  
-  const handlePages = (e) => {
-    const numOfPages = e.target.value;
-    if (numOfPages === '' || parseInt(numOfPages) >= 1)
-      setPages(numOfPages);
-  };
-
-  const handleAddBooks = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!bookName || !author || !publisher || !pages) {
-      alert("Please fill in all the fields.");
-    } else {
-      navigate('/success');
+    const books = {
+      bookName: bookName.current.value,
+      authorName: authorName.current.value,
+      publisher: publisher.current.value,
+      pages: pages.current.value,
+      img: img.current.value,
+    };
+
+    try {
+      const res = await axios.post("http://localhost:5000/api/book/add", books);
+      toast.success("Book details added!!Upload the book.");
+      localStorage.setItem("bookId", res.data);
+    } catch (err) {
+      toast.error("Fill all the details!");
+      console.log(err.message);
     }
   };
-
   return (
     <div>
-      <div>
-        <div className="quote text-center">Unleash the Power of Sharing:<br />Upload and Enrich Our Open Source Book Community!</div>
+      <div className="quote text-center">
+        Unleash the Power of Sharing:
+        <br />
+        Upload and Enrich Our Open Source Book Community!
       </div>
       <div className="addBooks-container">
         <div className="add-books text-white">
-          <h1 className="text-dark form-title">Share Book Information Here! <AutoStoriesOutlinedIcon className="ml-2" /></h1>
-          <form>
+          <h1 className="text-dark form-title">
+            Share Book Information Here!{" "}
+            <AutoStoriesOutlinedIcon className="ml-2" />
+          </h1>
+          <form className="Boxx" onSubmit={handleSubmit}>
             <div className="group">
               <label htmlFor="bookName">Book Name:</label>
               <input
@@ -44,8 +55,7 @@ const AddBooks = () => {
                 type="text"
                 className="input"
                 placeholder="Please enter the book name"
-                value={bookName}
-                onChange={(e) => setBookName(e.target.value)}
+                ref={bookName}
               />
             </div>
             <div className="group">
@@ -55,8 +65,7 @@ const AddBooks = () => {
                 type="text"
                 className="input"
                 placeholder="Please enter the author name"
-                value={author}
-                onChange={(e) => setAuthor(e.target.value)}
+                ref={authorName}
               />
             </div>
             <div className="group">
@@ -66,8 +75,7 @@ const AddBooks = () => {
                 type="text"
                 className="input"
                 placeholder="Please enter the publisher name"
-                value={publisher}
-                onChange={(e) => setPublisher(e.target.value)}
+                ref={publisher}
               />
             </div>
             <div className="group">
@@ -78,8 +86,7 @@ const AddBooks = () => {
                 className="input"
                 placeholder="Please enter the no. of pages"
                 min="1"
-                value={pages}
-                onChange={handlePages}
+                ref={pages}
               />
             </div>
             <div className="group">
@@ -89,17 +96,17 @@ const AddBooks = () => {
                 type="text"
                 className="input"
                 placeholder="Please enter the URL of cover page image"
+                ref={img}
               />
             </div>
-            <Upload />
             <div className="group-btn">
-              <button className="button" type="submit" onClick={handleAddBooks}>
-                Add Book
-              </button>
+              <button className="button mt-5" type="submit">Add Book</button>
             </div>
           </form>
         </div>
       </div>
+      <Upload />
+      <ToastContainer />
     </div>
   );
 };
