@@ -1,7 +1,21 @@
 import React from "react";
 import "./ImgSection.css";
 
-export default function ImgSection() {
+export default function ImgSection(props) {
+
+    const changeText = (element)=>{
+        let a = document.querySelector('.nameAnimation div');
+        // console.log(element.elapsedTime);
+        if(element.elapsedTime%10===0)
+        {
+            a.innerText = props.txt[0];
+          }
+          else if(element.elapsedTime%5===0)
+          {
+            a.innerText = props.txt[1];
+          }
+      }
+
     return (
         <div className="img-section">
             <div className="img-black">
@@ -19,10 +33,7 @@ export default function ImgSection() {
                                     Unveil the finest literary treasures across diverse genres.
                                     </p>
                                 </span>
-                                <div>
-                                    <button className="btn btn-success">
-                                        Start Reading Now
-                                    </button>
+                                <div className="nameAnimation" onAnimationIteration={(element)=>{changeText(element)}}> <div>{props.txt[0]}</div>
                                 </div>
                             </div>
                             <div className="last-one last-two"></div>

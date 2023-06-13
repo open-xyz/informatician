@@ -10,7 +10,6 @@
   border-radius: 10px 10px 0 0 !important;
 }
 
-
 .bk-img {
   position: absolute;
   top: 39px;
@@ -39,6 +38,7 @@
   color: #596280;
   font-size: 0.875rem;
   font-weight: 400;
+ 
   margin-bottom: 4px;
   display: -webkit-box;
   overflow: hidden;
@@ -125,12 +125,12 @@
 
 
 .bk-view:hover .bk-img{
-  transform: translateX(1000px);
-  transform: translateY(-35px);
+  /* transform: translateY(-10px); */
+  padding-bottom: 7px;
 }
 
 .bk-view:hover .bk-details{
-  transform: translateY(-15px);
+  /* transform: translateY(-1px); */
 }
 
 .bk-view:hover .bg-color{
@@ -142,5 +142,5 @@
 }
 
 .bk-view:hover .reviews{
-  transform: translateY(-15px);
+  /* transform: translateY(-15px); */
 }

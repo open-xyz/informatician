@@ -122,6 +122,25 @@
     background-image: url(../../../assets/start3.png);
 }
 
+.nameAnimation {
+    position: absolute;
+    left: 50%;
+    font-size: x-large;
+    transform: translate(-50%, 0%);
+    text-shadow: 4px 4px 4px black;
+    color: white;
+}
+
+.nameAnimation div {
+    width: 0;
+    animation: typeWriter 2.5s 1s infinite alternate steps(66);
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid white;
+    margin: 0 auto;
+    letter-spacing: .05em;
+}
+
 @media (max-width: 478px) {
     .inner-content {
         margin: 64px 0px;
@@ -137,5 +156,27 @@
 @media (min-width: 840px) {
     .last-three {
         display: none;
+    }
+}
+
+@keyframes typeWriter {
+    0% {
+        width: 0;
+    }
+
+    5% {
+        width: 0;
+    }
+
+    80% {
+        width: 100%;
+    }
+
+    90% {
+        width: 100%;
+    }
+
+    100% {
+        width: 100%;
     }
 }

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./SingleBk.css";
 import ReactStars from "react-rating-stars-component";
-import ebk1 from "../../../assets/ebooks/ebk1.webp";
+import abk1 from "../../../assets/audiobks/abk1.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark } from "@fortawesome/free-regular-svg-icons";
 
@@ -15,22 +15,21 @@ export default function SingleBk() {
               <div className="space hide"></div>
               <div className="left-wrapper-content">
                 <div className="first-section">
-                  <span className="first-type">Ebook</span>
+                  <span className="first-type">Audiobook</span>
                 </div>
-                <h1 className="bk-name">
-                  The Perfect Marriage: A Completely Gripping Psychological
-                  Suspense
-                </h1>
+                <h1 className="bk-name">The Last Mrs Parrish</h1>
                 <div className="publication">
                   <p className="pub-name">
                     By
                     <Link
                       className="pub-link"
-                      to="/books/book"
+                      to="/books/book1"
                       style={{ marginLeft: "5px" }}
                     >
                       <span className="d-flex">
-                        <span className="child">Jeneva Rose</span>
+                        <span className="child">
+                          Lynne Constantine and Valerie Constantine
+                        </span>
                       </span>
                     </Link>
                   </p>
@@ -45,7 +44,7 @@ export default function SingleBk() {
                     />
                   </div>
                   <p className="rating-count">
-                    <Link className="pub-link" to="/books/book">
+                    <Link className="pub-link" to="/books/book1">
                       <span className="d-flex">
                         <span className="child">(1,103 ratings)</span>
                       </span>
@@ -64,30 +63,51 @@ export default function SingleBk() {
                     <div className="theory">
                       <p>
                         <strong>
-                          <em>New York Times </em>
-                          The bestselling thriller with “a tantalizing premise
-                          and twists at every turn . . . a sizzling, masterful
-                          debut about betrayal and justice
+                          <em>International Bestseller </em>
+                          THE INTERNATIONAL BESTSELLER AND DECEMBER PICK FOR
+                          REESE WITHERSPOON'S HELLO SUNSHINE BOOK CLUB Featuring
+                          a sneak peek at Liv Constantine’s second novel, THE
+                          LAST TIME I SAW YOU "Filled with envy, deception, and
+                          power, it’s a great reading escape. And there is a
+                          thrilling twist at the end!!" —Reese Witherspoon “Will
+                          keep you up. In a ‘can’t put it down’ way. It’s ‘The
+                          Talented Mr. Ripley’ with XX chromosomes.”—The Skimm
                         </strong>
                       </p>{" "}
                       <br />
                       <p>
-                        Would you defend your husband if he was accused of
-                        killing his mistress? Sarah Morgan is a successful and
-                        powerful defense attorney in Washington D.C. At 33 years
-                        old, she is a named partner at her firm and life is
-                        going exactly how she planned. The same cannot be said
-                        for her husband, Adam. He is a struggling writer who has
-                        had little success in his career. He begins to tire of
-                        his and Sarah’s relationship as she is constantly
-                        working. Out in the secluded woods, at Adam and Sarah’s
-                        second home, Adam engages in a passionate affair with
-                        Kelly Summers. Then, one morning everything changes.
-                        Adam is arrested for Kelly’s murder. She had been found
-                        stabbed to death in Adam and Sarah’s second home. Sarah
-                        soon finds herself playing the defender for her own
-                        husband, a man accused of murdering his mistress. But is
-                        Adam guilty or is he innocent?
+                        A REESE WITHERSPOON HELLO SUNSHINE BOOK CLUB PICK WITH
+                        OVER ONE MILLION COPIES SOLD! "Filled with envy,
+                        deception, and power, it’s a great reading escape. And
+                        there is a thrilling twist at the end!!" —Reese
+                        Witherspoon “Will keep you up. In a ‘can’t put it down’
+                        way. It’s ‘The Talented Mr. Ripley’ with XX
+                        chromosomes.”—The Skimm “Deliciously duplicitous. . . .
+                        equally as twisty, spellbinding, and addictive as
+                        Gillian Flynn’s Gone Girl or Paula Hawkins’s The Girl on
+                        the Train.”—Library Journal (starred review) Amber
+                        Patterson is fed up. She’s tired of being a nobody: a
+                        plain, invisible woman who blends into the background.
+                        She deserves more—a life of money and power like the one
+                        blond-haired, blue-eyed goddess Daphne Parrish takes for
+                        granted. To everyone in the exclusive town of Bishops
+                        Harbor, Connecticut, Daphne—a socialite and
+                        philanthropist—and her real-estate mogul husband,
+                        Jackson, are a couple straight out of a fairy tale.
+                        Amber’s envy could eat her alive . . . if she didn't
+                        have a plan. Amber uses Daphne’s compassion and caring
+                        to insinuate herself into the family’s life—the first
+                        step in a meticulous scheme to undermine her. Before
+                        long, Amber is Daphne’s closest confidante, traveling to
+                        Europe with the Parrishes and their lovely young
+                        daughters, and growing closer to Jackson. But a skeleton
+                        from her past may undermine everything that Amber has
+                        worked towards, and if it is discovered, her well-laid
+                        plan may fall to pieces. With shocking turns and dark
+                        secrets that will keep you guessing until the very end,
+                        The Last Mrs. Parrish is a fresh, juicy, and utterly
+                        addictive thriller from a diabolically imaginative
+                        talent.
                       </p>
                     </div>
                   </div>
@@ -100,15 +120,17 @@ export default function SingleBk() {
                     </div>
                     <div className="lang">
                       <span className="first-lang">Publisher</span>
-                      <Link className="pub-link" to="/books/book">
+                      <Link className="pub-link" to="/books/book1">
                         <span className="d-flex">
-                          <span className="child">Jeneva Rose</span>
+                          <span className="child">
+                            Lynne Constantine and Valerie Constantine
+                          </span>
                         </span>
                       </Link>
                     </div>
                     <div className="lang">
                       <span className="first-lang">Release Date</span>
-                      <span className="second-lang">July 13, 2020</span>
+                      <span className="second-lang">Oct 17, 2017</span>
                     </div>
                     <div className="lang">
                       <span className="first-lang">ISBN</span>
@@ -126,7 +148,7 @@ export default function SingleBk() {
                     <div>
                       <div className="book-box">
                         <div className="thumbnail">
-                          <img src={ebk1} alt="" />
+                          <img src={abk1} alt="" />
                         </div>
                       </div>
                     </div>

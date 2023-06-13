@@ -2,9 +2,9 @@ import React from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import "./TermsAndService.css";
 
-const TermsAndService = () => {
+const TermsAndService = (props) => {
   return (
-    <div className="terms">
+    <div className="terms" style={{background: props.theme==="dark"?"black":"#f8f8f8", color: props.theme==="dark"?"white":"#333"}}>
       <div className="container">
         <h2 className="terms-title">Terms and Service</h2>
         <div className="terms-content">

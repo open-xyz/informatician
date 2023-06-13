@@ -15,7 +15,7 @@ function ScrollToTop() {
   return null;
 }
 
-const Footer = () => {
+const Footer = (props) => {
   let year = new Date().getFullYear();
   return (
     <>
@@ -23,7 +23,7 @@ const Footer = () => {
 
       <NewsLetter />
 
-      <footer className="bg-blue-50">
+      <footer className="bg-blue-50" style={{background: props.theme==="dark"?"black":"", color: props.theme==="dark"?"white":""}}>
         <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
           <div className="md:flex md:justify-between">
             <div className="mb-6 md:mb-0">
@@ -31,7 +31,7 @@ const Footer = () => {
                 <img
                   src="https://user-images.githubusercontent.com/33249782/240937486-d84c477d-63f4-4558-ae04-454d803a5b1f.png"
                   className="h-8 mr-3 "
-                  alt=" Logo"
+                  alt=" Logo" style={{filter: props.theme==="dark"?"invert(1)":""}}
                 />
                 <span className="self-center text-3xl font-bold hover:text-gray-600 whitespace-nowrap">
                   Informatician
@@ -40,7 +40,7 @@ const Footer = () => {
             </div>
             <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
               <div>
-                <h2 className="mb-6 text-m font-bold text-gray-900 uppercase ">
+              <h2 className={`mb-6 text-m font-bold text-${props.theme==="dark"?"white":"gray"}-900 uppercase `}>
                   About
                 </h2>
                 <ul className="text-gray-600 font-medium">
@@ -79,7 +79,7 @@ const Footer = () => {
                 </ul>
               </div>
               <div>
-                <h2 className="mb-6 text-m font-bold text-gray-900 uppercase">
+                <h2 className={`mb-6 text-m font-bold text-${props.theme==="dark"?"white":"gray"}-900 uppercase `}>
                   Support
                 </h2>
                 <ul className="text-gray-600  font-medium">
@@ -118,7 +118,7 @@ const Footer = () => {
                 </ul>
               </div>
               <div>
-                <h2 className="mb-6 text-m font-bold text-gray-900 uppercase">
+                <h2 className={`mb-6 text-m font-bold text-${props.theme==="dark"?"white":"gray"}-900 uppercase `}>
                   Legal
                 </h2>
                 <ul className="text-gray-600  font-medium">
@@ -160,7 +160,7 @@ const Footer = () => {
           </div>
           <hr className="my-6 border-black sm:mx-auto  lg:my-8" />
           <div className="sm:flex sm:items-center sm:justify-between">
-            <span className="text-sm font-bold text-gray-900  sm:text-center ">
+            <span className={`text-sm font-bold text-${props.theme==="dark"?"white":"gray"}-900  sm:text-center `}>
               © {year}{" "}
               <a href="/" className="hover:underline  hover:text-gray-600">
                 Informatician™
@@ -168,7 +168,7 @@ const Footer = () => {
               . All Rights Reserved.
             </span>
             <div className="flex mt-0 space-x-6 sm:justify-center sm:mt-0 mr-14 2xl:mr-0">
-              <Link to="/develop" className="text-gray-900 hover:text-blue-600 ">
+              <Link to="/develop" className={`text-${props.theme==="dark"?"white":"gray"}-900 hover:text-blue-600`} >
                 <svg
                   className="w-6 h-6"
                   fill="currentColor"
@@ -182,7 +182,7 @@ const Footer = () => {
               <Link
                 to="https://github.com/rohansx/informatician"
                 target="blank"
-                className="text-gray-900 hover:text-green-900 "
+                className={`text-${props.theme==="dark"?"white":"gray"}-900 hover:text-green-900`}
               >
                 <svg
                   className="w-6 h-6"
@@ -198,7 +198,7 @@ const Footer = () => {
                 </svg>
                 <span className="sr-only">GitHub account</span>
               </Link>
-              <Link to="#" className="text-gray-900 hover:text-red-900 ">
+              <Link to="#" className={`text-${props.theme==="dark"?"white":"gray"}-900 hover:text-red-900`}>
                 <svg
                   className="w-6 h-6"
                   fill="currentColor"

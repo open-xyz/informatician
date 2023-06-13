@@ -36,6 +36,42 @@
 	width: 80%;
 }
 
+.Boxx{
+    height: 550px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.Inputt{
+    height: 50px;
+    border-radius: 10px;
+	color: black;
+    border: 1px solid gray;
+    font-size: 18px;
+    margin:10px 15px;
+    padding-left: 20px;
+}
+
+.Buttonn{
+    height: 50px;
+    margin: 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: #79889c;
+    color: white;
+    font-size: 70px;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 18px;
+}
+.Buttonn:hover{
+  background-color: #697e9b;
+}
+
 .add-books .group .input,
 .add-books .group-btn .button {
 	width: 100%;

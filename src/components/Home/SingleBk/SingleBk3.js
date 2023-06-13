@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./SingleBk.css";
 import ReactStars from "react-rating-stars-component";
-import ebk1 from "../../../assets/ebooks/ebk1.webp";
+import abk3 from "../../../assets/audiobks/abk3.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark } from "@fortawesome/free-regular-svg-icons";
 
@@ -15,22 +15,19 @@ export default function SingleBk() {
               <div className="space hide"></div>
               <div className="left-wrapper-content">
                 <div className="first-section">
-                  <span className="first-type">Ebook</span>
+                  <span className="first-type">Audiobook</span>
                 </div>
-                <h1 className="bk-name">
-                  The Perfect Marriage: A Completely Gripping Psychological
-                  Suspense
-                </h1>
+                <h1 className="bk-name">The Subtle Art of Not Giving a F*ck</h1>
                 <div className="publication">
                   <p className="pub-name">
                     By
                     <Link
                       className="pub-link"
-                      to="/books/book"
+                      to="/books/book3"
                       style={{ marginLeft: "5px" }}
                     >
                       <span className="d-flex">
-                        <span className="child">Jeneva Rose</span>
+                        <span className="child">Mark Manson</span>
                       </span>
                     </Link>
                   </p>
@@ -45,7 +42,7 @@ export default function SingleBk() {
                     />
                   </div>
                   <p className="rating-count">
-                    <Link className="pub-link" to="/books/book">
+                    <Link className="pub-link" to="/books/book3">
                       <span className="d-flex">
                         <span className="child">(1,103 ratings)</span>
                       </span>
@@ -64,30 +61,26 @@ export default function SingleBk() {
                     <div className="theory">
                       <p>
                         <strong>
-                          <em>New York Times </em>
-                          The bestselling thriller with “a tantalizing premise
-                          and twists at every turn . . . a sizzling, masterful
-                          debut about betrayal and justice
+                          <em># 1 New York Times Bestseller </em>
+                          The Subtle Art of Not Giving a F*ck: A
+                          Counterintuitive Approach to Living a Good Life is a
+                          2016 nonfiction self-help book by American blogger and
+                          author Mark Manson.
                         </strong>
                       </p>{" "}
                       <br />
                       <p>
-                        Would you defend your husband if he was accused of
-                        killing his mistress? Sarah Morgan is a successful and
-                        powerful defense attorney in Washington D.C. At 33 years
-                        old, she is a named partner at her firm and life is
-                        going exactly how she planned. The same cannot be said
-                        for her husband, Adam. He is a struggling writer who has
-                        had little success in his career. He begins to tire of
-                        his and Sarah’s relationship as she is constantly
-                        working. Out in the secluded woods, at Adam and Sarah’s
-                        second home, Adam engages in a passionate affair with
-                        Kelly Summers. Then, one morning everything changes.
-                        Adam is arrested for Kelly’s murder. She had been found
-                        stabbed to death in Adam and Sarah’s second home. Sarah
-                        soon finds herself playing the defender for her own
-                        husband, a man accused of murdering his mistress. But is
-                        Adam guilty or is he innocent?
+                        For decades, we’ve been told that positive thinking is
+                        the key to a happy, rich life. “Fuck positivity,” Mark
+                        Manson says. “Let’s be honest, shit is fucked and we
+                        have to live with it.” In his wildly popular Internet
+                        blog, Manson doesn’t sugar-coat or equivocate. He tells
+                        it like it is—a dose of raw, refreshing, honest truth
+                        that is sorely lacking today. The Subtle Art of Not
+                        Giving a F**k is his antidote to the coddling,
+                        let’s-all-feel-good mind-set that has infected American
+                        society and spoiled a generation, rewarding them with
+                        gold medals just for showing up.
                       </p>
                     </div>
                   </div>
@@ -100,15 +93,15 @@ export default function SingleBk() {
                     </div>
                     <div className="lang">
                       <span className="first-lang">Publisher</span>
-                      <Link className="pub-link" to="/books/book">
+                      <Link className="pub-link" to="/books/book3">
                         <span className="d-flex">
-                          <span className="child">Jeneva Rose</span>
+                          <span className="child">Mark Manson</span>
                         </span>
                       </Link>
                     </div>
                     <div className="lang">
                       <span className="first-lang">Release Date</span>
-                      <span className="second-lang">July 13, 2020</span>
+                      <span className="second-lang">Oct 17, 2001</span>
                     </div>
                     <div className="lang">
                       <span className="first-lang">ISBN</span>
@@ -126,7 +119,7 @@ export default function SingleBk() {
                     <div>
                       <div className="book-box">
                         <div className="thumbnail">
-                          <img src={ebk1} alt="" />
+                          <img src={abk3} alt="" />
                         </div>
                       </div>
                     </div>

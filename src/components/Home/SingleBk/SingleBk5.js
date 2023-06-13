@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./SingleBk.css";
 import ReactStars from "react-rating-stars-component";
-import ebk1 from "../../../assets/ebooks/ebk1.webp";
+import ebk2 from "../../../assets/ebooks/ebk2.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark } from "@fortawesome/free-regular-svg-icons";
 
@@ -18,19 +18,21 @@ export default function SingleBk() {
                   <span className="first-type">Ebook</span>
                 </div>
                 <h1 className="bk-name">
-                  The Perfect Marriage: A Completely Gripping Psychological
-                  Suspense
+                  An Ugly Truth: Inside Facebook's Battle for Domination
                 </h1>
                 <div className="publication">
                   <p className="pub-name">
                     By
                     <Link
                       className="pub-link"
-                      to="/books/book"
+                      to="/books/book5"
                       style={{ marginLeft: "5px" }}
                     >
                       <span className="d-flex">
-                        <span className="child">Jeneva Rose</span>
+                        <span className="child">
+                          {" "}
+                          Sheera Frenkel, Cecilia Kang
+                        </span>
                       </span>
                     </Link>
                   </p>
@@ -45,7 +47,7 @@ export default function SingleBk() {
                     />
                   </div>
                   <p className="rating-count">
-                    <Link className="pub-link" to="/books/book">
+                    <Link className="pub-link" to="/books/book5">
                       <span className="d-flex">
                         <span className="child">(1,103 ratings)</span>
                       </span>
@@ -64,30 +66,34 @@ export default function SingleBk() {
                     <div className="theory">
                       <p>
                         <strong>
-                          <em>New York Times </em>
-                          The bestselling thriller with “a tantalizing premise
-                          and twists at every turn . . . a sizzling, masterful
-                          debut about betrayal and justice
+                          <em>INSTANT NEW YORK TIMES </em>
+                          BESTSELLER // WINNER OF THE SABEW BEST IN BUSINESS
+                          AWARDA Book of the Year: Fortune, Foreign Affairs, The
+                          Times (London), Cosmopolitan, TechCrunch, WIRED“{" "}
                         </strong>
                       </p>{" "}
                       <br />
                       <p>
-                        Would you defend your husband if he was accused of
-                        killing his mistress? Sarah Morgan is a successful and
-                        powerful defense attorney in Washington D.C. At 33 years
-                        old, she is a named partner at her firm and life is
-                        going exactly how she planned. The same cannot be said
-                        for her husband, Adam. He is a struggling writer who has
-                        had little success in his career. He begins to tire of
-                        his and Sarah’s relationship as she is constantly
-                        working. Out in the secluded woods, at Adam and Sarah’s
-                        second home, Adam engages in a passionate affair with
-                        Kelly Summers. Then, one morning everything changes.
-                        Adam is arrested for Kelly’s murder. She had been found
-                        stabbed to death in Adam and Sarah’s second home. Sarah
-                        soon finds herself playing the defender for her own
-                        husband, a man accused of murdering his mistress. But is
-                        Adam guilty or is he innocent?
+                        On Jan. 6, after monitoring the messages domestic
+                        extremists were posting on Facebook, the company’s
+                        security experts became increasingly worried there might
+                        be violence in Washington, D.C. The team warned top
+                        executives, who even mulled asking their C.E.O., Mark
+                        Zuckerberg, to call Donald Trump and find out what the
+                        president was intending to tell his mob of supporters
+                        then gathering to protest the election results. But the
+                        executives scrapped that plan, worried the media would
+                        find out about such a phone call and Facebook would be
+                        implicated in whatever happened next. Instead, they sat
+                        at home and watched as Trump stirred up the furious
+                        crowd, and as threats in Facebook posts escalated into
+                        real-world attacks on the Capitol. Days later, in a
+                        video interview with Reuters, Sheryl Sandberg, the
+                        company’s chief operating officer, blamed the riots on
+                        far-right niche social media sites, such as Gab and
+                        Parler, “that don’t have our abilities to stop hate,
+                        don’t have our standards and don’t have our
+                        transparency.”
                       </p>
                     </div>
                   </div>
@@ -100,15 +106,18 @@ export default function SingleBk() {
                     </div>
                     <div className="lang">
                       <span className="first-lang">Publisher</span>
-                      <Link className="pub-link" to="/books/book">
+                      <Link className="pub-link" to="/books/book5">
                         <span className="d-flex">
-                          <span className="child">Jeneva Rose</span>
+                          <span className="child">
+                            {" "}
+                            Sheera Frenkel, Cecilia Kang
+                          </span>
                         </span>
                       </Link>
                     </div>
                     <div className="lang">
                       <span className="first-lang">Release Date</span>
-                      <span className="second-lang">July 13, 2020</span>
+                      <span className="second-lang">Oct 17, 2001</span>
                     </div>
                     <div className="lang">
                       <span className="first-lang">ISBN</span>
@@ -126,7 +135,7 @@ export default function SingleBk() {
                     <div>
                       <div className="book-box">
                         <div className="thumbnail">
-                          <img src={ebk1} alt="" />
+                          <img src={ebk2} alt="" />
                         </div>
                       </div>
                     </div>
