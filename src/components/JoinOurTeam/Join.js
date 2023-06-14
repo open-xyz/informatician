@@ -3,6 +3,7 @@ import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import workplace from "./workplace.jpeg";
 import workinginoffice from "./workinginoffice.png";
+import quotationmark from "./quotationmark.png";
 
 const scrolldown = () => {
   const jobsSection = document.getElementById("jobs-section");
@@ -200,34 +201,36 @@ const Join = () => {
             <li className=" ">
               <img
                 src="https://avatars.githubusercontent.com/u/33249782?v=4"
-                className="ml-5 w-40 mx-auto rounded-full"
+                className="ml-5 w-32 sm:w-25 mx-auto rounded-full"
                 alt="diversity"
               />
               <div>
                 <p className="ml-5 mt-10 mb-5 text-slate-500">
                   {" "}
-                  Everyone's ideas are valued and everyone works effectively as
-                  one team, regardless of the role you have in the company.
+                  <img src={quotationmark} alt="q"  className=" w-5  mb-2 mr-1 inline"/>
+                 {"  "}
+                   The vibrant and dynamic environment fosters creativity and innovation. Being part of a talented team that is passionate about improving access to knowledge and reading has been incredibly fulfilling.
                   <br></br>
-                  <strong> Rohan</strong>
+                  <strong className="text-slate-600"> Rohan</strong>
                 </p>
               </div>
             </li>
             <li className=" ">
               <img
                 src="https://images.weserv.nl/?output=webp&url=https://avatars.githubusercontent.com/u/96341431?v=4"
-                className="ml-5 w-40 mx-auto rounded-full"
+                className="ml-5 w-32 mx-auto rounded-full"
                 alt="diversity"
               />
               <div>
                 <p className="ml-5 mt-10 mb-5 text-slate-500">
-                  {" "}
+                  <img src={quotationmark} alt="q"  className=" w-5 mr-1 mb-2 inline "/>
+                  {"  "}
                   If you're motivated and persistent, your impact will
                   definitely be felt by the company. There is nothing more
                   rewarding than seeing your hard work turned into something
                   fruitful that directly helps the company.
                   <br></br>
-                  <strong> Deepak</strong>
+                  <strong className="text-slate-600"> Deepak</strong>
                 </p>
               </div>
             </li>
