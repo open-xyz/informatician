@@ -276,7 +276,7 @@ const Join = () => {
                 <h2 className="font-bold  text-center mt-6 mb-3">
                   Characters with character
                 </h2>
-                <p className="">
+                <p className="ml-5 mb-5">
                   {" "}
                   We believe diverse stories and backgrounds are what make
                   Informatician great. From a candidates all the way to
@@ -299,7 +299,7 @@ const Join = () => {
                 <h2 className=" font-bold  font-bold text-center mt-6 mb-3">
                   Growth Meantality
                 </h2>
-                <p className=" ">
+                <p className="ml-5 mb-5">
                   {" "}
                   We believe that ongoing training and development bring out the
                   best in our employees and our company as a whole.
