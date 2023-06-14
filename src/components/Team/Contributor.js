@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import ContCard from './ContCard';
 import './Contributor.css';
 
-const Contributors = () => {
+const Contributors = (props) => {
     const [contributors, setContributors] = useState([]);
 
     const fetchContributors = async () => {
@@ -30,7 +30,7 @@ const Contributors = () => {
 
     return (
         <>
-            <h1 className='heading'>Meet Our Contributors</h1>
+            <h1 className='heading' >Meet Our Contributors</h1>
             <div className='con_container'>
                 {contributors.map((contributor) => (
                     <ContCard

@@ -17,7 +17,7 @@ const Team = (props) => {
     AOS.refresh();
   }, []);
   return (
-    <div className="team" style={{background: props.theme==="dark"?"black":"#f8f8f8", color: props.theme==="dark"?"white":"#333"}}>
+    <div className="team" style={{background: props.theme==="dark"?"black":"#f8f8f8", color: props.theme==="dark"?"white":"black"}}>
       {/*         
         <div className="team-members">
           <h2 className="team-title">Our Team</h2>

@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import { BrowserRouter } from "react-router-dom";
 import ScrollToTopButton from "./components/ScrollButton";
-import { Refine } from "@pankod/refine-core";
+// import { Refine } from "@pankod/refine-core";
 
 export default function App() {
 
