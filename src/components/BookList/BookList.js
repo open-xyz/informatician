@@ -77,10 +77,13 @@ export default function BookList(props) {
 
   return (
     <>
-      <div className="book-list-container" style={{background: props.theme==="dark"?"black":"#f8f8f8"}}>
-        <h1 className="book-list-heading">Search and Browse Books</h1>
+
+      <div className="book-list-container">
+        <h1 className="book-list-heading">Find your next learning adventure</h1>
+        <p className="smalltext">From Art to Universe , we have a lots of textbooks to offer you.</p>
+
         <form>
-          <div className="search-bar">
+          <div className="searchbar">
             <input
               id="default-search"
               className="search-input"
@@ -186,9 +189,9 @@ export default function BookList(props) {
 
 
 
-        <span className="book-list-title text-center">Book List</span>
+        {/* <span className="book-list-title text-center">Book List</span> */}
         
-        {
+        {/* {
           books.length === 0 ?
             <div className={`flex items-center justify-center h-[53vh] bg-${props.theme} px-20`}>
               <h1 className="flex text-center items-center gap-4 text-4xl md:text-7xl">
@@ -208,7 +211,7 @@ export default function BookList(props) {
 
               }
             </div>
-        }
+        } */}
 
 
       <h3 id="sub-head">Quotes</h3>
