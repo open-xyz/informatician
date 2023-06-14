@@ -14,7 +14,6 @@ const scrolldown = () => {
   }
 };
 
-
 const Join = () => {
   return (
     <div className="join py-5 ">
