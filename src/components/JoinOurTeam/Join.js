@@ -16,6 +16,7 @@ const scrolldown = () => {
 
 const Join = () => {
   return (
+    // Header Section
     <div className="join py-5 ">
       <section className="bg-pink-900 text-white text-sm  ">
         <div className="container flex flex-col  justify-start">
@@ -48,7 +49,7 @@ const Join = () => {
           <strong>BENEFITS</strong>
         </h2>
       </div>
-
+      {/* Benefits Section */}
       <section className="flex justify-center md:mx-20 items-center ">
         <ul className=" grid grid-cols-1 md:grid-cols-2 gap-20 md:max-w-5xl   ">
           <li className=" md:my-4">
@@ -162,6 +163,7 @@ const Join = () => {
           </li>
         </ul>
       </section>
+      {/* Images-Section  */}
       <section className="mt-10">
         <div className=" flex justify-center  items-center">
           <ul className=" grid grid-cols-1 md:grid-cols-2">
@@ -182,6 +184,7 @@ const Join = () => {
           </ul>
         </div>
       </section>
+      {/* Employee Section */}
       <section className="  ">
         <div className="container flex-col">
           <h2 className=" text-4xl text-center ">
@@ -231,6 +234,7 @@ const Join = () => {
           </ul>
         </div>
       </section>
+      {/* Community Section */}
       <section className="bg-pink-900 text-white  ">
         <div className="container flex-col">
           <h2 className=" text-4xl text-center ">
@@ -312,6 +316,7 @@ const Join = () => {
           </ul>
         </div>
       </section>
+      {/* Jobs Section */}
       <section id="jobs-section">
         <div className="container flex-col">
           <h2 className="text-customColor text-4xl text-center font-mono">
