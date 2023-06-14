@@ -44,7 +44,7 @@ const Join = () => {
           </div>
         </div>
       </section>
-      <div className="text-center mt-10 text-4xl">
+      <div className="text-center mt-10 mb-10 md:mb-3 text-4xl">
         <h2>
           <strong>BENEFITS</strong>
         </h2>
