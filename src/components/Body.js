@@ -26,6 +26,7 @@ import SingleBk8 from "./Home/SingleBk/SingleBk8";
 import SingleBk9 from "./Home/SingleBk/SingleBk9";
 import AddBooks from "./AddBooks/AddBooks";
 import Success from "./Success";
+import Join from "./JoinOurTeam/Join";
 import Travel from "./Categories/travel";
 import Biography from "./Categories/biography";
 import Career from "./Categories/career";
@@ -57,14 +58,15 @@ function Body(props) {
 
         <Route path="/about" element={<About theme={props.theme} />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/team" element={<Team theme={props.theme}/>} />
-        <Route path="/terms" element={<TermsAndService theme={props.theme}/>} />
-        <Route path="/privacy" element={<PrivacyPolicy theme={props.theme}/>} />
-        <Route path="/cookie" element={<CookiePolicy theme={props.theme}/>} />
-        <Route path="/faq" element={<FaqHelp theme={props.theme}/>} />
-        <Route path="/develop" element={<Develop theme={props.theme}/>} />
-        <Route path="/addBooks" element={<AddBooks/>} />
-        <Route path="/success" element={<Success/>} />
+        <Route path="/team" element={<Team />} />
+        <Route path="/terms" element={<TermsAndService />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
+        <Route path="/cookie" element={<CookiePolicy />} />
+        <Route path="/faq" element={<FaqHelp />} />
+        <Route path="/join" element={<Join />} />
+        <Route path="/develop" element={<Develop />} />
+        <Route path="/addBooks" element={<AddBooks />} />
+        <Route path="/success" element={<Success />} />
 
         <Route path="/pcategories/travel" element={<Travel/>}/>
         <Route path="/pcategories/biography" element={<Biography/>}/>
