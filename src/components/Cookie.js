@@ -58,7 +58,7 @@ const CookiePolicy = (props) => {
           <h3 className="privacy-section-title">Contact Us</h3>
           <div className="privacy-content">
             <p>
-              If you have any questions or concerns about this Cookie Policy, please contact us at <a href="mailto:contact@booklistingapp.com" className="contact-email">contact@booklistingapp.com</a>.
+              If you have any questions or concerns about this Cookie Policy, please contact us at <a href="mailto:informaticianx@gmail.com" className="contact-email">informaticianx@gmail.com</a>.
             </p>
           </div>
         </div>

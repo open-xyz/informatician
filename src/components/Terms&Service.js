@@ -48,7 +48,7 @@ const TermsAndService = (props) => {
           </p>
           <p>
             If you have any questions or concerns about these terms and conditions, please contact us at
-            <a href="mailto:contact@booklistingapp.com" className="contact-email">contact@booklistingapp.com</a>.
+            <a href="mailto:informaticianx@gmail.com" className="contact-email">informaticianx@gmail.com</a>.
           </p>
         </div>
       </div>
