@@ -90,10 +90,11 @@ nav {
     max-width: 300px;
     background: #eff6ff;
     display: flex;
-    border: 1px  solid black;
+    border: 1px  solid #1857a0ab;
     align-items: center;
     border-radius: 60px;
     padding: 7px 20px;
+    color: black;
 
 }
 
@@ -103,6 +104,7 @@ nav {
 
 .search-bar button i {
     width: 2rem;
+    color: #1857a0ab;
 }
 .search-bar button {
     border: 0;
@@ -123,6 +125,65 @@ nav {
     display: block;
 }
 
+#bar{
+    width: 25px;
+    height: 25px;
+    text-align: left;
+    position: relative;
+    cursor: pointer;
+}
+
+#bar div{
+    position: absolute;
+    right: 0;
+    border-radius: 20px;
+    height: 4px;
+    transition: all .3s ease-in-out;
+    background-color: #1857a0;
+}
+
+.bar-white{
+    background-color: white;
+}
+
+.bar-black{
+    background-color: black;
+}
+
+#bar-up{
+    top: 2px;
+    width: 100%;
+}
+
+#bar-mid{
+    top: 10px;
+    width: 70%;
+    opacity: 100%;
+}
+
+#bar-down{
+    top: 18px;
+    width: 40%;
+}
+
+#cross-up{
+    top: 10px;
+    rotate: 45deg;
+    width: 100%;
+}
+
+#cross-mid{
+    top: 10px;
+    rotate: 45deg;
+    opacity: 0;
+}
+
+#cross-down{
+    rotate: 315deg;
+    top: 10px;
+    width: 100%;
+}
+
 @media screen and (max-width: 995px){
     nav{
         padding: 13px;
@@ -141,15 +202,14 @@ nav {
         align-items: flex-start;
         justify-content: flex-start;
         position: absolute;
-        top: 73px;
+        top: 70px;
         right: 0px;
         width: 277px;
-        height: 350px;
+        height: 100vh;
         padding: 14px 0 0 0px;
         background-color: #eff6ff;
         transform: translateX(0);
         transition: transform 0.4s ease-out;
-        /* transition: 0.3s; */
     }
     #mobile{
         display: flex;
@@ -183,5 +243,12 @@ nav {
         right: 2rem;
         height: 30px;
         width: 55px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #nav-items{
+        align-items: center;
+        width: 100%;
     }
 }
