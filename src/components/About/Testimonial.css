@@ -12,6 +12,7 @@
 .swiper-slide {
   margin-bottom: 40px !important;
   border: none !important;
+  box-shadow: none !important;
 }
 .titles   h1 {
 color: blue;
