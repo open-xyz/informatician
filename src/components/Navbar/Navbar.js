@@ -100,7 +100,7 @@ export default function Navbar(props) {
           className={`${clicked ? "fa-solid fa-times" : "fa-sharp fa-solid fa-bars-staggered"} ${props.theme === "dark" ? "text-white" : "text-dark"}`}
           onClick={() => setClicked(!clicked)}
         ></i> */}
-
+        {/* Custom Navbar */}
         <div id="bar" onClick={() => setClicked(!clicked)}>
           <div id={`${clicked ? "cross-up" : "bar-up"}`}></div>
           <div id={`${clicked ? "cross-mid" : "bar-mid"}`} style={{ "opacity": clicked ? "0" : "100%" }}></div>
