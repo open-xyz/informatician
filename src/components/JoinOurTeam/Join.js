@@ -57,7 +57,7 @@ const Join = () => {
             <img
               src="https://s-f.scribdassets.com/images/about/03_careers_B_icon_benefits_03_health.svg?a974a5f44"
               className="mx-auto w-24 "
-              alt="diversity"
+              alt="Medical, dental and vision"
             />
             <div>
               <h2 className="font-bold text-2xl text-center mt-6 mb-3">
@@ -75,7 +75,7 @@ const Join = () => {
             <img
               src="https://s-f.scribdassets.com/images/about/03_careers_B_icon_benefits_01_DEI.svg?510379e31"
               className="mx-auto"
-              alt="diversity"
+              alt="Diversity, Equity, and Inclusion"
             />
             <div>
               <h2 className="text-2xl font-bold  text-center mt-6 mb-3">
@@ -95,7 +95,7 @@ const Join = () => {
             <img
               src="https://s-f.scribdassets.com/images/about/03_careers_B_icon_benefits_07_wellbeing.svg?a974a5f44"
               className="mx-auto"
-              alt="diversity"
+              alt="Wellbeing"
             />
             <div>
               <h2 className="text-2xl font-bold  font-bold text-center mt-6 mb-3">
@@ -112,7 +112,7 @@ const Join = () => {
             <img
               src="https://s-f.scribdassets.com/images/about/03_careers_B_icon_benefits_01_DEI.svg?510379e31"
               className="mx-auto"
-              alt="diversity"
+              alt="Monthly stipend"
             />
             <div>
               <h2 className="text-2xl font-bold  text-center mt-6 mb-3">
@@ -131,7 +131,7 @@ const Join = () => {
             <img
               src="https://s-f.scribdassets.com/images/about/03_careers_B_icon_benefits_06_parental.svg?a974a5f44"
               className="mx-auto"
-              alt="diversity"
+              alt="Parental leave"
             />
             <div>
               <h2 className="text-2xl  font-bold text-center mt-6 mb-3">
@@ -148,7 +148,7 @@ const Join = () => {
             <img
               src="https://s-f.scribdassets.com/images/about/03_careers_B_icon_benefits_05_pto.svg?a974a5f44"
               className="mx-auto"
-              alt="diversity"
+              alt="Time off"
             />
             <div>
               <h2 className="text-2xl font-bold  text-center mt-6 mb-3">
@@ -172,14 +172,14 @@ const Join = () => {
               <img
                 src={workplace}
                 className=" md:h-80 sm:h-50"
-                alt="diversity"
+                alt="workplace"
               />
             </li>
             <li className=" ">
               <img
                 src={workinginoffice}
                 className="md:h-80 sm:h-20"
-                alt="diversity"
+                alt="working in office"
               />
             </li>
           </ul>
@@ -202,12 +202,12 @@ const Join = () => {
               <img
                 src="https://avatars.githubusercontent.com/u/33249782?v=4"
                 className="ml-5 w-32 sm:w-25 mx-auto rounded-full"
-                alt="diversity"
+                alt="Rohan Sharma"
               />
               <div>
                 <p className="ml-5 mt-10 mb-5 text-slate-500">
                   {" "}
-                  <img src={quotationmark} alt="q"  className=" w-5  mb-2 mr-1 inline"/>
+                  <img src={quotationmark} alt="quotation mark"  className=" w-5  mb-2 mr-1 inline"/>
                  {"  "}
                    The vibrant and dynamic environment fosters creativity and innovation. Being part of a talented team that is passionate about improving access to knowledge and reading has been incredibly fulfilling.
                   <br></br>
@@ -219,11 +219,11 @@ const Join = () => {
               <img
                 src="https://images.weserv.nl/?output=webp&url=https://avatars.githubusercontent.com/u/96341431?v=4"
                 className="ml-5 w-32 mx-auto rounded-full"
-                alt="diversity"
+                alt="Deepaksingh Kushwah"
               />
               <div>
                 <p className="ml-5 mt-10 mb-5 text-slate-500">
-                  <img src={quotationmark} alt="q"  className=" w-5 mr-1 mb-2 inline "/>
+                  <img src={quotationmark} alt="quotation mark"  className=" w-5 mr-1 mb-2 inline "/>
                   {"  "}
                   If you're motivated and persistent, your impact will
                   definitely be felt by the company. There is nothing more
@@ -253,7 +253,7 @@ const Join = () => {
               <img
                 src="https://s-f.scribdassets.com/images/about/03_careers_E_img_01_@2x.jpg?a974a5f44"
                 className="md:ml-5"
-                alt="diversity"
+                alt="Community"
               />
               <div>
                 <h2 className="font-bold  text-center mt-6 mb-3">Community</h2>
@@ -276,7 +276,7 @@ const Join = () => {
               <img
                 src="https://s-f.scribdassets.com/images/about/03_careers_E_img_02_@2x.jpg?a974a5f44"
                 className="mx-auto  "
-                alt="diversity"
+                alt="Characters with character"
               />
               <div>
                 <h2 className="font-bold  text-center mt-6 mb-3">
@@ -299,7 +299,7 @@ const Join = () => {
               <img
                 src="https://s-f.scribdassets.com/images/about/03_careers_E_img_03_@2x.jpg?a974a5f44"
                 className="mx-auto"
-                alt="diversity"
+                alt="Growth Mentality"
               />
               <div>
                 <h2 className=" font-bold  font-bold text-center mt-6 mb-3">

@@ -18,7 +18,7 @@ export default function CardContent(props) {
       <div className="bg-color" style={{ backgroundColor: random_color }}></div>
       <div className="bk-img h-2/5">
         {/* <Link to="/books/id"> */}
-          <img src={props.imgName} alt="" />
+          <img src={props.imgName} alt={props.title} />
         {/* </Link> */}
       </div>
       <div className="bk-details">

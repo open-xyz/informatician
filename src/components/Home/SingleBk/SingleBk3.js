@@ -119,7 +119,7 @@ export default function SingleBk() {
                     <div>
                       <div className="book-box">
                         <div className="thumbnail">
-                          <img src={abk3} alt="" />
+                          <img src={abk3} alt="The Subtle Art of Not Giving a F*ck" />
                         </div>
                       </div>
                     </div>

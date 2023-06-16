@@ -126,7 +126,7 @@ export default function SingleBk() {
                     <div>
                       <div className="book-box">
                         <div className="thumbnail">
-                          <img src={ebk1} alt="" />
+                          <img src={ebk1} alt="The Perfect Marriage" />
                         </div>
                       </div>
                     </div>

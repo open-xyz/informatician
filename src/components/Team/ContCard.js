@@ -17,7 +17,7 @@ const ContCard = (props) => {
     <>
       <div
         className='card' onClick={() => openContributorProfile(profile)}>
-        <img className='profile' src={`https://images.weserv.nl/?output=webp&url=${image}`} alt='Contributor' />
+        <img className='profile' src={`https://images.weserv.nl/?output=webp&url=${image}`} alt={title} />
         <div className='content'>
           <h1 className='text'>{title}</h1>
           <p>

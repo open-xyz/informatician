@@ -137,7 +137,7 @@ export default function SingleBk() {
                     <div>
                       <div className="book-box">
                         <div className="thumbnail">
-                          <img src={ebk3} alt="" />
+                          <img src={ebk3} alt="Never Split the Difference" />
                         </div>
                       </div>
                     </div>
