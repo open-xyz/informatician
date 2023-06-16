@@ -93,13 +93,19 @@ export default function Navbar(props) {
       <div id="mobile">
         <div class="form-check form-switch mx-2" onClick={props.toggleTheme} >
   <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
-  <label class="form-check-label" for="flexSwitchCheckDefault">Dark Mode</label>
+  <label class="form-check-label" htmlFor="flexSwitchCheckDefault">Dark Mode</label>
 </div>
-        <i
+        {/* <i
           id="bar"
-          className={clicked ? "fa-solid fa-times" : "fa-solid fa-bars"}
+          className={`${clicked ? "fa-solid fa-times" : "fa-sharp fa-solid fa-bars-staggered"} ${props.theme === "dark" ? "text-white" : "text-dark"}`}
           onClick={() => setClicked(!clicked)}
-        ></i>
+        ></i> */}
+        {/* Custom Navbar */}
+        <div id="bar" onClick={() => setClicked(!clicked)}>
+          <div id={`${clicked ? "cross-up" : "bar-up"}`}></div>
+          <div id={`${clicked ? "cross-mid" : "bar-mid"}`} style={{ "opacity": clicked ? "0" : "100%" }}></div>
+          <div id={`${clicked ? "cross-down" : "bar-down"}`}></div>
+        </div>
       </div>
       
     </nav>
