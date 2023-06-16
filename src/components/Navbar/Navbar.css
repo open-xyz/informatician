@@ -246,10 +246,3 @@ nav {
         width: 55px;
     }
 }
-
-@media screen and (max-width: 500px) {
-    #nav-items{
-        align-items: center;
-        width: 100%;
-    }
-}
