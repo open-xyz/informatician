@@ -18,11 +18,9 @@ nav {
 .logo{
     text-decoration: none;
     font-weight: 800;
-    color: #2f306d;
     font-size: 20px;
     display: flex !important;
     flex-direction: row;
-
 }
 
 #nav-items{
@@ -104,6 +102,10 @@ nav {
     padding: 7px 20px;
     color: black;
 
+}
+
+.form-switch, .form-check-input {
+    cursor: pointer;
 }
 
 ::placeholder{
