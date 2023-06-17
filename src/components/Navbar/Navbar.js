@@ -4,7 +4,10 @@ import "./Navbar.css";
 import uploadicon from "../../assets/add.png";
 import NavItems from "./NavItems/NavItems.js";
 import { searchBooks } from "../../utils/searchBooks";
-
+function handleSubmit(event) {
+  event.preventDefault(); // Prevent the default form submission
+  event.target.elements.q.value = "";
+}
 export default function Navbar(props) {
   const [clicked, setClicked] = useState(false);
   const [books, setBooks] = useState([]);
@@ -59,19 +62,12 @@ export default function Navbar(props) {
           />
         </Link>
         <div>
-          <form className="search-bar m-0">
-            <input
-              type="text"
-              placeholder="search"
-              name="q"
-              onChange={search}
-            />
-            <button type="submit">
-              <i className="fa-solid fa-search"></i>
+        <form className="search-bar m-0" onSubmit={handleSubmit}>
+          <input type="text" placeholder="search" name="q" onChange={search}/>
+          <button type="submit">
+            <i className="fa-solid fa-search"></i>
             </button>
-          </form>
-
-
+            </form>
           <div className="w-52 bg-gray-100 absolute mx-auto px-2">
             {books.length > 0 &&
               books.map((book, index) => (
