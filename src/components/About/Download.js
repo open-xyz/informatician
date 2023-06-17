@@ -92,7 +92,7 @@ export default function Download() {
         data-aos-duration="500"
       >
         <p className="brand-name fw-bold text-uppercase">
-          <img src={logo} alt="logo" className="h-10 d-inline" /> Informatician
+          <img src={logo} alt="Informatician logo" className="h-10 d-inline" /> Informatician
         </p>
         <h1 className="fw-bolder fs-1">Available For Your Smartphone</h1>
         <p>

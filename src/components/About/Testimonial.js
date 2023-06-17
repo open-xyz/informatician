@@ -31,7 +31,7 @@ export default function Testimonial() {
               <img 
                 className="image  h-44 w-40 object-cover rounded-full "
                 src="https://avatars.githubusercontent.com/u/33249782?v=4"
-                alt=""
+                alt="Rohan Sharma"
               />
               <p className="py-0  px-[100px] text-center text-lg font-medium text-slate-800 ">
               <i className="bx bxs-quote-alt-left quote-icon text-2xl text-blue-600"></i>
@@ -59,7 +59,7 @@ export default function Testimonial() {
               <img
                 className="image h-44 w-40 object-cover rounded-full"
                 src="https://avatars.githubusercontent.com/u/96341431?v=4"
-                alt=""
+                alt="Deepaksingh Kushwah"
               />
               <p className="py-0  px-[100px] text-center text-lg font-medium text-slate-800 ">
               <i className="bx bxs-quote-alt-left quote-icon text-3xl text-blue-600"></i>
@@ -87,7 +87,7 @@ export default function Testimonial() {
               <img
                 className="image h-44 w-40 object-cover rounded-full"
                 src="https://avatars.githubusercontent.com/u/100675296?v=4"
-                alt=""
+                alt="Sumit Kumar Rai"
               />
               <p className="py-0  px-[100px] text-center text-lg font-medium text-slate-800 ">
               <i className="bx bxs-quote-alt-left quote-icon text-3xl text-blue-600"></i>

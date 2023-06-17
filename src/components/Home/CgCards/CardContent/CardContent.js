@@ -14,7 +14,7 @@ export default function CardContent(props) {
             return false;
           }}
           src={props.image}
-          alt=""
+          alt={props.title}
         />
       </div>
       </Link>

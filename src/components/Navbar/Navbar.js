@@ -30,8 +30,8 @@ export default function Navbar(props) {
       <Link to="/" className="logo">
         <img
           src="https://user-images.githubusercontent.com/33249782/240937486-d84c477d-63f4-4558-ae04-454d803a5b1f.png"
-          className=" h-11 w-15 ml-8"
-          alt="Logo" style={{filter: props.theme==="dark"?"invert(1)":""}}
+          className=" h-11 w-15 ml-8  hover:shadow "
+          alt="Informatician logo" style={{filter: props.theme==="dark"?"invert(1)":""}}
         />
       </Link>
 
@@ -56,8 +56,8 @@ export default function Navbar(props) {
         <Link to="/addBooks" className="flex">
           <img
             src={uploadicon}
-            alt="uploadicon"
-            className="h-8 mr-3 text-bold self-center"
+            alt="upload icon"
+            className="h-8 mr-3 text-bold  hover:font-bold hover:shadow-md self-center  "
             style={{filter: props.theme==="dark"?"invert(1)":""}}
           />
         </Link>
