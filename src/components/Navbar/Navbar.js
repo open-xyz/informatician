@@ -27,7 +27,7 @@ export default function Navbar(props) {
       <Link to="/" className="logo">
         <img
           src="https://user-images.githubusercontent.com/33249782/240937486-d84c477d-63f4-4558-ae04-454d803a5b1f.png"
-          className=" h-11 w-15 ml-8  hover:shadow "
+          className=" h-11 w-15 ml-8"
           alt="Logo" style={{filter: props.theme==="dark"?"invert(1)":""}}
         />
       </Link>
@@ -54,7 +54,7 @@ export default function Navbar(props) {
           <img
             src={uploadicon}
             alt="uploadicon"
-            className="h-8 mr-3 text-bold  hover:font-bold hover:shadow-md self-center  "
+            className="h-8 mr-3 text-bold self-center"
             style={{filter: props.theme==="dark"?"invert(1)":""}}
           />
         </Link>
@@ -85,22 +85,24 @@ export default function Navbar(props) {
           </div>
         </div>
           <div class="form-check form-switch" onClick={props.toggleTheme} >
-  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
-</div>
-<label class="form-check-label" >Dark Mode</label>
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
+          </div>
+        <label class="form-check-label" >Dark Mode</label>
       </div>
-
       <div id="mobile">
         <div class="form-check form-switch mx-2" onClick={props.toggleTheme} >
-  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
-  <label class="form-check-label" htmlFor="flexSwitchCheckDefault">Dark Mode</label>
-</div>
+          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
+          <label class="form-check-label" htmlFor="flexSwitchCheckDefault">Dark Mode</label>
+        </div>
+
         {/* <i
           id="bar"
           className={`${clicked ? "fa-solid fa-times" : "fa-sharp fa-solid fa-bars-staggered"} ${props.theme === "dark" ? "text-white" : "text-dark"}`}
           onClick={() => setClicked(!clicked)}
         ></i> */}
+
         {/* Custom Navbar */}
+
         <div id="bar" onClick={() => setClicked(!clicked)}>
           <div id={`${clicked ? "cross-up" : "bar-up"}`}></div>
           <div id={`${clicked ? "cross-mid" : "bar-mid"}`} style={{ "opacity": clicked ? "0" : "100%" }}></div>
