@@ -85,7 +85,7 @@ form {
 }
 .searchbar:hover{
   animation: hoverShake 0.15s linear 3;
-  margin-left: 350px;
+  /* margin-left: 350px; */
 }
 #search-button-2 {
   padding: 5px;
