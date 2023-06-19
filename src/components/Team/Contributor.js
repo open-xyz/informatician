@@ -38,7 +38,7 @@ const Contributors = () => {
                         image={contributor.avatar_url}
                         title={contributor.login}
                         commits={contributor.contributions}
-                        profile={contributor.html_url}
+                        profile={contributor.html_url} 
                     />
                 ))}
             </div>
