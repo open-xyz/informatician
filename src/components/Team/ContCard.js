@@ -16,13 +16,16 @@ const ContCard = (props) => {
   return (
     <>
       <div
-        className='card' onClick={() => openContributorProfile(profile)}>
+        className='card'>
         <img className='profile' src={`https://images.weserv.nl/?output=webp&url=${image}`} alt={title} />
         <div className='content'>
           <h1 className='text'>{title}</h1>
           <p>
             {commits} {x}
           </p>
+        </div>
+        <div>
+          <button className='view_button' onClick={() => openContributorProfile(profile)} >View</button>
         </div>
       </div>
     </>
