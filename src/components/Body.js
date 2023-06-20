@@ -62,7 +62,7 @@ function Body(props) {
         <Route path="/terms" element={<TermsAndService theme={props.theme}/>} />
         <Route path="/privacy" element={<PrivacyPolicy theme={props.theme} />} />
         <Route path="/cookie" element={<CookiePolicy theme={props.theme} />} />
-        <Route path="/faq" element={<FaqHelp />} />
+        <Route path="/faq" element={<FaqHelp theme={props.theme} />} />
         <Route path="/join" element={<Join />} />
         <Route path="/develop" element={<Develop />} />
         <Route path="/addBooks" element={<AddBooks />} />
