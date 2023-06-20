@@ -93,7 +93,7 @@ const Footer = (props) => {
                   </li>
                   <li className="mb-4">
                     <Link
-                      to="/develop"
+                      to="/accessibility"
                       className="hover:underline  hover:text-gray-900"
                     >
                       Accessibility

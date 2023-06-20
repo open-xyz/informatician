@@ -38,6 +38,7 @@ import Politics from "./Categories/politics";
 import Science from "./Categories/science";
 import Selfhelp from "./Categories/selfhelp";
 import CopyrightPage from "./Copyright/Copyright";
+import AccessibilityPage from "./Accessibility/Accessibility";
 
 function Body(props) {
   return (
@@ -63,6 +64,7 @@ function Body(props) {
         <Route path="/privacy" element={<PrivacyPolicy theme={props.theme} />} />
         <Route path="/copyright" element={<CopyrightPage theme={props.theme} />} />
         <Route path="/cookie" element={<CookiePolicy theme={props.theme} />} />
+        <Route path="/accessibility" element={<AccessibilityPage theme={props.theme} />} />
         <Route path="/faq" element={<FaqHelp theme={props.theme} />} />
         <Route path="/join" element={<Join />} />
         <Route path="/develop" element={<Develop />} />
