@@ -37,7 +37,7 @@ import Mystery from "./Categories/mystery";
 import Politics from "./Categories/politics";
 import Science from "./Categories/science";
 import Selfhelp from "./Categories/selfhelp";
-
+import CopyrightPage from "./Copyright/Copyright";
 
 function Body(props) {
   return (
@@ -61,6 +61,7 @@ function Body(props) {
         <Route path="/team" element={<Team theme={props.theme} />} />
         <Route path="/terms" element={<TermsAndService theme={props.theme}/>} />
         <Route path="/privacy" element={<PrivacyPolicy theme={props.theme} />} />
+        <Route path="/copyright" element={<CopyrightPage theme={props.theme} />} />
         <Route path="/cookie" element={<CookiePolicy theme={props.theme} />} />
         <Route path="/faq" element={<FaqHelp theme={props.theme} />} />
         <Route path="/join" element={<Join />} />
