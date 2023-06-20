@@ -60,7 +60,7 @@ const Team = (props) => {
         </div>
 
       </div>
-      <Contributor />
+      <Contributor theme={props.theme} />
     </div>
 
   );
