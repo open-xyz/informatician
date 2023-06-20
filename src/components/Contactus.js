@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaDiscord, FaTwitter, FaGithub } from 'react-icons/fa';
+import { FaDiscord,FaEnvelope, FaTwitter, FaGithub } from 'react-icons/fa';
 import contactImage from '../assets/contact-us.png';
 import './Contactus.css';
 import { Link } from 'react-router-dom';
@@ -44,7 +44,8 @@ const Contact = () => {
       <div className="container">
         <div className="contact-content">
           <div className="contact-text">
-            <h2 className="contact-title" data-aos="fade-down" data-aos-duration="500">Contact Us</h2>
+          <h2 className="contact-title" data-aos="fade-down" data-aos-duration="500">Contact Us<FaEnvelope /></h2>
+
             <p className="contact-description" data-aos="fade-down" data-aos-duration="500">
               We'd love to hear from you! Reach out to us for any inquiries, feedback, or collaboration opportunities.
             </p>
@@ -84,7 +85,7 @@ const Contact = () => {
                   data-aos="fade-left" data-aos-duration="500"
                 />
               </div>
-              <button data-aos="fade-up" data-aos-duration="500" type="submit" className="submit-btn">
+              <button data-aos="fade-up" data-aos-duration="500" type="submit" className="submit-btn submitBtn">
                 Submit
               </button>
             </form>
@@ -105,6 +106,10 @@ const Contact = () => {
             <Link to="/develop" className="social-icon-discord">
               <FaDiscord />
             </Link>
+            <Link to="/develop" className="social-icon-discord">
+            <FaEnvelope/>
+            </Link>
+            
           </div>
         </div>
       </div>
