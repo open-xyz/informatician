@@ -47,7 +47,7 @@ const TermsAndService = (props) => {
             your jurisdiction.
           </p>
           <p>
-            If you have any questions or concerns about these terms and conditions, please contact us at
+            If you have any questions or concerns about these terms and conditions, please contact us at&nbsp;
             <a href="mailto:informaticianx@gmail.com" className="contact-email">informaticianx@gmail.com</a>.
           </p>
         </div>
