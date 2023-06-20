@@ -3,7 +3,7 @@
 
 .profile {
   border-radius: 50%;
-  border: 2px solid black;
+  /* border: 2px solid black; */
   height: 230px;
     width: 230px;
   margin-bottom: 10px;
@@ -25,7 +25,7 @@
   padding: 15px;
   cursor: pointer;
   background-color: transparent;
-  border: 2px solid black;
+  /* border: 2px solid black; */
   height: 20rem;
 }
 
