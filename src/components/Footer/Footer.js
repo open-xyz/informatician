@@ -47,7 +47,7 @@ const Footer = (props) => {
                   <li className="mb-4">
                     <Link
                       to="./about"
-                      className="hover:underline hover:text-gray-900"
+                      className={`hover:underline ${props.theme === "dark" ? "text-white" : "text-black"}`}
                     >
                       About us
                     </Link>
@@ -55,7 +55,7 @@ const Footer = (props) => {
                   <li className="mb-4">
                     <Link
                       to="./team"
-                      className="hover:underline  hover:text-gray-900"
+                      className={`hover:underline ${props.theme === "dark" ? "text-white" : "text-black"}`}
                     >
                       Our Team
                     </Link>
@@ -63,7 +63,7 @@ const Footer = (props) => {
                   <li className="mb-4">
                     <Link
                       to="./contact"
-                      className="hover:underline  hover:text-gray-900"
+                      className={`hover:underline ${props.theme === "dark" ? "text-white" : "text-black"}`}
                     >
                       Contact Us
                     </Link>
@@ -71,7 +71,7 @@ const Footer = (props) => {
                   <li>
                     <Link
                       to="/join"
-                      className="hover:underline  hover:text-gray-900"
+                      className={`hover:underline ${props.theme === "dark" ? "text-white" : "text-black"}`}
                     >
                       Join our team!
                     </Link>
@@ -86,7 +86,7 @@ const Footer = (props) => {
                   <li className="mb-4">
                     <Link
                       to="./faq"
-                      className="hover:underline  hover:text-gray-900"
+                      className={`hover:underline ${props.theme === "dark" ? "text-white" : "text-black"}`}
                     >
                       Help/FAQ
                     </Link>
@@ -94,7 +94,7 @@ const Footer = (props) => {
                   <li className="mb-4">
                     <Link
                       to="/accessibility"
-                      className="hover:underline  hover:text-gray-900"
+                      className={`hover:underline ${props.theme === "dark" ? "text-white" : "text-black"}`}
                     >
                       Accessibility
                     </Link>
@@ -102,7 +102,7 @@ const Footer = (props) => {
                   <li className="mb-4">
                     <Link
                       to="/develop"
-                      className="hover:underline   hover:text-gray-900"
+                      className={`hover:underline ${props.theme === "dark" ? "text-white" : "text-black"}`}
                     >
                       Publishers
                     </Link>
@@ -110,7 +110,7 @@ const Footer = (props) => {
                   <li>
                     <Link
                       to="/develop"
-                      className="hover:underline  hover:text-gray-900"
+                      className={`hover:underline ${props.theme === "dark" ? "text-white" : "text-black"}`}
                     >
                       AdChoices
                     </Link>
@@ -125,7 +125,7 @@ const Footer = (props) => {
                   <li className="mb-4">
                     <Link
                       to="./privacy"
-                      className="hover:underline  hover:text-gray-900"
+                      className={`hover:underline ${props.theme === "dark" ? "text-white" : "text-black"}`}
                     >
                       Privacy Policy
                     </Link>
@@ -133,7 +133,7 @@ const Footer = (props) => {
                   <li className="mb-4">
                     <Link
                       to="./terms"
-                      className="hover:underline  hover:text-gray-900"
+                      className={`hover:underline ${props.theme === "dark" ? "text-white" : "text-black"}`}
                     >
                       Terms &amp; Conditions
                     </Link>
@@ -141,7 +141,7 @@ const Footer = (props) => {
                   <li className="mb-4">
                     <Link
                       to="./copyright"
-                      className="hover:underline  hover:text-gray-900"
+                      className={`hover:underline ${props.theme === "dark" ? "text-white" : "text-black"}`}
                     >
                       Copyright
                     </Link>
@@ -149,10 +149,11 @@ const Footer = (props) => {
                   <li>
                     <Link
                       to="./cookie"
-                      className="hover:underline  hover:text-gray-900"
+                      className={`hover:underline ${props.theme === "dark" ? "text-white" : "text-black"}`}
                     >
                       Cookie Preference
                     </Link>
+
                   </li>
                 </ul>
               </div>
