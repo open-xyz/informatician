@@ -36,11 +36,11 @@ export default function Feature() {
         <DraftsIcon className="icons letterOpen text-primary d-none"/>
         Newsletter
       </div>
-      <div className="letter card col-lg-2 cl-md-3 col-sm-4" style={{background: props.theme==="dark"?"black":"", color: props.theme==="dark"?"white":""}}>
+      <div className="letter card col-lg-2 cl-md-3 col-sm-4">
         <img src={ReadingChallengeImage} alt="Reading Challenge" className="readingChallenge-icon" /> {/* Use the imported image */}
         Reading Challenge
       </div>
-      <div className="progress-tracking card col-lg-2 cl-md-3 col-sm-4" style={{background: props.theme==="dark"?"black":"", color: props.theme==="dark"?"white":""}}>
+      <div className="progress-tracking card col-lg-2 cl-md-3 col-sm-4">
         <img src={ProgressTrackingImage} alt="Progress Tracking" className="progressTracking-image" /> {/* Use the imported image */}
         Progress Tracking
       </div>
