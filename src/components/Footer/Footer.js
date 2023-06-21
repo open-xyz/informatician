@@ -154,6 +154,7 @@ const Footer = (props) => {
                     >
                       Cookie Preference
                     </Link>
+
                   </li>
                 </ul>
               </div>
