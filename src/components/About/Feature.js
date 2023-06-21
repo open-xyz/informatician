@@ -5,6 +5,9 @@ import MoneyOffIcon from '@mui/icons-material/MoneyOff';
 import PeopleIcon from '@mui/icons-material/People';
 import EmailIcon from '@mui/icons-material/Email';
 import DraftsIcon from '@mui/icons-material/Drafts';
+import ReadingChallengeImage from '../../assets/ebooks/ReadingChallenge.png'; 
+import ProgressTrackingImage from '../../assets/ProgressTracking.jpg';
+
 import "./Feature.css"
 
 export default function Feature() {
@@ -33,6 +36,15 @@ export default function Feature() {
         <DraftsIcon className="icons letterOpen text-primary d-none"/>
         Newsletter
       </div>
+      <div className="letter card col-lg-2 cl-md-3 col-sm-4" style={{background: props.theme==="dark"?"black":"", color: props.theme==="dark"?"white":""}}>
+        <img src={ReadingChallengeImage} alt="Reading Challenge" className="readingChallenge-icon" /> {/* Use the imported image */}
+        Reading Challenge
+      </div>
+      <div className="progress-tracking card col-lg-2 cl-md-3 col-sm-4" style={{background: props.theme==="dark"?"black":"", color: props.theme==="dark"?"white":""}}>
+        <img src={ProgressTrackingImage} alt="Progress Tracking" className="progressTracking-image" /> {/* Use the imported image */}
+        Progress Tracking
+      </div>
+    
     </div>
   );
 };
