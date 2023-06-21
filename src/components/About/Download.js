@@ -92,7 +92,7 @@ export default function Download() {
         data-aos-duration="500"
       >
         <p className="brand-name fw-bold text-uppercase">
-          <img src={logo} alt="logo" className="h-10 d-inline" /> Informatician
+          <img src={logo} alt="Informatician logo" className="h-10 d-inline" /> Informatician
         </p>
         <h1 className="fw-bolder fs-1">Available For Your Smartphone</h1>
         <p>
@@ -101,7 +101,7 @@ export default function Download() {
           on the beach or on the airplane, you’ll always have access. Install
           the apps to try them out.
         </p>
-        <div className="flex flex-col items-center justify-start flex-shrink-0 mt-6 space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4 lg:ml-4 lg:mt-0">
+        <div className="flex flex-col items-center justify-start mt-6 space-y-4 sm:flex-row md:flex-col lg:flex-row sm:space-y-3 sm:space-x-3 md:space-x-0 lg:space-x-3 lg:space-y-0 md:items-start lg:items-center">
           <button className="inline-flex items-center px-6 py-3 rounded-lg bg-gray-600 text-gray-50">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -115,7 +115,7 @@ export default function Download() {
               <span className="font-semibold title-font">Google Play</span>
             </span>
           </button>
-          <button className="inline-flex items-center px-5 py-3 rounded-lg bg-gray-600 text-gray-50">
+          <button className="inline-flex items-center px-6 py-3 rounded-lg bg-gray-600 text-gray-50">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 50 50"

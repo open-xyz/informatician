@@ -31,7 +31,7 @@ const Footer = (props) => {
                 <img
                   src="https://user-images.githubusercontent.com/33249782/240937486-d84c477d-63f4-4558-ae04-454d803a5b1f.png"
                   className="h-8 mr-3 "
-                  alt=" Logo" style={{filter: props.theme==="dark"?"invert(1)":""}}
+                  alt="Informatician logo" style={{filter: props.theme==="dark"?"invert(1)":""}}
                 />
                 <span className="self-center text-3xl font-bold hover:text-gray-600 whitespace-nowrap">
                   Informatician
@@ -93,7 +93,7 @@ const Footer = (props) => {
                   </li>
                   <li className="mb-4">
                     <Link
-                      to="/develop"
+                      to="/accessibility"
                       className="hover:underline  hover:text-gray-900"
                     >
                       Accessibility
@@ -140,7 +140,7 @@ const Footer = (props) => {
                   </li>
                   <li className="mb-4">
                     <Link
-                      to="#"
+                      to="./copyright"
                       className="hover:underline  hover:text-gray-900"
                     >
                       Copyright

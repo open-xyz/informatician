@@ -92,7 +92,7 @@
     bottom: -56px;
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1150px) {
     .inner-one {
         display: none;
     }
@@ -147,13 +147,13 @@
     }
 }
 
-@media (max-width: 840px) {
+@media (max-width: 760px) {
     .last-two {
         display: none;
     }
 }
 
-@media (min-width: 840px) {
+@media (min-width: 760px) {
     .last-three {
         display: none;
     }
@@ -178,5 +178,13 @@
 
     100% {
         width: 100%;
+    }
+}
+
+@media (min-width: 530px) and (max-width: 1150px) {
+    .inner-content{
+        position: absolute;
+        left: 3vw;
+        top: 40px;
     }
 }

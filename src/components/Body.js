@@ -37,7 +37,8 @@ import Mystery from "./Categories/mystery";
 import Politics from "./Categories/politics";
 import Science from "./Categories/science";
 import Selfhelp from "./Categories/selfhelp";
-
+import CopyrightPage from "./Copyright/Copyright";
+import AccessibilityPage from "./Accessibility/Accessibility";
 
 function Body(props) {
   return (
@@ -45,24 +46,26 @@ function Body(props) {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/books" element={<BookList theme={props.theme} />} />
-        <Route path="/books/book" element={<SingleBk />} />
-        <Route path="/books/book1" element={<SingleBk1 />} />
-        <Route path="/books/book2" element={<SingleBk2 />} />
-        <Route path="/books/book3" element={<SingleBk3 />} />
-        <Route path="/books/book4" element={<SingleBk4 />} />
-        <Route path="/books/book5" element={<SingleBk5 />} />
-        <Route path="/books/book6" element={<SingleBk6 />} />
-        <Route path="/books/book7" element={<SingleBk7 />} />
-        <Route path="/books/book8" element={<SingleBk8 />} />
-        <Route path="/books/book9" element={<SingleBk9 />} />
+        <Route path="/books/book" element={<SingleBk theme={props.theme} />} />
+        <Route path="/books/book1" element={<SingleBk1 theme={props.theme} />} />
+        <Route path="/books/book2" element={<SingleBk2 theme={props.theme} />} />
+        <Route path="/books/book3" element={<SingleBk3 theme={props.theme} />} />
+        <Route path="/books/book4" element={<SingleBk4 theme={props.theme} />} />
+        <Route path="/books/book5" element={<SingleBk5 theme={props.theme} />} />
+        <Route path="/books/book6" element={<SingleBk6 theme={props.theme} />} />
+        <Route path="/books/book7" element={<SingleBk7 theme={props.theme} />} />
+        <Route path="/books/book8" element={<SingleBk8 theme={props.theme} />} />
+        <Route path="/books/book9" element={<SingleBk9 theme={props.theme} />} />
 
         <Route path="/about" element={<About theme={props.theme} />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/team" element={<Team />} />
-        <Route path="/terms" element={<TermsAndService />} />
-        <Route path="/privacy" element={<PrivacyPolicy />} />
-        <Route path="/cookie" element={<CookiePolicy />} />
-        <Route path="/faq" element={<FaqHelp />} />
+        <Route path="/team" element={<Team theme={props.theme} />} />
+        <Route path="/terms" element={<TermsAndService theme={props.theme}/>} />
+        <Route path="/privacy" element={<PrivacyPolicy theme={props.theme} />} />
+        <Route path="/copyright" element={<CopyrightPage theme={props.theme} />} />
+        <Route path="/cookie" element={<CookiePolicy theme={props.theme} />} />
+        <Route path="/accessibility" element={<AccessibilityPage theme={props.theme} />} />
+        <Route path="/faq" element={<FaqHelp theme={props.theme} />} />
         <Route path="/join" element={<Join />} />
         <Route path="/develop" element={<Develop />} />
         <Route path="/addBooks" element={<AddBooks />} />

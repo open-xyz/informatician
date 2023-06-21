@@ -26,6 +26,7 @@
 .smalltext {
   font-family: "Times New Roman", Times, serif;
   font-family: 20px;
+  text-align: center;
   margin-bottom: 40px;
   color: #210062;
 }
@@ -35,12 +36,12 @@ form {
 
 .searchbar {
   background: #fff;
-  display: flex;
+  display: block;
+  margin: auto;
   width: fit-content;
   height: 50px;
   border-radius: 30px;
   padding: 10px 20px;
-  margin-left: 500px;
   align-items: center;
   box-shadow: rgba(6, 215, 230, 0.3) 0px 1px 2px 0px,
   rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
@@ -84,7 +85,7 @@ form {
 }
 .searchbar:hover{
   animation: hoverShake 0.15s linear 3;
-  margin-left: 350px;
+  /* margin-left: 350px; */
 }
 #search-button-2 {
   padding: 5px;
