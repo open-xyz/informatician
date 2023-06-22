@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./faq.css";
 import helpImage from "../assets/help.png";
 
-const AccordionItem = ({ title, content, theme }) => {
+const AccordionItem = ({ title, content}) => {
   const [expanded, setExpanded] = useState(false);
 
   const toggleAccordion = () => {
@@ -11,7 +11,6 @@ const AccordionItem = ({ title, content, theme }) => {
 
   return (
     <div className={`accordion-item ${expanded ? 'expanded' : ''}`}
-    style={{backgroundColor: theme === 'dark' ? 'black' : 'white'}}
     >
       <button
         onClick={toggleAccordion}
@@ -21,13 +20,13 @@ const AccordionItem = ({ title, content, theme }) => {
         <span className="icon" aria-hidden="true"></span>
       </button>
       <div className="accordion-content">
-        <p style={{color: theme === 'dark' ? 'white' : 'black'}}>{content}</p>
+        <p>{content}</p>
       </div>
     </div>
   );
 };
 
-const FaqHelp = (props) => {
+const FaqHelp = () => {
   return (
 
     <div className="faq-help">
@@ -45,26 +44,22 @@ const FaqHelp = (props) => {
             content="A: One can start by setting aside dedicated time for reading
             each day. Creating a comfortable reading environment and choosing
             books that genuinely interest you can also help."
-            theme={props.theme}
           />
           <AccordionItem
             title=" Q: What are some common reasons why people abandon books midway?"
             content=" A: Some reasons include a lack of interest in the content or
             finding it difficult to connect with the writing style. However,
             there are many other books to choose from."
-            theme={props.theme}
           />
            <AccordionItem
             title=" Q:What are the benefits of reading regularly?"
             content=" A: Reading regularly has numerous benefits : improved cognitive function, increased knowledge, and enhanced focus & concentration.
             It reduces stress and promotes relaxation by immersing you in a different world or story.
             Reading improves ones vocabulary, language skills, and writing abilities, making one an effective communicator."
-            theme={props.theme}
           />
            <AccordionItem
             title=" Q:What are some strategies for staying motivated to read?"
             content=" A: To stay motivated to read, it can be helpful to set reading goals and establish a regular reading routine.Additionally, having a consistent reading routine helps to make reading a habit and ensures one to set aside dedicated time for it."
-            theme={props.theme}
           />
         </div>
       </div>

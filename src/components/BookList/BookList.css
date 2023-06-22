@@ -1,7 +1,7 @@
 /* BookList.css */
 
 .book-list-container {
-  background-color: #f5f5f5;
+  background-color: var(--bgLight);
   padding: 100px;
   height: auto;
   width: 100vw;
@@ -28,7 +28,7 @@
   font-family: 20px;
   text-align: center;
   margin-bottom: 40px;
-  color: #210062;
+  color: #8445ff;
 }
 form {
   width: 100%;

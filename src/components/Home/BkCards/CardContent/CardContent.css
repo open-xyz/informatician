@@ -35,7 +35,7 @@
 .type {
   font-family: "Source Sans Pro", sans-serif;
   line-height: 1.5;
-  color: #596280;
+  color: var(--textGray-dark);
   font-size: 0.875rem;
   font-weight: 400;
  
@@ -66,7 +66,7 @@
 .description{
   font-family: "Source Sans Pro", sans-serif;
   line-height: 1.5;
-  color: #596280;
+  color: var(--textGray-dark);
   font-size: 0.875rem;
   font-weight: 400;
   margin-bottom: 4px;
@@ -120,7 +120,7 @@
 }
 
 .save:hover {
-  background-color: lightcyan;
+  background-color: rgb(91, 241, 121);
 }
 
 

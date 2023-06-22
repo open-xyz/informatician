@@ -16,6 +16,12 @@
   margin-top: 50px;
 }
 
+.black input
+{
+  background-color: white;
+  color: black
+}
+
 .head {
   text-align: center;
   padding: 17px 0px;

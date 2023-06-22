@@ -1,9 +1,9 @@
 import React from "react";
 import "./Accessibility.css";
 
-const AccessibilityPage = (props) => {
+const AccessibilityPage = () => {
     return (
-        <div className="access" style={{ background: props.theme === "dark" ? "black" : "#f8f8f8", color: props.theme === "dark" ? "white" : "#333" }}>
+        <div className="access">
             <div className="access-container">
                 <h2 className="access-title">Accessibility Statement</h2>
                 <div className="access-section">

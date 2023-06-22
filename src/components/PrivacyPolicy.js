@@ -1,9 +1,9 @@
 import React from "react";
 import "./PrivacyPolicy.css";
 
-const PrivacyPolicy = (props) => {
+const PrivacyPolicy = () => {
   return (
-    <div className="privacy" style={{background: props.theme==="dark"?"black":"#f8f8f8", color: props.theme==="dark"?"white":"#333"}}>
+    <div className="privacy">
       <div className="privacy-container">
         <h2 className="privacy-title">Privacy Policy</h2>
         <div className="privacy-section">
