@@ -22,15 +22,14 @@ const ContCard = (props) => {
         style={{ border: props.theme === "dark" ? '2px solid white' : '2px solid black' }}
         />
         <div className='content'>
-          <h1 className='text' style={{ color: props.theme === "dark" ? 'white' : '' }}>{title}</h1>
-          <p style={{ color: props.theme === "dark" ? 'white' : '' }}>
+          <h1 className='text'>{title}</h1>
+          <p>
             {commits} {x}
           </p>
         </div>
         <div>
           <button className='view_button' onClick={() => openContributorProfile(profile)} 
-          style={{ border: props.theme === "dark" ? '2px solid white' : '2px solid black' , 
-          color: props.theme === "dark" ? 'white' : ''
+          style={{ border: props.theme === "dark" ? '2px solid white' : '2px solid black'
         }}
           >View</button>
         </div>

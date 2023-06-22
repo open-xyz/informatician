@@ -50,7 +50,7 @@ const Contact = () => {
             </p>
             <form className="contact-form" onSubmit={handleResponse}>
               <div className="form-field">
-                <label htmlFor="name" className='text-left block uppercase tracking-wide text-gray-700 text-lg font-bold mb-2' data-aos="fade-left" data-aos-duration="500">Full Name</label>
+                <label htmlFor="name" className='text-left block uppercase tracking-wide text-lg font-bold mb-2' data-aos="fade-left" data-aos-duration="500">Full Name</label>
                 <input
                   type="text"
                   id="name"
@@ -62,7 +62,7 @@ const Contact = () => {
                 />
               </div>
               <div className="form-field">
-                <label htmlFor="email" className='block uppercase tracking-wide text-gray-700 text-lg font-bold mb-2 text-left' data-aos="fade-left" data-aos-duration="500">Email</label>
+                <label htmlFor="email" className='block uppercase tracking-wide text-lg font-bold mb-2 text-left' data-aos="fade-left" data-aos-duration="500">Email</label>
                 <input
                   type="email"
                   id="email"
@@ -74,7 +74,7 @@ const Contact = () => {
                 />
               </div>
               <div className="form-field">
-                <label htmlFor="message" className='block uppercase tracking-wide text-gray-700 text-lg font-bold mb-2 text-left' data-aos="fade-left" data-aos-duration="500">Message</label>
+                <label htmlFor="message" className='block uppercase tracking-wide text-lg font-bold mb-2 text-left' data-aos="fade-left" data-aos-duration="500">Message</label>
                 <textarea
                   id="message"
                   placeholder="Message"

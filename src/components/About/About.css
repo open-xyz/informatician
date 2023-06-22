@@ -1,7 +1,7 @@
 .about {
-  background-color: #f8f8f8;
+  background-color: var(--bgLight);
   padding: 20px 0;
-  color: #333;
+  color: var(--textLight);
 }
 
 .container {

@@ -1,9 +1,9 @@
 import React from "react";
 import "./Copyright.css";
 
-const CopyrightPage = (props) => {
+const CopyrightPage = () => {
   return (
-    <div className="copyright" style={{background: props.theme==="dark"?"black":"#f8f8f8", color: props.theme==="dark"?"white":"#333"}}>
+    <div className="copyright">
       <div className="copyright-container">
         <h2 className="copyright-title">Copyright Notice</h2>
         <div className="copyright-section">
