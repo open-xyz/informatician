@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./faq.css";
 import helpImage from "../assets/help.png";
 
-const AccordionItem = ({ title, content }) => {
+const AccordionItem = ({ title, content}) => {
   const [expanded, setExpanded] = useState(false);
 
   const toggleAccordion = () => {
@@ -10,7 +10,8 @@ const AccordionItem = ({ title, content }) => {
   };
 
   return (
-    <div className={`accordion-item ${expanded ? 'expanded' : ''}`}>
+    <div className={`accordion-item ${expanded ? 'expanded' : ''}`}
+    >
       <button
         onClick={toggleAccordion}
         aria-expanded={expanded ? 'true' : 'false'}

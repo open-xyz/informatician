@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import ContCard from './ContCard';
 import './Contributor.css';
 
-const Contributors = () => {
+const Contributors = (props) => {
     const [contributors, setContributors] = useState([]);
 
     const fetchContributors = async () => {
@@ -39,6 +39,7 @@ const Contributors = () => {
                         title={contributor.login}
                         commits={contributor.contributions}
                         profile={contributor.html_url} 
+                        theme={props.theme}
                     />
                 ))}
             </div>

@@ -1,90 +1,118 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
-import BookList from "./BookList/BookList";
-import About from "./About/About";
-import Home from "./Home/Home";
-// import BookList from "./BookList";
-// import About from "./About";
-// import Home from "./Home";
-import Contact from "./Contactus";
-import Team from "./Team/Team";
-import TermsAndService from "./Terms&Service";
-import PrivacyPolicy from "./PrivacyPolicy";
-import CookiePolicy from "./Cookie";
-import FaqHelp from "./faq";
-import Develop from "./develop";
-import Error from "./Error";
-import SingleBk from "./Home/SingleBk/SingleBk";
-import SingleBk1 from "./Home/SingleBk/SingleBk1";
-import SingleBk2 from "./Home/SingleBk/SingleBk2";
-import SingleBk3 from "./Home/SingleBk/SingleBk3";
-import SingleBk4 from "./Home/SingleBk/SingleBk4";
-import SingleBk5 from "./Home/SingleBk/SingleBk5";
-import SingleBk6 from "./Home/SingleBk/SingleBk6";
-import SingleBk7 from "./Home/SingleBk/SingleBk7";
-import SingleBk8 from "./Home/SingleBk/SingleBk8";
-import SingleBk9 from "./Home/SingleBk/SingleBk9";
-import AddBooks from "./AddBooks/AddBooks";
-import Success from "./Success";
-import Join from "./JoinOurTeam/Join";
-import Travel from "./Categories/travel";
-import Biography from "./Categories/biography";
-import Career from "./Categories/career";
-import Contemporary from "./Categories/contemporary";
-import Cooking from "./Categories/cooking";
-import Garden from "./Categories/garden";
-import Mystery from "./Categories/mystery";
-import Politics from "./Categories/politics";
-import Science from "./Categories/science";
-import Selfhelp from "./Categories/selfhelp";
-
+const BookList = lazy(() => import("./BookList/BookList"));
+const About = lazy(() => import("./About/About"));
+const Home = lazy(() => import("./Home/Home"));
+const Contact = lazy(() => import("./Contactus"));
+const Team = lazy(() => import("./Team/Team"));
+const TermsAndService = lazy(() => import("./Terms&Service"));
+const PrivacyPolicy = lazy(() => import("./PrivacyPolicy"));
+const CookiePolicy = lazy(() => import("./Cookie"));
+const FaqHelp = lazy(() => import("./faq"));
+const Develop = lazy(() => import("./develop"));
+const Error = lazy(() => import("./Error"));
+const SingleBk = lazy(() => import("./Home/SingleBk/SingleBk"));
+const SingleBk1 = lazy(() => import("./Home/SingleBk/SingleBk1"));
+const SingleBk2 = lazy(() => import("./Home/SingleBk/SingleBk2"));
+const SingleBk3 = lazy(() => import("./Home/SingleBk/SingleBk3"));
+const SingleBk4 = lazy(() => import("./Home/SingleBk/SingleBk4"));
+const SingleBk5 = lazy(() => import("./Home/SingleBk/SingleBk5"));
+const SingleBk6 = lazy(() => import("./Home/SingleBk/SingleBk6"));
+const SingleBk7 = lazy(() => import("./Home/SingleBk/SingleBk7"));
+const SingleBk8 = lazy(() => import("./Home/SingleBk/SingleBk8"));
+const SingleBk9 = lazy(() => import("./Home/SingleBk/SingleBk9"));
+const AddBooks = lazy(() => import("./AddBooks/AddBooks"));
+const Success = lazy(() => import("./Success"));
+const Join = lazy(() => import("./JoinOurTeam/Join"));
+const Travel = lazy(() => import("./Categories/travel"));
+const Biography = lazy(() => import("./Categories/biography"));
+const Career = lazy(() => import("./Categories/career"));
+const Contemporary = lazy(() => import("./Categories/contemporary"));
+const Cooking = lazy(() => import("./Categories/cooking"));
+const Garden = lazy(() => import("./Categories/garden"));
+const Mystery = lazy(() => import("./Categories/mystery"));
+const Politics = lazy(() => import("./Categories/politics"));
+const Science = lazy(() => import("./Categories/science"));
+const Selfhelp = lazy(() => import("./Categories/selfhelp"));
+const CopyrightPage = lazy(() => import("./Copyright/Copyright"));
+const AccessibilityPage = lazy(() => import("./Accessibility/Accessibility"));
 
 function Body(props) {
   return (
     <div>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/books" element={<BookList theme={props.theme} />} />
-        <Route path="/books/book" element={<SingleBk />} />
-        <Route path="/books/book1" element={<SingleBk1 />} />
-        <Route path="/books/book2" element={<SingleBk2 />} />
-        <Route path="/books/book3" element={<SingleBk3 />} />
-        <Route path="/books/book4" element={<SingleBk4 />} />
-        <Route path="/books/book5" element={<SingleBk5 />} />
-        <Route path="/books/book6" element={<SingleBk6 />} />
-        <Route path="/books/book7" element={<SingleBk7 />} />
-        <Route path="/books/book8" element={<SingleBk8 />} />
-        <Route path="/books/book9" element={<SingleBk9 />} />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/books" element={<BookList theme={props.theme} />} />
+          <Route
+            path="/books/book"
+            element={<SingleBk theme={props.theme} />}
+          />
+          <Route
+            path="/books/book1"
+            element={<SingleBk1 theme={props.theme} />}
+          />
+          <Route
+            path="/books/book2"
+            element={<SingleBk2 theme={props.theme} />}
+          />
+          <Route
+            path="/books/book3"
+            element={<SingleBk3 theme={props.theme} />}
+          />
+          <Route
+            path="/books/book4"
+            element={<SingleBk4 theme={props.theme} />}
+          />
+          <Route
+            path="/books/book5"
+            element={<SingleBk5 theme={props.theme} />}
+          />
+          <Route
+            path="/books/book6"
+            element={<SingleBk6 theme={props.theme} />}
+          />
+          <Route
+            path="/books/book7"
+            element={<SingleBk7 theme={props.theme} />}
+          />
+          <Route
+            path="/books/book8"
+            element={<SingleBk8 theme={props.theme} />}
+          />
+          <Route
+            path="/books/book9"
+            element={<SingleBk9 theme={props.theme} />}
+          />
 
-        <Route path="/about" element={<About theme={props.theme} />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/team" element={<Team />} />
-        <Route path="/terms" element={<TermsAndService />} />
-        <Route path="/privacy" element={<PrivacyPolicy />} />
-        <Route path="/cookie" element={<CookiePolicy />} />
-        <Route path="/faq" element={<FaqHelp />} />
-        <Route path="/join" element={<Join />} />
-        <Route path="/develop" element={<Develop />} />
-        <Route path="/addBooks" element={<AddBooks />} />
-        <Route path="/success" element={<Success />} />
+          <Route path="/about" element={<About theme={props.theme} />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/team" element={<Team theme={props.theme} />} />
+          <Route path="/terms" element={<TermsAndService />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/copyright" element={<CopyrightPage />} />
+          <Route path="/cookie" element={<CookiePolicy />} />
+          <Route path="/accessibility" element={<AccessibilityPage />} />
+          <Route path="/faq" element={<FaqHelp />} />
+          <Route path="/join" element={<Join />} />
+          <Route path="/develop" element={<Develop />} />
+          <Route path="/addBooks" element={<AddBooks />} />
+          <Route path="/success" element={<Success />} />
 
-        <Route path="/pcategories/travel" element={<Travel/>}/>
-        <Route path="/pcategories/biography" element={<Biography/>}/>
-        <Route path="/pcategories/contemporary" element={<Contemporary/>}/>
-        <Route path="/pcategories/cooking" element={<Cooking/>}/>
-        <Route path="/pcategories/garden" element={<Garden/>}/>
-        <Route path="/pcategories/mystery" element={<Mystery/>}/>
-        <Route path="/pcategories/politics" element={<Politics/>}/>
-        <Route path="/pcategories/science" element={<Science/>}/>
-        <Route path="/pcategories/selfhelp" element={<Selfhelp/>}/>
-        <Route path="/pcategories/career" element={<Career/>}/>
+          <Route path="/pcategories/travel" element={<Travel />} />
+          <Route path="/pcategories/biography" element={<Biography />} />
+          <Route path="/pcategories/contemporary" element={<Contemporary />} />
+          <Route path="/pcategories/cooking" element={<Cooking />} />
+          <Route path="/pcategories/garden" element={<Garden />} />
+          <Route path="/pcategories/mystery" element={<Mystery />} />
+          <Route path="/pcategories/politics" element={<Politics />} />
+          <Route path="/pcategories/science" element={<Science />} />
+          <Route path="/pcategories/selfhelp" element={<Selfhelp />} />
+          <Route path="/pcategories/career" element={<Career />} />
 
-
-
-        <Route path="*" element={<Error />} />
-
-
-      </Routes>
+          <Route path="*" element={<Error />} />
+        </Routes>
+      </Suspense>
     </div>
   );
 }

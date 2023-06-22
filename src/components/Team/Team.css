@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Proza+Libre&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap');
  .team {
-   background-color: #f8f8f8;
+   background-color: var(--bgLight);
    padding: 50px 0;
  }
 
@@ -31,8 +31,8 @@
   padding: 10px 20px;
   font-size: 16px;
   font-weight: 600;
-  background-color: black;
-  color: white;
+  background-color: var(--black);
+  color: var(--white);
   border: none;
   border-radius: 5px;
   cursor: pointer;

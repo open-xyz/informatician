@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 // import appstore from "../../assets/AppStore_Icon.png";
 import NewsLetter from "./NewsLetter/NewsLetter";
 import { Link, useLocation } from "react-router-dom";
+import "./Footer.css";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -23,7 +24,7 @@ const Footer = (props) => {
 
       <NewsLetter />
 
-      <footer className="bg-blue-50" style={{background: props.theme==="dark"?"black":"", color: props.theme==="dark"?"white":""}}>
+      <footer>
         <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
           <div className="md:flex md:justify-between">
             <div className="mb-6 md:mb-0">
@@ -33,21 +34,21 @@ const Footer = (props) => {
                   className="h-8 mr-3 "
                   alt="Informatician logo" style={{filter: props.theme==="dark"?"invert(1)":""}}
                 />
-                <span className="self-center text-3xl font-bold hover:text-gray-600 whitespace-nowrap">
+                <span className="self-center text-3xl font-bold whitespace-nowrap">
                   Informatician
                 </span>
               </Link>
             </div>
             <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
               <div>
-              <h2 className={`mb-6 text-m font-bold text-${props.theme==="dark"?"white":"gray"}-900 uppercase `}>
+              <h2 className={`mb-6 text-m font-bold uppercase `}>
                   About
                 </h2>
-                <ul className="text-gray-600 font-medium">
+                <ul className="font-medium">
                   <li className="mb-4">
                     <Link
                       to="./about"
-                      className="hover:underline hover:text-gray-900"
+                      className="hover:underline"
                     >
                       About us
                     </Link>
@@ -55,7 +56,7 @@ const Footer = (props) => {
                   <li className="mb-4">
                     <Link
                       to="./team"
-                      className="hover:underline  hover:text-gray-900"
+                      className="hover:underline"
                     >
                       Our Team
                     </Link>
@@ -63,7 +64,7 @@ const Footer = (props) => {
                   <li className="mb-4">
                     <Link
                       to="./contact"
-                      className="hover:underline  hover:text-gray-900"
+                      className="hover:underline "
                     >
                       Contact Us
                     </Link>
@@ -71,7 +72,7 @@ const Footer = (props) => {
                   <li>
                     <Link
                       to="/join"
-                      className="hover:underline  hover:text-gray-900"
+                      className="hover:underline "
                     >
                       Join our team!
                     </Link>
@@ -79,22 +80,22 @@ const Footer = (props) => {
                 </ul>
               </div>
               <div>
-                <h2 className={`mb-6 text-m font-bold text-${props.theme==="dark"?"white":"gray"}-900 uppercase `}>
+                <h2 className={`mb-6 text-m font-bold `}>
                   Support
                 </h2>
-                <ul className="text-gray-600  font-medium">
+                <ul className="  font-medium">
                   <li className="mb-4">
                     <Link
                       to="./faq"
-                      className="hover:underline  hover:text-gray-900"
+                      className="hover:underline "
                     >
                       Help/FAQ
                     </Link>
                   </li>
                   <li className="mb-4">
                     <Link
-                      to="/develop"
-                      className="hover:underline  hover:text-gray-900"
+                      to="/accessibility"
+                      className="hover:underline "
                     >
                       Accessibility
                     </Link>
@@ -102,7 +103,7 @@ const Footer = (props) => {
                   <li className="mb-4">
                     <Link
                       to="/develop"
-                      className="hover:underline   hover:text-gray-900"
+                      className="hover:underline  "
                     >
                       Publishers
                     </Link>
@@ -110,7 +111,7 @@ const Footer = (props) => {
                   <li>
                     <Link
                       to="/develop"
-                      className="hover:underline  hover:text-gray-900"
+                      className="hover:underline "
                     >
                       AdChoices
                     </Link>
@@ -118,14 +119,14 @@ const Footer = (props) => {
                 </ul>
               </div>
               <div>
-                <h2 className={`mb-6 text-m font-bold text-${props.theme==="dark"?"white":"gray"}-900 uppercase `}>
+                <h2 className={`mb-6 text-m font-bold `}>
                   Legal
                 </h2>
-                <ul className="text-gray-600  font-medium">
+                <ul className="  font-medium">
                   <li className="mb-4">
                     <Link
                       to="./privacy"
-                      className="hover:underline  hover:text-gray-900"
+                      className="hover:underline "
                     >
                       Privacy Policy
                     </Link>
@@ -133,15 +134,15 @@ const Footer = (props) => {
                   <li className="mb-4">
                     <Link
                       to="./terms"
-                      className="hover:underline  hover:text-gray-900"
+                      className="hover:underline "
                     >
                       Terms &amp; Conditions
                     </Link>
                   </li>
                   <li className="mb-4">
                     <Link
-                      to="#"
-                      className="hover:underline  hover:text-gray-900"
+                      to="./copyright"
+                      className="hover:underline "
                     >
                       Copyright
                     </Link>
@@ -149,26 +150,27 @@ const Footer = (props) => {
                   <li>
                     <Link
                       to="./cookie"
-                      className="hover:underline  hover:text-gray-900"
+                      className="hover:underline "
                     >
                       Cookie Preference
                     </Link>
+
                   </li>
                 </ul>
               </div>
             </div>
           </div>
-          <hr className="my-6 border-black sm:mx-auto  lg:my-8" />
+          <hr className="my-6 sm:mx-auto  lg:my-8" style={{borderColor: "var(--black)"}}/>
           <div className="sm:flex sm:items-center sm:justify-between">
-            <span className={`text-sm font-bold text-${props.theme==="dark"?"white":"gray"}-900  sm:text-center `}>
+            <span className={`text-sm font-bold   sm:text-center `}>
               © {year}{" "}
-              <a href="/" className="hover:underline  hover:text-gray-600">
+              <a href="/" className="hover:underline">
                 Informatician™
               </a>
               . All Rights Reserved.
             </span>
             <div className="flex mt-0 space-x-6 sm:justify-center sm:mt-0 mr-14 2xl:mr-0">
-              <Link to="/develop" className={`text-${props.theme==="dark"?"white":"gray"}-900 hover:text-blue-600`} >
+              <Link to="/develop" className={` hover:text-blue-600`} >
                 <svg
                   className="w-6 h-6"
                   fill="currentColor"
@@ -182,7 +184,7 @@ const Footer = (props) => {
               <Link
                 to="https://github.com/rohansx/informatician"
                 target="blank"
-                className={`text-${props.theme==="dark"?"white":"gray"}-900 hover:text-green-900`}
+                className={` hover:text-green-900`}
               >
                 <svg
                   className="w-6 h-6"
@@ -198,7 +200,7 @@ const Footer = (props) => {
                 </svg>
                 <span className="sr-only">GitHub account</span>
               </Link>
-              <Link to="#" className={`text-${props.theme==="dark"?"white":"gray"}-900 hover:text-red-900`}>
+              <Link to="#" className={` hover:text-red-900`}>
                 <svg
                   className="w-6 h-6"
                   fill="currentColor"

@@ -20,7 +20,7 @@ const About = (props) => {
   }, []);
 
   return (
-    <div className="about" style={{background: props.theme==="dark"?"black":"#f8f8f8", color: props.theme==="dark"?"white":"#333"}}>
+    <div className="about">
       <div className="w-11/12 flex flex-wrap mx-auto justify-center items-center mt-28 mb-5 max-w-screen-2xl">
         <div className="md:w-1/2 w-11/12" data-aos="fade-left" data-aos-duration="500">
           <img src={aboutUs} className="w-11/12" alt="about us" />
@@ -40,7 +40,7 @@ const About = (props) => {
         </div>
       </div>
       <ScrollToTopButton />
-      <Feature theme={props.theme} />
+      <Feature />
       <Testimonial />
       <Download />
     </div>

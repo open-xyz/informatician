@@ -5,7 +5,7 @@ import abk4 from "../../../assets/audiobks/abk4.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark } from "@fortawesome/free-regular-svg-icons";
 
-export default function SingleBk() {
+export default function SingleBk(props) {
   return (
     <div className="single-view">
       <div className="container-fluid">
@@ -15,19 +15,19 @@ export default function SingleBk() {
               <div className="space hide"></div>
               <div className="left-wrapper-content">
                 <div className="first-section">
-                  <span className="first-type">Audiobook</span>
+                  <span className="first-type" style={{ color: props.theme === "dark" ? 'white' : '' }}>Audiobook</span>
                 </div>
                 <h1 className="bk-name">
                   Building a StoryBrand: Clarify Your Message So Customers Will
                   Listen
                 </h1>
                 <div className="publication">
-                  <p className="pub-name">
+                  <p className="pub-name" style={{ color: props.theme === "dark" ? 'white' : '' }}>
                     By
                     <Link
+                      style={{ color: props.theme === "dark" ? 'white' : '', marginLeft: "5px" }}
                       className="pub-link"
                       to="/books/book4"
-                      style={{ marginLeft: "5px" }}
                     >
                       <span className="d-flex">
                         <span className="child">
@@ -47,7 +47,7 @@ export default function SingleBk() {
                     />
                   </div>
                   <p className="rating-count">
-                    <Link className="pub-link" to="/books/book4">
+                    <Link className="pub-link" to="/books/book4" style={{ color: props.theme === "dark" ? 'white' : '' }}>
                       <span className="d-flex">
                         <span className="child">(1,103 ratings)</span>
                       </span>
@@ -61,7 +61,7 @@ export default function SingleBk() {
                   ></div>
                 </span>
                 <div style={{ marginBottom: "56px" }}>
-                  <h2 className="abt-bk">About this Book</h2>
+                  <h2 className="abt-bk" style={{ color: props.theme === "dark" ? 'white' : '' }}>About this Book</h2>
                   <div style={{ marginTop: "8px", fontSize: "1rem" }}>
                     <div className="theory">
                       <p>
@@ -104,11 +104,11 @@ export default function SingleBk() {
                   <div className="bk-desc">
                     <div className="lang">
                       <span className="first-lang">Language</span>
-                      <span className="second-lang">English</span>
+                      <span className="second-lang" style={{ color: props.theme === "dark" ? 'white' : '' }}>English</span>
                     </div>
                     <div className="lang">
                       <span className="first-lang">Publisher</span>
-                      <Link className="pub-link" to="/books/book4">
+                      <Link className="pub-link" to="/books/book4" style={{ color: props.theme === "dark" ? 'white' : '' }}>
                         <span className="d-flex">
                           <span className="child">
                             HarperCollins Leadership Audio
@@ -118,11 +118,11 @@ export default function SingleBk() {
                     </div>
                     <div className="lang">
                       <span className="first-lang">Release Date</span>
-                      <span className="second-lang">Oct 17, 2001</span>
+                      <span className="second-lang" style={{ color: props.theme === "dark" ? 'white' : '' }}>Oct 17, 2001</span>
                     </div>
                     <div className="lang">
                       <span className="first-lang">ISBN</span>
-                      <span className="second-lang">9780718074326</span>
+                      <span className="second-lang" style={{ color: props.theme === "dark" ? 'white' : '' }}>9780718074326</span>
                     </div>
                   </div>
                 </div>
@@ -183,10 +183,10 @@ export default function SingleBk() {
                             <div>
                               <FontAwesomeIcon
                                 icon={faBookmark}
-                                style={{ height: "24px" }}
+                                style={{ height: "24px", color: props.theme === "dark" ? 'white' : '' }}
                               />
                             </div>
-                            <div className="label">Save for later</div>
+                            <div className="label" style={{ color: props.theme === "dark" ? 'white' : '' }}>Save for later</div>
                           </div>
                         </button>
                       </li>

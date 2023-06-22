@@ -17,12 +17,45 @@
   box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
   color: var(--textLight-secconday);
 }
-
 .testimonial.dark-mode {
   background-color: var(--bgDark-secondary); 
   color: var(--textDark-secconday); 
+=======
+.swiper-slide {
+  margin-bottom: 40px !important;
+  border: none !important;
+  box-shadow: none !important;
 }
-
+.titles   h1 {
+color: blue;
+margin-bottom: -20px;
+}
+.titles p{
+  font-size: 1.2rem;
+}
+.titles .testimonial p{
+  font-size: 1.2rem;
+  text-align: center;
+}
+.testimonial{
+  padding-top: 20px;
+   height: 500px;
+   width: 500px;
+  background-color: var(--bgLight-secondary);
+    padding-bottom: 30px; 
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+}
+.images img{
+  height:0px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.testimonial:hover{
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+.swiper-slide:hover {
+  box-shadow: none !important;
+  transform: none !important;
+}
 .image {
   height: 160px;
   width: 160px;

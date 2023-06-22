@@ -1,8 +1,9 @@
 import React from 'react';
 import './Contributor.css';
+
 const ContCard = (props) => {
   var x = '';
-  const { image, title, commits, profile} = props;
+  const { image, title, commits, profile } = props;
   if (commits === 1) {
     var x = 'commit';
   } else {
@@ -16,8 +17,10 @@ const ContCard = (props) => {
   return (
     <>
       <div
-        className='card'>
-        <img className='profile' src={`https://images.weserv.nl/?output=webp&url=${image}`} alt={title} />
+        className='card' style={{ border: props.theme === "dark" ? '2px solid white' : '2px solid black' }}>
+        <img className='profile' src={`https://images.weserv.nl/?output=webp&url=${image}`} alt={title} 
+        style={{ border: props.theme === "dark" ? '2px solid white' : '2px solid black' }}
+        />
         <div className='content'>
           <h1 className='text'>{title}</h1>
           <p>
@@ -25,7 +28,10 @@ const ContCard = (props) => {
           </p>
         </div>
         <div>
-          <button className='view_button' onClick={() => openContributorProfile(profile)} >View</button>
+          <button className='view_button' onClick={() => openContributorProfile(profile)} 
+          style={{ border: props.theme === "dark" ? '2px solid white' : '2px solid black'
+        }}
+          >View</button>
         </div>
       </div>
     </>
