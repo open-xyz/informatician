@@ -37,6 +37,11 @@
   background-color: var(--bgLight-primary);
   /* color: var(--textLight); */
 }
+.form-input.inputField{
+  border: 1px solid red;
+    opacity: 1 !important;
+    transform: translate(0) scale(1) !important;
+}
 
 .message-input {
   width: 100%;
