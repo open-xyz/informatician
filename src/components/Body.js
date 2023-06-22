@@ -1,5 +1,6 @@
 import React, { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
+import PublishersPage from "./Publishers/Publishers";
 const BookList = lazy(() => import("./BookList/BookList"));
 const About = lazy(() => import("./About/About"));
 const Home = lazy(() => import("./Home/Home"));
@@ -97,7 +98,7 @@ function Body(props) {
           <Route path="/join" element={<Join />} />
           <Route path="/develop" element={<Develop />} />
           <Route path="/addBooks" element={<AddBooks />} />
-          <Route path="/success" element={<Success />} />
+          <Route path="/publishers" element={<PublishersPage theme={props.theme} />} />
 
           <Route path="/pcategories/travel" element={<Travel />} />
           <Route path="/pcategories/biography" element={<Biography />} />
