@@ -110,7 +110,7 @@ const Footer = (props) => {
                   </li>
                   <li>
                     <Link
-                      to="/develop"
+                      to="/adchoices"
                       className="hover:underline "
                     >
                       AdChoices
