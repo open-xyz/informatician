@@ -16,20 +16,8 @@ jobs:
 
       - name: Add 'gssoc23' Label to PRs
         run: |
-          npm install @actions/github
-          node -e "
-            const { Octokit } = require('@actions/github');
-            const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
-
-            const prNumber = process.env.GITHUB_EVENT_PULL_REQUEST_NUMBER;
-            const label = 'gssoc23';
-
-            octokit.rest.issues.addLabels({
-              owner: process.env.GITHUB_REPOSITORY_OWNER,
-              repo: process.env.GITHUB_REPOSITORY,
-              issue_number: prNumber,
-              labels: [label]
-            });
-          "
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          curl -X POST \
+            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            -d '{"labels": ["gssoc23"]}' \
+            "https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.pull_request.number }}/labels"
