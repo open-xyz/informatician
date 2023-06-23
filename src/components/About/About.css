@@ -75,6 +75,9 @@
     font-size: 16px;
   }
 }
+.Testimonial{
+  margin-left: 50%;
+}
 
 /* Animation styles */
 [data-aos] {
