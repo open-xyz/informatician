@@ -45,18 +45,16 @@
   /* Center slide text vertically */
   display: flex;
   justify-content: center;
-  transition: all 3s ease;
   align-items: center;
   flex-direction: column;
-  -webkit-transition-property: all;
-  -webkit-transition-duration: 0.4s;
-  -webkit-transition-timing-function: ease-in;
+  transition: transform 0.8s ease, box-shadow 0.2s ease;
 }
 
-.swiper-slide:hover{
+.swiper-slide:hover {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-  transform: scale(1.002);
+  transform: scale(1.02);
 }
+
 .swiper-slide img {
   display: block;
   width: 100%;
