@@ -41,7 +41,7 @@ const About = (props) => {
       </div>
       <ScrollToTopButton />
       <Feature />
-      <Testimonial />
+      <div className="Testimonial"><Testimonial /></div>
       <Download />
     </div>
   );
