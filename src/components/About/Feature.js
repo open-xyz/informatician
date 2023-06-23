@@ -5,8 +5,8 @@ import MoneyOffIcon from '@mui/icons-material/MoneyOff';
 import PeopleIcon from '@mui/icons-material/People';
 import EmailIcon from '@mui/icons-material/Email';
 import DraftsIcon from '@mui/icons-material/Drafts';
-import ReadingChallengeImage from '../../assets/ebooks/ReadingChallenge.png'; 
-import ProgressTrackingImage from '../../assets/ProgressTracking.jpg';
+import ReadingChallengeIcon from '@mui/icons-material/EmojiEvents'; // Imported ReadingChallenge icon from Material-UI Icons
+import ProgressTrackingIcon from '@mui/icons-material/Timeline'; // Imported ProgressTracking icon from Material-UI Icons
 
 import "./Feature.css"
 
@@ -24,7 +24,7 @@ export default function Feature() {
         Upload Books
       </div>
       <div className="card col-lg-2 cl-md-3 col-sm-4">
-      <MoneyOffIcon className="dollar icons text-warning"/>
+        <MoneyOffIcon className="dollar icons text-warning"/>
         Free of Cost
       </div>
       <div className="card col-lg-2 cl-md-3 col-sm-4">
@@ -37,14 +37,13 @@ export default function Feature() {
         Newsletter
       </div>
       <div className="letter card col-lg-2 cl-md-3 col-sm-4">
-        <img src={ReadingChallengeImage} alt="Reading Challenge" className="readingChallenge-icon" /> {/* Use the imported image */}
+        <ReadingChallengeIcon className="icons readingChallenge" /> {/* Replaced with ReadingChallengeIcon */}
         Reading Challenge
       </div>
       <div className="progress-tracking card col-lg-2 cl-md-3 col-sm-4">
-        <img src={ProgressTrackingImage} alt="Progress Tracking" className="progressTracking-image" /> {/* Use the imported image */}
+        <ProgressTrackingIcon className="icons progressTracking" /> {/* Replaced with ProgressTrackingIcon */}
         Progress Tracking
       </div>
-    
     </div>
   );
 };
