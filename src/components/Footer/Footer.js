@@ -102,7 +102,7 @@ const Footer = (props) => {
                   </li>
                   <li className="mb-4">
                     <Link
-                      to="/develop"
+                      to="/publishers"
                       className="hover:underline  "
                     >
                       Publishers
