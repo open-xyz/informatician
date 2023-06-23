@@ -1,5 +1,6 @@
 import React, { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
+import AdChoices from "./AdChoices/AdChoices";
 import PublishersPage from "./Publishers/Publishers";
 const BookList = lazy(() => import("./BookList/BookList"));
 const About = lazy(() => import("./About/About"));
@@ -99,6 +100,7 @@ function Body(props) {
           <Route path="/develop" element={<Develop />} />
           <Route path="/addBooks" element={<AddBooks />} />
           <Route path="/publishers" element={<PublishersPage theme={props.theme} />} />
+          <Route path="/adchoices" element={<AdChoices theme={props.theme} />} />
 
           <Route path="/pcategories/travel" element={<Travel />} />
           <Route path="/pcategories/biography" element={<Biography />} />

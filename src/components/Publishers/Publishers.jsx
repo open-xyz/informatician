@@ -34,7 +34,7 @@ const PublishersPage = () => {
                     <h3 className="publishers-section-title">Reporting and Analytics</h3>
                     <div className="publishers-content">
                         <p>
-                            AWe provide publishers with comprehensive reporting and analytics tools to track the performance of their content on our platform. Publishers can access data regarding readership, engagement, and other key metrics, empowering them to make informed decisions and optimize their content strategy.
+                            We provide publishers with comprehensive reporting and analytics tools to track the performance of their content on our platform. Publishers can access data regarding readership, engagement, and other key metrics, empowering them to make informed decisions and optimize their content strategy.
                         </p>
                     </div>
                 </div>
