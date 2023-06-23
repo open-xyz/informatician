@@ -59,6 +59,7 @@ export default function Testimonial() {
       <p className="text-center mt-2 mb-5">
         What Our Clients Say About The Books. Reviews And Comments
       </p>
+    <div className="swiper">
       <Swiper
         slidesPerView={1}
         spaceBetween={30}
@@ -102,6 +103,7 @@ export default function Testimonial() {
           </SwiperSlide>
         ))}
       </Swiper>
+      </div>
     </div>
   );
 }
