@@ -64,15 +64,14 @@ const Contact = () => {
   return (
     <div className="contact">
       <div className="container">
-        <div className="contact-content">
-          <div className="contact-text">
-            <h2
+        <div class="c_head">
+        <h1
               className="contact-title"
               data-aos="fade-down"
               data-aos-duration="500"
             >
               Contact Us
-            </h2>
+            </h1>
             <p
               className="contact-description"
               data-aos="fade-down"
@@ -81,7 +80,11 @@ const Contact = () => {
               We'd love to hear from you! Reach out to us for any inquiries,
               feedback, or collaboration opportunities.
             </p>
-
+        </div>
+     
+        <div className="contact-content">
+          <div className="contact-text">
+          
             {success && (
               <p className="text-green-600 text-[18px] font-18 text-left mb-3">
                 {success}
