@@ -52,7 +52,9 @@
   box-shadow: none !important;
   transform: none !important;
 }
-
+.swiper{
+  margin-left: 35%;
+}
 .swiper-slide .image {
   display: block;
   width: 8rem;
@@ -73,7 +75,6 @@
   margin: 0 80px;
   transition: 0.2s;
 }
-
 .custom .swiper-button-prev:hover,
 .custom .swiper-button-next:hover {
   background-color: rgba(0, 0, 0, 0.2);
