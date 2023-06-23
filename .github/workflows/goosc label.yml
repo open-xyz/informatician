@@ -15,21 +15,21 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Add 'gssoc23' Label to PRs
-        uses: actions/github-script@v6
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            const { owner, repo } = context.repo;
-            const prNumber = context.payload.pull_request.number;
+        run: |
+          npm install @actions/github
+          node -e "
+            const { Octokit } = require('@actions/github');
+            const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
+
+            const prNumber = process.env.GITHUB_EVENT_PULL_REQUEST_NUMBER;
             const label = 'gssoc23';
 
-            const addLabelParams = {
-              owner: owner,
-              repo: repo,
+            octokit.rest.issues.addLabels({
+              owner: process.env.GITHUB_REPOSITORY_OWNER,
+              repo: process.env.GITHUB_REPOSITORY,
               issue_number: prNumber,
               labels: [label]
-            };
-
-            await github.issues.addLabels(addLabelParams);
-
-            console.log(`Added the 'gssoc23' label to PR #${prNumber}.`);
+            });
+          "
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
