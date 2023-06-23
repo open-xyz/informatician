@@ -14,27 +14,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-
-      - name: Install dependencies
-        run: npm install @actions/github@5.3.0
-
       - name: Add 'gssoc23' Label to PRs
-        run: |
-          const { Octokit } = require("@actions/github");
-          const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
-
-          const prNumber = process.env.GITHUB_EVENT_PULL_REQUEST_NUMBER;
-          const label = "gssoc23";
-
-          octokit.rest.issues.addLabels({
-            owner: process.env.GITHUB_REPOSITORY_OWNER,
-            repo: process.env.GITHUB_REPOSITORY,
-            issue_number: prNumber,
-            labels: [label],
-          });
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: octokit/request-action@v2.x
+        with:
+          route: POST /repos/${{ github.repository }}/issues/${{ github.event.pull_request.number }}/labels
+          headers: |
+            {
+              "authorization": "Bearer ${{ secrets.GITHUB_TOKEN }}",
+              "accept": "application/vnd.github.v3+json"
+            }
+          body: |
+            {
+              "labels": ["gssoc23"]
+            }
