@@ -1,0 +1,151 @@
+.reading-challenge-container {
+  max-width: 600px;
+  margin: 50px auto; /* Add margin to move the section down */
+  padding: 20px;
+  display: flex; /* Add flex display */
+  flex-direction: column; /* Arrange items vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+}
+
+.reading-challenge-container h1 {
+  margin-top: 20px; /* Add margin-top to create a line gap */
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+.reading-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.books-read,
+.reading-goal,
+.reading-progress {
+  flex-basis: 30%;
+}
+
+.books-read h2,
+.reading-goal h2,
+.reading-progress h2 {
+  margin-bottom: 10px;
+}
+
+.books-read-count {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.increment-button,
+.decrement-button {
+  font-size: 20px;
+  padding: 5px 10px;
+  border: none;
+  background-color: #eee;
+  cursor: pointer;
+}
+
+.increment-button:hover,
+.decrement-button:hover {
+  background-color: #ccc;
+}
+
+.increment-button:disabled,
+.decrement-button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+.reading-goal input {
+  width: 100%;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.reading-progress {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #4caf50;
+}
+
+.progress-percentage {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #555;
+}
+
+.book-form {
+  margin-bottom: 20px;
+}
+
+.book-form h2 {
+  margin-bottom: 10px;
+}
+
+.book-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.book-form input[type="text"] {
+  width: 100%;
+  padding: 5px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.book-form button {
+  font-size: 16px;
+  padding: 5px 10px;
+  border: none;
+  background-color: #4caf50;
+  color: #fff;
+  cursor: pointer;
+}
+
+.book-form button:hover {
+  background-color: #45a049;
+}
+
+.book-list {
+  margin-bottom: 20px;
+}
+
+.book-list h2 {
+  margin-bottom: 10px;
+}
+
+.book-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.book-list li {
+  margin-bottom: 5px;
+}
+
+.score {
+  margin-bottom: 20px;
+}
+
+.score h2 {
+  margin-bottom: 10px;
+}
