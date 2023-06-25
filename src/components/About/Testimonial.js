@@ -1,9 +1,5 @@
 import React from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import './Testimonial.css';
-
-AOS.init();
 
 const testimonials = [
   {
@@ -12,22 +8,25 @@ const testimonials = [
     job: '- Project Admin',
     image: 'https://avatars.githubusercontent.com/u/33249782?v=4',
     quote:
-    "This application is excellent! It's like the Netflix of books! As a college student, this app has greatly aided me in reading science and mathematics. I have encountered no issues and found most of the books I needed. Thanks! I genuinely adore this app!"  },
+      "This application is excellent! It's like the Netflix of books! As a college student, this app has greatly aided me in reading science and mathematics. I have encountered no issues and found most of the books I needed. Thanks! I genuinely adore this app!",
+  },
   {
     id: 2,
     name: 'Deepak',
     job: '- Project Collaborator',
     image: 'https://avatars.githubusercontent.com/u/96341431?v=4',
     quote:
-    "The assortment of ebooks and audiobooks is abundant. I have discovered and saved numerous books to read and listen to that would have otherwise cost me a fortune elsewhere. There's no comparison at all!"  },
+      "The assortment of ebooks and audiobooks is abundant. I have discovered and saved numerous books to read and listen to that would have otherwise cost me a fortune elsewhere. There's no comparison at all!",
+  },
   {
     id: 3,
     name: 'Siddhant',
     job: '- Project Mentor',
     image: 'https://avatars.githubusercontent.com/u/85052056?v=4',
     quote:
-    "From significant literary works and comprehensive historical and scientific studies to popular fiction and self-help books, it's remarkable how much there is to discover on Informatician. Fantastic!"  },
-  //add more testimonials here
+      "From significant literary works and comprehensive historical and scientific studies to popular fiction and self-help books, it's remarkable how much there is to discover on Informatician. Fantastic!",
+  },
+  // Add more testimonials here
 ];
 
 export default function Testimonial() {
@@ -39,12 +38,7 @@ export default function Testimonial() {
       </p>
       <div className="con_container">
         {testimonials.map((testimonial) => (
-          <div
-            key={testimonial.id}
-            className="card"
-            data-aos="fade-up"
-            data-aos-duration="500"
-          >
+          <div key={testimonial.id} className="card">
             <img
               className="profile"
               src={testimonial.image}
