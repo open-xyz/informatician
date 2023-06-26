@@ -4,8 +4,18 @@ import ReactStars from "react-rating-stars-component";
 import ebk5 from "../../../assets/ebooks/ebk5.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark } from "@fortawesome/free-regular-svg-icons";
+import { useState } from "react";
 
 export default function SingleBk(props) {
+
+  function handleClick(){
+    setBookmarks(bookmarks)
+    setColor("aqua")
+  }
+
+  const[bookmarks, setBookmarks] = useState([]);
+  const[color, setColor] = useState("white");
+
   return (
     <div className="single-view">
       <div className="container-fluid">
@@ -173,8 +183,9 @@ export default function SingleBk(props) {
                           <div style={{ display: "flex", maxWidth: "190px" }}>
                             <div>
                               <FontAwesomeIcon
+                                style={{ color: props.theme === "dark" ? 'white' : '', height: "24px", backgroundColor: color }}
                                 icon={faBookmark}
-                                style={{ height: "24px", color: props.theme === "dark" ? 'white' : '' }}
+                                onClick={() => {handleClick()}}
                               />
                             </div>
                             <div style={{ color: props.theme === "dark" ? 'white' : '' }} className="label">Save for later</div>
