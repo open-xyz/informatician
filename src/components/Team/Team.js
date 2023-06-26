@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./Team.css";
-import teamImage from "../../assets/mainPages/opensrc.png";
+import teamImage from "../../assets/mainPages/opensrc.webp";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Contributor from "./Contributor";

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 
-// import playstore from "../../assets/logo_play_store.png";
-// import appstore from "../../assets/AppStore_Icon.png";
+// import playstore from "../../assets/logo_play_store.webp";
+// import appstore from "../../assets/AppStore_Icon.webp";
 import NewsLetter from "./NewsLetter/NewsLetter";
 import { Link, useLocation } from "react-router-dom";
 import { BsDiscord, BsGithub, BsTwitter } from "react-icons/bs";

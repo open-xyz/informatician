@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import AppleIcon from "@mui/icons-material/Apple";
-import logo from "../../assets/logos/logo.png";
-import mobile from "../../assets/mobile.png";
+import logo from "../../assets/logos/logo.webp";
+import mobile from "../../assets/mobile.webp";
 import "./Download.css";
 import "aos/dist/aos.css";
 

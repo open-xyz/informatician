@@ -93,7 +93,7 @@ export default function BookList(props) {
             />
             <button type="submit" id="search-button-2" onClick={handleClick}>
               <div className="search-icon">
-                <img src="/search.png" alt="search"/>
+                <img src="/search.webp" alt="search"/>
               </div>
             </button>
           </div>
