@@ -63,7 +63,7 @@ export default function Navbar(props) {
         </Link>
         <div>
           <form className="search-bar m-0" onSubmit={handleSubmit}>
-            <input type="text" placeholder="search" name="q" onChange={search} />
+            <input type="text" placeholder="search" name="q" onChange={search} className="text-black" />
             <button type="submit">
               <i className="fa-solid fa-search"></i>
             </button>
