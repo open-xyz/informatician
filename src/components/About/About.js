@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./About.css";
-import aboutUs from "../../assets/mainPages/aboutUs.png";
+import aboutUs from "../../assets/mainPages/aboutUs.webp";
 import { useMediaQuery } from "react-responsive";
 import ScrollToTopButton from "../ScrollButton";
 import Feature from "./Feature";
