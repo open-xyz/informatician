@@ -55,7 +55,7 @@ export default function NavItems(props) {
                 <div>
                     <Link to="/bookmark">
                     <FontAwesomeIcon
-                        style={{ color: props.theme === "dark" ? 'white' : '', height: "24px", marginLeft: 180 }}
+                        style={{ color: props.theme === "dark" ? 'white' : '', height: "24px" }}
                         icon={faBookmark}
                     />
                     </Link>

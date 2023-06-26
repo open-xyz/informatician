@@ -4,6 +4,9 @@ import uploadicon from "../../assets/logos/add.png";
 import { searchBooks } from "../../utils/searchBooks";
 import NavItems from "./NavItems/NavItems.js";
 import "./Navbar.css";
+import lightLogo from "../../assets/logos/light_logo.png";
+import darkLogo from "../../assets/logos/dark_logo.png";
+
 function handleSubmit(event) {
   event.preventDefault(); // Prevent the default form submission
   event.target.elements.q.value = "";
@@ -24,14 +27,16 @@ export default function Navbar(props) {
       throw err;
     }
   };
+  const themeImage = props.theme === "dark" ? darkLogo : lightLogo;
+
 
   return (
-    <nav className="rounded-t-none fixed-top box-shadow: 0 4px 6px -1px" style={{ background: props.theme === "dark" ? "#001229" : "#eff6ff" }}>
+    <nav className="rounded-t-none  fixed-top box-shadow: 0 4px 6px -1px" style={{ background: props.theme === "dark" ? "#001229" : "#eff6ff" }}>
       <Link to="/" className="logo">
         <img
-          src="https://user-images.githubusercontent.com/33249782/240937486-d84c477d-63f4-4558-ae04-454d803a5b1f.png"
-          className=" h-11 w-15 ml-8  hover:shadow "
-          alt="Informatician logo" style={{ filter: props.theme === "dark" ? "invert(1)" : "" }}
+          src= {themeImage}
+          className=" h-12 w-15 ml-1 mb-3  hover:shadow " 
+          alt="Informatician logo"
         />
       </Link>
 
