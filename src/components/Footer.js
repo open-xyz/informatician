@@ -1,7 +1,7 @@
 import React from "react";
 import "./Custom.css";
-import playstore from "../assets/logo_play_store.png";
-import appstore from "../assets/AppStore_Icon.png";
+import playstore from "../assets/logo_play_store.webp";
+import appstore from "../assets/AppStore_Icon.webp";
 import { BsFacebook, BsInstagram, BsTwitter, BsGithub } from "react-icons/bs";
 import Newsletter from "./Newsletter";
 import { Link } from "react-router-dom";

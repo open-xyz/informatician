@@ -2,8 +2,8 @@ import React from "react";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import workplace from "./workplace.jpeg";
-import workinginoffice from "./workinginoffice.png";
-import quotationmark from "./quotationmark.png";
+import workinginoffice from "./workinginoffice.webp";
+import quotationmark from "./quotationmark.webp";
 
 const scrolldown = () => {
   const jobsSection = document.getElementById("jobs-section");

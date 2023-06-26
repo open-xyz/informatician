@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./faq.css";
-import helpImage from "../assets/mainPages/help.png";
+import helpImage from "../assets/mainPages/help.webp";
 
 const AccordionItem = ({ title, content}) => {
   const [expanded, setExpanded] = useState(false);

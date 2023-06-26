@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import uploadicon from "../../assets/logos/add.png";
+import uploadicon from "../../assets/logos/add.webp";
 import { searchBooks } from "../../utils/searchBooks";
 import NavItems from "./NavItems/NavItems.js";
 import "./Navbar.css";

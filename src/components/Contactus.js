@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaDiscord, FaTwitter, FaGithub } from "react-icons/fa";
-import contactImage from "../assets/mainPages/contact-us.png";
+import contactImage from "../assets/mainPages/contact-us.webp";
 import "./Contactus.css";
 import { Link } from "react-router-dom";
 import AOS from "aos";
