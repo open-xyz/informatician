@@ -35,48 +35,50 @@ const AddBooks = () => {
   };
   return (
     <div>
-      <div className="addBooks-container">
-        <div className="add-books text-white">
-          <h1 className="text-dark form-title">Add Books</h1>
-          <form className="Boxx" onSubmit={handleSubmit}>
-            <input
-              className="Inputt"
-              type="text"
-              placeholder="Book Name"
-              ref={bookName}
-            />
-            <input
-              className="Inputt"
-              type="text"
-              placeholder="Author Name"
-              ref={authorName}
-            />
-            <input
-              className="Inputt"
-              type="text"
-              placeholder="Publisher"
-              ref={publisher}
-            />
-            <input
-              className="Inputt"
-              type="number"
-              placeholder="Pages"
-              ref={pages}
-            />
-            <input
-              className="Inputt"
-              type="text"
-              placeholder="Img Url"
-              ref={img}
-            />
-            <button className="Buttonn" type="submit">
-              Add Book
-            </button>
-          </form>
+      <div className="addbook_main">
+        <div className="addBooks-container">
+          <div className="add-books text-white">
+            <h1 className="text-dark form-title">Add Books</h1>
+            <form className="Boxx" onSubmit={handleSubmit}>
+              <input
+                className="Inputt"
+                type="text"
+                placeholder="Book Name"
+                ref={bookName}
+              />
+              <input
+                className="Inputt"
+                type="text"
+                placeholder="Author Name"
+                ref={authorName}
+              />
+              <input
+                className="Inputt"
+                type="text"
+                placeholder="Publisher"
+                ref={publisher}
+              />
+              <input
+                className="Inputt"
+                type="number"
+                placeholder="Pages"
+                ref={pages}
+              />
+              <input
+                className="Inputt"
+                type="text"
+                placeholder="Img Url"
+                ref={img}
+              />
+              <button className="Buttonn" type="submit">
+                Add Book
+              </button>
+            </form>
+          </div>
         </div>
+        <Upload />
+        <ToastContainer />
       </div>
-      <Upload />
-      <ToastContainer />
     </div>
   );
 };
