@@ -1,5 +1,5 @@
 import React from 'react';
-import construct from '../assets/construct.png';
+import construct from '../assets/error/construct.png';
 import './develop.css'
 
 const Develop = (props) => {

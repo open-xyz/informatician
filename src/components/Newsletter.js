@@ -22,7 +22,7 @@ class Newsletter extends React.Component {
 
       if(response.status===200){
         alert("Subscribed");
-        emailInput="";
+        // emailInput="";
       }
       else alert("Already Subscribed")
     } 
