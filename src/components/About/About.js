@@ -8,6 +8,7 @@ import Testimonial from "./Testimonial";
 import Download from "./Download";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import './Feature.css'
 
 const About = (props) => {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
@@ -40,7 +41,7 @@ const About = (props) => {
         </div>
       </div>
       <ScrollToTopButton />
-      <Feature />
+      <Feature theme={props.theme} />
       <div className="Testimonial"><Testimonial /></div>
       <Download />
     </div>
