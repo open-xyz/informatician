@@ -5,7 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import LibraryBooksIcon from "@mui/icons-material/LibraryBooks";
 import CloseIcon from "@mui/icons-material/Close";
 import axios from "axios";
-import './Upload.css';
+
 const FileUploadComponent = () => {
   const [file, setFile] = useState(null);
   const navigate = useNavigate();

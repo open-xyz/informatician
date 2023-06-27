@@ -31,20 +31,25 @@ app.use('/api/book', book.router)
 app.use('/api', newsLetter.router)
 app.use('/sendMail', mailRouter)
 
-app.use("/uploads", express.static(path.join(__dirname, "public/uploads")));
+app.use( express.static(path.join(__dirname, "public/uploads")));
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, "public/uploads")
   },
   filename: (req, file, cb) => {
-    cb(null, file.originalname)
+    const uniqueSuffix = Date.now() + "-" + Math.round(Math.random() * 1e9);
+    const fileExtension = path.extname(file.originalname);
+    const uniqueFilename = file.originalname.replace(fileExtension, "") + "-" + uniqueSuffix + fileExtension;
+    cb(null, uniqueFilename);
   },
 })
 
 const upload = multer({ storage: storage })
 
 app.post("/api/upload", upload.single("file"), (req, res) => {
+  console.log(req);
+  console.log(req.file);
   try{
     return res.status(201).json("PDF uploaded successfully");
   }catch(err){
