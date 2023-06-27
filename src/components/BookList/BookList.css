@@ -14,7 +14,7 @@
 
 .book-list-heading {
   font-size: 48px;
-  color: #6DA9E4;
+  color: #6da9e4;
   font-weight: bold;
   margin-bottom: 10px;
   text-align: center;
@@ -24,10 +24,10 @@
 }
 .smalltext {
   font-family: "Times New Roman", Times, serif;
-  font-family: 20px;
+  font-size: 20px;
   text-align: center;
   margin-bottom: 40px;
-  color: #8445ff;
+  color: #161617;
 }
 form {
   width: 100%;
@@ -37,56 +37,32 @@ form {
   background: #fff;
   display: block;
   margin: auto;
-  width: fit-content;
+  width: 50%;
   height: 50px;
   border-radius: 30px;
-  padding: 10px 20px;
+  padding: 5px 20px;
   align-items: center;
   box-shadow: rgba(6, 215, 230, 0.3) 0px 1px 2px 0px,
-  rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   margin-bottom: 10px;
   justify-content: center;
   cursor: pointer;
   transition: 0.8s;
-  box-shadow:  4px 4px 6px 0 #6DA9E4,
-              -4px -4px 6px 0 #6DA9E4, 
-    inset -4px -4px 6px 0 #6DA9E4,
-    inset 4px 4px 6px 0 #6DA9E4;
 }
-.searchbar:hover > .search-input{
+.searchbar:hover > .search-input {
   width: 250px;
 }
-.searchbar .search-input{
+.searchbar .search-input {
   background: transparent;
   border: none;
-  outline:none;
+  outline: none;
   width: 0px;
   font-weight: 500;
   font-size: 16px;
   transition: 0.8s;
-  
   color: black;
 }
 
-
-/* .search-input {
-  padding: 8px;
-  font-size: 14px;
-  color: #333;
-  border-radius: 5px;
- 
-  width: 300px;
-} */
-@keyframes hoverShake {
-  0% {transform: skew(0deg,0deg);}
-  25% {transform: skew(5deg, 5deg);}
-  75% {transform: skew(-5deg, -5deg);}
-  100% {transform: skew(0deg,0deg);}
-}
-.searchbar:hover{
-  animation: hoverShake 0.15s linear 3;
-  /* margin-left: 350px; */
-}
 #search-button-2 {
   padding: 5px;
   background-color: transparent;
@@ -149,10 +125,10 @@ form {
 }
 
 #sub-head {
-  font-size: 26px;
+  font-size: 45px;
   color: rgb(36, 36, 202);
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 45px;
   margin-top: 2rem;
 }
 
@@ -168,45 +144,48 @@ form {
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
+  padding-bottom: 50px;
 }
 
 .card {
-  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
-    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
-    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
   flex: 0 0 300px;
-  margin-right: 20px;
+  margin-right: 25px;
   scroll-snap-align: start;
   border-radius: 10px;
   padding: 20px;
+
   transition: 1s ease;
-  border: 2px solid blue;
 }
 .card:hover {
-  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
-    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
-    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
-  transform: scale(0.9);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+  transform: translateY(-20px);
 }
 .card img {
   width: 100px; /* Adjust the size as needed */
   height: 100px; /* Adjust the size as needed */
   border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   object-fit: cover;
+  margin-bottom: 10px;
 }
 
 .card p {
+  margin-top: 5px;
   text-align: center;
 }
 
 .card h4 {
+  color: #3c5f81;
   font-weight: 500;
+  font-size: 21px;
   margin-top: 5px;
   margin-bottom: 5px;
 }
 
 .card-content {
-  margin-top: 10px;
+  margin-top: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
