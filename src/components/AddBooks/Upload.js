@@ -52,8 +52,7 @@ export default function Upload() {
           toast.error("Something went wrong!");
           console.log(err);
         }
-      }
-      else{
+      } else {
         toast.error("Add book deatils!");
       }
     } else {
@@ -66,7 +65,7 @@ export default function Upload() {
       className="upload p-10 d-flex flex-column justify-content-center
     align-items-center"
     >
-      <h1 className="fs-1 fw-bolder">Upload Books</h1>
+      <h2 className="fs-2 fw-bolder">Upload Books</h2>
       <div
         className="upload-box my-5 p-10 d-flex flex-column justify-content-center
     align-items-center"
@@ -94,7 +93,11 @@ export default function Upload() {
           Submit
         </button>
       </div>
-      <p>Supported file types: pdf, txt, doc, ppt, xls, docx, and more</p>
+
+      <p className="mt-0">
+        Supported file types: pdf, txt, doc, ppt, xls, docx, and more
+      </p>
+
       <ToastContainer />
     </div>
   );
