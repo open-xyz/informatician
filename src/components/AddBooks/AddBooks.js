@@ -12,6 +12,7 @@ const AddBooks = () => {
   const publisher = useRef();
   const pages = useRef();
   const img = useRef();
+  const category=useRef();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -22,6 +23,7 @@ const AddBooks = () => {
       publisher: publisher.current.value,
       pages: pages.current.value,
       img: img.current.value,
+      category:category.current.value,
     };
 
     try {
@@ -33,6 +35,10 @@ const AddBooks = () => {
       console.log(err.message);
     }
   };
+  const categories = ["Art", "Biography", "Business", "Children's", "Classics", "Christian",
+    "Comics", "Cookbooks", "Ebooks", "Fantasy", "Fiction", "Novel", "History", "Horror", "Music", "Mystery",
+    "Non-Fiction", "Poetry", "Psychology", "Prejudice", "Romance", "Science", "Thriller", "Universe"];
+  
   return (
     <div>
       <div className="addbook_main">
@@ -70,6 +76,13 @@ const AddBooks = () => {
                 placeholder="Img Url"
                 ref={img}
               />
+              <select className="Inputt" ref={category}>
+                {categories.map((category, index) => (
+                  <option key={index} value={category}>
+                    {category}
+                  </option>
+                ))}
+              </select>
               <button className="Buttonn" type="submit">
                 Add Book
               </button>
