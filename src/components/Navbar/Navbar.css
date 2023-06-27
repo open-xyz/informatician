@@ -35,6 +35,7 @@ nav {
     font-size: 20px;
     display: flex !important;
     flex-direction: row;
+    margin-left: 10px;
 }
 
 #nav-items{
@@ -42,6 +43,8 @@ nav {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 #nav-items li{

@@ -6,6 +6,8 @@ import NewsLetter from "./NewsLetter/NewsLetter";
 import { Link, useLocation } from "react-router-dom";
 import { BsDiscord, BsGithub, BsTwitter } from "react-icons/bs";
 import "./Footer.css";
+import lightLogo from "../../assets/logos/light_logo.png";
+import darkLogo from "../../assets/logos/dark_logo.png";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -19,6 +21,9 @@ function ScrollToTop() {
 
 const Footer = (props) => {
   let year = new Date().getFullYear();
+
+  const themeImage = props.theme === "dark" ? darkLogo : lightLogo;
+
   return (
     <>
       <ScrollToTop />
@@ -30,14 +35,16 @@ const Footer = (props) => {
           <div className="md:flex md:justify-between">
             <div className="mb-6 md:mb-0">
               <Link to="/" className="flex items-center">
+              <Link to="/" className="logo">
                 <img
-                  src="https://user-images.githubusercontent.com/33249782/240937486-d84c477d-63f4-4558-ae04-454d803a5b1f.png"
-                  className="h-8 mr-3 "
-                  alt="Informatician logo" style={{ filter: props.theme === "dark" ? "invert(1)" : "" }}
-                />
-                <span className="self-center text-3xl font-bold whitespace-nowrap transition-all duration-300 ease-in-out">
+                src= {themeImage}
+                className=" h-12 w-17 ml-1 mb-2.5  hover:shadow " 
+                alt="Informatician logo"
+              />
+              </Link>
+                {/* <span className="self-center text-3xl font-bold whitespace-nowrap transition-all duration-300 ease-in-out">
                   Informatician
-                </span>
+                </span> */}
               </Link>
             </div>
             <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
