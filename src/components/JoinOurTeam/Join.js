@@ -1,9 +1,9 @@
-import React from "react";
-import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
-import workplace from "./workplace.jpeg";
-import workinginoffice from "./workinginoffice.webp";
+import Stack from "@mui/material/Stack";
+import React from "react";
 import quotationmark from "./quotationmark.webp";
+import workinginoffice from "./workinginoffice.webp";
+import workplace from "./workplace.jpeg";
 
 const scrolldown = () => {
   const jobsSection = document.getElementById("jobs-section");
@@ -18,13 +18,13 @@ const scrolldown = () => {
 const Join = () => {
   return (
     // Header Section
-    <div className="join py-5 ">
-      <section className="bg-pink-900 text-white text-sm  ">
-        <div className="container flex flex-col  justify-start">
-          <h2 className="text-4xl font-mono mt-2 md:my-0">
-            WHY <strong className="text-3xl"> INFORMATICIAN? </strong>
+    <div className="join py-5 font-serif">
+      <section className="bg-pink-900 text-white text-sm mt-10 pb-24 pt-10 md:px-10">
+        <div className="container flex flex-col justify-start">
+          <h2 className="text-4xl mt-2 md:my-0">
+            WHY INFORMATICIAN?
           </h2>
-          <p className=" mt-4 md:max-w-2xl">
+          <p className="mt-4 md:max-w-2xl text-base">
             If you love working with smart, motivated people, you’ll love
             working at Informatician. We value our employees, we demonstrate
             accountability, and we take action. We’re one team with a common
@@ -45,18 +45,19 @@ const Join = () => {
           </div>
         </div>
       </section>
+
       <div className="text-center mt-10 mb-10 md:mb-3 text-4xl">
         <h2>
           <strong>BENEFITS</strong>
         </h2>
       </div>
       {/* Benefits Section */}
-      <section className="flex justify-center md:mx-20 items-center ">
-        <ul className=" grid grid-cols-1 md:grid-cols-2 gap-20 md:max-w-5xl   ">
-          <li className=" md:my-4">
+      <section className="flex justify-center md:mx-20 mx-4 items-center">
+        <ul className=" grid grid-cols-1 md:grid-cols-2 gap-20 md:max-w-5xl">
+          <li className="border-2 rounded-xl py-6 px-4 hover:scale-105 ease-in-out transition-transform hover:shadow-2xl shadow-slate-800">
             <img
               src="https://s-f.scribdassets.com/images/about/03_careers_B_icon_benefits_03_health.svg?a974a5f44"
-              className="mx-auto w-24 "
+              className="mx-auto w-24 hover:animate-spin"
               alt="Medical, dental and vision"
             />
             <div>
@@ -71,10 +72,10 @@ const Join = () => {
               </p>
             </div>
           </li>
-          <li className=" md:my-4">
+          <li className="border-2 rounded-xl py-6 px-4 hover:scale-105 ease-in-out transition-transform hover:shadow-2xl shadow-slate-800">
             <img
               src="https://s-f.scribdassets.com/images/about/03_careers_B_icon_benefits_01_DEI.svg?510379e31"
-              className="mx-auto"
+              className="mx-auto w-24 hover:animate-spin"
               alt="Diversity, Equity, and Inclusion"
             />
             <div>
@@ -91,14 +92,14 @@ const Join = () => {
               </p>
             </div>
           </li>
-          <li className=" ">
+          <li className="border-2 rounded-xl py-6 px-4 hover:scale-105 ease-in-out transition-transform hover:shadow-2xl shadow-slate-800">
             <img
               src="https://s-f.scribdassets.com/images/about/03_careers_B_icon_benefits_07_wellbeing.svg?a974a5f44"
-              className="mx-auto"
+              className="mx-auto w-24 hover:animate-spin"
               alt="Wellbeing"
             />
             <div>
-              <h2 className="text-2xl font-bold  font-bold text-center mt-6 mb-3">
+              <h2 className="text-2xl font-bold text-center mt-6 mb-3">
                 Wellbeing
               </h2>
               <p className="text-center ">
@@ -108,10 +109,10 @@ const Join = () => {
               </p>
             </div>
           </li>
-          <li className="">
+          <li className="border-2 rounded-xl py-6 px-4 hover:scale-105 ease-in-out transition-transform hover:shadow-2xl shadow-slate-800">
             <img
               src="https://s-f.scribdassets.com/images/about/03_careers_B_icon_benefits_01_DEI.svg?510379e31"
-              className="mx-auto"
+              className="mx-auto w-24 hover:animate-spin"
               alt="Monthly stipend"
             />
             <div>
@@ -127,10 +128,10 @@ const Join = () => {
               </p>
             </div>
           </li>
-          <li className="  ">
+          <li className="border-2 rounded-xl py-6 px-4 hover:scale-105 ease-in-out transition-transform hover:shadow-2xl shadow-slate-800">
             <img
               src="https://s-f.scribdassets.com/images/about/03_careers_B_icon_benefits_06_parental.svg?a974a5f44"
-              className="mx-auto"
+              className="mx-auto w-24 hover:animate-spin"
               alt="Parental leave"
             />
             <div>
@@ -144,10 +145,10 @@ const Join = () => {
               </p>
             </div>
           </li>
-          <li className="">
+          <li className="border-2 rounded-xl py-6 px-4 hover:scale-105 ease-in-out transition-transform hover:shadow-2xl shadow-slate-800">
             <img
               src="https://s-f.scribdassets.com/images/about/03_careers_B_icon_benefits_05_pto.svg?a974a5f44"
-              className="mx-auto"
+              className="mx-auto w-24 hover:animate-spin"
               alt="Time off"
             />
             <div>
@@ -164,31 +165,33 @@ const Join = () => {
           </li>
         </ul>
       </section>
+
       {/* Images-Section  */}
-      <section className="mt-10">
-        <div className=" flex justify-center  items-center">
-          <ul className=" grid grid-cols-1 md:grid-cols-2">
-            <li className=" ">
+      <section className="mt-20 mx-4">
+        <div className="flex justify-center items-center">
+          <ul className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <li className="mx-auto shadow-xl shadow-slate-800 rounded-2xl">
               <img
                 src={workplace}
-                className=" md:h-80 sm:h-50"
+                className="md:h-80 sm:h-50 rounded-2xl"
                 alt="workplace"
               />
             </li>
-            <li className=" ">
+            <li className="mx-auto shadow-xl shadow-slate-800 rounded-2xl">
               <img
                 src={workinginoffice}
-                className="md:h-80 sm:h-20"
+                className="md:h-80 sm:h-20 rounded-2xl"
                 alt="working in office"
               />
             </li>
           </ul>
         </div>
       </section>
+
       {/* Employee Section */}
-      <section className="  ">
-        <div className="container flex-col">
-          <h2 className=" text-4xl text-center ">
+      <section className="my-20 mx-4">
+        <div className="container flex-col py-10">
+          <h2 className="text-4xl text-center ">
             STRAIGHT FROM <strong> THE SOURCE </strong>
           </h2>
           <p className="text-center text-2xl mt-4 text-mono">
@@ -196,26 +199,27 @@ const Join = () => {
             <strong> but what do our Employees have to say? </strong>
           </p>
         </div>
-        <div className=" flex justify-center items-center">
-          <ul className=" grid grid-cols-2 md:gap-5 md:max-w-3xl ">
-            <li className=" ">
+        <div className="flex justify-center items-center">
+          <ul className="grid grid-cols-1 md:grid-cols-2 gap-10 md:max-w-3xl">
+            <li className="border-2 rounded-2xl p-4 hover:scale-105 ease-in-out transition-transform">
               <img
                 src="https://avatars.githubusercontent.com/u/33249782?v=4"
                 className="ml-5 w-32 sm:w-25 mx-auto rounded-full"
                 alt="Rohan Sharma"
               />
               <div>
-                <p className="ml-5 mt-10 mb-5 text-slate-500">
+                <p className="ml-5 mt-10 text-slate-500">
                   {" "}
-                  <img src={quotationmark} alt="quotation mark"  className=" w-5  mb-2 mr-1 inline"/>
-                 {"  "}
-                   The vibrant and dynamic environment fosters creativity and innovation. Being part of a talented team that is passionate about improving access to knowledge and reading has been incredibly fulfilling.
+                  <img src={quotationmark} alt="quotation mark" className=" w-5 mb-2 mr-1 inline" />
+                  {"  "}
+                  The vibrant and dynamic environment fosters creativity and innovation. Being part of a talented team that is passionate about improving access to knowledge and reading has been incredibly fulfilling.
                   <br></br>
                   <strong className="text-slate-600"> Rohan</strong>
                 </p>
               </div>
             </li>
-            <li className=" ">
+
+            <li className="border-2 rounded-2xl p-4 hover:scale-105 ease-in-out transition-transform">
               <img
                 src="https://images.weserv.nl/?output=webp&url=https://avatars.githubusercontent.com/u/96341431?v=4"
                 className="ml-5 w-32 mx-auto rounded-full"
@@ -223,7 +227,7 @@ const Join = () => {
               />
               <div>
                 <p className="ml-5 mt-10 mb-5 text-slate-500">
-                  <img src={quotationmark} alt="quotation mark"  className=" w-5 mr-1 mb-2 inline "/>
+                  <img src={quotationmark} alt="quotation mark" className=" w-5 mr-1 mb-2 inline " />
                   {"  "}
                   If you're motivated and persistent, your impact will
                   definitely be felt by the company. There is nothing more
@@ -237,10 +241,11 @@ const Join = () => {
           </ul>
         </div>
       </section>
+
       {/* Community Section */}
-      <section className="bg-pink-900 text-white  ">
-        <div className="container flex-col">
-          <h2 className=" text-4xl text-center ">
+      <section className="bg-pink-900 text-white py-10 md:px-0 px-2">
+        <div className="container flex-col pb-6">
+          <h2 className=" text-4xl text-center">
             <strong> We're a community </strong>
           </h2>
           <p className="text-center text-2xl mt-4 text-mono">
@@ -248,15 +253,15 @@ const Join = () => {
           </p>
         </div>
         <div className=" flex justify-center items-center">
-          <ul className=" grid grid-cols-1 md:grid-cols-3 gap-5 max-w-5xl ">
+          <ul className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl ">
             <li className=" ">
               <img
                 src="https://s-f.scribdassets.com/images/about/03_careers_E_img_01_@2x.jpg?a974a5f44"
-                className="md:ml-5"
+                className="rounded-3xl"
                 alt="Community"
               />
               <div>
-                <h2 className="font-bold  text-center mt-6 mb-3">Community</h2>
+                <h2 className="font-bold text-center mt-6 mb-3 text-lg uppercase">Community</h2>
                 <p className="ml-5 mb-5">
                   {" "}
                   Community and culture are paramount at Informatician. We
@@ -275,11 +280,11 @@ const Join = () => {
             <li className=" ">
               <img
                 src="https://s-f.scribdassets.com/images/about/03_careers_E_img_02_@2x.jpg?a974a5f44"
-                className="mx-auto  "
+                className="rounded-3xl mx-auto  "
                 alt="Characters with character"
               />
               <div>
-                <h2 className="font-bold  text-center mt-6 mb-3">
+                <h2 className="font-bold  text-center mt-6 mb-3 text-lg uppercase">
                   Characters with character
                 </h2>
                 <p className="ml-5 mb-5">
@@ -298,11 +303,11 @@ const Join = () => {
             <li className=" ">
               <img
                 src="https://s-f.scribdassets.com/images/about/03_careers_E_img_03_@2x.jpg?a974a5f44"
-                className="mx-auto"
+                className="rounded-3xl mx-auto"
                 alt="Growth Mentality"
               />
               <div>
-                <h2 className=" font-bold  font-bold text-center mt-6 mb-3">
+                <h2 className=" font-bold text-center mt-6 mb-3 text-lg uppercase">
                   Growth Meantality
                 </h2>
                 <p className="ml-5 mb-5">
@@ -319,10 +324,11 @@ const Join = () => {
           </ul>
         </div>
       </section>
+
       {/* Jobs Section */}
-      <section id="jobs-section">
+      <section id="jobs-section" className="pt-20">
         <div className="container flex-col">
-          <h2 className="text-customColor text-4xl text-center font-mono">
+          <h2 className="text-customColor text-4xl text-center">
             READY TO <strong> JOIN US? </strong>
           </h2>
           <p className="text-center text-2xl mt-4">
@@ -332,62 +338,62 @@ const Join = () => {
           </p>
         </div>
       </section>
-      <section className="flex justify-center md:mx-20 items-center jobs ">
+      <section className="flex justify-center md:mx-20 items-center pt-5 mx-4">
         <ul className=" grid grid-cols-1 md:grid-cols-2 gap-20 md:max-w-5xl   ">
-          <li className="">
+          <li className="border-2 p-2 rounded-2xl shadow-xl shadow-slate-800">
             <div>
-              <h2 className="text-2xl font-bold  text-center mt-6 mb-3">
+              <h2 className="text-2xl font-bold text-center mt-2 mb-2">
                 Data Science & Machine learning
               </h2>
-              <p className="text-center "> 3 positions</p>
+              <p className="text-center mb-2"> 3 positions</p>
             </div>
           </li>
-          <li className=" ">
+          <li className="border-2 p-2 rounded-2xl shadow-xl shadow-slate-800">
             <div>
-              <h2 className="font-bold text-2xl text-center mt-6 mb-3">
-                People
-              </h2>
-              <p className="text-center "> 0 position</p>
-            </div>
-          </li>
-          <li className=" ">
-            <div>
-              <h2 className="text-2xl font-bold  font-bold text-center mt-6 mb-3">
-                Engineering
-              </h2>
-              <p className="text-center "> 2 positions</p>
-            </div>
-          </li>
-          <li className="">
-            <div>
-              <h2 className="text-2xl  font-bold  text-center mt-6 mb-3">
-                Marketing
-              </h2>
-              <p className="text-center "> 3 positions</p>
-            </div>
-          </li>
-          <li className="  ">
-            <div>
-              <h2 className="text-2xl  font-bold text-center mt-6 mb-3">
-                Finance and Operations
-              </h2>
-              <p className="text-center "> 5 positions</p>
-            </div>
-          </li>
-          <li className="">
-            <div>
-              <h2 className="text-2xl font-bold  text-center mt-6 mb-3">
+              <h2 className="text-2xl font-bold text-center mt-2 mb-2">
                 Product, Designs, & Analytics
               </h2>
-              <p className="text-center "> 2 positions</p>
+              <p className="text-center mb-2"> 2 positions</p>
             </div>
           </li>
-          <li className="">
+          <li className="border-2 p-2 rounded-2xl shadow-xl shadow-slate-800">
             <div>
-              <h2 className="text-2xl font-sans font-bold  text-center mt-6 mb-3">
+              <h2 className="font-bold text-2xl text-center mt-2 mb-2">
+                People
+              </h2>
+              <p className="text-center mb-2"> 0 position</p>
+            </div>
+          </li>
+          <li className="border-2 p-2 rounded-2xl shadow-xl shadow-slate-800">
+            <div>
+              <h2 className="text-2xl font-bold text-center mt-2 mb-2">
+                Engineering
+              </h2>
+              <p className="text-center mb-2"> 2 positions</p>
+            </div>
+          </li>
+          <li className="border-2 p-2 rounded-2xl shadow-xl shadow-slate-800">
+            <div>
+              <h2 className="text-2xl font-bold  text-center mt-2 mb-2">
+                Marketing
+              </h2>
+              <p className="text-center mb-2"> 3 positions</p>
+            </div>
+          </li>
+          <li className="border-2 p-2 rounded-2xl shadow-xl shadow-slate-800">
+            <div>
+              <h2 className="text-2xl font-bold text-center mt-2 mb-2">
+                Finance and Operations
+              </h2>
+              <p className="text-center mb-2"> 5 positions</p>
+            </div>
+          </li>
+          <li className="border-2 p-2 rounded-2xl shadow-xl shadow-slate-800">
+            <div>
+              <h2 className="text-2xl font-bold text-center mt-2 mb-2">
                 Content Acquisition
               </h2>
-              <p className="text-center "> 1 positions</p>
+              <p className="text-center mb-2"> 1 positions</p>
             </div>
           </li>
         </ul>
