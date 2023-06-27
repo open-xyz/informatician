@@ -46,3 +46,14 @@ exports.deleteBook = async(req,res)=>{
         return res.status(500).json(err);
       }
 }
+
+exports.findbycategory=async(req,res)=>{
+    const category = req.params.category;
+    try {
+        const books = await Book.find({ category: category });
+        console.log(books)
+        res.status(200).json(books);
+    } catch (err) {
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+}
