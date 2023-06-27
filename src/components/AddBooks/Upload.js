@@ -22,8 +22,8 @@ const FileUploadComponent = () => {
         const formData = new FormData();
         formData.append("file", file);
 
-        await axios.post("http://localhost:5000/api/upload", formData);
-        await axios.put("http://localhost:5000/api/book/" + id, {
+        await axios.post("https://informaticonserver.onrender.com/upload", formData);
+        await axios.put("https://informaticonserver.onrender.com/book/" + id, {
           bookpdf: file.name,
         });
         navigate("/success");
