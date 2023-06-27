@@ -24,6 +24,11 @@ const SingleBk6 = lazy(() => import("./Home/SingleBk/SingleBk6"));
 const SingleBk7 = lazy(() => import("./Home/SingleBk/SingleBk7"));
 const SingleBk8 = lazy(() => import("./Home/SingleBk/SingleBk8"));
 const SingleBk9 = lazy(() => import("./Home/SingleBk/SingleBk9"));
+const SingleBk10 = lazy(() => import("./Home/SingleBk/SingleBk10"));
+const SingleBk11 = lazy(() => import("./Home/SingleBk/SingleBk11"));
+const SingleBk12 = lazy(() => import("./Home/SingleBk/SingleBk12"));
+const SingleBk13 = lazy(() => import("./Home/SingleBk/SingleBk13"));
+const SingleBk14 = lazy(() => import("./Home/SingleBk/SingleBk14"));
 const AddBooks = lazy(() => import("./AddBooks/AddBooks"));
 const Success = lazy(() => import("./Success"));
 const Join = lazy(() => import("./JoinOurTeam/Join"));
@@ -86,6 +91,26 @@ function Body(props) {
           <Route
             path="/books/book9"
             element={<SingleBk9 theme={props.theme} />}
+          />
+          <Route
+            path="/books/book10"
+            element={<SingleBk10 theme={props.theme} />}
+          />
+          <Route
+            path="/books/book11"
+            element={<SingleBk11 theme={props.theme} />}
+          />
+          <Route
+            path="/books/book12"
+            element={<SingleBk12 theme={props.theme} />}
+          />
+          <Route
+            path="/books/book13"
+            element={<SingleBk13 theme={props.theme} />}
+          />
+          <Route
+            path="/books/book14"
+            element={<SingleBk14 theme={props.theme} />}
           />
 
           <Route path="/about" element={<About theme={props.theme} />} />
