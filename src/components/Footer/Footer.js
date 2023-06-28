@@ -35,21 +35,37 @@ const Footer = (props) => {
           <div className="md:flex md:justify-between">
             <div className="mb-6 md:mb-0">
               <Link to="/" className="flex items-center">
-              <Link to="/" className="logo">
-                <img
-                src= {themeImage}
-                className=" h-12 w-17 ml-1 mb-2.5  hover:shadow " 
-                alt="Informatician logo"
-              />
-              </Link>
+                <Link to="/" className="logo">
+                  <img
+                    src={themeImage}
+                    className=" h-12 w-17 ml-1 mb-2.5  hover:shadow "
+                    alt="Informatician logo"
+                  />
+                </Link>
                 {/* <span className="self-center text-3xl font-bold whitespace-nowrap transition-all duration-300 ease-in-out">
                   Informatician
                 </span> */}
               </Link>
             </div>
-            <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+            <div className="grid grid-cols-3 gap-8 sm:gap-6 sm:grid-cols-4">
               <div>
-                <h2 className={`mb-6 text-m font-bold uppercase `}>
+                <h2 className={`mb-6 text-m font-bold`}>
+                  Explore
+                </h2>
+                <ul className="font-medium">
+                  <li className="mb-4">
+                    <Link
+                      to="./benefits"
+                      className="transition-all duration-300 ease-in-out"
+                    >
+                      Benefits
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h2 className={`mb-6 text-m font-bold`}>
                   About
                 </h2>
                 <ul className="font-medium">

@@ -52,15 +52,6 @@ export default function NavItems(props) {
                         Contact Us
                     </Link>
                 </li>
-                <li>
-                    <Link
-                        to="/benefits"
-                        className={props.location.pathname === "/benefits" ? "active" : props.theme === "dark" ? "text-white" : "text-dark"}
-                        onClick={props.handleOptionClick}
-                    >
-                        Benefits
-                    </Link>
-                </li>
 
                 <div className="search-container search-mobile-view">
                     <form action="" className="search-bar">
