@@ -1,7 +1,7 @@
 .bg-color {
   float: left;
   width: 100%;
-  height: 173px;
+  height: 183px;
   overflow: hidden;
   position: relative;
   min-height: 173px;
@@ -70,11 +70,14 @@
   font-size: 0.875rem;
   font-weight: 400;
   margin-bottom: 4px;
+  -webkit-line-clamp: 2;
   display: -webkit-box;
+  -webkit-box-pack: center;
+  overflow-wrap: anywhere;
   overflow: hidden;
+  -webkit-box-orient: vertical;
   font-style: normal;
   text-align: left;
-  display: none;
   transition: all 0.8s ease-in-out;
 }
 
