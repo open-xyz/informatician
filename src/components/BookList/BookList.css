@@ -1,5 +1,3 @@
-/* BookList.css */
-
 .book-list-container {
   padding: 100px;
   height: auto;
@@ -180,13 +178,13 @@ form {
   border-radius: 10px;
   padding: 20px;
   transition: 1s ease;
-  border: 2px solid blue;
+  
 }
 .card:hover {
-  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
-    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
-    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
-  transform: scale(1.1);
+  box-shadow: rgba(15, 27, 188, 0.551) 0px 1px 2px, rgba(44, 21, 158, 0.589) 0px 2px 4px,
+    rgba(15, 57, 183, 0.379) 0px 4px 8px, rgba(35, 6, 149, 0.582) 0px 8px 16px,
+    rgba(11, 20, 188, 0.553) 0px 16px 32px, rgba(18, 10, 174, 0.57) 0px 32px 64px;
+  
 }
 .card img {
   width: 100px; /* Adjust the size as needed */
