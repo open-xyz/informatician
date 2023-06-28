@@ -118,7 +118,7 @@ nav {
     border-radius: 60px;
     padding: 7px 20px;
     color: var(--black);
-
+    margin-left: 20px;
 }
 
 .form-switch, .form-check-input {

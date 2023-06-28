@@ -62,7 +62,7 @@ export default function Navbar(props) {
           <img
             src={uploadicon}
             alt="upload icon"
-            className="h-8 mr-3 text-bold  hover:font-bold hover:shadow-md self-center  "
+            className="h-8 mr-6 text-bold  hover:font-bold hover:shadow-md self-center  "
             style={{ filter: props.theme === "dark" ? "invert(1)" : "" }}
           />
         </Link>
