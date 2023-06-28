@@ -24,6 +24,10 @@ const bookSchema = new mongoose.Schema({
   bookpdf: {
     type: String,
     default:"",
+  },
+  category:{
+    type:String,
+    default:"",
   }
 },
 { timestamps: true })

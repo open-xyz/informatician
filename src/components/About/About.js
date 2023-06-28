@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./About.css";
-import aboutUs from "../../assets/aboutUs.png";
+import aboutUs from "../../assets/mainPages/aboutUs.webp";
 import { useMediaQuery } from "react-responsive";
 import ScrollToTopButton from "../ScrollButton";
 import Feature from "./Feature";
@@ -8,6 +8,7 @@ import Testimonial from "./Testimonial";
 import Download from "./Download";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import './Feature.css'
 
 const About = (props) => {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
@@ -40,8 +41,8 @@ const About = (props) => {
         </div>
       </div>
       <ScrollToTopButton />
-      <Feature />
-      <Testimonial />
+      <Feature theme={props.theme} />
+      <div className="Testimonial"><Testimonial /></div>
       <Download />
     </div>
   );

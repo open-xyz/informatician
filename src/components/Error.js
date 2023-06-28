@@ -1,5 +1,5 @@
 import React from "react";
-import pnf from "../assets/pagenotfound.jpg";
+import pnf from "../assets/error/pagenotfound.webp";
 import "./Error.css";
 import { useNavigate } from "react-router-dom";
 

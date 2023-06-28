@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaDiscord, FaTwitter, FaGithub } from "react-icons/fa";
-import contactImage from "../assets/contact-us.png";
+import contactImage from "../assets/mainPages/contact-us.webp";
 import "./Contactus.css";
 import { Link } from "react-router-dom";
 import AOS from "aos";
@@ -64,7 +64,7 @@ const Contact = () => {
   return (
     <div className="contact">
       <div className="container">
-        <div class="c_head">
+        <div className="c_head">
         <h1
               className="contact-title"
               data-aos="fade-down"

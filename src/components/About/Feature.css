@@ -11,8 +11,16 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
-
+.card_outer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
 .feature .card .icons {
   margin-bottom: 20px;
   font-size: 50px;
@@ -20,11 +28,11 @@
 }
 
 .feature .card .book {
-  color: rgb(30, 41, 59);
+  color: #ff6b6b; /* Updated book icon color */
 }
 
 .feature .card .reader {
-  color: crimson;
+  color: #56ccf2; /* Updated reader icon color */
 }
 
 .feature .card .dollar {
@@ -46,6 +54,8 @@
 
 .feature .card:hover .upload {
   animation: moveUp 0.7s linear 0s infinite alternate;
+  background-color: #f1f1f1; /* Set your desired background color */
+  color: #333; /* Set your desired text color */
 }
 
 .feature .card:hover .dollar {
@@ -55,12 +65,23 @@
 .feature .card:hover .reader {
   animation: vibrate 0.5s linear 0s infinite;
 }
-.feature .letter:hover .letterClose {
+
+.feature .card:hover .letterClose {
   display: none;
 }
 
-.feature .letter:hover .letterOpen {
+.feature .card:hover .letterOpen {
   display: flex !important;
+}
+
+.feature .card:hover .readingChallenge {
+  animation: rotate 1s linear 0s infinite;
+  color: #ff9f43; /* Updated reading challenge icon color */
+}
+
+.feature .card:hover .progressTracking {
+  animation: vibrate 0.5s linear 0s infinite;
+  color: #28c76f; /* Updated progress tracking icon color */
 }
 
 @keyframes rotate {

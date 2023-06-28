@@ -1,75 +1,58 @@
-import React, { useState } from "react";
-import "./Testimonial.css";
+import React from 'react';
+import './Testimonial.css';
+
+const testimonials = [
+  {
+    id: 1,
+    name: 'Rohan',
+    job: '- Project Admin',
+    image: 'https://avatars.githubusercontent.com/u/33249782?v=4',
+    quote:
+      "This application is excellent! It's like the Netflix of books! As a college student, this app has greatly aided me in reading science and mathematics. I have encountered no issues and found most of the books I needed. Thanks! I genuinely adore this app!",
+  },
+  {
+    id: 2,
+    name: 'Deepak',
+    job: '- Project Collaborator',
+    image: 'https://avatars.githubusercontent.com/u/96341431?v=4',
+    quote:
+      "The assortment of ebooks and audiobooks is abundant. I have discovered and saved numerous books to read and listen to that would have otherwise cost me a fortune elsewhere. There's no comparison at all!",
+  },
+  {
+    id: 3,
+    name: 'Siddhant',
+    job: '- Project Mentor',
+    image: 'https://avatars.githubusercontent.com/u/85052056?v=4',
+    quote:
+      "From significant literary works and comprehensive historical and scientific studies to popular fiction and self-help books, it's remarkable how much there is to discover on Informatician. Fantastic!",
+  },
+  // Add more testimonials here
+];
 
 export default function Testimonial() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-  };
   return (
-    <div className={`mt-20 mb-28 titles ${isDarkMode ? "dark-mode" : ""}`}>
-      <h1 className="text-center fw-bold fs-1">Our Testimonials</h1>
+    <div className="mt-20 mb-28 titles">
+      <h1 className="heading text-center fw-bold fs-1">Our Core Team</h1>
       <p className="text-center mt-2 mb-5">
-        What Our Clients Say About The Books: Reviews and Comments
+        What Our Core Team Say About The Books.
       </p>
-      <div className="testimonial-container">
-        <div className="testimonial">
-          <img
-            className="image h-44 w-40 object-cover rounded-full"
-            src="https://avatars.githubusercontent.com/u/33249782?v=4"
-            alt="Rohan Sharma"
-          />
-          <p className="testimonial-text">
-            <i className="bx bxs-quote-alt-left quote-icon text-2xl text-blue-600"></i>
-            This app is great! It's like the Netflix of books! As a college
-            student, this app has helped me a lot in reading science and
-            mathematics. I have had zero issues and found most of the books I
-            needed. Thanks! I truly love this app!
-            <i className="bx bxs-quote-alt-right quote-icon text-2xl text-blue-600"></i>
-          </p>
-          <div className="details">
-            <span className="name text-lg font-semibold">Rohan</span>
-            <span className="job text-base font-normal">Project Admin</span>
+      <div className="con_container">
+        {testimonials.map((testimonial) => (
+          <div key={testimonial.id} className="card">
+            <img
+              className="profile"
+              src={testimonial.image}
+              alt={testimonial.name}
+            />
+            <div className="content">
+              <p className="text">{testimonial.quote}</p>
+              <div className="details">
+                <span className="name">{testimonial.name}</span>
+                <span className="job">{testimonial.job}</span>
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="testimonial">
-          <img
-            className="image h-44 w-40 object-cover rounded-full"
-            src="https://avatars.githubusercontent.com/u/96341431?v=4"
-            alt="Deepaksingh Kushwah"
-          />
-          <p className="testimonial-text">
-            <i className="bx bxs-quote-alt-left quote-icon text-3xl text-blue-600"></i>
-            The selection of ebooks and audiobooks is plentiful. I have found
-            and saved so many books to read and listen to that would have
-            otherwise cost me a fortune anywhere else. There’s no contest at
-            all!
-            <i className="bx bxs-quote-alt-right quote-icon text-2xl text-blue-600"></i>
-          </p>
-          <div className="details">
-            <span className="name text-lg font-semibold">Deepak</span>
-            <span className="job text-base font-normal">Project Admin</span>
-          </div>
-        </div>
-        <div className="testimonial">
-          <img
-            className="image h-44 w-40 object-cover rounded-full"
-            src="https://avatars.githubusercontent.com/u/100675296?v=4"
-            alt="Sumit Kumar Rai"
-          />
-          <p className="testimonial-text">
-            <i className="bx bxs-quote-alt-left quote-icon text-3xl text-blue-600"></i>
-            From major literary works and detailed historical and scientific
-            studies to popular fiction and self-help books, it's incredible how
-            much there is to find on Informatician. Fantastic!
-            <i className="bx bxs-quote-alt-right quote-icon text-3xl text-blue-600"></i>
-          </p>
-          <div className="details">
-            <span className="name text-lg font-semibold">Sumit</span>
-            <span className="job text-base font-normal">Contributor</span>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );

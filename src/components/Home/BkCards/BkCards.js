@@ -136,7 +136,7 @@ export default function BkCards(props) {
                     type="Ebook"
                     title="The Perfect Marriage: A Completely Gripping Psychological Suspense"
                     author="Jeneva Rose"
-                    description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odio!"
+                    description="A gripping psychological suspense unveiling the dark secrets of a perfect marriage."
                   />
                   </Link>
                 </SwiperSlide>
@@ -147,7 +147,7 @@ export default function BkCards(props) {
                     type="Audiobook"
                     title="The Last Mrs. Parrish: A Novel"
                     author="Liv Constantine"
-                    description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odio!"
+                    description="A gripping tale of manipulation and revenge in The Last Mrs. Parrish: A Novel."
                   />
                   </Link>
                 </SwiperSlide>
@@ -158,7 +158,7 @@ export default function BkCards(props) {
                     type="Audiobook"
                     title="The Guest List: A Novel"
                     author="Lucy Foley"
-                    description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odio!"
+                    description="A deadly wedding celebration unfolds on a remote island in The Guest List: A Novel."
                   />
                   </Link>
                 </SwiperSlide>
@@ -169,7 +169,7 @@ export default function BkCards(props) {
                     type="Audiobook"
                     title="The Subtle Art of Not Giving a F*ck: A Counterintuitive Approach to Living a Good Life"
                     author="Mark Manson"
-                    description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odio!"
+                    description="Embracing the liberating philosophy of prioritizing what truly matters in life."
                   />
                   </Link>
                 </SwiperSlide>
@@ -180,7 +180,7 @@ export default function BkCards(props) {
                     type="Audiobook"
                     title="Building a StoryBrand: Clarify Your Message So Customers Will Listen"
                     author="Findaway"
-                    description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odio!"
+                    description="Transform your marketing with the power of storytelling in Building a StoryBrand."
                   />
                   </Link>
                 </SwiperSlide>
@@ -191,7 +191,7 @@ export default function BkCards(props) {
                     type="Ebook"
                     title="An Ugly Truth: Inside Facebook's Battle for Domination"
                     author="Sheera Frenkel"
-                    description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odio!"
+                    description="Unveiling Facebook's unsettling rise, An Ugly Truth takes readers inside the battle for domination."
                   />
                   </Link>
                 </SwiperSlide>
@@ -202,7 +202,7 @@ export default function BkCards(props) {
                     type="Ebook"
                     title="Never Split the Difference: Negotiating As If Your Life Depended On It"
                     author="Chris Voss"
-                    description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odio!"
+                    description="Master the art of high-stakes negotiation in Never Split the Difference"
                   />
                   </Link>
                 </SwiperSlide>
@@ -213,7 +213,7 @@ export default function BkCards(props) {
                     type="Ebook"
                     title="Everything Is F*cked: A Book About Hope"
                     author="Mark Manson"
-                    description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odio!"
+                    description="Discover hope in a chaotic world with Everything Is F*cked: A Book About Hope."
                   />
                   </Link>
                 </SwiperSlide>
@@ -224,7 +224,7 @@ export default function BkCards(props) {
                     type="Ebook"
                     title="The Intelligent Investor, Rev. Ed: The Definitive Book on Value Investing"
                     author="Benjamin Graham"
-                    description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odio!"
+                    description="The ultimate guide to value investing, offering timeless wisdom for financial success."
                   />
                   </Link>
                 </SwiperSlide>
@@ -235,7 +235,7 @@ export default function BkCards(props) {
                     type="Ebook"
                     title="Vanderbilt: The Rise and Fall of an American Dynasty"
                     author="Anderson Cooper"
-                    description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odio!"
+                    description="Chronicles the captivating story of the Vanderbilt family, from their astonishing ascent to their eventual downfall."
                   />
                   </Link>
                 </SwiperSlide>

@@ -1,6 +1,8 @@
 import React, { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
+import AdChoices from "./AdChoices/AdChoices";
 import PublishersPage from "./Publishers/Publishers";
+import BookmarkPage from "./Bookmarks/BookmarkPage";
 const BookList = lazy(() => import("./BookList/BookList"));
 const About = lazy(() => import("./About/About"));
 const Home = lazy(() => import("./Home/Home"));
@@ -22,6 +24,11 @@ const SingleBk6 = lazy(() => import("./Home/SingleBk/SingleBk6"));
 const SingleBk7 = lazy(() => import("./Home/SingleBk/SingleBk7"));
 const SingleBk8 = lazy(() => import("./Home/SingleBk/SingleBk8"));
 const SingleBk9 = lazy(() => import("./Home/SingleBk/SingleBk9"));
+const SingleBk10 = lazy(() => import("./Home/SingleBk/SingleBk10"));
+const SingleBk11 = lazy(() => import("./Home/SingleBk/SingleBk11"));
+const SingleBk12 = lazy(() => import("./Home/SingleBk/SingleBk12"));
+const SingleBk13 = lazy(() => import("./Home/SingleBk/SingleBk13"));
+const SingleBk14 = lazy(() => import("./Home/SingleBk/SingleBk14"));
 const AddBooks = lazy(() => import("./AddBooks/AddBooks"));
 const Success = lazy(() => import("./Success"));
 const Join = lazy(() => import("./JoinOurTeam/Join"));
@@ -37,6 +44,7 @@ const Science = lazy(() => import("./Categories/science"));
 const Selfhelp = lazy(() => import("./Categories/selfhelp"));
 const CopyrightPage = lazy(() => import("./Copyright/Copyright"));
 const AccessibilityPage = lazy(() => import("./Accessibility/Accessibility"));
+
 
 function Body(props) {
   return (
@@ -85,6 +93,26 @@ function Body(props) {
             path="/books/book9"
             element={<SingleBk9 theme={props.theme} />}
           />
+          <Route
+            path="/books/book10"
+            element={<SingleBk10 theme={props.theme} />}
+          />
+          <Route
+            path="/books/book11"
+            element={<SingleBk11 theme={props.theme} />}
+          />
+          <Route
+            path="/books/book12"
+            element={<SingleBk12 theme={props.theme} />}
+          />
+          <Route
+            path="/books/book13"
+            element={<SingleBk13 theme={props.theme} />}
+          />
+          <Route
+            path="/books/book14"
+            element={<SingleBk14 theme={props.theme} />}
+          />
 
           <Route path="/about" element={<About theme={props.theme} />} />
           <Route path="/contact" element={<Contact />} />
@@ -99,6 +127,8 @@ function Body(props) {
           <Route path="/develop" element={<Develop />} />
           <Route path="/addBooks" element={<AddBooks />} />
           <Route path="/publishers" element={<PublishersPage theme={props.theme} />} />
+          <Route path="/adchoices" element={<AdChoices theme={props.theme} />} />
+          <Route path="/bookmarks" element={<BookmarkPage theme={props.theme} />} />
 
           <Route path="/pcategories/travel" element={<Travel />} />
           <Route path="/pcategories/biography" element={<Biography />} />
@@ -112,6 +142,7 @@ function Body(props) {
           <Route path="/pcategories/career" element={<Career />} />
 
           <Route path="*" element={<Error />} />
+          <Route path="/success" element={<Success />} />
         </Routes>
       </Suspense>
     </div>

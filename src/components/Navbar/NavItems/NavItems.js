@@ -1,23 +1,25 @@
 import "../Navbar.css";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBookmark } from "@fortawesome/free-regular-svg-icons";
 
 export default function NavItems(props) {
     return (
         <div style={{}}>
             <ul
-                id="nav-items" 
+                id="nav-items"
                 // className={props.clicked ? "nav-active" : ""}
                 style={{
                     marginBottom: 0,
                     transform: (!props.clicked & props.drawer) ? 'translateX(500px)' : 'translateX(0px)',
                     transition: (props.clicked & props.drawer) ? 'transform 0.3s ease-out' : 'transform 0.3s ease-in',
-                    background: props.theme==="dark"?"#001229":"#eff6ff"
+                    background: props.theme === "dark" ? "#001229" : "#eff6ff"
                 }}
             >
                 <li>
                     <Link
                         to="/"
-                        className={props.location.pathname === "/" ? "active" : props.theme==="dark"?"text-white":"text-dark"}
+                        className={props.location.pathname === "/" ? "active" : props.theme === "dark" ? "text-white" : "text-dark"}
                         onClick={props.handleOptionClick}
                     >
                         Home
@@ -26,7 +28,7 @@ export default function NavItems(props) {
                 <li>
                     <Link
                         to="/books"
-                        className={props.location.pathname === "/books" ? "active" : props.theme==="dark"?"text-white":"text-dark"}
+                        className={props.location.pathname === "/books" ? "active" : props.theme === "dark" ? "text-white" : "text-dark"}
                         onClick={props.handleOptionClick}
                     >
                         Books
@@ -35,7 +37,7 @@ export default function NavItems(props) {
                 <li>
                     <Link
                         to="/about"
-                        className={props.location.pathname === "/about" ? "active" : props.theme==="dark"?"text-white":"text-dark"}
+                        className={props.location.pathname === "/about" ? "active" : props.theme === "dark" ? "text-white" : "text-dark"}
                         onClick={props.handleOptionClick}
                     >
                         About
@@ -44,12 +46,20 @@ export default function NavItems(props) {
                 <li>
                     <Link
                         to="/contact"
-                        className={props.location.pathname === "/contact" ? "active" : props.theme==="dark"?"text-white":"text-dark"}
+                        className={props.location.pathname === "/contact" ? "active" : props.theme === "dark" ? "text-white" : "text-dark"}
                         onClick={props.handleOptionClick}
                     >
                         Contact Us
                     </Link>
                 </li>
+                <div>
+                    <Link to="/bookmark">
+                    <FontAwesomeIcon
+                        style={{ color: props.theme === "dark" ? 'white' : '', height: "24px" }}
+                        icon={faBookmark}
+                    />
+                    </Link>
+                </div>
                 <div className="search-container search-mobile-view">
                     <form action="" className="search-bar">
                         <input type="text" placeholder="search..." name="q" />
