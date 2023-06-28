@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import AdChoices from "./AdChoices/AdChoices";
 import PublishersPage from "./Publishers/Publishers";
 import BookmarkPage from "./Bookmarks/BookmarkPage";
+import BenefitsOfReading from "./Benefits/Benefits";
 const BookList = lazy(() => import("./BookList/BookList"));
 const About = lazy(() => import("./About/About"));
 const Home = lazy(() => import("./Home/Home"));
@@ -129,6 +130,7 @@ function Body(props) {
           <Route path="/publishers" element={<PublishersPage theme={props.theme} />} />
           <Route path="/adchoices" element={<AdChoices theme={props.theme} />} />
           <Route path="/bookmarks" element={<BookmarkPage theme={props.theme} />} />
+          <Route path="/benefits" element={<BenefitsOfReading theme={props.theme} />} />
 
           <Route path="/pcategories/travel" element={<Travel />} />
           <Route path="/pcategories/biography" element={<Biography />} />

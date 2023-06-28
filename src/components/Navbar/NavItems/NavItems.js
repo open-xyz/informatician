@@ -52,14 +52,7 @@ export default function NavItems(props) {
                         Contact Us
                     </Link>
                 </li>
-                <div>
-                    <Link to="/bookmark">
-                    <FontAwesomeIcon
-                        style={{ color: props.theme === "dark" ? 'white' : '', height: "24px" }}
-                        icon={faBookmark}
-                    />
-                    </Link>
-                </div>
+
                 <div className="search-container search-mobile-view">
                     <form action="" className="search-bar">
                         <input type="text" placeholder="search..." name="q" />
