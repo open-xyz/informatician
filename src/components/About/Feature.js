@@ -20,37 +20,37 @@ export default function Feature(props) {
       <p className="text-center mt-4 mb-5">Features We provide</p>
 
       <Carousel showArrows={true} showThumbs={false} className="carousel-container" autoPlay={true} interval={2000} infiniteLoop={true}>
-        <div className="card_outer">
-          <div className="card" style={{ background: props.theme === "dark" ? '#161313' : '' }}>
+        <div className="feature_card_outer">
+          <div className="feature_card" style={{ background: props.theme === "dark" ? '#161313' : '' }}>
             <MenuBookIcon className="icons book" />
             <p style={{ fontWeight: 'bold', fontSize: 20 }}>Read Books</p>
           </div>
-          <div className="card" style={{ background: props.theme === "dark" ? '#161313' : '' }}>
+          <div className="feature_card" style={{ background: props.theme === "dark" ? '#161313' : '' }}>
             <UploadIcon className="icons upload text-info" />
             <p style={{ fontWeight: 'bold', fontSize: 20 }}>Upload Books</p>
           </div>
-          <div className="card" style={{ background: props.theme === "dark" ? '#161313' : '' }}>
+          <div className="feature_card" style={{ background: props.theme === "dark" ? '#161313' : '' }}>
             <MoneyOffIcon className="dollar icons text-warning" />
             <p style={{ fontWeight: 'bold', fontSize: 20 }}>Free of Cost</p>
           </div>
         </div>
-        <div className="card_outer">
-          <div className="card" style={{ background: props.theme === "dark" ? '#161313' : '' }}>
+        <div className="feature_card_outer">
+          <div className="feature_card" style={{ background: props.theme === "dark" ? '#161313' : '' }}>
             <PeopleIcon className="icons reader" />
             <p style={{ fontWeight: 'bold', fontSize: 20 }}>Readers Community</p>
           </div>
-          <div className="card" style={{ background: props.theme === "dark" ? '#161313' : '' }}>
+          <div className="feature_card" style={{ background: props.theme === "dark" ? '#161313' : '' }}>
             <EmailIcon className="icons letterClose text-primary" />
             <DraftsIcon className="icons letterOpen text-primary d-none" />
             <p style={{ fontWeight: 'bold', fontSize: 20 }}>Newsletter</p>
           </div>
-          <div className="card" style={{ background: props.theme === "dark" ? '#161313' : '' }}>
+          <div className="feature_card" style={{ background: props.theme === "dark" ? '#161313' : '' }}>
             <ReadingChallengeIcon className="icons readingChallenge" />
             <p style={{ fontWeight: 'bold', fontSize: 20 }}>Reading Challenge</p>
           </div>
         </div>
-        <div className="card_outer">
-          <div className="card" style={{ background: props.theme === "dark" ? '#161313' : '' }}>
+        <div className="feature_card_outer">
+          <div className="feature_card" style={{ background: props.theme === "dark" ? '#161313' : '' }}>
             <ProgressTrackingIcon className="icons progressTracking" />
             <p style={{ fontWeight: 'bold', fontSize: 20 }}>Progress Tracking</p>
           </div>

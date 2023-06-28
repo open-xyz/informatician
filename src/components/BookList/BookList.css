@@ -44,7 +44,6 @@ form {
     rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   margin-bottom: 10px;
   justify-content: center;
-  cursor: pointer;
   transition: 0.8s;
 }
 .searchbar:hover > .search-input {
@@ -55,6 +54,7 @@ form {
   border: none;
   outline: none;
   width: 0px;
+  margin-top: 8px;
   font-weight: 500;
   font-size: 16px;
   transition: 0.8s;
@@ -65,12 +65,13 @@ form {
   padding: 5px;
   background-color: transparent;
   border: none;
+  float: right;
   cursor: pointer;
 }
 
 .search-icon {
-  width: 18px;
-  height: 18px;
+  width: 28px;
+  height: 28px;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -136,7 +137,7 @@ form {
   margin: auto;
 }
 
-.card-container {
+.book_card-container {
   display: flex;
   overflow-x: scroll;
   scroll-behavior: smooth;
@@ -145,14 +146,13 @@ form {
   padding-bottom: 50px;
 }
 
-.card {
+.book_card {
   box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
   flex: 0 0 300px;
   margin-right: 25px;
   scroll-snap-align: start;
   border-radius: 10px;
   padding: 20px;
-
   transition: 1s ease;
   
 }
@@ -163,26 +163,28 @@ form {
   
 
 }
-.card:hover {
+.book_card:hover {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
   transform: translateY(-20px);
 }
-.card img {
-  width: 100px; /* Adjust the size as needed */
-  height: 100px; /* Adjust the size as needed */
-  border-radius: 50%;
+.book_card img {
+ 
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   object-fit: cover;
   margin-bottom: 10px;
 }
-
-.card p {
+.book_quote_img{
+  max-width: 100px; /* Adjust the size as needed */
+  height: 100px; /* Adjust the size as needed */
+  border-radius: 50%;
+}
+.book_card p {
   margin-top: 5px;
   text-align: center;
 }
 
-.card h4 {
+.book_card h4 {
   color: #3c5f81;
   font-weight: 500;
   font-size: 21px;
@@ -190,7 +192,7 @@ form {
   margin-bottom: 5px;
 }
 
-.card-content {
+.book_card-content {
   margin-top: 5px;
   display: flex;
   flex-direction: column;
@@ -199,7 +201,7 @@ form {
 }
 
 /* Hide scrollbars */
-.card-container::-webkit-scrollbar {
+.book_card-container::-webkit-scrollbar {
   display: none;
 }
 
@@ -254,7 +256,7 @@ form {
     font-size: small;
   }
 
-  .card {
+  .book_card {
     flex: 0 0 350px;
   }
 }
