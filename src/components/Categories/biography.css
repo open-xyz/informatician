@@ -1,37 +1,60 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+.biography-container {
+  text-align: center;
+  margin-top: 50px;
+  width: 1200px;
+}
+
+.biography-header {
+  position: relative;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.biography-header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.biography-header:hover {
+  transform: scale(1.05);
+}
+
+.biography-header:hover::after {
+  opacity: 1;
+}
 
 .heading {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  line-height: 1.3;
-  margin: 0;
-  font-size: 3.25rem;
+  font-size: 36px;
+  font-weight: bold;
 }
 
 .subtitle {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  line-height: 1.3;
-  margin: 0;
-  font-size: 1.25rem;
-  color: #555555;
+  font-size: 18px;
+  color: #555;
+  font-weight: bolder;
+  margin-top: 10px;
 }
 
-p {
-  width: 60%; /* Adjust the width for desktop and laptop view */
-}
-
-@media (max-width: 767px) { /* Phone view */
-  p {
-    width: 90%;
-  }
+.show-more-visible {
+  max-height: 500px;
+  /* Adjust the value based on your content */
+  overflow: hidden;
+  transition: max-height 0.5s ease;
 }
 
 .show-more-button {
   display: block;
-  margin: 0 auto; /* Center align the button */
+  margin: 0 auto;
+  /* Center align the button */
   background-color: #007bff;
   color: #fff;
   border: none;
@@ -42,6 +65,7 @@ p {
   cursor: pointer;
 }
 
-.show-more-visible {
-  display: block;
+.show-more-button:hover {
+  background-color: #5d85ce;
+  transition: all 0.3s ease;
 }
