@@ -1,21 +1,22 @@
-## INFORMATICIAN - An open source book reading platform
+<div align="center">
+<h1 > INFORMATICIAN ✨</h2>
+<h3> An open source book reading platform</h3>
+<p>
+Welcome to Informatician, a groundbreaking open-source book platform that combines literature and community for an unparalleled reading experience. Our web application redefines the way you engage with books, offering a comprehensive range of features akin to popular platforms such as Kindle and Scribd. With Informatician, you can not only read books but also rate and review them, fostering a vibrant community where book enthusiasts can share their insights. Explore an extensive collection of books, search for your favorites, and even contribute by adding new titles to the platform. Whether you're a passionate reader, a literary aficionado, or simply hungry for knowledge, Informatician is your ultimate destination for exploration, learning, and meaningful connections.
+</p>
+</div>
 
-- Welcome to Informatician, an open-source book platform where literature meets community, and knowledge knows no bounds. Our web application is designed to revolutionize the way you engage with books, offering a comprehensive book listing and reading experience similar to popular platforms like Kindle and Scribd.
-- The application goes beyond a mere reading experience, as it allows you to rate and review books, fostering a sense of community and sharing insights with fellow book enthusiasts.
-- You can explore a vast collection of books, search for your favorite titles, and even contribute by adding new books to the platform. Whether you're an avid reader, a literary connoisseur, or simply seeking new knowledge, Informatician is here to provide you with an exceptional platform to explore, learn, and connect.
-
----
 
 ## Table of Contents
 
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Installation](#installation)
-- [Contributing](#contributing)
-- [Authors](#authors)
-- [License](#license)
+- Features
+- Tech Stack
+- Installation
+- Contributing
+- Code of Conduct
+- Authors
+- License
 
----
 
 ## Features
 
@@ -28,18 +29,21 @@
 - **Responsive Design**: The application features a responsive design, making it accessible and visually appealing across various devices, including desktops, tablets, and mobile phones.
 
 ## Tech Stack
-
+<div align="center">
+ 
 ![reactjs](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![nodejs](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
 ![expressjs](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
 ![mongodb](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
 
+</div>
+
 ## Note:
 
 Before proceeding with any implementation or changes, it is crucial to thoroughly review the discussion tab and familiarize yourself with the site plan. By doing so, you can align your work with the intended direction of the platform and contribute effectively. Please take the time to read through the discussions and gather necessary information before proceeding. Thank you!
-#330 you can refer
 
-## ✨ How to install it?
+
+## Installation
 
 1. Clone the repository:
 
@@ -99,15 +103,61 @@ Note: If you make any changes to the codebase, you will need to rebuild the Dock
 ```sh
 docker-compose up --build
 ```
+<br>
+
+## ✨ Making your first contribution?
+We welcome contributions from anyone who is interested in improving this project. If you'd like to contribute, here are some ways you can get started:
+
+- Submit a bug report if you find any issues with the application.
+- Suggest new features or improvements.
+- Submit a pull request to fix a bug or add a feature after an issue is assigned to you. 
+
+To submit a pull request, please follow these steps:
+
+1. Fork this repository.
+2. Clone the forked repository.
+```css
+git clone https://github.com/<your-github-username>/informatician
+```
+3. Navigate to the project directory.
+```py
+cd sampark
+```
+4. Create a new branch.
+```css
+git checkout -b <your_branch_name>
+```
+5. Make changes.
+6. View and review your changes locally before pushing it.
+7. Stage your changes and commit.
+```css
+git add -A
+git commit -m "<your_commit_message>"
+```
+8. Push your local commits to the remote repo.
+```css
+git push -u origin <your_branch_name>
+```
+9. Create a pull request from your branch to the original repository.
+10. Congratulations! 🎉 you've made your contribution.
+<br>
+
+We will review your pull request and provide feedback. Once your changes are approved, we will merge them into the main branch.
 
 ## ✨ Contributing Roadmap
 
 - Go through the [CONTRIBUTING.md](https://github.com/poorvika11/informatician/blob/main/CONTRIBUTING.md) file, where all the guidelines have been mentioned that will guide you to make your contribution.
 - Do checkout the [Code of Conduct](https://github.com/poorvika11/informatician/blob/main/STYLE_GUIDE.md) section.
 
-✨ If you have any questions or need assistance, feel free to open an issue in the repository.
+If you have any questions or need assistance, feel free to open an issue in the repository.
 
 Join us on this open-source journey, and let your love for books flourish in a limitless world of possibilities.
+
+<br>
+<h2 align="center">Code of Conduct</h2>
+Contributors are expected to adhere to the following Code of Conduct to ensure a positive and inclusive environment for collaboration
+<br><br>
+ 
 
 ## ✨ Thank You for Your Contribution!
 
