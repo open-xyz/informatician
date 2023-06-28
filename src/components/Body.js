@@ -131,7 +131,7 @@ function Body(props) {
           <Route path="/bookmarks" element={<BookmarkPage theme={props.theme} />} />
 
           <Route path="/pcategories/travel" element={<Travel />} />
-          <Route path="/pcategories/biography" element={<Biography />} />
+          <Route path="/pcategories/biography" element={<Biography theme={props.theme} />} />
           <Route path="/pcategories/contemporary" element={<Contemporary />} />
           <Route path="/pcategories/cooking" element={<Cooking />} />
           <Route path="/pcategories/garden" element={<Garden />} />
