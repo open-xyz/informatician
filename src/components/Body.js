@@ -45,6 +45,7 @@ const Selfhelp = lazy(() => import("./Categories/selfhelp"));
 const CopyrightPage = lazy(() => import("./Copyright/Copyright"));
 const AccessibilityPage = lazy(() => import("./Accessibility/Accessibility"));
 
+
 function Body(props) {
   return (
     <div>
@@ -141,6 +142,7 @@ function Body(props) {
           <Route path="/pcategories/career" element={<Career />} />
 
           <Route path="*" element={<Error />} />
+          <Route path="/success" element={<Success />} />
         </Routes>
       </Suspense>
     </div>
