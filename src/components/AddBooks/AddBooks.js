@@ -27,7 +27,7 @@ const AddBooks = () => {
     };
 
     try {
-      const res = await axios.post("http://localhost:5000/api/book/add", books);
+      const res = await axios.post("https://informaticonserver.onrender.com/api/book/add", books);
       toast.success("Book details added!!Upload the book.");
       localStorage.setItem("bookId", res.data);
     } catch (err) {

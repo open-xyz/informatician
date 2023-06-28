@@ -3,6 +3,7 @@ const Book = require('../model/Book')
 exports.addBook = async(req,res)=>{
     const a=0;
     const newBook = new Book(req.body);
+    console.log(newBook);
     try{
       const savedBook = await newBook.save();
       res.status(201).json(savedBook._id);
