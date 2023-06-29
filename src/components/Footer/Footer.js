@@ -61,6 +61,14 @@ const Footer = (props) => {
                       Benefits
                     </Link>
                   </li>
+                  <li className="mb-4">
+                    <Link
+                      to="./formats"
+                      className="transition-all duration-300 ease-in-out"
+                    >
+                      Book Formats
+                    </Link>
+                  </li>
                 </ul>
               </div>
 

@@ -45,6 +45,7 @@ const Science = lazy(() => import("./Categories/science"));
 const Selfhelp = lazy(() => import("./Categories/selfhelp"));
 const CopyrightPage = lazy(() => import("./Copyright/Copyright"));
 const AccessibilityPage = lazy(() => import("./Accessibility/Accessibility"));
+const BookFormats = lazy(() => import("../components/BookFormats/BookFormats"));
 
 
 function Body(props) {
@@ -131,6 +132,7 @@ function Body(props) {
           <Route path="/adchoices" element={<AdChoices theme={props.theme} />} />
           <Route path="/bookmarks" element={<BookmarkPage theme={props.theme} />} />
           <Route path="/benefits" element={<BenefitsOfReading theme={props.theme} />} />
+          <Route path="/formats" element={<BookFormats theme={props.theme} />} />
 
           <Route path="/pcategories/travel" element={<Travel />} />
           <Route path="/pcategories/biography" element={<Biography theme={props.theme} />} />
