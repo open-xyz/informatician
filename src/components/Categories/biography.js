@@ -3,7 +3,7 @@ import "./biography.css"; // Import the CSS file for styling
 import { Container, Row, Col, Carousel } from "react-bootstrap";
 import BkCards from "../Home/BkCards/BkCards";
 
-function Biography() {
+function Biography(props) {
   const [showMore, setShowMore] = useState(false);
 
   const handleShowMore = () => {
@@ -11,11 +11,9 @@ function Biography() {
   };
 
   return (
-    <Container>
-      <div className="mt-5">
-      <br/>
-      <br/>
-        <h1 className="heading">Biography &amp; Memoir</h1>
+    <Container className="biography-container" style={{ marginTop: 80 }}>
+      <div className="biography-header" style={{ backgroundColor: props.theme === 'dark' ? '#161313' : '#f8f8f8' }}>
+        <h1 className="heading" style={{ color: props.theme === 'dark' ? 'white' : '#333' }} >Biography &amp; Memoir</h1>
         <p className="subtitle">
           Discover captivating life stories and memoirs
         </p>

@@ -16,7 +16,6 @@ export default function CgCards() {
     <>
       <div className="container-xl mt-20 select-none">
         <h1
-          className="bk-head "
           style={{ fontSize: "30px", marginBottom: "50px" }}
         >
           Popular Categories
