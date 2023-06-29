@@ -69,6 +69,14 @@ const Footer = (props) => {
                       Book Formats
                     </Link>
                   </li>
+                  <li className="mb-4">
+                    <Link
+                      to="./genre"
+                      className="transition-all duration-300 ease-in-out"
+                    >
+                      Genre
+                    </Link>
+                  </li>
                 </ul>
               </div>
 
