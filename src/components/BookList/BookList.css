@@ -147,7 +147,7 @@ form {
 }
 
 .book_card {
-  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  box-shadow: rgba(69, 68, 68, 0.283) 0px 25px 20px -20px;
   flex: 0 0 300px;
   margin-right: 25px;
   scroll-snap-align: start;
@@ -164,12 +164,12 @@ form {
 
 }
 .book_card:hover {
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+  box-shadow: rgba(92, 91, 91, 0.601) 0px 20px 20px 0px;
   transform: translateY(-20px);
 }
 .book_card img {
  
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+  box-shadow: rgba(67, 66, 66, 0.4) 0px 2px 4px,
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   object-fit: cover;
   margin-bottom: 10px;
