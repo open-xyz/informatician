@@ -1,4 +1,4 @@
-import CardContent from "../Home/BkCards/CardContent/CardContent"
+import CardContent from "../../components/Home/BkCards/CardContent/CardContent"
 import ebk1 from "../../assets/ebooks/ebk1.webp";
 import { useContext, useState } from "react";
 import DataContext from "../../context/DataProvider";

@@ -7,7 +7,6 @@ import comics from '../../assets/Formats/comics.webp'
 import magazines from '../../assets/Formats/magazines.jpg'
 import "aos/dist/aos.css";
 import AOS from "aos";
-import "aos/dist/aos.css";
 import './BookFormats.css'
 
 const BookFormats = (props) => {

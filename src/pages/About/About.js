@@ -2,13 +2,13 @@ import React, { useEffect } from "react";
 import "./About.css";
 import aboutUs from "../../assets/mainPages/aboutUs.webp";
 import { useMediaQuery } from "react-responsive";
-import ScrollToTopButton from "../ScrollButton";
-import Feature from "./Feature";
-import Testimonial from "./Testimonial";
-import Download from "./Download";
+import ScrollToTopButton from "../../components/ScrollButton/ScrollButton";
+import Feature from "../../components/About/Feature";
+import Testimonial from "../../components/About/Testimonial";
+import Download from "../../components/About/Download";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import './Feature.css'
+import '../../components/About/Feature.css'
 
 const About = (props) => {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });

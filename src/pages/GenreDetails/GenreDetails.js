@@ -8,7 +8,6 @@ import science from '../../assets/Genre/science.jpg'
 import mystery from '../../assets/Genre/mystery.jpg'
 import "aos/dist/aos.css";
 import AOS from "aos";
-import "aos/dist/aos.css";
 import './GenreDetails.css'
 
 const GenreDetails = (props) => {

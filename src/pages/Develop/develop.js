@@ -1,5 +1,5 @@
 import React from 'react';
-import construct from '../assets/error/construct.webp';
+import construct from '../../assets/error/construct.webp';
 import './develop.css'
 
 const Develop = (props) => {

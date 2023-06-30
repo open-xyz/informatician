@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./BookList.css";
-import ScrollToTopButton from "../ScrollButton";
+import ScrollToTopButton from "../../components/ScrollButton/ScrollButton";
 // import Card from "../Card";
 import { searchBooks } from "../../utils/searchBooks";
 
