@@ -7,7 +7,7 @@ const Error = () => {
   const navigate = useNavigate();
   return (
     <div className="Error">
-      <img src={pnf} alt="page not found" className="img" />
+      <img loading='lazy' src={pnf} alt="page not found" className="img" />
       <button className="navigate mb-12" onClick={() => navigate("/")}>
         Go To HomePage
       </button>

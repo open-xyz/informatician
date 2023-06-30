@@ -40,6 +40,7 @@ export default function Testimonial() {
         {testimonials.map((testimonial) => (
           <div key={testimonial.id} className="testimoonial_card">
             <img
+              loading='lazy'
               className="testimoonial_profile"
               src={testimonial.image}
               alt={testimonial.name}

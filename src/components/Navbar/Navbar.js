@@ -34,6 +34,7 @@ export default function Navbar(props) {
     >
       <Link to="/" className="logo">
         <img
+          loading='lazy'
           src={themeImage}
           className=" h-12 w-15 ml-1 mb-3  hover:shadow "
           alt="Informatician logo"

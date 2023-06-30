@@ -46,7 +46,7 @@ const Team = (props) => {
 
       <div className="w-11/12 flex flex-wrap mx-auto justify-center items-center mt-28 mb-5 max-w-screen-2xl">
         <div className="" data-aos="fade-left" data-aos-duration="500">
-          <img src={teamImage} className="team-member-image" alt="team" />
+          <img loading='lazy' src={teamImage} className="team-member-image" alt="team" />
         </div>
         <div className="md:w-1/2 ml-5" data-aos="fade-right" data-aos-duration="500">
           <h1 className="text-5xl mb-7 font-bold">Our Team</h1>

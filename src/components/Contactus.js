@@ -183,6 +183,7 @@ const Contact = () => {
             data-aos-duration="500"
           >
             <img
+              loading='lazy'
               style={{ marginLeft: "10%" }}
               src={contactImage}
               alt="Contact"

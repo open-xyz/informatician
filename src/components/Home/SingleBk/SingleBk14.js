@@ -121,7 +121,7 @@ export default function SingleBk14(props) {
                                         <div>
                                             <div className="book-box">
                                                 <div className="thumbnail">
-                                                    <img src={monk} alt="Vanderbilt" />
+                                                    <img loading='lazy' src={monk} alt="Vanderbilt" />
                                                 </div>
                                             </div>
                                         </div>
