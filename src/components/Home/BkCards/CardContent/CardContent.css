@@ -23,8 +23,6 @@
   transition: all 0.8s ease-in-out;
 }
 
-
-
 .bk-details {
   margin-top: 20px;
   padding: 0px 13px;
@@ -38,7 +36,6 @@
   color: var(--textGray-dark);
   font-size: 0.875rem;
   font-weight: 400;
- 
   margin-bottom: 4px;
   display: -webkit-box;
   overflow: hidden;
