@@ -8,6 +8,7 @@ export default function CardContent(props) {
         <div className="cg-card mx-2 px-3 py-2 h-20 position-relative cursor-pointer">
           <p>{props.title}</p>
           <img
+            loading='lazy'
             className="position-absolute"
             onDragStart={(e) => {
               e.preventDefault();

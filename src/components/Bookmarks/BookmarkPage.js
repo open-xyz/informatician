@@ -29,7 +29,7 @@ export default function BookmarkPage({ props }) {
                                 <div>
                                     <div className="book-box">
                                         <div className="thumbnail">
-                                            <img src={image} alt="No Bookmars Yet" />
+                                            <img loading='lazy' src={image} alt="No Bookmars Yet" />
                                         </div>
                                     </div>
                                 </div>

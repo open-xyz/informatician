@@ -32,7 +32,7 @@ const FaqHelp = () => {
     <div className="faq-help">
       <div className="faq-help-header">
         <h1 className="faq-help-title">Informatician Help Center</h1>
-        <img src={helpImage} alt="Help" className="faq-help-image" />
+        <img loading='lazy' src={helpImage} alt="Help" className="faq-help-image" />
       </div>
 
 

@@ -103,6 +103,7 @@ export default function NavItems(props) {
         <li>
           <Link to="/addBooks" className="flex">
             <img
+              loading='lazy'
               src="https://img.icons8.com/ios/80/add-book.png"
               alt="upload icon"
               className="h-8 mr-3 text-bold  hover:font-bold hover:shadow-md self-center  "

@@ -14,7 +14,7 @@ const Card = ({ title, description, publisher, pages, imgLink }) => {
 
       <div className="product-image">
 
-        <img src={imgLink?.thumbnail} alt={title} />
+        <img loading='lazy' src={imgLink?.thumbnail} alt={title} />
 
         <div className="info">
           <h2>The Description</h2>

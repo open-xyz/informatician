@@ -26,7 +26,7 @@ const BookFormats = (props) => {
         style={{ boxShadow: props.theme === 'dark' ? 'rgb(77 85 93) 0px 15px 30px 1px' : 'rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,rgba(0, 0, 0, 0.09) 0px 32px 16px' }}
       >
         <div className="" data-aos="fade-right" data-aos-duration="500">
-          <img src={ebook} className="team-member-image" alt="team" />
+          <img loading='lazy' src={ebook} className="team-member-image" alt="team" />
         </div>
         <div className="md:w-1/2 ml-5" data-aos="fade-left" data-aos-duration="500">
           <h1 className="text-5xl mb-7 font-bold">Ebooks</h1>
@@ -66,7 +66,7 @@ const BookFormats = (props) => {
           </p>
         </div>
         <div className="" data-aos="fade-left" data-aos-duration="500">
-          <img src={audiobook} className="team-member-image" alt="team" />
+          <img loading='lazy' src={audiobook} className="team-member-image" alt="team" />
         </div>
       </div>
 
@@ -74,7 +74,7 @@ const BookFormats = (props) => {
         style={{ boxShadow: props.theme === 'dark' ? 'rgb(77 85 93) 0px 15px 30px 1px' : 'rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,rgba(0, 0, 0, 0.09) 0px 32px 16px' }}
       >
         <div className="" data-aos="fade-right" data-aos-duration="500">
-          <img src={paperback} className="team-member-image" alt="team" />
+          <img loading='lazy' src={paperback} className="team-member-image" alt="team" />
         </div>
         <div className="md:w-1/2 ml-5" data-aos="fade-left" data-aos-duration="500">
           <h1 className="text-5xl mb-7 font-bold">Paperback Books</h1>
@@ -113,14 +113,14 @@ const BookFormats = (props) => {
           </p>
         </div>
         <div className="" data-aos="fade-left" data-aos-duration="500">
-          <img src={magazines} className="team-member-image" alt="team" />
+          <img loading='lazy' src={magazines} className="team-member-image" alt="team" />
         </div>
       </div>
       <div className="w-11/12 flex flex-wrap mx-auto justify-center items-center mt-26 py-4 mb-5 max-w-screen-2xl format-card"
         style={{ boxShadow: props.theme === 'dark' ? 'rgb(77 85 93) 0px 15px 30px 1px' : 'rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,rgba(0, 0, 0, 0.09) 0px 32px 16px' }}
       >
         <div className="" data-aos="fade-right" data-aos-duration="500">
-          <img src={comics} className="team-member-image" alt="team" />
+          <img loading='lazy' src={comics} className="team-member-image" alt="team" />
         </div>
         <div className="md:w-1/2 ml-5" data-aos="fade-left" data-aos-duration="500">
           <h1 className="text-5xl mb-7 font-bold">Comics and Graphic Novels</h1>

@@ -60,7 +60,7 @@
   transition: all 0.8s ease-in-out;
 }
 
-.description{
+.description {
   font-family: "Source Sans Pro", sans-serif;
   line-height: 1.5;
   color: var(--textGray-dark);
@@ -75,7 +75,8 @@
   -webkit-box-orient: vertical;
   font-style: normal;
   text-align: left;
-  transition: all 0.8s ease-in-out;
+  transition: opacity 0.8s ease-in-out;
+  opacity: 1;
 }
 
 .author {
@@ -123,24 +124,37 @@
   background-color: rgb(91, 241, 121);
 }
 
-
-.bk-view:hover .bk-img{
-  /* transform: translateY(-10px); */
+.bk-view:hover .bk-img {
+  transform: translateY(-20px) scale(0.8);
   padding-bottom: 7px;
+  transition: all 0.8s ease-in-out;
+
 }
 
-.bk-view:hover .bk-details{
-  /* transform: translateY(-1px); */
+.bk-view:hover .bk-details {
+  transform: translateY(-10px);
+  transition: all 0.8s ease-in-out;
 }
 
-.bk-view:hover .bg-color{
+.bk-view:hover .bg-color {
+  transition: opacity 0.8s ease-in-out;
   opacity: 0;
+  overflow: hidden;
 }
 
-.bk-view:hover .description{
-  display:block;
-}
+.bk-view:hover .description {
+  display: block;
+  transition: all 0.8s ease-in-out;
+  opacity: 1;
+  transform: translateY(-10px);
 
-.bk-view:hover .reviews{
-  /* transform: translateY(-15px); */
+}
+.bk-view:hover .type,
+.bk-view:hover .title,
+.bk-view:hover .author {
+  transform: translateY(-10px);
+
+}
+.bk-view:hover .reviews {
+  transform: translateY(-15px);
 }
