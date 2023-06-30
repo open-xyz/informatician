@@ -37,6 +37,7 @@ const Footer = (props) => {
               <Link to="/" className="flex items-center">
                 <Link to="/" className="logo">
                   <img
+                    loading='lazy'
                     src={themeImage}
                     className=" h-12 w-17 ml-1 mb-2.5  hover:shadow "
                     alt="Informatician logo"
