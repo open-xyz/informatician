@@ -3,9 +3,9 @@ import "./GenreDetails.css";
 import biography from '../../assets/Genre/biography.webp'
 import romance from '../../assets/Genre/romance.webp'
 import thriller from '../../assets/Genre/thriller.webp'
-import horror from '../../assets/Genre/horror.jpg'
-import science from '../../assets/Genre/science.jpg'
-import mystery from '../../assets/Genre/mystery.jpg'
+import horror from '../../assets/Genre/horror.webp'
+import science from '../../assets/Genre/science.webp'
+import mystery from '../../assets/Genre/mystery.webp'
 import "aos/dist/aos.css";
 import AOS from "aos";
 import './GenreDetails.css'
