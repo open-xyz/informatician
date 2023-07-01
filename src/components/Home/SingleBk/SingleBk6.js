@@ -147,7 +147,7 @@ export default function SingleBk(props) {
                     <div>
                       <div className="book-box">
                         <div className="thumbnail">
-                          <img loading='lazy' src={ebk3} alt="Never Split the Difference" />
+                          <img loading='lazy' src={ebk3} alt="Never Split the Difference book thumbnail" />
                         </div>
                       </div>
                     </div>

@@ -16,7 +16,7 @@ function BenefitsOfReading(props) {
         <div className="benefit" style={{marginTop: 20, backgroundColor: props.theme==='dark'?'rgb(22, 19, 19)' : '#f6f6f6'}}>
           <div className="benefit-content">
             <div className="benefit-image">
-              <img loading='lazy' src={img1} alt="Knowledge Expansion" style={{height: 220, width: 400}}/>
+              <img loading='lazy' src={img1} alt="a book in the air surrounded by many books" style={{height: 220, width: 400}}/>
             </div>
             <div className="benefit-details">
               <h2 style={{textAlign: 'center', color: props.theme==='dark' ? 'white' : '#333'}}>Knowledge Expansion</h2>
@@ -28,7 +28,7 @@ function BenefitsOfReading(props) {
         <div className="benefit" style={{marginTop: 20, backgroundColor: props.theme==='dark'?'rgb(22, 19, 19)' : '#f6f6f6'}}>
           <div className="benefit-content">
             <div className="benefit-image">
-              <img loading='lazy' src={img2} alt="Mental Stimulation" style={{height: 220, width: 400}}/>
+              <img loading='lazy' src={img2} alt="a stack of books on a table" style={{height: 220, width: 400}}/>
             </div>
             <div className="benefit-details">
               <h2 style={{textAlign: 'center', color: props.theme==='dark' ? 'white' : '#333'}}>Mental Stimulation</h2>
@@ -39,7 +39,7 @@ function BenefitsOfReading(props) {
         <div className="benefit" style={{marginTop: 20, backgroundColor: props.theme==='dark'?'rgb(22, 19, 19)' : '#f6f6f6'}}>
           <div className="benefit-content">
             <div className="benefit-image">
-              <img loading='lazy' src={img3} alt="Mental Stimulation" style={{height: 220, width: 400}}/>
+              <img loading='lazy' src={img3} alt="a pink mug next to a book" style={{height: 220, width: 400}}/>
             </div>
             <div className="benefit-details">
               <h2 style={{textAlign: 'center', color: props.theme==='dark' ? 'white' : '#333'}}>Stress Reduction</h2>
@@ -50,7 +50,7 @@ function BenefitsOfReading(props) {
         <div className="benefit" style={{marginTop: 20, backgroundColor: props.theme==='dark'?'rgb(22, 19, 19)' : '#f6f6f6'}}>
           <div className="benefit-content">
             <div className="benefit-image">
-              <img loading='lazy' src={img4} alt="Mental Stimulation" style={{height: 220, width: 400}} />
+              <img loading='lazy' src={img4} alt="a cup of tea and a book with flowers" style={{height: 220, width: 400}} />
             </div>
             <div className="benefit-details">
               <h2 style={{textAlign: 'center', color: props.theme==='dark' ? 'white' : '#333'}}>Improved Sleep</h2>
@@ -61,7 +61,7 @@ function BenefitsOfReading(props) {
         <div className="benefit" style={{marginTop: 20, backgroundColor: props.theme==='dark'?'rgb(22, 19, 19)' : '#f6f6f6'}}>
           <div className="benefit-content">
             <div className="benefit-image">
-              <img loading='lazy' src={img5} alt="Mental Stimulation" style={{height: 220, width: 400}}/>
+              <img loading='lazy' src={img5} alt="a person reading a book" style={{height: 220, width: 400}}/>
             </div>
             <div className="benefit-details">
               <h2 style={{textAlign: 'center', color: props.theme==='dark' ? 'white' : '#333'}}>Personal Growth</h2>

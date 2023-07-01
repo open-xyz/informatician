@@ -26,7 +26,7 @@ const GenreDetails = (props) => {
                 style={{ boxShadow: props.theme === 'dark' ? 'rgb(77 85 93) 0px 15px 30px 1px' : 'rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,rgba(0, 0, 0, 0.09) 0px 32px 16px' }}
             >
                 <div className="" data-aos="fade-right" data-aos-duration="500">
-                    <img loading='lazy' src={mystery} className="team-member-image" alt="team" />
+                    <img loading='lazy' src={mystery} className="team-member-image" alt="a group of books on a purple background" />
                 </div>
                 <div className="md:w-1/2 ml-5" data-aos="fade-left" data-aos-duration="500">
                     <h1 className="text-5xl mb-7 font-bold">Mystery</h1>
@@ -66,7 +66,7 @@ const GenreDetails = (props) => {
                     </p>
                 </div>
                 <div className="" data-aos="fade-left" data-aos-duration="500">
-                    <img loading='lazy' src={romance} className="team-member-image" alt="team" />
+                    <img loading='lazy' src={romance} className="team-member-image" alt="a group of books on a violet background" />
                 </div>
             </div>
 
@@ -74,7 +74,7 @@ const GenreDetails = (props) => {
                 style={{ boxShadow: props.theme === 'dark' ? 'rgb(77 85 93) 0px 15px 30px 1px' : 'rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,rgba(0, 0, 0, 0.09) 0px 32px 16px' }}
             >
                 <div className="" data-aos="fade-right" data-aos-duration="500">
-                    <img loading='lazy' src={science} className="team-member-image" alt="team" />
+                    <img loading='lazy' src={science} className="team-member-image" alt="a stack of books on a table" />
                 </div>
                 <div className="md:w-1/2 ml-5" data-aos="fade-left" data-aos-duration="500">
                     <h1 className="text-5xl mb-7 font-bold">Science Fiction</h1>
@@ -113,14 +113,14 @@ const GenreDetails = (props) => {
                     </p>
                 </div>
                 <div className="" data-aos="fade-left" data-aos-duration="500">
-                    <img loading='lazy' src={thriller} className="team-member-image" alt="team" />
+                    <img loading='lazy' src={thriller} className="team-member-image" alt="a group of books on a blue background" />
                 </div>
             </div>
             <div className="w-11/12 flex flex-wrap mx-auto justify-center items-center mt-26 py-4 mb-5 max-w-screen-2xl format-card"
                 style={{ boxShadow: props.theme === 'dark' ? 'rgb(77 85 93) 0px 15px 30px 1px' : 'rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,rgba(0, 0, 0, 0.09) 0px 32px 16px' }}
             >
                 <div className="" data-aos="fade-right" data-aos-duration="500">
-                    <img loading='lazy' src={horror} className="team-member-image" alt="team" />
+                    <img loading='lazy' src={horror} className="team-member-image" alt="a collage of books" />
                 </div>
                 <div className="md:w-1/2 ml-5" data-aos="fade-left" data-aos-duration="500">
                     <h1 className="text-5xl mb-7 font-bold">Horror</h1>
@@ -159,7 +159,7 @@ const GenreDetails = (props) => {
                     </p>
                 </div>
                 <div className="" data-aos="fade-left" data-aos-duration="500">
-                    <img loading='lazy' src={biography} className="team-member-image" alt="team" />
+                    <img loading='lazy' src={biography} className="team-member-image" alt="a group of books on a green background" />
                 </div>
             </div>
         </div>
