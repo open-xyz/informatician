@@ -22,7 +22,7 @@ const BookAwards = (props) => {
             <h1 className="text-6xl font-bold">Book Awards</h1>
             <div className='w-11/12 flex flex-wrap mx-auto justify-center items-center mt-26 py-8 mb-5 max-w-screen-2xl format-card'>
                 <div className="" data-aos="fade-right" data-aos-duration="500">
-                    <img loading='lazy' src={pulitzer} className="team-member-image" alt="team" />
+                    <img loading='lazy' src={pulitzer} className="team-member-image" alt="Pulitzer prize,a gold coin with a picture on it" />
                 </div>
                 <div className="md:w-1/2 ml-5" data-aos="fade-left" data-aos-duration="500">
                     <h1 className="text-5xl mb-7 font-bold">Pulitzer Prize</h1>
@@ -60,13 +60,13 @@ const BookAwards = (props) => {
                     </p>
                 </div>
                 <div className="" data-aos="fade-left" data-aos-duration="500">
-                    <img loading='lazy' src={manbooker} className="team-member-image" alt="team" />
+                    <img loading='lazy' src={manbooker} className="team-member-image" alt="a black rectangular object with text which says the man booker prize" />
                 </div>
             </div>
 
             <div className="w-11/12 flex flex-wrap mx-auto justify-center items-center mt-26 py-4 mb-5 max-w-screen-2xl format-card">
                 <div className="" data-aos="fade-right" data-aos-duration="500">
-                    <img loading='lazy' src={national} className="team-member-image" alt="team" />
+                    <img loading='lazy' src={national} className="team-member-image" alt="a gold medal with a book and text which says national book award winner" />
                 </div>
                 <div className="md:w-1/2 ml-5" data-aos="fade-left" data-aos-duration="500">
                     <h1 className="text-5xl mb-7 font-bold">National Book Award</h1>
@@ -103,12 +103,12 @@ const BookAwards = (props) => {
                     </p>
                 </div>
                 <div className="" data-aos="fade-left" data-aos-duration="500">
-                    <img loading='lazy' src={penFaulkner} className="team-member-image" alt="team" />
+                    <img loading='lazy' src={penFaulkner} className="team-member-image" alt="a black and white logo with a feather" />
                 </div>
             </div>
             <div className="w-11/12 flex flex-wrap mx-auto justify-center items-center mt-26 py-4 mb-5 max-w-screen-2xl format-card">
                 <div className="" data-aos="fade-right" data-aos-duration="500">
-                    <img loading='lazy' src={womenprize} className="team-member-image" alt="team" />
+                    <img loading='lazy' src={womenprize} className="team-member-image" alt="a statue of a person and text which says women's prize for fiction" />
                 </div>
                 <div className="md:w-1/2 ml-5" data-aos="fade-left" data-aos-duration="500">
                     <h1 className="text-5xl mb-7 font-bold">Women's Prize for Fiction</h1>

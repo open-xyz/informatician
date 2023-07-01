@@ -59,7 +59,7 @@ const Join = () => {
               loading='lazy'
               src="https://s-f.scribdassets.com/images/about/03_careers_B_icon_benefits_03_health.svg?a974a5f44"
               className="mx-auto w-24 hover:animate-spin"
-              alt="Medical, dental and vision"
+              alt="Icon representing health benefits"
             />
             <div>
               <h2 className="font-bold text-2xl text-center mt-6 mb-3">
@@ -78,7 +78,7 @@ const Join = () => {
               loading='lazy'
               src="https://s-f.scribdassets.com/images/about/03_careers_B_icon_benefits_01_DEI.svg?510379e31"
               className="mx-auto w-24 hover:animate-spin"
-              alt="Diversity, Equity, and Inclusion"
+              alt="Benefits icon showcasing diversity, equity, and inclusion"
             />
             <div>
               <h2 className="text-2xl font-bold  text-center mt-6 mb-3">
@@ -99,7 +99,7 @@ const Join = () => {
               loading='lazy'
               src="https://s-f.scribdassets.com/images/about/03_careers_B_icon_benefits_07_wellbeing.svg?a974a5f44"
               className="mx-auto w-24 hover:animate-spin"
-              alt="Wellbeing"
+              alt="Illustration of a flower representing wellbeing"
             />
             <div>
               <h2 className="text-2xl font-bold text-center mt-6 mb-3">
@@ -117,7 +117,7 @@ const Join = () => {
               loading='lazy'
               src="https://s-f.scribdassets.com/images/about/03_careers_B_icon_benefits_01_DEI.svg?510379e31"
               className="mx-auto w-24 hover:animate-spin"
-              alt="Monthly stipend"
+              alt="Benefits icon showcasing diversity, equity, and inclusion"
             />
             <div>
               <h2 className="text-2xl font-bold  text-center mt-6 mb-3">
@@ -137,7 +137,7 @@ const Join = () => {
               loading='lazy'
               src="https://s-f.scribdassets.com/images/about/03_careers_B_icon_benefits_06_parental.svg?a974a5f44"
               className="mx-auto w-24 hover:animate-spin"
-              alt="Parental leave"
+              alt="Parental leave icon"
             />
             <div>
               <h2 className="text-2xl  font-bold text-center mt-6 mb-3">
@@ -155,7 +155,7 @@ const Join = () => {
               loading='lazy'
               src="https://s-f.scribdassets.com/images/about/03_careers_B_icon_benefits_05_pto.svg?a974a5f44"
               className="mx-auto w-24 hover:animate-spin"
-              alt="Time off"
+              alt="Benefits icon depicting paid time off"
             />
             <div>
               <h2 className="text-2xl font-bold  text-center mt-6 mb-3">
@@ -181,7 +181,7 @@ const Join = () => {
                 loading='lazy'
                 src={workplace}
                 className="md:h-80 sm:h-50 rounded-2xl"
-                alt="workplace"
+                alt="a group of people around a table"
               />
             </li>
             <li className="mx-auto shadow-xl shadow-slate-800 rounded-2xl">
@@ -189,7 +189,7 @@ const Join = () => {
                 loading='lazy'
                 src={workinginoffice}
                 className="md:h-80 sm:h-20 rounded-2xl"
-                alt="working in office"
+                alt="a group of people sitting at a table with computers"
               />
             </li>
           </ul>
@@ -269,7 +269,7 @@ const Join = () => {
                 loading='lazy'
                 src="https://s-f.scribdassets.com/images/about/03_careers_E_img_01_@2x.jpg?a974a5f44"
                 className="rounded-3xl"
-                alt="Community"
+                alt="a group of people excited"
               />
               <div>
                 <h2 className="font-bold text-center mt-6 mb-3 text-lg uppercase">Community</h2>
@@ -293,7 +293,7 @@ const Join = () => {
                 loading='lazy'
                 src="https://s-f.scribdassets.com/images/about/03_careers_E_img_02_@2x.jpg?a974a5f44"
                 className="rounded-3xl mx-auto  "
-                alt="Characters with character"
+                alt="Three people staring at you"
               />
               <div>
                 <h2 className="font-bold  text-center mt-6 mb-3 text-lg uppercase">
@@ -317,7 +317,7 @@ const Join = () => {
                 loading='lazy'
                 src="https://s-f.scribdassets.com/images/about/03_careers_E_img_03_@2x.jpg?a974a5f44"
                 className="rounded-3xl mx-auto"
-                alt="Growth Mentality"
+                alt="a girl sitting and reading a book"
               />
               <div>
                 <h2 className=" font-bold text-center mt-6 mb-3 text-lg uppercase">
