@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "./biography.css"; // Import the CSS file for styling
-import { Container, Row, Col, Carousel } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import BkCards from "../Home/BkCards/BkCards";
+import "./biography.css"; // Import the CSS file for styling
 
 function Biography(props) {
   const [showMore, setShowMore] = useState(false);
@@ -11,7 +11,7 @@ function Biography(props) {
   };
 
   return (
-    <Container className="biography-container" style={{ marginTop: 80 }}>
+    <Container className="biography-container">
       <div className="biography-header" style={{ backgroundColor: props.theme === 'dark' ? '#161313' : '#f8f8f8' }}>
         <h1 className="heading" style={{ color: props.theme === 'dark' ? 'white' : '#333' }} >Biography &amp; Memoir</h1>
         <p className="subtitle">
