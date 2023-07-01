@@ -1,13 +1,12 @@
 import React, { useEffect } from "react";
 import "./BookFormats.css";
-import ebook from '../../assets/Formats/ebook.jpeg'
+import ebook from '../../assets/Formats/ebook.webp'
 import audiobook from '../../assets/Formats/audiobook.webp'
 import paperback from '../../assets/Formats/paperback.webp'
 import comics from '../../assets/Formats/comics.webp'
-import magazines from '../../assets/Formats/magazines.jpg'
+import magazines from '../../assets/Formats/magazines.webp'
 import "aos/dist/aos.css";
 import AOS from "aos";
-import "aos/dist/aos.css";
 import './BookFormats.css'
 
 const BookFormats = (props) => {

@@ -1,10 +1,10 @@
 import React from 'react';
 import './Benefits.css'; // Import the CSS file for styling
-import img1 from '../../assets/benefits/benefit-1.jpg'
-import img2 from '../../assets/benefits/benefit-2.jpg'
-import img3 from '../../assets/benefits/benefit-3.jpg'
-import img4 from '../../assets/benefits/benefit-4.jpg'
-import img5 from '../../assets/benefits/benefit-5.jpg'
+import img1 from '../../assets/benefits/benefit-1.webp'
+import img2 from '../../assets/benefits/benefit-2.webp'
+import img3 from '../../assets/benefits/benefit-3.webp'
+import img4 from '../../assets/benefits/benefit-4.webp'
+import img5 from '../../assets/benefits/benefit-5.webp'
 
 function BenefitsOfReading(props) {
   return (
