@@ -29,6 +29,7 @@ export default function Navbar(props) {
       throw err;
     }
   };
+
   const themeImage = `/assets/logos/${
     props.theme === "dark" ? "light" : "dark"
   }_logo.png`;
@@ -44,7 +45,7 @@ export default function Navbar(props) {
           src={themeImage}
           width={300}
           height={100}
-          className=" h-12 w-fit ml-1 mb-3  hover:shadow "
+          className="h-12 w-fit ml-1 mb-3  hover:shadow "
           alt="Informatician logo"
         />
       </Link>
