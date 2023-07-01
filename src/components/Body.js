@@ -128,7 +128,7 @@ function Body(props) {
           <Route path="/faq" element={<FaqHelp />} />
           <Route path="/join" element={<Join />} />
           <Route path="/develop" element={<Develop />} />
-          <Route path="/addBooks" element={<AddBooks />} />
+          <Route path="/addBooks" element={<AddBooks theme={props.theme} />} />
           <Route path="/publishers" element={<PublishersPage theme={props.theme} />} />
           <Route path="/adchoices" element={<AdChoices theme={props.theme} />} />
           <Route path="/bookmarks" element={<BookmarkPage theme={props.theme} />} />
