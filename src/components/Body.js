@@ -47,7 +47,7 @@ const CopyrightPage = lazy(() => import("../pages/Copyright/Copyright"));
 const AccessibilityPage = lazy(() => import("../pages/Accessibility/Accessibility"));
 const BookFormats = lazy(() => import("../pages/BookFormats/BookFormats"));
 const GenreDetails = lazy(() => import("../pages/GenreDetails/GenreDetails"));
-
+const BookAwards = lazy(() => import("../pages/Awards/BookAwards"));
 
 function Body(props) {
   return (
@@ -135,6 +135,7 @@ function Body(props) {
           <Route path="/benefits" element={<BenefitsOfReading theme={props.theme} />} />
           <Route path="/formats" element={<BookFormats theme={props.theme} />} />
           <Route path="/genre" element={<GenreDetails theme={props.theme} />} />
+          <Route path="/awards" element={<BookAwards theme={props.theme} />} />
 
           <Route path="/pcategories/travel" element={<Travel />} />
           <Route path="/pcategories/biography" element={<Biography theme={props.theme} />} />

@@ -78,6 +78,14 @@ const Footer = (props) => {
                       Genre
                     </Link>
                   </li>
+                  <li className="mb-4">
+                    <Link
+                      to="./awards"
+                      className="transition-all duration-300 ease-in-out"
+                    >
+                      Awards
+                    </Link>
+                  </li>
                 </ul>
               </div>
 
