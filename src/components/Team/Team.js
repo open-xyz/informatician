@@ -9,7 +9,6 @@ import Contributor from "./Contributor";
 
 const Team = (props) => {
 
-
   useEffect(() => {
     AOS.init({
       once: false,
@@ -59,6 +58,7 @@ const Team = (props) => {
           </p>
         </div>
 
+  
       </div>
       <Contributor theme={props.theme} />
     </div>

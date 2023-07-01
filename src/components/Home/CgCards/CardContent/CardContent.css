@@ -7,6 +7,7 @@
   transition: all 0.4s ease;
   height: 100px;
 }
+
 .cg-card img {
   right: 20px;
   top: 20px;
@@ -16,14 +17,17 @@
   transform: rotate(15deg);
   transition: all 0.4s ease;
 }
+
 .cg-card img {
   box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
     rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
 }
+
 .cg-card p {
   font-size: 17px;
   font-weight: 600;
 }
+
 .cg-card:hover {
   box-shadow: 1px 2px 8px 3px lightgray;
   transform: scale(1.005);

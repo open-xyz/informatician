@@ -7,9 +7,11 @@ import CgCards from "./CgCards/CgCards";
 export default function Home() {
   return (
     <>
-      <ImgSection txt={["Start Reading","Be a Reader"]} />
+      <ImgSection
+        txt={["Start Reading","Be a Reader"]} />
       <CgCards />
-      <BkCards bkhead="Bestselling Books & Audiobooks" />
+      <BkCards 
+        bkhead="Bestselling Books & Audiobooks" />
       <BkCards 
         bkhead="Current New York Times Bestsellers" />
     </>
