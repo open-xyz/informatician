@@ -24,7 +24,7 @@ export default function NavItems(props) {
         <li>
           <div className="search-container search-mobile-view">
             <form action="" className="search-bar">
-              <input type="text" placeholder="search..." name="q" />
+              <input type="text" placeholder="search..." name="q" className="bg-white" />
               <button type="submit">
                 <FaSearch className="text-gray-500 ml-2" />
               </button>

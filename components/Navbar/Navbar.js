@@ -47,7 +47,7 @@ export default function Navbar(props) {
               placeholder="search"
               name="q"
               onChange={search}
-              className="text-black"
+              className="text-black bg-white"
             />
             <button type="submit">
               <FaSearch className="text-gray-500" />
