@@ -125,10 +125,9 @@
 }
 
 .bk-view:hover .bk-img {
-  transform: translateY(-20px) scale(0.8);
+  transform: translateY(-25px) scale(0.7);
   padding-bottom: 7px;
-  transition: all 0.8s ease-in-out;
-
+  transition: all 0.7s ease-in-out;
 }
 
 .bk-view:hover .bk-details {
@@ -137,8 +136,8 @@
 }
 
 .bk-view:hover .bg-color {
-  transition: opacity 0.8s ease-in-out;
   opacity: 0;
+  transition: all 0.8s ease-in-out;
   overflow: hidden;
 }
 
@@ -156,5 +155,5 @@
 
 }
 .bk-view:hover .reviews {
-  transform: translateY(-15px);
+  transform: translateY(-18px);
 }
