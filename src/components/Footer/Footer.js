@@ -31,23 +31,19 @@ const Footer = (props) => {
       <NewsLetter />
 
       <footer>
-        <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-          <div className="md:flex md:justify-between">
-            <div className="mb-6 md:mb-0">
-              <Link to="/" className="flex items-center">
-              <Link to="/" className="logo">
+        <div className=" footer_outer mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+          {/* <div className="md:flex md:justify-between"> */}
+            <div  className=" footer_main mb-6 md:mb-0">
+              {/* <Link to="/" className="flex items-center"> */}
+              <Link to="/"  className="logo_img">
                 <img
                 src= {themeImage}
                 className=" h-12 w-17 ml-1 mb-2.5  hover:shadow " 
                 alt="Informatician logo"
               />
               </Link>
-                {/* <span className="self-center text-3xl font-bold whitespace-nowrap transition-all duration-300 ease-in-out">
-                  Informatician
-                </span> */}
-              </Link>
             </div>
-            <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+            <div className="footer_contents grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
               <div>
                 <h2 className={`mb-6 text-m font-bold uppercase `}>
                   About
@@ -166,7 +162,7 @@ const Footer = (props) => {
                 </ul>
               </div>
             </div>
-          </div>
+          {/* </div> */}
           <hr className="my-4 sm:mx-auto  lg:my-8" style={{ borderColor: "var(--black)" }} />
           <div className="sm:flex sm:items-center sm:justify-between">
             <span className={`text-sm font-bold   sm:text-center `}>

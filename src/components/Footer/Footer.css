@@ -1,12 +1,39 @@
 footer
 {
-  background: var(--bgFooter-light);
+  /* background: var(--bgFooter-light); */
+  background-image: linear-gradient(to right, #141e30, #243b55);
+  /* color:white; */
 }
 
 footer a{
-  color: var(--textGray-dark);
+  /* color: var(--textGray-dark); */
+  color:white;
 }
 
 footer a:hover{
-  color: var(--textGray);
+  color:rgb(152, 179, 243);
+}
+.footer-h2 h2{
+  color:white;
+}
+.footer-div , h2{
+  color:rgb(190, 207, 249); 
+}
+span{
+  color:white;
+}
+.footer_outer{
+ padding-top: 50px;
+ height: 460px;
+}
+.footer_main{
+margin-top: 65px;
+}
+.logo_img , img{
+  background-image: transparent;
+  border-radius: 5px;
+}
+.footer_contents div{
+  margin-top: 10px;
+  margin-left: 10px;
 }
