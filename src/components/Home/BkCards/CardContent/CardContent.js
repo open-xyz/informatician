@@ -14,11 +14,11 @@ export default function CardContent(props) {
 
   return (
   
-    <div className="bk-view flex flex-col items-center rounded-[10px] overflow-hidden ">
+    <div className="bk-view flex flex-col items-center overflow-hidden ">
       <div className="bg-color" style={{ backgroundColor: random_color }}></div>
       <div className="bk-img h-2/5">
         {/* <Link to="/books/id"> */}
-          <img src={props.imgName} alt={props.title} />
+          <img loading='lazy' src={props.imgName} alt={props.title} />
         {/* </Link> */}
       </div>
       <div className="bk-details">

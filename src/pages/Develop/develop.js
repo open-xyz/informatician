@@ -1,5 +1,5 @@
 import React from 'react';
-import construct from '../assets/error/construct.webp';
+import construct from '../../assets/error/construct.webp';
 import './develop.css'
 
 const Develop = (props) => {
@@ -7,7 +7,7 @@ const Develop = (props) => {
     <div className="container">
       <h1 style={{ fontSize: 40, fontWeight: 'bold' }} >Under Development</h1>
       <div className="image-container" style={{ color: props.theme === 'dark' ? 'black' : '' }}>
-        <img src={construct} alt="Under Development" className="development-image" />
+        <img loading='lazy' src={construct} alt="a computer under construction with crane" className="development-image" />
       </div>
       <p style={{ fontSize: 20 }}>This page is currently under development. Please check back later.</p>
     </div>

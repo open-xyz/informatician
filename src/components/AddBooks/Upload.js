@@ -1,83 +1,54 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./Upload.css";
-import LibraryBooksIcon from "@mui/icons-material/LibraryBooks";
-import CloseIcon from "@mui/icons-material/Close";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import LibraryBooksIcon from "@mui/icons-material/LibraryBooks";
+import CloseIcon from "@mui/icons-material/Close";
 import axios from "axios";
-
-export default function Upload() {
-  const [books, setBooks] = useState([]);
-
-  function addBook(e) {
-    const newBook = e.target.files[0].name.split(".")[0];
-
-    setBooks((prevBooks) => {
-      return [...prevBooks, newBook];
-    });
-  }
-
-  function deleteBook(id) {
-    setBooks((prevBooks) => {
-      return prevBooks.filter((book, ind) => {
-        return ind !== id;
-      });
-    });
-  }
-
-  const navigate = useNavigate();
-
+import './Upload.css';
+const FileUploadComponent = () => {
   const [file, setFile] = useState(null);
+  const navigate = useNavigate();
   const id = localStorage.getItem("bookId");
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (file) {
-      const data = new FormData();
-      const fileName = file.name;
-      data.append("name", fileName);
-      data.append("file", file);
-      if (id) {
+  const handleFileChange = (event) => {
+    setFile(event.target.files[0]);
+  };
+
+  const handleFileUpload = async () => {
+    try {
+      if (file) {
         toast.loading("Uploading...");
-        try {
-          await axios.post("http://localhost:5000/api/upload", data);
-          await axios.put("http://localhost:5000/api/book/" + id, {
-            bookpdf: fileName,
-          });
-          navigate("/success");
-          localStorage.clear();
-        } catch (err) {
-          toast.error("Something went wrong!");
-          console.log(err);
-        }
+        const formData = new FormData();
+        formData.append("file", file);
+
+        await axios.post("https://informaticonserver.onrender.com/api/upload", formData);
+        await axios.put("https://informaticonserver.onrender.com/api/book/" + id, {
+          bookpdf: file.name,
+        });
+        navigate("/success");
+        localStorage.clear();
       } else {
-        toast.error("Add book deatils!");
+        toast.error("Choose a file to upload!");
       }
-    } else {
-      toast.error("Choose a file to upload!");
+    } catch (error) {
+      toast.error("Something went wrong!");
+      console.error(error);
     }
   };
 
   return (
-    <div
-      className="upload p-10 d-flex flex-column justify-content-center
-    align-items-center"
-    >
+    <div className="upload p-10 d-flex flex-column justify-content-center align-items-center">
       <h2 className="fs-2 fw-bolder">Upload Books</h2>
-      <div
-        className="upload-box my-5 p-10 d-flex flex-column justify-content-center
-    align-items-center"
-      >
+      <div className="upload-box my-5 p-10 d-flex flex-column justify-content-center align-items-center">
         <input
           type="file"
           name=""
           id="upload-btn"
           accept=".pdf, .txt, .doc, .ppt, .xls, .docx"
-          onChange={(e) => setFile(e.target.files[0])}
+          onChange={handleFileChange}
         />
-        <label className="mb-5" id="label" for="upload-btn">
+        <label className="mb-5" htmlFor="upload-btn">
           Select Books To Upload <LibraryBooksIcon className="ml-2" />
         </label>
         {file && (
@@ -89,7 +60,7 @@ export default function Upload() {
             />
           </p>
         )}
-        <button className="mt-4" type="submit" onClick={handleSubmit}>
+        <button className="mt-4" type="submit" onClick={handleFileUpload}>
           Submit
         </button>
       </div>
@@ -101,4 +72,6 @@ export default function Upload() {
       <ToastContainer />
     </div>
   );
-}
+};
+
+export default FileUploadComponent;

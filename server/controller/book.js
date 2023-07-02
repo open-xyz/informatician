@@ -3,6 +3,7 @@ const Book = require('../model/Book')
 exports.addBook = async(req,res)=>{
     const a=0;
     const newBook = new Book(req.body);
+    console.log(newBook);
     try{
       const savedBook = await newBook.save();
       res.status(201).json(savedBook._id);
@@ -45,4 +46,15 @@ exports.deleteBook = async(req,res)=>{
       } catch (err) {
         return res.status(500).json(err);
       }
+}
+
+exports.findbycategory=async(req,res)=>{
+    const category = req.params.category;
+    try {
+        const books = await Book.find({ category: category });
+        console.log(books)
+        res.status(200).json(books);
+    } catch (err) {
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
 }

@@ -90,13 +90,15 @@ export default function BkCards(props) {
                 <svg
                   height="50"
                   fill="#eb5e28"
-                  width="80"
+                  width="50"
                   viewBox="0 0 512 512"
                   xmlSpace="preserve"
                   xmlns="http://www.w3.org/2000/svg"
                   style={{ rotate: "180deg" }}
                 >
-                  <path d="M160 115.4L180.7 96 352 256 180.7 416 160 396.7 310.5 256z" />
+                  <path
+                    d="M160 115.4L180.7 96 352 256 180.7 416 160 396.7 310.5 256z"
+                  />
                 </svg>
               </div>
 
@@ -127,6 +129,8 @@ export default function BkCards(props) {
                 }}
                 modules={[Autoplay, Pagination, Navigation]}
                 className="mySwiper"
+                style={{ 
+                  background: props.theme === "dark" ? '#161313' : ''}}
               >
                 <GhostPrevButton refprop={prevButton} />
                 <SwiperSlide>
@@ -246,6 +250,7 @@ export default function BkCards(props) {
               <div
                 onClick={() => nextButton.current.click()}
                 className="cursor-pointer"
+                
               >
                 <svg
                   height="50"
@@ -255,7 +260,9 @@ export default function BkCards(props) {
                   xmlSpace="preserve"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <path d="M160 115.4L180.7 96 352 256 180.7 416 160 396.7 310.5 256z" />
+                  <path
+                    d="M160 115.4L180.7 96 352 256 180.7 416 160 396.7 310.5 256z"
+                  />
                 </svg>
               </div>
             </div>

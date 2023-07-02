@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { FaDiscord, FaTwitter, FaGithub } from "react-icons/fa";
-import contactImage from "../assets/mainPages/contact-us.webp";
+import contactImage from "../../assets/mainPages/contact-us.webp";
 import "./Contactus.css";
 import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import validate from "../utils/validation";
-import AuthErrorMessage from "./AuthError";
+import validate from "../../utils/validation";
+import AuthErrorMessage from "../../components/AuthError";
 
 const Contact = () => {
   useEffect(() => {
@@ -183,9 +183,10 @@ const Contact = () => {
             data-aos-duration="500"
           >
             <img
+              loading='lazy'
               style={{ marginLeft: "10%" }}
               src={contactImage}
-              alt="Contact"
+              alt="a cartoon of a person wearing a headset"
               className="contact-image"
             />
           </div>

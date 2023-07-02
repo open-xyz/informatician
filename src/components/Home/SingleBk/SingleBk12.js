@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./SingleBk.css";
 import ReactStars from "react-rating-stars-component";
-import startsWithUs from "../../../assets/ebooks/starts-with-us.jpeg";
+import startsWithUs from "../../../assets/ebooks/starts-with-us.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark } from "@fortawesome/free-regular-svg-icons";
 import { useState } from "react";
@@ -122,7 +122,7 @@ export default function SingleBk12(props) {
                                         <div>
                                             <div className="book-box">
                                                 <div className="thumbnail">
-                                                    <img src={startsWithUs} alt="Vanderbilt" />
+                                                    <img loading='lazy' src={startsWithUs} alt="It starts with us book thumbnail" />
                                                 </div>
                                             </div>
                                         </div>

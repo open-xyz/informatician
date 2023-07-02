@@ -16,7 +16,11 @@ export default function CgCards() {
   return (
     <>
       <div className="container-xl mt-20 select-none">
-        <h1 className="bk-head">Popular Categories</h1>
+        <h1
+          style={{ fontSize: "30px", marginBottom: "50px" }}
+        >
+          Popular Categories
+        </h1>
         <div className="d-flex">
           <AliceCarousel
             responsive={{
@@ -32,16 +36,56 @@ export default function CgCards() {
             infinite={true}
             mouseTracking={true}
           >
-            <CardContent image={ebk1} title="Biography & Memoir" />
-            <CardContent image={abk1} title="Politics" />
-            <CardContent image={abk2} title="Career & Growth" />
-            <CardContent image={abk3} title="Contemporary Fiction" />
-            <CardContent image={abk4} title="Science & Mathematics" />
-            <CardContent image={ebk2} title="Cooking & Food" />
-            <CardContent image={ebk3} title="Self-Improvment" />
-            <CardContent image={ebk4} title="Travel" />
-            <CardContent image={ebk5} title="Mystery, Thriller & Crime" />
-            <CardContent image={ebk6} title="Home & Garden" />
+            <CardContent
+              className="m_card"
+              image={ebk1}
+              title="Biography & Memoir"
+            />
+            <CardContent 
+              className="m_card" 
+              image={abk1} 
+              title="Politics" 
+            />
+            <CardContent
+              className="m_card"
+              image={abk2}
+              title="Career & Growth"
+            />
+            <CardContent
+              className="m_card"
+              image={abk3}
+              title="Contemporary Fiction"
+            />
+            <CardContent
+              className="m_card"
+              image={abk4}
+              title="Science & Mathematics"
+            />
+            <CardContent
+              className="m_card"
+              image={ebk2}
+              title="Cooking & Food"
+            />
+            <CardContent
+              className="m_card"
+              image={ebk3}
+              title="Self-Improvment"
+            />
+            <CardContent 
+              className="m_card" 
+              image={ebk4} 
+              title="Travel" 
+            />
+            <CardContent
+              className="m_card"
+              image={ebk5}
+              title="Mystery, Thriller & Crime"
+            />
+            <CardContent
+              className="m_card"
+              image={ebk6}
+              title="Home & Garden"
+            />
           </AliceCarousel>
         </div>
       </div>

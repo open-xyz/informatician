@@ -1,5 +1,3 @@
-/* BookList.css */
-
 .book-list-container {
   padding: 100px;
   height: auto;
@@ -14,7 +12,7 @@
 
 .book-list-heading {
   font-size: 48px;
-  color: #6DA9E4;
+  color: rgb(49, 102, 167);
   font-weight: bold;
   margin-bottom: 10px;
   text-align: center;
@@ -24,10 +22,10 @@
 }
 .smalltext {
   font-family: "Times New Roman", Times, serif;
-  font-family: 20px;
+  font-size: 20px;
   text-align: center;
   margin-bottom: 40px;
-  color: #8445ff;
+  color:rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
 form {
   width: 100%;
@@ -37,66 +35,43 @@ form {
   background: #fff;
   display: block;
   margin: auto;
-  width: fit-content;
+  width: 50%;
   height: 50px;
   border-radius: 30px;
-  padding: 10px 20px;
+  padding: 5px 20px;
   align-items: center;
   box-shadow: rgba(6, 215, 230, 0.3) 0px 1px 2px 0px,
-  rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   margin-bottom: 10px;
   justify-content: center;
-  cursor: pointer;
   transition: 0.8s;
-  box-shadow:  4px 4px 6px 0 #6DA9E4,
-              -4px -4px 6px 0 #6DA9E4, 
-    inset -4px -4px 6px 0 #6DA9E4,
-    inset 4px 4px 6px 0 #6DA9E4;
 }
-.searchbar:hover > .search-input{
+.searchbar:hover > .search-input {
   width: 250px;
 }
-.searchbar .search-input{
+.searchbar .search-input {
   background: transparent;
   border: none;
-  outline:none;
+  outline: none;
   width: 0px;
+  margin-top: 8px;
   font-weight: 500;
   font-size: 16px;
   transition: 0.8s;
-  
   color: black;
 }
 
-
-/* .search-input {
-  padding: 8px;
-  font-size: 14px;
-  color: #333;
-  border-radius: 5px;
- 
-  width: 300px;
-} */
-@keyframes hoverShake {
-  0% {transform: skew(0deg,0deg);}
-  25% {transform: skew(5deg, 5deg);}
-  75% {transform: skew(-5deg, -5deg);}
-  100% {transform: skew(0deg,0deg);}
-}
-.searchbar:hover{
-  animation: hoverShake 0.15s linear 3;
-  /* margin-left: 350px; */
-}
 #search-button-2 {
   padding: 5px;
   background-color: transparent;
   border: none;
+  float: right;
   cursor: pointer;
 }
 
 .search-icon {
-  width: 18px;
-  height: 18px;
+  width: 28px;
+  height: 28px;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -149,10 +124,10 @@ form {
 }
 
 #sub-head {
-  font-size: 26px;
-  color: rgb(36, 36, 202);
+  font-size: 45px;
+  color: rgb(15, 73, 143);
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 45px;
   margin-top: 2rem;
 }
 
@@ -162,51 +137,63 @@ form {
   margin: auto;
 }
 
-.card-container {
+.book_card-container {
   display: flex;
   overflow-x: scroll;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
+  padding-bottom: 50px;
 }
 
-.card {
-  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
-    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
-    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+.book_card {
+  box-shadow: rgba(69, 68, 68, 0.283) 0px 25px 20px -20px;
   flex: 0 0 300px;
-  margin-right: 20px;
+  margin-right: 25px;
   scroll-snap-align: start;
   border-radius: 10px;
   padding: 20px;
   transition: 1s ease;
-  border: 2px solid blue;
+  
 }
 .card:hover {
-  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
-    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
-    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
-  transform: scale(0.9);
+  box-shadow: rgba(15, 27, 188, 0.551) 0px 1px 2px, rgba(44, 21, 158, 0.589) 0px 2px 4px,
+    rgba(15, 57, 183, 0.379) 0px 4px 8px, rgba(35, 6, 149, 0.582) 0px 8px 16px,
+    rgba(11, 20, 188, 0.553) 0px 16px 32px, rgba(18, 10, 174, 0.57) 0px 32px 64px;
+  
+
 }
-.card img {
-  width: 100px; /* Adjust the size as needed */
+.book_card:hover {
+  box-shadow: rgba(92, 91, 91, 0.601) 0px 20px 20px 0px;
+  transform: translateY(-20px);
+}
+.book_card img {
+ 
+  box-shadow: rgba(67, 66, 66, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+.book_quote_img{
+  max-width: 100px; /* Adjust the size as needed */
   height: 100px; /* Adjust the size as needed */
   border-radius: 50%;
-  object-fit: cover;
 }
-
-.card p {
+.book_card p {
+  margin-top: 5px;
   text-align: center;
 }
 
-.card h4 {
+.book_card h4 {
+  color: #3c5f81;
   font-weight: 500;
+  font-size: 21px;
   margin-top: 5px;
   margin-bottom: 5px;
 }
 
-.card-content {
-  margin-top: 10px;
+.book_card-content {
+  margin-top: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -214,7 +201,7 @@ form {
 }
 
 /* Hide scrollbars */
-.card-container::-webkit-scrollbar {
+.book_card-container::-webkit-scrollbar {
   display: none;
 }
 
@@ -269,7 +256,7 @@ form {
     font-size: small;
   }
 
-  .card {
+  .book_card {
     flex: 0 0 350px;
   }
 }

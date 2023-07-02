@@ -1,4 +1,4 @@
-import CardContent from "../Home/BkCards/CardContent/CardContent"
+import CardContent from "../../components/Home/BkCards/CardContent/CardContent"
 import ebk1 from "../../assets/ebooks/ebk1.webp";
 import { useContext, useState } from "react";
 import DataContext from "../../context/DataProvider";
@@ -29,7 +29,7 @@ export default function BookmarkPage({ props }) {
                                 <div>
                                     <div className="book-box">
                                         <div className="thumbnail">
-                                            <img src={image} alt="No Bookmars Yet" />
+                                            <img loading='lazy' src={image} alt="The perfect marriage book thumbnail" />
                                         </div>
                                     </div>
                                 </div>
