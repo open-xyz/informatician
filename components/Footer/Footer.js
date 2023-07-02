@@ -3,10 +3,6 @@
 import NewsLetter from "./NewsLetter/NewsLetter";
 import { BsDiscord, BsGithub, BsTwitter } from "react-icons/bs";
 import "./Footer.css";
-
-// import lightLogo from "../../assets/logos/light_logo.png";
-// import darkLogo from "../../assets/logos/dark_logo.png";
-import { ScrollToTop } from "@/components/Client";
 import Link from "next/link";
 import Image from "next/image";
 
