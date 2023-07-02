@@ -31,15 +31,15 @@ p {
   padding: 40px;
   margin-bottom: 40px;
   border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
   overflow: hidden;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.benefit:hover {
+/* .benefit:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
+} */
 
 .benefit-content {
   display: flex;
@@ -88,5 +88,31 @@ p {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .benefit {
+    padding: 0;
+    padding-top: 24px;
+  }
+
+  .benefit-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .benefit-image {
+    width: 80%;
+  }
+
+  .benefit-details {
+    width: 80%;
+  }
+
+  .benefit h2 {
+    padding-top: 14px;
   }
 }
