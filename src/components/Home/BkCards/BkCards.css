@@ -3,6 +3,7 @@
   margin-bottom:100px ;
   height: 430px;
 }
+
 .columnn{
   width: 50000px;
 }
@@ -68,3 +69,15 @@
   box-shadow: 1px 2px 8px 3px lightgray, 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+.swiper-pagination-bullet-active {
+  background: #6e7ebc;
+}
+
+@media (prefers-color-scheme: dark) {
+  .swiper-pagination-bullet {
+    background: darkgray;
+  }
+  .swiper-pagination-bullet-active {
+    background: #6e7ebc;
+  }
+}

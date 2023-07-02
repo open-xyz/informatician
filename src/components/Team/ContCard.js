@@ -18,9 +18,9 @@ const ContCard = (props) => {
     <>
       <div
         className='card' style={{ border: props.theme === "dark" ? '2px solid white' : '2px solid black' }}>
-        <img className='profile' src={`https://images.weserv.nl/?output=webp&url=${image}`} alt={title} 
+        <img loading='lazy' className='profile' src={`https://images.weserv.nl/?output=webp&url=${image}`} alt={title} 
         style={{ border: props.theme === "dark" ? '2px solid white' : '2px solid black' }}
-        />
+        onClick={() => openContributorProfile(profile)}  />
         <div className='content'>
           <h1 className='text'>{title}</h1>
           <p>

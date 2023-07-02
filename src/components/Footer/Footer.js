@@ -27,9 +27,14 @@ const Footer = (props) => {
   return (
     <>
       <ScrollToTop />
-
-      <NewsLetter />
-
+      <div className="news">
+        <div className="black">
+          <div className="container">
+            <div className="row justify-content-center">
+            </div>
+          </div>
+        </div>
+      </div>
       <footer>
         <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
           <div className="md:flex md:justify-between">
@@ -37,6 +42,7 @@ const Footer = (props) => {
               <Link to="/" className="flex items-center">
                 <Link to="/" className="logo">
                   <img
+                    loading='lazy'
                     src={themeImage}
                     className=" h-12 w-17 ml-1 mb-2.5  hover:shadow "
                     alt="Informatician logo"
@@ -46,8 +52,11 @@ const Footer = (props) => {
                   Informatician
                 </span> */}
               </Link>
+              <NewsLetter/>
             </div>
             <div className="grid grid-cols-3 gap-8 sm:gap-6 sm:grid-cols-4">
+
+
               <div>
                 <h2 className={`mb-6 text-m font-bold`}>
                   Explore
@@ -75,6 +84,14 @@ const Footer = (props) => {
                       className="transition-all duration-300 ease-in-out"
                     >
                       Genre
+                    </Link>
+                  </li>
+                  <li className="mb-4">
+                    <Link
+                      to="./awards"
+                      className="transition-all duration-300 ease-in-out"
+                    >
+                      Awards
                     </Link>
                   </li>
                 </ul>

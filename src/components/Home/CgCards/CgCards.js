@@ -11,6 +11,7 @@ import abk1 from "../../../assets/audiobks/abk1.webp";
 import abk2 from "../../../assets/audiobks/abk2.webp";
 import abk3 from "../../../assets/audiobks/abk3.webp";
 import abk4 from "../../../assets/audiobks/abk4.webp";
+
 export default function CgCards() {
   return (
     <>
@@ -40,7 +41,11 @@ export default function CgCards() {
               image={ebk1}
               title="Biography & Memoir"
             />
-            <CardContent className="m_card" image={abk1} title="Politics" />
+            <CardContent 
+              className="m_card" 
+              image={abk1} 
+              title="Politics" 
+            />
             <CardContent
               className="m_card"
               image={abk2}
@@ -66,7 +71,11 @@ export default function CgCards() {
               image={ebk3}
               title="Self-Improvment"
             />
-            <CardContent className="m_card" image={ebk4} title="Travel" />
+            <CardContent 
+              className="m_card" 
+              image={ebk4} 
+              title="Travel" 
+            />
             <CardContent
               className="m_card"
               image={ebk5}

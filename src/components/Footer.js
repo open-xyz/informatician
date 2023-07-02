@@ -96,12 +96,12 @@ class Footer extends React.Component {
               <ul className="text-gray-500  font-medium">
                 <li className="mb-4 flex justify-center">
                   <Link to="#" className="hover:underline">
-                    <img src={appstore} className="h-10" alt="App Store" />
+                    <img loading='lazy' src={appstore} className="h-10" alt="App Store" />
                   </Link>
                 </li>
                 <li className="mb-4 flex justify-center">
                   <Link to="#">
-                    <img className="h-7" src={playstore} alt="Play Store" />
+                    <img loading='lazy' className="h-7" src={playstore} alt="Play Store" />
                   </Link>
                 </li>
               </ul>

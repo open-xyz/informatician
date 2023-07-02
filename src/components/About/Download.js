@@ -75,10 +75,11 @@ export default function Download() {
       <div className="left col-lg-6 col-md-6 position-relative d-flex align-items-start justify-content-center">
         <div id="mobile-image-container">
           <img
+            loading='lazy'
             className="rounded-5"
             id="mobile-image"
             src={mobile}
-            alt="mobile"
+            alt="mobile view of the website"
             data-aos="fade-left"
             data-aos-duration="500"
           />
@@ -92,7 +93,7 @@ export default function Download() {
         data-aos-duration="500"
       >
         <p className="brand-name fw-bold text-uppercase">
-          <img src={logo} alt="Informatician logo" className="h-10 d-inline" /> Informatician
+          <img loading='lazy' src={logo} alt="Informatician logo, a book with a bookmark" className="h-10 d-inline" /> Informatician
         </p>
         <h1 className="fw-bolder fs-1">Available For Your Smartphone</h1>
         <p>
