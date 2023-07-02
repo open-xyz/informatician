@@ -1,0 +1,12 @@
+footer
+{
+  background: var(--bgFooter-light);
+}
+
+footer a{
+  color: var(--textGray-dark);
+}
+
+footer a:hover{
+  color: var(--textGray);
+}

@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Proza+Libre&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap');
+
+.profile {
+  border-radius: 50%;
+  height: 230px;
+  width: 230px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  transition: all 0.3s ease-in-out;
+
+  @media screen and (max-width: 768px) {
+    height: 150px;
+    width: 150px;
+  }
+}
+
+.profile:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.card {
+  margin: 20px;
+  padding: 15px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.181);
+  flex-basis: calc(33.33% - 40px); /* Adjust the percentage and spacing as needed */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    flex-basis: 100%;
+    margin: 20px 0;
+  }
+}
+
+.content {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.text {
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+.con_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px 10px; /* Add padding top and bottom to create spacing */
+}
+
+.heading{
+    /* font-family: 'Baloo Bhai 2', cursive; */
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 70px;
+    padding: 20px 0;
+    color: var(--black);
+    /* text-shadow: 0 0 11px rgba(102, 204, 255, 0.8); */
+    text-transform: uppercase;
+    /* letter-spacing: 2px; */
+    font-weight: 700;
+    @media screen and (max-width: 768px) {
+        font-size: 2rem;
+    }
+}
+
+.view_button {
+  background-color: transparent;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-top: auto;
+}
+
+.view_button:hover{
+    background-color: black;
+    color: white;
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
