@@ -5,7 +5,7 @@
   padding: 0;
 } */
 
-:root {
+/* :root {
   --white: white;
   --black: black;
   --bgLight: #f8f8f8;
@@ -16,7 +16,7 @@
   --textGray: #7288a2;
   --bgFooter-light: rgb(239 246 255);
   --textGray-dark: rgb(75 85 99);
-}
+} */
 
 nav {
   display: flex;
@@ -24,7 +24,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  background-color: #eff6ff;
+  /* background-color: #eff6ff; */
   padding: 10px 1px;
   font-family: "Poppins", sans-serif !important;
 }
@@ -257,7 +257,7 @@ nav {
     width: 277px;
     height: 100vh;
     padding: 14px 0 0 0px;
-    background-color: #eff6ff;
+    /* background-color: #eff6ff; */
     transform: translateX(0);
     transition: transform 0.4s ease-out;
   }

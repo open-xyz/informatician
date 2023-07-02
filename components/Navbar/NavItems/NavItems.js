@@ -2,10 +2,12 @@ import "../Navbar.css";
 import { FaRegBookmark, FaSearch } from "react-icons/fa";
 // import { faBookmark } from "@fortawesome/free-regular-svg-icons";
 import Link from "next/link";
+import Image from "next/image";
 export default function NavItems(props) {
   return (
     <div style={{}}>
       <ul
+        className="bg-primary"
         id="nav-items"
         style={{
           marginBottom: 0,
@@ -17,7 +19,6 @@ export default function NavItems(props) {
             props.clicked & props.drawer
               ? "transform 0.3s ease-out"
               : "transform 0.3s ease-in",
-          background: props.theme === "dark" ? "#001229" : "#eff6ff",
         }}
       >
         <li>
@@ -31,13 +32,7 @@ export default function NavItems(props) {
           </div>
           <Link
             href="/"
-            className={
-              props.pathname === "/"
-                ? "active"
-                : props.theme === "dark"
-                ? "text-white"
-                : "text-dark"
-            }
+            className={props.pathname === "/" ? "active" : "dark:text-white"}
             onClick={props.handleOptionClick}
           >
             Home
@@ -46,13 +41,7 @@ export default function NavItems(props) {
         <li>
           <Link
             href="/books"
-            className={
-              props.pathname === "/books"
-                ? "active"
-                : props.theme === "dark"
-                ? "text-white"
-                : "text-dark"
-            }
+            className={props.pathname === "/books" ? "active" : "dark:text-white"}
             onClick={props.handleOptionClick}
           >
             Books
@@ -61,13 +50,7 @@ export default function NavItems(props) {
         <li>
           <Link
             href="/about"
-            className={
-              props.pathname === "/about"
-                ? "active"
-                : props.theme === "dark"
-                ? "text-white"
-                : "text-dark"
-            }
+            className={props.pathname === "/about" ? "active" : "dark:text-white"}
             onClick={props.handleOptionClick}
           >
             About
@@ -76,13 +59,7 @@ export default function NavItems(props) {
         <li>
           <Link
             href="/contact"
-            className={
-              props.pathname === "/contact"
-                ? "active"
-                : props.theme === "dark"
-                ? "text-white"
-                : "text-dark"
-            }
+            className={props.pathname === "/contact" ? "active" : "dark:text-white"}
             onClick={props.handleOptionClick}
           >
             Contact Us
@@ -91,23 +68,19 @@ export default function NavItems(props) {
 
         <li>
           <Link href="/bookmark">
-            <FaRegBookmark
-              style={{
-                color: props.theme === "dark" ? "white" : "",
-                height: "24px",
-              }}
-            />
+            <FaRegBookmark className="h-6 dark:text-white" />
           </Link>
         </li>
         <li>
-          <Link href="/addBooks" className="flex" style={{ width: "34px" }}>
-            <img
+          <Link href="/addBooks" className="flex w-9">
+            <Image
               loading="lazy"
-              src="https://img.icons8.com/ios/80/add-book.png"
+              src="/add-book.png"
               alt="upload icon"
-              className="h-8 mr-3 text-bold  hover:font-bold hover:shadow-md self-center  "
-              style={{ filter: props.theme === "dark" ? "invert(1)" : "" }}
-            />{" "}
+              width={40}
+              height={40}
+              className="h-8 mr-3 text-bold  hover:font-bold hover:shadow-md self-center dark:invert "
+            />
           </Link>
         </li>
       </ul>
