@@ -3,6 +3,7 @@
 import NewsLetter from "./NewsLetter/NewsLetter";
 import { BsDiscord, BsGithub, BsTwitter } from "react-icons/bs";
 import "./Footer.css";
+
 // import lightLogo from "../../assets/logos/light_logo.png";
 // import darkLogo from "../../assets/logos/dark_logo.png";
 import { ScrollToTop } from "@/components/Client";
@@ -18,7 +19,6 @@ const Footer = (props) => {
 
   return (
     <>
-      {/* <ScrollToTop /> */}
       <NewsLetter />
 
       <footer>
@@ -26,14 +26,14 @@ const Footer = (props) => {
           <div className="md:flex md:justify-between">
             <div className="mb-6 md:mb-0">
               <Link href="/" className="flex items-center">
-                  <Image
-                    loading="lazy"
-                    src={themeImage}
-                    width={400}
-                    height={100}
-                    className=" h-12 w-fit ml-1 mb-2.5  hover:shadow logo"
-                    alt="Informatician logo"
-                  />
+                <Image
+                  loading="lazy"
+                  src={themeImage}
+                  width={400}
+                  height={100}
+                  className=" h-12 w-fit ml-1 mb-2.5  hover:shadow logo"
+                  alt="Informatician logo"
+                />
                 {/* <span className="self-center text-3xl font-bold whitespace-nowrap transition-all duration-300 ease-in-out">
                   Informatician
                 </span> */}

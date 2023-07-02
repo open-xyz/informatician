@@ -1,8 +1,9 @@
-'use client'
+
+"use client";
 
 import React, { useState } from "react";
 import { usePathname } from "next/navigation";
-import { searchBooks } from "../../utils/searchBooks";
+import { searchBooks } from "../../../utils/searchBooks";
 import NavItems from "./NavItems/NavItems.js";
 import "./Navbar.css";
 import Image from "next/image";
@@ -16,7 +17,7 @@ function handleSubmit(event) {
 export default function Navbar(props) {
   const [clicked, setClicked] = useState(false);
   const [books, setBooks] = useState([]);
-  const pathName = usePathname() || '/';
+  const pathName = usePathname() || "/";
 
   const handleOptionClick = () => {
     setClicked(false);
@@ -45,11 +46,11 @@ export default function Navbar(props) {
           src={themeImage}
           width={300}
           height={100}
-          className="h-12 w-fit ml-1 mb-3  hover:shadow "
+          className=" h-12 w-fit ml-1 mb-3  hover:shadow "
           alt="Informatician logo"
         />
       </Link>
-      <div className="flex search-container search-web-view align-items-center">
+      <div className="search-container search-web-view align-items-center">
         <div>
           <form className="search-bar m-0" onSubmit={handleSubmit}>
             <input

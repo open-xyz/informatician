@@ -1,4 +1,5 @@
-'use client'
+
+"use client";
 
 import "./NewsLetter.css";
 import React from "react";
@@ -38,7 +39,7 @@ class NewsLetter extends React.Component {
         <div className="black bg-opacity-50 container flex justify-center">
           <div className="w-96 max-w-full">
             <h4 className="head">Subscribe To Newsletter</h4>
-            <div className="flex p-2 gap-8">
+            <div className="flex p-2 gap-2 md:gap-8">
               <input
                 type="email"
                 className="form-input mr-2 w-96 px-3 rounded-md focus:outline-0"

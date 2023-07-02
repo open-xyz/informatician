@@ -1,5 +1,5 @@
 import "../Navbar.css";
-import { FaRegBookmark } from "react-icons/fa";
+import { FaRegBookmark, FaSearch } from "react-icons/fa";
 // import { faBookmark } from "@fortawesome/free-regular-svg-icons";
 import Link from "next/link";
 export default function NavItems(props) {
@@ -25,7 +25,7 @@ export default function NavItems(props) {
             <form action="" className="search-bar">
               <input type="text" placeholder="search..." name="q" />
               <button type="submit">
-                <i className="fa-solid fa-search"></i>
+                <FaSearch className="text-gray-500 ml-2" />
               </button>
             </form>
           </div>
