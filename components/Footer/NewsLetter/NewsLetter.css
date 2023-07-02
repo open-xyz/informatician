@@ -1,6 +1,6 @@
 .news {
   border-radius: 0px;
-  background-image: url(../../../../public/assets/mainPages/newsletter.webp);
+  background-image: url(../../../public/assets/mainPages/newsletter.webp);
   min-height: 180px;
   background-attachment: fixed;
   background-position: center;

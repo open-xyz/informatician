@@ -3,7 +3,7 @@
 
 import React, { useState } from "react";
 import { usePathname } from "next/navigation";
-import { searchBooks } from "../../../utils/searchBooks";
+import { searchBooks } from "@/utils/searchBooks";
 import NavItems from "./NavItems/NavItems.js";
 import "./Navbar.css";
 import Image from "next/image";
@@ -37,7 +37,7 @@ export default function Navbar(props) {
 
   return (
     <nav
-      className="rounded-t-none fixed top-0 left-0 w-full box-shadow: 0 4px 6px -1px"
+      className="fixed top-0 left-0 w-full shadow"
       style={{ background: props.theme === "dark" ? "#001229" : "#eff6ff" }}
     >
       <Link href="/" className="logo">
