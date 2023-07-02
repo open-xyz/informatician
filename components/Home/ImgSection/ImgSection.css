@@ -37,7 +37,7 @@
     left: 0;
     display: block;
     bottom: -54px;
-    background-image: url(../../../assets/mainPages/start.webp);
+    background-image: url(../../../public/assets/mainPages/start.webp);
 }
 
 .inner-content{

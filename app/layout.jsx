@@ -1,15 +1,15 @@
 "use client";
-import "@styles/index.css";
-import Navbar from "@components/Navbar";
-import Body from "@components/Body";
-import Footer from "@components/Footer";
-import DataProvider from "@context/DataProvider";
-import ScrollButton from "@components/ScrollButton";
+import "../styles/index.css";
+import Navbar from "../components/Navbar";
+import Body from "../components/Body";
+import Footer from "../components/Footer";
+import DataProvider from "../context/DataProvider";
+import ScrollButton from "../components/ScrollButton";
 
 export const metadata = {
-  title: "",
-  description: "",
-};
+    title: 'Informatician',
+    description: 'Unleash an open source book platform where literature meets community, and knowledge knows no bounds. Explore a diverse collection of books and information in the domain of books and reading.',
+  }
 
 const RootLayout = () => {
   const [theme, setTheme] = useState("light");
