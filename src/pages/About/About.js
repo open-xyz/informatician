@@ -7,6 +7,7 @@ import Feature from "../../components/About/Feature";
 import Testimonial from "../../components/About/Testimonial";
 import Download from "../../components/About/Download";
 import AOS from "aos";
+import Contributors from "../../components/About/Contributors";
 import "aos/dist/aos.css";
 import '../../components/About/Feature.css'
 
@@ -44,6 +45,7 @@ const About = (props) => {
       <Feature theme={props.theme} />
       <div className="Testimonial"><Testimonial /></div>
       <Download />
+      <Contributors />
     </div>
   );
 };
