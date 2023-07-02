@@ -124,7 +124,7 @@ export default function SingleBk11(props) {
                                         <div>
                                             <div className="book-box">
                                                 <div className="thumbnail">
-                                                    <img loading='lazy' src={atomic} alt="Vanderbilt" />
+                                                    <img loading='lazy' src={atomic} alt="The atomic habits book thumbnail" />
                                                 </div>
                                             </div>
                                         </div>

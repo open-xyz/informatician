@@ -94,7 +94,7 @@ export default function BookList(props) {
            
             <button type="submit" id="search-button-2" onClick={handleClick}>
               <div className="search-icon">
-              <img loading='lazy' width="100" height="100" src="https://img.icons8.com/ios/100/search--v1.png" alt="search--v1"/>
+              <img loading='lazy' width="100" height="100" src="https://img.icons8.com/ios/100/search--v1.png" alt="Icon of a magnifying glass for search functionality"/>
                </div>
             </button>
           </div>

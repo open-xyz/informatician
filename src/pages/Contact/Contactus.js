@@ -186,7 +186,7 @@ const Contact = () => {
               loading='lazy'
               style={{ marginLeft: "10%" }}
               src={contactImage}
-              alt="Contact"
+              alt="a cartoon of a person wearing a headset"
               className="contact-image"
             />
           </div>
