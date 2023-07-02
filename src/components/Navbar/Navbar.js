@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useState } from "react";
@@ -29,13 +30,14 @@ export default function Navbar(props) {
       throw err;
     }
   };
+
   const themeImage = `/assets/logos/${
     props.theme === "dark" ? "light" : "dark"
   }_logo.png`;
 
   return (
     <nav
-      className="fixed top-0 left-0 w-full shadow"
+      className="rounded-t-none fixed top-0 left-0 w-full box-shadow: 0 4px 6px -1px"
       style={{ background: props.theme === "dark" ? "#001229" : "#eff6ff" }}
     >
       <Link href="/" className="logo">
