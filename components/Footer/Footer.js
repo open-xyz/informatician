@@ -2,34 +2,23 @@
 // import appstore from "../../assets/AppStore_Icon.webp";
 import NewsLetter from "./NewsLetter/NewsLetter";
 import { BsDiscord, BsGithub, BsTwitter } from "react-icons/bs";
-import "./Footer.css";
 import Link from "next/link";
 import Image from "next/image";
+import Logo from "../Logo";
 
 const Footer = (props) => {
   let year = new Date().getFullYear();
-
-  const themeImage = `/assets/logos/${
-    props.theme === "dark" ? "light" : "dark"
-  }_logo.png`;
 
   return (
     <>
       <NewsLetter />
 
       <footer>
-        <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+        <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8 bg-primary">
           <div className="md:flex md:justify-between">
             <div className="mb-6 md:mb-0">
               <Link href="/" className="flex items-center">
-                <Image
-                  loading="lazy"
-                  src={themeImage}
-                  width={400}
-                  height={100}
-                  className=" h-12 w-fit ml-1 mb-2.5  hover:shadow logo"
-                  alt="Informatician logo"
-                />
+                <Logo />
                 {/* <span className="self-center text-3xl font-bold whitespace-nowrap transition-all duration-300 ease-in-out">
                   Informatician
                 </span> */}
