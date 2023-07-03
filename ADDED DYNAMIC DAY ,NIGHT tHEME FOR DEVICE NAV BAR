@@ -1,0 +1,47 @@
+import android.os.Build
+import android.os.Bundle
+import android.view.View
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
+
+class MainActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        
+        // Enable dynamic day/night theme for the navigation bar
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            window.decorView.setOnApplyWindowInsetsListener { _, insets ->
+                val isNightMode = resources.configuration.uiMode and android.content.res.Configuration.UI_MODE_NIGHT_MASK == android.content.res.Configuration.UI_MODE_NIGHT_YES
+                if (insets.systemWindowInsetBottom > 0) {
+                   
+                    if (isNightMode) {
+                        window.decorView.systemUiVisibility =
+                            View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR
+                    } else {
+                        window.decorView.systemUiVisibility =
+                            View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR or View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR
+                    }
+                } else {
+                    // Navigation bar is hidden (gesture navigation)
+                    window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
+                }
+                insets.consumeSystemWindowInsets()
+            }
+        } else {
+            // Fallback for devices before Android Oreo
+            if (isNightMode()) {
+                window.decorView.systemUiVisibility =
+                    View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR or View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR
+            } else {
+                window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
+            }
+        }
+    }
+
+    private fun isNightMode(): Boolean {
+        val nightMode = AppCompatDelegate.getDefaultNightMode()
+        return nightMode == AppCompatDelegate.MODE_NIGHT_YES
+    }
+}
