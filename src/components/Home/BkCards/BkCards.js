@@ -117,15 +117,12 @@ export default function BkCards(props) {
                 breakpoints={{
                   640: {
                     slidesPerView: 2,
-                    spaceBetween: 20,
                   },
                   768: {
                     slidesPerView: 3,
-                    spaceBetween: 40,
                   },
                   1096: {
                     slidesPerView: 5,
-                    spaceBetween: 50,
                   },
                 }}
                 modules={[Autoplay, Pagination, Navigation]}
@@ -244,7 +241,7 @@ export default function BkCards(props) {
                   />
                   </Link>
                 </SwiperSlide>
-                <GhostNextButton refprop={nextButton} />
+              <GhostNextButton refprop={nextButton} />
               </Swiper>
               
               <div

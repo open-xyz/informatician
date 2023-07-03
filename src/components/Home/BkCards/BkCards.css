@@ -37,7 +37,7 @@
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  margin: 35px;
+  margin: 0;
   margin-top: 20px;
   border: 1px solid lightblue;
   border-top-left-radius: 5px;
