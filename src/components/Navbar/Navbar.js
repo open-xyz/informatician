@@ -3,7 +3,7 @@
 
 import React, { useState } from "react";
 import { usePathname } from "next/navigation";
-import { searchBooks } from "../../../utils/searchBooks";
+import { searchBooks } from "../../utils/searchBooks";
 import NavItems from "./NavItems/NavItems.js";
 import "./Navbar.css";
 import Image from "next/image";
