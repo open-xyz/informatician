@@ -37,7 +37,7 @@
     left: 0;
     display: block;
     bottom: -54px;
-    background-image: url(../../../../public/assets/mainPages/start.webp);
+    background-image: url(../../../public/assets/mainPages/start.webp);
 }
 
 .inner-content{
@@ -78,7 +78,7 @@
 .last-two{
     right: 0;
     display: block;
-    background-image: url(../../../../public/assets/mainPages/start2.webp);
+    background-image: url(../../../public/assets/mainPages/start2.webp);
 }
 
 .last-one{
@@ -119,7 +119,7 @@
     bottom: -171px;
     display: block;
     right: -25px;
-    background-image: url(../../../../public/assets/mainPages/start3.webp);
+    background-image: url(../../../public/assets/mainPages/start3.webp);
 }
 
 .nameAnimation {
