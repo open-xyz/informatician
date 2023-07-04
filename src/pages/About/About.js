@@ -1,14 +1,16 @@
 import React, { useEffect } from "react";
 import "./About.css";
 import aboutUs from "../../assets/mainPages/aboutUs.webp";
+import Tilt from 'react-parallax-tilt';
 import { useMediaQuery } from "react-responsive";
-import ScrollToTopButton from "../ScrollButton";
-import Feature from "./Feature";
-import Testimonial from "./Testimonial";
-import Download from "./Download";
+import ScrollToTopButton from "../../components/ScrollButton/ScrollButton";
+import Feature from "../../components/About/Feature";
+import Testimonial from "../../components/About/Testimonial";
+import Download from "../../components/About/Download";
 import AOS from "aos";
+import Contributors from "../../components/About/Contributors";
 import "aos/dist/aos.css";
-import './Feature.css'
+import '../../components/About/Feature.css'
 
 const About = (props) => {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
@@ -24,7 +26,14 @@ const About = (props) => {
     <div className="about">
       <div className="w-11/12 flex flex-wrap mx-auto justify-center items-center mt-28 mb-5 max-w-screen-2xl">
         <div className="md:w-1/2 w-11/12" data-aos="fade-left" data-aos-duration="500">
-          <img src={aboutUs} className="w-11/12" alt="about us" />
+          <Tilt>
+            <img
+              loading="lazy"
+              src={aboutUs}
+              className="w-11/12"
+              alt="a group of people sitting on a pile of papers"
+            />
+          </Tilt>
         </div>
         <div className="md:w-1/2 p-3 w-11/12" data-aos="fade-right" data-aos-duration="500">
           <h1 className="text-5xl mb-6 font-bold">About Us</h1>
@@ -44,6 +53,7 @@ const About = (props) => {
       <Feature theme={props.theme} />
       <div className="Testimonial"><Testimonial /></div>
       <Download />
+      <Contributors />
     </div>
   );
 };

@@ -1,4 +1,3 @@
-/* fonts  */
 @import url("https://fonts.googleapis.com/css?family=Abel|Aguafina+Script|Artifika|Athiti|Condiment|Dosis|Droid+Serif|Farsan|Gurajada|Josefin+Sans|Lato|Lora|Merriweather|Noto+Serif|Open+Sans+Condensed:300|Playfair+Display|Rasa|Sahitya|Share+Tech|Text+Me+One|Titillium+Web");
 
 body {
@@ -79,7 +78,7 @@ body {
 	position: relative;
 	overflow: hidden;
 	height: 100%;
-	float: right;
+	/* float: right; */
 	width: 50%;
 	display: inline-block;
 }

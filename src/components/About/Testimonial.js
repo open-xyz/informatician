@@ -38,17 +38,18 @@ export default function Testimonial() {
       </p>
       <div className="con_container">
         {testimonials.map((testimonial) => (
-          <div key={testimonial.id} className="card">
+          <div key={testimonial.id} className="testimoonial_card">
             <img
-              className="profile"
+              loading='lazy'
+              className="testimoonial_profile"
               src={testimonial.image}
               alt={testimonial.name}
             />
-            <div className="content">
-              <p className="text">{testimonial.quote}</p>
-              <div className="details">
-                <span className="name">{testimonial.name}</span>
-                <span className="job">{testimonial.job}</span>
+            <div className="testimoonial_content">
+              <p className="testimoonial_text">{testimonial.quote}</p>
+              <div className="testimoonial_details">
+                <span className="testimoonial_name">{testimonial.name}</span>
+                <span className="testimoonial_job">{testimonial.job}</span>
               </div>
             </div>
           </div>

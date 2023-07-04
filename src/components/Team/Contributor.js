@@ -30,6 +30,14 @@ const Contributors = (props) => {
 
     return (
         <>
+            <hr 
+                style={{
+                    background: 'grey',
+                    color: 'grey',
+                    borderColor: 'grey',
+                    height: '3px',
+                  }}
+            />
             <h1 className='heading'>Meet Our Contributors</h1>
             <div className='con_container'>
                 {contributors.map((contributor) => (

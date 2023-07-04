@@ -1,6 +1,4 @@
 .news {
-  border-radius: 0px;
-  /* background-image: url(../../../assets/mainPages/newsletter.webp); */
   background-image: linear-gradient(to right, #8360c3, #2eb0bf);
   min-height: 180px;
   width: 88%;
@@ -16,8 +14,6 @@
 
 .black {
   border-radius: 0px;
-  /* background-color: rgba(0, 0, 0, 0.5); */
-  /* background-image: linear-gradient(to right, #8360c3, #2ebf91); */
   width: 100%;
   display: flex;
   align-items: center;
@@ -31,14 +27,26 @@
   background-color: white;
   color: black
 }
-.form-control button{
-
-}
 .head {
   text-align: center;
   padding: 17px 0px;
-  color: white;
+  color: black;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 24px;
+}
+@media (max-width: 1000px){
+  .news {
+    margin-left: 50px;
+  }
+}
+@media (max-width: 640px){
+  .news {
+    margin-left: 30px;
+  }
+}
+@media (max-width: 450px){
+  .news {
+    margin-left: 25px;
+  }
 }

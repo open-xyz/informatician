@@ -56,9 +56,10 @@ const Join = () => {
         <ul className=" grid grid-cols-1 md:grid-cols-2 gap-20 md:max-w-5xl">
           <li className="border-2 rounded-xl py-6 px-4 hover:scale-105 ease-in-out transition-transform hover:shadow-2xl shadow-slate-800">
             <img
+              loading='lazy'
               src="https://s-f.scribdassets.com/images/about/03_careers_B_icon_benefits_03_health.svg?a974a5f44"
               className="mx-auto w-24 hover:animate-spin"
-              alt="Medical, dental and vision"
+              alt="Icon representing health benefits"
             />
             <div>
               <h2 className="font-bold text-2xl text-center mt-6 mb-3">
@@ -74,9 +75,10 @@ const Join = () => {
           </li>
           <li className="border-2 rounded-xl py-6 px-4 hover:scale-105 ease-in-out transition-transform hover:shadow-2xl shadow-slate-800">
             <img
+              loading='lazy'
               src="https://s-f.scribdassets.com/images/about/03_careers_B_icon_benefits_01_DEI.svg?510379e31"
               className="mx-auto w-24 hover:animate-spin"
-              alt="Diversity, Equity, and Inclusion"
+              alt="Benefits icon showcasing diversity, equity, and inclusion"
             />
             <div>
               <h2 className="text-2xl font-bold  text-center mt-6 mb-3">
@@ -94,9 +96,10 @@ const Join = () => {
           </li>
           <li className="border-2 rounded-xl py-6 px-4 hover:scale-105 ease-in-out transition-transform hover:shadow-2xl shadow-slate-800">
             <img
+              loading='lazy'
               src="https://s-f.scribdassets.com/images/about/03_careers_B_icon_benefits_07_wellbeing.svg?a974a5f44"
               className="mx-auto w-24 hover:animate-spin"
-              alt="Wellbeing"
+              alt="Illustration of a flower representing wellbeing"
             />
             <div>
               <h2 className="text-2xl font-bold text-center mt-6 mb-3">
@@ -111,9 +114,10 @@ const Join = () => {
           </li>
           <li className="border-2 rounded-xl py-6 px-4 hover:scale-105 ease-in-out transition-transform hover:shadow-2xl shadow-slate-800">
             <img
+              loading='lazy'
               src="https://s-f.scribdassets.com/images/about/03_careers_B_icon_benefits_01_DEI.svg?510379e31"
               className="mx-auto w-24 hover:animate-spin"
-              alt="Monthly stipend"
+              alt="Benefits icon showcasing diversity, equity, and inclusion"
             />
             <div>
               <h2 className="text-2xl font-bold  text-center mt-6 mb-3">
@@ -130,9 +134,10 @@ const Join = () => {
           </li>
           <li className="border-2 rounded-xl py-6 px-4 hover:scale-105 ease-in-out transition-transform hover:shadow-2xl shadow-slate-800">
             <img
+              loading='lazy'
               src="https://s-f.scribdassets.com/images/about/03_careers_B_icon_benefits_06_parental.svg?a974a5f44"
               className="mx-auto w-24 hover:animate-spin"
-              alt="Parental leave"
+              alt="Parental leave icon"
             />
             <div>
               <h2 className="text-2xl  font-bold text-center mt-6 mb-3">
@@ -147,9 +152,10 @@ const Join = () => {
           </li>
           <li className="border-2 rounded-xl py-6 px-4 hover:scale-105 ease-in-out transition-transform hover:shadow-2xl shadow-slate-800">
             <img
+              loading='lazy'
               src="https://s-f.scribdassets.com/images/about/03_careers_B_icon_benefits_05_pto.svg?a974a5f44"
               className="mx-auto w-24 hover:animate-spin"
-              alt="Time off"
+              alt="Benefits icon depicting paid time off"
             />
             <div>
               <h2 className="text-2xl font-bold  text-center mt-6 mb-3">
@@ -172,16 +178,18 @@ const Join = () => {
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-10">
             <li className="mx-auto shadow-xl shadow-slate-800 rounded-2xl">
               <img
+                loading='lazy'
                 src={workplace}
                 className="md:h-80 sm:h-50 rounded-2xl"
-                alt="workplace"
+                alt="a group of people around a table"
               />
             </li>
             <li className="mx-auto shadow-xl shadow-slate-800 rounded-2xl">
               <img
+                loading='lazy'
                 src={workinginoffice}
                 className="md:h-80 sm:h-20 rounded-2xl"
-                alt="working in office"
+                alt="a group of people sitting at a table with computers"
               />
             </li>
           </ul>
@@ -203,6 +211,7 @@ const Join = () => {
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-10 md:max-w-3xl">
             <li className="border-2 rounded-2xl p-4 hover:scale-105 ease-in-out transition-transform">
               <img
+                loading='lazy'
                 src="https://avatars.githubusercontent.com/u/33249782?v=4"
                 className="ml-5 w-32 sm:w-25 mx-auto rounded-full"
                 alt="Rohan Sharma"
@@ -210,7 +219,7 @@ const Join = () => {
               <div>
                 <p className="ml-5 mt-10 text-slate-500">
                   {" "}
-                  <img src={quotationmark} alt="quotation mark" className=" w-5 mb-2 mr-1 inline" />
+                  <img loading='lazy' src={quotationmark} alt="quotation mark" className=" w-5 mb-2 mr-1 inline" />
                   {"  "}
                   The vibrant and dynamic environment fosters creativity and innovation. Being part of a talented team that is passionate about improving access to knowledge and reading has been incredibly fulfilling.
                   <br></br>
@@ -221,13 +230,14 @@ const Join = () => {
 
             <li className="border-2 rounded-2xl p-4 hover:scale-105 ease-in-out transition-transform">
               <img
+                loading='lazy'
                 src="https://images.weserv.nl/?output=webp&url=https://avatars.githubusercontent.com/u/96341431?v=4"
                 className="ml-5 w-32 mx-auto rounded-full"
                 alt="Deepaksingh Kushwah"
               />
               <div>
                 <p className="ml-5 mt-10 mb-5 text-slate-500">
-                  <img src={quotationmark} alt="quotation mark" className=" w-5 mr-1 mb-2 inline " />
+                  <img loading='lazy' src={quotationmark} alt="quotation mark" className=" w-5 mr-1 mb-2 inline " />
                   {"  "}
                   If you're motivated and persistent, your impact will
                   definitely be felt by the company. There is nothing more
@@ -256,9 +266,10 @@ const Join = () => {
           <ul className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl ">
             <li className=" ">
               <img
+                loading='lazy'
                 src="https://s-f.scribdassets.com/images/about/03_careers_E_img_01_@2x.jpg?a974a5f44"
                 className="rounded-3xl"
-                alt="Community"
+                alt="a group of people excited"
               />
               <div>
                 <h2 className="font-bold text-center mt-6 mb-3 text-lg uppercase">Community</h2>
@@ -279,9 +290,10 @@ const Join = () => {
             </li>
             <li className=" ">
               <img
+                loading='lazy'
                 src="https://s-f.scribdassets.com/images/about/03_careers_E_img_02_@2x.jpg?a974a5f44"
                 className="rounded-3xl mx-auto  "
-                alt="Characters with character"
+                alt="Three people staring at you"
               />
               <div>
                 <h2 className="font-bold  text-center mt-6 mb-3 text-lg uppercase">
@@ -302,9 +314,10 @@ const Join = () => {
             </li>
             <li className=" ">
               <img
+                loading='lazy'
                 src="https://s-f.scribdassets.com/images/about/03_careers_E_img_03_@2x.jpg?a974a5f44"
                 className="rounded-3xl mx-auto"
-                alt="Growth Mentality"
+                alt="a girl sitting and reading a book"
               />
               <div>
                 <h2 className=" font-bold text-center mt-6 mb-3 text-lg uppercase">

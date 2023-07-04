@@ -6,7 +6,7 @@ import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const AddBooks = () => {
+const AddBooks = (props) => {
   const bookName = useRef();
   const authorName = useRef();
   const publisher = useRef();
@@ -44,39 +44,67 @@ const AddBooks = () => {
       <div className="addbook_main">
         <div className="addBooks-container">
           <div className="add-books text-white">
-            <h1 className="text-dark form-title">Add Books</h1>
-            <form className="Boxx" onSubmit={handleSubmit}>
+            <h1 className="form-title" style={{
+              color: props.theme === "dark"?"white":"black"
+              }}>Add Books</h1>
+            <form className="Boxx" onSubmit={handleSubmit} style={{
+                  color: props.theme === "dark"?"white":"black",
+                  backgroundColor: props.theme === "dark"?"black":"white"
+                  }}>
               <input
                 className="Inputt"
                 type="text"
                 placeholder="Book Name"
                 ref={bookName}
+                style={{
+                  color: props.theme === "dark"?"white":"black",
+                  backgroundColor: props.theme === "dark"?"black":"white"
+                  }}
               />
               <input
                 className="Inputt"
                 type="text"
                 placeholder="Author Name"
                 ref={authorName}
+                style={{
+                  color: props.theme === "dark"?"white":"black",
+                  backgroundColor: props.theme === "dark"?"black":"white"
+                  }}
               />
               <input
                 className="Inputt"
                 type="text"
                 placeholder="Publisher"
                 ref={publisher}
+                style={{
+                  color: props.theme === "dark"?"white":"black",
+                  backgroundColor: props.theme === "dark"?"black":"white"
+                  }}
               />
               <input
                 className="Inputt"
                 type="number"
                 placeholder="Pages"
                 ref={pages}
+                style={{
+                  color: props.theme === "dark"?"white":"black",
+                  backgroundColor: props.theme === "dark"?"black":"white"
+                  }}
               />
               <input
                 className="Inputt"
                 type="text"
                 placeholder="Img Url"
                 ref={img}
+                style={{
+                  color: props.theme === "dark"?"white":"black",
+                  backgroundColor: props.theme === "dark"?"black":"white"
+                  }}
               />
-              <select className="Inputt" ref={category}>
+              <select className="Inputt" ref={category} style={{
+                  color: props.theme === "dark"?"white":"black",
+                  backgroundColor: props.theme === "dark"?"black":"white"
+                  }}>
                 {categories.map((category, index) => (
                   <option key={index} value={category}>
                     {category}

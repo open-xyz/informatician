@@ -90,13 +90,16 @@ export default function BkCards(props) {
               >
                 <svg
                   height="50"
-                  width="80"
+                  width="50"
                   viewBox="0 0 512 512"
                   xmlSpace="preserve"
                   xmlns="http://www.w3.org/2000/svg"
                   style={{ rotate: "180deg" }}
                 >
-                  <path d="M160 115.4L180.7 96 352 256 180.7 416 160 396.7 310.5 256z" />
+                  <path
+                    d="M160 115.4L180.7 96 352 256 180.7 416 160 396.7 310.5 256z"
+                    fill="grey"
+                  />
                 </svg>
               </div>
               
@@ -114,19 +117,18 @@ export default function BkCards(props) {
                 breakpoints={{
                   640: {
                     slidesPerView: 2,
-                    spaceBetween: 20,
                   },
                   768: {
                     slidesPerView: 3,
-                    spaceBetween: 40,
                   },
                   1096: {
                     slidesPerView: 5,
-                    spaceBetween: 50,
                   },
                 }}
                 modules={[Autoplay, Pagination, Navigation]}
                 className="mySwiper"
+                style={{ 
+                  background: props.theme === "dark" ? '#161313' : ''}}
               >
                 <GhostPrevButton refprop={prevButton} />
                 <SwiperSlide > 
@@ -239,12 +241,13 @@ export default function BkCards(props) {
                   />
                   </Link>
                 </SwiperSlide>
-                <GhostNextButton refprop={nextButton} />
+              <GhostNextButton refprop={nextButton} />
               </Swiper>
               
               <div
                 onClick={() => nextButton.current.click()}
                 className="cursor-pointer"
+                
               >
                 <svg
                   height="50"
@@ -253,7 +256,10 @@ export default function BkCards(props) {
                   xmlSpace="preserve"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <path d="M160 115.4L180.7 96 352 256 180.7 416 160 396.7 310.5 256z" />
+                  <path
+                    d="M160 115.4L180.7 96 352 256 180.7 416 160 396.7 310.5 256z"
+                    fill="grey"
+                  />
                 </svg>
               </div>
             </div>

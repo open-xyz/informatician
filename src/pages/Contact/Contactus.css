@@ -164,6 +164,11 @@ p {
   max-width: 100%;
   height: auto;
   flex: 1;
+  transition: transform 0.5s;
+}
+
+.contact-image:hover{
+  transform: rotate(-10deg);
 }
 
 @media only screen and (max-width: 700px) {

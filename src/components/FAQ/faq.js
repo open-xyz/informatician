@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./faq.css";
-import helpImage from "../assets/mainPages/help.webp";
+import helpImage from "../../assets/mainPages/help.webp";
 
 const AccordionItem = ({ title, content}) => {
   const [expanded, setExpanded] = useState(false);
@@ -32,7 +32,7 @@ const FaqHelp = () => {
     <div className="faq-help">
       <div className="faq-help-header">
         <h1 className="faq-help-title">Informatician Help Center</h1>
-        <img src={helpImage} alt="Help" className="faq-help-image" />
+        <img loading='lazy' src={helpImage} alt="a person wearing a headset" className="faq-help-image" />
       </div>
 
 

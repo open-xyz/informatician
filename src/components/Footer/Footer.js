@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
-
-// import playstore from "../../assets/logo_play_store.webp";
-// import appstore from "../../assets/AppStore_Icon.webp";
 import NewsLetter from "./NewsLetter/NewsLetter";
+// import  "./NewsLetter/NewsLetter.css"
 import { Link, useLocation } from "react-router-dom";
 import { BsDiscord, BsGithub, BsTwitter } from "react-icons/bs";
 import "./Footer.css";
@@ -27,25 +25,22 @@ const Footer = (props) => {
   return (
     <>
       <ScrollToTop />
-
       <NewsLetter />
-
       <footer>
         <div className=" footer_outer mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-          {/* <div className="md:flex md:justify-between"> */}
-            <div  className=" footer_main mb-6 md:mb-0">
-              {/* <Link to="/" className="flex items-center"> */}
+    <div className="footer_body">
+    <div  className=" footer_main mb-6 md:mb-0">
               <Link to="/"  className="logo_img">
                 <img
-                src= {themeImage}
+                src= {darkLogo}
                 className=" h-12 w-17 ml-1 mb-2.5  hover:shadow " 
                 alt="Informatician logo"
               />
               </Link>
             </div>
-            <div className="footer_contents grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+            <div className="footer_inner_body">
               <div>
-                <h2 className={`mb-6 text-m font-bold uppercase `}>
+                <h2 className={`mb-6 text-m font-bold`}>
                   About
                 </h2>
                 <ul className="font-medium">
@@ -162,9 +157,10 @@ const Footer = (props) => {
                 </ul>
               </div>
             </div>
-          {/* </div> */}
-          <hr className="my-4 sm:mx-auto  lg:my-8" style={{ borderColor: "var(--black)" }} />
-          <div className="sm:flex sm:items-center sm:justify-between">
+       
+    </div>
+    <hr className="my-4 sm:mx-auto  lg:my-8" style={{ borderColor: "var(--black)" }} />
+          <div className="copyright_footer">
             <span className={`text-sm font-bold   sm:text-center `}>
               © {year}{" "}
               <a href="/" className="hover:underline">

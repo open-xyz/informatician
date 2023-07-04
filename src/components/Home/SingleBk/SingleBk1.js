@@ -161,7 +161,7 @@ export default function SingleBk(props) {
                     <div>
                       <div className="book-box">
                         <div className="thumbnail">
-                          <img src={abk1} alt="The Last Mrs Parrish" />
+                          <img loading='lazy' src={abk1} alt="The Last Mrs Parrish book thumbnail" />
                         </div>
                       </div>
                     </div>
