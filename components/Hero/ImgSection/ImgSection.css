@@ -1,16 +1,10 @@
 .img-section {
-    background-color: #115289f7;
+    background-color: #0c2c46;
     background-position: center;
     background-repeat: no-repeat;
     min-height: 16.10em;
     background-size: cover;
     object-fit: cover;
-}
-
-.img-black{
-    background-color: rgba(0, 0, 0, 0.5);
-    min-height: 16.10em;
-    width: 100%;
 }
 
 .inner {
@@ -42,7 +36,7 @@
 
 .inner-content{
     align-items: center;
-    justify-content: end;
+    justify-content: flex-end;
     color: white;
     display: flex;
     flex-flow: column;
