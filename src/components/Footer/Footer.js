@@ -13,10 +13,8 @@ function ScrollToTop() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
-
   return null;
 }
-
 const Footer = (props) => {
   let year = new Date().getFullYear();
 
