@@ -11,7 +11,6 @@ export default function Hero() {
     <>
       <ImgSection
         txt={["Start Reading","Be a Reader"]} />
-        {/* <CgCards /> */}
       {/* <CgCards />
       <BkCards 
         bkhead="Bestselling Books & Audiobooks" />
