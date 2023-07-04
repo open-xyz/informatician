@@ -54,7 +54,7 @@ function Body(props) {
     <div>
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home theme={props.theme} />} />
           <Route path="/books" element={<BookList theme={props.theme} />} />
           <Route
             path="/books/book"

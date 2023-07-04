@@ -124,36 +124,38 @@
   background-color: rgb(91, 241, 121);
 }
 
-.bk-view:hover .bk-img {
-  transform: translateY(-25px) scale(0.7);
-  padding-bottom: 7px;
-  transition: all 0.7s ease-in-out;
-}
-
-.bk-view:hover .bk-details {
-  transform: translateY(-10px);
-  transition: all 0.8s ease-in-out;
-}
-
-.bk-view:hover .bg-color {
-  opacity: 0;
-  transition: all 0.8s ease-in-out;
-  overflow: hidden;
-}
-
-.bk-view:hover .description {
-  display: block;
-  transition: all 0.8s ease-in-out;
-  opacity: 1;
-  transform: translateY(-10px);
-
-}
-.bk-view:hover .type,
-.bk-view:hover .title,
-.bk-view:hover .author {
-  transform: translateY(-10px);
-
-}
-.bk-view:hover .reviews {
-  transform: translateY(-18px);
+@media screen and (min-width: 768px) {
+  .bk-view:hover .bk-img {
+    transform: translateY(-25px) scale(0.7);
+    padding-bottom: 7px;
+    transition: all 0.7s ease-in-out;
+  }
+  
+  .bk-view:hover .bk-details {
+    transform: translateY(-10px);
+    transition: all 0.8s ease-in-out;
+  }
+  
+  .bk-view:hover .bg-color {
+    opacity: 0;
+    transition: all 0.8s ease-in-out;
+    overflow: hidden;
+  }
+  
+  .bk-view:hover .description {
+    display: block;
+    transition: all 0.8s ease-in-out;
+    opacity: 1;
+    transform: translateY(-10px);
+  
+  }
+  .bk-view:hover .type,
+  .bk-view:hover .title,
+  .bk-view:hover .author {
+    transform: translateY(-10px);
+  
+  }
+  .bk-view:hover .reviews {
+    transform: translateY(-18px);
+  }
 }

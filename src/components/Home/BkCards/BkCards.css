@@ -56,6 +56,7 @@
 }
 
 .swiper-slide:hover {
+  z-index: 100;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   transform: translateY(10px) scale(1.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -79,5 +80,12 @@
   }
   .swiper-pagination-bullet-active {
     background: #6e7ebc;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .swiper-slide:hover{
+    z-index: 100;
+    transform: scale(1);
   }
 }
