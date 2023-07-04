@@ -7,6 +7,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import validate from "../../utils/validation";
 import AuthErrorMessage from "../../components/AuthError";
+import { toast } from "react-toastify";
 
 const Contact = () => {
   useEffect(() => {
@@ -46,7 +47,7 @@ const Contact = () => {
       });
       setsuccess("Contact Request sent successfully!!");
     }else{
-      alert("Please provide valid data in all fields")
+      toast.error("Please fill the form correctly", { position: 'top-center', autoClose: 3000, theme: 'colored' })
     }
   };
 
