@@ -114,6 +114,9 @@ class Footer extends React.Component {
             <div className="flex mt-4 space-x-6 sm:justify-center md:mt-0">
               <Link
                 to="#"
+                aria-label="Follow us on Facebook"
+                title="Facebook (External Link)"
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white hover:scale-125 "
               >
                 <BsFacebook />
@@ -121,6 +124,9 @@ class Footer extends React.Component {
               </Link>
               <Link
                 to="#"
+                aria-label="Follow us on Instagram"
+                title="Instagram (External Link)"
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white hover:scale-125 "
               >
                 <BsInstagram />
@@ -128,12 +134,18 @@ class Footer extends React.Component {
               </Link>
               <Link
                 to="#"
+                aria-label="Follow us on Twitter"
+                title="Twitter (External Link)"
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white hover:scale-125 "
               >
                 <BsTwitter />
                 <span className="sr-only">Twitter page</span>
               </Link>
               <a
+                aria-label="Follow us on Github"
+                title="Github (External Link)"
+                rel="noopener noreferrer"
                 to="https://github.com/rohansx/informatician"
                 className="text-gray-400 hover:text-white hover:scale-125 "
               >
