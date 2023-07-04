@@ -5,8 +5,25 @@ footer
 
 footer a{
   color: var(--textGray-dark);
+  position: relative;
 }
 
 footer a:hover{
   color: var(--textGray);
+}
+footer a::after{
+  content: " ";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0%;
+  background-color:var(--textGray-dark);
+  height: 2px;
+  border-radius: 3px;
+  transition: .7s;
+}
+footer a:hover::after{
+  width: 100%;
+
+
 }

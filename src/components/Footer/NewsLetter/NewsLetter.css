@@ -19,13 +19,26 @@
 .black input
 {
   background-color: white;
-  color: black
+  color: black;
 }
+.form-control::placeholder{
+  color:var(--textGray-dark);
+  
 
+}
+.btn-danger{
+color: var(--textGray-dark)!important;
+}
+.btn-danger:hover{
+  color: white!important;
+}
+.form-control{
+  background-color:transparent;
+}
 .head {
   text-align: center;
   padding: 17px 0px;
-  color: black;
+  color: var(--textGray-dark);
   text-transform: uppercase;
   font-weight: bold;
   font-size: 24px;
