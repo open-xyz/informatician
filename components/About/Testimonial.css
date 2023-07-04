@@ -1,0 +1,84 @@
+/* Testimonial.css */
+
+/* Container */
+.con_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* Testimonial Card */
+.testimoonial_card{
+  max-width: 400px;
+  width: 100%;
+  padding: 1.5rem;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimoonial_card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Profile Image */
+.testimoonial_profile {
+  display: block;
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border:1px solid black;
+}
+
+/* Testimonial Text */
+.testimoonial_text {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Details */
+.testimoonial_details {
+  margin-top: 1.5rem;
+}
+
+.testimoonial_name {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.testimoonial_job {
+  display: block;
+  font-size: 1rem;
+  color: #777;
+}
+
+/* Title */
+.testimoonial_heading {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Text */
+.testimoonial_text-center {
+  text-align: center;
+}
+
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .testimoonial_card{
+    max-width: 100%;
+  }
+}

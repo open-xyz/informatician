@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 import DataProvider from "@/context/DataProvider";
 import { ThemeProvider } from "@/components/theme/theme-provider";
+import ScrollToTopButton from "@/components/ScrollButton/ScrollButton";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,12 +17,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} dark:bg-black`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <DataProvider>
             <Navbar />
             {children}
             <Footer />
+            <ScrollToTopButton />
           </DataProvider>
         </ThemeProvider>
       </body>
