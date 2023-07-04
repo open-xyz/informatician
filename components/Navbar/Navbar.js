@@ -33,7 +33,7 @@ export default function Navbar(props) {
 
   return (
     <nav
-      className="fixed top-0 left-0 w-full shadow bg-primary"
+      className="fixed top-0 left-0 w-full shadow bg-primary z-50"
       // style={{ background: props.theme === "dark" ? "#001229" : "#eff6ff" }}
     >
       <Link href="/" className="logo">
