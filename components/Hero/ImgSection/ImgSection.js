@@ -1,18 +1,10 @@
-import React from "react";
+import AutoType from "./AutoType";
 import "./ImgSection.css";
 
 export default function ImgSection(props) {
-  const changeText = (element) => {
-    let a = document.querySelector('.nameAnimation div');
-    if (element.elapsedTime % 10 === 0) {
-      a.innerText = props.txt[0];
-    } else if (element.elapsedTime % 5 === 0) {
-      a.innerText = props.txt[1];
-    }
-  };
 
   return (
-    <div className="img-section">
+    <div className="img-section w-full">
       <div className="img-black">
         <div className="container-fluid" style={{ padding: '0px 30px' }}>
           <div className="row">
@@ -24,13 +16,11 @@ export default function ImgSection(props) {
                   Read anywhere. Anytime.
                 </h3>
                 <span className="inner-span">
-                  <p className="inner-para">
+                  <p className="inner-para text-center">
                     Unveil the finest literary treasures across diverse genres.
                   </p>
                 </span>
-                <div className="nameAnimation" >
-                  <div>{props.txt[0]}</div>
-                </div>
+                <AutoType txt={props.txt} />
               </div>
               <div className="last-one last-two"></div>
               <div className="last-three"></div>
