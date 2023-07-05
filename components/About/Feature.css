@@ -1,0 +1,128 @@
+/* feature styles */
+
+
+.feature .feature_card {
+  margin: 10px;
+  padding: 50px 20px;
+  display: flex;
+  width:300px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.feature_card_outer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.feature .feature_card .icons {
+  margin-bottom: 20px;
+  font-size: 50px;
+  transition: all 0.3s ease;
+}
+
+.feature .feature_card .book {
+  color: #ff6b6b; /* Updated book icon color */
+}
+
+.feature .feature_card .reader {
+  color: #56ccf2; /* Updated reader icon color */
+}
+
+.feature .feature_card .dollar {
+  transition: all 0.5s ease;
+}
+
+.feature .feature_card:hover .book {
+  animation: zoom 1s linear 0s infinite alternate;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.25);
+  }
+}
+
+.feature .feature_card:hover .upload {
+  animation: moveUp 0.7s linear 0s infinite alternate;
+  background-color: #f1f1f1; /* Set your desired background color */
+  color: #333; /* Set your desired text color */
+}
+
+.feature .feature_card:hover .dollar {
+  animation: rotate 1s linear 0s infinite;
+}
+
+.feature .feature_card:hover .reader {
+  animation: vibrate 0.5s linear 0s infinite;
+}
+
+.feature .feature_card:hover .letterClose {
+  display: none;
+}
+
+.feature .feature_card:hover .letterOpen {
+  display: flex !important;
+}
+
+.feature .feature_card:hover .readingChallenge {
+  animation: rotate 1s linear 0s infinite;
+  color: #ff9f43; /* Updated reading challenge icon color */
+}
+
+.feature .feature_card:hover .progressTracking {
+  animation: vibrate 0.5s linear 0s infinite;
+  color: #28c76f; /* Updated progress tracking icon color */
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes vibrate {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-25deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(25deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes moveUp {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-30px);
+  }
+}
+
+
+@media screen and (max-width: 576px) {
+  .feature .feature_card {
+    margin: 10px;
+    width: 50%;
+  }
+}
