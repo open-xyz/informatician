@@ -1,45 +1,52 @@
 .news {
-  border-radius: 0px;
-  background-image: url(../../../assets/mainPages/newsletter.webp);
+  background-image: linear-gradient(to right, #8360c3, #2eb0bf);
   min-height: 180px;
+  width: 88%;
+  position: relative;
+  top:80px;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  margin-left: 80px;
+
 }
 
 .black {
   border-radius: 0px;
-  background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   min-height: 180px;
-  margin-top: 50px;
+  margin-top: 20px;
 }
-
 .black input
 {
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
   background-color: white;
-  color: black;
-}
-.form-control::placeholder{
-  color:var(--textGray-dark);
-  
-
-}
-.btn-danger{
-color: var(--textGray-dark)!important;
-}
-.btn-danger:hover{
-  color: white!important;
-}
-.form-control{
-  background-color:transparent;
+  color: black
 }
 .head {
   text-align: center;
   padding: 17px 0px;
-  color: var(--textGray-dark);
+  color: black;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 24px;
+}
+@media (max-width: 1000px){
+  .news {
+    margin-left: 50px;
+  }
+}
+@media (max-width: 640px){
+  .news {
+    margin-left: 30px;
+  }
+}
+@media (max-width: 450px){
+  .news {
+    margin-left: 25px;
+  }
 }

@@ -9,12 +9,12 @@ import { Link } from "react-router-dom";
 class Footer extends React.Component {
   render() {
     return (
-      <footer className="bg-slate-800 rounded-t-lg ">
+      <footer className="bg-slate-800 rounded-t-lg pt-6 ">
         <div className="mx-auto w-full max-w-screen-xl">
           <Newsletter />
           <div className="flex gap-8 px-4 py-6 lg:py-8 max-[500px]:flex-col">
-            <div className="text-center min-[500px]:w-1/5">
-              <h2 className="mb-6 text-sm font-semibold text-white uppercase cursor-pointer">
+            <div className=" footer-div text-center min-[500px]:w-1/5">
+              <h2 className=" mb-6 text-sm font-semibold text-white uppercase cursor-pointer">
                 About
               </h2>
               <ul className="text-gray-400  font-medium ">
@@ -38,8 +38,8 @@ class Footer extends React.Component {
                 
             </ul>
         </div>
-        <div className="text-center min-[500px]:w-1/5">
-        <h2 className="mb-6 text-sm font-semibold text-white uppercase ">Customer Helpline</h2>
+        <div className="footer-div text-center min-[500px]:w-1/5">
+        <h2 className=" mb-6 text-sm font-semibold text-white uppercase ">Customer Helpline</h2>
             <ul className="text-gray-400 dfont-medium">
             <li className="mb-4">
                     <Link to="#" className="hover:text-gray-200">+91 9000000000</Link>
@@ -49,7 +49,7 @@ class Footer extends React.Component {
                 </li>
               </ul>
             </div>
-            <div className="text-center min-[500px]:w-1/5">
+            <div className=" footer-div text-center min-[500px]:w-1/5">
               <h2 className="mb-6 text-sm font-semibold text-white uppercase ">
                 Support
               </h2>
@@ -68,7 +68,7 @@ class Footer extends React.Component {
               </ul>
             </div>
             <div className="text-center min-[500px]:w-1/5">
-              <h2 className="mb-6 text-sm font-semibold text-white uppercase ">
+              <h2 className=" mb-6 text-sm font-semibold text-white uppercase ">
                 Legal
               </h2>
               <ul className="text-gray-400  font-medium">
