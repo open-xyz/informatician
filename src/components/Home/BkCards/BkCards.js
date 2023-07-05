@@ -77,6 +77,26 @@ export default function BkCards(props) {
   }, []);
 
 
+  useEffect(() => {
+    if (props.theme === "light") {
+      document.querySelectorAll('.swiper-slide').forEach(elem => {
+        elem.style.backgroundColor = "white";
+        elem.addEventListener('mouseover', () => {
+          elem.style.backgroundColor = "white";
+        });
+      })
+    } else {
+      document.querySelectorAll('.swiper-slide').forEach(elem => {
+        elem.style.backgroundColor = "rgb(22, 19, 19)";
+        elem.addEventListener('mouseover', () => {
+          elem.style.backgroundColor = "rgb(22, 19, 19)";
+        })
+      })
+    }
+  }, [props.theme])
+  
+
+
   return (
     <>
       <div className="container-xl">
