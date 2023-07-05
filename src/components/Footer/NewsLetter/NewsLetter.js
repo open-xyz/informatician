@@ -1,5 +1,6 @@
 import React from "react";
 import "./NewsLetter.css";
+import { toast } from "react-toastify";
 
 class NewsLetter extends React.Component {
     handleClick = async (e) => {
@@ -22,15 +23,15 @@ class NewsLetter extends React.Component {
             console.log(response)
 
             if (response.status === 200) {
-                alert("Subscribed");
+                toast.success("Subscribed", { position: 'top-center', autoClose: 3000, theme: 'colored' })
                 emailInput = "";
             }
-            else alert("Already Subscribed")
+            else toast.error("Already Subscribed", { position: 'top-center', autoClose: 3000, theme: 'colored' })
         }
 
         catch (error) {
             console.error(error);
-            alert("There was a problem with server, Please try again!")
+            toast.error("There was a problem with server, Please try again!", { position: 'top-center', autoClose: 3000, theme: 'colored' })
         }
     };
     render() {
