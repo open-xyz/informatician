@@ -12,6 +12,7 @@ const path = require('path')
 const newsLetter = require("./router/newsletter");
 const book = require('./router/book')
 const rateLimiter = require("express-rate-limit");
+const nodemailer = require('nodemailer');
 
 mongoose
   .connect(process.env.MONGODB)
@@ -56,6 +57,36 @@ app.post("/api/upload", upload.single("file"), (req, res) => {
     console.log(err);
   }
 })
+
+app.post('/send-email', (req, res) => {
+  const { email } = req.body;
+
+  const transporter = nodemailer.createTransport({
+    service: 'your_email_service_provider',
+    auth: {
+      user: 'your_email@example.com',
+      pass: 'your_email_password',
+    },
+  });
+
+  const mailOptions = {
+    from: 'your_email@example.com',
+    to: email,
+    subject: 'Subscription Confirmation',
+    text: 'Thank you for subscribing to our newsletter!',
+  };
+
+  // Send email
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      console.log(error);
+      res.status(500).send('Error sending email');
+    } else {
+      console.log('Email sent: ' + info.response);
+      res.send('Email sent');
+    }
+  });
+});
 
 
 const limiter = rateLimiter({

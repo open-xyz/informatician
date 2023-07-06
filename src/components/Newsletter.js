@@ -1,5 +1,6 @@
 import React from "react";
 import { toast } from "react-toastify";
+import axios from "axios";
 
 class Newsletter extends React.Component {
   handleClick = async (e) => {
@@ -21,16 +22,24 @@ class Newsletter extends React.Component {
       );
       console.log(response)
 
-      if(response.status===200){
-        toast.success("Subscribed", {position: 'top-center', autoClose: 3000, theme: 'colored'})
+      axios.post('http://localhost:3001/send-email', { email })
+        .then(response => {
+          console.log(response.data);
+        })
+        .catch(error => {
+          console.log(error);
+        });
+
+      if (response.status === 200) {
+        toast.success("Subscribed", { position: 'top-center', autoClose: 3000, theme: 'colored' })
         // emailInput="";
       }
-      else toast.error("Already Subscribed", {position: 'top-center', autoClose: 3000, theme: 'colored'})
-    } 
-    
+      else toast.error("Already Subscribed", { position: 'top-center', autoClose: 3000, theme: 'colored' })
+    }
+
     catch (error) {
       console.error(error);
-      toast.error("There was a problem with server, Please try again!", {position: 'top-center', autoClose: 3000, theme: 'colored'})
+      toast.error("There was a problem with server, Please try again!", { position: 'top-center', autoClose: 3000, theme: 'colored' })
     }
   };
   render() {
@@ -51,13 +60,13 @@ class Newsletter extends React.Component {
               placeholder="Email address"
               required
             />
-          <button
-            onClick={this.handleClick}
-            className="px-4 py-2 min-[400px]:ml-3 relative rounded group overflow-hidden font-medium bg-purple-50 text-gray-700 inline-block max-[400px]:w-32 max-[400px]:mt-2"
-          >
-            <span className="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-slate-500 group-hover:h-full opacity-90"></span>
-            <span className="relative group-hover:text-white">Submit</span>
-          </button>
+            <button
+              onClick={this.handleClick}
+              className="px-4 py-2 min-[400px]:ml-3 relative rounded group overflow-hidden font-medium bg-purple-50 text-gray-700 inline-block max-[400px]:w-32 max-[400px]:mt-2"
+            >
+              <span className="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-slate-500 group-hover:h-full opacity-90"></span>
+              <span className="relative group-hover:text-white">Submit</span>
+            </button>
           </div>
 
         </form>
