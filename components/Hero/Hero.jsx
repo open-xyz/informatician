@@ -1,7 +1,7 @@
 import React from "react";
 import ImgSection from "./ImgSection/ImgSection";
 // import CgCards from "./CgCards/CgCards";
-// import BkCards from "../BkCards/BkCards";
+// import BkCards from "@/components/Hero/BkCards/BkCards";
 // import CgCards from "./CgCards/CgCards";
 // import CgCards from "./CgCards/CgCards";
 // import BkCards from "./BkCards/BkCards";
