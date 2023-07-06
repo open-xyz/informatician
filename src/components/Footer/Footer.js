@@ -174,7 +174,7 @@ const Footer = (props) => {
               <Link
                 to="https://github.com/rohansx/informatician"
                 target="_blank"
-                className={` hover:text-red-900`}
+                className={` hover:text-[#12BC00]`}
               >
                 < BsGithub className="w-6 h-6 transition-all duration-200 ease-in-out transform hover:scale-110" />
                 <span className="sr-only">GitHub account</span>
