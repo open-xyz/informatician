@@ -31,9 +31,9 @@
 .cg-card:hover {
   box-shadow: 1px 2px 8px 3px lightgray;
   transform: scale(1.005);
-  p {
-    color: rgb(14, 13, 13);
-  }
+}
+.cg-card:hover p {
+  color: rgb(14, 13, 13);
 }
 
 .cg-card:hover img {
