@@ -13,42 +13,37 @@ export default function CardContent(props) {
   };
 
   return (
-  
     <div className="bk-view flex flex-col items-center overflow-hidden ">
       <div className="bg-color" style={{ backgroundColor: random_color }}></div>
       <div className="bk-img h-2/5">
         {/* <Link to="/books/id"> */}
-          <img loading='lazy' src={props.imgName} alt={props.title} />
+        <img src={props.imgName} alt={props.title} />
         {/* </Link> */}
       </div>
       <div className="bk-details">
         {/* <Link to="/books/id"> */}
-          <p className="type">{props.type}</p>
-          <p className="title">{props.title}</p>
-          <span className="author">
-            <span>{props.author}</span>
-          </span>
-          <p className="description">{props.description}</p>
+        <p className="type">{props.type}</p>
+        <p className="title">{props.title}</p>
+        <span className="author">
+          <span>{props.author}</span>
+        </span>
+        <p className="description">{props.description}</p>
         {/* </Link> */}
       </div>
       <div className="reviews">
         <div className="rating">
           {/* <Link to="/books/id"> */}
-            <ReactStars
-              count={5}
-              onChange={ratingChanged}
-              size={24}
-              value={4}
-              activeColor="#ffd700"
-            />
+          <ReactStars
+            count={5}
+            onChange={ratingChanged}
+            size={24}
+            value={4}
+            activeColor="#ffd700"
+          />
           {/* </Link> */}
         </div>
         <div className="save">
-          {/* <Link to="/books/id"> */}
-            <div className="later">
-              <FontAwesomeIcon icon={faBookmark} />
-            </div>
-          {/* </Link> */}
+          <FontAwesomeIcon icon={faBookmark} />
         </div>
       </div>
     </div>
