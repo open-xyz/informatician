@@ -6,6 +6,8 @@
   margin-bottom: 20px;
   transition: all 0.4s ease;
   height: 100px;
+  display: flex;
+  
 }
 
 .cg-card img {
@@ -26,6 +28,7 @@
 .cg-card p {
   font-size: 17px;
   font-weight: 600;
+  width: 50px;
 }
 
 .cg-card:hover {
