@@ -3,7 +3,7 @@
 .book-list-container {
     padding: 100px;
     height: auto;
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -148,7 +148,7 @@
     font-weight: 500;
   }
   
-  #sub-head {
+  .sub-head {
     font-size: 26px;
     color: rgb(36, 36, 202);
     font-weight: 600;

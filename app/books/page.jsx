@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import styles from "@/styles/Booklist.module.css";
 import { searchBooks } from "@/utils/searchBooks";
 import Image from "next/image";
@@ -29,15 +29,15 @@ export default function BookList(props) {
   //   }
   // }, [bookName]);
 
-  async function handleClick(e){
+  async function handleClick(e) {
     e.preventDefault();
-    try{
-      const result=await searchBooks(bookName)
-    
-    setBooks(result);
-  }catch(err){
-    console.log(err);
-  }
+    try {
+      const result = await searchBooks(bookName)
+
+      setBooks(result);
+    } catch (err) {
+      console.log(err);
+    }
 
   }
 
@@ -70,8 +70,8 @@ export default function BookList(props) {
   }, []);
 
   function toggleCategories() {
-    const bookListContainer = document.querySelector(".book-list-container");
-    bookListContainer.classList.toggle("show-links");
+    const bookListContainer = document.querySelector(".bookSelector");
+    bookListContainer.classList.toggle(styles["show-links"]);
   }
 
   // const booksComponent = books.map((book) => (
@@ -81,7 +81,7 @@ export default function BookList(props) {
   return (
     <>
 
-      <div className={styles["book-list-container"]}>
+      <div className={`${styles["book-list-container"]} bookSelector`}>
         <h1 className={styles["book-list-heading"]}>Find your next learning adventure</h1>
         <p className={styles["smalltext"]}>From Art to Universe , we have a lots of textbooks to offer you.</p>
 
@@ -96,97 +96,97 @@ export default function BookList(props) {
             />
             <button type="submit" id="search-button-2" onClick={handleClick}>
               <div className={styles["search-icon"]}>
-                <Image src={search} alt="search" width={300} height={200}/>
+                <Image src={search} alt="search" width={300} height={200} />
               </div>
             </button>
           </div>
         </form>
-        <div className={styles["categories"]}  onClick={() => toggleCategories()}>
+        <div className={styles["categories"]} onClick={() => toggleCategories()}>
           Select Categories
         </div>
         <div className={styles["hypertext-links"]}>
-         <div>
-         <a href="#" className={styles["link"]}>
-            Art
-          </a>
-          <a href="#" className={styles["link"]}>
-            Biography
-          </a>
-          <a href="#" className={styles["link"]}>
-            Business
-          </a>
-          <a href="#" className={styles["link"]}>
-            Children's
-          </a>
-          <a href="#" className={styles["link"]}>
-            Classics
-          </a>
-          <a href="#" className={styles["link"]}>
-            Christian
-          </a>
-          </div>
-          
           <div>
-         <a href="#" className={styles["link"]}>
-            Comics
-          </a>
-          <a href="#" className={styles["link"]}>
-          Cookbooks
-          </a>
-          <a href="#" className={styles["link"]}>
-          Ebooks
-          </a>
-          <a href="#" className={styles["link"]}>
-          Fantasy
-          </a>
-          <a href="#" className={styles["link"]}>
-          Fiction
-          </a>
-          <a href="#" className={styles["link"]}>
-           Novel
-          </a>
+            <a href="#" className={styles["link"]}>
+              Art
+            </a>
+            <a href="#" className={styles["link"]}>
+              Biography
+            </a>
+            <a href="#" className={styles["link"]}>
+              Business
+            </a>
+            <a href="#" className={styles["link"]}>
+              Children&apos;s
+            </a>
+            <a href="#" className={styles["link"]}>
+              Classics
+            </a>
+            <a href="#" className={styles["link"]}>
+              Christian
+            </a>
           </div>
 
           <div>
-         <a href="#" className={styles["link"]}>
-         History
-          </a>
-          <a href="#" className={styles["link"]}>
-          Horror
-          </a>
-          <a href="#" className={styles["link"]}>
-          Music
-          </a>
-          <a href="#" className={styles["link"]}>
-          Mystery
-          </a>
-          <a href="#" className={styles["link"]}>
-          Non-Fiction
-          </a>
-          <a href="#" className={styles["link"]}>
-          Poetry
-          </a>
+            <a href="#" className={styles["link"]}>
+              Comics
+            </a>
+            <a href="#" className={styles["link"]}>
+              Cookbooks
+            </a>
+            <a href="#" className={styles["link"]}>
+              Ebooks
+            </a>
+            <a href="#" className={styles["link"]}>
+              Fantasy
+            </a>
+            <a href="#" className={styles["link"]}>
+              Fiction
+            </a>
+            <a href="#" className={styles["link"]}>
+              Novel
+            </a>
           </div>
 
           <div>
-         <a href="#" className={styles["link"]}>
-         Psychology
-          </a>
-          <a href="#" className={styles["link"]}>
-          Prejudice
-          </a>
-          <a href="#" className={styles["link"]}>
-          Romance
-          </a>
-          <a href="#" className={styles["link"]}>
-          Science
-          </a>
-          <a href="#" className={styles["link"]}>
-          Thriller
-          </a>
-          <a href="#" className={styles["link"]}>
-          Universe
-          </a>
+            <a href="#" className={styles["link"]}>
+              History
+            </a>
+            <a href="#" className={styles["link"]}>
+              Horror
+            </a>
+            <a href="#" className={styles["link"]}>
+              Music
+            </a>
+            <a href="#" className={styles["link"]}>
+              Mystery
+            </a>
+            <a href="#" className={styles["link"]}>
+              Non-Fiction
+            </a>
+            <a href="#" className={styles["link"]}>
+              Poetry
+            </a>
+          </div>
+
+          <div>
+            <a href="#" className={styles["link"]}>
+              Psychology
+            </a>
+            <a href="#" className={styles["link"]}>
+              Prejudice
+            </a>
+            <a href="#" className={styles["link"]}>
+              Romance
+            </a>
+            <a href="#" className={styles["link"]}>
+              Science
+            </a>
+            <a href="#" className={styles["link"]}>
+              Thriller
+            </a>
+            <a href="#" className={styles["link"]}>
+              Universe
+            </a>
           </div>
         </div>
 
@@ -194,7 +194,7 @@ export default function BookList(props) {
 
 
         {/* <span className="book-list-title text-center">Book List</span> */}
-        
+
         {/* {
           books.length === 0 ?
             <div className={`flex items-center justify-center h-[53vh] bg-${props.theme} px-20`}>
@@ -218,89 +218,89 @@ export default function BookList(props) {
         } */}
 
 
-      <h3 id="sub-head">Quotes</h3>
+        <h3 className={styles["sub-head"]}>Quotes</h3>
 
-        <div className={styles["carousel"]}>
+        <div className={`${styles["carousel"]}`}>
           <div className={styles["card-container"]} ref={cardContainerRef}>
             <div className={styles["card"]}>
               <div className={styles["card-content"]}>
-              <Image src="https://lit216.pbworks.com/f/1363869393/stephen%20king.jpg" alt="Stephen King" width={300} height={200} />
-              <h4>- Stephen King</h4>
-                <p>"If you don't have time to read, you don't have the time to write. Simple as that."</p>
-                
+                <Image src="https://lit216.pbworks.com/f/1363869393/stephen%20king.jpg" alt="Stephen King" width={300} height={200} />
+                <h4>- Stephen King</h4>
+                <p>&quot;If you don&apos;t have time to read, you don&apos;t have the time to write. Simple as that.&quot;</p>
+
               </div>
             </div>
 
             <div className={styles["card"]}>
               <div className={styles["card-content"]}>
-              <Image src="https://upload.wikimedia.org/wikipedia/en/c/c9/Madeleine_lengle.jpg" alt="Madeleine L'Engle" width={300} height={200}/>
-              <h4>- Madeleine L'Engle</h4>
-                <p>"You have to write the book that wants to be written & if the book will be too difficult for grown-ups, then you write it for children."</p>
-                
+                <Image src="https://upload.wikimedia.org/wikipedia/en/c/c9/Madeleine_lengle.jpg" alt="Madeleine L'Engle" width={300} height={200} />
+                <h4>- Madeleine L&apos;Engle</h4>
+                <p>&quot;You have to write the book that wants to be written & if the book will be too difficult for grown-ups, then you write it for children.&quot;</p>
+
               </div>
-              
+
             </div>
 
             <div className={styles["card"]}>
               <div className={styles["card-content"]}>
-              <Image src="http://laurencecoupe.co.uk/wp-content/uploads/2018/01/kerouac-picture.jpg" alt="Jack Kerouac" width={300} height={200}/>
-              <h4>- Jack Kerouac</h4>
-                <p>"One day I will find the right words, and they will be simple."</p>
-                
+                <Image src="http://laurencecoupe.co.uk/wp-content/uploads/2018/01/kerouac-picture.jpg" alt="Jack Kerouac" width={300} height={200} />
+                <h4>- Jack Kerouac</h4>
+                <p>&quot;One day I will find the right words, and they will be simple.&quot;</p>
+
               </div>
-             
+
             </div>
 
             <div className={styles["card"]}>
               <div className={styles["card-content"]}>
-              <Image src="https://media.newyorker.com/photos/59096d586552fa0be682ff3d/master/w_1920,c_limit/Brody-Saul-Bellow-Film-Critic.jpg" alt="Saul Bellow" width={300} height={200}/>
-              <h4>- Saul Bellow</h4>
-                <p>"You never have to change anything you got up in the middle of the night to write."</p>
-                
+                <Image src="https://media.newyorker.com/photos/59096d586552fa0be682ff3d/master/w_1920,c_limit/Brody-Saul-Bellow-Film-Critic.jpg" alt="Saul Bellow" width={300} height={200} />
+                <h4>- Saul Bellow</h4>
+                <p>&quot;You never have to change anything you got up in the middle of the night to write.&quot;</p>
+
               </div>
-             
+
             </div>
 
             <div className={styles["card"]}>
               <div className={styles["card-content"]}>
-              <Image src="https://images2.minutemediacdn.com/image/upload/c_fill,w_1080,ar_16:9,f_auto,q_auto,g_auto/shape%2Fcover%2Fsport%2Fgettyimages-2665140-a1c77ccabe8660fb5123c8b6c5741316.jpg" alt="Aldous Huxley" width={300} height={200}/>
-              <h4>- Aldous Huxley</h4>
-                <p>"Words can be like X-rays if you use them properly they'll go through anything. You read and you're pierced."</p>
-                
+                <Image src="https://images2.minutemediacdn.com/image/upload/c_fill,w_1080,ar_16:9,f_auto,q_auto,g_auto/shape%2Fcover%2Fsport%2Fgettyimages-2665140-a1c77ccabe8660fb5123c8b6c5741316.jpg" alt="Aldous Huxley" width={300} height={200} />
+                <h4>- Aldous Huxley</h4>
+                <p>&quot;Words can be like X-rays if you use them properly they&apos;ll go through anything. You read and you&apos;re pierced.&quot;</p>
+
               </div>
-              
+
             </div>
 
             <div className={styles["card"]}>
               <div className={styles["card-content"]}>
-              <Image src="https://media.npr.org/assets/img/2015/03/13/ap070308060493-67009388c842c192821be288e72bbc06977b72ce-s400-c85.webp" alt="Anne Frank" width={300} height={200}/>
-              <h4>- Anne Frank</h4>
-                <p>"I can shake off everything as I write; my sorrows disappear, my courage is reborn."</p>
-               
+                <Image src="https://media.npr.org/assets/img/2015/03/13/ap070308060493-67009388c842c192821be288e72bbc06977b72ce-s400-c85.webp" alt="Anne Frank" width={300} height={200} />
+                <h4>- Anne Frank</h4>
+                <p>&quot;I can shake off everything as I write; my sorrows disappear, my courage is reborn.&quot;</p>
+
               </div>
-             
+
             </div>
 
             <div className={styles["card"]}>
               <div className={styles["card-content"]}>
-              <Image src="https://ychef.files.bbci.co.uk/1600x900/p09pxt8c.webp" alt="Sylvia Plath" width={300} height={200}/>
-              <h4>- Sylvia Plath</h4>
-                <p>"Let me live, love, and say it well in good sentences."</p>
-                
+                <Image src="https://ychef.files.bbci.co.uk/1600x900/p09pxt8c.webp" alt="Sylvia Plath" width={300} height={200} />
+                <h4>- Sylvia Plath</h4>
+                <p>&quot;Let me live, love, and say it well in good sentences.&quot;</p>
+
               </div>
-             
+
             </div>
 
             <div className={styles["card"]}>
               <div className={styles["card-content"]}>
-              <Image src="https://www.theparisreview.org/il/c625e7c0b9/large/JohnSteinbeck-thumb.jpg" alt="John Steinbeck" width={300} height={200}/>
-              <h4>- John Steinbeck</h4>
-                <p>"Ideas are like rabbits. You get a couple and learn how to handle them, and pretty soon you have a dozen."</p>
-                
+                <Image src="https://www.theparisreview.org/il/c625e7c0b9/large/JohnSteinbeck-thumb.jpg" alt="John Steinbeck" width={300} height={200} />
+                <h4>- John Steinbeck</h4>
+                <p>&quot;Ideas are like rabbits. You get a couple and learn how to handle them, and pretty soon you have a dozen.&quot;</p>
+
               </div>
             </div>
 
-          
+
           </div>
         </div>
       </div>
