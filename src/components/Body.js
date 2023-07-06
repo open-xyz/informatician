@@ -1,4 +1,5 @@
 import React, { lazy, Suspense } from "react";
+import Loader from "./Loader/loader";
 import { Routes, Route } from "react-router-dom";
 import AdChoices from "../pages/AdChoices/AdChoices";
 import PublishersPage from "../pages/Publishers/Publishers";
@@ -52,7 +53,7 @@ const BookAwards = lazy(() => import("../pages/Awards/BookAwards"));
 function Body(props) {
   return (
     <div>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loader  />}>
         <Routes>
           <Route path="/" element={<Home theme={props.theme} />} />
           <Route path="/books" element={<BookList theme={props.theme} />} />
