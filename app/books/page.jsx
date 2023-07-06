@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import styles from "@/styles/Booklist.module.css";
-import ScrollToTopButton from "@/components/ScrollToTopButton/ScrollToTopButton";
 import { searchBooks } from "@/utils/searchBooks";
 import Image from "next/image";
 // import Link from "next/link";
@@ -307,7 +306,6 @@ export default function BookList(props) {
       </div>
 
       {/* </div> */}
-      <ScrollToTopButton />
     </>
   );
 }
