@@ -1,4 +1,4 @@
-
+import React from "react";
 export const AdChoices = () => {
     return (
         <div className="adchoices">
