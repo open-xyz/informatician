@@ -28,7 +28,7 @@ const Footer = (props) => {
         <div className=" footer_outer mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
     <div className="footer_body">
     <div  className=" footer_main mb-6 md:mb-0">
-              <Link to="/"  className="logo_img">
+              <Link to="/home"  className="logo_img">
                 <img
                 src= {darkLogo}
                 className=" h-12 w-17 ml-1 mb-2.5  hover:shadow " 
