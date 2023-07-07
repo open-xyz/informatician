@@ -52,7 +52,7 @@ const About = (props) => {
       <ScrollToTopButton />
       <Feature theme={props.theme} />
       <div className="Testimonial"><Testimonial /></div>
-      <Download />
+      <Download theme={props.theme}/>
       <Contributors />
     </div>
   );
