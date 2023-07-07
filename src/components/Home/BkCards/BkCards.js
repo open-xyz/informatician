@@ -1,19 +1,18 @@
 import React, { useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore,{ Autoplay, Pagination, Navigation } from "swiper";
+import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "./BkCards.css";
 import CardContent from "./CardContent/CardContent";
 import { useSwiper } from "swiper/react";
 import { Link } from "react-router-dom";
-import Books from "./Books";
+import Books from "../Books";
 
 SwiperCore.use([Autoplay]);
 
 const GhostPrevButton = ({ refprop }) => {
   const swiper = useSwiper();
-
   return (
     <div
       ref={refprop}
@@ -22,9 +21,9 @@ const GhostPrevButton = ({ refprop }) => {
     ></div>
   );
 };
+
 const GhostNextButton = ({ refprop }) => {
   const swiper = useSwiper();
-
   return (
     <div
       ref={refprop}
@@ -41,47 +40,22 @@ export default function BkCards(props) {
   const swiperRef = useRef(null);
 
   useEffect(() => {
-    const swiperInstance = swiperRef.current.swiper;
-
-    const handleMouseEnter = () => {
-      swiperInstance.autoplay.stop();
-    };
-
-    const handleMouseLeave = () => {
-      swiperInstance.autoplay.start();
-    };
-
-    const swiperEl = swiperInstance.el;
-
-    swiperEl.addEventListener('mouseenter', handleMouseEnter);
-    swiperEl.addEventListener('mouseleave', handleMouseLeave);
-
-    return () => {
-      swiperEl.removeEventListener('mouseenter', handleMouseEnter);
-      swiperEl.removeEventListener('mouseleave', handleMouseLeave);
-    };
-  }, []);
-
-
-  useEffect(() => {
     if (props.theme === "light") {
-      document.querySelectorAll('.swiper-slide').forEach(elem => {
+      document.querySelectorAll(".swiper-slide").forEach((elem) => {
         elem.style.backgroundColor = "white";
-        elem.addEventListener('mouseover', () => {
+        elem.addEventListener("mouseover", () => {
           elem.style.backgroundColor = "white";
         });
-      })
+      });
     } else {
-      document.querySelectorAll('.swiper-slide').forEach(elem => {
+      document.querySelectorAll(".swiper-slide").forEach((elem) => {
         elem.style.backgroundColor = "rgb(22, 19, 19)";
-        elem.addEventListener('mouseover', () => {
+        elem.addEventListener("mouseover", () => {
           elem.style.backgroundColor = "rgb(22, 19, 19)";
-        })
-      })
+        });
+      });
     }
-  }, [props.theme])
-  
-
+  }, [props.theme]);
 
   return (
     <>
@@ -108,7 +82,7 @@ export default function BkCards(props) {
                   />
                 </svg>
               </div>
-              
+
               <Swiper
                 ref={swiperRef}
                 slidesPerView={1}
@@ -133,33 +107,33 @@ export default function BkCards(props) {
                 }}
                 modules={[Autoplay, Pagination, Navigation]}
                 className="mySwiper"
-                style={{ 
-                  background: props.theme === "dark" ? '#161313' : ''}}
+                style={{
+                  background: props.theme === "dark" ? "#161313" : "",
+                }}
               >
                 <GhostPrevButton refprop={prevButton} />
-                {
-                  Books.map((book)=>{
-                    return <SwiperSlide > 
-                  <Link to={book.link}>
-                  <CardContent  className="columnn"
-                    imgName={book.img}
-                    type={book.type}
-                    title={book.title}
-                    author={book.author}
-                    description={book.description}
-                  />
-                  </Link>
-                </SwiperSlide>
-                  })
-                }
-                
-              <GhostNextButton refprop={nextButton} />
+                {Books.map((book) => {
+                  return (
+                    <SwiperSlide>
+                      <Link to={`/books/${book.id}`}>
+                        <CardContent
+                          className="columnn"
+                          imgName={book.img}
+                          type={book.type}
+                          title={book.title}
+                          author={book.author}
+                          description={book.description}
+                        />
+                      </Link>
+                    </SwiperSlide>
+                  );
+                })}
+                <GhostNextButton refprop={nextButton} />
               </Swiper>
-              
+
               <div
                 onClick={() => nextButton.current.click()}
                 className="cursor-pointer"
-                
               >
                 <svg
                   height="50"
