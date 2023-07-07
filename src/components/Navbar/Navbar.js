@@ -32,7 +32,7 @@ export default function Navbar(props) {
       className="rounded-t-none  fixed-top box-shadow: 0 4px 6px -1px"
       style={{ background: props.theme === "dark" ? "#001229" : "#eff6ff" }}
     >
-      <Link to="/" className="logo">
+      <Link to="/home" className="logo">
         <img
           loading='lazy'
           src={themeImage}
