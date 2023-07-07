@@ -1,5 +1,5 @@
 
-const AdChoices = () => {
+export const AdChoices = () => {
     return (
         <div className="adchoices">
             <div className="adchoices-container">
@@ -66,5 +66,3 @@ const AdChoices = () => {
         </div>
     );
 };
-
-export default AdChoices;
