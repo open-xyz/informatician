@@ -1,15 +1,19 @@
-.biography-container {
+.card-container {
   text-align: center;
   margin-top: 10rem;
   width: 1200px;
 }
 
+
 .biography-header {
   position: relative;
+  display: flex;
+  flex-direction: row;
   padding: 20px;
   border-radius: 10px;
   transition: transform 0.3s ease;
 }
+
 
 .biography-header::after {
   content: "";
@@ -18,7 +22,6 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -26,6 +29,7 @@
 
 .biography-header:hover {
   transform: scale(1.05);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
 }
 
 .biography-header:hover::after {
@@ -38,10 +42,10 @@
 }
 
 .subtitle {
-  font-size: 18px;
+  font-size: 20px;
   color: #555;
   font-weight: bolder;
-  margin-top: 10px;
+  margin-top: 30px;
 }
 
 .show-more-visible {
@@ -70,9 +74,25 @@
   transition: all 0.3s ease;
 }
 
+.box2 img{
+  border-radius: 9%;
+}
+
 @media only screen and (max-width: 800px) {
-  .biography-container {
+  .card-container {
     margin-top: 8rem;
     width: auto;
+  }
+  .biography-header{
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+  .box1, .box2{
+    width: 100%;
+    align-items: center;
+  }
+  .box2{
+    display: flex ;
+    flex-direction: column;
   }
 }
