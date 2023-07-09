@@ -1,0 +1,228 @@
+.faq-help {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.faq-help-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px 0px;
+}
+
+.faq-help-title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.faq-help-image {
+  width: 400px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.help-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* margin: 30px 0px; */
+}
+.help-section-title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.help-description {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-align: left;
+}
+.help-description a {
+  color: #03b5d2;
+  text-decoration: none;
+}
+.help-description a:hover {
+  text-decoration: underline;
+}
+
+.help-contact-text {
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.help-contact-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 300px;
+  text-align: left;
+}
+
+.faq-help {
+  padding: 50px 50px; /* Add margin from left and right */
+  text-align: center;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Hind:300,400&display=swap");
+
+.faqcontainer {
+  margin: 0 auto;
+  padding: 4rem;
+  width: 48rem;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 4rem;
+  /* width: 48rem; */
+}
+
+.faqh2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.accordion {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.accordion .accordion-item {
+  border-style: none;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 5px;
+}
+
+.accordion .accordion-item button[aria-expanded="true"] {
+  border-bottom: 1px solid #03b5d2;
+}
+
+.accordion button {
+  position: relative;
+  display: block;
+  text-align: left;
+  width: 100%;
+  padding: 1em 0;
+  color: #7288a2;
+  font-size: 1.15rem;
+  font-weight: 400;
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.accordion button:hover,
+.accordion button:focus {
+  color: #03b5d2;
+}
+
+.accordion button:hover::after,
+.accordion button:focus::after {
+  color: #03b5d2;
+  border: 1px solid #03b5d2;
+}
+
+.accordion button .accordion-title {
+  padding: 1em 1.5em 1em 0;
+}
+
+.accordion button .icon {
+  display: inline-block;
+  position: absolute;
+  top: 18px;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  border: 1px solid;
+  border-radius: 22px;
+}
+
+.accordion button .icon::before {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 9px;
+  left: 5px;
+  width: 10px;
+  height: 2px;
+  background: currentColor;
+}
+
+.accordion button .icon::after {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 5px;
+  left: 9px;
+  width: 2px;
+  height: 10px;
+  background: currentColor;
+}
+
+.accordion button[aria-expanded="true"] {
+  color: #03b5d2;
+}
+
+.accordion button[aria-expanded="true"] .icon::after {
+  width: 0;
+}
+
+.accordion button[aria-expanded="true"] + .accordion-content {
+  opacity: 1;
+  max-height: 9em;
+  transition: all 200ms linear;
+  will-change: opacity, max-height;
+}
+
+.accordion .accordion-content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 200ms linear, max-height 200ms linear;
+  will-change: opacity, max-height;
+}
+
+.accordion .accordion-content p {
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 2em 0;
+}
+
+@media (max-width: 750px) {
+  .faqcontainer,
+  .container {
+    padding: 1rem;
+    width: auto;
+  }
+
+  .faqh2 {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .accordion .accordion-item button .icon {
+    top: 23px;
+    right: -30px;
+  }
+
+  .accordion .accordion-content p {
+    font-size: 0.9rem;
+    margin: 1em 0;
+  }
+}
+span {
+  color: #3372c1;
+}
