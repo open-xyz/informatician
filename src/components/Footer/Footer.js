@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import NewsLetter from "./NewsLetter/NewsLetter";
 // import  "./NewsLetter/NewsLetter.css"
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, NavLink } from "react-router-dom";
 import { BsDiscord, BsGithub, BsTwitter } from "react-icons/bs";
 import "./Footer.css";
 import lightLogo from "../../assets/logos/light_logo.png";
@@ -28,7 +28,10 @@ const Footer = (props) => {
         <div className=" footer_outer mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
     <div className="footer_body">
     <div  className=" footer_main mb-6 md:mb-0">
-              <Link to="/home"  className="logo_img">
+              <Link to="/"  className="logo_img">
+             <NavLink 
+              to="/home" className="home-button">
+               </NavLink>
                 <img
                 src= {darkLogo}
                 className=" h-12 w-17 ml-1 mb-2.5  hover:shadow " 
