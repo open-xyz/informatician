@@ -65,4 +65,3 @@ export default function AdChoices() {
     </div>
   );
 }
-
