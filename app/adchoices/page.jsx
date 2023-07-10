@@ -1,4 +1,5 @@
 import style from "@/styles/AdChoices.module.css";
+
 export default function AdChoices() {
   return (
     <div className={style.adchoices}>
