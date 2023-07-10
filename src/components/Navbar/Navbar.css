@@ -77,7 +77,7 @@ nav {
 }
 #nav-items li a:hover::after,
 #nav-items li a.active::after {
-  width: 60%;
+  width: 100%;
   color: #1857a0;
 }
 #nav-items li a.active {

@@ -45,6 +45,9 @@
 .feature .feature_card:hover .book {
   animation: zoom 1s linear 0s infinite alternate;
 }
+.fw-bold {
+  color: black;
+}
 
 @keyframes zoom {
   from {
