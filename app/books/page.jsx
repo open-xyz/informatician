@@ -304,7 +304,6 @@ export default function BookList(props) {
           </div>
         </div>
       </div>
-      {/* </div> */}
     </>
   );
 }
