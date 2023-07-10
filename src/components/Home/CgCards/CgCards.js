@@ -16,7 +16,7 @@ export default function CgCards() {
   return (
     <>
       <div className="container-xl mt-20 select-none">
-        <h1 style={{ fontSize: "30px", marginBottom: "50px" }}>
+        <h1 style={{ fontSize: "30px", marginBottom: "50px" , color:"rgb(20, 20, 113)",fontFamily: "Source Serif Pro,serif"}}>
           Popular Categories
         </h1>
         <div className="d-flex">
