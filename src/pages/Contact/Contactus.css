@@ -126,7 +126,7 @@ p {
 }
 
 .social-icon-github:hover {
-  background-color: lightgray;
+  background-color: #238636;
   transform: scale(1.2);
 }
 
