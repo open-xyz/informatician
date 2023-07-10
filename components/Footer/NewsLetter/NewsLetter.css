@@ -8,14 +8,6 @@
   background-size: cover;
 }
 
-.black {
-  border-radius: 0px;
-  background-color: rgba(0, 0, 0, 0.5);
-  width: 100%;
-  min-height: 180px;
-  margin-top: 50px;
-}
-
 .black input
 {
   background-color: white;

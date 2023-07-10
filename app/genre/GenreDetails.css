@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Proza+Libre&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap');
+
+.team {
+  background-color: var(--bgLight);
+  padding: 50px 0;
+}
+
+.team-description {
+  text-align: justify;
+  margin: 8px;
+  font-size: 20px;
+  font-family: 'Baloo Bhai 2', cursive;
+}
+
+.team-member-image {
+  width: 450px;
+  height: auto;
+  max-width: 100%;
+  border-radius: 5%;
+  object-fit: cover;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.submit-btn:hover {
+  background-color: lightgray;
+  color: black;
+}
+
+.format-card:hover {
+  transform: translateY(-5px);
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+.format-card-dark:hover {
+  transform: translateY(-5px);
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}

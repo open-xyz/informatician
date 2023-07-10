@@ -36,7 +36,7 @@ class NewsLetter extends React.Component {
   render() {
     return (
       <div className="news bg-cover bg-center bg-no-repeat min-h-180">
-        <div className="black bg-opacity-50 container flex justify-center">
+        <div className="bg-black/50 h-[180px] bg-opacity-50 flex justify-center">
           <div className="w-96 max-w-full">
             <h4 className="head">Subscribe To Newsletter</h4>
             <div className="flex p-2 gap-2 md:gap-8">

@@ -16,10 +16,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.25s ease-in-out;
   }
   
   .scrollToTopButton:hover {
     opacity: 1;
+    background-color: rgb(219, 59, 224);
+    transform: scale(1.2);
   }
   
   .scrollToTopIcon {
