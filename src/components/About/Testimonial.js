@@ -29,7 +29,10 @@ const testimonials = [
   // Add more testimonials here
 ];
 
-export default function Testimonial() {
+// text-color - 1857A0  bg-192734
+
+
+export default function Testimonial({theme}) {
   return (
     <div className="mt-20 mb-28 titles">
       <h1 className="heading text-center fw-bold fs-1">Our Core Team</h1>
@@ -38,7 +41,8 @@ export default function Testimonial() {
       </p>
       <div className="con_container">
         {testimonials.map((testimonial) => (
-          <div key={testimonial.id} className="testimoonial_card">
+          <div key={testimonial.id} className="testimoonial_card"
+              style={{backgroundColor: theme === 'dark' ? '#161313' : '#fff',color: theme === 'dark' ? '#1857A0' : "black"}}>
             <img
               loading='lazy'
               className="testimoonial_profile"
@@ -46,10 +50,10 @@ export default function Testimonial() {
               alt={testimonial.name}
             />
             <div className="testimoonial_content">
-              <p className="testimoonial_text">{testimonial.quote}</p>
+              <p className="testimoonial_text" style={{color: theme === 'dark' ? '#fff' : "black"}}>{testimonial.quote}</p>
             </div>
               <div className="testimoonial_details">
-                <span className="testimoonial_name">{testimonial.name}</span>
+                <span className="testimoonial_name" style={{color: theme === 'dark' ? '#fff' : "black"}}>{testimonial.name}</span>
                 <span className="testimoonial_job">{testimonial.job}</span>
               </div>
           </div>
