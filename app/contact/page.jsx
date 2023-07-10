@@ -2,12 +2,11 @@
 
 import React, { useState, useEffect } from "react";
 import { FaDiscord, FaTwitter, FaGithub } from "react-icons/fa";
-import contactImage from "../../public/assets/mainPages/contact-us.webp";
-import styles from "../../styles/Contact.module.css";
+import styles from "@/styles/Contact.module.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import validate from "../../utils/validation";
-import AuthErrorMessage from "../../utils/AuthError";
+import validate from "@/utils/validation";
+import AuthErrorMessage from "@/utils/AuthError";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -65,7 +64,7 @@ export default function Contact() {
   };
 
   return (
-    <div className={styles.contact}>
+    <div className={`${styles.contact}`}>
       <div className="container">
         <div className={styles.c_head}>
           <h1
@@ -80,12 +79,12 @@ export default function Contact() {
             data-aos="fade-down"
             data-aos-duration="500"
           >
-            We'd love to hear from you! Reach out to us for any inquiries,
+            We&apos;d love to hear from you! Reach out to us for any inquiries,
             feedback, or collaboration opportunities.
           </p>
         </div>
 
-        <div className={styles["contact-content"]}>
+        <div className={`${styles["contact-content"]} dark:bg-black`}>
           <div className={styles["contact-text"]}>
             {success && (
               <p className={`${styles["text-green-600"]} ${styles["text-18"]} ${styles["font-18"]} ${styles["text-left"]} mb-3`}>
@@ -97,7 +96,7 @@ export default function Contact() {
               <div className={styles["form-field"]}>
                 <label
                   htmlFor="name"
-                  className={`${styles["block"]} ${styles["uppercase"]} ${styles["tracking-wide"]} ${styles["text-lg"]} ${styles["font-bold"]} ${styles["mb-2"]}`}
+                  className="block uppercase tracking-wide text-lg font-bold mb-2 text-left"
                   data-aos="fade-left"
                   data-aos-duration="500"
                 >
@@ -108,7 +107,7 @@ export default function Contact() {
                   id="name"
                   name="name"
                   placeholder="Name"
-                  className={`${styles["form-input"]} ${styles["focus:ring-blue-600"]} ${styles["focus:border-blue-600"]}`}
+                  className={`${styles["form-input"]} focus:ring-blue-600 focus:border-blue-600`}
                   required
                   value={form.name}
                   onChange={handleChange}
@@ -122,7 +121,7 @@ export default function Contact() {
               <div className={styles["form-field"]}>
                 <label
                   htmlFor="email"
-                  className={`${styles["block"]} ${styles["uppercase"]} ${styles["tracking-wide"]} ${styles["text-lg"]} ${styles["font-bold"]} ${styles["mb-2"]} ${styles["text-left"]}`}
+                  className="block uppercase tracking-wide text-lg font-bold mb-2 text-left"
                   data-aos="fade-left"
                   data-aos-duration="500"
                 >
@@ -133,7 +132,7 @@ export default function Contact() {
                   id="email"
                   name="email"
                   placeholder="Email"
-                  className={`${styles["form-input"]} ${styles["focus:ring-blue-600"]} ${styles["focus:border-blue-600"]}`}
+                  className={`${styles["form-input"]} focus:ring-blue-600 focus:border-blue-600`}
                   required
                   value={form.email}
                   onChange={handleChange}
@@ -147,7 +146,7 @@ export default function Contact() {
               <div className={styles["form-field"]}>
                 <label
                   htmlFor="message"
-                  className={`${styles["block"]} ${styles["uppercase"]} ${styles["tracking-wide"]} ${styles["text-lg"]} ${styles["font-bold"]} ${styles["mb-2"]} ${styles["text-left"]}`}
+                  className="block uppercase tracking-wide text-lg font-bold mb-2 text-left"
                   data-aos="fade-left"
                   data-aos-duration="500"
                 >
@@ -157,7 +156,7 @@ export default function Contact() {
                   id="message"
                   placeholder="Message"
                   name="message"
-                  className={`${styles["form-input"]} ${styles["message-input"]} ${styles["focus:ring-blue-600"]} ${styles["focus:border-blue-600"]}`}
+                  className={`${styles["form-input"]} ${styles["message-input"]} focus:ring-blue-600 focus:border-blue-600`}
                   required
                   value={form.message}
                   onChange={handleChange}
@@ -186,7 +185,9 @@ export default function Contact() {
           >
             <Image
               style={{ marginLeft: "10%" }}
-              src={contactImage}
+              width={600}
+              height={600}
+              src={"/assets/mainPages/contact-us.webp"}
               alt="Contact"
               className={styles["contact-image"]}
             />
