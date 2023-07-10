@@ -7,7 +7,7 @@ export default function Home(props) {
   return (
     <>
       <ImgSection txt={["Start Reading", "Be a Reader"]} />
-      <CgCards />
+      <CgCards theme={props.theme} />
       <BkCards theme={props.theme} bkhead="Bestselling Books & Audiobooks" />
       <BkCards
         theme={props.theme}

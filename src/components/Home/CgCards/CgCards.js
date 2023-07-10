@@ -12,11 +12,11 @@ import abk2 from "../../../assets/audiobks/abk2.webp";
 import abk3 from "../../../assets/audiobks/abk3.webp";
 import abk4 from "../../../assets/audiobks/abk4.webp";
 
-export default function CgCards() {
+export default function CgCards({theme}) {
   return (
     <>
       <div className="container-xl mt-20 select-none">
-        <h1 style={{ fontSize: "30px", marginBottom: "50px" , color:"rgb(20, 20, 113)",fontFamily: "Source Serif Pro,serif"}}>
+        <h1 style={{ fontSize: "30px", marginBottom: "50px" , color:theme==="light" ? "rgb(20, 20, 113)" : "white",fontFamily: "Source Serif Pro,serif"}}>
           Popular Categories
         </h1>
         <div className="d-flex">
