@@ -47,11 +47,11 @@ export default function Testimonial() {
             />
             <div className="testimoonial_content">
               <p className="testimoonial_text">{testimonial.quote}</p>
+            </div>
               <div className="testimoonial_details">
                 <span className="testimoonial_name">{testimonial.name}</span>
                 <span className="testimoonial_job">{testimonial.job}</span>
               </div>
-            </div>
           </div>
         ))}
       </div>

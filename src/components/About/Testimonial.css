@@ -3,6 +3,7 @@
 /* Container */
 .con_container {
   display: flex;
+  margin-inline: auto;
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
@@ -11,13 +12,19 @@
 /* Testimonial Card */
 .testimoonial_card{
   max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 100%;
   padding: 1.5rem;
   background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
   border-radius: 8px;
   text-align: center;
+  padding-top: 1.7rem ;
+  padding-bottom: 1.7rem ;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 520px;
 }
 
 .testimoonial_card:hover {
@@ -38,16 +45,16 @@
 
 /* Testimonial Text */
 .testimoonial_text {
-  margin-top: 1.5rem;
+  margin-top: 5%;
   font-size: 1.2rem;
   line-height: 1.6;
   color: #333;
 }
 
 /* Details */
-.testimoonial_details {
+/* .testimoonial_details {
   margin-top: 1.5rem;
-}
+} */
 
 .testimoonial_name {
   display: block;
@@ -88,5 +95,6 @@
 @media screen and (max-width: 768px) {
   .testimoonial_card{
     max-width: 100%;
+    height: auto;
   }
 }
