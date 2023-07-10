@@ -9,12 +9,12 @@ import { Link } from "react-router-dom";
 class Footer extends React.Component {
   render() {
     return (
-      <footer className="bg-slate-800 rounded-t-lg ">
+      <footer className="bg-slate-800 rounded-t-lg pt-6 ">
         <div className="mx-auto w-full max-w-screen-xl">
           <Newsletter />
           <div className="flex gap-8 px-4 py-6 lg:py-8 max-[500px]:flex-col">
-            <div className="text-center min-[500px]:w-1/5">
-              <h2 className="mb-6 text-sm font-semibold text-white uppercase cursor-pointer">
+            <div className=" footer-div text-center min-[500px]:w-1/5">
+              <h2 className=" mb-6 text-sm font-semibold text-white uppercase cursor-pointer">
                 About
               </h2>
               <ul className="text-gray-400  font-medium ">
@@ -38,8 +38,8 @@ class Footer extends React.Component {
                 
             </ul>
         </div>
-        <div className="text-center min-[500px]:w-1/5">
-        <h2 className="mb-6 text-sm font-semibold text-white uppercase ">Customer Helpline</h2>
+        <div className="footer-div text-center min-[500px]:w-1/5">
+        <h2 className=" mb-6 text-sm font-semibold text-white uppercase ">Customer Helpline</h2>
             <ul className="text-gray-400 dfont-medium">
             <li className="mb-4">
                     <Link to="#" className="hover:text-gray-200">+91 9000000000</Link>
@@ -49,7 +49,7 @@ class Footer extends React.Component {
                 </li>
               </ul>
             </div>
-            <div className="text-center min-[500px]:w-1/5">
+            <div className=" footer-div text-center min-[500px]:w-1/5">
               <h2 className="mb-6 text-sm font-semibold text-white uppercase ">
                 Support
               </h2>
@@ -68,7 +68,7 @@ class Footer extends React.Component {
               </ul>
             </div>
             <div className="text-center min-[500px]:w-1/5">
-              <h2 className="mb-6 text-sm font-semibold text-white uppercase ">
+              <h2 className=" mb-6 text-sm font-semibold text-white uppercase ">
                 Legal
               </h2>
               <ul className="text-gray-400  font-medium">
@@ -114,6 +114,9 @@ class Footer extends React.Component {
             <div className="flex mt-4 space-x-6 sm:justify-center md:mt-0">
               <Link
                 to="#"
+                aria-label="Follow us on Facebook"
+                title="Facebook (External Link)"
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white hover:scale-125 "
               >
                 <BsFacebook />
@@ -121,6 +124,9 @@ class Footer extends React.Component {
               </Link>
               <Link
                 to="#"
+                aria-label="Follow us on Instagram"
+                title="Instagram (External Link)"
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white hover:scale-125 "
               >
                 <BsInstagram />
@@ -128,12 +134,18 @@ class Footer extends React.Component {
               </Link>
               <Link
                 to="#"
+                aria-label="Follow us on Twitter"
+                title="Twitter (External Link)"
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white hover:scale-125 "
               >
                 <BsTwitter />
                 <span className="sr-only">Twitter page</span>
               </Link>
               <a
+                aria-label="Follow us on Github"
+                title="Github (External Link)"
+                rel="noopener noreferrer"
                 to="https://github.com/rohansx/informatician"
                 className="text-gray-400 hover:text-white hover:scale-125 "
               >

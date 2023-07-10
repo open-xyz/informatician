@@ -3,17 +3,16 @@ import ImgSection from "./ImgSection/ImgSection";
 import BkCards from "./BkCards/BkCards";
 import CgCards from "./CgCards/CgCards";
 
-
-export default function Home() {
+export default function Home(props) {
   return (
     <>
-      <ImgSection
-        txt={["Start Reading","Be a Reader"]} />
+      <ImgSection txt={["Start Reading", "Be a Reader"]} />
       <CgCards />
-      <BkCards 
-        bkhead="Bestselling Books & Audiobooks" />
-      <BkCards 
-        bkhead="Current New York Times Bestsellers" />
+      <BkCards theme={props.theme} bkhead="Bestselling Books & Audiobooks" />
+      <BkCards
+        theme={props.theme}
+        bkhead="Current New York Times Bestsellers"
+      />
     </>
   );
 }

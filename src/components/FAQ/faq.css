@@ -24,8 +24,7 @@
   margin-bottom: 10px;
 }
 
-
-.help-section{
+.help-section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -67,14 +66,12 @@
   text-align: left;
 }
 
-
 .faq-help {
   padding: 50px 50px; /* Add margin from left and right */
   text-align: center;
 }
 
-
-@import url('https://fonts.googleapis.com/css?family=Hind:300,400&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Hind:300,400&display=swap");
 
 .faqcontainer {
   margin: 0 auto;
@@ -107,7 +104,7 @@
   padding: 5px;
 }
 
-.accordion .accordion-item button[aria-expanded='true'] {
+.accordion .accordion-item button[aria-expanded="true"] {
   border-bottom: 1px solid #03b5d2;
 }
 
@@ -155,7 +152,7 @@
 .accordion button .icon::before {
   display: block;
   position: absolute;
-  content: '';
+  content: "";
   top: 9px;
   left: 5px;
   width: 10px;
@@ -166,7 +163,7 @@
 .accordion button .icon::after {
   display: block;
   position: absolute;
-  content: '';
+  content: "";
   top: 5px;
   left: 9px;
   width: 2px;
@@ -174,15 +171,15 @@
   background: currentColor;
 }
 
-.accordion button[aria-expanded='true'] {
+.accordion button[aria-expanded="true"] {
   color: #03b5d2;
 }
 
-.accordion button[aria-expanded='true'] .icon::after {
+.accordion button[aria-expanded="true"] .icon::after {
   width: 0;
 }
 
-.accordion button[aria-expanded='true'] + .accordion-content {
+.accordion button[aria-expanded="true"] + .accordion-content {
   opacity: 1;
   max-height: 9em;
   transition: all 200ms linear;
@@ -225,4 +222,7 @@
     font-size: 0.9rem;
     margin: 1em 0;
   }
+}
+span {
+  color: #3372c1;
 }

@@ -1,29 +1,100 @@
-footer
-{
-  background: var(--bgFooter-light);
+footer {
+  background-image: linear-gradient(to right, #141e30, #0a0f23);
 }
 
-footer a{
-  color: var(--textGray-dark);
-  position: relative;
+footer a {
+  color: white;
+  transition: all 0.3s ease-in-out;
 }
 
-footer a:hover{
-  color: var(--textGray);
+footer a:hover {
+  color: rgb(152, 179, 243);
 }
-footer a::after{
-  content: " ";
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-  width: 0%;
-  background-color:var(--textGray-dark);
-  height: 2px;
-  border-radius: 3px;
-  transition: .7s;
+
+.footer-div,
+h2 {
+  margin-top: 20px;
+  color: rgb(216, 226, 250);
 }
-footer a:hover::after{
-  width: 100%;
 
+.footer_outer {
+  height: auto;
+}
 
+.footer_main {
+  margin-top: 80px;
+}
+
+.copyright_footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer_inner_body {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .footer_inner_body {
+    flex-direction: column;
+  }
+
+  .footer_inner_body .footer_div {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .footer_inner_body .footer_div h2 {
+    font-size: 18px;
+  }
+
+  .footer_inner_body .footer_div ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer_inner_body .footer_div ul li {
+    margin-bottom: 10px;
+  }
+
+  .footer_inner_body .footer_div ul li a {
+    font-size: 14px;
+  }
+
+  .footer_inner_body .footer_div ul li a:hover {
+    color: rgb(152, 179, 243);
+  }
+}
+
+@media (max-width: 576px) {
+  .footer_inner_body {
+    flex-direction: column;
+  }
+
+  .footer_inner_body .footer_div {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .footer_inner_body .footer_div h2 {
+    font-size: 18px;
+  }
+
+  .footer_inner_body .footer_div ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer_inner_body .footer_div ul li {
+    margin-bottom: 10px;
+  }
+
+  .footer_inner_body .footer_div ul li a {
+    font-size: 14px;
+  }
+
+  .footer_inner_body .footer_div ul li a:hover {
+    color: rgb(152, 179, 243);
+  }
 }

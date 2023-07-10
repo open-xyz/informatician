@@ -19,6 +19,7 @@
 }
 .feature_card_outer {
   display: flex;
+  gap: 10px;
   align-items: center;
   justify-content: center;
   margin-bottom: 50px;
@@ -124,8 +125,16 @@
 
 
 @media screen and (max-width: 576px) {
-  .feature .feature_card {
+  .feature_card {
     margin: 10px;
-    width: 50%;
+    width: 100%;
+  }
+  .feature_card_outer {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    /* margin-bottom: 50px; */
   }
 }

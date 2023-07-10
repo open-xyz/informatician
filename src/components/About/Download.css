@@ -21,6 +21,9 @@
 #mobile-image-container:hover + .box + .box {
   transform: scale(1.5);
 }
+.available{
+  margin-top: 55px;
+}
 
 .download {
   margin: 6% 2%;

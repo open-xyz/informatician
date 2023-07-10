@@ -16,9 +16,7 @@ export default function CgCards() {
   return (
     <>
       <div className="container-xl mt-20 select-none">
-        <h1
-          style={{ fontSize: "30px", marginBottom: "50px" }}
-        >
+        <h1 style={{ fontSize: "30px", marginBottom: "50px" }}>
           Popular Categories
         </h1>
         <div className="d-flex">
@@ -41,11 +39,7 @@ export default function CgCards() {
               image={ebk1}
               title="Biography & Memoir"
             />
-            <CardContent 
-              className="m_card" 
-              image={abk1} 
-              title="Politics" 
-            />
+            <CardContent className="m_card" image={abk1} title="Politics" />
             <CardContent
               className="m_card"
               image={abk2}
@@ -71,11 +65,7 @@ export default function CgCards() {
               image={ebk3}
               title="Self-Improvment"
             />
-            <CardContent 
-              className="m_card" 
-              image={ebk4} 
-              title="Travel" 
-            />
+            <CardContent className="m_card" image={ebk4} title="Travel" />
             <CardContent
               className="m_card"
               image={ebk5}
