@@ -53,7 +53,7 @@ const About = (props) => {
       <Feature theme={props.theme} />
       <div className="Testimonial"><Testimonial /></div>
       <Download theme={props.theme}/>
-      <Contributors />
+      <Contributors theme={props.theme}/>
     </div>
   );
 };
