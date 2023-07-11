@@ -37,7 +37,7 @@ function Biography(props) {
           </p>
           <BkCards bkhead="Trending titles"></BkCards>
           <BkCards bkhead="Must-Read Biographies of Great Leaders"></BkCards>
-          <div className="py-10">
+          <div className={`${!showMore && "pt-10"} pb-10`}>
           {showMore && <BkCards bkhead="Everything About Biography & Memoir"></BkCards>}
           {!showMore && (
             <button className="show-more-button mx-auto" onClick={handleShowMore}>
