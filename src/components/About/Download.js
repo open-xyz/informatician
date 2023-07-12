@@ -97,7 +97,7 @@ export default function Download(props){
         data-aos-duration="500"
       >
         <p className="brand-name fw-bold text-uppercase">
-          <img loading='lazyheading' src={themeImage} alt="Informatician logo, a book with a bookmark" className="h-22 w-64  d-inline" /> 
+          <img loading='lazy' src={themeImage} alt="Informatician logo, a book with a bookmark" className="h-22 w-64  d-inline" /> 
         </p>
         <h1 className="heading fw-bolder fs-1">Available For Your Smartphone</h1>
         <p>
