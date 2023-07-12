@@ -1,5 +1,5 @@
 'use client'
-import "./SingleBk.css";
+import "@/styles/SingleBk.css";
 import ReactStars from "react-rating-stars-component";
 import ebk1 from "@/public/assets/ebooks/ebk1.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
