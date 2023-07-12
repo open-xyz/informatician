@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import NewsLetter from "./NewsLetter/NewsLetter";
 // import  "./NewsLetter/NewsLetter.css"
-import { Link, useLocation} from "react-router-dom";
+import { Link} from "react-router-dom";
 import { BsDiscord, BsGithub, BsTwitter } from "react-icons/bs";
 import "./Footer.css";
 import lightLogo from "../../assets/logos/light_logo.png";
