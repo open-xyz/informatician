@@ -94,7 +94,7 @@ const Footer = () => {
               >
                 <BsGithub className="w-6 h-6 transition-all duration-200 ease-in-out transform hover:scale-110" />
               </Link>
-              <Link to="#" onClick={scrollToTop}>
+              <Link to="/develop" onClick={scrollToTop}>
                 <BsDiscord className="w-6 h-6 transition-all duration-200 ease-in-out transform hover:scale-110" />
               </Link>
             </div>
