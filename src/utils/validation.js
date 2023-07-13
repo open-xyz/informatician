@@ -44,7 +44,7 @@ const validate = {
       },
 
       publisher: (value)=>{
-        if(value.length > 30) return {publisher: true, publisherError: "Publisher name must be less than 15 characterss"}
+        if(value.length > 30) return {publisher: true, publisherError: "Publisher name must be less than 30 characterss"}
         return {publisher: false, publisherError: false}
       },
 
