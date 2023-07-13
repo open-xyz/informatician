@@ -47,7 +47,7 @@ const AddBooks = (props) => {
     });
 
     const bookPDF = document.getElementById("upload-btn");
-    if(!bookPDF.files.length > 0) {toast.error("Please upload book pdf"); return}
+    if(!bookPDF.files.length > 0) {toast.error("Please upload book."); return}
 
 
     if (submitable) {
