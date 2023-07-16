@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
+import Books from "../Home/Books";
 import "./BookList.css";
 import ScrollToTopButton from "../../components/ScrollButton/ScrollButton";
+import BookCards from "./BookCard"
 // import Card from "../Card";
 import { searchBooks } from "../../utils/searchBooks";
 
@@ -14,9 +16,11 @@ import SwiperCore,{ Autoplay, Pagination, Navigation } from "swiper";
 
 export default function BookList(props) {
   const [books, setBooks] = useState([]);
-  const [bookName, setBookName] = useState("");
+  const [searchQuery, setSerachQuery] = useState("");
+  const [filteredBooks, setFilteredBooks] = useState([]);
   const cardContainerRef = useRef(null);
   const cardWidthRef = useRef(0);
+  const [hasSearched,setHasSearched] = useState(false);
 
   // useEffect(() => {
   //   if (bookName !== "") {
@@ -37,9 +41,9 @@ export default function BookList(props) {
   async function handleClick(e){
     e.preventDefault();
     try{
-      const result=await searchBooks(bookName)
-    
-    setBooks(result);
+      const regex = new RegExp(searchQuery, "i");
+      setFilteredBooks( Books.filter((element) =>regex.test(element.title) || regex.test(element.author) || regex.test(element.isbn) ));
+      setHasSearched(true);
   }catch(err){
     console.log(err);
   }
@@ -95,11 +99,10 @@ export default function BookList(props) {
             <input
               id="default-search"
               className="search-input"
-              onChange={(event) => setBookName(event.target.value)}
+              onChange={(event) => setSerachQuery(event.target.value)}
               placeholder="Title / Author / ISBN"
               required
             />
-           
             <button type="submit" id="search-button-2" onClick={handleClick}>
               <div className="search-icon">
               <img loading='lazy' width="100" height="100" src="https://img.icons8.com/ios/100/search--v1.png" alt="Icon of a magnifying glass for search functionality"/>
@@ -196,7 +199,18 @@ export default function BookList(props) {
           </div>
         </div>
 
-
+        <div className="book-holder">
+            {filteredBooks.length > 0 && filteredBooks.map((item)=>{
+              return (
+                <>
+                  <div className="book_card-container ">
+                    <BookCards imgName={item.img} title={item.title} type={item.type} author={item.author} description={item.description}></BookCards>
+                  </div>
+                </>
+              )
+            })}
+            {filteredBooks.length === 0 && hasSearched && <div>No results found</div>}
+            </div>
 
         {/* <span className="book-list-title text-center">Book List</span> */}
         

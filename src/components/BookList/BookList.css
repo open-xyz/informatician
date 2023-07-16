@@ -1,13 +1,14 @@
 .book-list-container {
-  padding: 100px;
   height: auto;
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; /* Updated alignment */
   overflow: auto;
   margin-top: 2rem;
+  padding-top:100px;
+  padding-left: 100px;
 }
 
 .book-list-heading {
@@ -138,13 +139,18 @@ form {
 }
 
 .book_card-container {
-  display: flex;
-  height: auto;
+  display: inline-block;
+  height: 30rem;
+  width:15rem;
   overflow-x: scroll;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   padding-bottom: 50px;
+  border: 2px solid black;
+  border-radius:5px;
+  padding-right:0;
+  margin-right:10px;
 }
 
 /* .book_card {
