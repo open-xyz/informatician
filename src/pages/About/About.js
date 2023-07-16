@@ -51,7 +51,7 @@ const About = (props) => {
       </div>
       <ScrollToTopButton />
       <Feature theme={props.theme} />
-      <div className="Testimonial"><Testimonial /></div>
+      <div className="Testimonial"><Testimonial theme={props.theme}/></div>
       <Download theme={props.theme}/>
       <Contributors theme={props.theme}/>
     </div>
