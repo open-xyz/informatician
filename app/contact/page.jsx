@@ -9,6 +9,7 @@ import validate from "@/utils/validation";
 import AuthErrorMessage from "@/utils/AuthError";
 import Link from "next/link";
 import Image from "next/image";
+import { toast } from "react-toastify";
 
 export default function Contact() {
   useEffect(() => {
@@ -28,7 +29,6 @@ export default function Contact() {
 
   const handleResponse = async (e) => {
     e.preventDefault();
-    console.log("called");
     setsuccess("");
     let submitable = true;
     Object.values(error).forEach((err) => {
@@ -48,7 +48,7 @@ export default function Contact() {
       });
       setsuccess("Contact Request sent successfully!!");
     } else {
-      alert("Please provide valid data in all fields");
+      toast.error("Please fill the form correctly", { position: 'top-center', autoClose: 3000, theme: 'colored' })
     }
   };
 
@@ -92,7 +92,7 @@ export default function Contact() {
               </p>
             )}
 
-            <form className={styles["contact-form"]} onSubmit={handleResponse}>
+            <form className={styles["contact-form"]} onSubmit={handleResponse} role="form">
               <div className={styles["form-field"]}>
                 <label
                   htmlFor="name"
@@ -113,9 +113,15 @@ export default function Contact() {
                   onChange={handleChange}
                   data-aos="fade-left"
                   data-aos-duration="500"
+                  aria-labelledby="name"
+                  aria-describedby={error.name && error.nameError ? "nameError" : null}
+                  aria-required="true"
+                  aria-invalid={error.name && error.nameError ? "true" : "false"}
                 />
                 {error.name && error.nameError ? (
-                  <AuthErrorMessage message={error.nameError} />
+                  <AuthErrorMessage message={error.nameError} role="alert"
+                    id="nameError"
+                    aria-live="assertive" />
                 ) : null}
               </div>
               <div className={styles["form-field"]}>
@@ -138,9 +144,15 @@ export default function Contact() {
                   onChange={handleChange}
                   data-aos="fade-left"
                   data-aos-duration="500"
+                  aria-labelledby="email"
+                  aria-describedby={error.email && error.emailError ? "emailError" : null}
+                  aria-required="true"
+                  aria-invalid={error.email && error.emailError ? "true" : "false"}
                 />
                 {error.email && error.emailError ? (
-                  <AuthErrorMessage message={error.emailError} />
+                  <AuthErrorMessage message={error.emailError} role="alert"
+                    id="emailError"
+                    aria-live="assertive" />
                 ) : null}
               </div>
               <div className={styles["form-field"]}>
@@ -162,9 +174,15 @@ export default function Contact() {
                   onChange={handleChange}
                   data-aos="fade-left"
                   data-aos-duration="500"
+                  aria-labelledby="message"
+                  aria-describedby={error.message && error.messageError ? "messageError" : null}
+                  aria-required="true"
+                  aria-invalid={error.message && error.messageError ? "true" : "false"}
                 />
                 {error.message && error.messageError ? (
-                  <AuthErrorMessage message={error.messageError} />
+                  <AuthErrorMessage message={error.messageError} role="alert"
+                    id="messageError"
+                    aria-live="assertive" />
                 ) : null}
               </div>
               <button
