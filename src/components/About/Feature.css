@@ -8,7 +8,7 @@
   margin: 10px;
   padding: 50px 20px;
   display: flex;
-  width:300px;
+  width: 300px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -23,6 +23,10 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 50px;
+}
+.feature_card_outer p {
+  font-size: 20px;
+  font-weight: bold;
 }
 .feature .feature_card .icons {
   margin-bottom: 20px;
@@ -122,7 +126,6 @@
     transform: translateY(-30px);
   }
 }
-
 
 @media screen and (max-width: 576px) {
   .feature_card {
