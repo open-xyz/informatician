@@ -30,7 +30,7 @@ const Footer = (props) => {
                 <ul className="font-medium">
                   <li className="mb-4">
                     <Link
-                      href="./benefits"
+                      href="/benefits"
                       className="transition-all duration-300 ease-in-out"
                     >
                       Benefits
@@ -38,7 +38,7 @@ const Footer = (props) => {
                   </li>
                   <li className="mb-4">
                     <Link
-                      href="./formats"
+                      href="/formats"
                       className="transition-all duration-300 ease-in-out"
                     >
                       Book Formats
@@ -46,7 +46,7 @@ const Footer = (props) => {
                   </li>
                   <li className="mb-4">
                     <Link
-                      href="./genre"
+                      href="/genre"
                       className="transition-all duration-300 ease-in-out"
                     >
                       Genre
@@ -60,7 +60,7 @@ const Footer = (props) => {
                 <ul className="font-medium">
                   <li className="mb-4">
                     <Link
-                      href="./about"
+                      href="/about"
                       className="transition-all duration-300 ease-in-out"
                     >
                       About us
@@ -68,7 +68,7 @@ const Footer = (props) => {
                   </li>
                   <li className="mb-4">
                     <Link
-                      href="./team"
+                      href="/team"
                       className="transition-all duration-300 ease-in-out"
                     >
                       Our Team
@@ -76,7 +76,7 @@ const Footer = (props) => {
                   </li>
                   <li className="mb-4">
                     <Link
-                      href="./contact"
+                      href="/contact"
                       className="transition-all duration-300 ease-in-out "
                     >
                       Contact Us
@@ -97,7 +97,7 @@ const Footer = (props) => {
                 <ul className="  font-medium">
                   <li className="mb-4">
                     <Link
-                      href="./faq"
+                      href="/faq"
                       className="transition-all duration-300 ease-in-out "
                     >
                       Help/FAQ
@@ -134,7 +134,7 @@ const Footer = (props) => {
                 <ul className="  font-medium">
                   <li className="mb-4">
                     <Link
-                      href="./privacy"
+                      href="/privacy"
                       className="transition-all duration-300 ease-in-out"
                     >
                       Privacy Policy
@@ -142,7 +142,7 @@ const Footer = (props) => {
                   </li>
                   <li className="mb-4">
                     <Link
-                      href="./terms"
+                      href="/terms"
                       className="transition-all duration-300 ease-in-out"
                     >
                       Terms &amp; Conditions
@@ -150,7 +150,7 @@ const Footer = (props) => {
                   </li>
                   <li className="mb-4">
                     <Link
-                      href="./copyright"
+                      href="/copyright"
                       className="transition-all duration-300 ease-in-out"
                     >
                       Copyright
@@ -158,7 +158,7 @@ const Footer = (props) => {
                   </li>
                   <li>
                     <Link
-                      href="./cookie"
+                      href="/cookie"
                       className="transition-all duration-300 ease-in-out"
                     >
                       Cookie Preference
@@ -192,7 +192,7 @@ const Footer = (props) => {
               <Link
                 href="https://github.com/rohansx/informatician"
                 target="_blank"
-                className={` hover:text-red-900`}
+                className={` hover:text-[#12BC00]`}
               >
                 <BsGithub className="w-6 h-6 transition-all duration-200 ease-in-out transform hover:scale-110" />
                 <span className="sr-only">GitHub account</span>
