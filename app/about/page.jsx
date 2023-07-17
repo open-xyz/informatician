@@ -10,6 +10,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import '@/components/About/Feature.css'
 import Image from "next/image";
+import { Tilt } from "react-tilt";
 
 const About = (props) => {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
@@ -25,8 +26,15 @@ const About = (props) => {
     <div className="about">
       <div className="w-11/12 flex flex-wrap mx-auto justify-center items-center mt-28 mb-5 max-w-screen-2xl">
         <div className="md:w-1/2 w-11/12" data-aos="fade-left" data-aos-duration="500">
-          <Image
-            loading='lazy' src={"/assets/mainPages/aboutUs.webp"} width={600} height={600} className="w-11/12" alt="about us" />
+          <Tilt>
+            <Image
+              loading='lazy'
+              src={"/assets/mainPages/aboutUs.webp"}
+              width={600}
+              height={600}
+              className="w-11/12 hover:w-11/12"
+              alt="about us" />
+          </Tilt>
         </div>
         <div className="md:w-1/2 p-3 w-11/12 text-center" data-aos="fade-right" data-aos-duration="500">
           <h1 className="text-5xl mb-6 font-bold">About Us</h1>

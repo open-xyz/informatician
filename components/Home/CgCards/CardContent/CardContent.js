@@ -9,7 +9,7 @@ export default function CardContent(props) {
     <SwiperSlide>
       <Link
         href="/pcategories/biography"
-        className="cg-card mx-2 px-3 py-2 h-20 relative cursor-pointer border"
+        className="cg-card mx-2 px-3 py-2 h-20 flex flex-row align-items-center relative cursor-pointer border"
       >
         <div>
           <p>{props.title}</p>

@@ -168,3 +168,13 @@
   cursor: pointer;
   color: #4c7c88;
 }
+
+@media only screen and (max-width: 768px) {
+  .inside-wrapper {
+    display: block;
+  }
+
+  .side-panel {
+    margin-top: 1rem;
+  }
+}
