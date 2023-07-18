@@ -1,5 +1,5 @@
 .terms {
-  padding: 50px 0;
+  padding: 20px;
   background-color: var(--bgLight);
 }
 
@@ -8,18 +8,23 @@
   margin: 30px auto;
   padding: 0 20px;
 }
-
-.terms-title {
-  font-size: 28px;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 30px;
-}
-
 .terms-content {
-  text-align: justify;
-  line-height: 1.5;
+  color: #777;
+  font-size: 16px;
 }
+.terms-title {
+  color: #4f63c3;
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 40px;
+  animation: pulse 1s infinite;
+}
+.icon {
+  color: #28a745;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
 
 .terms-content h3 {
   font-size: 22px;
@@ -40,6 +45,7 @@
   margin-bottom: 10px;
   display: flex;
   align-items: center;
+  font-weight: bold;
 }
 
 .terms-content ul li .icon {
@@ -57,4 +63,15 @@
 
 .terms-content .contact-email {
   font-weight: bold;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
