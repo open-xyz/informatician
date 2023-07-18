@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; /* Updated alignment */
+    align-items: center; 
     overflow: auto;
     margin-top: 2rem;
   }
