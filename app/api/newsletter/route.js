@@ -1,4 +1,4 @@
-import Newsletter from "@/model/Newsletter";
+import Newsletter from "@/model/newsletter";
 import nodemailer from "nodemailer";
 import { connectedToDB } from "@/utils/database";
 import fetch from "node-fetch";
