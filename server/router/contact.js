@@ -1,9 +1,11 @@
+import { checkAuth } from '../middleware/auth.middleware';
+
 const express = require('express')
 const mailer  = require('nodemailer')
 const mailRouter = express.Router()
 const dotenv  = require('dotenv').config()
 
-mailRouter.post('/', (req, res) => {
+mailRouter.post('/', checkAuth, (req, res) => {
     console.log(req.body)
     var transporter = mailer.createTransport({
         service: 'gmail',

@@ -38,43 +38,59 @@ export default function CgCards({theme}) {
               className="m_card"
               image={ebk1}
               title="Biography & Memoir"
+              link ="/pcategories/biography"
             />
-            <CardContent className="m_card" image={abk1} title="Politics" />
+            <CardContent 
+            className="m_card" 
+            image={abk1} title="Politics"
+            link="/pcategories/politics"/>
             <CardContent
               className="m_card"
               image={abk2}
               title="Career & Growth"
+              link="/pcategories/career"
             />
             <CardContent
               className="m_card"
               image={abk3}
               title="Contemporary Fiction"
+              link="/pcategories/contemporary"
             />
             <CardContent
               className="m_card"
               image={abk4}
               title="Science & Mathematics"
+              link="/pcategories/science"
             />
             <CardContent
               className="m_card"
               image={ebk2}
               title="Cooking & Food"
+              link="/pcategories/cooking"
             />
             <CardContent
               className="m_card"
               image={ebk3}
               title="Self-Improvment"
+              link="/pcategories/selfhelp"
             />
-            <CardContent className="m_card" image={ebk4} title="Travel" />
+            <CardContent 
+            className="m_card" 
+            image={ebk4} 
+            title="Travel" 
+            link ="/pcategories/biography"
+            />
             <CardContent
               className="m_card"
               image={ebk5}
               title="Mystery, Thriller & Crime"
+              link="/pcategories/mystery"
             />
             <CardContent
               className="m_card"
               image={ebk6}
               title="Home & Garden"
+              link="/pcategories/garden"
             />
           </AliceCarousel>
         </div>
