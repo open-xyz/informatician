@@ -5,8 +5,8 @@ export const GET = async (req, {params}) =>{
 
     await connectedToDB();
 
-    const category = params.category;
     try {
+        const category = params.category;
         const books = await Book.find({ category: category });
         console.log(books)
         return new Response(JSON.stringify(books),{status:200})
