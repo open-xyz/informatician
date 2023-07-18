@@ -88,6 +88,21 @@ export default function NavItems(props) {
             Contact Us
           </Link>
         </li>
+        <li>
+          <Link
+            to="/login"
+            className={
+              props.location.pathname === "/login"
+                ? "active"
+                : props.theme === "dark"
+                ? "text-white"
+                : "text-dark"
+            }
+            onClick={props.handleOptionClick}
+          >
+            Login
+          </Link>
+        </li>
 
         <div className="flex items-center">
           <li>
