@@ -23,7 +23,10 @@ export default function NewsLetter() {
                 fetchConfig
             );
             if (response.status === 200)
+            {   console.log("Subscribed");
                 toast.success("Subscribed", toastConfig)
+            }
+
         } catch (error) {
             console.error(error);
             toast.error("There was a problem with server, Please try again!", toastConfig)

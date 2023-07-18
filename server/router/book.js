@@ -1,14 +1,14 @@
-import { checkAuth } from '../middleware/auth.middleware';
+const  checkAuth =require('../middleware/auth.middlware');
 
 const { addBook, getAllBooks, getABook, updateBook, deleteBook,findbycategory } = require('../controller/book');
 
 const router = require('express').Router();
 
-router.post( checkAuth, "/add", addBook)
-router.get(checkAuth ,"/find", getAllBooks)
-router.get(checkAuth ,"/:id", getABook)
-router.put(checkAuth ,"/:id", updateBook)
-router.delete(checkAuth,"/:id", deleteBook)
-router.get(checkAuth ,"/findbycategory/:category",findbycategory)
+router.post('/add', checkAuth, addBook);
+router.get('/find', checkAuth, getAllBooks);
+router.get('/:id', checkAuth, getABook);
+router.put('/:id', checkAuth, updateBook);
+router.delete('/:id', checkAuth, deleteBook);
+router.get('/findbycategory/:category', checkAuth, findbycategory);
 
 exports.router=router;
