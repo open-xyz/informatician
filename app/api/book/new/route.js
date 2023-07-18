@@ -1,4 +1,4 @@
-import { connectedToDB } from "@utils/database";
+import { connectedToDB } from "@/utils/database";
 import Book from "@/model/Book"
 
 export const POST = async(req)=>{

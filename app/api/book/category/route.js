@@ -1,9 +1,11 @@
 import Book from "@/model/Book"
-import { connectedToDB } from "@utils/database";
+import { connectedToDB } from "@/utils/database";
 
 export const GET = async (req, {params}) =>{
 
     await connectedToDB();
+
+    if (!params) return new Response("Missing parameters", { status: 400 });
 
     const category = params.category;
     try {
