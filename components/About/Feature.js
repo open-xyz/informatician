@@ -12,38 +12,38 @@ export default function Feature(props) {
 
       <Carousel showArrows={true} showThumbs={false} className="carousel-container" autoPlay={true} interval={2000} infiniteLoop={true}>
         <div className="feature_card_outer">
-          <div className="feature_card" style={{ background: props.theme === "dark" ? '#161313' : '' }}>
+          <div className="feature_card dark:bg-gray-900">
             <MdMenuBook className="icons book" />
-            <p style={{ fontWeight: 'bold', fontSize: 20 }}>Read Books</p>
+            <p className="font-bold text-xl">Read Books</p>
           </div>
-          <div className="feature_card" style={{ background: props.theme === "dark" ? '#161313' : '' }}>
+          <div className="feature_card dark:bg-gray-900">
             <MdUpload className="icons upload text-sky-500" />
-            <p style={{ fontWeight: 'bold', fontSize: 20 }}>Upload Books</p>
+            <p className="font-bold text-xl">Upload Books</p>
           </div>
-          <div className="feature_card" style={{ background: props.theme === "dark" ? '#161313' : '' }}>
+          <div className="feature_card dark:bg-gray-900">
             <MdOutlineMoneyOff className="dollar icons text-yellow-400" />
-            <p style={{ fontWeight: 'bold', fontSize: 20 }}>Free of Cost</p>
+            <p className="font-bold text-xl">Free of Cost</p>
           </div>
         </div>
         <div className="feature_card_outer">
-          <div className="feature_card" style={{ background: props.theme === "dark" ? '#161313' : '' }}>
+          <div className="feature_card dark:bg-gray-900">
             <MdPeople className="icons reader" />
-            <p style={{ fontWeight: 'bold', fontSize: 20 }}>Readers Community</p>
+            <p className="font-bold text-xl">Readers Community</p>
           </div>
-          <div className="feature_card" style={{ background: props.theme === "dark" ? '#161313' : '' }}>
+          <div className="feature_card dark:bg-gray-900">
             <MdEmail className="icons letterClose text-blue-500 hover:hidden" />
             <MdDrafts className="icons letterOpen text-blue-500 hidden hover:block" />
-            <p style={{ fontWeight: 'bold', fontSize: 20 }}>Newsletter</p>
+            <p className="font-bold text-xl">Newsletter</p>
           </div>
-          <div className="feature_card" style={{ background: props.theme === "dark" ? '#161313' : '' }}>
+          <div className="feature_card dark:bg-gray-900">
             <MdEmojiEvents className="icons readingChallenge" />
-            <p style={{ fontWeight: 'bold', fontSize: 20 }}>Reading Challenge</p>
+            <p className="font-bold text-xl">Reading Challenge</p>
           </div>
         </div>
         <div className="feature_card_outer">
-          <div className="feature_card" style={{ background: props.theme === "dark" ? '#161313' : '' }}>
+          <div className="feature_card dark:bg-gray-900">
             <MdTimeline className="icons progressTracking" />
-            <p style={{ fontWeight: 'bold', fontSize: 20 }}>Progress Tracking</p>
+            <p className="font-bold text-xl">Progress Tracking</p>
           </div>
         </div>
       </Carousel>

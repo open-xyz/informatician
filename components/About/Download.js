@@ -111,7 +111,7 @@ export default function Download() {
           on the beach or on the airplane, you’ll always have access. Install
           the apps to try them out.
         </p>
-        <div className="flex flex-col items-center justify-start mt-6 space-y-4 sm:flex-row md:flex-col lg:flex-row sm:space-y-3 sm:space-x-3 md:space-x-0 lg:space-x-3 lg:space-y-0 md:items-start lg:items-center">
+        <div className="flex flex-col items-center justify-center mt-6 space-y-4 sm:flex-row md:flex-col lg:flex-row sm:space-y-3 sm:space-x-3 md:space-x-0 lg:space-x-3 lg:space-y-0 md:items-start lg:items-center">
           <button className="inline-flex items-center px-6 py-3 rounded-lg bg-gray-600 text-gray-50">
             <svg
               xmlns="http://www.w3.org/2000/svg"
