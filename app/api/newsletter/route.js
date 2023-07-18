@@ -1,6 +1,6 @@
 import Newsletter from "@/model/Newsletter";
 import nodemailer from "nodemailer";
-import { connectedToDB } from "@utils/database";
+import { connectedToDB } from "@/utils/database";
 import fetch from "node-fetch";
 
 export const POST = async (req, res) => {
