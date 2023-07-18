@@ -4,9 +4,7 @@ import "react-toastify/dist/ReactToastify.css";
 // import LibraryBooksIcon from "@mui/icons-material/LibraryBooks";
 // import CloseIcon from "@mui/icons-material/Close";
 import axios from "axios";
-import styles from "@/styles/Upload.module.css";
 import { useParams, useRouter } from "next/navigation";
-
 
 const FileUploadComponent = () => {
   const [file, setFile] = useState(null);
@@ -24,10 +22,16 @@ const FileUploadComponent = () => {
         const formData = new FormData();
         formData.append("file", file);
 
-        await axios.post("https://informaticonserver.onrender.com/api/upload", formData);
-        await axios.put("https://informaticonserver.onrender.com/api/book/" + id, {
-          bookpdf: file.name,
-        });
+        await axios.post(
+          "https://informaticonserver.onrender.com/api/upload",
+          formData
+        );
+        await axios.put(
+          "https://informaticonserver.onrender.com/api/book/" + id,
+          {
+            bookpdf: file.name,
+          }
+        );
         navigate("/success");
         localStorage.clear();
       } else {
@@ -40,21 +44,25 @@ const FileUploadComponent = () => {
   };
 
   return (
-    <div className={`${styles["upload"]} p-10 d-flex flex-column justify-content-center align-items-center`}>
-      <h2 className="text-xl font-bold">Upload Books</h2>
-      <div className={`${styles["upload-box"]} my-5 p-10 d-flex flex-column justify-content-center align-items-center`}>
+    <div className="p-10 flex flex-col items-center justify-center rounded-lg shadow-lg border">
+      <h2 className="text-xl font-bold mb-4">Upload Books</h2>
+      <div className="border-2 rounded-lg my-5 p-10 flex flex-col items-center justify-center">
         <input
           type="file"
           name=""
           id="upload-btn"
           accept=".pdf, .txt, .doc, .ppt, .xls, .docx"
           onChange={handleFileChange}
+          className="hidden"
         />
-        <label className="mb-5" htmlFor="upload-btn">
-          Select Books To Upload 
+        <label
+          htmlFor="upload-btn"
+          className="mb-5 cursor-pointer bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+        >
+          Select Books To Upload
         </label>
         {file && (
-          <p className={`${styles["uploaded"]} m-1`}>
+          <p className="border-dashed border-gray-500 dark:border-gray-700 rounded-md p-2 m-1">
             {file.name}
             {/* <CloseIcon
               className="close-icon ml-10 cursor-pointer"
@@ -62,7 +70,11 @@ const FileUploadComponent = () => {
             /> */}
           </p>
         )}
-        <button className="mt-4" type="submit" onClick={handleFileUpload}>
+        <button
+          className="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+          type="submit"
+          onClick={handleFileUpload}
+        >
           Submit
         </button>
       </div>
