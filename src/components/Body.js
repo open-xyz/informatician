@@ -1,6 +1,6 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect } from "react";
 import Loader from "./Loader/loader";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import AdChoices from "../pages/AdChoices/AdChoices";
 import PublishersPage from "../pages/Publishers/Publishers";
 import BookmarkPage from "../pages/Bookmarks/BookmarkPage";
@@ -37,6 +37,16 @@ import GenreDetails from "../pages/GenreDetails/GenreDetails";
 import BookAwards from "../pages/Awards/BookAwards";
 
 function Body(props) {
+
+  const routePath = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }, [routePath]);
+
   return (
     <div>
       <Suspense fallback={<Loader  />}>
