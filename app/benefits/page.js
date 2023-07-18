@@ -1,20 +1,20 @@
-import React from 'react';
-import img1 from '@/public/assets/benefits/benefit-1.webp';
-import img2 from '@/public/assets/benefits/benefit-2.webp';
-import img3 from '@/public/assets/benefits/benefit-3.webp';
-import img4 from '@/public/assets/benefits/benefit-4.webp';
-import img5 from '@/public/assets/benefits/benefit-5.webp';
-import './Benefits.css'; // Import the CSS file for styling
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
+
+import img1 from "@/public/assets/benefits/benefit-1.webp";
+import img2 from "@/public/assets/benefits/benefit-2.webp";
+import img3 from "@/public/assets/benefits/benefit-3.webp";
+import img4 from "@/public/assets/benefits/benefit-4.webp";
+import img5 from "@/public/assets/benefits/benefit-5.webp";
 
 export default function BenefitsOfReading(props) {
   return (
-    <div className="benefits-container mt-9">
-      <div className="container">
-        <h1 className="font-bold text-4xl text-black dark:text-white">
+    <div className="mt-16">
+      <div className="container mx-auto max-w-5xl px-8 grid place-items-center py-16">
+        <h1 className="text-4xl font-bold text-black dark:text-white mb-8">
           Benefits of Reading
         </h1>
-        <p className="text-neutral-500 dark:text-neutral-300">
+        <p className="text-neutral-500 dark:text-neutral-300 mb-8 text-justify">
           Reading is a wonderful activity that offers numerous benefits to
           individuals of all ages. Whether you prefer fiction, non-fiction, or
           any other genre, here are some key advantages of reading:
@@ -50,24 +50,32 @@ export default function BenefitsOfReading(props) {
           src={img5}
           alt="a person reading a book"
         />
-        
       </div>
     </div>
   );
 }
 
-function Card({title, para, src, alt}) {
+function Card({ title, para, src, alt }) {
   return (
-    <div className="benefit border shadow-xl hover:shadow-slate-800 mt-5 bg-neutral-100 dark:bg-neutral-900">
-          <div className="benefit-content">
-            <div className="benefit-image">
-              <Image loading='lazy' src={src} alt={alt} style={{ height: 220, width: 400 }} />
-            </div>
-            <div className="benefit-details">
-              <h2 className='text-center text-black dark:text-white'>{title}</h2>
-              <p>{para}</p>
-            </div>
-          </div>
+    <div className="border shadow-xl hover:shadow-slate-800 rounded-lg p-6 mt-11 bg-neutral-100 dark:bg-neutral-900 w-fit mx-auto">
+      <div className="flex flex-col md:flex-row items-center w-fit">
+        <div className="md:w-1/2">
+          <Image
+            loading="lazy"
+            src={src}
+            alt={alt}
+            height={220}
+            width={400}
+            className="rounded-lg h-64"
+          />
         </div>
-  )
+        <div className="md:w-1/2 mt-6 md:mt-0 md:ml-8">
+          <h2 className="text-center text-black dark:text-white text-2xl mb-2">
+            {title}
+          </h2>
+          <p className="max-md:max-w-md text-center">{para}</p>
+        </div>
+      </div>
+    </div>
+  );
 }
