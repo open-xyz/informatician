@@ -1,5 +1,5 @@
 import Book from "@/model/Book"
-import { connectedToDB } from "@utils/database";
+import { connectedToDB } from "@/utils/database";
 
 export const GET = async(req)=>{
     
