@@ -1,4 +1,4 @@
-import Newsletter from "@/model/newsletter";
+import Newsletter from "@/model/Newsletter";
 import { connectedToDB } from "@/utils/database";
 
 export const POST = async (req, res) => {
