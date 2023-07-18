@@ -19,7 +19,7 @@ export default function NewsLetter() {
 
         try {
             const response = await fetch(
-                "http://localhost:5000/api/addUser",
+                "https://informaticonserver.onrender.com/api/addUser",
                 fetchConfig
             );
             if (response.status === 200)
