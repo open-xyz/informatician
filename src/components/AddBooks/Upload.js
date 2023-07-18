@@ -6,7 +6,7 @@ import LibraryBooksIcon from "@mui/icons-material/LibraryBooks";
 import CloseIcon from "@mui/icons-material/Close";
 import axios from "axios";
 import './Upload.css';
-const FileUploadComponent = () => {
+const FileUploadComponent = ({formData}) => {
   const [file, setFile] = useState(null);
   const navigate = useNavigate();
   const id = localStorage.getItem("bookId");
@@ -16,6 +16,15 @@ const FileUploadComponent = () => {
   };
 
   const handleFileUpload = async () => {
+    let submitable = true;
+    Object.values(formData).forEach((e) => {
+      if (e !== false) {
+        submitable = false;
+        return;
+      }
+    });
+
+    if (submitable) {
     try {
       if (file) {
         toast.loading("Uploading...");
@@ -35,11 +44,14 @@ const FileUploadComponent = () => {
       toast.error("Something went wrong!");
       console.error(error);
     }
+  }else{
+    toast.error("Fill the form properly");
+  }
   };
 
   return (
     <div className="upload p-10 d-flex flex-column justify-content-center align-items-center">
-      <h2 className="fs-2 fw-bolder">Upload Books</h2>
+      <h2 className="fs-2 fw-bolder" style={{color:"#3372c1"}}>Upload Books</h2>
       <div className="upload-box my-5 p-10 d-flex flex-column justify-content-center align-items-center">
         <input
           type="file"
