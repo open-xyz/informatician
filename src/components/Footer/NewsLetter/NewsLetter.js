@@ -28,38 +28,18 @@ export default function NewsLetter() {
 
       if (response.status === 200) {
         console.log("Subscribed");
-        toast.success("You're Subscribed 👍", {
-          position: "center",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-        });
+        toast.success("Subscribed", { position: 'top-center', autoClose: 3000, theme: 'colored' })
       } else {
         console.log("Failed to subscribe");
         toast.error("Failed to subscribe. Please try again!", {
           position: "top-right",
           autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
+         
         });
       }
     } catch (error) {
       console.error(error);
-      toast.error("There was a problem with the server. Please try again later.", {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
+      toast.error("There was a problem with server, Please try again!", { position: 'top-center', autoClose: 3000, theme: 'colored' })
     }
 
     setSubmitted(true);
