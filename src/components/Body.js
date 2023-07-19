@@ -35,6 +35,8 @@ import AccessibilityPage from "../pages/Accessibility/Accessibility";
 import BookFormats from "../pages/BookFormats/BookFormats";
 import GenreDetails from "../pages/GenreDetails/GenreDetails";
 import BookAwards from "../pages/Awards/BookAwards";
+import Login from "../pages/Login/Login";
+import SignUp from "../pages/SignUp/SignUp";
 
 function Body(props) {
 
@@ -69,6 +71,8 @@ function Body(props) {
           <Route path="/join" element={<Join />} />
           <Route path="/develop" element={<Develop />} />
           <Route path="/addBooks" element={<AddBooks theme={props.theme} />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
           <Route
             path="/publishers"
             element={<PublishersPage theme={props.theme} />}

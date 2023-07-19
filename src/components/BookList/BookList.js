@@ -13,6 +13,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import SwiperCore,{ Autoplay, Pagination, Navigation } from "swiper";
+import { Quotes, categories } from "./BookData";
 
 export default function BookList(props) {
   const [books, setBooks] = useState([]);
@@ -115,89 +116,20 @@ export default function BookList(props) {
           Select Categories
         </div>
         <div className="hypertext-links">
-         <div>
-         <a href="#" className="link">
-            Art
-          </a>
-          <a href="#" className="link">
-            Biography
-          </a>
-          <a href="#" className="link">
-            Business
-          </a>
-          <a href="#" className="link">
-            Children's
-          </a>
-          <a href="#" className="link">
-            Classics
-          </a>
-          <a href="#" className="link">
-            Christian
-          </a>
+          {
+            categories.map((list,index) => {
+            return  <div key={index}>
+            {
+              list.map((category) =>{
+                    return <a href="#" key={category} className="link">
+                              {category}
+                            </a>
+                })
+              }
           </div>
-          
-          <div>
-         <a href="#" className="link">
-            Comics
-          </a>
-          <a href="#" className="link">
-          Cookbooks
-          </a>
-          <a href="#" className="link">
-          Ebooks
-          </a>
-          <a href="#" className="link">
-          Fantasy
-          </a>
-          <a href="#" className="link">
-          Fiction
-          </a>
-          <a href="#" className="link">
-           Novel
-          </a>
-          </div>
+            })
+          }
 
-          <div>
-         <a href="#" className="link">
-         History
-          </a>
-          <a href="#" className="link">
-          Horror
-          </a>
-          <a href="#" className="link">
-          Music
-          </a>
-          <a href="#" className="link">
-          Mystery
-          </a>
-          <a href="#" className="link">
-          Non-Fiction
-          </a>
-          <a href="#" className="link">
-          Poetry
-          </a>
-          </div>
-
-          <div>
-         <a href="#" className="link">
-         Psychology
-          </a>
-          <a href="#" className="link">
-          Prejudice
-          </a>
-          <a href="#" className="link">
-          Romance
-          </a>
-          <a href="#" className="link">
-          Science
-          </a>
-          <a href="#" className="link">
-          Thriller
-          </a>
-          <a href="#" className="link">
-          Universe
-          </a>
-          </div>
         </div>
 
         <div className="book-holder">
@@ -246,13 +178,28 @@ export default function BookList(props) {
             slidesPerView={3}
             spaceBetween={25}
             loop={true}
-            autoplay={true}
+            autoplay={false}
             pagination={{clickable: true,}}
             modules={[Pagination, Navigation, Autoplay]}
             className="mySwiper slide"
             >
 
             <div className="book_card-container" ref={cardContainerRef}>
+
+            {
+              Quotes.map((quote,i)=>{
+              return  <SwiperSlide key={i}>
+                <div className="book_card">
+                <div className={`book_card-content ${props.theme === "dark" ? "text-black" : ""}`}>
+                      <img loading='lazy' className="book_quote_img" src={quote.image} alt={quote.title} />
+                      <h4>- {quote.title}</h4>
+                      <p>"{quote.quote}"</p> 
+                    </div>
+                  </div>
+              </SwiperSlide>
+              })
+
+            }
 
               <SwiperSlide style={{backgroundColor: theme === 'dark' ? '#161313' : '#eff6ff',color: theme === 'dark' ? '#1857A0' : "black"}}>
                 <div className="book_card">
