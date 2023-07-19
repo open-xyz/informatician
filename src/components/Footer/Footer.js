@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import NewsLetter from "./NewsLetter/NewsLetter";
-// import  "./NewsLetter/NewsLetter.css"
 import { Link} from "react-router-dom";
 import { BsDiscord, BsGithub, BsTwitter } from "react-icons/bs";
 import "./Footer.css";
