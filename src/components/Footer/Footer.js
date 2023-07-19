@@ -82,13 +82,13 @@ const Footer = () => {
             </span>
             <div className="flex mt-0 space-x-6 sm:justify-center sm:mt-0 mr-14 2xl:mr-0">
               <Link to="/develop">
-                <BsTwitter className="w-6 h-6 transition-all duration-200 ease-in-out transform hover:scale-110" />
+                <BsTwitter className="w-6 h-6 transition-all duration-200 ease-in-out transform hover:scale-110 twitter" />
               </Link>
               <Link to="https://github.com/rohansx/informatician">
-                <BsGithub className="w-6 h-6 transition-all duration-200 ease-in-out transform hover:scale-110" />
+                <BsGithub className="w-6 h-6 transition-all duration-200 ease-in-out transform hover:scale-110 github" />
               </Link>
               <Link to="#">
-                <BsDiscord className="w-6 h-6 transition-all duration-200 ease-in-out transform hover:scale-110" />
+                <BsDiscord className="w-6 h-6 transition-all duration-200 ease-in-out transform hover:scale-110 discord" />
               </Link>
             </div>
           </div>
