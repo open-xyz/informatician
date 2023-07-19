@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import NewsLetter from "./NewsLetter/NewsLetter";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import { BsDiscord, BsGithub, BsTwitter } from "react-icons/bs";
 import "./Footer.css";
 import lightLogo from "../../assets/logos/light_logo.png";
@@ -25,7 +25,7 @@ const Footer = (props) => {
       <NewsLetter />
       <footer>
          <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-     <div className="footer_body">
+          <div className="footer_body">
             <div className=" footer_main mb-6 md:mb-0">
               <Link to="/" onClick={scrollToTop} className="logo_img">
                 <img
