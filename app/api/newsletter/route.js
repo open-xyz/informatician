@@ -42,9 +42,11 @@ export const POST = async (req, res) => {
       from: `"" ${process.env.SENDEREMAIL}`,
       to: recipientEmails,
       subject: "New Enquiry",
-      html: result.map((book) => {
-        return `<h1>${book.name}</h1><p>${book.url}</p>`;
-      }).join(""),
+      html: result
+        .map((book) => {
+          return `<h1>${book.name}</h1><p>${book.url}</p>`;
+        })
+        .join(""),
     });
 
     res.json({ message: "Email sent successfully" });
