@@ -65,6 +65,15 @@ export default function NavItems(props) {
             Contact Us
           </Link>
         </li>
+        <li>
+          <Link
+            href="/login"
+            className={props.pathname === "/login" ? "active" : "dark:text-white"}
+            onClick={props.handleOptionClick}
+          >
+            LogIn
+          </Link>
+        </li>
 
         <li>
           <Link href="/bookmark">
