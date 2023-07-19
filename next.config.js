@@ -14,6 +14,7 @@ const nextConfig = {
       "s-f.scribdassets.com",
       "avatars.githubusercontent.com",
       "images.weserv.nl",
+      "img.icons8.com",
     ],
   },
   // webpack(config){
