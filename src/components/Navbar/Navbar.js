@@ -33,10 +33,7 @@ export default function Navbar(props) {
       style={{ background: props.theme === "dark" ? "#001229" : "#eff6ff" }}
     >
      
-      <Link to="/" className="logo">
-        < NavLink 
-        to="/home" className="home-button">
-        </NavLink>
+     <Link to="/" onClick={scrollToTop} className="logo">
         <img
           loading='lazy'
           src={themeImage}
