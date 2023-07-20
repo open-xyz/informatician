@@ -1,4 +1,4 @@
-import { checkAuth } from '../middleware/auth.middleware';
+const checkAuth = require("../middleware/auth.middlware");
 
 const express = require('express')
 const mailer  = require('nodemailer')

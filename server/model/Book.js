@@ -17,10 +17,6 @@ app.post('/validate-book', (req, res) => {
   return res.json({ message: 'Book is valid' });
 });
 
-app.listen(3000, () => {
-  console.log('Server is running on port 3000');
-});
-
 const bookSchema = new mongoose.Schema({
   bookName: {
     type: String,
