@@ -16,7 +16,7 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 import { Quotes, categories } from "./BookData";
 
 export default function BookList(props) {
- const [books, setBooks] = useState([]);
+  const [books, setBooks] = useState([]);
   const [searchQuery, setSerachQuery] = useState("");
   const [filteredBooks, setFilteredBooks] = useState([]);
   const cardContainerRef = useRef(null);
