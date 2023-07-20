@@ -14,15 +14,20 @@ const nextConfig = {
       "s-f.scribdassets.com",
       "avatars.githubusercontent.com",
       "images.weserv.nl",
+      "img.icons8.com",
+      "lit216.pbworks.com",
+      "laurencecoupe.co.uk",
+      "media.newyorker.com",
+      "images2.minutemediacdn.com",
+      "media.npr.org",
+      "ychef.files.bbci.co.uk",
+      "www.theparisreview.org",
+      "upload.wikimedia.org",
+
+
     ],
   },
-  // webpack(config){
-  //     config.experiments = {
-  //         ...config.experiments,
-  //         topLevelAwait:true
-  //     }
-  //     return config
-  // }
+  
 };
 
 module.exports = nextConfig
