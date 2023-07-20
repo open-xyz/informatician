@@ -5,12 +5,12 @@ import ScrollToTopButton from "../../components/ScrollButton/ScrollButton";
 import { searchBooks } from "../../utils/searchBooks";
 
 // Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
-import SwiperCore,{ Autoplay, Pagination, Navigation } from "swiper";
+import "swiper/css";
+import "swiper/css/pagination";
+import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper";
 
 export default function BookList(props) {
   const [books, setBooks] = useState([]);
@@ -34,19 +34,18 @@ export default function BookList(props) {
   //   }
   // }, [bookName]);
 
-  async function handleClick(e){
+  async function handleClick(e) {
     e.preventDefault();
-    try{
-      const result=await searchBooks(bookName)
-    
-    setBooks(result);
-  }catch(err){
-    console.log(err);
+    try {
+      const result = await searchBooks(bookName);
+
+      setBooks(result);
+    } catch (err) {
+      console.log(err);
+    }
   }
 
-  }
-
-/*   useEffect(() => {
+  /*   useEffect(() => {
     const cardContainer = cardContainerRef.current;
     cardWidthRef.current = cardContainer.offsetWidth / 4; // Divide by the number of cards to scroll at once
 
@@ -82,13 +81,69 @@ export default function BookList(props) {
   // const booksComponent = books.map((book) => (
   //   <Card name={book.name} author={book.author}></Card>
   // ));
+  const swipeDetails = {
+    slideOne: {
+      authorName: "Stephen King",
+      authorImage: "https://lit216.pbworks.com/f/1363869393/stephen%20king.jpg",
+      authorquote:
+        "If you don't have time to read, you don't have the time to write. Simple as that.",
+    },
+    slideTwo: {
+      authorName: "Jack Kerouac",
+      authorImage:
+        "http://laurencecoupe.co.uk/wp-content/uploads/2018/01/kerouac-picture.jpg",
+      authorquote:
+        "One day I will find the right words, and they will be simple.",
+    },
+    slideThree: {
+      authorName: "Saul Bellow",
+      authorImage:
+        "https://media.newyorker.com/photos/59096d586552fa0be682ff3d/master/w_1920,c_limit/Brody-Saul-Bellow-Film-Critic.jpg",
+      authorquote:
+        "You never have to change anything you got up in the middle of the night to write.",
+    },
+    slideFour: {
+      authorName: "Aldous Huxley",
+      authorImage:
+        "https://images2.minutemediacdn.com/image/upload/c_fill,w_1080,ar_16:9,f_auto,q_auto,g_auto/shape%2Fcover%2Fsport%2Fgettyimages-2665140-a1c77ccabe8660fb5123c8b6c5741316.jpg",
+      authorquote:
+        "Words can be like X-rays if you use them properly they'll go through anything. You read and you're pierced.",
+    },
+    slideFive: {
+      authorName: "Anne Frank",
+      authorImage:
+        "https://media.npr.org/assets/img/2015/03/13/ap070308060493-67009388c842c192821be288e72bbc06977b72ce-s400-c85.webp",
+      authorquote:
+        "I can shake off everything as I write; my sorrows disappear, my courage is reborn.",
+    },
+    slideSix: {
+      authorName: "Sylvia Plath",
+      authorImage: "https://ychef.files.bbci.co.uk/1600x900/p09pxt8c.webp",
+      authorquote: "Let me live, love, and say it well in good sentences.",
+    },
+    slideSeven: {
+      authorName: "John Steinbeck",
+      authorImage:
+        "https://www.theparisreview.org/il/c625e7c0b9/large/JohnSteinbeck-thumb.jpg",
+      authorquote:
+        "Ideas are like rabbits. You get a couple and learn how to handle them, and pretty soon you have a dozen.",
+    },
+    slideEight: {
+      authorName: "Madeleine L'Engle",
+      authorImage:
+        "https://upload.wikimedia.org/wikipedia/en/c/c9/Madeleine_lengle.jpg",
+      authorquote:
+        "You have to write the book that wants to be written & if the book will be too difficult for grown-ups, then you write it for children.",
+    },
+  };
 
   return (
     <>
-
       <div className="book-list-container">
         <h1 className="book-list-heading">Find your next learning adventure</h1>
-        <p className="smalltext">From Art to Universe , we have a lots of textbooks to offer you.</p>
+        <p className="smalltext">
+          From Art to Universe , we have a lots of textbooks to offer you.
+        </p>
 
         <form>
           <div className="searchbar">
@@ -99,11 +154,17 @@ export default function BookList(props) {
               placeholder="Title / Author / ISBN"
               required
             />
-           
+
             <button type="submit" id="search-button-2" onClick={handleClick}>
               <div className="search-icon">
-              <img loading='lazy' width="100" height="100" src="https://img.icons8.com/ios/100/search--v1.png" alt="Icon of a magnifying glass for search functionality"/>
-               </div>
+                <img
+                  loading="lazy"
+                  width="100"
+                  height="100"
+                  src="https://img.icons8.com/ios/100/search--v1.png"
+                  alt="Icon of a magnifying glass for search functionality"
+                />
+              </div>
             </button>
           </div>
         </form>
@@ -111,95 +172,93 @@ export default function BookList(props) {
           Select Categories
         </div>
         <div className="hypertext-links">
-         <div>
-         <a href="#" className="link">
-            Art
-          </a>
-          <a href="#" className="link">
-            Biography
-          </a>
-          <a href="#" className="link">
-            Business
-          </a>
-          <a href="#" className="link">
-            Children's
-          </a>
-          <a href="#" className="link">
-            Classics
-          </a>
-          <a href="#" className="link">
-            Christian
-          </a>
-          </div>
-          
           <div>
-         <a href="#" className="link">
-            Comics
-          </a>
-          <a href="#" className="link">
-          Cookbooks
-          </a>
-          <a href="#" className="link">
-          Ebooks
-          </a>
-          <a href="#" className="link">
-          Fantasy
-          </a>
-          <a href="#" className="link">
-          Fiction
-          </a>
-          <a href="#" className="link">
-           Novel
-          </a>
+            <a href="#" className="link">
+              Art
+            </a>
+            <a href="#" className="link">
+              Biography
+            </a>
+            <a href="#" className="link">
+              Business
+            </a>
+            <a href="#" className="link">
+              Children's
+            </a>
+            <a href="#" className="link">
+              Classics
+            </a>
+            <a href="#" className="link">
+              Christian
+            </a>
           </div>
 
           <div>
-         <a href="#" className="link">
-         History
-          </a>
-          <a href="#" className="link">
-          Horror
-          </a>
-          <a href="#" className="link">
-          Music
-          </a>
-          <a href="#" className="link">
-          Mystery
-          </a>
-          <a href="#" className="link">
-          Non-Fiction
-          </a>
-          <a href="#" className="link">
-          Poetry
-          </a>
+            <a href="#" className="link">
+              Comics
+            </a>
+            <a href="#" className="link">
+              Cookbooks
+            </a>
+            <a href="#" className="link">
+              Ebooks
+            </a>
+            <a href="#" className="link">
+              Fantasy
+            </a>
+            <a href="#" className="link">
+              Fiction
+            </a>
+            <a href="#" className="link">
+              Novel
+            </a>
           </div>
 
           <div>
-         <a href="#" className="link">
-         Psychology
-          </a>
-          <a href="#" className="link">
-          Prejudice
-          </a>
-          <a href="#" className="link">
-          Romance
-          </a>
-          <a href="#" className="link">
-          Science
-          </a>
-          <a href="#" className="link">
-          Thriller
-          </a>
-          <a href="#" className="link">
-          Universe
-          </a>
+            <a href="#" className="link">
+              History
+            </a>
+            <a href="#" className="link">
+              Horror
+            </a>
+            <a href="#" className="link">
+              Music
+            </a>
+            <a href="#" className="link">
+              Mystery
+            </a>
+            <a href="#" className="link">
+              Non-Fiction
+            </a>
+            <a href="#" className="link">
+              Poetry
+            </a>
+          </div>
+
+          <div>
+            <a href="#" className="link">
+              Psychology
+            </a>
+            <a href="#" className="link">
+              Prejudice
+            </a>
+            <a href="#" className="link">
+              Romance
+            </a>
+            <a href="#" className="link">
+              Science
+            </a>
+            <a href="#" className="link">
+              Thriller
+            </a>
+            <a href="#" className="link">
+              Universe
+            </a>
           </div>
         </div>
 
-
-
         {/* <span className="book-list-title text-center">Book List</span> */}
-        
+
         {/* {
           books.length === 0 ?
             <div className={`flex items-center justify-center h-[53vh] bg-${props.theme} px-20`}>
@@ -222,106 +281,176 @@ export default function BookList(props) {
             </div>
         } */}
 
-
-      <h3 id="sub-head">Quotes</h3>
+        <h3 id="sub-head">Quotes</h3>
 
         <div className="carousel">
-
-          <Swiper 
+          <Swiper
             slidesPerView={3}
             spaceBetween={25}
             loop={true}
             autoplay={true}
-            pagination={{clickable: true,}}
+            pagination={{ clickable: true }}
             modules={[Pagination, Navigation, Autoplay]}
-            className="mySwiper slide">
-
+            className="mySwiper slide"
+          >
             <div className="book_card-container" ref={cardContainerRef}>
-
               <SwiperSlide>
                 <div className="book_card">
-                <div className={`book_card-content ${props.theme === "dark" ? "text-black" : ""}`}>
-                      <img loading='lazy' className="book_quote_img" src="https://lit216.pbworks.com/f/1363869393/stephen%20king.jpg" alt="Stephen King" />
-                      <h4>- Stephen King</h4>
-                      <p>"If you don't have time to read, you don't have the time to write. Simple as that."</p> 
-                    </div>
-                  </div>
-              </SwiperSlide>
-        
-              <SwiperSlide>
-                <div className="book_card">
-                <div className={`book_card-content ${props.theme === "dark" ? "text-black" : ""}`}>
-                      <img loading='lazy' className="book_quote_img" src="http://laurencecoupe.co.uk/wp-content/uploads/2018/01/kerouac-picture.jpg" alt="Jack Kerouac" />
-                      <h4>- Jack Kerouac</h4>
-                        <p>"One day I will find the right words, and they will be simple."</p>
-                    </div>
-                </div>
-              </SwiperSlide>
-
-              <SwiperSlide> 
-                <div className="book_card">
-                <div className={`book_card-content ${props.theme === "dark" ? "text-black" : ""}`}>
-                    <img loading='lazy' className="book_quote_img" style={{width:'150px'}}  src="https://media.newyorker.com/photos/59096d586552fa0be682ff3d/master/w_1920,c_limit/Brody-Saul-Bellow-Film-Critic.jpg" alt="Saul Bellow" />
-                    <h4>- Saul Bellow</h4>
-                    <p>"You never have to change anything you got up in the middle of the night to write."</p>
+                  <div
+                    className={`book_card-content ${
+                      props.theme === "dark" ? "text-black" : ""
+                    }`}
+                  >
+                    <img
+                      loading="lazy"
+                      className="book_quote_img"
+                      src={swipeDetails.slideOne.authorImage}
+                      alt={swipeDetails.slideOne.authorName}
+                    />
+                    <h4>-{swipeDetails.slideOne.authorName}</h4>
+                    <p>{swipeDetails.slideOne.authorquote}</p>
                   </div>
                 </div>
               </SwiperSlide>
 
               <SwiperSlide>
                 <div className="book_card">
-                <div className={`book_card-content ${props.theme === "dark" ? "text-black" : ""}`}>
-                    <img loading='lazy' className="book_quote_img" src="https://images2.minutemediacdn.com/image/upload/c_fill,w_1080,ar_16:9,f_auto,q_auto,g_auto/shape%2Fcover%2Fsport%2Fgettyimages-2665140-a1c77ccabe8660fb5123c8b6c5741316.jpg" alt="Aldous Huxley" />
-                    <h4>- Aldous Huxley</h4>
-                      <p>"Words can be like X-rays if you use them properly they'll go through anything. You read and you're pierced."</p>
+                  <div
+                    className={`book_card-content ${
+                      props.theme === "dark" ? "text-black" : ""
+                    }`}
+                  >
+                    <img
+                      loading="lazy"
+                      className="book_quote_img"
+                      src={swipeDetails.slideTwo.authorImage}
+                      alt={swipeDetails.slideTwo.authorName}
+                    />
+                    <h4>- {swipeDetails.slideTwo.authorName}</h4>
+                    <p>{swipeDetails.slideTwo.authorquote}</p>
                   </div>
                 </div>
               </SwiperSlide>
 
               <SwiperSlide>
                 <div className="book_card">
-                <div className={`book_card-content ${props.theme === "dark" ? "text-black" : ""}`}>
-                    <img loading='lazy' className="book_quote_img" src="https://media.npr.org/assets/img/2015/03/13/ap070308060493-67009388c842c192821be288e72bbc06977b72ce-s400-c85.webp" alt="Anne Frank" />
-                    <h4>- Anne Frank</h4>
-                      <p>"I can shake off everything as I write; my sorrows disappear, my courage is reborn."</p>
+                  <div
+                    className={`book_card-content ${
+                      props.theme === "dark" ? "text-black" : ""
+                    }`}
+                  >
+                    <img
+                      loading="lazy"
+                      className="book_quote_img"
+                      style={{ width: "150px" }}
+                      src={swipeDetails.slideThree.authorImage}
+                      alt={swipeDetails.slideThree.authorName}
+                    />
+                    <h4>- {swipeDetails.slideThree.authorName}</h4>
+                    <p>{swipeDetails.slideThree.authorquote}</p>
                   </div>
                 </div>
               </SwiperSlide>
 
-              <SwiperSlide> 
-                <div className="book_card">
-                <div className={`book_card-content ${props.theme === "dark" ? "text-black" : ""}`}>
-                    <img loading='lazy' className="book_quote_img" src="https://ychef.files.bbci.co.uk/1600x900/p09pxt8c.webp" alt="Sylvia Plath" />
-                    <h4>- Sylvia Plath</h4>
-                      <p>"Let me live, love, and say it well in good sentences."</p>       
-                  </div>          
-                </div>
-            </SwiperSlide>
-
               <SwiperSlide>
                 <div className="book_card">
-                <div className={`book_card-content ${props.theme === "dark" ? "text-black" : ""}`}>
-                    <img loading='lazy' className="book_quote_img" src="https://www.theparisreview.org/il/c625e7c0b9/large/JohnSteinbeck-thumb.jpg" alt="John Steinbeck" />
-                    <h4>- John Steinbeck</h4>
-                      <p>"Ideas are like rabbits. You get a couple and learn how to handle them, and pretty soon you have a dozen."</p>                
-                  </div>           
+                  <div
+                    className={`book_card-content ${
+                      props.theme === "dark" ? "text-black" : ""
+                    }`}
+                  >
+                    <img
+                      loading="lazy"
+                      className="book_quote_img"
+                      src={swipeDetails.slideFour.authorImage}
+                      alt={swipeDetails.slideFour.authorName}
+                    />
+                    <h4>- {swipeDetails.slideFour.authorName}</h4>
+                    <p>{swipeDetails.slideFour.authorquote}</p>
+                  </div>
                 </div>
               </SwiperSlide>
 
-                  <SwiperSlide>
-                    <div className="book_card">
-                    <div className={`book_card-content ${props.theme === "dark" ? "text-black" : ""}`}>
-                        <img loading='lazy' className="book_quote_img" style={{width:'150px'}} src="https://upload.wikimedia.org/wikipedia/en/c/c9/Madeleine_lengle.jpg" alt="Madeleine L'Engle" />
-                        <h4>- Madeleine L'Engle</h4>
-                          <p>"You have to write the book that wants to be written & if the book will be too difficult for grown-ups, then you write it for children."</p>             
-                      </div>
-                    </div>
-                </SwiperSlide>
-          </div>
-        </Swiper>
-            
+              <SwiperSlide>
+                <div className="book_card">
+                  <div
+                    className={`book_card-content ${
+                      props.theme === "dark" ? "text-black" : ""
+                    }`}
+                  >
+                    <img
+                      loading="lazy"
+                      className="book_quote_img"
+                      src={swipeDetails.slideFive.authorImage}
+                      alt={swipeDetails.slideFive.authorName}
+                    />
+                    <h4>- {swipeDetails.slideFive.authorName}</h4>
+                    <p>{swipeDetails.slideFive.authorquote}</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+
+              <SwiperSlide>
+                <div className="book_card">
+                  <div
+                    className={`book_card-content ${
+                      props.theme === "dark" ? "text-black" : ""
+                    }`}
+                  >
+                    <img
+                      loading="lazy"
+                      className="book_quote_img"
+                      src={swipeDetails.slideSix.authorImage}
+                      alt={swipeDetails.slideSix.authorName}
+                    />
+                    <h4>- {swipeDetails.slideSix.authorName}</h4>
+                    <p>{swipeDetails.slideSix.authorquote}</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+
+              <SwiperSlide>
+                <div className="book_card">
+                  <div
+                    className={`book_card-content ${
+                      props.theme === "dark" ? "text-black" : ""
+                    }`}
+                  >
+                    <img
+                      loading="lazy"
+                      className="book_quote_img"
+                      src={swipeDetails.slideSeven.authorImage}
+                      alt={swipeDetails.slideSeven.authorName}
+                    />
+                    <h4>- {swipeDetails.slideSeven.authorName}</h4>
+                    <p>{swipeDetails.slideSeven.authorquote}</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+
+              <SwiperSlide>
+                <div className="book_card">
+                  <div
+                    className={`book_card-content ${
+                      props.theme === "dark" ? "text-black" : ""
+                    }`}
+                  >
+                    <img
+                      loading="lazy"
+                      className="book_quote_img"
+                      style={{ width: "150px" }}
+                      src={swipeDetails.slideEight.authorImage}
+                      alt={swipeDetails.slideEight.authorName}
+                    />
+                    <h4>- {swipeDetails.slideEight.authorName}</h4>
+                    <p>{swipeDetails.slideEight.authorquote}</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+            </div>
+          </Swiper>
+        </div>
       </div>
-    </div>
 
       {/* </div> */}
       <ScrollToTopButton />
