@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { ToastContainer,toast } from "react-toastify";
 import signupIMG from "../../assets/signup.jpg";
 import GoogleLogo from "../../assets/googleLogo.png";
+import validate from "../../utils/validation";
 
 const SignUp = () => {
   let navigate = useNavigate();
@@ -13,38 +15,35 @@ const SignUp = () => {
     pass: "",
     confirmPass: "",
   });
-  const [error, setError] = useState("");
+  const [error, setError] = useState({});
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setUser((prev) => ({ ...prev, [name]: value }));
+    let errObj = validate[name](value);
+    if(name === "confirmPass") errObj = validate.confirmPass(value, user.pass);
+    setError((prev)=>{
+      return {...prev, ...errObj}
+    })
   };
 
   const signup = (e) => {
     e.preventDefault();
-
-    if (!user.fName) {
-      setError("First Name is Required!");
-      return;
-    } else if (!user.lName) {
-      setError("Last Name is Required!");
-      return;
-    } else if (!user.userName) {
-      setError("Username is Required!");
-      return;
-    } else if (!user.email) {
-      setError("Email is Required!");
-      return;
-    } else if (!user.pass) {
-      setError("Password is Required!");
-      return;
-    } else if (!user.confirmPass) {
-      setError("Please confirm your Password!");
+    let submitable = true;
+   Object.values(error).forEach((e)=>{
+    if(e !== false){
+      submitable = false;
       return;
     }
+   })
 
-    setError("");
+   if(submitable){
+    //  Write submission code here
+    setError({});
     navigate("/");
+   }else{
+    toast.error("Please fill all fields with valid data.")
+   }
   };
 
   return (
@@ -56,7 +55,7 @@ const SignUp = () => {
 
       {/* Signup Form */}
       <div className="md:w-1/2 mx-auto">
-        <form className="lg:w-[80%] flex flex-col items-start p-4 px-6 mx-auto gap-2 text-lg">
+        <form className="lg:w-[80%] flex flex-col items-start p-4 px-6 mx-auto gap-2 text-lg" onSubmit={signup}>
           {/* Heading */}
           <h2 className="mx-auto mb-4 text-2xl md:text-3xl font-bold text-indigo-600">
             Signup to Informatician
@@ -74,10 +73,9 @@ const SignUp = () => {
           </div>
 
           {/* Show error */}
-          {error && <div className="text-red-600">{error}</div>}
 
           {/* First name input */}
-          <div className="w-full flex flex-row items-center justify-between gap-8">
+          <div className="w-full flex flex-row items-start justify-between gap-8">
             <div className="flex flex-col items-start gap-2">
               <label htmlFor="fName">First Name</label>
               <input
@@ -85,8 +83,16 @@ const SignUp = () => {
                 name="fName"
                 value={user.fName}
                 onChange={handleChange}
-                className="w-[100%] bg-slate-100 py-2 px-4 focus:outline-indigo-500"
+                className={
+                  (
+                   error.fNameError === false
+                  )
+                    ? "w-[100%] bg-slate-100 py-2 px-4 focus:outline-green-500"
+                    : "w-[100%] bg-slate-100 py-2 px-4 focus:outline-red-500"
+                }
+                required
               />
+              {error.fName && error.fNameError && <p className="block text-start text-red-600 text-xs w-[200px]">{error.fNameError}</p>}
             </div>
             {/* Last name input */}
             <div className="flex flex-col items-start gap-2">
@@ -96,8 +102,16 @@ const SignUp = () => {
                 name="lName"
                 value={user.lName}
                 onChange={handleChange}
-                className="w-[100%] bg-slate-100 py-2 px-4 focus:outline-indigo-500"
+                className={
+                  (
+                   error.lNameError === false
+                  )
+                    ? "w-[100%] bg-slate-100 py-2 px-4 focus:outline-green-500"
+                    : "w-[100%] bg-slate-100 py-2 px-4 focus:outline-red-500"
+                }
+                required
               />
+              {error.lName && error.lNameError && <p className="text-start text-red-600 text-xs w-[200px]">{error.lNameError}</p>}
             </div>
           </div>
           {/* Username input */}
@@ -108,8 +122,16 @@ const SignUp = () => {
               name="userName"
               value={user.userName}
               onChange={handleChange}
-              className="w-[100%] bg-slate-100 py-2 px-4 focus:outline-indigo-500"
+              className={
+                  (
+                   error.userNameError === false
+                  )
+                    ? "w-[100%] bg-slate-100 py-2 px-4 focus:outline-green-500"
+                    : "w-[100%] bg-slate-100 py-2 px-4 focus:outline-red-500"
+                }
+              required
             />
+            {error.userName && error.userNameError && <p className="text-red-600 text-xs">{error.userNameError}</p>}
           </div>
           {/* Email input */}
           <div className="w-full flex flex-col items-start gap-2">
@@ -119,11 +141,19 @@ const SignUp = () => {
               name="email"
               value={user.email}
               onChange={handleChange}
-              className="w-[100%] bg-slate-100 py-2 px-4 focus:outline-indigo-500"
+              className={
+                  (
+                   error.emailError === false
+                  )
+                    ? "w-[100%] bg-slate-100 py-2 px-4 focus:outline-green-500"
+                    : "w-[100%] bg-slate-100 py-2 px-4 focus:outline-red-500"
+                }
+              required={true}
             />
+            {error.email && error.emailError && <p className="text-red-600 text-xs">{error.emailError}</p>}
           </div>
           {/* Password input */}
-          <div className="w-full flex flex-row items-center justify-between gap-8">
+          <div className="w-full flex flex-row items-start justify-between gap-8">
             <div className="flex flex-col items-start gap-2">
               <label htmlFor="pass">Create Password</label>
               <input
@@ -131,8 +161,16 @@ const SignUp = () => {
                 name="pass"
                 value={user.pass}
                 onChange={handleChange}
-                className="w-[100%] bg-slate-100 py-2 px-4 focus:outline-indigo-500"
+                className={
+                  (
+                   error.passError === false
+                  )
+                    ? "w-[100%] bg-slate-100 py-2 px-4 focus:outline-green-500"
+                    : "w-[100%] bg-slate-100 py-2 px-4 focus:outline-red-500"
+                }
+                required
               />
+                 {error.pass && error.passError && <p className="text-red-600 text-start text-xs w-[200px]">{error.passError}</p>}
             </div>
             {/* Confirm password input */}
             <div className="flex flex-col items-start gap-2">
@@ -143,22 +181,21 @@ const SignUp = () => {
                 value={user.confirmPass}
                 onChange={handleChange}
                 className={
-                  !(
-                    user.confirmPass.length === 0 &&
-                    user.confirmPass === user.pass
+                  (
+                   error.confirmPassError === false
                   )
                     ? "w-[100%] bg-slate-100 py-2 px-4 focus:outline-green-500"
                     : "w-[100%] bg-slate-100 py-2 px-4 focus:outline-red-500"
                 }
+                required
               />
+                 {error.confirmPass && error.confirmPassError && <p className="text-red-600 text-start text-xs w-[200px]">{error.confirmPassError}</p>}
             </div>
           </div>
 
           {/* Signup button */}
-          <button
-            className="w-full my-4 bg-indigo-600 px-4 py-2 rounded-md text-lg text-white hover:bg-indigo-800 duration-200 ease-out "
-            onClick={signup}
-          >
+          <button type="submit"
+            className="w-full my-4 bg-indigo-600 px-4 py-2 rounded-md text-lg text-white hover:bg-indigo-800 duration-200 ease-out ">
             Signup
           </button>
 
@@ -175,6 +212,7 @@ const SignUp = () => {
             </div>
           </div>
         </form>
+        <ToastContainer />
       </div>
     </div>
   );

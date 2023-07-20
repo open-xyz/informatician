@@ -112,9 +112,9 @@ export default function BkCards(props) {
                 }}
               >
                 <GhostPrevButton refprop={prevButton} />
-                {Books.map((book) => {
+                {Books.map((book, index) => {
                   return (
-                    <SwiperSlide>
+                    <SwiperSlide key={index}>
                       <Link to={`/books/${book.id}`}>
                         <CardContent
                           className="columnn"
