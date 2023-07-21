@@ -176,7 +176,7 @@ const SignUp = () => {
                 }
                 required
               />
-              <FontAwesomeIcon icon={showPass1?faEye:faEyeSlash} onClick={()=>setShowPass1(!showPass1)} className="absolute top-4 right-2"/>
+              <FontAwesomeIcon icon={showPass1?faEye:faEyeSlash} onClick={()=>setShowPass1(!showPass1)} className="absolute top-4 right-2 cursor-pointer"/>
               </div>
                  {error.pass && error.passError && <p className="text-red-600 text-start text-xs w-[200px]">{error.passError}</p>}
             </div>
@@ -198,7 +198,7 @@ const SignUp = () => {
                 }
                 required
               />
-              <FontAwesomeIcon icon={showPass2?faEye:faEyeSlash} onClick={()=>setShowPass2(!showPass2)} className="absolute top-4 right-2"/>
+              <FontAwesomeIcon icon={showPass2?faEye:faEyeSlash} onClick={()=>setShowPass2(!showPass2)} className="absolute top-4 right-2 cursor-pointer"/>
               </div>
                  {error.confirmPass && error.confirmPassError && <p className="text-red-600 text-start text-xs w-[200px]">{error.confirmPassError}</p>}
             </div>

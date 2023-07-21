@@ -104,7 +104,7 @@ const Login = () => {
                 }
                 required
             />
-            <FontAwesomeIcon icon={showPass? faEye: faEyeSlash} className="absolute top-4 right-2" onClick={()=>setShowPass(!showPass)}/>
+            <FontAwesomeIcon icon={showPass? faEye: faEyeSlash} className="absolute top-4 right-2 cursor-pointer" onClick={()=>setShowPass(!showPass)}/>
             </div>
              {error.pass && error.passError && <p className="text-red-600 text-start text-xs">{error.passError}</p>}
           </div>
