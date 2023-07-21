@@ -1,6 +1,3 @@
-import React from 'react';
-// import './science.css'; // Import the CSS file for styling
-
 function science() {
   return (
     <div className="container">
