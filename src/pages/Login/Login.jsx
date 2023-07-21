@@ -4,6 +4,8 @@ import loginIMG from "../../assets/login.jpg";
 import GoogleLogo from "../../assets/googleLogo.png";
 import validate from "../../utils/validation";
 import { ToastContainer,toast } from "react-toastify";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye, faEyeSlash } from "@fortawesome/free-regular-svg-icons";
 
 const Login = () => {
   let navigate = useNavigate();
@@ -12,6 +14,7 @@ const Login = () => {
     pass: "",
   });
   const [error, setError] = useState({});
+  const [showPass, setShowPass] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -86,8 +89,9 @@ const Login = () => {
           {/* Password input */}
           <div className="w-full flex flex-col items-start gap-2">
             <label htmlFor="pass">Your Password</label>
+            <div className="relative w-[100%]">
             <input
-              type="password"
+              type={showPass? "text":"password"}
               name="pass"
               value={user.pass}
               onChange={handleChange}
@@ -100,6 +104,8 @@ const Login = () => {
                 }
                 required
             />
+            <FontAwesomeIcon icon={showPass? faEye: faEyeSlash} className="absolute top-4 right-2 cursor-pointer" onClick={()=>setShowPass(!showPass)}/>
+            </div>
              {error.pass && error.passError && <p className="text-red-600 text-start text-xs">{error.passError}</p>}
           </div>
 
