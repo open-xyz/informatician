@@ -1,11 +1,20 @@
-const checkAuth = require("../middleware/auth.middlware");
+const  checkAuth  =require('../middleware/auth.middlware');
 
 const express = require('express')
 const mailer  = require('nodemailer')
 const mailRouter = express.Router()
 const dotenv  = require('dotenv').config()
+const rateLimiter = require("express-rate-limit");
 
-mailRouter.post('/', checkAuth, (req, res) => {
+// Apply rate limiting middleware
+const limiter = rateLimiter({
+  windowMs: 60 * 1000, // 1 minute
+  max: 100, // Limit each IP for 100 requests every minute
+  message: "Rate limit exceeded, At the moment we only allow 100 requests per minute",
+});
+const router = require('express').Router();
+
+mailRouter.post('/', checkAuth, limiter ,(req, res) => {
     console.log(req.body)
     var transporter = mailer.createTransport({
         service: 'gmail',
