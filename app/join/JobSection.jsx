@@ -1,3 +1,5 @@
+import positionsData from "@/utils/join/positionsData";
+
 export default function JobSection() {
     return (
         <section className="px-8 py-14 space-y-20 max-w-5xl mx-auto">
@@ -12,7 +14,7 @@ export default function JobSection() {
                 </p>
             </div>
             <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center">
-                {positions.map((position, index) => (
+                {positionsData.map((position, index) => (
                     <li
                         key={index}
                         className="border dark:border-2 border-gray-300 p-2 rounded-xl shadow-md shadow-slate-800/70 max-w-sm w-full h-full"
@@ -29,35 +31,3 @@ export default function JobSection() {
         </section>
     );
 }
-
-// Define an array of positions for better code organization
-const positions = [
-    {
-        title: "Data Science & Machine Learning",
-        count: 3,
-    },
-    {
-        title: "Product, Designs, & Analytics",
-        count: 2,
-    },
-    {
-        title: "People",
-        count: 0,
-    },
-    {
-        title: "Engineering",
-        count: 2,
-    },
-    {
-        title: "Marketing",
-        count: 3,
-    },
-    {
-        title: "Finance and Operations",
-        count: 5,
-    },
-    {
-        title: "Content Acquisition",
-        count: 1,
-    },
-];

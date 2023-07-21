@@ -1,22 +1,6 @@
 import Image from "next/image";
 import quotationmark from "@/public/assets/join/quotationmark.webp";
-
-const employees = [
-    {
-        name: "Rohan Sharma",
-        imageSrc:
-            "https://avatars.githubusercontent.com/u/33249782?v=4",
-        testimonial:
-            "The vibrant and dynamic environment fosters creativity and innovation. Being part of a talented team that is passionate about improving access to knowledge and reading has been incredibly fulfilling.",
-    },
-    {
-        name: "Deepak",
-        imageSrc:
-            "https://images.weserv.nl/?output=webp&url=https://avatars.githubusercontent.com/u/96341431?v=4",
-        testimonial:
-            "If you're motivated and persistent, your impact will definitely be felt by the company. There is nothing more rewarding than seeing your hard work turned into something fruitful that directly helps the company.",
-    },
-];
+import employeesData from "@/utils/join/employeeData";
 
 export default function Employee() {
     return (
@@ -32,7 +16,7 @@ export default function Employee() {
             </div>
             <div className="flex justify-center items-center">
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-10 md:max-w-3xl">
-                    {employees.map((employee, index) => (
+                    {employeesData.map((employee, index) => (
                         <li
                             key={index}
                             className="border-2 rounded-2xl p-4 hover:scale-105 ease-in-out transition-transform flex flex-col items-center max-w-md"
