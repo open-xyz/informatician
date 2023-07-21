@@ -12,7 +12,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
-import SwiperCore,{ Autoplay, Pagination, Navigation } from "swiper";
+import { Autoplay, Pagination, Navigation } from "swiper";
 import { Quotes, categories } from "./BookData";
 
 export default function BookList(props) {
@@ -88,6 +88,17 @@ export default function BookList(props) {
   // const booksComponent = books.map((book) => (
   //   <Card name={book.name} author={book.author}></Card>
   // ));
+
+
+  const handleCopyToClipboard = (quoteText) => {
+    const textArea = document.createElement('textarea');
+    textArea.value = quoteText;
+    document.body.appendChild(textArea);
+    textArea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textArea);
+    alert('Quote copied to clipboard!');
+  };
 
   return (
     <>
@@ -193,7 +204,7 @@ export default function BookList(props) {
                 <div className={`book_card-content ${props.theme === "dark" ? "text-black" : ""}`}>
                       <img loading='lazy' className="book_quote_img" src={quote.image} alt={quote.title} />
                       <h4>- {quote.title}</h4>
-                      <p>"{quote.quote}"</p> 
+                      <p onClick={() => handleCopyToClipboard(quote.quote)}>"{quote.quote}" <br/><i className="fas fa-copy"></i></p>
                     </div>
                   </div>
               </SwiperSlide>
