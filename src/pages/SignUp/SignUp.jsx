@@ -4,6 +4,8 @@ import { ToastContainer,toast } from "react-toastify";
 import signupIMG from "../../assets/signup.jpg";
 import GoogleLogo from "../../assets/googleLogo.png";
 import validate from "../../utils/validation";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye, faEyeSlash } from "@fortawesome/free-regular-svg-icons";
 
 const SignUp = () => {
   let navigate = useNavigate();
@@ -16,6 +18,9 @@ const SignUp = () => {
     confirmPass: "",
   });
   const [error, setError] = useState({});
+  const [showPass1, setShowPass1] = useState(false);
+  const [showPass2, setShowPass2] = useState(false);
+
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -154,10 +159,11 @@ const SignUp = () => {
           </div>
           {/* Password input */}
           <div className="w-full flex flex-row items-start justify-between gap-8">
-            <div className="flex flex-col items-start gap-2">
+            <div className="flex flex-col items-start gap-2 relative">
               <label htmlFor="pass">Create Password</label>
+              <div className="relative">
               <input
-                type="password"
+                type={showPass1? "text": "password"}
                 name="pass"
                 value={user.pass}
                 onChange={handleChange}
@@ -170,13 +176,16 @@ const SignUp = () => {
                 }
                 required
               />
+              <FontAwesomeIcon icon={showPass1?faEye:faEyeSlash} onClick={()=>setShowPass1(!showPass1)} className="absolute top-4 right-2"/>
+              </div>
                  {error.pass && error.passError && <p className="text-red-600 text-start text-xs w-[200px]">{error.passError}</p>}
             </div>
             {/* Confirm password input */}
             <div className="flex flex-col items-start gap-2">
               <label htmlFor="confirmPass">Confirm Password</label>
+              <div className="relative">
               <input
-                type="password"
+                type={showPass2? "text": "password"}
                 name="confirmPass"
                 value={user.confirmPass}
                 onChange={handleChange}
@@ -189,6 +198,8 @@ const SignUp = () => {
                 }
                 required
               />
+              <FontAwesomeIcon icon={showPass2?faEye:faEyeSlash} onClick={()=>setShowPass2(!showPass2)} className="absolute top-4 right-2"/>
+              </div>
                  {error.confirmPass && error.confirmPassError && <p className="text-red-600 text-start text-xs w-[200px]">{error.confirmPassError}</p>}
             </div>
           </div>
