@@ -1,8 +1,13 @@
 'use client'
-import React, { useState, useRef } from "react";
-// import "./BookList.css";
+import React, { useState } from "react";
 import ScrollToTopButton from "@/components/ScrollButton/ScrollButton";
 import Books from "@/utils/Books"
+
+import Image from "next/image";
+import { Quotes, categories } from "@/utils/bookData";
+import { MdOutlineContentCopy } from "react-icons/md";
+import BookCards from "@/components/BkCards/CardContent/CardContent";
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -10,12 +15,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper";
-
-import Image from "next/image";
-import { Quotes, categories } from "@/utils/bookData";
-import { MdOutlineContentCopy } from "react-icons/md";
-import BookCards from "@/components/BkCards/CardContent/CardContent";
-
 SwiperCore.use([Autoplay, Pagination, Navigation]);
 
 export default function BookList(props) {
