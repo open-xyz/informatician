@@ -24,10 +24,16 @@ export default function Navbar(props) {
     scrollToTop();
   };
   const search = async (e) => {
+    const query = e.target.value.trim(); // Remove leading/trailing whitespace from the query
+    if (query === "") {
+      setBooks([]); // Clear the books state to hide search results
+      return; // Return early if there's no query
+    }
+    
     try {
       console.log("called");
-      const result = await searchBooks(e.target.value);
-      result.length > 0 && setBooks(result.slice(0, 5));
+      const result = await searchBooks(query);
+      result.length > 0 ? setBooks(result.slice(0, 5)) : setBooks([]); // Update books state based on the search result
     } catch (err) {
       throw err;
     }
