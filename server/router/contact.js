@@ -14,8 +14,10 @@ const limiter = rateLimiter({
 });
 const router = require('express').Router();
 
-mailRouter.post('/', checkAuth, limiter ,(req, res) => {
+mailRouter.post('/',  limiter ,(req, res) => {
     console.log(req.body)
+    console.log("EMAIL:",process.env.GMAIL)
+    console.log("PASSWORD:",process.env.GOOGLEAPPPASSWORD)
     var transporter = mailer.createTransport({
         service: 'gmail',
         auth: {
@@ -29,15 +31,21 @@ mailRouter.post('/', checkAuth, limiter ,(req, res) => {
         to: process.env.GMAIL,
         subject: "Contact Request",
         html: `
-        <div style="padding:10px;border-style: ridge">
-        <p>You have a new contact request.</p>
-        <h3>Contact Details</h3>
-        <ul>
-            <li>Name: ${req.body.name}</li>
-            <li>Email: ${req.body.email}</li>
-            <li>Subject: Contact Request </li>
-            <li>Message: ${req.body.message}</li>
-        </ul>
+        <div style="font-family: Arial, sans-serif; line-height: 1.6; background-color: #f3f3f3; padding: 20px;">
+        <p style="color: #555; font-size: 18px;">You have a new contact request.</p>
+        <h3 style="color: #007BFF;">Contact Details</h3>
+        <div style="max-width: 600px; margin: 0 auto; padding: 20px; background-color: #fff; border: 2px solid #ccc; border-radius: 10px;">
+          <p style="font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; color: #007bff;">Name:</p>
+          <p style="font-family: Verdana, sans-serif; font-size: 16px; color: #ff5733;">${req.body.name}</p>
+          <p style="font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; color: #007bff;">Email:</p>
+          <p style="font-family: Verdana, sans-serif; font-size: 16px; color: #ff5733;">${req.body.email}</p>
+         
+          <p style="font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; color: #007bff;">Message:</p>
+          <p style="font-family: Verdana, sans-serif; font-size: 16px; color: #ff5733;">${req.body.message}</p>
+        </div>
+      </div>
+    
+    
         `
     }
 
