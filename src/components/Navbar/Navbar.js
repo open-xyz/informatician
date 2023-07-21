@@ -67,11 +67,11 @@ export default function Navbar(props) {
             </button>
           </form>
           <div className="w-98 bg-gray-100 absolute mx-auto p-2 rounded-md shadow-lg">
-  {books.length > 0 &&
-    books.map((book, index) => (
+          {books.length > 0 &&
+  books.map((book, index) => (
+    <Link to={book?.selfLink} key={index} className="hover:no-underline">
       <div
         className="flex items-center p-2 border-b-2 my-1 transition duration-200 hover:bg-gray-300 cursor-pointer"
-        key={index}
       >
         <img
           src={book?.volumeInfo.imageLinks?.thumbnail || "placeholder.png"}
@@ -87,7 +87,8 @@ export default function Navbar(props) {
           </p>
         </div>
       </div>
-    ))}
+    </Link>
+  ))}
 </div>
 
 

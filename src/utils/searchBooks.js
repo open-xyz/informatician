@@ -29,6 +29,7 @@ export const searchBooks = async (bookName) => {
   try {
     const response = await axios.get(baseURL);
     const result = response.data.items;
+    console.log(result);
     return result || [];
   } catch (err) {
     throw new Error(`Error searching for books: ${err}`);
