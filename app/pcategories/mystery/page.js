@@ -1,6 +1,3 @@
-import React from 'react';
-// import './mystery.css'; // Import the CSS file for styling
-
 function mystery() {
   return (
     <div className="container">

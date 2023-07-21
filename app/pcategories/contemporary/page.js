@@ -1,6 +1,3 @@
-import React from 'react';
-// import './contemporary.css'; // Import the CSS file for styling
-
 function contemporary() {
   return (
     <div className="container">

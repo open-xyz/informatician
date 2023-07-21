@@ -1,6 +1,3 @@
-import React from 'react';
-// import './career.css'; // Import the CSS file for styling
-
 function career() {
   return (
     <div className="container">

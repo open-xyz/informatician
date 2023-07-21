@@ -1,6 +1,3 @@
-import React from 'react';
-// import './politics.css'; // Import the CSS file for styling
-
 function politics() {
   return (
     <div className="container">

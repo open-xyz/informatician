@@ -1,6 +1,3 @@
-import React from 'react';
-// import './cooking.css'; // Import the CSS file for styling
-
 function cooking() {
   return (
     <div className="container">

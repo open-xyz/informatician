@@ -1,6 +1,3 @@
-import React from 'react';
-// import './selfhelp.css'; // Import the CSS file for styling
-
 function selfhelp() {
   return (
     <div className="container">
