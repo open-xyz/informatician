@@ -25,6 +25,7 @@ export default function Navbar(props) {
   };
   const search = async (e) => {
     try {
+      console.log("called");
       const result = await searchBooks(e.target.value);
       result.length > 0 && setBooks(result.slice(0, 5));
     } catch (err) {
@@ -59,17 +60,31 @@ export default function Navbar(props) {
               <i className="fa-solid fa-search"></i>
             </button>
           </form>
-          <div className="w-52 bg-gray-100 absolute mx-auto px-2">
-            {books.length > 0 &&
-              books.map((book, index) => (
-                <div
-                  className="flex justify-center items-center p-3 border-b-4 my-2 transition duration-200 hover:bg-gray-300"
-                  key={index}
-                >
-                  <h1>{book?.volumeInfo.title}</h1>
-                </div>
-              ))}
-          </div>
+          <div className="w-98 bg-gray-100 absolute mx-auto p-2 rounded-md shadow-lg">
+  {books.length > 0 &&
+    books.map((book, index) => (
+      <div
+        className="flex items-center p-2 border-b-2 my-1 transition duration-200 hover:bg-gray-300 cursor-pointer"
+        key={index}
+      >
+        <img
+          src={book?.volumeInfo.imageLinks?.thumbnail || "placeholder.png"}
+          alt="Book Cover"
+          className="w-12 h-16 object-cover mr-2"
+        />
+        <div className="flex-1">
+          <h1 className="text-lg font-semibold text-blue-600 hover:text-blue-800 line-clamp-1">
+            {book?.volumeInfo.title}
+          </h1>
+          <p className="text-sm text-gray-500 line-clamp-2">
+            {book?.volumeInfo.authors?.join(", ")}
+          </p>
+        </div>
+      </div>
+    ))}
+</div>
+
+
         </div>
       </div>
       <div className="mobile-nav">
