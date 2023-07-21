@@ -1,9 +1,9 @@
-import Header from "./Header";
-import Benefits from "./Benefits";
-import ImgSection from "./ImgSection";
-import Employee from "./Employee";
-import Community from "./Community";
-import JobSection from "./JobSection";
+import Header from "@/components/join/Header";
+import Benefits from "@/components/join/Benefits";
+import ImgSection from "@/components/join/ImgSection";
+import Employee from "@/components/join/Employee";
+import Community from "@/components/join/Community";
+import JobSection from "@/components/join/JobSection";
 
 export default function JoinPage() {
   return (
