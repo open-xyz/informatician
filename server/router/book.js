@@ -1,14 +1,25 @@
-import { checkAuth } from '../middleware/auth.middleware';
+const  checkAuth =require('../middleware/auth.middlware');
 
 const { addBook, getAllBooks, getABook, updateBook, deleteBook,findbycategory } = require('../controller/book');
+const rateLimiter = require("express-rate-limit");
 
+// Apply rate limiting middleware
+const limiter = rateLimiter({
+  windowMs: 60 * 1000, // 1 minute
+  max: 100, // Limit each IP for 100 requests every minute
+  message: "Rate limit exceeded, At the moment we only allow 100 requests per minute",
+});
 const router = require('express').Router();
 
-router.post( checkAuth, "/add", addBook)
-router.get(checkAuth ,"/find", getAllBooks)
-router.get(checkAuth ,"/:id", getABook)
-router.put(checkAuth ,"/:id", updateBook)
-router.delete(checkAuth,"/:id", deleteBook)
-router.get(checkAuth ,"/findbycategory/:category",findbycategory)
+router.post("/add", checkAuth, limiter, addBook);
+router.get("/find", checkAuth, limiter, getAllBooks);
+router.get("/key", (req, res) => {
+  res.json({ apiKey: `${process.env.GOOGLE_API_KEY}` });
+});
+router.get("/:id", checkAuth, limiter, getABook);
+router.put("/:id", checkAuth, limiter, updateBook);
+router.delete("/:id", checkAuth, limiter, deleteBook);
+router.get("/findbycategory/:category", checkAuth, limiter, findbycategory);
+
 
 exports.router=router;

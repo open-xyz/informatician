@@ -7,6 +7,10 @@ import darkLogo from "../../assets/logos/dark_logo.png";
 const Footer = () => {
   let year = new Date().getFullYear();
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   const footerItems = [
     [
       { itemName: "About Us", itemLinks: "/about" },
@@ -38,7 +42,7 @@ const Footer = () => {
           {coulmnItems.map((item, index) => {
             return (
               <li key={index} className="mb-4">
-                <Link to={item.itemLinks}>{item.itemName}</Link>
+                <Link to={item.itemLinks} onClick={scrollToTop}>{item.itemName}</Link>
               </li>
             );
           })}
@@ -54,7 +58,7 @@ const Footer = () => {
         <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
           <div className="footer_body">
             <div className=" footer_main mb-6 md:mb-0">
-              <Link to="/" className="logo_img">
+              <Link to="/" onClick={scrollToTop} className="logo_img">
                 <img
                   src={darkLogo}
                   className=" h-12 w-17 ml-1 mb-2.5  hover:shadow "
@@ -75,7 +79,7 @@ const Footer = () => {
           <div className="copyright_footer">
             <span className={`text-sm font-bold   sm:text-center `}>
               © {year}{" "}
-              <a href="/" className="hover:underline">
+              <a href="/" onClick={scrollToTop} className="hover:underline">
                 Informatician™
               </a>
               . All Rights Reserved.

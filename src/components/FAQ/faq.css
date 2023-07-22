@@ -5,22 +5,25 @@
 
 .faq-help-header {
   display: flex;
-  flex-direction: column;
   align-items: center;
   margin: 30px 0px;
 }
 
 .faq-help-title {
-  font-size: 30px;
+  font-size: 40px;
   font-weight: bold;
-  margin-top: 25px;
+  text-shadow: 2px 2px 2px gray;
+  margin-top: 55px;
   margin-bottom: 25px;
   text-align: center;
+  font-family: Tahoma, sans-serif;
 }
 
 .faq-help-image {
   width: 400px;
   height: auto;
+  align-items: center;
+  margin-left: 80px;
   margin-bottom: 10px;
 }
 
@@ -34,6 +37,7 @@
   font-size: 30px;
   font-weight: bold;
   margin-bottom: 20px;
+  color:#3372c1;
   text-align: left;
 }
 
@@ -86,9 +90,10 @@
 }
 
 .faqh2 {
-  font-size: 30px;
+  font-size: 35px;
   font-weight: bold;
   margin-top: 25px;
+  color: #2d65a8;
   margin-bottom: 25px;
   text-align: center;
 }
@@ -137,7 +142,9 @@
 .accordion button .accordion-title {
   padding: 1em 1.5em 1em 0;
 }
-
+.accordion button .accordion-title:hover{
+  color:green;
+}
 .accordion button .icon {
   display: inline-block;
   position: absolute;

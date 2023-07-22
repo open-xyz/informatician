@@ -17,6 +17,6 @@ app.post('/validate-email', (req, res) => {
   return res.json({ message: 'Email address is valid' });
 });
 
-app.listen(3000, () => {
+app.listen(3001, () => {
   console.log('Server is running on port 3000');
 });

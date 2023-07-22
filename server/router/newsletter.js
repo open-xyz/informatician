@@ -1,10 +1,10 @@
-import { checkAuth } from '../middleware/auth.middleware';
+const  checkAuth  =require('../middleware/auth.middlware');
 
 const express = require('express');
 const {addUser} = require('../controller/newsletter');
 const router = express.Router();
 
 router
-  .post( checkAuth, "/addUser",addUser)
+  .post( "/addUser",addUser)
 
 exports.router=router;

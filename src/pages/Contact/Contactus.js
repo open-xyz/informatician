@@ -37,7 +37,8 @@ const Contact = () => {
     })
 
     if (submitable) {
-      await fetch("http://localhost:3000/sendMail", {
+      console.log("called");
+      await fetch("http://localhost:5000/sendMail", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
