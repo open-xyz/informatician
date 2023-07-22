@@ -109,7 +109,7 @@ export default function BookList(props) {
         spaceBetween={25}
         loop={true}
         autoplay={{ delay: 5000 }}
-        pagination={{ clickable: true, }}
+        pagination={{ clickable: true }}
         breakpoints={{
           768: {
             slidesPerView: 2,
@@ -121,27 +121,28 @@ export default function BookList(props) {
           },
         }}
         navigation={true}
-        className="space-y-12 w-full">
-
-
-        {
-          Quotes.map((quote, i) => {
-            return (<SwiperSlide key={i} className="bg-blue-100/70 dark:bg-blue-100 shadow-lg rounded-lg p-6 hover:shadow-md duration-150 dark:text-black">
-              <div className="flex flex-col items-center h-72 sm:h-64">
-                <Image loading='lazy' className="rounded-full w-24 h-24 object-cover" src={quote.image} alt={quote.author} width={100} height={100} />
-                <h4 className="mt-4 text-xl font-medium text-green-700">- {quote.title}</h4>
-                <p className="my-2" onClick={() => handleCopyToClipboard(quote.quote)}>"{quote.quote}" <br />
-                  <MdOutlineContentCopy className="ml-3 justify-start" />
-                </p>
-              </div>
-
-            </SwiperSlide>
-            )
-          })
-
-        }
-
+        className="space-y-12 w-full"
+      >
+        {Quotes.map((quote, index) => (
+          <SwiperSlide key={index} className="bg-blue-100/70 dark:bg-blue-100 shadow-lg rounded-lg p-6 hover:shadow-md duration-150 dark:text-black">
+            <div className="flex flex-col items-center h-72 sm:h-64">
+              <Image
+                loading="lazy"
+                width={100}
+                height={100}
+                className="rounded-full w-24 h-24 object-cover"
+                src={quote.image}
+                alt={quote.title}
+              />
+              <h4 className="mt-4 text-xl font-medium text-green-700">- {quote.title}</h4>
+              <p className="my-2" onClick={() => handleCopyToClipboard(quote.quote)}>"{quote.quote}"
+                <MdOutlineContentCopy className="ml-3" />
+              </p>
+            </div>
+          </SwiperSlide>
+        ))}
       </Swiper>
+
     </div>
   );
 }
