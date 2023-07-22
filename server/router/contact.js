@@ -15,9 +15,7 @@ const limiter = rateLimiter({
 const router = require('express').Router();
 
 mailRouter.post('/',  limiter ,(req, res) => {
-    console.log(req.body)
-    console.log("EMAIL:",process.env.GMAIL)
-    console.log("PASSWORD:",process.env.GOOGLEAPPPASSWORD)
+  
     var transporter = mailer.createTransport({
         service: 'gmail',
         auth: {
