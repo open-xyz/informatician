@@ -78,7 +78,7 @@
 }
 
 .download .right button:hover > svg {
-  color: palevioletred;
+  color: palevioletred !important;
 }
 
 .download .right button .apple {
