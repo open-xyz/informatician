@@ -35,6 +35,17 @@ h2 {
   justify-content: space-between;
 }
 
+.github:hover{
+  color: #238636;
+}
+
+.twitter:hover {
+  color: #00acee;
+}
+
+.discord:hover {
+  color:#4e5d94;
+}
 @media (max-width: 768px) {
   .footer_inner_body {
     flex-direction: column;
