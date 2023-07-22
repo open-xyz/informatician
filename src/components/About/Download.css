@@ -66,10 +66,9 @@
 
 .download .right button {
   width: 12.5rem;
-  background-color: palevioletred;
   color: #fff;
-  border-radius: 10px;
-  border: 1px solid palevioletred;
+  background-color: #FDD1D8;
+  border: 1px solid #FFBAC5;
   transition: all 0.3s ease;
 }
 
@@ -79,7 +78,7 @@
 }
 
 .download .right button:hover > svg {
-  color: palevioletred;
+  color: palevioletred !important;
 }
 
 .download .right button .apple {
