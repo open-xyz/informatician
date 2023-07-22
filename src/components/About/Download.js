@@ -6,7 +6,7 @@ import mobile from "../../assets/mobile.webp";
 import "./Download.css";
 import "aos/dist/aos.css";
 
-export default function Download(props){
+export default function Download(props) {
   const themeImage = props.theme === "dark" ? darklogo : logo;
 
   // const { theme } = props;
@@ -56,7 +56,7 @@ export default function Download(props){
       mouse.updatePosition(event);
       updateTransformStyle(
         (mouse.y / inner.offsetHeight / 2).toFixed(2),
-        (mouse.x / inner.offsetWidth / 2).toFixed(2)
+        (mouse.x / inner.offsetWidth / 2).toFixed(2),
       );
     };
 
@@ -79,7 +79,7 @@ export default function Download(props){
       <div className="left col-lg-6 col-md-6 position-relative d-flex align-items-start justify-content-center">
         <div id="mobile-image-container">
           <img
-            loading='lazy'
+            loading="lazy"
             className="rounded-5"
             id="mobile-image"
             src={mobile}
@@ -97,9 +97,16 @@ export default function Download(props){
         data-aos-duration="500"
       >
         <p className="brand-name fw-bold text-uppercase">
-          <img loading='lazy' src={themeImage} alt="Informatician logo, a book with a bookmark" className="h-22 w-64  d-inline" /> 
+          <img
+            loading="lazy"
+            src={themeImage}
+            alt="Informatician logo, a book with a bookmark"
+            className="h-22 w-64  d-inline"
+          />
         </p>
-        <h1 className="heading fw-bolder fs-1">Available For Your Smartphone</h1>
+        <h1 className="heading fw-bolder fs-1">
+          Available For Your Smartphone
+        </h1>
         <p>
           Use Informatician through any web browser, Android, or iOS device.
           Download into the apps for offline access, so whether you’re reading
