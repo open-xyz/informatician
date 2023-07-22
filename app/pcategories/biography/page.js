@@ -1,8 +1,9 @@
 'use client'
 import React, { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import BkCards from "@/components/Home/BkCards/BkCards";
+import BkCards from "@/components/BkCards/BkCards";
 import "./biography.css"; // Import the CSS file for styling
+import Books from "@/utils/Books";
 
 function Biography(props) {
   const [showMore, setShowMore] = useState(false);
@@ -35,8 +36,8 @@ function Biography(props) {
           <p className="subtitle">
             The most talked-about and well-loved Biography & Memoir titles this month.
           </p>
-          <BkCards bkhead="Trending titles"></BkCards>
-          <BkCards bkhead="Must-Read Biographies of Great Leaders"></BkCards>
+          <BkCards bkhead="Trending titles" books={Books} />
+          <BkCards bkhead="Must-Read Biographies of Great Leaders" books={Books} />
           <div className={`${!showMore && "pt-10"} pb-10`}>
           {showMore && <BkCards bkhead="Everything About Biography & Memoir"></BkCards>}
           {!showMore && (
