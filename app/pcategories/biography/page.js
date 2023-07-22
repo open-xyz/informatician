@@ -1,6 +1,6 @@
 'use client'
-import React, { useState } from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { useState } from "react";
+import CgCards from "@/components/Home/CgCards/CgCards";
 import BkCards from "@/components/BkCards/BkCards";
 import Books from "@/utils/Books";
 
@@ -12,7 +12,7 @@ function Biography(props) {
   };
 
   return (
-    <Container className="mx-auto max-w-6xl mt-32 text-center p-4">
+    <div className="mx-auto max-w-6xl mt-32 text-center p-4">
       <div className="bg-neutral-100 dark:bg-neutral-800 rounded-lg shadow-md p-6 transition-transform hover:scale-105 mx-6">
         <h1 className="text-4xl font-bold">Biography &amp; Memoir</h1>
         <p className="text-xl font-bold mt-3">
@@ -36,8 +36,7 @@ function Biography(props) {
           that have shaped our world.
         </p>
       </div>
-      <Row className="my-9">
-        <Col>
+      <div className="my-9">
           <p className="text-xl font-bold">
             The most talked-about and well-loved Biography & Memoir titles this
             month.
@@ -48,7 +47,7 @@ function Biography(props) {
           
           <div className={`${!showMore && "pt-10"} pb-10`}>
             {showMore && (
-              <BkCards bkhead="Everything About Biography & Memoir" />
+              <BkCards bkhead="Everything About Biography & Memoir" books={Books} />
             )}
             {!showMore && (
               <button
@@ -59,9 +58,8 @@ function Biography(props) {
               </button>
             )}
           </div>
-        </Col>
-      </Row>
-    </Container>
+      </div>
+    </div>
   );
 }
 
