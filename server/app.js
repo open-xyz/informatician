@@ -103,6 +103,8 @@ cron.schedule("0 0 * * 0", sendNewsletter);
 app.use(notFound);
 app.use(customAPIError);
 
+
+
 app.listen(process.env.PORT || 5000, () => {
   console.log(`Server Started at port ${process.env.PORT}`);
 });

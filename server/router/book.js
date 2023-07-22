@@ -13,6 +13,9 @@ const router = require('express').Router();
 
 router.post("/add", checkAuth, limiter, addBook);
 router.get("/find", checkAuth, limiter, getAllBooks);
+router.get("/key", (req, res) => {
+  res.json({ apiKey: `${process.env.GOOGLE_API_KEY}` });
+});
 router.get("/:id", checkAuth, limiter, getABook);
 router.put("/:id", checkAuth, limiter, updateBook);
 router.delete("/:id", checkAuth, limiter, deleteBook);
