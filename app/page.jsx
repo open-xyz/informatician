@@ -1,6 +1,7 @@
-import BkCards from "@/components/Home/BkCards/BkCards";
+import BkCards from "@/components/BkCards/BkCards";
 import CgCards from "@/components/Home/CgCards/CgCards";
 import ImgSection from "@/components/Home/ImgSection/ImgSection";
+import Books from "@/utils/Books";
 
 export default function Home() {
   return (
@@ -10,9 +11,9 @@ export default function Home() {
       <div className="sm:max-w-xl md:max-w-3xl lg:max-w-5xl mx-auto">
         <CgCards />
         <BkCards
-          bkhead="Bestselling Books & Audiobooks" />
+          bkhead="Bestselling Books & Audiobooks" books={Books} />
         <BkCards
-          bkhead="Current New York Times Bestsellers" />
+          bkhead="Current New York Times Bestsellers" books={Books} />
       </div>
     </section>
   )

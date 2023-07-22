@@ -12,7 +12,7 @@ import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper";
 import Image from "next/image";
 import { Quotes, categories } from "@/utils/bookData";
 import { MdOutlineContentCopy } from "react-icons/md";
-import BookCards from "@/components/BkCards/CardContent/CardContent";
+import BkCards from "@/components/BkCards/BkCards";
 
 SwiperCore.use([Autoplay, Pagination, Navigation]);
 
@@ -88,17 +88,14 @@ export default function BookList(props) {
         </div>
       )}
 
-      <div className="book-holder">
-        {filteredBooks.length > 0 && filteredBooks.map((item) => {
-          return (
-            <>
-              <div className="book_card-container ">
-                <BookCards imgName={item.img} title={item.title} type={item.type} author={item.author} description={item.description}></BookCards>
-              </div>
-            </>
-          )
-        })}
-        {filteredBooks.length === 0 && hasSearched && <div>No results found</div>}
+      <div className="sm:max-w-xl md:max-w-3xl lg:max-w-5xl mx-auto">
+        {filteredBooks.length === 0  ? (
+          hasSearched ? <div>No results found</div> : null
+        ) : (
+            <BkCards
+              books={filteredBooks}
+            />
+        )}
       </div>
 
 
@@ -130,10 +127,10 @@ export default function BookList(props) {
         {
           Quotes.map((quote, i) => {
             return (<SwiperSlide key={i} className="bg-blue-100/70 dark:bg-blue-100 shadow-lg rounded-lg p-6 hover:shadow-md duration-150 dark:text-black">
-              <div className="flex flex-col items-center h-72 sm:h-60">
+              <div className="flex flex-col items-center h-72 sm:h-64">
                 <Image loading='lazy' className="rounded-full w-24 h-24 object-cover" src={quote.image} alt={quote.author} width={100} height={100} />
                 <h4 className="mt-4 text-xl font-medium text-green-700">- {quote.title}</h4>
-                <p className="mt-2 text-black dark:text-gray-200" onClick={() => handleCopyToClipboard(quote.quote)}>"{quote.quote}" <br />
+                <p className="my-2" onClick={() => handleCopyToClipboard(quote.quote)}>"{quote.quote}" <br />
                   <MdOutlineContentCopy className="ml-3 justify-start" />
                 </p>
               </div>
