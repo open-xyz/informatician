@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import BkCards from "@/components/BkCards/BkCards";
-import "./biography.css"; // Import the CSS file for styling
 import Books from "@/utils/Books";
 
 function Biography(props) {
@@ -13,13 +12,19 @@ function Biography(props) {
   };
 
   return (
-    <Container className="biography-container mx-auto">
-      <div className="biography-header bg-neutral-100  dark:bg-neutral-800">
-        <h1 className="heading">Biography &amp; Memoir</h1>
-        <p className="subtitle">
+    <Container className="mx-auto max-w-6xl mt-32 text-center p-4">
+      <div className="bg-neutral-100 dark:bg-neutral-800 rounded-lg shadow-md p-6 transition-transform hover:scale-105 mx-6">
+        <h1 className="text-4xl font-bold">Biography &amp; Memoir</h1>
+        <p className="text-xl font-bold mt-3">
           Discover captivating life stories and memoirs
         </p>
-        <p className={`mt-3 text-lg ${showMore ? "show-more-visible" : ""}`}>
+        <p
+          className={`mt-3 text-lg text-left ${
+            showMore
+              ? "max-h-96 overflow-hidden transition-max-height duration-500 ease"
+              : ""
+          }`}
+        >
           Discover captivating tales of individuals who have truly embraced life
           to its fullest. Immerse yourself in a diverse collection of books that
           delve into the lives of renowned icons, infamous figures, and
@@ -31,20 +36,28 @@ function Biography(props) {
           that have shaped our world.
         </p>
       </div>
-      <Row className="my-5">
+      <Row className="my-9">
         <Col>
-          <p className="subtitle">
-            The most talked-about and well-loved Biography & Memoir titles this month.
+          <p className="text-xl font-bold">
+            The most talked-about and well-loved Biography & Memoir titles this
+            month.
           </p>
+          
           <BkCards bkhead="Trending titles" books={Books} />
           <BkCards bkhead="Must-Read Biographies of Great Leaders" books={Books} />
+          
           <div className={`${!showMore && "pt-10"} pb-10`}>
-          {showMore && <BkCards bkhead="Everything About Biography & Memoir"></BkCards>}
-          {!showMore && (
-            <button className="show-more-button mx-auto" onClick={handleShowMore}>
-              Show More
-            </button>
-          )}
+            {showMore && (
+              <BkCards bkhead="Everything About Biography & Memoir" />
+            )}
+            {!showMore && (
+              <button
+                className="block mx-auto bg-blue-500 text-white border-none px-4 py-2 rounded cursor-pointer text-base hover:bg-blue-600 transition-colors duration-300"
+                onClick={handleShowMore}
+              >
+                Show More
+              </button>
+            )}
           </div>
         </Col>
       </Row>

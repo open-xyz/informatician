@@ -1,6 +1,13 @@
 'use client'
 import { useState, useRef } from "react";
+import ScrollToTopButton from "@/components/ScrollButton/ScrollButton";
 import Books from "@/utils/Books"
+
+import Image from "next/image";
+import { Quotes, categories } from "@/utils/bookData";
+import { MdOutlineContentCopy } from "react-icons/md";
+import BkCards from "@/components/BkCards/BkCards";
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -8,11 +15,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper";
-
-import Image from "next/image";
-import { Quotes, categories } from "@/utils/bookData";
-import { MdOutlineContentCopy } from "react-icons/md";
-import BkCards from "@/components/BkCards/BkCards";
 
 SwiperCore.use([Autoplay, Pagination, Navigation]);
 

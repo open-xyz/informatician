@@ -1,6 +1,3 @@
-import React from 'react';
-// import './garden.css'; // Import the CSS file for styling
-
 function garden() {
   return (
     <div className="container">

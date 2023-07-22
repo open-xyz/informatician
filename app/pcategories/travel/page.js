@@ -1,6 +1,3 @@
-import React from 'react';
-// import './travel.css'; // Import the CSS file for styling
-
 function travel() {
   return (
     <div className="container">
