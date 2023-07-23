@@ -62,7 +62,7 @@ export default function BkCards(props) {
       <div className="container-xl">
         <div className="row justify-content-center">
           <div className="books">
-            <h2 className="bk-head">{props.bkhead}</h2>
+            <h2 className={props.theme==="dark" ? "bk-head-dark" : "bk-head-light"}>{props.bkhead}</h2>
             <div className="flex items-center gap-2 md:gap-10 ">
               <div
                 onClick={() => prevButton.current.click()}
@@ -112,9 +112,9 @@ export default function BkCards(props) {
                 }}
               >
                 <GhostPrevButton refprop={prevButton} />
-                {Books.map((book) => {
+                {Books.map((book, index) => {
                   return (
-                    <SwiperSlide>
+                    <SwiperSlide key={index}>
                       <Link to={`/books/${book.id}`}>
                         <CardContent
                           className="columnn"

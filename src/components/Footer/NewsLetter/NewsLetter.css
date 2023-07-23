@@ -1,52 +1,181 @@
-.news {
-  background-image: linear-gradient(to right, #8360c3, #2eb0bf);
-  min-height: 180px;
-  width: 88%;
-  position: relative;
-  top:80px;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin-left: 80px;
-
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-.black {
-  border-radius: 0px;
-  width: 100%;
+p {
+  margin: 12px 0;
+}
+
+.section-heading {
+  font-size: 45px;
+  color: rgb(15, 73, 143);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.heading {
+  font-size: 42px;
+  font-weight: 700;
+  color: #596565;
+  margin-top: 0;
+  text-transform: uppercase;
+}
+.section {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 180px;
-  margin-top: 20px;
+  min-height: 100vh;
+  font-family: 'Lato', sans-serif;
+  background-color: #ffffff;
 }
-.black input
-{
-  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
-  background-color: white;
-  color: black
+.subheading {
+  font-size: 18px;
+  line-height: 24px;
+  color: #858e93;
 }
-.head {
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input {
+  width: auto;
+  padding: 10px 8px;
+  border: 1.5px solid #cfd5d8;
+  border-radius: 4px;
   text-align: center;
-  padding: 17px 0px;
-  color: black;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 24px;
+  transition: all 0.4s linear;
 }
-@media (max-width: 1000px){
-  .news {
-    margin-left: 50px;
+.input::-moz-placeholder {
+  opacity: 0.35;
+}
+.input:-ms-input-placeholder {
+  opacity: 0.35;
+}
+.input::placeholder {
+  opacity: 0.35;
+}
+.input:focus,
+.input:hover,
+.input:valid {
+  outline: none;
+  border: 1.5px solid #b2defe;
+}
+
+.btn {
+  padding: 12px 32px;
+  background-color: #0f498f;
+  font-size: 17px;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+.btn--active {
+  -webkit-animation: buttonActive 0.3s both;
+  animation: buttonActive 0.3s both;
+}
+.btn--success {
+  -webkit-animation: buttonSuccess 0.4s both;
+  animation: buttonSuccess 0.4s both;
+}
+.btn:focus {
+  outline: none;
+}
+
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 425px;
+  min-height: 465px;
+  border-radius: 9px;
+  background-color: #ffffff;
+  box-shadow: 13px 15px 79px 6px rgba(0, 0, 0, 0.15);
+  padding-bottom: 30px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+.subscribe__image {
+  position: relative;
+  max-width: 80px;
+  margin: 50px 10px 0;
+}
+.subscribe__image--success:after {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 26px;
+  height: 26px;
+  background-image: url('https://user-images.githubusercontent.com/23297041/53911760-6c581880-4068-11e9-90ab-ac45ae3b4aa8.png');
+  background-size: cover;
+  content: '';
+  -webkit-animation: slideUp 0.3s ease-out;
+  animation: slideUp 0.3s ease-out;
+}
+.subscribe__text {
+  max-width: 300px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.subscribe__input {
+  min-width: 250px;
+  margin-bottom: 15px;
+}
+.subscribe__btn {
+  width: 180px;
+}
+
+@-webkit-keyframes buttonActive {
+  to {
+    transform: translateY(-1px);
+    opacity: 1;
   }
 }
-@media (max-width: 640px){
-  .news {
-    margin-left: 30px;
+
+@keyframes buttonActive {
+  to {
+    transform: translateY(-1px);
+    opacity: 1;
   }
 }
-@media (max-width: 450px){
-  .news {
-    margin-left: 25px;
+@-webkit-keyframes buttonSuccess {
+  from {
+    opacity: 1;
+  }
+  to {
+    width: 230px;
+    background-color: #53ce67;
+    opacity: 1;
+  }
+}
+@keyframes buttonSuccess {
+  from {
+    opacity: 1;
+  }
+  to {
+    width: 230px;
+    background-color: #53ce67;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes slideUp {
+  from {
+    transform: translateY(15px);
+  }
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(15px);
+  }
+}
+@media screen and (max-width: 680px) {
+  .subscribe {
+    min-width: 350px;
   }
 }

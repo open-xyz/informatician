@@ -1,27 +1,58 @@
-import React, { useEffect } from "react";
+import "./Footer.css";
 import NewsLetter from "./NewsLetter/NewsLetter";
 import { Link } from "react-router-dom";
 import { BsDiscord, BsGithub, BsTwitter } from "react-icons/bs";
-import "./Footer.css";
-import lightLogo from "../../assets/logos/light_logo.png";
 import darkLogo from "../../assets/logos/dark_logo.png";
 
-function ScrollToTop() {
-  const { pathname } = useLocation();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-  return null;
-}
-const Footer = (props) => {
+const Footer = () => {
   let year = new Date().getFullYear();
 
-  const themeImage = props.theme === "dark" ? darkLogo : lightLogo;
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const footerItems = [
+    [
+      { itemName: "About Us", itemLinks: "/about" },
+      { itemName: "Our Team", itemLinks: "/team" },
+      { itemName: "Contact Us", itemLinks: "/contact" },
+      { itemName: "Join our team!", itemLinks: "/join" },
+    ],
+    [
+      { itemName: "Help/FAQ", itemLinks: "/faq" },
+      { itemName: "Accessibility", itemLinks: "/accessibility" },
+      { itemName: "Publishers", itemLinks: "/publishers" },
+      { itemName: "AdChoices", itemLinks: "/adchoices" },
+    ],
+    [
+      { itemName: "Privacy Policy", itemLinks: "/privacy" },
+      { itemName: "Terms & Conditions", itemLinks: "/terms" },
+      { itemName: "CopyRight", itemLinks: "/copyright" },
+      { itemName: "Cookie Preference", itemLinks: "/cookie" },
+    ],
+  ];
+
+  const columnNames = ["About", "Support", "Legal"];
+
+  const footerComponents = footerItems.map((coulmnItems, index) => {
+    return (
+      <div key={index}>
+        <h2 className={`mb-6 text-m font-bold`}>{columnNames[index]}</h2>
+        <ul className="font-medium">
+          {coulmnItems.map((item, index) => {
+            return (
+              <li key={index} className="mb-4">
+                <Link to={item.itemLinks} onClick={scrollToTop}>{item.itemName}</Link>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    );
+  });
 
   return (
     <>
-      <ScrollToTop />
       <NewsLetter />
       <footer>
         <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
@@ -36,151 +67,32 @@ const Footer = (props) => {
               </Link>
             </div>
             <div className="footer_inner_body">
-              <div>
-                <h2 className={`mb-6 text-m font-bold`}>
-                  About
-                </h2>
-                <ul className="font-medium">
-                  <li className="mb-4">
-                    <Link
-                      to="./about"
-                      className="transition-all duration-300 ease-in-out"
-                    >
-                      About us
-                    </Link>
-                  </li>
-                  <li className="mb-4">
-                    <Link
-                      to="./team"
-                      className="transition-all duration-300 ease-in-out"
-                    >
-                      Our Team
-                    </Link>
-                  </li>
-                  <li className="mb-4">
-                    <Link
-                      to="./contact"
-                      className="transition-all duration-300 ease-in-out "
-                    >
-                      Contact Us
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/join"
-                      className="transition-all duration-300 ease-in-out "
-                    >
-                      Join our team!
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h2 className={`mb-6 text-m font-bold `}>
-                  Support
-                </h2>
-                <ul className="  font-medium">
-                  <li className="mb-4">
-                    <Link
-                      to="./faq"
-                      className="transition-all duration-300 ease-in-out "
-                    >
-                      Help/FAQ
-                    </Link>
-                  </li>
-                  <li className="mb-4">
-                    <Link
-                      to="/accessibility"
-                      className="transition-all duration-300 ease-in-out "
-                    >
-                      Accessibility
-                    </Link>
-                  </li>
-                  <li className="mb-4">
-                    <Link
-                      to="/publishers"
-                      className="transition-all duration-300 ease-in-out  "
-                    >
-                      Publishers
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/adchoices"
-                      className="transition-all duration-300 ease-in-out "
-                    >
-                      AdChoices
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h2 className={`mb-6 text-m font-bold `}>
-                  Legal
-                </h2>
-                <ul className="  font-medium">
-                  <li className="mb-4">
-                    <Link
-                      to="./privacy"
-                      className="transition-all duration-300 ease-in-out"
-                    >
-                      Privacy Policy
-                    </Link>
-                  </li>
-                  <li className="mb-4">
-                    <Link
-                      to="./terms"
-                      className="transition-all duration-300 ease-in-out"
-                    >
-                      Terms &amp; Conditions
-                    </Link>
-                  </li>
-                  <li className="mb-4">
-                    <Link
-                      to="./copyright"
-                      className="transition-all duration-300 ease-in-out"
-                    >
-                      Copyright
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="./cookie"
-                      className="transition-all duration-300 ease-in-out"
-                    >
-                      Cookie Preference
-                    </Link>
-                  </li>
-                </ul>
-              </div>
+              {footerComponents.map((item, index) => {
+                return (
+                  <div key={index} className="footer_inner_body_item">
+                    {item}
+                  </div>
+                );
+              })}
             </div>
-       
-    </div>
-    <hr className="my-4 sm:mx-auto  lg:my-8" style={{ borderColor: "var(--black)" }} />
+          </div>
           <div className="copyright_footer">
             <span className={`text-sm font-bold   sm:text-center `}>
               © {year}{" "}
-              <a href="/" className="hover:underline">
+              <a href="/" onClick={scrollToTop} className="hover:underline">
                 Informatician™
               </a>
               . All Rights Reserved.
             </span>
             <div className="flex mt-0 space-x-6 sm:justify-center sm:mt-0 mr-14 2xl:mr-0">
-              <Link to="/develop" target="_blank" className={` hover:text-[#00acee]`} >
-                <BsTwitter className="w-6 h-6 transition-all duration-200 ease-in-out transform hover:scale-110" />
-                <span className="sr-only">Twitter page</span>
+              <Link to="/develop">
+                <BsTwitter className="w-6 h-6 transition-all duration-200 ease-in-out transform hover:scale-110 twitter" />
               </Link>
-              <Link
-                to="https://github.com/rohansx/informatician"
-                target="_blank"
-                className={` hover:text-[#12BC00]`}
-              >
-                < BsGithub className="w-6 h-6 transition-all duration-200 ease-in-out transform hover:scale-110" />
-                <span className="sr-only">GitHub account</span>
+              <Link to="https://github.com/rohansx/informatician">
+                <BsGithub className="w-6 h-6 transition-all duration-200 ease-in-out transform hover:scale-110 github" />
               </Link>
-              <Link to="#" className={` hover:fill-[#5865F2]`}>
-                <BsDiscord className="w-6 h-6 transition-all duration-200 ease-in-out transform hover:scale-110" />
-                <span className="sr-only">Dribbble account</span>
+              <Link to="#">
+                <BsDiscord className="w-6 h-6 transition-all duration-200 ease-in-out transform hover:scale-110 discord" />
               </Link>
             </div>
           </div>

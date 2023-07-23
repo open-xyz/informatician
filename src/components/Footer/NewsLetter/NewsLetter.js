@@ -1,82 +1,92 @@
-import React from "react";
-import "./NewsLetter.css";
-import { toast } from "react-toastify";
+import './NewsLetter.css';
+import React, { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-class NewsLetter extends React.Component {
-    handleClick = async (e) => {
-        e.preventDefault();
-        const emailInput = document.getElementById("simple-search");
-        const email = emailInput.value;
-        console.log(email);
+export default function NewsLetter() {
+  const [isInputValid, setInputValid] = useState(false);
+  const [isSubmitted, setSubmitted] = useState(false);
 
-        try {
-            const requestOptions = {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ email: email }),
-            };
+  const handleInputChange = (e) => {
+    setInputValid(e.target.checkValidity());
+  };
 
-            const response = await fetch(
-                "http://localhost:5000/api/addUser",
-                requestOptions
-            );
-            console.log(response)
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-            if (response.status === 200) {
-                toast.success("Subscribed", { position: 'top-center', autoClose: 3000, theme: 'colored' })
-                emailInput = "";
-            }
-            else toast.error("Already Subscribed", { position: 'top-center', autoClose: 3000, theme: 'colored' })
+    try {
+      const response = await fetch(
+        "https://informaticonserver.onrender.com/api/addUser",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email: e.target.email.value }),
         }
+      );
 
-        catch (error) {
-            console.error(error);
-            toast.error("There was a problem with server, Please try again!", { position: 'top-center', autoClose: 3000, theme: 'colored' })
-        }
-    };
-    render() {
-        return (
-                    <div className="news">
-                        <div className="black">
-                            <div className="container">
-                                <div className="row justify-content-center">
-                                    <div className="col-md-8 subscribe">
-                                        <h4 className="head">Subscribe To NewsLetter</h4>
-                                        <div className="d-flex p-2">
-                                            <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="Email ID" />
-                                            <button type="button" className="btn btn-danger" style={{marginLeft: '8px'}}>
-                                                Subscribe
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                );
+      if (response.status === 200) {
+        console.log("Subscribed");
+        toast.success("Subscribed", { position: 'top-center', autoClose: 3000, theme: 'colored' })
+      } else {
+        console.log("Failed to subscribe");
+        toast.error("Failed to subscribe. Please try again!", {
+          position: "top-right",
+          autoClose: 5000,
+         
+        });
+      }
+    } catch (error) {
+      console.error(error);
+      toast.error("There was a problem with server, Please try again!", { position: 'top-center', autoClose: 3000, theme: 'colored' })
     }
+
+    setSubmitted(true);
+  };
+
+  return (
+    <div className="section">
+      <p className="section-heading">Subscribe to our Newsletter</p>
+      <div className="subscribe">
+        <div
+          className={`subscribe__image ${
+            isSubmitted ? 'subscribe__image--success' : ''
+          }`}
+        >
+          <img src="https://user-images.githubusercontent.com/23297041/53905033-9570ad00-4058-11e9-809d-c090c0468264.png" alt="Subscribe Success" />
+        </div>
+        <div className="subscribe__text">
+          <p className="heading">Stay tuned</p>
+          <p className="subheading">
+            A newsletter about books, reading, and writing.
+          </p>
+        </div>
+        <form className="form" id="form" onSubmit={handleSubmit}>
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+            className={`subscribe__input input ${
+              isSubmitted ? 'disabled' : ''
+            }`}
+            onChange={handleInputChange}
+            disabled={isSubmitted}
+          />
+          <button
+            type="submit"
+            value="Subscribe"
+            className={`subscribe__btn btn ${
+              isInputValid ? 'btn--active' : ''
+            } ${isSubmitted ? 'btn--success' : ''}`}
+            disabled={isSubmitted}
+          >
+            {isSubmitted ? "You're on the list! 👍" : 'Subscribe'}
+          </button>
+        </form>
+      </div>
+      <ToastContainer />
+    </div>
+  );
 }
-
-export default NewsLetter;
-
-// export default function NewsLetter() {
-//     return (
-//         <div className="news">
-//             <div className="black">
-//                 <div className="container">
-//                     <div className="row justify-content-center">
-//                         <div className="col-md-8 subscribe">
-//                             <h4 className="head">Subscribe To NewsLetter</h4>
-//                             <div className="d-flex p-2">
-//                                 <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="Email ID" />
-//                                 <button type="button" className="btn btn-danger" style={{marginLeft: '8px'}}>
-//                                     Subscribe
-//                                 </button>
-//                             </div>
-//                         </div>
-//                     </div>
-//                 </div>
-//             </div>
-//         </div>
-//     )
-// }

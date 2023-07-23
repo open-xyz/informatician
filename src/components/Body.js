@@ -1,6 +1,6 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect } from "react";
 import Loader from "./Loader/loader";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import AdChoices from "../pages/AdChoices/AdChoices";
 import PublishersPage from "../pages/Publishers/Publishers";
 import BookmarkPage from "../pages/Bookmarks/BookmarkPage";
@@ -35,8 +35,20 @@ import AccessibilityPage from "../pages/Accessibility/Accessibility";
 import BookFormats from "../pages/BookFormats/BookFormats";
 import GenreDetails from "../pages/GenreDetails/GenreDetails";
 import BookAwards from "../pages/Awards/BookAwards";
+import Login from "../pages/Login/Login";
+import SignUp from "../pages/SignUp/SignUp";
 
 function Body(props) {
+
+  const routePath = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }, [routePath]);
+
   return (
     <div>
       <Suspense fallback={<Loader  />}>
@@ -59,6 +71,8 @@ function Body(props) {
           <Route path="/join" element={<Join />} />
           <Route path="/develop" element={<Develop />} />
           <Route path="/addBooks" element={<AddBooks theme={props.theme} />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
           <Route
             path="/publishers"
             element={<PublishersPage theme={props.theme} />}
