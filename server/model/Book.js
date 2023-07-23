@@ -70,6 +70,14 @@ const bookSchema = new mongoose.Schema({
         errorMessage: 'image cannot be empty',
       },
   },
+  category: {
+    type: String,
+    default: '',
+    required: [true, 'Category is required.'],
+    notEmpty: {
+        errorMessage: 'Category cannot be empty',
+      },
+  }
 }, { timestamps: true });
 
 const Book = mongoose.model('Book', bookSchema);

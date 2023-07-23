@@ -6,6 +6,7 @@ import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import validate from "../../utils/validation";
+import { backendURL } from "../../utils/impURLs";
 
 const AddBooks = (props) => {
   const [book, setBook] = useState({
@@ -14,7 +15,7 @@ const AddBooks = (props) => {
     publisher: "",
     pages: "",
     img: "",
-    category: "",
+    category: "Art",
   });
 
   const [error, setError] = useState({
@@ -53,14 +54,14 @@ const AddBooks = (props) => {
     if (submitable) {
       try {
         const res = await axios.post(
-          "https://informaticonserver.onrender.com/api/book/add",
+          `${backendURL}/api/book/add`,
           book
         );
         toast.success("Book details added!!Upload the book.");
         localStorage.setItem("bookId", res.data);
       } catch (err) {
-        toast.error("Fill all the details!");
-        console.log(err.message);
+        toast.error(err.response.data.error);
+        console.log(err);
       }
     } else {
       console.log("Fill all fields with valid data");

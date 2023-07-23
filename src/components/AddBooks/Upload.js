@@ -6,6 +6,8 @@ import LibraryBooksIcon from "@mui/icons-material/LibraryBooks";
 import CloseIcon from "@mui/icons-material/Close";
 import axios from "axios";
 import './Upload.css';
+import { backendURL } from "../../utils/impURLs";
+
 const FileUploadComponent = ({formData}) => {
   const [file, setFile] = useState(null);
   const navigate = useNavigate();
@@ -31,8 +33,8 @@ const FileUploadComponent = ({formData}) => {
         const formData = new FormData();
         formData.append("file", file);
 
-        await axios.post("https://informaticonserver.onrender.com/api/upload", formData);
-        await axios.put("https://informaticonserver.onrender.com/api/book/" + id, {
+        await axios.post(`${backendURL}/api/upload`, formData);
+        await axios.put(`${backendURL}/api/book/` + id, {
           bookpdf: file.name,
         });
         navigate("/success");
