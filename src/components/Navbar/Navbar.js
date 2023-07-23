@@ -33,7 +33,7 @@ export default function Navbar(props) {
       style={{ background: props.theme === "dark" ? "#001229" : "#eff6ff" }}
     >
      
-       <Link to="/" onClick={scrollToTop} className="logo">
+      <Link to="/" onClick={scrollToTop} className="logo">
         <img
           loading='lazy'
           src={themeImage}
