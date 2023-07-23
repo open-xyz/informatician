@@ -1,13 +1,12 @@
 import React from "react";
-import { FaCheckCircle } from "react-icons/fa";
 import "./TermsAndService.css";
 
 const TermsAndService = () => {
   return (
-    <div className="terms">
+    <main className="terms" role="main">
       <div className="container">
-        <h2 className="terms-title">Terms and Service</h2>
-        <div className="terms-content">
+        <h1 className="terms-title" id="terms-and-servcie-block">Terms and Service</h1>
+        <section className="terms-content" aria-labelledby="terms-and-servcie-block">
           <p>
             Welcome to Book Listing App! These terms and conditions outline the rules and regulations for the use of our
             application.
@@ -29,13 +28,13 @@ const TermsAndService = () => {
           <p>
             By using Book Listing App, you agree not to:
           </p>
-          <ul>
-            <li><FaCheckCircle className="icon" /> Violate any applicable laws or regulations;</li>
-            <li><FaCheckCircle className="icon" /> Interfere with or disrupt the security or integrity of our application;</li>
-            <li><FaCheckCircle className="icon" /> Attempt to gain unauthorized access to any portion of our application;</li>
-            <li><FaCheckCircle className="icon" /> Transmit any viruses, worms, or other harmful computer code;</li>
-            <li><FaCheckCircle className="icon" /> Use our application to send unsolicited commercial communications;</li>
-            <li><FaCheckCircle className="icon" /> Engage in any conduct that restricts or inhibits any other user from using or enjoying our application.</li>
+          <ul role="list">
+            <li role="listitem">Violate any applicable laws or regulations;</li>
+            <li role="listitem">Interfere with or disrupt the security or integrity of our application;</li>
+            <li role="listitem">Attempt to gain unauthorized access to any portion of our application;</li>
+            <li role="listitem">Transmit any viruses, worms, or other harmful computer code;</li>
+            <li role="listitem">Use our application to send unsolicited commercial communications;</li>
+            <li role="listitem">Engage in any conduct that restricts or inhibits any other user from using or enjoying our application.</li>
           </ul>
           <p>
             We reserve the right to terminate or suspend your access to Book Listing App without prior notice or liability for
@@ -48,11 +47,11 @@ const TermsAndService = () => {
           </p>
           <p>
             If you have any questions or concerns about these terms and conditions, please contact us at&nbsp;
-            <a href="mailto:informaticianx@gmail.com" className="contact-email">informaticianx@gmail.com</a>.
+            <a href="mailto:informaticianx@gmail.com" className="contact-email" aria-live="polite" aria-describedby="Mail address of Informatician">informaticianx@gmail.com</a>.
           </p>
-        </div>
+        </section>
       </div>
-    </div>
+    </main>
   );
 };
 
