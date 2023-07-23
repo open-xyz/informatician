@@ -24,7 +24,7 @@ const Footer = (props) => {
       <ScrollToTop />
       <NewsLetter />
       <footer>
-       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+        <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
           <div className="footer_body">
             <div className=" footer_main mb-6 md:mb-0">
               <Link to="/" onClick={scrollToTop} className="logo_img">
@@ -32,7 +32,7 @@ const Footer = (props) => {
                   src={darkLogo}
                   className=" h-12 w-17 ml-1 mb-2.5  hover:shadow "
                   alt="Informatician logo"
-                 /> 
+                /> 
               </Link>
             </div>
             <div className="footer_inner_body">
