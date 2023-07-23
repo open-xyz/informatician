@@ -29,12 +29,12 @@ const Contact = () => {
     e.preventDefault();
     setsuccess("");
     let submitable = true;
-    Object.values(error).forEach(err=>{
-      if(err !== false){
+    Object.values(error).forEach((err) => {
+      if (err !== false) {
         submitable = false;
         return;
       }
-    })
+    });
 
     if (submitable) {
       console.log("called");
@@ -46,8 +46,12 @@ const Contact = () => {
         body: JSON.stringify(form),
       });
       setsuccess("Contact Request sent successfully!!");
-    }else{
-      toast.error("Please fill the form correctly", { position: 'top-center', autoClose: 3000, theme: 'colored' })
+    } else {
+      toast.error("Please fill the form correctly", {
+        position: "top-center",
+        autoClose: 3000,
+        theme: "colored",
+      });
     }
   };
 
@@ -66,33 +70,36 @@ const Contact = () => {
     <div className="contact">
       <div className="container">
         <div className="c_head">
-        <h1
-              className="contact-title"
-              data-aos="fade-down"
-              data-aos-duration="500"
-            >
-              Contact Us
-            </h1>
-            <p
-              className="contact-description"
-              data-aos="fade-down"
-              data-aos-duration="500"
-            >
-              We'd love to hear from you! Reach out to us for any inquiries,
-              feedback, or collaboration opportunities.
-            </p>
+          <h1
+            className="contact-title"
+            data-aos="fade-down"
+            data-aos-duration="500"
+          >
+            Contact Us
+          </h1>
+          <p
+            className="contact-description"
+            data-aos="fade-down"
+            data-aos-duration="500"
+          >
+            We'd love to hear from you! Reach out to us for any inquiries,
+            feedback, or collaboration opportunities.
+          </p>
         </div>
-     
+
         <div className="contact-content">
           <div className="contact-text">
-          
             {success && (
               <p className="text-green-600 text-[18px] font-18 text-left mb-3">
                 {success}
               </p>
             )}
 
-            <form className="contact-form" onSubmit={handleResponse} role="form">
+            <form
+              className="contact-form"
+              onSubmit={handleResponse}
+              role="form"
+            >
               <div className="form-field">
                 <label
                   htmlFor="name"
@@ -114,14 +121,21 @@ const Contact = () => {
                   data-aos="fade-left"
                   data-aos-duration="500"
                   aria-labelledby="name"
-                  aria-describedby={error.name && error.nameError ? "nameError" : null}
+                  aria-describedby={
+                    error.name && error.nameError ? "nameError" : null
+                  }
                   aria-required="true"
-                  aria-invalid={error.name && error.nameError ? "true" : "false"}
+                  aria-invalid={
+                    error.name && error.nameError ? "true" : "false"
+                  }
                 />
                 {error.name && error.nameError ? (
-                  <AuthErrorMessage message={error.nameError} role="alert"
-                  id="nameError"
-                  aria-live="assertive" />
+                  <AuthErrorMessage
+                    message={error.nameError}
+                    role="alert"
+                    id="nameError"
+                    aria-live="assertive"
+                  />
                 ) : null}
               </div>
               <div className="form-field">
@@ -145,14 +159,21 @@ const Contact = () => {
                   data-aos="fade-left"
                   data-aos-duration="500"
                   aria-labelledby="email"
-                  aria-describedby={error.email && error.emailError ? "emailError" : null}
+                  aria-describedby={
+                    error.email && error.emailError ? "emailError" : null
+                  }
                   aria-required="true"
-                  aria-invalid={error.email && error.emailError ? "true" : "false"}
+                  aria-invalid={
+                    error.email && error.emailError ? "true" : "false"
+                  }
                 />
                 {error.email && error.emailError ? (
-                  <AuthErrorMessage message={error.emailError} role="alert"
-                  id="emailError"
-                  aria-live="assertive" />
+                  <AuthErrorMessage
+                    message={error.emailError}
+                    role="alert"
+                    id="emailError"
+                    aria-live="assertive"
+                  />
                 ) : null}
               </div>
               <div className="form-field">
@@ -175,14 +196,21 @@ const Contact = () => {
                   data-aos="fade-left"
                   data-aos-duration="500"
                   aria-labelledby="message"
-                  aria-describedby={error.message && error.messageError ? "messageError" : null}
+                  aria-describedby={
+                    error.message && error.messageError ? "messageError" : null
+                  }
                   aria-required="true"
-                  aria-invalid={error.message && error.messageError ? "true" : "false"}
+                  aria-invalid={
+                    error.message && error.messageError ? "true" : "false"
+                  }
                 />
                 {error.message && error.messageError ? (
-                  <AuthErrorMessage message={error.messageError} role="alert"
-                  id="messageError"
-                  aria-live="assertive" />
+                  <AuthErrorMessage
+                    message={error.messageError}
+                    role="alert"
+                    id="messageError"
+                    aria-live="assertive"
+                  />
                 ) : null}
               </div>
               <button
@@ -202,7 +230,7 @@ const Contact = () => {
             data-aos-duration="500"
           >
             <img
-              loading='lazy'
+              loading="lazy"
               style={{ marginLeft: "10%" }}
               src={contactImage}
               alt="a cartoon of a person wearing a headset"
@@ -215,17 +243,32 @@ const Contact = () => {
             Connect with us:
           </h1>
           <div className="social-icons">
-            <Link to="/develop" className="social-icon-twitter">
+            <Link
+              to="/develop"
+              className="social-icon-twitter"
+              aria-label="Follow us on Twitter"
+              title="Twitter (External Link)"
+              rel="noopener noreferrer"
+            >
               <FaTwitter />
             </Link>
             <Link
               to="https://github.com/rohansx/informatician"
               target="blank"
               className="social-icon-github"
+              aria-label="Follow us on Github"
+              title="Github (External Link)"
+              rel="noopener noreferrer"
             >
               <FaGithub />
             </Link>
-            <Link to="/develop" className="social-icon-discord">
+            <Link
+              to="/develop"
+              className="social-icon-discord"
+              aria-label="Join with us on Discord"
+              title="Discord (External Link)"
+              rel="noopener noreferrer"
+            >
               <FaDiscord />
             </Link>
           </div>
