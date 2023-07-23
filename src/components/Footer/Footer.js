@@ -31,7 +31,7 @@ const Footer = (props) => {
                 <img
                   src={darkLogo}
                   className=" h-12 w-17 ml-1 mb-2.5  hover:shadow "
-                   alt="Informatician logo"
+                  alt="Informatician logo"
                 />
 
               </Link>
