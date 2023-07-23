@@ -8,6 +8,7 @@ const nextConfig = {
       "www.theparisreview.org",
       "ychef.files.bbci.co.uk",
       "media.npr.org",
+      "user-images.githubusercontent.com",
       "images2.minutemediacdn.com",
       "media.newyorker.com",
       "laurencecoupe.co.uk",
