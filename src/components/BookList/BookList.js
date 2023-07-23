@@ -1,18 +1,17 @@
-import React, { useState, useEffect, useRef } from "react";
-import Books from "../Home/Books";
-import "./BookList.css";
+import React, { useRef, useState } from "react";
 import ScrollToTopButton from "../../components/ScrollButton/ScrollButton";
+import Books from "../Home/Books";
 import BookCards from "./BookCard";
+import "./BookList.css";
 // import Card from "../Card";
-import { searchBooks } from "../../utils/searchBooks";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
+import { Autoplay, Navigation, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Autoplay, Pagination, Navigation } from "swiper";
 import { Quotes, categories } from "./BookData";
 
 export default function BookList(props) {
@@ -204,7 +203,10 @@ export default function BookList(props) {
 
         <div className="carousel">
           <Swiper
-            slidesPerView={3}
+            breakpoints={{
+              480: { slidesPerView: 1 },
+              1024: { slidesPerView: 3 },
+            }}
             spaceBetween={25}
             loop={true}
             autoplay={false}
@@ -221,9 +223,8 @@ export default function BookList(props) {
               >
                 <div className="book_card">
                   <div
-                    className={`book_card-content ${
-                      props.theme === "dark" ? "text-black" : ""
-                    }`}
+                    className={`book_card-content ${props.theme === "dark" ? "text-black" : ""
+                      }`}
                   >
                     <div className=" items-center flex flex-col">
                       <img
@@ -255,9 +256,8 @@ export default function BookList(props) {
               >
                 <div className="book_card">
                   <div
-                    className={`book_card-content ${
-                      props.theme === "dark" ? "text-black" : ""
-                    }`}
+                    className={`book_card-content ${props.theme === "dark" ? "text-black" : ""
+                      }`}
                   >
                     <div className=" items-center flex flex-col">
                       <img
@@ -289,9 +289,8 @@ export default function BookList(props) {
               >
                 <div className="book_card">
                   <div
-                    className={`book_card-content ${
-                      props.theme === "dark" ? "text-black" : ""
-                    }`}
+                    className={`book_card-content ${props.theme === "dark" ? "text-black" : ""
+                      }`}
                   >
                     <div className=" items-center flex flex-col">
                       <img
@@ -320,9 +319,8 @@ export default function BookList(props) {
               >
                 <div className="book_card">
                   <div
-                    className={`book_card-content ${
-                      props.theme === "dark" ? "text-black" : ""
-                    }`}
+                    className={`book_card-content ${props.theme === "dark" ? "text-black" : ""
+                      }`}
                   >
                     <div className=" items-center flex flex-col">
                       <img
@@ -354,9 +352,8 @@ export default function BookList(props) {
               >
                 <div className="book_card">
                   <div
-                    className={`book_card-content ${
-                      props.theme === "dark" ? "text-black" : ""
-                    }`}
+                    className={`book_card-content ${props.theme === "dark" ? "text-black" : ""
+                      }`}
                   >
                     <div className=" items-center flex flex-col">
                       <img
@@ -388,9 +385,8 @@ export default function BookList(props) {
               >
                 <div className="book_card">
                   <div
-                    className={`book_card-content ${
-                      props.theme === "dark" ? "text-black" : ""
-                    }`}
+                    className={`book_card-content ${props.theme === "dark" ? "text-black" : ""
+                      }`}
                   >
                     <div className=" items-center flex flex-col">
                       <img
@@ -422,9 +418,8 @@ export default function BookList(props) {
               >
                 <div className="book_card">
                   <div
-                    className={`book_card-content ${
-                      props.theme === "dark" ? "text-black" : ""
-                    }`}
+                    className={`book_card-content ${props.theme === "dark" ? "text-black" : ""
+                      }`}
                   >
                     <div className=" items-center flex flex-col">
                       <img
@@ -456,9 +451,8 @@ export default function BookList(props) {
               >
                 <div className="book_card">
                   <div
-                    className={`book_card-content ${
-                      props.theme === "dark" ? "text-black" : ""
-                    }`}
+                    className={`book_card-content ${props.theme === "dark" ? "text-black" : ""
+                      }`}
                   >
                     <div className=" items-center flex flex-col">
                       <img
