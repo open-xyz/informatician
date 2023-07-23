@@ -33,7 +33,6 @@ const Footer = (props) => {
                   className=" h-12 w-17 ml-1 mb-2.5  hover:shadow "
                   alt="Informatician logo"
                 />
-
               </Link>
             </div>
             <div className="footer_inner_body">
