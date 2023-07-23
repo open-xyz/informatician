@@ -9,8 +9,8 @@
 .contributor-card:hover {
     transform: perspective(800px) rotateY(20deg);
 }
-
+/* 
 .slick-prev,
 .slick-next {
     display: none !important;
-}
+} */
