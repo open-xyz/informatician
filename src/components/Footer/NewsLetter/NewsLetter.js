@@ -2,6 +2,7 @@ import './NewsLetter.css';
 import React, { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { backendURL } from '../../../utils/impURLs';
 
 export default function NewsLetter() {
   const [isInputValid, setInputValid] = useState(false);
@@ -16,7 +17,7 @@ export default function NewsLetter() {
 
     try {
       const response = await fetch(
-        "https://informaticonserver.onrender.com/api/addUser",
+        `${backendURL}/api/addUser`,
         {
           method: "POST",
           headers: {
