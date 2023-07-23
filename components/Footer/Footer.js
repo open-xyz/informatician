@@ -24,7 +24,7 @@ const Footer = (props) => {
                 </span> */}
               </Link>
             </div>
-            <div className="grid grid-cols-3 gap-8 sm:gap-6 sm:grid-cols-4">
+            <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-4">
               <div>
                 <h2 className={`mb-6 text-m font-bold`}>Explore</h2>
                 <ul className="font-medium">

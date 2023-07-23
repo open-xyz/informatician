@@ -50,13 +50,13 @@ class NewsLetter extends React.Component {
   render() {
     return (
       <div className="news bg-cover bg-center bg-no-repeat min-h-180">
-        <div className="bg-black/50 h-[180px] bg-opacity-50 flex justify-center">
+        <div className="bg-black/50 h-[200px] bg-opacity-50 flex justify-center">
           <div className="w-96 max-w-full">
             <h4 className="head">Subscribe To Newsletter</h4>
-            <div className="flex p-2 gap-2 md:gap-8">
+            <div className="flex max-sm:flex-col p-2 gap-2 md:gap-8">
               <input
                 type="email"
-                className="form-input mr-2 w-96 px-3 rounded-md focus:outline-0"
+                className="form-input mr-2 sm:w-96 px-3 rounded-md focus:outline-0"
                 id="simple-search"
                 placeholder="Email ID"
                 required
@@ -64,7 +64,7 @@ class NewsLetter extends React.Component {
               <button
                 onClick={this.handleClick}
                 type="button"
-                className=" px-2 h-9 border-[1.5px] border-red-700 rounded-md text-white hover:bg-red-700 duration-300"
+                className="px-2 h-9 border-[1.5px] border-red-700 rounded-md text-white hover:bg-red-700 duration-300"
               >
                 Subscribe
               </button>
