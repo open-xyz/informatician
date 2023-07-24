@@ -1,25 +1,30 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import { createRoot } from 'react-dom/client'; // Import createRoot from "react-dom/client" instead of "react-dom"
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ToastContainer } from 'react-toastify';
 import { GoogleOAuthProvider } from '@react-oauth/google';
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import axios from 'axios';
 
-root.render(
+(async () => {
+  try {
+    const response = await axios.get("http://localhost:5000/ClientId");
+    const { clientid } = response.data;
+    console.log(clientid);
 
-     <GoogleOAuthProvider
-    clientId="829264938526-sepkur9dj7nam4jqldl8pbqf6osck2he.apps.googleusercontent.com">
+    createRoot(document.getElementById('root')).render( // Use createRoot from "react-dom/client"
+      <GoogleOAuthProvider clientId={clientid}>
         <React.StrictMode>
-        <App />
-    <ToastContainer />
+          <App />
+          <ToastContainer />
         </React.StrictMode>
-
-    </GoogleOAuthProvider>
-
- 
-);
+      </GoogleOAuthProvider>
+    );
+  } catch (error) {
+    console.error('Failed to fetch clientId:', error);
+  }
+})();
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { googleLogout, useGoogleLogin } from '@react-oauth/google';
+
 import axios from 'axios';
 import WelcomeUser from './Welcomeuser';
 const  GooglePage = ({SetisLoggedIn}) => {
@@ -11,6 +12,12 @@ const  GooglePage = ({SetisLoggedIn}) => {
     onError: (error) => console.log('Login Failed:', error),
   });
 
+  useEffect(() => {
+    const userJSON = localStorage.getItem('user');
+    if (userJSON) {
+      setUser(JSON.parse(userJSON));
+    }
+  }, []);
   useEffect(() => {
     if (user) {
       axios
@@ -26,6 +33,7 @@ const  GooglePage = ({SetisLoggedIn}) => {
           SetisLoggedIn(true);
           localStorage.setItem('isLoggedIn', 'true');
           localStorage.setItem('user', JSON.stringify(res.data));
+          console.log(localStorage.getItem("user"))
         })
         .catch((err) => console.log(err));
     }

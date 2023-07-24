@@ -17,12 +17,44 @@ const getUserFromLocalStorage = () => {
 
 export default function NavItems(props) {
   const [user, setUser] = useState(null);
+  const[stop,SetStop]=useState(false);
 
   useEffect(() => {
     const userJSON = localStorage.getItem("user");
+
     if (userJSON) {
       setUser(JSON.parse(userJSON));
     }
+
+   
+  }, []);
+
+  const checkLocalStorage = () => {
+    const userJSON = localStorage.getItem('user');
+    // console.log(userJSON)
+    if (userJSON) {
+      
+      setUser(JSON.parse(userJSON));
+      SetStop(false);
+    }
+
+    if(userJSON === null)
+    {
+      //  console.log("mila");
+       SetStop(true);
+    }
+  };
+
+  useEffect(() => {
+    checkLocalStorage();
+    const interval = setInterval(() => {
+      // console.log("grdgdh")
+      checkLocalStorage();
+    }, 8000);
+
+    return () => {
+      clearInterval(interval);
+    };
   }, []);
 
   return (
@@ -110,7 +142,7 @@ export default function NavItems(props) {
             Contact Us
           </Link>
         </li>
-        {user ? (
+        {user  && !stop ? (
             <li className="flex items-center">
               <img
                 src={user.picture}
