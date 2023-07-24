@@ -50,7 +50,7 @@ export default function NavItems(props) {
     const interval = setInterval(() => {
       // console.log("grdgdh")
       checkLocalStorage();
-    }, 8000);
+    }, 3000);
 
     return () => {
       clearInterval(interval);
