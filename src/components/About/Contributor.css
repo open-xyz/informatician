@@ -1,0 +1,16 @@
+/* Custom styling for the contributor cards */
+.contributor-card {
+    text-align: center;
+    transition: transform 0.3s ease;
+    /* Adding smooth transition for 3D effect */
+}
+
+/* Applying 3D effect on hover */
+.contributor-card:hover {
+    transform: perspective(800px) rotateY(20deg);
+}
+/* 
+.slick-prev,
+.slick-next {
+    display: none !important;
+} */

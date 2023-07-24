@@ -17,7 +17,7 @@ export default function ImgSection(props) {
       <div className="img-black">
         <div className="container-fluid" style={{ padding: "0px 30px" }}>
           <div className="row">
-            <div style={{ height: "60px" }}></div>
+            <div style={{ height: "100px" }}></div>
             <div className="inner">
               <div className="inner-one inner-two"></div>
               <div className="inner-content">

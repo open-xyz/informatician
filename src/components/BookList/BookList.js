@@ -1,22 +1,26 @@
-import React, { useState, useEffect, useRef } from "react";
-import "./BookList.css";
+import React, { useRef, useState } from "react";
 import ScrollToTopButton from "../../components/ScrollButton/ScrollButton";
+import Books from "../Home/Books";
+import BookCards from "./BookCard";
+import "./BookList.css";
 // import Card from "../Card";
-import { searchBooks } from "../../utils/searchBooks";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
+import { Autoplay, Navigation, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
-import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper";
+import { Quotes, categories } from "./BookData";
 
 export default function BookList(props) {
   const [books, setBooks] = useState([]);
-  const [bookName, setBookName] = useState("");
+  const [searchQuery, setSerachQuery] = useState("");
+  const [filteredBooks, setFilteredBooks] = useState([]);
   const cardContainerRef = useRef(null);
   const cardWidthRef = useRef(0);
+  const [hasSearched, setHasSearched] = useState(false);
 
   // useEffect(() => {
   //   if (bookName !== "") {
@@ -37,13 +41,21 @@ export default function BookList(props) {
   async function handleClick(e) {
     e.preventDefault();
     try {
-      const result = await searchBooks(bookName);
-
-      setBooks(result);
+      const regex = new RegExp(searchQuery, "i");
+      setFilteredBooks(
+        Books.filter(
+          (element) =>
+            regex.test(element.title) ||
+            regex.test(element.author) ||
+            regex.test(element.isbn)
+        )
+      );
+      setHasSearched(true);
     } catch (err) {
       console.log(err);
     }
   }
+  const theme = props.theme;
 
   /*   useEffect(() => {
     const cardContainer = cardContainerRef.current;
@@ -137,6 +149,16 @@ export default function BookList(props) {
     },
   };
 
+  const handleCopyToClipboard = (quoteText) => {
+    const textArea = document.createElement("textarea");
+    textArea.value = quoteText;
+    document.body.appendChild(textArea);
+    textArea.select();
+    document.execCommand("copy");
+    document.body.removeChild(textArea);
+    alert("Quote copied to clipboard!");
+  };
+
   return (
     <>
       <div className="book-list-container">
@@ -150,11 +172,10 @@ export default function BookList(props) {
             <input
               id="default-search"
               className="search-input"
-              onChange={(event) => setBookName(event.target.value)}
+              onChange={(event) => setSerachQuery(event.target.value)}
               placeholder="Title / Author / ISBN"
               required
             />
-
             <button type="submit" id="search-button-2" onClick={handleClick}>
               <div className="search-icon">
                 <img
@@ -172,91 +193,42 @@ export default function BookList(props) {
           Select Categories
         </div>
         <div className="hypertext-links">
-          <div>
-            <a href="#" className="link">
-              Art
-            </a>
-            <a href="#" className="link">
-              Biography
-            </a>
-            <a href="#" className="link">
-              Business
-            </a>
-            <a href="#" className="link">
-              Children's
-            </a>
-            <a href="#" className="link">
-              Classics
-            </a>
-            <a href="#" className="link">
-              Christian
-            </a>
-          </div>
-
-          <div>
-            <a href="#" className="link">
-              Comics
-            </a>
-            <a href="#" className="link">
-              Cookbooks
-            </a>
-            <a href="#" className="link">
-              Ebooks
-            </a>
-            <a href="#" className="link">
-              Fantasy
-            </a>
-            <a href="#" className="link">
-              Fiction
-            </a>
-            <a href="#" className="link">
-              Novel
-            </a>
-          </div>
-
-          <div>
-            <a href="#" className="link">
-              History
-            </a>
-            <a href="#" className="link">
-              Horror
-            </a>
-            <a href="#" className="link">
-              Music
-            </a>
-            <a href="#" className="link">
-              Mystery
-            </a>
-            <a href="#" className="link">
-              Non-Fiction
-            </a>
-            <a href="#" className="link">
-              Poetry
-            </a>
-          </div>
-
-          <div>
-            <a href="#" className="link">
-              Psychology
-            </a>
-            <a href="#" className="link">
-              Prejudice
-            </a>
-            <a href="#" className="link">
-              Romance
-            </a>
-            <a href="#" className="link">
-              Science
-            </a>
-            <a href="#" className="link">
-              Thriller
-            </a>
-            <a href="#" className="link">
-              Universe
-            </a>
-          </div>
+          {categories.map((list, index) => {
+            return (
+              <div key={index}>
+                {list.map((category) => {
+                  return (
+                    <a href="#" key={category} className="link">
+                      {category}
+                    </a>
+                  );
+                })}
+              </div>
+            );
+          })}
         </div>
 
+        <div className="book-holder">
+          {filteredBooks.length > 0 &&
+            filteredBooks.map((item) => {
+              return (
+                <>
+                  <div className="book_card-container ">
+                    <BookCards
+                      imgName={item.img}
+                      title={item.title}
+                      type={item.type}
+                      author={item.author}
+                      description={item.description}
+                    ></BookCards>
+                  </div>
+                </>
+              );
+            })}
+          {filteredBooks.length === 0 && hasSearched && (
+            <div>No results found</div>
+          )}
+        </div>
         {/* <span className="book-list-title text-center">Book List</span> */}
 
         {/* {
@@ -285,165 +257,272 @@ export default function BookList(props) {
 
         <div className="carousel">
           <Swiper
-            slidesPerView={3}
+            breakpoints={{
+              480: { slidesPerView: 1 },
+              1024: { slidesPerView: 3 },
+            }}
             spaceBetween={25}
             loop={true}
-            autoplay={true}
+            autoplay={false}
             pagination={{ clickable: true }}
             modules={[Pagination, Navigation, Autoplay]}
             className="mySwiper slide"
           >
             <div className="book_card-container" ref={cardContainerRef}>
-              <SwiperSlide>
+              <SwiperSlide
+                style={{
+                  backgroundColor: theme === "dark" ? "#161313" : "#eff6ff",
+                  color: theme === "dark" ? "#1857A0" : "black",
+                }}
+              >
                 <div className="book_card">
                   <div
-                    className={`book_card-content ${
-                      props.theme === "dark" ? "text-black" : ""
-                    }`}
+                    className={`book_card-content ${props.theme === "dark" ? "text-black" : ""
+                      }`}
                   >
-                    <img
-                      loading="lazy"
-                      className="book_quote_img"
-                      src={swipeDetails.slideOne.authorImage}
-                      alt={swipeDetails.slideOne.authorName}
-                    />
-                    <h4>-{swipeDetails.slideOne.authorName}</h4>
-                    <p>{swipeDetails.slideOne.authorquote}</p>
+                    <div className=" items-center flex flex-col">
+                      <img
+                        loading="lazy"
+                        className="book_quote_img ring-offset-2 ring-2"
+                        src={Quotes.slideOne.image}
+                        alt={Quotes.slideOne.title}
+                      />
+                      <h4 style={{}}>- {Quotes.slideOne.title}</h4>
+                    </div>
+                    <div>
+                      <p
+                        style={{
+                          color: theme === "dark" ? "#3c5f81" : "black",
+                        }}
+                      >
+                        {Quotes.slideOne.quote}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide
+                style={{
+                  backgroundColor: theme === "dark" ? "#161313" : "#eff6ff",
+                  color: theme === "dark" ? "#1857A0" : "black",
+                }}
+              >
+                <div className="book_card">
+                  <div
+                    className={`book_card-content ${props.theme === "dark" ? "text-black" : ""
+                      }`}
+                  >
+                    <div className=" items-center flex flex-col">
+                      <img
+                        loading="lazy"
+                        className="book_quote_img"
+                        src={Quotes.slideTwo.image}
+                        alt={Quotes.slideTwo.title}
+                      />
+                      <h4>- {Quotes.slideTwo.title}</h4>
+                    </div>
+                    <div>
+                      <p
+                        style={{
+                          color: theme === "dark" ? "#3c5f81" : "black",
+                        }}
+                      >
+                        {Quotes.slideTwo.quote}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide
+                style={{
+                  backgroundColor: theme === "dark" ? "#161313" : "#eff6ff",
+                  color: theme === "dark" ? "#1857A0" : "black",
+                }}
+              >
+                <div className="book_card">
+                  <div
+                    className={`book_card-content ${props.theme === "dark" ? "text-black" : ""
+                      }`}
+                  >
+                    <div className=" items-center flex flex-col">
+                      <img
+                        loading="lazy"
+                        className="book_quote_img"
+                        style={{ width: "150px" }}
+                        src={Quotes.slideThree.image}
+                        alt={Quotes.slideThree.title}
+                      />
+                      <h4>- {Quotes.slideThree.title}</h4>
+                    </div>
+                    <p
+                      style={{ color: theme === "dark" ? "#3c5f81" : "black" }}
+                    >
+                      {Quotes.slideThree.quote}
+                    </p>
                   </div>
                 </div>
               </SwiperSlide>
 
-              <SwiperSlide>
+              <SwiperSlide
+                style={{
+                  backgroundColor: theme === "dark" ? "#161313" : "#eff6ff",
+                  color: theme === "dark" ? "#1857A0" : "black",
+                }}
+              >
                 <div className="book_card">
                   <div
-                    className={`book_card-content ${
-                      props.theme === "dark" ? "text-black" : ""
-                    }`}
+                    className={`book_card-content ${props.theme === "dark" ? "text-black" : ""
+                      }`}
                   >
-                    <img
-                      loading="lazy"
-                      className="book_quote_img"
-                      src={swipeDetails.slideTwo.authorImage}
-                      alt={swipeDetails.slideTwo.authorName}
-                    />
-                    <h4>- {swipeDetails.slideTwo.authorName}</h4>
-                    <p>{swipeDetails.slideTwo.authorquote}</p>
+                    <div className=" items-center flex flex-col">
+                      <img
+                        loading="lazy"
+                        className="book_quote_img"
+                        src={Quotes.slideFour.image}
+                        alt={Quotes.slideFour.title}
+                      />
+                      <h4>- {Quotes.slideFour.title}</h4>
+                    </div>
+                    <div>
+                      <p
+                        style={{
+                          color: theme === "dark" ? "#3c5f81" : "black",
+                        }}
+                      >
+                        {Quotes.slideFour.quote}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </SwiperSlide>
 
-              <SwiperSlide>
+              <SwiperSlide
+                style={{
+                  backgroundColor: theme === "dark" ? "#161313" : "#eff6ff",
+                  color: theme === "dark" ? "#1857A0" : "black",
+                }}
+              >
                 <div className="book_card">
                   <div
-                    className={`book_card-content ${
-                      props.theme === "dark" ? "text-black" : ""
-                    }`}
+                    className={`book_card-content ${props.theme === "dark" ? "text-black" : ""
+                      }`}
                   >
-                    <img
-                      loading="lazy"
-                      className="book_quote_img"
-                      style={{ width: "150px" }}
-                      src={swipeDetails.slideThree.authorImage}
-                      alt={swipeDetails.slideThree.authorName}
-                    />
-                    <h4>- {swipeDetails.slideThree.authorName}</h4>
-                    <p>{swipeDetails.slideThree.authorquote}</p>
+                    <div className=" items-center flex flex-col">
+                      <img
+                        loading="lazy"
+                        className="book_quote_img"
+                        src={Quotes.slideFive.image}
+                        alt={Quotes.slideFive.title}
+                      />
+                      <h4>- {Quotes.slideFive.title}</h4>
+                    </div>
+                    <div>
+                      <p
+                        style={{
+                          color: theme === "dark" ? "#3c5f81" : "black",
+                        }}
+                      >
+                        {Quotes.slideFive.quote}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide
+                style={{
+                  backgroundColor: theme === "dark" ? "#161313" : "#eff6ff",
+                  color: theme === "dark" ? "#1857A0" : "black",
+                }}
+              >
+                <div className="book_card">
+                  <div
+                    className={`book_card-content ${props.theme === "dark" ? "text-black" : ""
+                      }`}
+                  >
+                    <div className=" items-center flex flex-col">
+                      <img
+                        loading="lazy"
+                        className="book_quote_img"
+                        src={Quotes.slideSix.image}
+                        alt={Quotes.slideSix.title}
+                      />
+                      <h4>- {Quotes.slideSix.title}</h4>
+                    </div>
+                    <div>
+                      <p
+                        style={{
+                          color: theme === "dark" ? "#3c5f81" : "black",
+                        }}
+                      >
+                        {Quotes.slideSix.quote}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </SwiperSlide>
 
-              <SwiperSlide>
+              <SwiperSlide
+                style={{
+                  backgroundColor: theme === "dark" ? "#161313" : "#eff6ff",
+                  color: theme === "dark" ? "#1857A0" : "black",
+                }}
+              >
                 <div className="book_card">
                   <div
-                    className={`book_card-content ${
-                      props.theme === "dark" ? "text-black" : ""
-                    }`}
+                    className={`book_card-content ${props.theme === "dark" ? "text-black" : ""
+                      }`}
                   >
-                    <img
-                      loading="lazy"
-                      className="book_quote_img"
-                      src={swipeDetails.slideFour.authorImage}
-                      alt={swipeDetails.slideFour.authorName}
-                    />
-                    <h4>- {swipeDetails.slideFour.authorName}</h4>
-                    <p>{swipeDetails.slideFour.authorquote}</p>
+                    <div className=" items-center flex flex-col">
+                      <img
+                        loading="lazy"
+                        className="book_quote_img"
+                        src={Quotes.slideSeven.image}
+                        alt={Quotes.slideSeven.title}
+                      />
+                      <h4>- {Quotes.slideSeven.title}</h4>
+                    </div>
+                    <div>
+                      <p
+                        style={{
+                          color: theme === "dark" ? "#3c5f81" : "black",
+                        }}
+                      >
+                        {Quotes.slideSeven.quote}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </SwiperSlide>
-
-              <SwiperSlide>
+              <SwiperSlide
+                style={{
+                  backgroundColor: theme === "dark" ? "#161313" : "#eff6ff",
+                  color: theme === "dark" ? "#1857A0" : "black",
+                }}
+              >
                 <div className="book_card">
                   <div
-                    className={`book_card-content ${
-                      props.theme === "dark" ? "text-black" : ""
-                    }`}
+                    className={`book_card-content ${props.theme === "dark" ? "text-black" : ""
+                      }`}
                   >
-                    <img
-                      loading="lazy"
-                      className="book_quote_img"
-                      src={swipeDetails.slideFive.authorImage}
-                      alt={swipeDetails.slideFive.authorName}
-                    />
-                    <h4>- {swipeDetails.slideFive.authorName}</h4>
-                    <p>{swipeDetails.slideFive.authorquote}</p>
-                  </div>
-                </div>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <div className="book_card">
-                  <div
-                    className={`book_card-content ${
-                      props.theme === "dark" ? "text-black" : ""
-                    }`}
-                  >
-                    <img
-                      loading="lazy"
-                      className="book_quote_img"
-                      src={swipeDetails.slideSix.authorImage}
-                      alt={swipeDetails.slideSix.authorName}
-                    />
-                    <h4>- {swipeDetails.slideSix.authorName}</h4>
-                    <p>{swipeDetails.slideSix.authorquote}</p>
-                  </div>
-                </div>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <div className="book_card">
-                  <div
-                    className={`book_card-content ${
-                      props.theme === "dark" ? "text-black" : ""
-                    }`}
-                  >
-                    <img
-                      loading="lazy"
-                      className="book_quote_img"
-                      src={swipeDetails.slideSeven.authorImage}
-                      alt={swipeDetails.slideSeven.authorName}
-                    />
-                    <h4>- {swipeDetails.slideSeven.authorName}</h4>
-                    <p>{swipeDetails.slideSeven.authorquote}</p>
-                  </div>
-                </div>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <div className="book_card">
-                  <div
-                    className={`book_card-content ${
-                      props.theme === "dark" ? "text-black" : ""
-                    }`}
-                  >
-                    <img
-                      loading="lazy"
-                      className="book_quote_img"
-                      style={{ width: "150px" }}
-                      src={swipeDetails.slideEight.authorImage}
-                      alt={swipeDetails.slideEight.authorName}
-                    />
-                    <h4>- {swipeDetails.slideEight.authorName}</h4>
-                    <p>{swipeDetails.slideEight.authorquote}</p>
+                    <div className=" items-center flex flex-col">
+                      <img
+                        loading="lazy"
+                        className="book_quote_img"
+                        style={{ width: "150px" }}
+                        src={Quotes.slideEight.image}
+                        alt={Quotes.slideEight.title}
+                      />
+                      <h4>- {Quotes.slideEight.title}</h4>
+                    </div>
+                    <div>
+                      <p
+                        style={{
+                          color: theme === "dark" ? "#3c5f81" : "black",
+                        }}
+                      >
+                        {Quotes.slideEight.quote}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </SwiperSlide>

@@ -1,10 +1,14 @@
 import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, NavLink } from "react-router-dom";
 import { searchBooks } from "../../utils/searchBooks";
 import NavItems from "./NavItems/NavItems.js";
 import "./Navbar.css";
 import lightLogo from "../../assets/logos/light_logo.png";
 import darkLogo from "../../assets/logos/dark_logo.png";
+
+const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
 function handleSubmit(event) {
   event.preventDefault(); // Prevent the default form submission
@@ -17,11 +21,19 @@ export default function Navbar(props) {
 
   const handleOptionClick = () => {
     setClicked(false);
+    scrollToTop();
   };
   const search = async (e) => {
+    const query = e.target.value.trim(); // Remove leading/trailing whitespace from the query
+    if (query === "") {
+      setBooks([]); // Clear the books state to hide search results
+      return; // Return early if there's no query
+    }
+    
     try {
-      const result = await searchBooks(e.target.value);
-      result.length > 0 && setBooks(result.slice(0, 5));
+      console.log("called");
+      const result = await searchBooks(query);
+      result.length > 0 ? setBooks(result.slice(0, 5)) : setBooks([]); // Update books state based on the search result
     } catch (err) {
       throw err;
     }
@@ -32,7 +44,7 @@ export default function Navbar(props) {
       className="rounded-t-none  fixed-top box-shadow: 0 4px 6px -1px"
       style={{ background: props.theme === "dark" ? "#001229" : "#eff6ff" }}
     >
-      <Link to="/" className="logo">
+      <Link to="/" onClick={scrollToTop} className="logo">
         <img
           loading='lazy'
           src={themeImage}
@@ -54,17 +66,32 @@ export default function Navbar(props) {
               <i className="fa-solid fa-search"></i>
             </button>
           </form>
-          <div className="w-52 bg-gray-100 absolute mx-auto px-2">
-            {books.length > 0 &&
-              books.map((book, index) => (
-                <div
-                  className="flex justify-center items-center p-3 border-b-4 my-2 transition duration-200 hover:bg-gray-300"
-                  key={index}
-                >
-                  <h1>{book?.volumeInfo.title}</h1>
-                </div>
-              ))}
-          </div>
+          <div className="w-98 bg-gray-100 absolute mx-auto p-2 rounded-md shadow-lg">
+          {books.length > 0 &&
+  books.map((book, index) => (
+    <Link to={book?.selfLink} key={index} className="hover:no-underline">
+      <div
+        className="flex items-center p-2 border-b-2 my-1 transition duration-200 hover:bg-gray-300 cursor-pointer"
+      >
+        <img
+          src={book?.volumeInfo.imageLinks?.thumbnail || "placeholder.png"}
+          alt="Book Cover"
+          className="w-12 h-16 object-cover mr-2"
+        />
+        <div className="flex-1">
+          <h1 className="text-lg font-semibold text-blue-600 hover:text-blue-800 line-clamp-1">
+            {book?.volumeInfo.title}
+          </h1>
+          <p className="text-sm text-gray-500 line-clamp-2">
+            {book?.volumeInfo.authors?.join(", ")}
+          </p>
+        </div>
+      </div>
+    </Link>
+  ))}
+</div>
+
+
         </div>
       </div>
       <div className="mobile-nav">
@@ -84,7 +111,7 @@ export default function Navbar(props) {
             handleOptionClick={handleOptionClick}
             theme={props.theme}
           />
-          <button onClick={props.toggleTheme} className="mr-8">
+          <button onClick={props.toggleTheme} className="mr-10">
             {props.theme === "light" ? (
               <svg
                 xmlns="http://www.w3.org/2000/svg"

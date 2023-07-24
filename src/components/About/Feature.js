@@ -16,26 +16,35 @@ export default function Feature(props) {
   const Theme = props.theme === "dark" ? "#161313" : "";
   return (
     <div className="row feature d-flex justify-content-evenly text-center">
-      <h1 className="text-center fw-bold fs-1">Features</h1>
+      <h1 className="heading text-center fw-bold fs-1">Features</h1>
       <p className="text-center mt-4 mb-5">Features We provide</p>
 
-      <Carousel
-        showArrows={true}
-        showThumbs={false}
-        className="carousel-container"
-        autoPlay={true}
-        interval={2000}
-        infiniteLoop={true}
-      >
-        <div className="feature_card_outer">
-          <div className="feature_card" style={{ background: Theme }}>
+      <Carousel showArrows={true} showThumbs={false} className="carousel-container relative" autoPlay={true} interval={2000} infiniteLoop={true}
+        renderArrowPrev={(clickHandler, hasPrev, labelPrev) =>
+          hasPrev && (
+              <button onClick={clickHandler} className="absolute z-10 left-0 top-1/3 h-12 w-12 text-4xl">
+                  {`<`}
+              </button>
+          )
+        }
+        renderArrowNext={(clickHandler, hasNext, labelNext) =>
+          hasNext && (
+              <button onClick={clickHandler} className="absolute z-10 right-0 top-1/3 h-12 w-12 text-4xl">
+                  {`>`}
+              </button>
+          )
+        }>
+      <div className="feature_card_outer">
+          <div className="feature_card" style={{ background: props.theme === "dark" ? '#192734' : '' }}>
             <MenuBookIcon className="icons book" />
             <p>Read Books</p>
           </div>
           <div className="feature_card" style={{ background: Theme }}>
+
             <UploadIcon className="icons upload text-info" />
             <p>Upload Books</p>
           </div>
+
           <div className="feature_card" style={{ background: Theme }}>
             <MoneyOffIcon className="dollar icons text-warning" />
             <p>Free of Cost</p>

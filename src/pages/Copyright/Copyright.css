@@ -1,66 +1,75 @@
 .copyright {
-    padding: 50px 0;
-    background-color: var(--bgLight);
+  background-color: var(--bgLight);
+  padding: 20px;
+}
+
+ .copyright-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+ .copyright-title {
+  margin-top: 80px;
+  color: #4f63c3;
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 40px;
+  animation: pulse 1s infinite;
+}
+
+ .copyright-section {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+  animation: fade-in 1s ease;
+}
+
+ .copyright-section:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+ .copyright-section-title {
+  color: #555;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+ .copyright-content {
+  color: #777;
+  font-size: 16px;
+}
+
+.contact-email {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-email:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
   }
-  
-  .copyright-container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 20px;
+  50% {
+    transform: scale(1.05);
   }
-  
-  .copyright-title {
-    font-size: 28px;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 30px;
-    padding-top: 40px;
+  100% {
+    transform: scale(1);
   }
-  
-  .copyright-section {
-    margin-bottom: 40px;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  .copyright-section-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .copyright-subsection-title {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .copyright-content {
-    text-align: justify;
-    line-height: 1.5;
-  }
-  
-  .copyright-content p {
-    margin-bottom: 15px;
-  }
-  
-  .copyright-content ul {
-    margin-bottom: 15px;
-    padding-left: 20px;
-  }
-  
-  .copyright-content ul li {
-    margin-bottom: 5px;
-  }
-  
-  .copyright-content a {
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  .copyright-content a:hover {
-    text-decoration: underline;
-  }
-  
-  .copyright-content .contact-email {
-    font-weight: bold;
-  }
-  
+}
