@@ -12,6 +12,9 @@ import Contributors from "../../components/About/Contributors";
 import "aos/dist/aos.css";
 import '../../components/About/Feature.css'
 
+
+
+
 const About = (props) => {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
 

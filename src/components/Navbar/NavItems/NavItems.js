@@ -1,4 +1,5 @@
 import "../Navbar.css";
+import {useEffect,useState} from "react"
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark } from "@fortawesome/free-regular-svg-icons";
@@ -7,7 +8,23 @@ const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 };
 
+const getUserFromLocalStorage = () => {
+  const userJSON = localStorage.getItem('user');
+  return userJSON ? JSON.parse(userJSON) : null;
+};
+
+
+
 export default function NavItems(props) {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const userJSON = localStorage.getItem("user");
+    if (userJSON) {
+      setUser(JSON.parse(userJSON));
+    }
+  }, []);
+
   return (
     <div style={{}}>
       <ul
@@ -93,21 +110,44 @@ export default function NavItems(props) {
             Contact Us
           </Link>
         </li>
-        <li>
-          <Link
-            to="/login"
-            className={
-              props.location.pathname === "/login"
-                ? "active"
-                : props.theme === "dark"
-                ? "text-white"
-                : "text-dark"
-            }
-            onClick={props.handleOptionClick}
-          >
-            Login
-          </Link>
-        </li>
+        {user ? (
+            <li className="flex items-center">
+              <img
+                src={user.picture}
+                alt={user.name}
+                className="w-8 h-8 rounded-full"
+              />
+              <Link
+                to="/profile"
+                className={
+                  props.location.pathname === '/login'
+                    ? 'active'
+                    : props.theme === 'dark'
+                    ? 'text-white'
+                    : 'text-dark'
+                }
+                onClick={props.handleOptionClick}
+              >
+                {user.name}
+              </Link>
+            </li>
+          ) : (
+            <li>
+              <Link
+                to="/login"
+                className={
+                  props.location.pathname === '/login'
+                    ? 'active'
+                    : props.theme === 'dark'
+                    ? 'text-white'
+                    : 'text-dark'
+                }
+                onClick={props.handleOptionClick}
+              >
+                Login
+              </Link>
+            </li>
+          )}
 
         <div className="flex items-center">
           <li>
