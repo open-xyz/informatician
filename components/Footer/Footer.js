@@ -39,18 +39,18 @@ const Footer = () => {
       <footer>
         <div className="mx-auto w-full max-w-screen-xl py-6 lg:py-4">
           <div className="footer_body">
-            <div className=" footer_main mb-6 md:mb-0">
-              <Link href="/" onClick={scrollToTop} className="logo_img">
+            <div className="footer_main mb-6 md:mb-0 mt-0 py-2">
+              <Link href="/" onClick={scrollToTop} >
                 <Image
                   src={darkLogo}
                   className="hover:shadow "
                   alt="Informatician logo"
-                  width="300"
+                  width="200"
                   height="200"
                 />
               </Link>
             </div>
-            <div className="footer_inner_body">
+            <div className="footer_inner_body mt-2">
               {footerComponents?.map((item, index) => {
                 return (
                   <div key={index} className="footer_inner_body_item">
@@ -61,7 +61,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="copyright_footer">
-            <span className={`text-sm font-bold   sm:text-center `}>
+            <span className={`text-sm font-bold sm:text-center text-blue-500`}>
               © {year}{" "}
               <a href="/" onClick={scrollToTop} className="hover:underline">
                 Informatician™

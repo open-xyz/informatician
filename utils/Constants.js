@@ -1,4 +1,9 @@
 export const footerItems = [
+  [
+    { itemName: "Benefits", itemLinks: "/benefits" },
+    { itemName: "Book Formats", itemLinks: "/formats" },
+    { itemName: "Genre", itemLinks: "/genre" },
+  ],
     [
       { itemName: "About Us", itemLinks: "/about" },
       { itemName: "Our Team", itemLinks: "/team" },
@@ -19,7 +24,7 @@ export const footerItems = [
     ],
   ];
 
-  export const columnNames = ["About", "Support", "Legal"];
+  export const columnNames = ["Explore","About", "Support", "Legal"];
 
   export const backendURL = "https://informaticonserver.onrender.com";
 
