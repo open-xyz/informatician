@@ -1,13 +1,9 @@
 const jwt = require('jsonwebtoken');
 
 const checkAuth = (req, res, next) => {
+  try{
   const authorization = req.headers['authorization'];
-  const token = authorization && authorization.split(' ')[1];
-
-  if (token == null)
-    return res
-      .status(401)
-      .json({ success: false, message: 'No authentication' });
+  const token =  authorization.split(' ')[1];
 
   jwt.verify(
     token,
@@ -25,6 +21,16 @@ const checkAuth = (req, res, next) => {
       next();
     }
   );
+  }catch(err){
+    res
+      .status(401)
+      .json({
+        success: false,
+        message: "Authorization Failed, Please Login.",
+        type: "jwt",
+      });
+    console.log(err);
+  }
 };
 
 module.exports = checkAuth;

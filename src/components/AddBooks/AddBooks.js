@@ -7,6 +7,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import validate from "../../utils/validation";
 import { backendURL } from "../../utils/impURLs";
+import { useNavigate } from "react-router-dom";
 
 const AddBooks = (props) => {
   const [book, setBook] = useState({
@@ -24,6 +25,8 @@ const AddBooks = (props) => {
     publisher: true,
     pages: true,
   });
+
+  const navigateTo = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -60,7 +63,8 @@ const AddBooks = (props) => {
         toast.success("Book details added!!Upload the book.");
         localStorage.setItem("bookId", res.data);
       } catch (err) {
-        toast.error(err.response.data.error);
+        toast.error(err.response.data.message);
+        if(err.response.data.type === "jwt") navigateTo("/login")
         console.log(err);
       }
     } else {
