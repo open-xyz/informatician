@@ -1,32 +1,31 @@
 import React from 'react';
-import { createRoot } from 'react-dom/client'; // Import createRoot from "react-dom/client" instead of "react-dom"
+import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ToastContainer } from 'react-toastify';
 import { GoogleOAuthProvider } from '@react-oauth/google';
-import axios from 'axios';
 
-(async () => {
-  try {
-    const response = await axios.get("http://localhost:5000/ClientId");
-    const { clientid } = response.data;
-    console.log(clientid);
+const root = ReactDOM.createRoot(document.getElementById('root'));
 
-    createRoot(document.getElementById('root')).render( // Use createRoot from "react-dom/client"
-      <GoogleOAuthProvider clientId={clientid}>
+
+root.render(
+
+     <GoogleOAuthProvider
+    clientId="829264938526-sepkur9dj7nam4jqldl8pbqf6osck2he.apps.googleusercontent.com">
         <React.StrictMode>
-          <App />
-          <ToastContainer />
+        <App />
+    <ToastContainer />
         </React.StrictMode>
-      </GoogleOAuthProvider>
-    );
-  } catch (error) {
-    console.error('Failed to fetch clientId:', error);
-  }
-})();
+
+    </GoogleOAuthProvider>
+
+ 
+);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+

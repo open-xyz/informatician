@@ -63,7 +63,7 @@ const Login = () => {
       <h2 className=" ml-[140px] w-[650px]  text-center mb-4 mx-auto text-2xl md:text-3xl font-bold text-indigo-600">
       {user ? "Welcome  to Informatician" : "Login to Informatician"}
           </h2>
-      <div  className="ml-[140px] w-[700px]  px-4 py-2 rounded-md text-lg text-center text-white hover:bg-indigo-800 duration-200 ease-out">
+      <div  className="ml-[140px] w-[500px]  px-4 py-2 rounded-md text-lg text-center text-white hover:bg-indigo-800 duration-200 ease-out">
       <GoogleLogin SetisLoggedIn={SetisLoggedIn} />
       </div>
      
