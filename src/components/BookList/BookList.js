@@ -93,6 +93,61 @@ export default function BookList(props) {
   // const booksComponent = books.map((book) => (
   //   <Card name={book.name} author={book.author}></Card>
   // ));
+  const swipeDetails = {
+    slideOne: {
+      authorName: "Stephen King",
+      authorImage: "https://lit216.pbworks.com/f/1363869393/stephen%20king.jpg",
+      authorquote:
+        "If you don't have time to read, you don't have the time to write. Simple as that.",
+    },
+    slideTwo: {
+      authorName: "Jack Kerouac",
+      authorImage:
+        "http://laurencecoupe.co.uk/wp-content/uploads/2018/01/kerouac-picture.jpg",
+      authorquote:
+        "One day I will find the right words, and they will be simple.",
+    },
+    slideThree: {
+      authorName: "Saul Bellow",
+      authorImage:
+        "https://media.newyorker.com/photos/59096d586552fa0be682ff3d/master/w_1920,c_limit/Brody-Saul-Bellow-Film-Critic.jpg",
+      authorquote:
+        "You never have to change anything you got up in the middle of the night to write.",
+    },
+    slideFour: {
+      authorName: "Aldous Huxley",
+      authorImage:
+        "https://images2.minutemediacdn.com/image/upload/c_fill,w_1080,ar_16:9,f_auto,q_auto,g_auto/shape%2Fcover%2Fsport%2Fgettyimages-2665140-a1c77ccabe8660fb5123c8b6c5741316.jpg",
+      authorquote:
+        "Words can be like X-rays if you use them properly they'll go through anything. You read and you're pierced.",
+    },
+    slideFive: {
+      authorName: "Anne Frank",
+      authorImage:
+        "https://media.npr.org/assets/img/2015/03/13/ap070308060493-67009388c842c192821be288e72bbc06977b72ce-s400-c85.webp",
+      authorquote:
+        "I can shake off everything as I write; my sorrows disappear, my courage is reborn.",
+    },
+    slideSix: {
+      authorName: "Sylvia Plath",
+      authorImage: "https://ychef.files.bbci.co.uk/1600x900/p09pxt8c.webp",
+      authorquote: "Let me live, love, and say it well in good sentences.",
+    },
+    slideSeven: {
+      authorName: "John Steinbeck",
+      authorImage:
+        "https://www.theparisreview.org/il/c625e7c0b9/large/JohnSteinbeck-thumb.jpg",
+      authorquote:
+        "Ideas are like rabbits. You get a couple and learn how to handle them, and pretty soon you have a dozen.",
+    },
+    slideEight: {
+      authorName: "Madeleine L'Engle",
+      authorImage:
+        "https://upload.wikimedia.org/wikipedia/en/c/c9/Madeleine_lengle.jpg",
+      authorquote:
+        "You have to write the book that wants to be written & if the book will be too difficult for grown-ups, then you write it for children.",
+    },
+  };
 
   const handleCopyToClipboard = (quoteText) => {
     const textArea = document.createElement("textarea");
@@ -174,7 +229,6 @@ export default function BookList(props) {
             <div>No results found</div>
           )}
         </div>
-
         {/* <span className="book-list-title text-center">Book List</span> */}
 
         {/* {
@@ -247,7 +301,6 @@ export default function BookList(props) {
                   </div>
                 </div>
               </SwiperSlide>
-
               <SwiperSlide
                 style={{
                   backgroundColor: theme === "dark" ? "#161313" : "#eff6ff",
@@ -280,7 +333,6 @@ export default function BookList(props) {
                   </div>
                 </div>
               </SwiperSlide>
-
               <SwiperSlide
                 style={{
                   backgroundColor: theme === "dark" ? "#161313" : "#eff6ff",
@@ -376,7 +428,6 @@ export default function BookList(props) {
                   </div>
                 </div>
               </SwiperSlide>
-
               <SwiperSlide
                 style={{
                   backgroundColor: theme === "dark" ? "#161313" : "#eff6ff",
@@ -442,7 +493,6 @@ export default function BookList(props) {
                   </div>
                 </div>
               </SwiperSlide>
-
               <SwiperSlide
                 style={{
                   backgroundColor: theme === "dark" ? "#161313" : "#eff6ff",
