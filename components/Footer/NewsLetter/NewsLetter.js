@@ -1,101 +1,97 @@
+"use client"
+import Image from 'next/image';
+import './NewsLetter.css';
+import React, { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { backendURL } from '@/utils/Constants';
 
-"use client";
 
-import "./NewsLetter.css";
-import React from "react";
-import { toast } from "react-toastify";
+export default function NewsLetter() {
+  const [isInputValid, setInputValid] = useState(false);
+  const [isSubmitted, setSubmitted] = useState(false);
 
-class NewsLetter extends React.Component {
-  handleClick = async (e) => {
+  const handleInputChange = (e) => {
+    setInputValid(e.target.checkValidity());
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    let emailInput = document.getElementById("simple-search");
-    const email = emailInput.value;
-    console.log(email);
 
     try {
-      const requestOptions = {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: email }),
-      };
-
       const response = await fetch(
-        "http://localhost:5000/api/addUser",
-        requestOptions
+        `${backendURL}/api/addUser`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email: e.target.email.value }),
+        }
       );
-      console.log(response);
 
       if (response.status === 200) {
-        toast.success("Subscribed", {
-          position: "top-center",
-          autoClose: 3000,
-          theme: "colored",
+        console.log("Subscribed");
+        toast.success("Subscribed", { position: 'top-center', autoClose: 3000, theme: 'colored' })
+      } else {
+        console.log("Failed to subscribe");
+        toast.error("Failed to subscribe. Please try again!", {
+          position: "top-right",
+          autoClose: 5000,
+         
         });
-        emailInput = "";
-      } else
-        toast.error("Already Subscribed", {
-          position: "top-center",
-          autoClose: 3000,
-          theme: "colored",
-        });
+      }
     } catch (error) {
       console.error(error);
-      toast.error("There was a problem with server, Please try again!", {
-        position: "top-center",
-        autoClose: 3000,
-        theme: "colored",
-      });
+      toast.error("There was a problem with server, Please try again!", { position: 'top-center', autoClose: 3000, theme: 'colored' })
     }
+
+    setSubmitted(true);
   };
-  render() {
-    return (
-      <div className="news bg-cover bg-center bg-no-repeat min-h-180">
-        <div className="bg-black/50 h-[200px] bg-opacity-50 flex justify-center">
-          <div className="w-96 max-w-full">
-            <h4 className="head">Subscribe To Newsletter</h4>
-            <div className="flex max-sm:flex-col p-2 gap-2 md:gap-8">
-              <input
-                type="email"
-                className="form-input mr-2 sm:w-96 px-3 rounded-md focus:outline-0"
-                id="simple-search"
-                placeholder="Email ID"
-                required
-              />
-              <button
-                onClick={this.handleClick}
-                type="button"
-                className="px-2 h-9 border-[1.5px] border-red-700 rounded-md text-white hover:bg-red-700 duration-300"
-              >
-                Subscribe
-              </button>
-            </div>
-          </div>
+
+  return (
+    <div className="section">
+      <p className="section-heading">Subscribe to our Newsletter</p>
+      <div className="subscribe">
+        <div
+          className={`subscribe__image ${
+            isSubmitted ? 'subscribe__image--success' : ''
+          }`}
+        >
+          <Image src="https://user-images.githubusercontent.com/23297041/53905033-9570ad00-4058-11e9-809d-c090c0468264.png" alt="Subscribe Success" width={100} height={100}/>
         </div>
+        <div className="subscribe__text">
+          <p className="heading">Stay tuned</p>
+          <p className="subheading">
+            A newsletter about books, reading, and writing.
+          </p>
+        </div>
+        <form className="form" id="form" onSubmit={handleSubmit}>
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+            className={`subscribe__input input ${
+              isSubmitted ? 'disabled' : ''
+            }`}
+            onChange={handleInputChange}
+            disabled={isSubmitted}
+          />
+          <button
+            type="submit"
+            value="Subscribe"
+            className={`subscribe__btn btn ${
+              isInputValid ? 'btn--active' : ''
+            } ${isSubmitted ? 'btn--success' : ''}`}
+            disabled={isSubmitted}
+            id='btn'
+          >
+            {isSubmitted ? "You're on the list! 👍" : 'Subscribe'}
+          </button>
+        </form>
       </div>
-    );
-  }
+      <ToastContainer />
+    </div>
+  );
 }
-
-export default NewsLetter;
-
-// export default function NewsLetter() {
-//     return (
-//         <div className="news">
-//             <div className="black">
-//                 <div className="container">
-//                     <div className="row justify-content-center">
-//                         <div className="col-md-8 subscribe">
-//                             <h4 className="head">Subscribe To NewsLetter</h4>
-//                             <div className="d-flex p-2">
-//                                 <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="Email ID" />
-//                                 <button type="button" className="btn btn-danger" style={{marginLeft: '8px'}}>
-//                                     Subscribe
-//                                 </button>
-//                             </div>
-//                         </div>
-//                     </div>
-//                 </div>
-//             </div>
-//         </div>
-//     )
-// }
