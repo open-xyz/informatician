@@ -32,6 +32,11 @@ const FileUploadComponent = () => {
         toast.error("Choose a file to upload!");
       }
     } catch (error) {
+      if(error.response.data.type === "jwt"){
+      toast.error(error.response.data.message);
+      navigate("/login");
+      return;
+      }
       toast.error("Something went wrong!");
       console.error(error);
     }
