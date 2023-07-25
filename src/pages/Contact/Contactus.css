@@ -106,7 +106,8 @@ p {
 
 .social-icon-twitter,
 .social-icon-github,
-.social-icon-discord {
+.social-icon-discord,
+.social-icon-linkedin {
   display: flex;
   align-items: center;
   justify-content: center;
