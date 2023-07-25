@@ -32,9 +32,9 @@ const AddBooks = (props) => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-      setBook((prev) => {
-        return { ...prev, [name]: value };
-      });
+    setBook((prev) => {
+      return { ...prev, [name]: value };
+    });
     if (name !== "category" && name !== "img") {
       const message = validate[name](value);
       setError((prev) => {
@@ -55,31 +55,27 @@ const AddBooks = (props) => {
     });
 
     const bookInput = document.getElementById("upload-btn");
-    if(!bookInput.files.length > 0) {toast.error("Please upload book."); return}
-
+    if (!bookInput.files.length > 0) {
+      toast.error("Please upload book.");
+      return;
+    }
 
     if (submitable) {
       try {
-         toast.loading();
+        toast.loading();
         // Add Book data
         const res = await axios.post(`${backendURL}/api/book/add`, book);
         localStorage.setItem("bookId", res.data);
         const id = localStorage.getItem("bookId");
-        console.log("local: "+ id)
-        console.log(res)
+
         // Upload book pdf
         const formData = new FormData();
         formData.append("file", bookPdf);
-        const res2 =  await axios.post(
-          `${backendURL}/api/upload`,
-          formData
-        );
-        console.log(res2)
+        await axios.post(`${backendURL}/api/upload`, formData);
 
-         const res3 = await axios.put(`${backendURL}/api/book/` + id, {
+        await axios.put(`${backendURL}/api/book/` + id, {
           bookpdf: bookPdf.name,
         });
-        console.log(res3)
 
         toast.success("Book added Successfully!!");
         navigateTo("/success");
@@ -238,7 +234,11 @@ const AddBooks = (props) => {
                 ))}
               </select>
             </div>
-            <Upload formData={error} bookPdf={bookPdf} setBookPdf={setBookPdf}/>
+            <Upload
+              formData={error}
+              bookPdf={bookPdf}
+              setBookPdf={setBookPdf}
+            />
           </div>
           <button className="Buttonn" type="submit">
             Submit Book
