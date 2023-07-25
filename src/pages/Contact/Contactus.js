@@ -38,7 +38,7 @@ const Contact = () => {
 
     if (submitable) {
       console.log("called");
-      await fetch("http://localhost:5000/sendMail", {
+      await fetch("https://informaticonserver.onrender.com/sendMail", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -1,7 +1,7 @@
 import React from "react";
 import { toast } from "react-toastify";
 import axios from "axios";
-
+import { backendURL } from '../../../utils/impURLs';
 class Newsletter extends React.Component {
   handleClick = async (e) => {
     e.preventDefault();
@@ -17,12 +17,12 @@ class Newsletter extends React.Component {
       };
 
       const response = await fetch(
-        "http://localhost:5000/api/addUser",
+        `${backendURL}/api/addUser`,
         requestOptions
       );
       console.log(response)
 
-      axios.post('http://localhost:3001/send-email', { email })
+      axios.post(`${backendURL}/send-email`, { email })
         .then(response => {
           console.log(response.data);
         })
