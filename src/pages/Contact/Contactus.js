@@ -263,6 +263,16 @@ const Contact = () => {
               <FaGithub />
             </Link>
             <Link
+              to="https://www.linkedin.com/in/rohansx/"
+              target="blank"
+              className="social-icon-linkedin"
+              aria-label="Follow us on Linkedin"
+              title="Linkedin (External Link)"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedin />
+            </Link>
+            <Link
               to="/develop"
               className="social-icon-discord"
               aria-label="Join with us on Discord"
