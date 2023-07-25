@@ -1,7 +1,9 @@
 import React from 'react';
 
 const WelcomeUser = ({ user }) => {
-  const { name, email, picture } = user || JSON.parse(localStorage.getItem('user'));
+
+    
+  const { name, email, picture } = user;
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-8 mx-auto max-w-md text-center h-max">
