@@ -44,7 +44,7 @@ const swaggerOptions = {
       contact: {
         name: "Rohan",
       },
-      servers: ["http://localhost:5000"],
+      servers: ["http://localhost:5000","https://informaticonserver.onrender.com"]
     },
 
     components: {
@@ -71,6 +71,8 @@ app.use(express.json());
 app.use("/api/book", book.router);
 app.use("/api", newsLetter.router);
 app.use("/sendMail", mailRouter);
+app.use(notFound);
+app.use(customAPIError);
 
 app.use(express.static(path.join(__dirname, "public/uploads")));
 
@@ -132,14 +134,14 @@ app.post("/send-email", (req, res) => {
   });
 });
 app.get('/ClientId',(req,res)=>{
+  console.log( `${process.env.GOOGLE_CLIENT_ID}`);
   res.json({clientid: `${process.env.GOOGLE_CLIENT_ID}`});
 })
 
 cron.schedule("0 0 * * 0", sendNewsletter);
 
 // Error handling
-app.use(notFound);
-app.use(customAPIError);
+
 
 app.listen(process.env.PORT || 5000, () => {
   console.log(`Server Started at port ${process.env.PORT}`);

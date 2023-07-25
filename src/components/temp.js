@@ -5,6 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import LibraryBooksIcon from "@mui/icons-material/LibraryBooks";
 import CloseIcon from "@mui/icons-material/Close";
 import axios from "axios";
+import { backendURL } from '../../../utils/impURLs';
 
 const FileUploadComponent = () => {
   const [file, setFile] = useState(null);
@@ -22,8 +23,8 @@ const FileUploadComponent = () => {
         const formData = new FormData();
         formData.append("file", file);
 
-        await axios.post("http://localhost:5000/api/upload", formData);
-        await axios.put("http://localhost:5000/api/book/" + id, {
+        await axios.post(`${backendURL}/api/upload`, formData);
+        await axios.put(`${backendURL}/api/book/` + id, {
           bookpdf: file.name,
         });
         navigate("/success");

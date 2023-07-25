@@ -28,6 +28,7 @@ export default function Navbar(props) {
   const search = async (e) => {
     const query = e.target.value.trim(); // Remove leading/trailing whitespace from the query
     if (query === "") {
+      console.log("empty");
       setBooks([]); // Clear the books state to hide search results
       return; // Return early if there's no query
     }

@@ -6,10 +6,10 @@ import reportWebVitals from './reportWebVitals';
 import { ToastContainer } from 'react-toastify';
 import { GoogleOAuthProvider } from '@react-oauth/google';
 import axios from 'axios';
-
+import { backendURL } from './utils/impURLs';
 (async () => {
   try {
-    const response = await axios.get("http://localhost:5000/ClientId");
+    const response = await axios.get(`${backendURL}/ClientId`);
     const { clientid } = response.data;
     console.log(clientid);
 
