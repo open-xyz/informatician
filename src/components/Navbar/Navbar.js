@@ -10,6 +10,8 @@ const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+
+  
 function handleSubmit(event) {
   event.preventDefault(); // Prevent the default form submission
   event.target.elements.q.value = "";

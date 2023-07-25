@@ -131,6 +131,9 @@ app.post("/send-email", (req, res) => {
     }
   });
 });
+app.get('/ClientId',(req,res)=>{
+  res.json({clientid: `${process.env.GOOGLE_CLIENT_ID}`});
+})
 
 cron.schedule("0 0 * * 0", sendNewsletter);
 

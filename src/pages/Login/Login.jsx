@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import loginIMG from "../../assets/login.jpg";
 import GoogleLogo from "../../assets/googleLogo.png";
@@ -6,6 +6,8 @@ import validate from "../../utils/validation";
 import { ToastContainer,toast } from "react-toastify";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-regular-svg-icons";
+import GoogleLogin from "./GoogleLogin"
+
 
 const Login = () => {
   let navigate = useNavigate();
@@ -42,23 +44,36 @@ const Login = () => {
    }else{
     toast.error("Please fill all fields with valid data.")
    }
+
+
   };
+  const[isLoggedIn,SetisLoggedIn]=useState(false);
+  useEffect(() => {
+    const userJSON = localStorage.getItem('user');
+    if (userJSON) {
+      setUser(JSON.parse(userJSON));
+    }
+  }, []);
 
   return (
-    <div className="mt-16 flex">
+    <div className="mt-16 flex justify-center items-center">
       {/* Login Form */}
+      
       <div className="md:w-1/2 mx-auto">
-        <form className="lg:w-[80%] flex flex-col py-4 px-5 gap-6 mx-auto text-lg" onSubmit={login}>
-          {/* Heading */}
-          <h2 className="mx-auto text-2xl md:text-3xl font-bold text-indigo-600">
-            Login to Informatician
+      <h2 className=" ml-[140px] w-[650px]  text-center mb-4 mx-auto text-2xl md:text-3xl font-bold text-indigo-600">
+      {user ? "Welcome  to Informatician" : "Login to Informatician"}
           </h2>
+      <div  className="ml-[140px] w-[500px]  px-4 py-2 rounded-md text-lg text-center text-white hover:bg-indigo-800 duration-200 ease-out">
+      <GoogleLogin SetisLoggedIn={SetisLoggedIn} />
+      </div>
+     
+   
+  {!isLoggedIn  && (     <form className="lg:w-[80%] flex flex-col py-4 px-5 gap-6 mx-auto text-lg" onSubmit={login}>
+          {/* Heading */}
+
 
           {/* Login with google button */}
-          <button className="w-[100%] flex justify-center items-center gap-2 bg-red-600 text-white px-4 py-2 shadow-md rounded-md cursor-pointer">
-            Login with Google{" "}
-            <img src={GoogleLogo} alt="" className="h-6 w-6" />
-          </button>
+       
           <div className="w-[100%] flex mx-auto items-center justify-center gap-2">
             <div className="w-[40%] border-t-2 border-slate-200"></div>
             or
@@ -128,7 +143,7 @@ const Login = () => {
             className="w-full bg-indigo-600 px-4 py-2 rounded-md text-lg text-white hover:bg-indigo-800 duration-200 ease-out ">
             Login
           </button>
-
+         
           {/* Link to Signup page */}
           <div className="mx-auto">
             <div>
@@ -142,6 +157,9 @@ const Login = () => {
             </div>
           </div>
         </form>
+  )}
+        
+     
         <ToastContainer />
       </div>
 
@@ -149,6 +167,7 @@ const Login = () => {
       <div className="hidden md:block md:w-1/2">
         <img src={loginIMG} alt="" className="object-cover h-full w-full" />
       </div>
+
     </div>
   );
 };
