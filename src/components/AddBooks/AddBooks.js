@@ -54,33 +54,47 @@ const AddBooks = (props) => {
       }
     });
 
-    const bookPDF = document.getElementById("upload-btn");
-    if(!bookPDF.files.length > 0) {toast.error("Please upload book."); return}
+    const bookInput = document.getElementById("upload-btn");
+    if(!bookInput.files.length > 0) {toast.error("Please upload book."); return}
 
 
     if (submitable) {
-      console.log(book);
-      console.log(bookPDF)
       try {
-        // const res = await axios.post(
-        //   `${backendURL}/api/book/add`,
-        //   book
-        // );
-        // localStorage.setItem("bookId", res.data);
-        // const id = localStorage.getItem("bookId");
-       const formData = new FormData()
-       formData.append("file", bookPdf);
-       console.log(formData);
-        toast.success("Book details added!!Upload the book.");
+         toast.loading();
+        // Add Book data
+        const res = await axios.post(`${backendURL}/api/book/add`, book);
+        localStorage.setItem("bookId", res.data);
+        const id = localStorage.getItem("bookId");
+        console.log("local: "+ id)
+        console.log(res)
+        // Upload book pdf
+        const formData = new FormData();
+        formData.append("file", bookPdf);
+        const res2 =  await axios.post(
+          `${backendURL}/api/upload`,
+          formData
+        );
+        console.log(res2)
+
+         const res3 = await axios.put(`${backendURL}/api/book/` + id, {
+          bookpdf: bookPdf.name,
+        });
+        console.log(res3)
+
+        toast.success("Book added Successfully!!");
+        navigateTo("/success");
+        localStorage.clear();
       } catch (err) {
+        toast.dismiss();
         toast.error(err.response.data.message);
-        if(err.response.data.type === "jwt") navigateTo("/login")
+        if (err.response.data.type === "jwt") navigateTo("/login");
         console.log(err);
       }
     } else {
       console.log("Fill all fields with valid data");
     }
   };
+
   const categories = [
     "Art",
     "Biography",
