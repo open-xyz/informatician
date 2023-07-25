@@ -130,6 +130,10 @@ p {
   background-color: lightgray;
   transform: scale(1.2);
 }
+.social-icon-linkedin {
+  background-color: #7289da;
+  transform: scale(1.2);
+}
 
 .social-icon-discord:hover {
   background-color: #7289da;
