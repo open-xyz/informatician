@@ -1,6 +1,6 @@
 .access {
-    background-color: var(--bgLight);
-    padding: 20px;
+  background-color: var(--bgLight);
+  padding: 20px;
 }
 
 .access-container {
@@ -11,7 +11,7 @@
 .access-title {
   margin-top: 80px;
   color: #4f63c3;
-  font-size: 28px;
+  font-size: 2.8rem;
   text-align: center;
   margin-bottom: 40px;
   animation: pulse 1s infinite;
@@ -29,15 +29,47 @@
   padding-bottom: 0;
 }
 
+.access-section button {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
 .access-section-title {
   color: #555;
   font-size: 24px;
   margin-bottom: 20px;
+  flex: 1;
+}
+
+.icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+.expanded .icon {
+  transform: rotate(45deg);
 }
 
 .access-content {
   color: #777;
   font-size: 16px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.expanded .access-content {
+  max-height: 500px; 
 }
 
 .contact-email {
