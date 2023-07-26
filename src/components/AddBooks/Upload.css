@@ -1,6 +1,8 @@
 .upload h2{
   /* color: rgb(30, 41, 59); */
   margin-bottom: -10px;
+  font-size: 1.5rem;
+  font-weight: bolder;
 }
 .upload {
   margin-top:35px;

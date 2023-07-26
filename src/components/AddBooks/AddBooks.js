@@ -19,6 +19,8 @@ const AddBooks = (props) => {
     category: "Art",
   });
 
+  const [bookPdf, setBookPdf] = useState(null);
+
   const [error, setError] = useState({
     bookName: true,
     authorName: true,
@@ -33,10 +35,12 @@ const AddBooks = (props) => {
     setBook((prev) => {
       return { ...prev, [name]: value };
     });
-    const message = validate[name](value);
-    setError((prev) => {
-      return { ...prev, ...message };
-    });
+    if (name !== "category" && name !== "img") {
+      const message = validate[name](value);
+      setError((prev) => {
+        return { ...prev, ...message };
+      });
+    }
   };
 
   const handleSubmit = async (e) => {
@@ -50,27 +54,43 @@ const AddBooks = (props) => {
       }
     });
 
-    const bookPDF = document.getElementById("upload-btn");
-    if(!bookPDF.files.length > 0) {toast.error("Please upload book."); return}
-
+    const bookInput = document.getElementById("upload-btn");
+    if (!bookInput.files.length > 0) {
+      toast.error("Please upload book.");
+      return;
+    }
 
     if (submitable) {
       try {
-        const res = await axios.post(
-          `${backendURL}/api/book/add`,
-          book
-        );
-        toast.success("Book details added!!Upload the book.");
+        toast.loading();
+        // Add Book data
+        const res = await axios.post(`${backendURL}/api/book/add`, book);
         localStorage.setItem("bookId", res.data);
+        const id = localStorage.getItem("bookId");
+
+        // Upload book pdf
+        const formData = new FormData();
+        formData.append("file", bookPdf);
+        await axios.post(`${backendURL}/api/upload`, formData);
+
+        await axios.put(`${backendURL}/api/book/` + id, {
+          bookpdf: bookPdf.name,
+        });
+
+        toast.success("Book added Successfully!!");
+        navigateTo("/success");
+        localStorage.clear();
       } catch (err) {
+        toast.dismiss();
         toast.error(err.response.data.message);
-        if(err.response.data.type === "jwt") navigateTo("/login")
+        if (err.response.data.type === "jwt") navigateTo("/login");
         console.log(err);
       }
     } else {
       console.log("Fill all fields with valid data");
     }
   };
+
   const categories = [
     "Art",
     "Biography",
@@ -101,24 +121,24 @@ const AddBooks = (props) => {
   return (
     <div>
       <div className="addbook_main">
-        <div className="addBooks-container">
-          <div className="add-books text-white">
-            <h1
-              className="form-title"
-              style={{
-                color: props.theme === "dark" ? "white" : "black",
-              }}
-            >
-              Add Books
-            </h1>
-            <form
-              className="Boxx"
-              onSubmit={handleSubmit}
-              style={{
-                color: props.theme === "dark" ? "white" : "black",
-                backgroundColor: props.theme === "dark" ? "black" : "white",
-              }}
-            >
+        <h1
+          className="form-title"
+          style={{
+            color: props.theme === "dark" ? "white" : "black",
+          }}
+        >
+          Add Books
+        </h1>
+        <form
+          className="Boxx"
+          onSubmit={handleSubmit}
+          style={{
+            color: props.theme === "dark" ? "white" : "black",
+            backgroundColor: props.theme === "dark" ? "black" : "white",
+          }}
+        >
+          <div className="addBooks-container">
+            <div className="add-books text-white">
               <input
                 className="Inputt"
                 name="bookName"
@@ -213,13 +233,17 @@ const AddBooks = (props) => {
                   </option>
                 ))}
               </select>
-              <button className="Buttonn" type="submit">
-                Add Book
-              </button>
-            </form>
+            </div>
+            <Upload
+              formData={error}
+              bookPdf={bookPdf}
+              setBookPdf={setBookPdf}
+            />
           </div>
-        </div>
-        <Upload formData={error}/>
+          <button className="Buttonn" type="submit">
+            Submit Book
+          </button>
+        </form>
         <ToastContainer />
       </div>
     </div>
