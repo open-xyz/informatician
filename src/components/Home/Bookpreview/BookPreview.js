@@ -24,6 +24,7 @@ const BookPreview = () => {
 
     #viewerCanvas {
         margin: 50px;
+        margin-top:100px;
         margin-right: 20px;
         position: fixed;
         top: 0;
