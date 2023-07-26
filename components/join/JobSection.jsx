@@ -1,4 +1,4 @@
-import positionsData from "@/utils/join/positionsData";
+import {positionsData} from "@/utils/Constants";
 
 export default function JobSection() {
     return (

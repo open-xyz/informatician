@@ -1,6 +1,6 @@
 import Image from "next/image";
 import quotationmark from "@/public/assets/join/quotationmark.webp";
-import employeesData from "@/utils/join/employeeData";
+import {employeesData} from "@/utils/Constants";
 
 export default function Employee() {
     return (

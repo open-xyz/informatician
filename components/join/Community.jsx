@@ -1,4 +1,4 @@
-import communityData from '@/utils/join/communityData';
+import {communityData} from '@/utils/Constants';
 import Image from 'next/image';
 
 export default function Community() {
