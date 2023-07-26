@@ -7,11 +7,9 @@ import lightLogo from "../../assets/logos/light_logo.png";
 import darkLogo from "../../assets/logos/dark_logo.png";
 
 const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
 
-
-  
 function handleSubmit(event) {
   event.preventDefault(); // Prevent the default form submission
   event.target.elements.q.value = "";
@@ -32,7 +30,7 @@ export default function Navbar(props) {
       setBooks([]); // Clear the books state to hide search results
       return; // Return early if there's no query
     }
-    
+
     try {
       console.log("called");
       const result = await searchBooks(query);
@@ -49,7 +47,7 @@ export default function Navbar(props) {
     >
       <Link to="/" onClick={scrollToTop} className="logo">
         <img
-          loading='lazy'
+          loading="lazy"
           src={themeImage}
           className=" h-12 w-15 ml-1 mb-3  hover:shadow "
           alt="Informatician logo"
@@ -70,31 +68,34 @@ export default function Navbar(props) {
             </button>
           </form>
           <div className="w-98 bg-gray-100 absolute mx-auto p-2 rounded-md shadow-lg">
-          {books.length > 0 &&
-  books.map((book, index) => (
-    <Link to={book?.selfLink} key={index} className="hover:no-underline">
-      <div
-        className="flex items-center p-2 border-b-2 my-1 transition duration-200 hover:bg-gray-300 cursor-pointer"
-      >
-        <img
-          src={book?.volumeInfo.imageLinks?.thumbnail || "placeholder.png"}
-          alt="Book Cover"
-          className="w-12 h-16 object-cover mr-2"
-        />
-        <div className="flex-1">
-          <h1 className="text-lg font-semibold text-blue-600 hover:text-blue-800 line-clamp-1">
-            {book?.volumeInfo.title}
-          </h1>
-          <p className="text-sm text-gray-500 line-clamp-2">
-            {book?.volumeInfo.authors?.join(", ")}
-          </p>
-        </div>
-      </div>
-    </Link>
-  ))}
-</div>
-
-
+            {books.length > 0 &&
+              books.map((book, index) => (
+                <Link
+                  to={`/buybooks/${book.id}`}
+                  key={index}
+                  className="hover:no-underline"
+                >
+                  <div className="flex items-center p-2 border-b-2 my-1 transition duration-200 hover:bg-gray-300 cursor-pointer">
+                    <img
+                      src={
+                        book?.volumeInfo.imageLinks?.thumbnail ||
+                        "placeholder.png"
+                      }
+                      alt="Book Cover"
+                      className="w-12 h-16 object-cover mr-2"
+                    />
+                    <div className="flex-1">
+                      <h1 className="text-lg font-semibold text-blue-600 hover:text-blue-800 line-clamp-1">
+                        {book?.volumeInfo.title}
+                      </h1>
+                      <p className="text-sm text-gray-500 line-clamp-2">
+                        {book?.volumeInfo.authors?.join(", ")}
+                      </p>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+          </div>
         </div>
       </div>
       <div className="mobile-nav">

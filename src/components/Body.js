@@ -17,6 +17,7 @@ import FaqHelp from "./FAQ/faq";
 import Develop from "../pages/Develop/develop";
 import Error from "./Error/Error";
 import BookComponent from "./Home/BookComponent/BookComponent";
+import GoogleBookComponent from "./Home/BookComponent/GoogleBookComponent";
 import AddBooks from "./AddBooks/AddBooks";
 import Success from "./Success";
 import Join from "../pages/JoinOurTeam/Join";
@@ -37,22 +38,22 @@ import GenreDetails from "../pages/GenreDetails/GenreDetails";
 import BookAwards from "../pages/Awards/BookAwards";
 import Login from "../pages/Login/Login";
 import SignUp from "../pages/SignUp/SignUp";
-import Profile from "../pages/Login/Welcomeuser"
+import Profile from "../pages/Login/Welcomeuser";
+import BookPreview from "./Home/Bookpreview/BookPreview";
 
 function Body(props) {
-
   const routePath = useLocation();
 
   useEffect(() => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
   }, [routePath]);
 
   return (
     <div>
-      <Suspense fallback={<Loader  />}>
+      <Suspense fallback={<Loader />}>
         <Routes>
           <Route path="/" element={<Home theme={props.theme} />} />
           <Route path="/books" element={<BookList theme={props.theme} />} />
@@ -60,6 +61,11 @@ function Body(props) {
             path="/books/:bookId"
             element={<BookComponent theme={props.theme} />}
           />
+          <Route
+            path="/buybooks/:bookId"
+            element={<GoogleBookComponent theme={props.theme} />}
+          />
+          <Route exact path="/sample-component" Component={BookPreview} />
           <Route path="/about" element={<About theme={props.theme} />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/team" element={<Team theme={props.theme} />} />
@@ -74,7 +80,7 @@ function Body(props) {
           <Route path="/addBooks" element={<AddBooks theme={props.theme} />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
-          <Route path="/profile" element={<Profile/>}/>
+          <Route path="/profile" element={<Profile />} />
           <Route
             path="/publishers"
             element={<PublishersPage theme={props.theme} />}
