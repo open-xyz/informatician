@@ -5,7 +5,6 @@
 - You can explore a vast collection of books, search for your favourite titles, and even contribute by adding new books to the platform. Whether you're an avid reader, a literary connoisseur, or simply seeking new knowledge, Informatician is here to provide you with an exceptional platform to explore, learn, and connect.
 
 ---
-### 🔗[Visit Website](https://www.informatician.in/)
 
 ## Table of Contents
 

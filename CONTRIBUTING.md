@@ -38,40 +38,12 @@ Consistent code formatting and style are important for maintaining a clean and r
 
 We welcome contributions through pull requests (PRs). To submit a PR, please follow these steps:
 
-1. Fork the Project
-2. Clone your forked repository
-
-```sh
-git clone https://github.com/<your_github_username>/informatician.git
-```
-3. Now go ahead and create a new branch and move to the branch
-```sh
-git checkout -b fix-issue-<ISSUE-NUMBER>
-```
-4. After you have added your changes, follow the following command chain
-   Check the changed files
-```sh
-git status -s
-```
-
-  * Add all the files to the staging area
-```sh
-git add .
-```
- or
-```sh
-git add <file_name1> <file_name2>
-```
-5. Commit your changes
-```sh
-git commit -m "<EXPLAIN-YOUR_CHANGES>"
-```
-6. Push your changes
-```sh
-git push origin fix-issue-<ISSUE-NUMBER>
-```
-7. Open a Pull Request 
-8. Be open to feedback and actively participate in the review process.
+1. Fork the repository to your GitHub account.
+2. Create a new branch for your changes.
+3. Make the necessary code changes in your branch.
+4. Test your changes thoroughly.
+5. Submit a pull request, explaining the purpose and details of your changes.
+6. Be open to feedback and actively participate in the review process.
 
 # Communication
 
