@@ -3,7 +3,7 @@ name: Greetings
 on:
   fork:
   push:
-    branches: [next-ts-tw-migrate]
+    branches: [main]
   issues:
     types: [opened]
   pull_request_target:
