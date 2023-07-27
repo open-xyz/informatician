@@ -1,10 +1,9 @@
 'use client'
 import { useState, useRef } from "react";
-import ScrollToTopButton from "@/components/ScrollButton/ScrollButton";
 import Books from "@/utils/Books"
 
 import Image from "next/image";
-import { Quotes, categories } from "@/utils/bookData";
+import { Quotes, categories } from "@/utils/Constants";
 import { MdOutlineContentCopy } from "react-icons/md";
 import BkCards from "@/components/BkCards/BkCards";
 

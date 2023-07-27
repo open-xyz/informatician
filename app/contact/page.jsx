@@ -4,7 +4,7 @@ import { FaDiscord, FaTwitter, FaGithub } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import validate from "@/utils/validation";
-import AuthErrorMessage from "@/utils/AuthError";
+import AuthErrorMessage from "@/utils/Constants";
 import Link from "next/link";
 import Image from "next/image";
 import { toast } from "react-toastify";

@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import { usePathname } from "next/navigation";
 import { searchBooks } from "@/utils/searchBooks";
 import NavItems from "./NavItems/NavItems.js";
-import Image from "next/image";
 import Link from "next/link";
 import { FaSearch } from "react-icons/fa";
 import { ThemeToggle } from "@/components/theme/theme-toggle.jsx";
