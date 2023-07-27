@@ -13,7 +13,7 @@ import alchemist from "@/public/assets/selfHelp/alchemist.jpg";
 import money from "@/public/assets/career/money.jpeg";
 import monk from "@/public/assets/career/monk.webp";
 
-export const Books = [
+const Books = [
   {
     id: 1,
     type: "eBook",
@@ -616,3 +616,6 @@ export const Books = [
   
 ];
 
+
+
+export default Books;
