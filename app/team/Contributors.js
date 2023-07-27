@@ -1,7 +1,9 @@
+"use client"
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "swiper/css/pagination";
 import Link from "next/link";
+import Image from "next/image";
 function Contributors() {
   const [contributors, setContributors] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -53,10 +55,12 @@ function Contributors() {
                   aria-label="GitHub"
                   className="p-2 rounded-md text-gray-900 hover:text-violet-400"
                 >
-                  <img
+                  <Image
                     src={contributor.avatar_url}
                     alt="avatar"
-                    className="w-32 h-32 mx-auto rounded-full bg-gray-500 aspect-square"
+                    className="mx-auto rounded-full bg-gray-500 aspect-square"
+                    width={32}
+                    height={32}
                   />
                 </Link>
                 <div className="my-2 space-y-1">

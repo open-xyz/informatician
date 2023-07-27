@@ -1,7 +1,17 @@
+// ----Auth Message ----//
+
+export const AuthErrorMessage = ({message})=>{
+  return   <div className="flex justify-center">
+  <p className="text-red-500 m-2 text-center w-72 text-sm">{message}</p>
+</div>
+}
+
+
+// ----Email Validation----//
 
 const emailRegex = /^\w+([\.-]?\w+)*@(gmail\.com|yahoo\.com|hotmail\.com|aol\.com|outlook\.com)$/;
 
-const validate = {
+export const validate = {
     name: (value) => {
       if (!value) return { name: true, nameError: "Name field cannot be empty" };
       else {
@@ -26,4 +36,3 @@ const validate = {
       },
 }
 
-export default validate;

@@ -1,6 +1,6 @@
 'use client'
 import { useState, useRef } from "react";
-import Books from "@/utils/Books"
+import {Books} from "@/utils/Constants"
 
 import Image from "next/image";
 import { Quotes, categories } from "@/utils/Constants";

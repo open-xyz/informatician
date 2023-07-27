@@ -3,7 +3,7 @@ import Link from "next/link";
 import ReactStars from "react-rating-stars-component";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark } from "@fortawesome/free-regular-svg-icons";
-import Books from "@/utils/Books";
+import {Books} from "@/utils/Constants";
 import Image from "next/image";
 
 export default function BookComponent({ params }) {
