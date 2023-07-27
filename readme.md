@@ -135,5 +135,5 @@ The project is licensed under the [MIT License](https://github.com/rohansx/infor
   <a href="#table-of-contents">Back to Top</a>
 </div>
 
-##Deployment of React branch
+## Deployment of React branch
 https://react.informatician.in/
