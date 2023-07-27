@@ -53,7 +53,7 @@ $ git clone https://github.com/rohansx/informatician.git
  $ npm install
 ```
 
-3. Create a `.env.local` file and add the following
+3. Create a `.env.local` file and add the following:
 
 ```sh
 MONGODB='YOUR_MONGO_CREDENTIALS'
