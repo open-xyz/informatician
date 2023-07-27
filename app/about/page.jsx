@@ -2,7 +2,6 @@
 import { useEffect } from "react";
 import Feature from "@/components/About/Feature";
 import Testimonial from "@/components/About/Testimonial";
-import Download from "@/components/About/Download";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Image from "next/image";
@@ -50,7 +49,6 @@ const About = (props) => {
       <div className="Testimonial">
         <Testimonial />
       </div>
-      {/* <Download /> */}
     </div>
   );
 };
