@@ -13,7 +13,7 @@ import alchemist from "@/public/assets/selfHelp/alchemist.jpg";
 import money from "@/public/assets/career/money.jpeg";
 import monk from "@/public/assets/career/monk.webp";
 
-const Books = [
+export const Books = [
   {
     id: 1,
     type: "eBook",
@@ -613,19 +613,6 @@ const Books = [
     releaseDate: "Oct 17, 2001",
     language: "English",
   },
-  // {
-  //   type: "",
-  //   title: "",
-  //   imageSrc: "",
-  //   author: "",
-  //   authorPage: "/author/",
-  //   ratings: 1103,
-  //   aboutBook: ``,
-  //   bookSynapsis: ``,
-  //   isbn: 9780718074326,
-  //   releaseDate: "Oct 17, 2001",
-  //   language: "English",
-  // },
+  
 ];
 
-export default Books;

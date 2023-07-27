@@ -1,5 +1,5 @@
 import Image from "next/image";
-import benefitsData from '@/utils/join/benefitsData'
+import {benefitsData} from '@/utils/Constants'
 
 export default function Benefits() {
     return (
