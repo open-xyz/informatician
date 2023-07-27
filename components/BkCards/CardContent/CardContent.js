@@ -3,8 +3,15 @@ import ReactStars from "react-rating-stars-component";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark } from "@fortawesome/free-regular-svg-icons";
 import Image from "next/image";
+import { useState, useEffect } from "react";
 
 export default function CardContent(props) {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   const bgColors = [
     "bg-blue-200",
     "bg-yellow-200",
@@ -20,7 +27,7 @@ export default function CardContent(props) {
 
   return (
     <div className="bk-view flex flex-col items-center mx-auto overflow-hidden shadow dark:shadow-white transition-all w-40">
-      <div className={`${random_color} w-full h-44 rounded-t-md`} />
+      <div className={isMounted? `${random_color} w-full h-44 rounded-t-md`: "w-full h-44 rounded-t-md"}/>
         <Image
           src={props.imgName}
           alt={props.title}

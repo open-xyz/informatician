@@ -1,6 +1,5 @@
 import "../Navbar.css";
 import { FaRegBookmark, FaSearch } from "react-icons/fa";
-// import { faBookmark } from "@fortawesome/free-regular-svg-icons";
 import Link from "next/link";
 import Image from "next/image";
 export default function NavItems(props) {
