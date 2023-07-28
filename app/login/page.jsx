@@ -1,10 +1,12 @@
 'use client'
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link"
 import loginIMG from "@/public/assets/auth/login.jpg";
 import GoogleLogo from "@/public/assets/auth/googleLogo.png";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { FaSyncAlt } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 const Login = () => {
   let navigate = useRouter();
@@ -13,6 +15,8 @@ const Login = () => {
     pass: "",
   });
   const [error, setError] = useState("");
+  const [captchaVal, setCaptchaVal] = useState();
+  const [captchaText, setCaptchaText] = useState();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -21,6 +25,11 @@ const Login = () => {
 
   const login = (e) => {
     e.preventDefault();
+    
+  if(captchaVal !== captchaText){
+    toast.error("Wrong Captcha");
+    return;
+  }
 
     if (!user.email) {
       setError("Email is Required!");
@@ -33,6 +42,23 @@ const Login = () => {
     setError("");
     navigate("/");
   };
+
+    // Captcha logic
+    const genrateCaptcha = ()=>
+    {
+      let captcha = "";
+      const charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    
+    for (let i = 0; i < 6; i++) {
+      var randomIndex = Math.floor(Math.random() * charset.length);
+      captcha += charset.charAt(randomIndex);
+    }
+    setCaptchaText(captcha)
+    }
+
+    useEffect(()=>{
+      genrateCaptcha();
+    }, [])
 
   return (
     <div className=" my-28 flex">
@@ -64,6 +90,7 @@ const Login = () => {
             <input
               type="email"
               name="email"
+              placeholder="Enter Email"
               value={user.email}
               onChange={handleChange}
               className="w-[100%] bg-slate-100 py-2 px-4 focus:outline-indigo-500"
@@ -75,10 +102,34 @@ const Login = () => {
             <input
               type="password"
               name="pass"
+              placeholder="Enter Password"
               value={user.pass}
               onChange={handleChange}
               className="w-[100%] bg-slate-100 py-2 px-4 focus:outline-indigo-500"
             />
+          </div>
+
+          <div className="w-full flex flex-col items-start gap-2">
+            <label htmlFor="captcha">Captcha</label>
+            <div className="flex flex-row gap-3 justify-center items-center">
+              <div
+                id="captcha"
+                className="w-[40%] py-1 px-2 text-2xl text-gray-700 border-black border-2 border-solid"
+                style={{backgroundImage: `url("/assets/auth/captcha.webp")`}}
+              >{captchaText}</div>
+              <FaSyncAlt
+                className="spin-icon text-3xl cursor-pointer"
+                onClick={genrateCaptcha}
+              />
+              <input
+                type="text"
+                name="captch"
+                value={captchaVal}
+                placeholder="Enter Captcha Here"
+                onChange={(e)=>setCaptchaVal(e.target.value)}
+                className="w-[100%] bg-slate-100 py-2 px-4 focus:outline-indigo-500"
+              />
+            </div>
           </div>
 
           {/* Remember me */}
@@ -120,7 +171,13 @@ const Login = () => {
 
       {/* right part image */}
       <div className="hidden md:block md:w-1/2">
-        <Image src={loginIMG} alt="" className="object-cover" height="100%" width="100%" />
+        <Image
+          src={loginIMG}
+          alt=""
+          className="object-cover"
+          height="100%"
+          width="100%"
+        />
       </div>
     </div>
   );
