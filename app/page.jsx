@@ -1,7 +1,7 @@
 import BkCards from "@/components/BkCards/BkCards";
 import CgCards from "@/components/Home/CgCards/CgCards";
 import ImgSection from "@/components/Home/ImgSection/ImgSection";
-import Books from "@/utils/Books";
+import {Books} from "@/utils/Constants";
 
 export default function Home() {
   return (

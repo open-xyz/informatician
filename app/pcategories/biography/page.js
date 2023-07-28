@@ -1,7 +1,7 @@
 'use client'
 import { useState } from "react";
 import BkCards from "@/components/BkCards/BkCards";
-import Books from "@/utils/Books";
+import {Books} from "@/utils/Constants";
 
 function Biography(props) {
   const [showMore, setShowMore] = useState(false);

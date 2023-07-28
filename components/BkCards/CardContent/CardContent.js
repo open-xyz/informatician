@@ -5,6 +5,20 @@ import { faBookmark } from "@fortawesome/free-regular-svg-icons";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
+
+// Suppress the warning about defaultProps
+const originalConsoleError = console.error;
+console.error = (...args) => {
+  if (
+    args.length > 0 &&
+    typeof args[0] === "string" &&
+    args[0].includes("defaultProps will be removed from function components")
+  ) {
+    return;
+  }
+  originalConsoleError(...args);
+};
+
 export default function CardContent(props) {
   const [isMounted, setIsMounted] = useState(false);
 
