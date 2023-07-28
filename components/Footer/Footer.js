@@ -1,12 +1,11 @@
-"use client"
+"use client";
 import "./Footer.css";
 import NewsLetter from "./NewsLetter/NewsLetter";
 import { BsDiscord, BsGithub, BsTwitter } from "react-icons/bs";
 import darkLogo from "@/public/assets/logos/dark_logo.png";
-import {footerItems, columnNames} from "@/utils/Constants"
+import { footerItems, columnNames } from "@/utils/Constants";
 import Link from "next/link";
 import Image from "next/image";
-
 
 const Footer = () => {
   let year = new Date().getFullYear();
@@ -14,7 +13,6 @@ const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
-
 
   const footerComponents = footerItems?.map((coulmnItems, index) => {
     return (
@@ -24,7 +22,9 @@ const Footer = () => {
           {coulmnItems.map((item, index) => {
             return (
               <li key={index} className="mb-4">
-                <Link href={item.itemLinks} onClick={scrollToTop}>{item.itemName}</Link>
+                <Link href={item.itemLinks} onClick={scrollToTop}>
+                  {item.itemName}
+                </Link>
               </li>
             );
           })}
@@ -38,9 +38,9 @@ const Footer = () => {
       <NewsLetter />
       <footer>
         <div className="mx-auto w-full max-w-screen-xl py-6 lg:py-4">
-          <div className="footer_body">
+          <div className="footer_body p-6">
             <div className="footer_main mb-6 md:mb-0 mt-0 py-2">
-              <Link href="/" onClick={scrollToTop} >
+              <Link href="/" onClick={scrollToTop}>
                 <Image
                   src={darkLogo}
                   className="hover:shadow "
@@ -60,7 +60,7 @@ const Footer = () => {
               })}
             </div>
           </div>
-          <div className="copyright_footer">
+          <div className="copyright_footer p-6">
             <span className={`text-sm font-bold sm:text-center text-blue-500`}>
               © {year}{" "}
               <a href="/" onClick={scrollToTop} className="hover:underline">
