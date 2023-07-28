@@ -3,12 +3,16 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
+
+
+
+
 //0415105145
 //0738531367
-const BookPreview = ({params}) => {
+const BookPreview = ({ params }) => {
   //   const [isbn, setIsbn] = useState("0738531367"); // Default ISBN
   const { isbn } = params;
- 
+
   // Create a template string for the newsletter HTML with a placeholder for the ISBN
   const newsletterHtmlTemplate = `
     <!DOCTYPE html>
@@ -23,6 +27,7 @@ const BookPreview = ({params}) => {
     }
     #viewerCanvas {
         margin: 50px;
+        margin-top:100px;
         margin-right: 20px;
         position: fixed;
         top: 0;
@@ -35,9 +40,15 @@ const BookPreview = ({params}) => {
         <script type="text/javascript" src="https://www.google.com/books/jsapi.js"></script>
         <script type="text/javascript">
           google.books.load();
+
+          function alertNotFound() {
+            alert("Book Preview does not exist");
+            window.location.href="/";
+          }
+          
           function initialize() {
             var viewer = new google.books.DefaultViewer(document.getElementById('viewerCanvas'));
-            viewer.load('ISBN:${isbn}'); // Replace the placeholder with the actual ISBN
+            viewer.load('ISBN:${isbn}',alertNotFound); // Replace the placeholder with the actual ISBN
           }
           google.books.setOnLoadCallback(initialize);
         </script>
