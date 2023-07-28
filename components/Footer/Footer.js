@@ -43,7 +43,7 @@ const Footer = () => {
               <Link href="/" onClick={scrollToTop}>
                 <Image
                   src={darkLogo}
-                  className="hover:shadow "
+                  className="hover:shadow mix-blend-lighten"
                   alt="Informatician logo"
                   width="200"
                   height="200"
