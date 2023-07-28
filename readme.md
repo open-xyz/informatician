@@ -53,10 +53,18 @@ $ git clone https://github.com/rohansx/informatician.git
  $ npm install
 ```
 
+3. Create a `.env.local` file and add the following:
+
+```sh
+MONGODB='YOUR_MONGO_CREDENTIALS'
+```
+> **Note**: Get your Mongodb credentials from [here](https://www.mongodb.com/products/platform/cloud)
+
+
 4. Start the application:
 
 ```sh
- $ npm start
+ $ npm run dev
 ```
 
  💻 The application can be accessed in a web browser at `http://localhost:3000`.
