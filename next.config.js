@@ -24,6 +24,7 @@ const nextConfig = {
       "ychef.files.bbci.co.uk",
       "www.theparisreview.org",
       "upload.wikimedia.org",
+      "books.google.com"
 
 
     ],
