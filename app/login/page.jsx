@@ -28,6 +28,8 @@ const Login = () => {
     
   if(captchaVal !== captchaText){
     toast.error("Wrong Captcha");
+    setCaptchaVal("");
+    genrateCaptcha();
     return;
   }
 
