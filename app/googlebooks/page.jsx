@@ -5,7 +5,7 @@ import { Link, useParams } from "react-router-dom";
 import ReactStars from "react-rating-stars-component";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark } from "@fortawesome/free-regular-svg-icons";
-import BookPreview from "./BookPreview";
+
 
 export default function BookComponent() {
   const { bookId } = useParams();
