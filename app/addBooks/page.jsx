@@ -94,6 +94,7 @@ const AddBooks = () => {
             <input
               className="border border-gray-300 dark:border-gray-700 px-4 py-2 rounded"
               type="number"
+              min="0"
               placeholder="Pages"
               ref={pages}
             />
