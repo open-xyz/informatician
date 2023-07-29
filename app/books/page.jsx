@@ -178,6 +178,7 @@ export default function BookList(props) {
               </p>
               <MdOutlineContentCopy
                 aria-label="Click to copy the quote"
+                title="Copy quote to clipboard"
                 className="ml-3 absolute top-5 right-5 cursor-pointer text-3xl hover:text-green-700"
                 onClick={() => handleCopyToClipboard(quote.quote)}
               />
