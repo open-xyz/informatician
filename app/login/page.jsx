@@ -66,7 +66,7 @@ const Login = () => {
               name="email"
               value={user.email}
               onChange={handleChange}
-              className="w-[100%] bg-slate-100 py-2 px-4 focus:outline-indigo-500"
+              className="w-[100%] text-gray-800 bg-slate-100 py-2 px-4 focus:outline-indigo-500"
             />
           </div>
           {/* Password input */}
@@ -77,7 +77,7 @@ const Login = () => {
               name="pass"
               value={user.pass}
               onChange={handleChange}
-              className="w-[100%] bg-slate-100 py-2 px-4 focus:outline-indigo-500"
+              className="w-[100%] text-gray-800 bg-slate-100 py-2 px-4 focus:outline-indigo-500"
             />
           </div>
 
