@@ -66,7 +66,7 @@ export default function NewsLetter() {
             A newsletter about books, reading, and writing.
           </p>
         </div>
-        <form className="form" id="form" onSubmit={handleSubmit}>
+        <form className="form" id="form" onSubmit={handleSubmit} aria-label='Email Subscription Form'>
           <input
             type="email"
             name="email"
@@ -77,6 +77,7 @@ export default function NewsLetter() {
             }`}
             onChange={handleInputChange}
             disabled={isSubmitted}
+            aria-label='Email'
           />
           <button
             type="submit"
@@ -86,6 +87,7 @@ export default function NewsLetter() {
             } ${isSubmitted ? 'btn--success' : ''}`}
             disabled={isSubmitted}
             id='btn'
+            aria-label='Subscribe'
           >
             {isSubmitted ? "You're on the list! 👍" : 'Subscribe'}
           </button>
