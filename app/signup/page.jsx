@@ -5,7 +5,8 @@ import GoogleLogo from "@/public/assets/auth/googleLogo.png";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye, faEyeSlash } from "@fortawesome/free-regular-svg-icons";
 
 const SignUp = () => {
   let navigate = useRouter();
@@ -18,6 +19,8 @@ const SignUp = () => {
     confirmPass: "",
   });
   const [error, setError] = useState("");
+  const [showPass1, setShowPass1] = useState(false);
+  const [showPass2, setShowPass2] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -128,21 +131,25 @@ const SignUp = () => {
           </div>
           {/* Password input */}
           <div className="w-full flex flex-row items-center justify-between gap-8">
-            <div className="flex flex-col items-start gap-2">
+            <div className="flex flex-col items-start gap-2 relative">
               <label htmlFor="pass">Create Password</label>
+              <div className="relative w-[100%]">
               <input
-                type="password"
+                type={showPass1? "text":"password"}
                 name="pass"
                 value={user.pass}
                 onChange={handleChange}
                 className="w-[100%] bg-slate-100 py-2 px-4 focus:outline-indigo-500"
               />
+               <FontAwesomeIcon icon={showPass1?faEye:faEyeSlash} onClick={()=>setShowPass1(!showPass1)} className="absolute top-4 right-2 cursor-pointer"/>
+              </div>
             </div>
             {/* Confirm password input */}
             <div className="flex flex-col items-start gap-2">
               <label htmlFor="confirmPass">Confirm Password</label>
+              <div className="relative w-[100%]">
               <input
-                type="password"
+                type={showPass2? "text":"password"}
                 name="confirmPass"
                 value={user.confirmPass}
                 onChange={handleChange}
@@ -155,6 +162,9 @@ const SignUp = () => {
                     : "w-[100%] bg-slate-100 py-2 px-4 focus:outline-red-500"
                 }
               />
+              <FontAwesomeIcon icon={showPass2?faEye:faEyeSlash} onClick={()=>setShowPass2(!showPass2)} className="absolute top-4 right-2 cursor-pointer"/>
+              </div>
+             
             </div>
           </div>
 
