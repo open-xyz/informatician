@@ -3,12 +3,15 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 import { useParams, useRouter } from "next/navigation";
+import Login from "@/app/login/page";
 
 const FileUploadComponent = () => {
   const [file, setFile] = useState(null);
   const navigate = useRouter();
   const id = useParams();
-
+  // loggedIn variable
+  var loggedIn= true;
+  
   const handleFileChange = (event) => {
     setFile(event.target.files[0]);
   };
@@ -42,7 +45,9 @@ const FileUploadComponent = () => {
   };
 
   return (
-    <div className="p-10 flex flex-col items-center justify-center rounded-lg shadow-lg border">
+    !loggedIn? <ShowLogin/> :
+   ( <div className="p-10 flex flex-col items-center justify-center rounded-lg shadow-lg border">
+     
       <h2 className="text-xl font-bold mb-4">Upload Books</h2>
       <div className="border-2 rounded-lg my-5 p-10 flex flex-col items-center justify-center">
         <input
@@ -82,8 +87,16 @@ const FileUploadComponent = () => {
       </p>
 
       <ToastContainer />
-    </div>
+    </div> )
   );
 };
+
+const ShowLogin=()=>{
+  return(
+    <div className="show-login p-10 flex flex-col items-center justify-center rounded-lg shadow-lg border">
+      <h2 className="text-xl font-bold mb-4">Please first login to upload a book</h2>
+    </div>
+  )
+}
 
 export default FileUploadComponent;
