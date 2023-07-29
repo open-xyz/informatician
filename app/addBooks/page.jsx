@@ -78,30 +78,36 @@ const AddBooks = () => {
               type="text"
               placeholder="Book Name"
               ref={bookName}
+              aria-label="Book Name"
             />
             <input
               className="border border-gray-300 dark:border-gray-700 px-4 py-2 rounded"
               type="text"
               placeholder="Author Name"
               ref={authorName}
+              aria-label="Author Name"
             />
             <input
               className="border border-gray-300 dark:border-gray-700 px-4 py-2 rounded"
               type="text"
               placeholder="Publisher"
               ref={publisher}
+              aria-label="Publisher"
             />
             <input
               className="border border-gray-300 dark:border-gray-700 px-4 py-2 rounded"
               type="number"
+              min="0"
               placeholder="Pages"
               ref={pages}
+              aria-label="Number of Pages"
             />
             <input
               className="border border-gray-300 dark:border-gray-700 px-4 py-2 rounded"
               type="text"
               placeholder="Img Url"
               ref={img}
+              aria-label="Image URL"
             />
 
             <select className="border border-gray-300 dark:border-gray-700 px-4 py-2 rounded" ref={category}>
@@ -115,6 +121,7 @@ const AddBooks = () => {
             <button
               className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
               type="submit"
+              aria-label="Add Book"
             >
               Add Book
             </button>
