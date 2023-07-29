@@ -100,7 +100,6 @@ const Login = () => {
               onChange={handleChange}
 
               aria-labelledby="email-label"
-              className="w-[100%] bg-slate-100 py-2 px-4 focus:outline-indigo-500"
 
               className="w-[100%] text-gray-800 bg-slate-100 py-2 px-4 focus:outline-indigo-500"
 
@@ -118,7 +117,6 @@ const Login = () => {
               onChange={handleChange}
 
               aria-labelledby="pass-label"
-              className="w-[100%] bg-slate-100 py-2 px-4 focus:outline-indigo-500"
 
               className="w-[100%] text-gray-800 bg-slate-100 py-2 px-4 focus:outline-indigo-500"
 
