@@ -66,7 +66,7 @@ export default function BookList(props) {
         </p>
       </div>
 
-      <form className="max-w-xl w-full border-2 rounded-full">
+      <form className="max-w-xl w-full border-2 rounded-full" aria-label="Book Search Form">
         <div className="relative">
           <input
             id="default-search"

@@ -52,7 +52,7 @@ const FileUploadComponent = () => {
       <div className="border-2 rounded-lg my-5 p-10 flex flex-col items-center justify-center">
         <input
           type="file"
-          name=""
+          name="upload-btn"
           id="upload-btn"
           accept=".pdf, .txt, .doc, .ppt, .xls, .docx"
           onChange={handleFileChange}

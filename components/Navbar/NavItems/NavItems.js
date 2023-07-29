@@ -75,12 +75,12 @@ export default function NavItems(props) {
         </li>
 
         <li>
-          <Link href="/bookmark">
+          <Link href="/bookmark" title="Bookmark">
             <FaRegBookmark className="h-6 dark:text-white" />
           </Link>
         </li>
         <li>
-          <Link href="/addBooks" className="flex w-9">
+          <Link href="/addBooks" title="Add Books" className="flex w-9">
             <Image
               loading="lazy"
               src="/add-book.png"
