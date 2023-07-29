@@ -56,7 +56,7 @@ export default function BookList(props) {
         <p className="text-base sm:text-xl text-gray-600 mb-8">From Art to Universe , we have a lots of textbooks to offer you.</p>
       </div>
 
-      <form className="max-w-xl w-full border-2 rounded-full">
+      <form className="max-w-xl w-full border-2 rounded-full" aria-label="Book Search Form">
         <div className="relative">
           <input
             id="default-search"

@@ -69,13 +69,13 @@ const Footer = () => {
               . All Rights Reserved.
             </span>
             <div className="flex mt-0 space-x-6 sm:justify-center sm:mt-0 mr-14 2xl:mr-0">
-              <Link href="/develop">
+              <Link href="/develop" title="Twitter(External Link)" target="_blank" aria-label="Follow us on Twitter" rel="noopener noreferror">
                 <BsTwitter className="w-6 h-6 transition-all duration-200 ease-in-out transform hover:scale-110 twitter" />
               </Link>
-              <Link href="https://github.com/rohansx/informatician">
+              <Link href="https://github.com/rohansx/informatician" title="GitHub(External Link)" target="_blank" aria-label="Follow us on GitHub" rel="noopener noreferror">
                 <BsGithub className="w-6 h-6 transition-all duration-200 ease-in-out transform hover:scale-110 github" />
               </Link>
-              <Link href="#">
+              <Link href="#" title="Discord(External Link)" target="_blank" aria-label="Follow us on Discord" rel="noopener noreferror">
                 <BsDiscord className="w-6 h-6 transition-all duration-200 ease-in-out transform hover:scale-110 discord" />
               </Link>
             </div>
