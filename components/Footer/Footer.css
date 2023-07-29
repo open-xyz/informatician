@@ -32,7 +32,8 @@ footer {
   
   .footer_inner_body {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    align-items: baseline;
   }
   
   .github:hover{

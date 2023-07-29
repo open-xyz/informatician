@@ -5,6 +5,8 @@ import loginIMG from "@/public/assets/auth/login.jpg";
 import GoogleLogo from "@/public/assets/auth/googleLogo.png";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye, faEyeSlash } from "@fortawesome/free-regular-svg-icons";
 
 const Login = () => {
   let navigate = useRouter();
@@ -13,6 +15,7 @@ const Login = () => {
     pass: "",
   });
   const [error, setError] = useState("");
+  const [showPass, setShowPass] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -66,21 +69,33 @@ const Login = () => {
               name="email"
               value={user.email}
               onChange={handleChange}
+
               aria-labelledby="email-label"
               className="w-[100%] bg-slate-100 py-2 px-4 focus:outline-indigo-500"
+
+              className="w-[100%] text-gray-800 bg-slate-100 py-2 px-4 focus:outline-indigo-500"
+
             />
           </div>
           {/* Password input */}
           <div className="w-full flex flex-col items-start gap-2">
             <label htmlFor="pass">Your Password</label>
+            <div className="relative w-[100%]">
             <input
-              type="password"
+              type={showPass? "text":"password"}
               name="pass"
               value={user.pass}
               onChange={handleChange}
+
               aria-labelledby="pass-label"
               className="w-[100%] bg-slate-100 py-2 px-4 focus:outline-indigo-500"
+
+              className="w-[100%] text-gray-800 bg-slate-100 py-2 px-4 focus:outline-indigo-500"
+
             />
+             <FontAwesomeIcon icon={showPass? faEye: faEyeSlash} className="absolute top-4 right-2 cursor-pointer" onClick={()=>setShowPass(!showPass)}/>
+            </div>
+           
           </div>
 
           {/* Remember me */}

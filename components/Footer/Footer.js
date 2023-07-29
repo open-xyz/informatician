@@ -50,7 +50,7 @@ const Footer = () => {
                 />
               </Link>
             </div>
-            <div className="footer_inner_body mt-2">
+            <div className="footer_inner_body mt-2 mx-6">
               {footerComponents?.map((item, index) => {
                 return (
                   <div key={index} className="footer_inner_body_item">
@@ -60,7 +60,7 @@ const Footer = () => {
               })}
             </div>
           </div>
-          <div className="copyright_footer p-6">
+          <div className="copyright_footer p-6 mx-6 mt-2">
             <span className={`text-sm font-bold sm:text-center text-blue-500`}>
               © {year}{" "}
               <a href="/" onClick={scrollToTop} className="hover:underline">
