@@ -73,38 +73,53 @@ const AddBooks = () => {
             Add Books
           </h1>
           <form className="px-8 py-6 space-y-6 flex flex-col" onSubmit={handleSubmit}>
+            <label for="book-name">Enter the Book Name: </label>
             <input
               className="border border-gray-300 dark:border-gray-700 px-4 py-2 rounded"
               type="text"
+              id="book-name"
+              name="book-name" 
               placeholder="Book Name"
               ref={bookName}
               aria-label="Book Name"
             />
+            <label for="author-name">Enter the Author Name: </label>
             <input
               className="border border-gray-300 dark:border-gray-700 px-4 py-2 rounded"
               type="text"
+              id="author-name"
+              name="author-name" 
               placeholder="Author Name"
               ref={authorName}
               aria-label="Author Name"
             />
+            <label for="publisher-name">Enter the Publisher Name: </label>
             <input
               className="border border-gray-300 dark:border-gray-700 px-4 py-2 rounded"
               type="text"
+              id="publisher-name"
+              name="publisher-name" 
               placeholder="Publisher"
               ref={publisher}
               aria-label="Publisher"
             />
+            <label for="no-of-pages">Enter the Number of Pages: </label>
             <input
               className="border border-gray-300 dark:border-gray-700 px-4 py-2 rounded"
               type="number"
+              id="no-of-pages"
+              name="no-of-pages" 
               min="0"
               placeholder="Pages"
               ref={pages}
               aria-label="Number of Pages"
             />
+            <label for="book-image-url">Enter the Book's Cover Image URL: </label>
             <input
               className="border border-gray-300 dark:border-gray-700 px-4 py-2 rounded"
               type="text"
+              id="book-image-url"
+              name="book-image-url" 
               placeholder="Img Url"
               ref={img}
               aria-label="Image URL"
@@ -121,6 +136,7 @@ const AddBooks = () => {
             <button
               className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
               type="submit"
+              role="button"
               aria-label="Add Book"
             >
               Add Book
