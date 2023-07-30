@@ -63,7 +63,7 @@ export default function Navbar(props) {
               <i className="fa-solid fa-search"></i>
             </button>
           </form>
-          {books.length > 0 && (
+  {books.length > 0 && searchValue !== "" && (
             <div className="w-98 bg-gray-100 absolute mx-auto p-2 rounded-md shadow-lg transform scale-95 transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:scale-100">
               {books.map((book, index) => (
                 <Link
