@@ -104,9 +104,11 @@ const AddBooks = () => {
           </h1>
           <form className="px-8 py-6 space-y-6 flex flex-col" onSubmit={handleSubmit}>
           <div>
+            <label for="bookName">Enter the Book Name: </label>
           <input
               className="w-[100%] mb-1 border border-gray-300 dark:border-gray-700 px-4 py-2 rounded"
               type="text"
+              id="bookName"
               name="bookName"
               value={book.bookName}
               onChange={handleChange}
@@ -114,13 +116,14 @@ const AddBooks = () => {
               aria-label="Book Name"
               required
             />
-            {error.bookName && error.bookNameError && <AuthErrorMessage message={error.bookNameError}/>}
+             {error.bookName && error.bookNameError && <AuthErrorMessage message={error.bookNameError}/>}
           </div>
-           
-           <div>
-           <input
+          <div>
+          <label for="authorName">Enter the Author Name: </label>
+            <input
               className="w-[100%] border border-gray-300 dark:border-gray-700 px-4 py-2 rounded"
               type="text"
+              id="authorName"
               placeholder="Author Name"
               name="authorName"
               value={book.authorName}
@@ -128,13 +131,15 @@ const AddBooks = () => {
               aria-label="Author Name"
               required
             />
-             {error.authorName && error.authorNameError && <AuthErrorMessage message={error.authorNameError}/>}
+            {error.authorName && error.authorNameError && <AuthErrorMessage message={error.authorNameError}/>}
            </div>
            
            <div>
-           <input
-              className=" w-[100%] border border-gray-300 dark:border-gray-700 px-4 py-2 rounded"
+           <label for="publisher">Enter the Publisher Name: </label>
+            <input
+              className="w-[100%] border border-gray-300 dark:border-gray-700 px-4 py-2 rounded"
               type="text"
+              id="publisher"
               placeholder="Publisher"
               name="publisher"
               value={book.publisher}
@@ -142,13 +147,15 @@ const AddBooks = () => {
               aria-label="Publisher"
               required
             />
-            {error.publisher && error.publisherError && <AuthErrorMessage message={error.publisherError}/>}
+             {error.publisher && error.publisherError && <AuthErrorMessage message={error.publisherError}/>}
            </div>
-          
-          <div>
-          <input
+           
+           <div>
+           <label for="pages">Enter the Number of Pages: </label>
+            <input
               className="w-[100%] border border-gray-300 dark:border-gray-700 px-4 py-2 rounded"
               type="number"
+              id="pages"
               min="0"
               placeholder="Pages"
               value={book.pages}
@@ -157,12 +164,14 @@ const AddBooks = () => {
               aria-label="Number of Pages"
               required
             />
-             {error.pages && error.pagesError && <AuthErrorMessage message={error.pagesError}/>}
-          </div>
-           
+              {error.pages && error.pagesError && <AuthErrorMessage message={error.pagesError}/>}
+              </div>
+          <div>
+          <label for="img">Enter the Book's Cover Image URL: </label>
             <input
               className="border border-gray-300 dark:border-gray-700 px-4 py-2 rounded"
               type="text"
+              id="img"
               placeholder="Img Url"
               name="img"
               value={book.img}
@@ -170,7 +179,7 @@ const AddBooks = () => {
               aria-label="Image URL"
               required
             />
-
+ </div>
             <select className="border border-gray-300 dark:border-gray-700 px-4 py-2 rounded" value={book.category} onChange={handleChange} name="category" >
               {categories.map((category, index) => (
                 <option key={index} value={category}>
@@ -182,6 +191,7 @@ const AddBooks = () => {
             <button
               className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
               type="submit"
+              role="button"
               aria-label="Add Book"
             >
               Add Book

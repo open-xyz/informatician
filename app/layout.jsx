@@ -8,9 +8,11 @@ import Footer from "@/components/Footer/Footer";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import ScrollToTopButton from "@/components/ScrollButton/ScrollButton";
 import { Suspense } from 'react';
-import { metadata } from './metadata'; // Import the metadata from the separate file
 import { ToastContainer } from "react-toastify";
 
+// Import & exporting the metadata
+import { metadata } from './metadata';
+export {metadata};
 
 const inter = Inter({ subsets: ['latin'] })
 
