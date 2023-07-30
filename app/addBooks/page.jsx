@@ -179,7 +179,7 @@ const AddBooks = () => {
               aria-label="Image URL"
               required
             />
- </div>
+          </div>
             <select className="border border-gray-300 dark:border-gray-700 px-4 py-2 rounded" value={book.category} onChange={handleChange} name="category" >
               {categories.map((category, index) => (
                 <option key={index} value={category}>
