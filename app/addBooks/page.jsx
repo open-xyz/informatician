@@ -1,40 +1,70 @@
 'use client'
 import Upload from "@/components/Upload/Upload";
-import { useRef } from "react";
+import { useState } from "react";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import {validate, AuthErrorMessage} from "../../utils/validation"
 
 const AddBooks = () => {
-  const bookName = useRef();
-  const authorName = useRef();
-  const publisher = useRef();
-  const pages = useRef();
-  const img = useRef();
-  const category = useRef();
+
+  const [book, setBook] = useState({
+    bookName: "",
+    authorName: "",
+    publisher: "",
+    pages: "",
+    img: "",
+    category: "Art",
+  })
+
+  const [error, setError] = useState({
+    bookName: true,
+    authorName: true,
+    publisher: true,
+    pages: true,
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setBook((prev) => {
+      return { ...prev, [name]: value };
+    });
+    if(name !== "category" && name!== "img"){
+      const message = validate[name](value);
+      setError((prev) => {
+        return { ...prev, ...message };
+      });
+    }
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    let submitable = true;
+    console.log(error)
+    Object.values(error).forEach((e) => {
+      if (e !== false) {
+        submitable = false;
+        return;
+      }
+    });
 
-    const books = {
-      bookName: bookName.current.value,
-      authorName: authorName.current.value,
-      publisher: publisher.current.value,
-      pages: pages.current.value,
-      img: img.current.value,
-      category: category.current.value,
-    };
-
-    try {
-      const res = await axios.post(
-        "https://informaticonserver.onrender.com/api/book/add",
-        books
-      );
-      toast.success("Book details added!!Upload the book.");
-      localStorage.setItem("bookId", res.data);
-    } catch (err) {
-      toast.error("Fill all the details!");
-      console.log(err.message);
+    const bookPDF = document.getElementById("upload-btn");
+    if(!bookPDF.files.length > 0) {toast.error("Please upload book."); return}
+    
+    if (submitable) {
+      try {
+        const res = await axios.post(
+          "https://informaticonserver.onrender.com/api/book/add",
+          book
+        );
+        toast.success("Book details added!!Upload the book.");
+        localStorage.setItem("bookId", res.data);
+      } catch (err) {
+        toast.error(err.message);
+        console.log(err.message);
+      }
+    } else {
+      toast.error("Fill all fields with valid data");
     }
   };
 
@@ -73,44 +103,75 @@ const AddBooks = () => {
             Add Books
           </h1>
           <form className="px-8 py-6 space-y-6 flex flex-col" onSubmit={handleSubmit}>
-            <input
-              className="border border-gray-300 dark:border-gray-700 px-4 py-2 rounded"
+          <div>
+          <input
+              className="w-[100%] mb-1 border border-gray-300 dark:border-gray-700 px-4 py-2 rounded"
               type="text"
+              name="bookName"
+              value={book.bookName}
+              onChange={handleChange}
               placeholder="Book Name"
-              ref={bookName}
               aria-label="Book Name"
+              required
             />
-            <input
-              className="border border-gray-300 dark:border-gray-700 px-4 py-2 rounded"
+            {error.bookName && error.bookNameError && <AuthErrorMessage message={error.bookNameError}/>}
+          </div>
+           
+           <div>
+           <input
+              className="w-[100%] border border-gray-300 dark:border-gray-700 px-4 py-2 rounded"
               type="text"
               placeholder="Author Name"
-              ref={authorName}
+              name="authorName"
+              value={book.authorName}
+              onChange={handleChange}
               aria-label="Author Name"
+              required
             />
-            <input
-              className="border border-gray-300 dark:border-gray-700 px-4 py-2 rounded"
+             {error.authorName && error.authorNameError && <AuthErrorMessage message={error.authorNameError}/>}
+           </div>
+           
+           <div>
+           <input
+              className=" w-[100%] border border-gray-300 dark:border-gray-700 px-4 py-2 rounded"
               type="text"
               placeholder="Publisher"
-              ref={publisher}
+              name="publisher"
+              value={book.publisher}
+              onChange={handleChange}
               aria-label="Publisher"
+              required
             />
-            <input
-              className="border border-gray-300 dark:border-gray-700 px-4 py-2 rounded"
+            {error.publisher && error.publisherError && <AuthErrorMessage message={error.publisherError}/>}
+           </div>
+          
+          <div>
+          <input
+              className="w-[100%] border border-gray-300 dark:border-gray-700 px-4 py-2 rounded"
               type="number"
               min="0"
               placeholder="Pages"
-              ref={pages}
+              value={book.pages}
+              name="pages"
+              onChange={handleChange}
               aria-label="Number of Pages"
+              required
             />
+             {error.pages && error.pagesError && <AuthErrorMessage message={error.pagesError}/>}
+          </div>
+           
             <input
               className="border border-gray-300 dark:border-gray-700 px-4 py-2 rounded"
               type="text"
               placeholder="Img Url"
-              ref={img}
+              name="img"
+              value={book.img}
+              onChange={handleChange}
               aria-label="Image URL"
+              required
             />
 
-            <select className="border border-gray-300 dark:border-gray-700 px-4 py-2 rounded" ref={category}>
+            <select className="border border-gray-300 dark:border-gray-700 px-4 py-2 rounded" value={book.category} onChange={handleChange} name="category" >
               {categories.map((category, index) => (
                 <option key={index} value={category}>
                   {category}
@@ -127,7 +188,7 @@ const AddBooks = () => {
             </button>
           </form>
         </div>
-        <Upload />
+        <Upload error={error}/>
       </div>
       <ToastContainer />
     </div>

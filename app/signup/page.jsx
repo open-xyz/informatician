@@ -57,7 +57,7 @@ const SignUp = () => {
     if(submitable){
       //  Write submission code here
       setError({});
-      navigate("/");
+      navigate.push("/");
      }else{
       toast.error("Please fill all fields with valid data.")
      }
@@ -220,7 +220,7 @@ const SignUp = () => {
               <input
                 type={showPass2? "text":"password"}
                 name="confirmPass"
-                placeholder="Enter Confirm Password"
+                placeholder="Re-Enter Password"
                 value={user.confirmPass}
                 onChange={handleChange}
                 aria-label="Confirm Password"
