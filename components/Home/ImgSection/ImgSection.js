@@ -13,7 +13,7 @@ export default function ImgSection(props) {
               <div className="inner-one inner-two"></div>
               <div className="inner-content">
                 <h3 className="inner-head">
-                  Read anywhere. Anytime.
+                  Read Anywhere. Anytime.
                 </h3>
                 <span className="inner-span">
                   <p className="inner-para text-center">
