@@ -5,7 +5,7 @@ import axios from "axios";
 import { useParams, useRouter } from "next/navigation";
 import Login from "@/app/login/page";
 
-const FileUploadComponent = () => {
+const FileUploadComponent = ({error}) => {
   const [file, setFile] = useState(null);
   const navigate = useRouter();
   const id = useParams();
@@ -17,6 +17,15 @@ const FileUploadComponent = () => {
   };
 
   const handleFileUpload = async () => {
+    let submitable = true;
+    Object.values(error).forEach((e) => {
+      if (e !== false) {
+        submitable = false;
+        return;
+      }
+    });
+
+    if (submitable) {
     try {
       if (file) {
         toast.loading("Uploading...");
@@ -39,9 +48,13 @@ const FileUploadComponent = () => {
         toast.error("Choose a file to upload!");
       }
     } catch (error) {
+      toast.dismiss();
       toast.error("Something went wrong!");
       console.error(error);
     }
+  }else{
+    toast.error("Fill the form properly");
+  }
   };
 
   return (
