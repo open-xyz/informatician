@@ -1,11 +1,12 @@
-"use client"
+"use client";
 
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
-import ReactStars from "react-rating-stars-component";
+import ReactStars from "react-stars";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark } from "@fortawesome/free-regular-svg-icons";
-
+import Link from "next/link";
+import Image from "next/image";
+import { useParams } from "next/navigation";
 
 export default function BookComponent() {
   const { bookId } = useParams();
@@ -41,12 +42,12 @@ export default function BookComponent() {
         <div className="left-wrapper-content">
           <h1 className="book-name">{bookDetails.volumeInfo.title}</h1>
           <div className="author">
-            <Link to={`/buybooks/author/${bookDetails.volumeInfo.authors[0]}`}>
+            <Link href={`/buybooks/author/${bookDetails.volumeInfo.authors[0]}`}>
               Author: {bookDetails.volumeInfo.authors[0]}
             </Link>
           </div>
           <div className="rating">
-            <ReactStars count={5} size={24} value={4} activeColor="#ffd700" />
+            <ReactStars count={5} size={24} color2={"#ffd700"} value={4}/>
             {bookDetails.volumeInfo.ratingsCount} Ratings
           </div>
           <div>
@@ -82,14 +83,16 @@ export default function BookComponent() {
         <div className="space"></div>
         <div className="side-panel">
           <div className="thumbnail">
-            <img
+            <Image
               src={bookDetails.volumeInfo.imageLinks.thumbnail}
               alt={bookDetails.volumeInfo.title}
+              width={100}
+              height={100}
             />
           </div>
           <div className="buttons">
             <Link
-              to={{
+              href={{
                 pathname: "/sample-component",
                 search: `?isbn=${bookDetails.volumeInfo.industryIdentifiers[0].identifier}`,
               }}

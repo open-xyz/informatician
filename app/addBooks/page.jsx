@@ -2,8 +2,7 @@
 import Upload from "@/components/Upload/Upload";
 import { useRef } from "react";
 import axios from "axios";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-hot-toast"
 
 const AddBooks = () => {
   const bookName = useRef();
@@ -145,7 +144,6 @@ const AddBooks = () => {
         </div>
         <Upload />
       </div>
-      <ToastContainer />
     </div>
   );
 };

@@ -7,7 +7,7 @@ import {validate} from "@/utils/validation";
 import {AuthErrorMessage} from "@/utils/validation";
 import Link from "next/link";
 import Image from "next/image";
-import { toast } from "react-toastify";
+import { toast } from "react-hot-toast";
 
 export default function Contact() {
   useEffect(() => {
@@ -37,7 +37,7 @@ export default function Contact() {
     });
 
     if (submitable) {
-      await fetch("http://localhost:3000/sendMail", {
+      await fetch("https://informaticonserver.onrender.com/mail", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

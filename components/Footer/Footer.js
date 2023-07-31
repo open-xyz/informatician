@@ -37,9 +37,9 @@ const Footer = () => {
     <>
       <NewsLetter />
       <footer>
-        <div className="mx-auto w-full max-w-screen-xl py-6 lg:py-4">
-          <div className="footer_body p-6">
-            <div className="footer_main mb-6 md:mb-0 mt-0 py-2">
+        <div className="mx-auto w-full max-w-screen-xl py-3 lg:py-2">
+          <div className="footer_body p-2">
+            <div className="footer_main mb-4 md:mb-0 mt-0 py-2">
               <Link href="/" onClick={scrollToTop}>
                 <Image
                   src={darkLogo}
@@ -50,7 +50,7 @@ const Footer = () => {
                 />
               </Link>
             </div>
-            <div className="footer_inner_body mt-2 mx-6">
+            <div className="footer_inner_body mt-2 mx-2">
               {footerComponents?.map((item, index) => {
                 return (
                   <div key={index} className="footer_inner_body_item">

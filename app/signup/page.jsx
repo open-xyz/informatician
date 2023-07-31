@@ -8,19 +8,16 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-regular-svg-icons";
 import { FaSyncAlt } from "react-icons/fa";
-import { toast } from "react-toastify";
+import { toast } from "react-hot-toast";
 
 const SignUp = () => {
   let navigate = useRouter();
   const [user, setUser] = useState({
-    fName: "",
-    lName: "",
-    userName: "",
+    name: "",
     email: "",
-    pass: "",
-    confirmPass: "",
+    password: "",
+    confirmPassword: "",
   });
-  const [error, setError] = useState("");
   const [showPass1, setShowPass1] = useState(false);
   const [showPass2, setShowPass2] = useState(false);
   const [captchaVal, setCaptchaVal] = useState("");
@@ -39,28 +36,7 @@ const SignUp = () => {
       return;
     }
 
-    if (!user.fName) {
-      setError("First Name is Required!");
-      return;
-    } else if (!user.lName) {
-      setError("Last Name is Required!");
-      return;
-    } else if (!user.userName) {
-      setError("Username is Required!");
-      return;
-    } else if (!user.email) {
-      setError("Email is Required!");
-      return;
-    } else if (!user.pass) {
-      setError("Password is Required!");
-      return;
-    } else if (!user.confirmPass) {
-      setError("Please confirm your Password!");
-      return;
-    }
-
-    setError("");
-    navigate("/");
+    return navigate.push("/");
   };
 
    // Captcha logic
@@ -106,45 +82,14 @@ const SignUp = () => {
             <div className="w-[40%] border-t-2 border-slate-200"></div>
           </div>
 
-          {/* Show error */}
-          {error && <div className="text-red-600">{error}</div>}
-
-          {/* First name input */}
-          <div className="w-full flex flex-row items-center justify-between gap-8">
-            <div className="flex flex-col items-start gap-2">
-              <label htmlFor="fName">First Name</label>
-              <input
-                type="text"
-                name="fName"
-                placeholder="Enter First Name"
-                value={user.fName}
-                onChange={handleChange}
-                aria-label="First Name"
-                className="w-[100%] bg-slate-100 py-2 px-4 focus:outline-indigo-500"
-              />
-            </div>
-            {/* Last name input */}
-            <div className="flex flex-col items-start gap-2">
-              <label htmlFor="lName">Last Name</label>
-              <input
-                type="text"
-                name="lName"
-                placeholder="Enter Last Name"
-                value={user.lName}
-                onChange={handleChange}
-                aria-label="Last Name"
-                className="w-[100%] bg-slate-100 py-2 px-4 focus:outline-indigo-500"
-              />
-            </div>
-          </div>
-          {/* Username input */}
+          {/* Name input */}
           <div className="w-full flex flex-col items-start gap-2">
-            <label htmlFor="userName">Username</label>
+            <label htmlFor="name">Full Name</label>
             <input
               type="text"
-              name="userName"
-              placeholder="Enter Username"
-              value={user.userName}
+              name="name"
+              placeholder="Enter Your Full Name"
+              value={user.name}
               onChange={handleChange}
               aria-label="Username"
               className="w-[100%] bg-slate-100 py-2 px-4 focus:outline-indigo-500"
@@ -166,13 +111,13 @@ const SignUp = () => {
           {/* Password input */}
           <div className="w-full flex flex-row items-center justify-between gap-8">
             <div className="flex flex-col items-start gap-2 relative">
-              <label htmlFor="pass">Create Password</label>
+              <label htmlFor="password">Create Password</label>
               <div className="relative w-[100%]">
               <input
                 type={showPass1? "text":"password"}
-                name="pass"
+                name="password"
                 placeholder="Enter Password"
-                value={user.pass}
+                value={user.password}
                 onChange={handleChange}
                 aria-label="Create Password"
                 className="w-[100%] bg-slate-100 py-2 px-4 focus:outline-indigo-500"
@@ -182,19 +127,19 @@ const SignUp = () => {
             </div>
             {/* Confirm password input */}
             <div className="flex flex-col items-start gap-2">
-              <label htmlFor="confirmPass">Confirm Password</label>
+              <label htmlFor="confirmPassword">Confirm Password</label>
               <div className="relative w-[100%]">
               <input
                 type={showPass2? "text":"password"}
-                name="confirmPass"
+                name="confirmPassword"
                 placeholder="Enter Confirm Password"
-                value={user.confirmPass}
+                value={user.confirmPassword}
                 onChange={handleChange}
                 aria-label="Confirm Password"
                 className={
                   !(
-                    user.confirmPass.length === 0 &&
-                    user.confirmPass === user.pass
+                    user.confirmPassword.length === 0 &&
+                    user.confirmPassword === user.password
                   )
                     ? "w-[100%] bg-slate-100 py-2 px-4 focus:outline-green-500"
                     : "w-[100%] bg-slate-100 py-2 px-4 focus:outline-red-500"
