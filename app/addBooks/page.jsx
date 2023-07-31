@@ -2,8 +2,7 @@
 import Upload from "@/components/Upload/Upload";
 import { useState } from "react";
 import axios from "axios";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-hot-toast"
 import {validate, AuthErrorMessage} from "../../utils/validation"
 
 const AddBooks = () => {
@@ -200,7 +199,6 @@ const AddBooks = () => {
         </div>
         <Upload error={error}/>
       </div>
-      <ToastContainer />
     </div>
   );
 };

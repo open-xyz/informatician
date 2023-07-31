@@ -1,9 +1,8 @@
+"use client"
 import React, { useState } from "react";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-hot-toast";
 import axios from "axios";
 import { useParams, useRouter } from "next/navigation";
-import Login from "@/app/login/page";
 
 const FileUploadComponent = ({error}) => {
   const [file, setFile] = useState(null);
@@ -80,10 +79,6 @@ const FileUploadComponent = ({error}) => {
         {file && (
           <p className="border-dashed border-gray-500 dark:border-gray-700 rounded-md p-2 m-1">
             {file.name}
-            {/* <CloseIcon
-              className="close-icon ml-10 cursor-pointer"
-              onClick={() => setFile(null)}
-            /> */}
           </p>
         )}
         <button
@@ -99,7 +94,6 @@ const FileUploadComponent = ({error}) => {
         Supported file types: pdf, txt, doc, ppt, xls, docx, and more
       </p>
 
-      <ToastContainer />
     </div> )
   );
 };
