@@ -10,7 +10,7 @@ export default function Feature(props) {
       <h1 className="text-center text-4xl font-bold">Features</h1>
       <p className="text-center mt-4 mb-5">Features We provide</p>
 
-      <Carousel showArrows={true} showThumbs={false} className="carousel-container" autoPlay={true} interval={2000} infiniteLoop={true}>
+      <Carousel showArrows={true} showThumbs={false} className="carousel-container" autoPlay={true} interval={2000} infiniteLoop={true} >
         <div className="feature_card_outer">
           <div className="feature_card dark:bg-gray-900">
             <MdMenuBook className="icons book" />
@@ -40,12 +40,12 @@ export default function Feature(props) {
             <p className="font-bold text-xl">Reading Challenge</p>
           </div>
         </div>
-        <div className="feature_card_outer">
+        {/* <div className="feature_card_outer">
           <div className="feature_card dark:bg-gray-900">
             <MdTimeline className="icons progressTracking" />
             <p className="font-bold text-xl">Progress Tracking</p>
           </div>
-        </div>
+        </div> */}
       </Carousel>
     </div>
   );
