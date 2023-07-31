@@ -29,10 +29,9 @@ export default function Navbar(props) {
     }
     
     try {
-      console.log("called");
       const result = await searchBooks(query);
-      console.log(result)
-      console.log(result[0].selfLink)
+      // console.log(result)
+      // console.log(result[0].selfLink)
       result.length > 0 ? setBooks(result.slice(0, 5)) : setBooks([]); // Update books state based on the search result
       
     } catch (err) {

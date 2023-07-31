@@ -24,8 +24,6 @@ export default function CgCards() {
           }}
           // navigation
           pagination={{ clickable: true }}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log("slide change")}
           breakpoints={{
             512: {
               slidesPerView: 2,
