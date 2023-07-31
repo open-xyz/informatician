@@ -13,8 +13,7 @@ import { Suspense } from 'react';
 import ToasterContext from "@/context/ToasterContext";
 import Provider from "@/context/AuthContext";
 // Import & exporting the metadata
-import { metadata } from './metadata';
-export {metadata};
+
 
 const inter = Inter({ subsets: ['latin'] })
 
