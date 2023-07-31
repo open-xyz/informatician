@@ -79,14 +79,14 @@ export default function BookList(props) {
             type="submit"
             id="search-button-2"
             onClick={handleClick}
-            className="absolute p-2 top-1/2 right-0 bg-zinc-200 border rounded-full transform -translate-y-1/2"
+            className="absolute bg-gray-200  top-1/2  w-12 h-8 p-1  right-2 rounded-xl transform -translate-y-1/2"
           >
             <Image
               loading="lazy"
               className="w-full h-full"
-              width="24"
-              height="24"
-              src="https://img.icons8.com/ios/100/search--v1.png"
+              width="10"
+              height="10"
+              src="/search-svgrepo-com.svg"
               alt="Icon of a magnifying glass for search functionality"
             />
           </button>

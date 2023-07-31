@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-regular-svg-icons";
 import { FaSyncAlt } from "react-icons/fa";
 import { toast } from "react-hot-toast";
+import {validate, AuthErrorMessage} from "../../utils/validation";
 
 const Login = () => {
   let navigate = useRouter();
@@ -16,7 +17,7 @@ const Login = () => {
     email: "",
     pass: "",
   });
-  const [error, setError] = useState("");
+  const [error, setError] = useState({});
   const [showPass, setShowPass] = useState(false);
   const [captchaVal, setCaptchaVal] = useState();
   const [captchaText, setCaptchaText] = useState();
@@ -24,28 +25,40 @@ const Login = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setUser((prev) => ({ ...prev, [name]: value }));
+    const errObj = validate[name](value);
+    setError((prev)=>{
+      return {...prev, ...errObj}
+    })
   };
 
   const login = (e) => {
     e.preventDefault();
-    
-  if(captchaVal !== captchaText){
-    toast.error("Wrong Captcha");
-    setCaptchaVal("");
-    genrateCaptcha();
-    return;
-  }
-
-    if (!user.email) {
-      setError("Email is Required!");
-      return;
-    } else if (!user.pass) {
-      setError("Password is Required!");
+    if (!captchaVal) {
+      toast.error("Please fill Captcha field");
       return;
     }
 
-    setError("");
-    navigate("/");
+    if (captchaVal !== captchaText) {
+      toast.error("Wrong Captcha");
+      setCaptchaVal("");
+      genrateCaptcha();
+      return;
+    }
+
+    let submitable = true;
+    Object.values(error).forEach((e) => {
+      if (e !== false) {
+        submitable = false;
+        return;
+      }
+    });
+    if (submitable) {
+      //  Write submission code here
+      setError({});
+      navigate.push("/");
+    } else {
+      toast.error("Please fill all fields with valid data.");
+    }
   };
 
     // Captcha logic
@@ -86,9 +99,6 @@ const Login = () => {
             <div className="w-[40%] border-t-2 border-slate-200"></div>
           </div>
 
-          {/* Show error */}
-          {error && <div className="text-red-600">{error}</div>}
-
           {/* Email input */}
           <div className="w-full flex flex-col items-start gap-2">
             <label htmlFor="email">Your Email</label>
@@ -98,12 +108,16 @@ const Login = () => {
               placeholder="Enter Email"
               value={user.email}
               onChange={handleChange}
-
               aria-labelledby="email-label"
-
-              className="w-[100%] text-gray-800 bg-slate-100 py-2 px-4 focus:outline-indigo-500"
-
+              className={
+                  (
+                   error.emailError === false
+                  )
+                    ? "w-[100%] bg-slate-100 py-2 px-4 focus:outline-green-500"
+                    : "w-[100%] bg-slate-100 py-2 px-4 focus:outline-red-500"
+              }
             />
+             {error.email && error.email && <AuthErrorMessage message={error.emailError}/> }
           </div>
           {/* Password input */}
           <div className="w-full flex flex-col items-start gap-2">
@@ -115,15 +129,19 @@ const Login = () => {
               placeholder="Enter Password"
               value={user.pass}
               onChange={handleChange}
-
               aria-labelledby="pass-label"
-
-              className="w-[100%] text-gray-800 bg-slate-100 py-2 px-4 focus:outline-indigo-500"
+              className={
+                  (
+                   error.passError === false
+                  )
+                    ? "w-[100%] bg-slate-100 py-2 px-4 focus:outline-green-500"
+                    : "w-[100%] bg-slate-100 py-2 px-4 focus:outline-red-500"
+                }
 
             />
              <FontAwesomeIcon icon={showPass? faEye: faEyeSlash} className="absolute top-4 right-2 cursor-pointer" onClick={()=>setShowPass(!showPass)}/>
             </div>
-           
+            {error.pass && error.passError && <p className="block text-start text-red-600 text-sm m-0 mb-2">{error.passError}</p> }
           </div>
 
           <div className="w-full flex flex-col items-start gap-2">
@@ -131,8 +149,9 @@ const Login = () => {
             <div className="flex flex-row gap-3 justify-center items-center">
               <div
                 id="captcha"
-                className="w-[40%] py-1 px-2 text-2xl text-gray-700 border-black border-2 border-solid"
+                className="w-[40%] py-1 cursor-default px-2 text-2xl text-gray-700 border-black border-2 border-solid"
                 style={{backgroundImage: `url("/assets/auth/captcha.webp")`}}
+                onMouseDown={(e)=>e.preventDefault()}
               >{captchaText}</div>
               <FaSyncAlt
                 className="spin-icon text-3xl cursor-pointer"
