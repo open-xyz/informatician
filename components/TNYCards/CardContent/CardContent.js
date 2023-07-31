@@ -1,7 +1,7 @@
 import ReactStars from "react-rating-stars-component";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark, faTrophy } from "@fortawesome/free-regular-svg-icons";
-import { faStar as fasFaStar } from "@fortawesome/free-solid-svg-icons"; // Import solid star icon
+
 import Image from "next/image";
 
 import { useState, useEffect } from "react";
