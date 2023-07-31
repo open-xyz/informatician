@@ -3,8 +3,7 @@ import Upload from "@/components/Upload/Upload";
 import { useState } from "react";
 import axios from "axios";
 import { useParams, useRouter } from "next/navigation";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-hot-toast"
 import {validate, AuthErrorMessage} from "../../utils/validation"
 import { backendURL } from "@/utils/Constants";
 
@@ -219,7 +218,6 @@ const AddBooks = () => {
         </div>
        
       </div>
-      <ToastContainer />
     </div>
   ));
 };
