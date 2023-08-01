@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { FaLinkedin } from 'react-icons/fa';
 
 const testimonials = [
   {
@@ -8,6 +9,7 @@ const testimonials = [
     image: 'https://avatars.githubusercontent.com/u/33249782?v=4',
     quote:
       "This application is excellent! It's like the Netflix of books! As a college student, this app has greatly aided me in reading science and mathematics. I have encountered no issues and found most of the books I needed. Thanks! I genuinely adore this app!",
+    linkedIn:"https://www.linkedin.com/in/sumit-kumar-rai-b59290233/"
   },
   {
     id: 2,
@@ -16,6 +18,7 @@ const testimonials = [
     image: 'https://avatars.githubusercontent.com/u/96341431?v=4',
     quote:
       "The assortment of ebooks and audiobooks is abundant. I have discovered and saved numerous books to read and listen to that would have otherwise cost me a fortune elsewhere. There's no comparison at all!",
+    linkedIn:"https://www.linkedin.com/in/sumit-kumar-rai-b59290233/"
   },
   {
     id: 3,
@@ -24,6 +27,7 @@ const testimonials = [
     image: 'https://avatars.githubusercontent.com/u/85052056?v=4',
     quote:
       "From significant literary works and comprehensive historical and scientific studies to popular fiction and self-help books, it's remarkable how much there is to discover on Informatician. Fantastic!",
+    linkedIn:"https://www.linkedin.com/in/sumit-kumar-rai-b59290233/"
   },
   // Add more testimonials here
 ];
@@ -60,6 +64,11 @@ export default function Testimonial() {
                 </span>
                 <span className="text-sm text-gray-700 dark:text-gray-400">
                   {testimonial.job}
+                </span>
+                <span className='float-right'>
+                  <a href={testimonial.linkedIn} target='_blank'>
+                    <FaLinkedin className='inline text-blue-500 text-xl cursor-pointer' />
+                  </a>
                 </span>
               </div>
             </div>
