@@ -3,11 +3,11 @@ import { useState, useEffect } from "react";
 import { FaDiscord, FaTwitter, FaGithub } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import validate from "@/utils/validation";
-import AuthErrorMessage from "@/utils/AuthError";
+import {validate} from "@/utils/validation";
+import {AuthErrorMessage} from "@/utils/validation";
 import Link from "next/link";
 import Image from "next/image";
-import { toast } from "react-toastify";
+import { toast } from "react-hot-toast";
 
 export default function Contact() {
   useEffect(() => {
@@ -37,7 +37,7 @@ export default function Contact() {
     });
 
     if (submitable) {
-      await fetch("http://localhost:3000/sendMail", {
+      await fetch("https://informaticonserver.onrender.com/mail", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -194,6 +194,7 @@ export default function Contact() {
                 type="submit"
                 className="w-full py-2 px-4 text-white font-semibold bg-blue-600 rounded hover:bg-blue-700 transition-colors duration-300"
                 onClick={handleResponse}
+                aria-label="Submit the form"
               >
                 Submit
               </button>
@@ -219,18 +220,27 @@ export default function Contact() {
             <Link
               href="/develop"
               target="_blank"
+              title= "Twitter(External Link)"
+              aria-label="Follow us on Twitter"
+              rel="noopener noreferrer"
               className="flex items-center justify-center w-10 h-10 bg-black text-white dark:bg-white dark:text-black rounded-full transition-all duration-300 hover:bg-blue-500">
               <FaTwitter />
             </Link>
             <Link
               href="https://github.com/rohansx/informatician"
               target="_blank"
+              title="GitHub(External Link)"
+              aria-label="Follow us on GitHub"
+              rel="noopener noreferrer"
               className="flex items-center justify-center w-10 h-10 bg-black text-white dark:bg-white dark:text-black rounded-full transition-all duration-300 hover:bg-gray-300">
               <FaGithub />
             </Link>
             <Link
               href="/develop"
               target="_blank"
+              title="Discord(External Link)"
+              aria-label="Follow us on Discord"
+              rel="noopener noreferrer"
               className="flex items-center justify-center w-10 h-10 bg-black text-white dark:bg-white dark:text-black rounded-full transition-all duration-300 hover:bg-blue-600">
               <FaDiscord />
             </Link>

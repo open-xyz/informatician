@@ -2,8 +2,7 @@
 import Image from 'next/image';
 import './NewsLetter.css';
 import React, { useState } from 'react';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { toast } from 'react-hot-toast';
 import { backendURL } from '@/utils/Constants';
 
 
@@ -17,7 +16,7 @@ export default function NewsLetter() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    setSubmitted(true);
     try {
       const response = await fetch(
         `${backendURL}/api/addUser`,
@@ -35,6 +34,7 @@ export default function NewsLetter() {
         toast.success("Subscribed", { position: 'top-center', autoClose: 3000, theme: 'colored' })
       } else {
         console.log("Failed to subscribe");
+        setSubmitted(false)
         toast.error("Failed to subscribe. Please try again!", {
           position: "top-right",
           autoClose: 5000,
@@ -42,11 +42,11 @@ export default function NewsLetter() {
         });
       }
     } catch (error) {
+      setSubmitted(false)
       console.error(error);
       toast.error("There was a problem with server, Please try again!", { position: 'top-center', autoClose: 3000, theme: 'colored' })
     }
 
-    setSubmitted(true);
   };
 
   return (
@@ -66,7 +66,7 @@ export default function NewsLetter() {
             A newsletter about books, reading, and writing.
           </p>
         </div>
-        <form className="form" id="form" onSubmit={handleSubmit}>
+        <form className="form" id="form" onSubmit={handleSubmit} aria-label='Email Subscription Form'>
           <input
             type="email"
             name="email"
@@ -77,6 +77,7 @@ export default function NewsLetter() {
             }`}
             onChange={handleInputChange}
             disabled={isSubmitted}
+            aria-label='Email'
           />
           <button
             type="submit"
@@ -86,12 +87,12 @@ export default function NewsLetter() {
             } ${isSubmitted ? 'btn--success' : ''}`}
             disabled={isSubmitted}
             id='btn'
+            aria-label='Subscribe'
           >
             {isSubmitted ? "You're on the list! 👍" : 'Subscribe'}
           </button>
         </form>
       </div>
-      <ToastContainer />
     </div>
   );
 }

@@ -2,8 +2,6 @@
 import { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper";
-// import "swiper/css";
-// import "swiper/css/pagination";
 import Link from "next/link";
 import CardContent from "./CardContent/CardContent";
 import { useSwiper } from "swiper/react";

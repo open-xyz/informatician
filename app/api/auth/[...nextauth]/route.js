@@ -1,56 +1,64 @@
 import NextAuth from "next-auth";
+import CredentialsProvider from "next-auth/providers/credentials";
 import GoogleProvider from "next-auth/providers/google";
-import { connectedToDB } from "@/utils/database";
-import User from "@/model/User";
+import prisma from "@/libs/prismadb"
+import { PrismaAdapter } from "@auth/prisma-adapter";
+import bcrypt from "bcrypt"
 
-const handler = NextAuth({
-  providers: [
-    GoogleProvider({
-      clientId: process.env.GOOGLE_CLIENT_ID,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    }),
-  ],
-  callbacks: {
-    async session({ session }) {
-      try {
-        const sessionUser = await User.findOne({
-          email: session.user.email,
-        });
+export const authOptions = {
+      adapter: PrismaAdapter(prisma),
+      providers: [
+        GoogleProvider({
+          clientId: process.env.GOOGLE_ID,
+          clientSecret: process.env.GOOGLE_SECRET
+        }),
+        CredentialsProvider({
+           name: "credentials",
+           credentials:{
+               email: {label: "Email", type:"text", placeholder:"Enter your Email"},
 
-        if (sessionUser) {
-          session.user.id = sessionUser._id.toString();
-        }
+               password: { label: "Password", type: "Enter your Password" },
 
-        return session;
-      } catch (error) {
-        console.log(error);
-        throw error;
-      }
-    },
+              username: { label: "Username", type: "text", placeholder: "Enter your Username" },
+           },
 
-    async signIn({ profile }) {
-      try {
-        await connectedToDB();
+           async authorize(credentials){
+              // Check if email and password is there
+              if(!credentials.email || !credentials.password){
+                throw new Error("Please Enter your Email & Password");
+              }
 
-        const userExists = await User.findOne({
-          email: profile.email,
-        });
+              // check if user exist
+              const user = await prisma.user.findUnique({ 
+                where:{
+                  email: credentials.email
+                }
+              });
 
-        if (!userExists) {
-          await User.create({
-            email: profile.email,
-            username: profile.name.replace(" ", "").toLowerCase(),
-            image: profile.picture,
-          });
-        }
+              // if no user exist or user not found
+              if(!user || !user?.hashedPassword){
+                throw new Error("User Not Found!"); 
+            }
 
-        return true;
-      } catch (error) {
-        console.log(error);
-        throw error;
-      }
-    },
-  },
-});
+            // Check Password Matches
+            const passwordMatches = await bcrypt.compare(credentials.password, user.hashedPassword);
 
-export {handler as GET, handler as POST};
+            // if password does not match
+            if(!passwordMatches){
+              throw new Error("Incorrect Password!")
+            }
+             
+            return user;
+          }
+        })
+      ],
+
+      secret: process.env.SECRET,
+      session:{
+        strategy:'jwt'
+      },
+      debug: process.env.NODE_ENV === "development"
+}
+
+const handler = NextAuth(authOptions)
+export { handler as GET, handler as POST}

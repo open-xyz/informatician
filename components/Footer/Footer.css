@@ -11,8 +11,7 @@ footer {
     color: rgb(152, 179, 243);
   }
   
-  .footer-div,
-  h2 {
+  footer h2 {
     margin-top: 20px;
     color: rgb(216, 226, 250);
   }
@@ -32,7 +31,8 @@ footer {
   
   .footer_inner_body {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    align-items: baseline;
   }
   
   .github:hover{

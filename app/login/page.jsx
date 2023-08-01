@@ -1,10 +1,15 @@
 'use client'
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link"
 import loginIMG from "@/public/assets/auth/login.jpg";
 import GoogleLogo from "@/public/assets/auth/googleLogo.png";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye, faEyeSlash } from "@fortawesome/free-regular-svg-icons";
+import { FaSyncAlt } from "react-icons/fa";
+import { toast } from "react-hot-toast";
+import {validate, AuthErrorMessage} from "../../utils/validation";
 
 const Login = () => {
   let navigate = useRouter();
@@ -12,33 +17,72 @@ const Login = () => {
     email: "",
     pass: "",
   });
-  const [error, setError] = useState("");
+  const [error, setError] = useState({});
+  const [showPass, setShowPass] = useState(false);
+  const [captchaVal, setCaptchaVal] = useState();
+  const [captchaText, setCaptchaText] = useState();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setUser((prev) => ({ ...prev, [name]: value }));
+    const errObj = validate[name](value);
+    setError((prev)=>{
+      return {...prev, ...errObj}
+    })
   };
 
   const login = (e) => {
     e.preventDefault();
-
-    if (!user.email) {
-      setError("Email is Required!");
-      return;
-    } else if (!user.pass) {
-      setError("Password is Required!");
+    if (!captchaVal) {
+      toast.error("Please fill Captcha field");
       return;
     }
 
-    setError("");
-    navigate("/");
+    if (captchaVal !== captchaText) {
+      toast.error("Wrong Captcha");
+      setCaptchaVal("");
+      genrateCaptcha();
+      return;
+    }
+
+    let submitable = true;
+    Object.values(error).forEach((e) => {
+      if (e !== false) {
+        submitable = false;
+        return;
+      }
+    });
+    if (submitable) {
+      //  Write submission code here
+      setError({});
+      navigate.push("/");
+    } else {
+      toast.error("Please fill all fields with valid data.");
+    }
   };
+
+    // Captcha logic
+    const genrateCaptcha = ()=>
+    {
+      let captcha = "";
+      const charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    
+    for (let i = 0; i < 6; i++) {
+      var randomIndex = Math.floor(Math.random() * charset.length);
+      captcha += charset.charAt(randomIndex);
+    }
+    setCaptchaText(captcha)
+    }
+
+    useEffect(()=>{
+      genrateCaptcha();
+    }, [])
 
   return (
     <div className=" my-28 flex">
       {/* Login Form */}
       <div className="md:w-1/2 mx-auto">
-        <form className="lg:w-[80%] flex flex-col py-4 px-5 gap-6 mx-auto text-lg">
+        <form className="lg:w-[80%] flex flex-col py-4 px-5 gap-6 mx-auto text-lg" aria-label="Login form">
           {/* Heading */}
           <h2 className="mx-auto text-2xl md:text-3xl font-bold text-indigo-600">
             Login to Informatician
@@ -55,30 +99,73 @@ const Login = () => {
             <div className="w-[40%] border-t-2 border-slate-200"></div>
           </div>
 
-          {/* Show error */}
-          {error && <div className="text-red-600">{error}</div>}
-
           {/* Email input */}
-          <div className="w-full flex flex-col items-start gap-2">
+          <div className="w-full flex flex-col items-start gap-2 text-gray-700">
             <label htmlFor="email">Your Email</label>
             <input
               type="email"
               name="email"
+              placeholder="Enter Email"
               value={user.email}
               onChange={handleChange}
-              className="w-[100%] bg-slate-100 py-2 px-4 focus:outline-indigo-500"
+              aria-labelledby="email-label"
+              className={
+                  (
+                   error.emailError === false
+                  )
+                    ? "w-[100%] bg-slate-100 py-2 px-4 focus:outline-green-500"
+                    : "w-[100%] bg-slate-100 py-2 px-4 focus:outline-red-500"
+              }
             />
+             {error.email && error.email && <AuthErrorMessage message={error.emailError}/> }
           </div>
           {/* Password input */}
-          <div className="w-full flex flex-col items-start gap-2">
+          <div className="w-full flex flex-col items-start gap-2 text-gray-700">
             <label htmlFor="pass">Your Password</label>
+            <div className="relative w-[100%]">
             <input
-              type="password"
+              type={showPass? "text":"password"}
               name="pass"
+              placeholder="Enter Password"
               value={user.pass}
               onChange={handleChange}
-              className="w-[100%] bg-slate-100 py-2 px-4 focus:outline-indigo-500"
+              aria-labelledby="pass-label"
+              className={
+                  (
+                   error.passError === false
+                  )
+                    ? "w-[100%] bg-slate-100 py-2 px-4 focus:outline-green-500"
+                    : "w-[100%] bg-slate-100 py-2 px-4 focus:outline-red-500"
+                }
+
             />
+             <FontAwesomeIcon icon={showPass? faEye: faEyeSlash} className="absolute top-4 right-2 cursor-pointer" onClick={()=>setShowPass(!showPass)}/>
+            </div>
+            {error.pass && error.passError && <p className="block text-start text-red-600 text-sm m-0 mb-2">{error.passError}</p> }
+          </div>
+
+          <div className="w-full flex flex-col items-start gap-2">
+            <label htmlFor="captcha">Captcha</label>
+            <div className="flex flex-row gap-3 justify-center items-center">
+              <div
+                id="captcha"
+                className="w-[40%] py-1 cursor-default px-2 text-2xl text-gray-700 border-black border-2 border-solid"
+                style={{backgroundImage: `url("/assets/auth/captcha.webp")`}}
+                onMouseDown={(e)=>e.preventDefault()}
+              >{captchaText}</div>
+              <FaSyncAlt
+                className="spin-icon text-3xl cursor-pointer"
+                onClick={genrateCaptcha}
+              />
+              <input
+                type="text"
+                name="captch"
+                value={captchaVal}
+                placeholder="Enter Captcha Here"
+                onChange={(e)=>setCaptchaVal(e.target.value)}
+                className="w-[100%] bg-slate-100 py-2 px-4 focus:outline-indigo-500"
+              />
+            </div>
           </div>
 
           {/* Remember me */}
@@ -120,7 +207,7 @@ const Login = () => {
 
       {/* right part image */}
       <div className="hidden md:block md:w-1/2">
-        <Image src={loginIMG} alt="" className="object-cover" height="100%" width="100%" />
+        <Image src={loginIMG} alt="login-img" className="object-cover" height="100%" width="100%" />
       </div>
     </div>
   );
