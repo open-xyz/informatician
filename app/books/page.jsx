@@ -6,7 +6,7 @@ import Image from "next/image";
 import { categories } from "@/utils/Constants";
 import BkCards from "@/components/BkCards/BkCards";
 import Card from "@/components/Quotes/Card";
-import Spinner from "@/components/s";
+import "./Spinner.css";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -160,7 +160,7 @@ export default function BookList(props) {
       </h3>
 
       {loading ? (
-        <div>Loading...</div>
+        <span class="loader"></span>
       ) : (
         <Swiper
           slidesPerView={1}
