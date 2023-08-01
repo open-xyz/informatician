@@ -100,7 +100,7 @@ const Login = () => {
           </div>
 
           {/* Email input */}
-          <div className="w-full flex flex-col items-start gap-2">
+          <div className="w-full flex flex-col items-start gap-2 text-gray-700">
             <label htmlFor="email">Your Email</label>
             <input
               type="email"
@@ -120,7 +120,7 @@ const Login = () => {
              {error.email && error.email && <AuthErrorMessage message={error.emailError}/> }
           </div>
           {/* Password input */}
-          <div className="w-full flex flex-col items-start gap-2">
+          <div className="w-full flex flex-col items-start gap-2 text-gray-700">
             <label htmlFor="pass">Your Password</label>
             <div className="relative w-[100%]">
             <input

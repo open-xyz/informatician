@@ -25,6 +25,8 @@ const nextConfig = {
       "www.theparisreview.org",
       "upload.wikimedia.org",
       "books.google.com",
+      "www.svgrepo.com",
+"storage.googleapis.com",
       "www.svgrepo.com"
 
 
