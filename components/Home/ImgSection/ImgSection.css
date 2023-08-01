@@ -119,10 +119,10 @@
 }
 
 .nameAnimation {
-    position: absolute;
+    /* position: absolute; */
     left: 50%;
     font-size: x-large;
-    transform: translate(-50%, 0%);
+    /* transform: translate(-50%, 0%); */
     text-shadow: 4px 4px 4px black;
     color: white;
 }

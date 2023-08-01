@@ -10,8 +10,8 @@ export default function AutoType(props) {
         }
     };
     return (
-        <div className="nameAnimation" onAnimationIteration={(element) => { changeText(element) }}>
-            <div>{props.txt[0]}</div>
+        <div className="nameAnimation " onAnimationIteration={(element) => { changeText(element) }}>
+            <div className="">{props.txt[0]}</div>
         </div>
     )
 }

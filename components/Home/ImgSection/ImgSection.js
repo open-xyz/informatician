@@ -16,11 +16,13 @@ export default function ImgSection(props) {
                   Read anywhere. Anytime.
                 </h3>
                 <span className="inner-span">
-                  <p className="inner-para text-center">
+                  <p className="inner-para text-left md:text-center">
                     Unveil the finest literary treasures across diverse genres.
                   </p>
                 </span>
-                <AutoType txt={props.txt} />
+                <div className="">
+                  <AutoType txt={props.txt} />
+                </div>
               </div>
               <div className="last-one last-two"></div>
               <div className="last-three"></div>
