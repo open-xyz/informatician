@@ -1,4 +1,4 @@
-import ReactStars from "react-rating-stars-component";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark, faTrophy } from "@fortawesome/free-regular-svg-icons";
 
