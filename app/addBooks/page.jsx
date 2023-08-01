@@ -2,10 +2,16 @@
 import Upload from "@/components/Upload/Upload";
 import { useState } from "react";
 import axios from "axios";
+import { useParams, useRouter } from "next/navigation";
 import { toast } from "react-hot-toast"
 import {validate, AuthErrorMessage} from "../../utils/validation"
+import { backendURL } from "@/utils/Constants";
 
 const AddBooks = () => {
+  const id = useParams();
+  const navigate = useRouter();
+  const [bookPdf, setBookPdf] = useState(null)
+  const isLogIn = true;
 
   const [book, setBook] = useState({
     bookName: "",
@@ -47,18 +53,27 @@ const AddBooks = () => {
       }
     });
 
-    const bookPDF = document.getElementById("upload-btn");
-    if(!bookPDF.files.length > 0) {toast.error("Please upload book."); return}
     
     if (submitable) {
+      if(!bookPdf) {toast.error("Please upload book."); return}
       try {
-        const res = await axios.post(
-          "https://informaticonserver.onrender.com/api/book/add",
-          book
-        );
-        toast.success("Book details added!!Upload the book.");
-        localStorage.setItem("bookId", res.data);
+       toast.loading();
+       const res = await axios.post(`${backendURL}/api/book/add`, book);
+
+        // Upload book pdf
+        const formData = new FormData();
+        formData.append("file", bookPdf);
+        await axios.post(`${backendURL}/api/upload`, formData);
+
+        await axios.put(`${backendURL}/api/book/` + id, {
+          bookpdf: bookPdf.name,
+        });
+        toast.dismiss();
+        toast.success("Book added Successfully!!");
+        navigate("/success");
+        localStorage.clear();
       } catch (err) {
+        toast.dismiss();
         toast.error(err.message);
         console.log(err.message);
       }
@@ -95,9 +110,10 @@ const AddBooks = () => {
   ];
 
   return (
-    <div className="py-8">
+    !isLogIn? <ShowLogin/>:
+    (<div className="py-8">
       <div className="flex gap-6 max-md:flex-col items-center justify-center mt-20 md:mx-20">
-        <div className="mx-auto sm:w-3/4 md:w-1/2 lg:w-1/3  rounded-lg shadow-lg border">
+        <div className="mx-8 sm:mx-8 sm:w-3/4 md:w-1/2 lg:w-[60%]  rounded-lg shadow-[0_10px_15px_-3px_rgb(59,130,246,0.3)] border">
           <h1 className="text-4xl font-bold text-center mt-8 mb-4">
             Add Books
           </h1>
@@ -168,7 +184,7 @@ const AddBooks = () => {
           <div>
           <label for="img">Enter the Book's Cover Image URL: </label>
             <input
-              className="border border-gray-300 dark:border-gray-700 px-4 py-2 rounded"
+              className="w-[100%] border border-gray-300 dark:border-gray-700 px-4 py-2 rounded"
               type="text"
               id="img"
               placeholder="Img Url"
@@ -179,15 +195,18 @@ const AddBooks = () => {
               required
             />
           </div>
-            <select className="border border-gray-300 dark:border-gray-700 px-4 py-2 rounded" value={book.category} onChange={handleChange} name="category" >
+          <div>
+          <label htmlFor="category">Select Book Category</label>
+          <select id="category" className="w-[100%] border border-gray-300 dark:border-gray-700 px-4 py-2 rounded" value={book.category} onChange={handleChange} name="category" >
               {categories.map((category, index) => (
                 <option key={index} value={category}>
                   {category}
                 </option>
               ))}
             </select>
-            <br />
-            <button
+          </div>
+        <Upload bookPdf={bookPdf} setBookPdf={setBookPdf}/>
+        <button
               className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
               type="submit"
               role="button"
@@ -197,10 +216,18 @@ const AddBooks = () => {
             </button>
           </form>
         </div>
-        <Upload error={error}/>
+       
       </div>
     </div>
-  );
+  ));
 };
+
+const ShowLogin=()=>{
+  return(
+    <div className="show-login p-10 flex flex-col items-center justify-center rounded-lg shadow-lg border">
+      <h2 className="text-xl font-bold mb-4">Please first login to upload a book</h2>
+    </div>
+  )
+}
 
 export default AddBooks;
