@@ -1,7 +1,7 @@
 "use client";
 import "./Footer.css";
 import NewsLetter from "./NewsLetter/NewsLetter";
-import { BsDiscord, BsGithub, BsTwitter } from "react-icons/bs";
+import { BsDiscord, BsGithub, BsLinkedin, BsTwitter } from "react-icons/bs";
 import darkLogo from "@/public/assets/logos/dark_logo.png";
 import { footerItems, columnNames } from "@/utils/Constants";
 import Link from "next/link";
@@ -69,14 +69,17 @@ const Footer = () => {
               . All Rights Reserved.
             </span>
             <div className="flex mt-0 space-x-6 sm:justify-center sm:mt-0 mr-14 2xl:mr-0">
-              <Link href="/develop" title="Twitter(External Link)" target="_blank" aria-label="Follow us on Twitter" rel="noopener noreferror">
+              {/* <Link href="/develop" title="Twitter(External Link)" target="_blank" aria-label="Follow us on Twitter" rel="noopener noreferror">
                 <BsTwitter className="w-6 h-6 transition-all duration-200 ease-in-out transform hover:scale-110 twitter" />
-              </Link>
+              </Link> */}
               <Link href="https://github.com/rohansx/informatician" title="GitHub(External Link)" target="_blank" aria-label="Follow us on GitHub" rel="noopener noreferror">
                 <BsGithub className="w-6 h-6 transition-all duration-200 ease-in-out transform hover:scale-110 github" />
               </Link>
-              <Link href="#" title="Discord(External Link)" target="_blank" aria-label="Follow us on Discord" rel="noopener noreferror">
+              {/* <Link href="#" title="Discord(External Link)" target="_blank" aria-label="Follow us on Discord" rel="noopener noreferror">
                 <BsDiscord className="w-6 h-6 transition-all duration-200 ease-in-out transform hover:scale-110 discord" />
+              </Link> */}
+              <Link href={'http://www.linkedin.com/in/siddhant-pawar-398a05201'} title="Linked Link" aria-label="Follow us on linkedin" target="_blank" >
+                <BsLinkedin className="w-6 h-6 transition-all duration-200 ease-in-out transform hover:scale-110 linkedin" />
               </Link>
             </div>
           </div>
