@@ -37,7 +37,7 @@ const Footer = () => {
     <>
       <NewsLetter />
       <footer>
-        <div className="mx-auto w-full max-w-screen-xl py-3 lg:py-2">
+        <div className="sm:py-1 sm:px-7 mx-auto w-full max-w-screen-xl lg:py-3 lg:py-2">
           <div className="footer_body p-2">
             <div className="footer_main mb-4 md:mb-0 mt-0 py-2">
               <Link href="/" onClick={scrollToTop}>
