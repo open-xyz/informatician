@@ -4,7 +4,7 @@ import {benefitsData} from '@/utils/Constants'
 export default function Benefits() {
     return (
         <section className="text-center mt-10 px-8">
-            <h2 className="mb-11 text-4xl font-bold">BENEFITS</h2>
+            <h2 className="mb-11 text-4xl font-bold text-inherit">BENEFITS</h2>
             {/* Benefits Section */}
             <div className="grid justify-center mx-auto place-items-center gap-20 max-w-5xl grid-cols-1 md:grid-cols-2">
                 {benefitsData.map((benefit) => (
@@ -21,7 +21,7 @@ export default function Benefits() {
                             alt={benefit.imageAlt}
                         />
                         <div>
-                            <h2 className="text-2xl font-bold mt-6 mb-3">{benefit.title}</h2>
+                            <h2 className="text-2xl font-bold mt-6 mb-3 text-inherit">{benefit.title}</h2>
                             <p>{benefit.description}</p>
                         </div>
                     </div>
