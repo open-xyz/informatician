@@ -66,7 +66,7 @@ export default function Testimonial() {
                   {testimonial.job}
                 </span>
                 <span className='float-right'>
-                  <a href={testimonial.linkedIn} target='_blank'>
+                  <a href={testimonial.linkedIn} target='_blank' rel='noopener noreferrer'>
                     <FaLinkedin className='inline text-blue-500 text-xl cursor-pointer' />
                   </a>
                 </span>
