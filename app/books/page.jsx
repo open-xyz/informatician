@@ -184,7 +184,7 @@ export default function BookList(props) {
           {quotes?.map((quote, index) => (
             <SwiperSlide
               key={index}
-              className="shadow-lg rounded-lg p-6 hover:shadow-md duration-150 w-[5rem]"
+              className="shadow-lg rounded-lg hover:shadow-md duration-150 w-[5rem]"
             >
               <Card
                 key={quote.id}
