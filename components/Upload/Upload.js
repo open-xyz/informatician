@@ -1,4 +1,5 @@
 import React from "react";
+import { FaTimes } from "react-icons/fa";
 
 const FileUploadComponent = ({bookPdf, setBookPdf}) => {
 
@@ -22,8 +23,9 @@ const FileUploadComponent = ({bookPdf, setBookPdf}) => {
           Select Books To Upload
         </label>
         {bookPdf && (
-          <p className="border-dashed border-gray-500 dark:border-gray-700 rounded-md p-2 m-1">
-            {bookPdf.name}
+          <p className="flex justify-center items-center rounded-md gap-5 bg-[#eff6ff] p-2 m-1">
+            {bookPdf.name.slice(0,21)}{(bookPdf.name.length>20)?"...":null}
+            <FaTimes onClick={()=>setBookPdf(null)} className="cursor-pointer"/>
           </p>
         )}
 

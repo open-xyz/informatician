@@ -11,7 +11,7 @@ const testimonials = [
       "This application is excellent! It's like the Netflix of books! As a college student, this app has greatly aided me in reading science and mathematics. I have encountered no issues and found most of the books I needed. Thanks! I genuinely adore this app!",
     linkedIn:"https://www.linkedin.com/in/rohansx/",
     github:"https://github.com/rohansx",
-    twitter:"https://twitter.com/therohanx",
+    twitter:"https://twitter.com/therohanx"
   },
   {
     id: 2,
@@ -60,11 +60,22 @@ export default function Testimonial() {
               src={testimonial.image}
               alt={testimonial.name}
             />
+            <div className='flex justify-center mt-6 gap-3'>
+              <a href={testimonial.github} target='_blank' className='text-white text-[20px] rounded-[5px] p-2 bg-black'>
+                <FaGithub />
+              </a>
+              <a href={testimonial.linkedIn} target='_blank' className='text-white text-[20px] rounded-[5px] p-2 bg-[#0f498f]'>
+                <FaLinkedin />
+              </a>
+              <a href={testimonial.twitter} target='_blank' className='text-white text-[20px] rounded-[5px] p-2 bg-[#00acee]'>
+                <FaTwitter />
+              </a>
+            </div>
             <div className="p-6">
               <p className="text-base text-gray-800 dark:text-gray-200">
                 {testimonial.quote}
               </p>
-              <div className="mt-4">
+              <div className="mt-4 ">
                 <span className="font-semibold text-lg text-gray-900 dark:text-gray-100">
                   {testimonial.name}
                 </span>
@@ -72,17 +83,6 @@ export default function Testimonial() {
                   {testimonial.job}
                 </span>
               </div>
-              <div className='mt-3'>
-                  <a href={testimonial.linkedIn} target='_blank' rel='noopener noreferrer' className='mr-5 mt-5'>
-                    <FaLinkedin className='inline text-blue-500 text-xl' />
-                  </a>
-                  <a href={testimonial.github} target='_blank' rel='noopener noreferrer' className='mr-5'>
-                    <FaGithub className='inline text-xl' />
-                  </a>
-                  <a href={testimonial.twitter} target='_blank' rel='noopener noreferrer' className='mr-5'>
-                    <FaTwitter className='inline text-sky-400 text-xl' />
-                  </a>
-                </div>
             </div>
           </div>
         ))}
