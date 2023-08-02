@@ -28,7 +28,7 @@ const Card = ({ quote, author, category }) => {
         height: "360px",
         position: "relative",
       }}
-      className="max-w-screen-md text-center my-7 bg-yellow-200  mr-5 rounded-md w-[550px] px-[10px]"
+      className="max-w-screen-md text-center bg-yellow-200 mr-5 rounded-md w-full px-[10px]"
     >
       <svg
         className="w-10 h-10 mx-auto mb-3 text-gray-400"
