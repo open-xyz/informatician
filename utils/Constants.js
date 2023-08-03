@@ -668,6 +668,36 @@ export const Quotes = [
     image: "https://upload.wikimedia.org/wikipedia/en/c/c9/Madeleine_lengle.jpg",
     title: "Madeleine L'Engle",
     quote: "You have to write the book that wants to be written & if the book will be too difficult for grown-ups, then you write it for children."
+  },    
+  {
+    image: "https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcQOLm-wO7ASW0rjpzKi_J_e5J_zFr5W9xRYt9DBQA8Z4c18zD0OdawmPsFUENcfEArcVW6DG8eqlhQDDe8",
+    title: "Nelson Mandela",
+    quote: "Education is the most powerful weapon which you can use to change the world."
+  },    
+  {
+    image: "https://i.natgeofe.com/n/37c3c776-b8cb-4be1-988a-cf593c776b88/01-leonardo-da-vinci-book-talk_3x4.jpg",
+    title: "Leonardo da Vinci",
+    quote: "The mind once enlightened cannot again become dark."
+  },    
+  {
+    image: "https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcQ44y8GDrAqF3jd3uQMJsXYGoHvVCgehhiWfJxRVAIARHEroI-hPqMg3V7rBV3e6JFwjnxnHoc8ICrSK6o",
+    title: "Mark Twain",
+    quote: "I have never let my schooling interfere with my education."
+  },
+  {
+    image: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT8unx4jVJh1Wku9vk5aTJeIyIJWNuIIgyphDlhwfSOXD1eNcao",
+    title: "Cicero",
+    quote: "A room without books is like a body without a soul."
+  },    
+  {
+    image: "https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcTvOW8CstkKErnexn85MahekKkrEYIAv44fu7HcgDOw6hnTbPJdmagIlds_fDOh8VZjUdkQ93-m5Iv4yXs",
+    title: "J.K. Rowling",
+    quote: "If you don't like to read, you haven't found the right book."
+  },    
+  {
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Matthew_Kelly_-_Living_Every_Day_with_Passion_and_Purpose_-_Headphone_shot.JPG/330px-Matthew_Kelly_-_Living_Every_Day_with_Passion_and_Purpose_-_Headphone_shot.JPG",
+    title: "Matthew Kelly",
+    quote: "The more you know, the further you'll go."
   }    
 ]
 
