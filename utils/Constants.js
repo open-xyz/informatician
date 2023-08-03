@@ -693,8 +693,7 @@ export const Quotes = [
     image: "https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcTvOW8CstkKErnexn85MahekKkrEYIAv44fu7HcgDOw6hnTbPJdmagIlds_fDOh8VZjUdkQ93-m5Iv4yXs",
     title: "J.K. Rowling",
     quote: "If you don't like to read, you haven't found the right book."
-  },    
-  {
+  },{
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Matthew_Kelly_-_Living_Every_Day_with_Passion_and_Purpose_-_Headphone_shot.JPG/330px-Matthew_Kelly_-_Living_Every_Day_with_Passion_and_Purpose_-_Headphone_shot.JPG",
     title: "Matthew Kelly",
     quote: "The more you know, the further you'll go."
