@@ -37,9 +37,9 @@ const Footer = () => {
     <>
       <NewsLetter />
       <footer>
-        <div className="mx-auto w-full max-w-screen-xl py-6 lg:py-4">
-          <div className="footer_body p-6">
-            <div className="footer_main mb-6 md:mb-0 mt-0 py-2">
+        <div className="sm:py-1 sm:px-7 mx-auto w-full max-w-screen-xl lg:py-3 lg:py-2">
+          <div className="footer_body p-2">
+            <div className="footer_main mb-4 md:mb-0 mt-0 py-2">
               <Link href="/" onClick={scrollToTop}>
                 <Image
                   src={darkLogo}
@@ -50,7 +50,7 @@ const Footer = () => {
                 />
               </Link>
             </div>
-            <div className="footer_inner_body mt-2 mx-6">
+            <div className="footer_inner_body mt-2 mx-2">
               {footerComponents?.map((item, index) => {
                 return (
                   <div key={index} className="footer_inner_body_item">
@@ -60,7 +60,7 @@ const Footer = () => {
               })}
             </div>
           </div>
-          <div className="copyright_footer p-6 mx-6 mt-2">
+          <div className="copyright_footer p-6 mx-6 mt-2 sm:flex-col sm:justify-center sm:items-center sm:gap-5 sm:mt-7 lg:justify-around lg:flex-row">
             <span className={`text-sm font-bold sm:text-center text-blue-500`}>
               © {year}{" "}
               <a href="/" onClick={scrollToTop} className="hover:underline">
@@ -68,7 +68,7 @@ const Footer = () => {
               </a>
               . All Rights Reserved.
             </span>
-            <div className="flex mt-0 space-x-6 sm:justify-center sm:mt-0 mr-14 2xl:mr-0">
+            <div className="flex mt-0 space-x-6 sm:justify-center sm:mt-0 lg:mr-14 2xl:mr-0">
               <Link href="/develop" title="Twitter(External Link)" target="_blank" aria-label="Follow us on Twitter" rel="noopener noreferror">
                 <BsTwitter className="w-6 h-6 transition-all duration-200 ease-in-out transform hover:scale-110 twitter" />
               </Link>

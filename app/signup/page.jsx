@@ -8,59 +8,39 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-regular-svg-icons";
 import { FaSyncAlt } from "react-icons/fa";
-import { toast } from "react-toastify";
+import { toast } from "react-hot-toast";
+import axios from "axios";
+import { signIn } from "next-auth/react";
 
 const SignUp = () => {
   let navigate = useRouter();
   const [user, setUser] = useState({
-    fName: "",
-    lName: "",
-    userName: "",
+    name: "",
     email: "",
-    pass: "",
-    confirmPass: "",
+    password: "",
+    confirmPassword: "",
   });
-  const [error, setError] = useState("");
   const [showPass1, setShowPass1] = useState(false);
   const [showPass2, setShowPass2] = useState(false);
   const [captchaVal, setCaptchaVal] = useState("");
   const [captchaText, setCaptchaText] = useState();
+
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setUser((prev) => ({ ...prev, [name]: value }));
   };
 
-  const signup = (e) => {
+  const signup = async (e) => {
     e.preventDefault();
-    if(captchaVal !== captchaText){
-      toast.error("Wrong Captcha");
-      setCaptchaVal("");
-      genrateCaptcha();
-      return;
-    }
+    axios.post('/api/register', user)
+    .then(()=>{
+      navigate.push("/")
+      toast.success("User registered successfully")
+    })
+    .catch(()=>{toast.error("Something Went Wrong! User Registration failed!")});
 
-    if (!user.fName) {
-      setError("First Name is Required!");
-      return;
-    } else if (!user.lName) {
-      setError("Last Name is Required!");
-      return;
-    } else if (!user.userName) {
-      setError("Username is Required!");
-      return;
-    } else if (!user.email) {
-      setError("Email is Required!");
-      return;
-    } else if (!user.pass) {
-      setError("Password is Required!");
-      return;
-    } else if (!user.confirmPass) {
-      setError("Please confirm your Password!");
-      return;
-    }
-
-    setError("");
-    navigate("/");
+    
   };
 
    // Captcha logic
@@ -89,14 +69,14 @@ const SignUp = () => {
 
       {/* Signup Form */}
       <div className="md:w-1/2 mx-auto">
-        <form className="lg:w-[80%] flex flex-col items-start p-4 px-6 mx-auto gap-2 text-lg" aria-label="Signup Form">
+        <form className="lg:w-[80%] flex flex-col items-start p-4 px-6 mx-auto gap-2 text-lg" aria-label="Signup Form" onSubmit={signup}>
           {/* Heading */}
           <h2 className="mx-auto mb-4 text-2xl md:text-3xl font-bold text-indigo-600">
             Signup to Informatician
           </h2>
 
           {/* Signup with google button */}
-          <button aria-label="Signup with Google" className="w-[100%] flex justify-center items-center gap-2 bg-red-600 text-white px-4 py-2 shadow-md rounded-md cursor-pointer">
+          <button aria-label="Signup with Google" className="w-[100%] flex justify-center items-center gap-2 bg-red-600 text-white px-4 py-2 shadow-md rounded-md cursor-pointer" onClick={() => signIn('google')}>
             Signup with Google{" "}
             <Image src={GoogleLogo} alt="" width={50} height={50} />
           </button>
@@ -106,48 +86,18 @@ const SignUp = () => {
             <div className="w-[40%] border-t-2 border-slate-200"></div>
           </div>
 
-          {/* Show error */}
-          {error && <div className="text-red-600">{error}</div>}
-
-          {/* First name input */}
-          <div className="w-full flex flex-row items-center justify-between gap-8">
-            <div className="flex flex-col items-start gap-2">
-              <label htmlFor="fName">First Name</label>
-              <input
-                type="text"
-                name="fName"
-                placeholder="Enter First Name"
-                value={user.fName}
-                onChange={handleChange}
-                aria-label="First Name"
-                className="w-[100%] bg-slate-100 py-2 px-4 focus:outline-indigo-500"
-              />
-            </div>
-            {/* Last name input */}
-            <div className="flex flex-col items-start gap-2">
-              <label htmlFor="lName">Last Name</label>
-              <input
-                type="text"
-                name="lName"
-                placeholder="Enter Last Name"
-                value={user.lName}
-                onChange={handleChange}
-                aria-label="Last Name"
-                className="w-[100%] bg-slate-100 py-2 px-4 focus:outline-indigo-500"
-              />
-            </div>
-          </div>
-          {/* Username input */}
+          {/* Name input */}
           <div className="w-full flex flex-col items-start gap-2">
-            <label htmlFor="userName">Username</label>
+            <label htmlFor="name">Full Name</label>
             <input
               type="text"
-              name="userName"
-              placeholder="Enter Username"
-              value={user.userName}
+              name="name"
+              placeholder="Enter Your Full Name"
+              value={user.name}
               onChange={handleChange}
               aria-label="Username"
               className="w-[100%] bg-slate-100 py-2 px-4 focus:outline-indigo-500"
+              required
             />
           </div>
           {/* Email input */}
@@ -161,44 +111,48 @@ const SignUp = () => {
               onChange={handleChange}
               aria-label="Your Email"
               className="w-[100%] bg-slate-100 py-2 px-4 focus:outline-indigo-500"
+              required
             />
           </div>
           {/* Password input */}
           <div className="w-full flex flex-row items-center justify-between gap-8">
             <div className="flex flex-col items-start gap-2 relative">
-              <label htmlFor="pass">Create Password</label>
+              <label htmlFor="password">Create Password</label>
               <div className="relative w-[100%]">
               <input
                 type={showPass1? "text":"password"}
-                name="pass"
+                name="password"
                 placeholder="Enter Password"
-                value={user.pass}
+                value={user.password}
                 onChange={handleChange}
                 aria-label="Create Password"
+                autoComplete="current-password"
                 className="w-[100%] bg-slate-100 py-2 px-4 focus:outline-indigo-500"
+                required
               />
                <FontAwesomeIcon icon={showPass1?faEye:faEyeSlash} onClick={()=>setShowPass1(!showPass1)} className="absolute top-4 right-2 cursor-pointer"/>
               </div>
             </div>
             {/* Confirm password input */}
             <div className="flex flex-col items-start gap-2">
-              <label htmlFor="confirmPass">Confirm Password</label>
+              <label htmlFor="confirmPassword">Confirm Password</label>
               <div className="relative w-[100%]">
               <input
                 type={showPass2? "text":"password"}
-                name="confirmPass"
+                name="confirmPassword"
                 placeholder="Enter Confirm Password"
-                value={user.confirmPass}
+                value={user.confirmPassword}
                 onChange={handleChange}
                 aria-label="Confirm Password"
                 className={
                   !(
-                    user.confirmPass.length === 0 &&
-                    user.confirmPass === user.pass
+                    user.confirmPassword.length === 0 &&
+                    user.confirmPassword === user.password
                   )
                     ? "w-[100%] bg-slate-100 py-2 px-4 focus:outline-green-500"
                     : "w-[100%] bg-slate-100 py-2 px-4 focus:outline-red-500"
                 }
+                required
               />
              <FontAwesomeIcon icon={showPass2?faEye:faEyeSlash} onClick={()=>setShowPass2(!showPass2)} className="absolute top-4 right-2 cursor-pointer"/>
               </div>
@@ -232,8 +186,8 @@ const SignUp = () => {
           {/* Signup button */}
           <button
             className="w-full my-4 bg-indigo-600 px-4 py-2 rounded-md text-lg text-white hover:bg-indigo-800 duration-200 ease-out "
-            onClick={signup}
             aria-label="Signup"
+            type="submit"
           >
             Signup
           </button>

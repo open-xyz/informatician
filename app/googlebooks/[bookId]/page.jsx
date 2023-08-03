@@ -1,9 +1,8 @@
-"use client"
+"use client";
 
 import React, { useEffect, useState } from "react";
-import {  useParams } from "react-router-dom";
-import Link from 'next/link';
-import ReactStars from "react-rating-stars-component";
+import Link from "next/link";
+import ReactStars from "react-stars";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark } from "@fortawesome/free-regular-svg-icons";
 import Image from "next/image";
@@ -39,14 +38,16 @@ export default function BookComponent({ params }) {
   return (
     <div className="flex max-sm:flex-col items-center gap-12 max-w-5xl mx-auto p-8 mt-24">
       <div className="">
-        <h1 className="font-semibold text-4xl">{bookDetails?.volumeInfo.title}</h1>
+        <h1 className="font-semibold text-4xl">
+          {bookDetails?.volumeInfo.title}
+        </h1>
         <div className="mt-4">
           {/* <Link href={bookDetails?.authorPage} className="font-semibold text-blue-500 hover:text-blue-600">
                     Author: {bookDetails?.author}
             </Link> */}
         </div>
         <div className="flex items-center mt-4 text-gray-500">
-          <ReactStars count={5} size={24} value={4} activeColor="#ffd700" />
+          <ReactStars count={5} size={24} color2={"#ffd700"} value={3}/>
           <span className="ml-2">{bookDetails?.ratings} Ratings</span>
         </div>
         <div className="mt-6">
@@ -56,7 +57,8 @@ export default function BookComponent({ params }) {
               <strong>{bookDetails.volumeInfo.subtitle}</strong>
             </p>
             {/* Render description with HTML formatting */}
-            <div className="mt-2"
+            <div
+              className="mt-2"
               dangerouslySetInnerHTML={{
                 __html: bookDetails.volumeInfo.description,
               }}
@@ -78,7 +80,9 @@ export default function BookComponent({ params }) {
           </p>
           <p className="flex justify-between mt-1">
             <span className="font-semibold">ISBN:</span>
-            <span>{bookDetails.volumeInfo.industryIdentifiers[0].identifier}</span>
+            <span>
+              {bookDetails.volumeInfo.industryIdentifiers[0].identifier}
+            </span>
           </p>
         </div>
       </div>
@@ -98,9 +102,8 @@ export default function BookComponent({ params }) {
             type="button"
             className="w-full py-2 px-4 rounded-md bg-blue-500 text-white font-semibold mb-3 hover:bg-blue-600"
           >
-             <Link
-             href={`/googlebooks/${bookId}/${bookDetails.volumeInfo.industryIdentifiers[0].identifier}`}
-
+            <Link
+              href={`/googlebooks/${bookId}/${bookDetails.volumeInfo.industryIdentifiers[0].identifier}`}
               className="btn"
             >
               Start Reading

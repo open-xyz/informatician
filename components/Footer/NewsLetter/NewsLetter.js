@@ -2,8 +2,7 @@
 import Image from 'next/image';
 import './NewsLetter.css';
 import React, { useState } from 'react';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { toast } from 'react-hot-toast';
 import { backendURL } from '@/utils/Constants';
 
 
@@ -92,7 +91,6 @@ export default function NewsLetter() {
           </button>
         </form>
       </div>
-      <ToastContainer />
     </div>
   );
 }
