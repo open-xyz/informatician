@@ -6,7 +6,9 @@ img {
 p {
   margin: 12px 0;
 }
-
+.my-2{
+  text-align: center !important;
+}
 .section-heading {
   font-size: 45px;
   color: rgb(15, 73, 143);
