@@ -21,7 +21,7 @@ export default function JobSection() {
                         className="border dark:border-2 border-gray-300 p-2 rounded-xl shadow-md shadow-slate-800/70 max-w-sm w-full h-full"
                     >
                         <div>
-                            <h2 className="text-xl md:text-2xl font-bold text-center mt-2 mb-2">
+                            <h2 className="text-xl md:text-2xl font-bold text-center mt-2 mb-2 text-inherit">
                                 {position.title}
                             </h2>
                             <p className="text-center mb-2">{position.count} positions</p>

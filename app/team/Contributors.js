@@ -66,10 +66,10 @@ function Contributors() {
                   />
                 </Link>
                 <div className="my-2 space-y-1">
-                  <h2 className="text-xl font-semibold sm:text-2xl">
+                  <h2 className="text-xl font-semibold sm:text-2xl text-inherit">
                     {contributor.login}
                   </h2>
-                  <p className="px-5 text-xs sm:text-base text-gray-400">{`Contributions: ${contributor.contributions}`}</p>
+                  <p className="px-5 text-xs sm:text-base text-gray-500">{`Contributions: ${contributor.contributions}`}</p>
                 </div>
                 <div className="flex justify-center pt-2 space-x-4 align-center">
                   {/* Add any additional content or buttons here */}
