@@ -60,7 +60,7 @@ const Footer = () => {
               })}
             </div>
           </div>
-          <div className="copyright_footer p-6 mx-6 mt-2">
+          <div className="copyright_footer p-6 mx-6 mt-2 sm:flex-col sm:justify-center sm:items-center sm:gap-5 sm:mt-7 lg:justify-around lg:flex-row">
             <span className={`text-sm font-bold sm:text-center text-blue-500`}>
               © {year}{" "}
               <a href="/" onClick={scrollToTop} className="hover:underline">
@@ -68,7 +68,7 @@ const Footer = () => {
               </a>
               . All Rights Reserved.
             </span>
-            <div className="flex mt-0 space-x-6 sm:justify-center sm:mt-0 mr-14 2xl:mr-0">
+            <div className="flex mt-0 space-x-6 sm:justify-center sm:mt-0 lg:mr-14 2xl:mr-0">
               <Link href="/develop" title="Twitter(External Link)" target="_blank" aria-label="Follow us on Twitter" rel="noopener noreferror">
                 <BsTwitter className="w-6 h-6 transition-all duration-200 ease-in-out transform hover:scale-110 twitter" />
               </Link>
