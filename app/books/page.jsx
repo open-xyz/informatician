@@ -91,7 +91,7 @@ export default function BookList(props) {
       >
         <div className="relative">
           <input
-            id="default-search"
+            id="default-search" style={{height:'3.5rem !important'}}
             className="w-full px-5 py-2 rounded-full bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
             onChange={(event) => setSerachQuery(event.target.value)}
             placeholder="Title / Author / ISBN"
@@ -99,7 +99,7 @@ export default function BookList(props) {
           />
           <button
             type="submit"
-            id="search-button-2"
+            id="search-button-2" style={{height:'3.5rem !important'}}
             onClick={handleClick}
             className="absolute bg-gray-200  top-1/2  w-12 h-8 p-1  right-2 rounded-xl transform -translate-y-1/2"
           >

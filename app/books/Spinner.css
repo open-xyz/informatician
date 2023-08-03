@@ -42,3 +42,11 @@
     clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
   }
 }
+
+#default-search{
+  height: 3.5rem;
+}
+
+#search-button-2{
+  height: 3.5rem;
+}
