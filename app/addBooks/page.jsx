@@ -1,39 +1,84 @@
 'use client'
 import Upload from "@/components/Upload/Upload";
-import { useRef } from "react";
+import { useState } from "react";
 import axios from "axios";
+import { useParams, useRouter } from "next/navigation";
 import { toast } from "react-hot-toast"
+import {validate, AuthErrorMessage} from "../../utils/validation"
+import { backendURL } from "@/utils/Constants";
 
 const AddBooks = () => {
-  const bookName = useRef();
-  const authorName = useRef();
-  const publisher = useRef();
-  const pages = useRef();
-  const img = useRef();
-  const category = useRef();
+  const id = useParams();
+  const navigate = useRouter();
+  const [bookPdf, setBookPdf] = useState(null)
+  const isLogIn = true;
+
+  const [book, setBook] = useState({
+    bookName: "",
+    authorName: "",
+    publisher: "",
+    pages: "",
+    img: "",
+    category: "Art",
+  })
+
+  const [error, setError] = useState({
+    bookName: true,
+    authorName: true,
+    publisher: true,
+    pages: true,
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setBook((prev) => {
+      return { ...prev, [name]: value };
+    });
+    if(name !== "category" && name!== "img"){
+      const message = validate[name](value);
+      setError((prev) => {
+        return { ...prev, ...message };
+      });
+    }
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    let submitable = true;
+    console.log(error)
+    Object.values(error).forEach((e) => {
+      if (e !== false) {
+        submitable = false;
+        return;
+      }
+    });
 
-    const books = {
-      bookName: bookName.current.value,
-      authorName: authorName.current.value,
-      publisher: publisher.current.value,
-      pages: pages.current.value,
-      img: img.current.value,
-      category: category.current.value,
-    };
+    
+    if (submitable) {
+      if(!bookPdf) {toast.error("Please upload book."); return}
+      try {
+       toast.loading();
+       const res = await axios.post(`${backendURL}/api/book/add`, book);
 
-    try {
-      const res = await axios.post(
-        "https://informaticonserver.onrender.com/api/book/add",
-        books
-      );
-      toast.success("Book details added!!Upload the book.");
-      localStorage.setItem("bookId", res.data);
-    } catch (err) {
-      toast.error("Fill all the details!");
-      console.log(err.message);
+        // Upload book pdf
+        const formData = new FormData();
+        formData.append("file", bookPdf);
+        await axios.post(`${backendURL}/api/upload`, formData);
+
+        await axios.put(`${backendURL}/api/book/` + id, {
+          bookpdf: bookPdf.name,
+        });
+        toast.dismiss();
+        toast.success("Book added Successfully!!");
+        navigate("/success");
+        localStorage.clear();
+      } catch (err) {
+        toast.dismiss();
+        toast.error(err.message);
+        console.log(err.message);
+      }
+    } else {
+      toast.error("Fill all fields with valid data");
     }
   };
 
@@ -65,74 +110,103 @@ const AddBooks = () => {
   ];
 
   return (
-    <div className="py-8">
+    !isLogIn? <ShowLogin/>:
+    (<div className="py-8">
       <div className="flex gap-6 max-md:flex-col items-center justify-center mt-20 md:mx-20">
-        <div className="mx-auto sm:w-3/4 md:w-1/2 lg:w-1/3  rounded-lg shadow-lg border">
+        <div className="mx-8 sm:mx-8 sm:w-3/4 md:w-1/2 lg:w-[60%]  rounded-lg shadow-[0_10px_15px_-3px_rgb(59,130,246,0.3)] border">
           <h1 className="text-4xl font-bold text-center mt-8 mb-4">
             Add Books
           </h1>
           <form className="px-8 py-6 space-y-6 flex flex-col" onSubmit={handleSubmit}>
-            <label for="book-name">Enter the Book Name: </label>
-            <input
-              className="border border-gray-300 dark:border-gray-700 px-4 py-2 rounded"
+          <div>
+            <label for="bookName">Enter the Book Name: </label>
+          <input
+              className="w-[100%] mb-1 border border-gray-300 dark:border-gray-700 px-4 py-2 rounded"
               type="text"
-              id="book-name"
-              name="book-name" 
+              id="bookName"
+              name="bookName"
+              value={book.bookName}
+              onChange={handleChange}
               placeholder="Book Name"
-              ref={bookName}
               aria-label="Book Name"
+              required
             />
-            <label for="author-name">Enter the Author Name: </label>
+             {error.bookName && error.bookNameError && <AuthErrorMessage message={error.bookNameError}/>}
+          </div>
+          <div>
+          <label for="authorName">Enter the Author Name: </label>
             <input
-              className="border border-gray-300 dark:border-gray-700 px-4 py-2 rounded"
+              className="w-[100%] border border-gray-300 dark:border-gray-700 px-4 py-2 rounded"
               type="text"
-              id="author-name"
-              name="author-name" 
+              id="authorName"
               placeholder="Author Name"
-              ref={authorName}
+              name="authorName"
+              value={book.authorName}
+              onChange={handleChange}
               aria-label="Author Name"
+              required
             />
-            <label for="publisher-name">Enter the Publisher Name: </label>
+            {error.authorName && error.authorNameError && <AuthErrorMessage message={error.authorNameError}/>}
+           </div>
+           
+           <div>
+           <label for="publisher">Enter the Publisher Name: </label>
             <input
-              className="border border-gray-300 dark:border-gray-700 px-4 py-2 rounded"
+              className="w-[100%] border border-gray-300 dark:border-gray-700 px-4 py-2 rounded"
               type="text"
-              id="publisher-name"
-              name="publisher-name" 
+              id="publisher"
               placeholder="Publisher"
-              ref={publisher}
+              name="publisher"
+              value={book.publisher}
+              onChange={handleChange}
               aria-label="Publisher"
+              required
             />
-            <label for="no-of-pages">Enter the Number of Pages: </label>
+             {error.publisher && error.publisherError && <AuthErrorMessage message={error.publisherError}/>}
+           </div>
+           
+           <div>
+           <label for="pages">Enter the Number of Pages: </label>
             <input
-              className="border border-gray-300 dark:border-gray-700 px-4 py-2 rounded"
+              className="w-[100%] border border-gray-300 dark:border-gray-700 px-4 py-2 rounded"
               type="number"
-              id="no-of-pages"
-              name="no-of-pages" 
+              id="pages"
               min="0"
               placeholder="Pages"
-              ref={pages}
+              value={book.pages}
+              name="pages"
+              onChange={handleChange}
               aria-label="Number of Pages"
+              required
             />
-            <label for="book-image-url">Enter the Book's Cover Image URL: </label>
+              {error.pages && error.pagesError && <AuthErrorMessage message={error.pagesError}/>}
+              </div>
+          <div>
+          <label for="img">Enter the Book's Cover Image URL: </label>
             <input
-              className="border border-gray-300 dark:border-gray-700 px-4 py-2 rounded"
+              className="w-[100%] border border-gray-300 dark:border-gray-700 px-4 py-2 rounded"
               type="text"
-              id="book-image-url"
-              name="book-image-url" 
+              id="img"
               placeholder="Img Url"
-              ref={img}
+              name="img"
+              value={book.img}
+              onChange={handleChange}
               aria-label="Image URL"
+              required
             />
-
-            <select className="border border-gray-300 dark:border-gray-700 px-4 py-2 rounded" ref={category}>
+          </div>
+          <div>
+          <label htmlFor="category">Select Book Category</label>
+          <select id="category" className="w-[100%] border border-gray-300 dark:border-gray-700 px-4 py-2 rounded" value={book.category} onChange={handleChange} name="category" >
               {categories.map((category, index) => (
                 <option key={index} value={category}>
                   {category}
                 </option>
               ))}
             </select>
-            <br />
-            <button
+          </div>
+        <Upload bookPdf={bookPdf} setBookPdf={setBookPdf}/>
+        <button
               className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
               type="submit"
               role="button"
@@ -142,10 +216,18 @@ const AddBooks = () => {
             </button>
           </form>
         </div>
-        <Upload />
+       
       </div>
     </div>
-  );
+  ));
 };
+
+const ShowLogin=()=>{
+  return(
+    <div className="show-login p-10 flex flex-col items-center justify-center rounded-lg shadow-lg border">
+      <h2 className="text-xl font-bold mb-4">Please first login to upload a book</h2>
+    </div>
+  )
+}
 
 export default AddBooks;

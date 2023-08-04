@@ -1,12 +1,12 @@
 "use client";
-import { useState, useRef } from "react";
+import { useState, useEffect } from "react";
 import { Books } from "@/utils/Constants";
-
+import axios from "axios";
 import Image from "next/image";
-import { Quotes, categories } from "@/utils/Constants";
-import { MdOutlineContentCopy } from "react-icons/md";
+import { categories } from "@/utils/Constants";
 import BkCards from "@/components/BkCards/BkCards";
-
+import Card from "@/components/Quotes/Card";
+import "./Spinner.css";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -22,6 +22,25 @@ export default function BookList(props) {
   const [filteredBooks, setFilteredBooks] = useState([]);
   const [showCategories, setShowCategories] = useState(false);
   const [hasSearched, setHasSearched] = useState(false);
+  const [quotes, setQuotes] = useState(null);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    const fetchQuotes = async () => {
+      try {
+        const response = await axios.get(
+          "https://api.quotable.io/quotes/random?limit=10"
+        );
+        console.log(response.data);
+        setQuotes(response.data);
+        setLoading(false);
+      } catch (error) {
+        console.log(error);
+        setLoading(false);
+      }
+    };
+
+    fetchQuotes();
+  }, []);
 
   async function handleClick(e) {
     e.preventDefault();
@@ -32,8 +51,8 @@ export default function BookList(props) {
           (element) =>
             regex.test(element.title) ||
             regex.test(element.author) ||
-            regex.test(element.isbn),
-        ),
+            regex.test(element.isbn)
+        )
       );
       setHasSearched(true);
     } catch (err) {
@@ -66,7 +85,10 @@ export default function BookList(props) {
         </p>
       </div>
 
-      <form className="max-w-xl w-full border-2 rounded-full" aria-label="Book Search Form">
+      <form
+        className="max-w-xl w-full border-2 rounded-full"
+        aria-label="Book Search Form"
+      >
         <div className="relative">
           <input
             id="default-search"
@@ -79,14 +101,14 @@ export default function BookList(props) {
             type="submit"
             id="search-button-2"
             onClick={handleClick}
-            className="absolute p-2 top-1/2 right-0 bg-zinc-200 border rounded-full transform -translate-y-1/2"
+            className="absolute bg-gray-200  top-1/2  w-12 h-8 p-1  right-2 rounded-xl transform -translate-y-1/2"
           >
             <Image
               loading="lazy"
               className="w-full h-full"
-              width="24"
-              height="24"
-              src="https://img.icons8.com/ios/100/search--v1.png"
+              width="10"
+              height="10"
+              src="/search-svgrepo-com.svg"
               alt="Icon of a magnifying glass for search functionality"
             />
           </button>
@@ -137,55 +159,43 @@ export default function BookList(props) {
         Quotes
       </h3>
 
-      <Swiper
-        slidesPerView={1}
-        spaceBetween={25}
-        loop={true}
-        autoplay={{ delay: 5000 }}
-        pagination={{ clickable: true }}
-        breakpoints={{
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 40,
-          },
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 50,
-          },
-        }}
-        navigation={true}
-        className="space-y-12 w-full"
-      >
-        {Quotes.map((quote, index) => (
-          <SwiperSlide
-            key={index}
-            className="bg-blue-100/70 dark:bg-blue-100 shadow-lg rounded-lg p-6 hover:shadow-md duration-150 dark:text-black relative"
-          >
-            <div className="flex flex-col items-center justify-center h-72 sm:h-64">
-              <Image
-                loading="lazy"
-                width={100}
-                height={100}
-                className="rounded-full w-24 h-24 object-cover"
-                src={quote.image}
-                alt={quote.title}
+      {loading ? (
+        <span class="loader"></span>
+      ) : (
+        <Swiper
+          slidesPerView={1}
+          spaceBetween={25}
+          loop={true}
+          autoplay={{ delay: 5000 }}
+          pagination={{ clickable: true }}
+          breakpoints={{
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
+            1024: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
+          }}
+          navigation={true}
+          className="space-y-12 w-full"
+        >
+          {quotes?.map((quote, index) => (
+            <SwiperSlide
+              key={index}
+              className="shadow-lg rounded-lg hover:shadow-md duration-150 w-[5rem]"
+            >
+              <Card
+                key={quote.id}
+                author={quote.author}
+                quote={quote.content}
+                category={quote.tags[0]}
               />
-              <h4 className="mt-4 text-l font-medium text-green-700">
-                - {quote.title}
-              </h4>
-              <p className="my-2 text-center text-gray-700 text-lg w-[80%]">
-                "{quote.quote}"
-              </p>
-              <MdOutlineContentCopy
-                aria-label="Click to copy the quote"
-                title="Copy quote to clipboard"
-                className="ml-3 absolute top-5 right-5 cursor-pointer text-3xl hover:text-green-700"
-                onClick={() => handleCopyToClipboard(quote.quote)}
-              />
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      )}
     </div>
   );
 }

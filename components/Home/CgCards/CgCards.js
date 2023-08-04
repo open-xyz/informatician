@@ -1,13 +1,12 @@
-"use client";
-import CardContent from "./CardContent/CardContent";
-import  { Navigation, Pagination, Autoplay } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
-import cardComponentData from "./cardComponentData";
-import "swiper/swiper-bundle.min.css";
-import "swiper/swiper.min.css";
+'use client';
+import CardContent from './CardContent/CardContent';
+import { Navigation, Pagination, Autoplay } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import cardComponentData from './cardComponentData';
+import 'swiper/swiper-bundle.min.css';
+import 'swiper/swiper.min.css';
 
 export default function CgCards() {
-
   return (
     <div className="max-w-6xl mx-auto mt-20">
       <h1 className="text-3xl mb-12 text-center">Popular Categories</h1>
@@ -24,8 +23,6 @@ export default function CgCards() {
           }}
           // navigation
           pagination={{ clickable: true }}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log("slide change")}
           breakpoints={{
             512: {
               slidesPerView: 2,
@@ -38,11 +35,13 @@ export default function CgCards() {
             },
           }}
         >
-        {cardComponentData.map((data, index)=>{
-          return  <SwiperSlide key={index}>
-            <CardContent image={data.img} title={data.title} />
-          </SwiperSlide>
-        })}
+          {cardComponentData.map((data, index) => {
+            return (
+              <SwiperSlide key={index}>
+                <CardContent image={data.img} title={data.title} />
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
       </div>
     </div>

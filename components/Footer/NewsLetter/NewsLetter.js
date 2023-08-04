@@ -16,7 +16,7 @@ export default function NewsLetter() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    setSubmitted(true);
     try {
       const response = await fetch(
         `${backendURL}/api/addUser`,
@@ -34,6 +34,7 @@ export default function NewsLetter() {
         toast.success("Subscribed", { position: 'top-center', autoClose: 3000, theme: 'colored' })
       } else {
         console.log("Failed to subscribe");
+        setSubmitted(false)
         toast.error("Failed to subscribe. Please try again!", {
           position: "top-right",
           autoClose: 5000,
@@ -41,11 +42,11 @@ export default function NewsLetter() {
         });
       }
     } catch (error) {
+      setSubmitted(false)
       console.error(error);
       toast.error("There was a problem with server, Please try again!", { position: 'top-center', autoClose: 3000, theme: 'colored' })
     }
 
-    setSubmitted(true);
   };
 
   return (
