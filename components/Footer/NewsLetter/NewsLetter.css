@@ -1,3 +1,5 @@
+/** @format */
+
 img {
   max-width: 100%;
   height: auto;
@@ -26,8 +28,7 @@ p {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  font-family: 'Lato', sans-serif;
-  background-color: #ffffff;
+  font-family: "Lato", sans-serif;
 }
 .subheading {
   font-size: 18px;
@@ -119,9 +120,9 @@ p {
   right: -6px;
   width: 26px;
   height: 26px;
-  background-image: url('https://user-images.githubusercontent.com/23297041/53911760-6c581880-4068-11e9-90ab-ac45ae3b4aa8.png');
+  background-image: url("https://user-images.githubusercontent.com/23297041/53911760-6c581880-4068-11e9-90ab-ac45ae3b4aa8.png");
   background-size: cover;
-  content: '';
+  content: "";
   -webkit-animation: slideUp 0.3s ease-out;
   animation: slideUp 0.3s ease-out;
 }
