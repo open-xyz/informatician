@@ -6,7 +6,7 @@ export default function Employee() {
     return (
         <section className="my-20 px-8 mx-auto max-w-5xl space-y-20">
             <div className="border p-4 py-12 shadow-md rounded-lg">
-                <h2 className="text-4xl text-center text-blue-300">
+                <h2 className="text-4xl text-center text-blue-500">
                     STRAIGHT FROM <strong> THE SOURCE </strong>
                 </h2>
                 <p className="text-center text-2xl mt-4 text-mono">

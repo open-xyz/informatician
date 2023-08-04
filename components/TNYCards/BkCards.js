@@ -173,7 +173,7 @@ export default function BkCards(props) {
               className="dark:bg-[#161313] h-[30rem]"
             >
               {loading ? (
-                <span class="loader"></span>
+                <span className="loader"></span>
               ) : (
                 <>
                   <GhostPrevButton refprop={prevButton} />
