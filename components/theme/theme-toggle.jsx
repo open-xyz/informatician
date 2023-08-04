@@ -15,7 +15,7 @@ export function ThemeToggle() {
   
   return (
     <button
-    className="mr-9 inline-flex self-center"
+    className="sm:scale-110 sm:mr-[.90rem] lg:mr-9 inline-flex self-center"
       onClick={() => setTheme(theme === "light" ? "dark" : sysMode === "light" && theme==="system"  ? "dark" : "light")}
     >
       <Icons.sun className="-rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />

@@ -30,10 +30,8 @@ export default function NewsLetter() {
       );
 
       if (response.status === 200) {
-        console.log("Subscribed");
         toast.success("Subscribed", { position: 'top-center', autoClose: 3000, theme: 'colored' })
       } else {
-        console.log("Failed to subscribe");
         setSubmitted(false)
         toast.error("Failed to subscribe. Please try again!", {
           position: "top-right",

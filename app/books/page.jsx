@@ -160,7 +160,7 @@ export default function BookList(props) {
       </h3>
 
       {loading ? (
-        <span class="loader"></span>
+        <span className="loader"></span>
       ) : (
         <Swiper
           slidesPerView={1}
