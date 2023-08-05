@@ -11,9 +11,11 @@ Closes #issue_number
 <!-- Write a brief description of the changes made in the PR. Explain the problem being addressed, or any relevant
 information. -->
 
-## Screenshots
+## Screenshots (if applicable)
 
-<!-- Add screenshots to preview the changes  -->
+|      Original       |      Updated       |
+| :-----------------: | :----------------: |
+| original screenshot | updated screenshot |
 
 ## Checklist 
 

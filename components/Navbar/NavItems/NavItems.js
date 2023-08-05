@@ -86,7 +86,7 @@ export default function NavItems(props) {
           >
           {user ? (
             <button onClick={handleSignOut}>Sign Out</button>
-          ) : "LogIn"} 
+          ) : "Login"} 
           </Link>
         </li>
 
