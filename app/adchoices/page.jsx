@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function AdChoices() {
   return (
     <div className="py-16">
