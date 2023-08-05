@@ -44,7 +44,7 @@ export default function Testimonial() {
     <div className="mt-20 mb-28">
       <h1 className="text-center text-4xl font-bold">Our Core Team</h1>
       <p className="text-center mt-2 mb-5">
-        What Our Core Team Say About The Books.
+        What Our Core Team Say About Informatician.
       </p>
       <div className="flex flex-wrap justify-center gap-8 mt-12">
         {testimonials.map((testimonial) => (
