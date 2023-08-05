@@ -15,7 +15,7 @@ const BookbookFormats = () => {
   }, []);
 
   return (
-    <div className="mt-24 px-4 md:px-0 py-6">
+    <section className="mt-24 px-4 md:px-0 py-6">
       <h1 className="text-6xl font-bold text-center">Book bookFormats</h1>
       {bookFormatsData.map((bookFormat) => (
         <div
@@ -26,7 +26,7 @@ const BookbookFormats = () => {
         >
           <div className="md:flex md:items-center">
             <div className="md:w-1/2 md:p-6">
-              <div className="h-64 md:h-80 rounded-2xl overflow-hidden md:hfull relative w-full grid place-items-center bg-white">
+              <div className="h-64 md:h-80 rounded-2xl overflow-hidden md:hfull relative w-full grid place-items-center">
                 <Image
                   loading="lazy"
                   src={bookFormat.image}
@@ -59,7 +59,7 @@ const BookbookFormats = () => {
           </div>
         </div>
       ))}
-    </div>
+    </section>
   );
 };
 
