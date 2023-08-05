@@ -95,6 +95,10 @@ p {
 .btn:focus {
   outline: none;
 }
+::placeholder { 
+  color: white;
+  opacity: 1;
+}
 
 .subscribe {
   display: flex;
