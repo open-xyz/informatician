@@ -24,7 +24,9 @@ const Login = () => {
   const [captchaText, setCaptchaText] = useState();
 
 
-
+  const togglePasswordVisibility = () => {
+    setShowPass((prevShowPass) => !prevShowPass);
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -35,13 +37,14 @@ const Login = () => {
     if (session?.status === 'authenticated') {
        navigate.push('/') 
     }
-})
+},[])
 
   const login = async (e) => {
     e.preventDefault();
     signIn('credentials', {...data, redirect:false})
     .then((callback)=>{
         if(callback?.error){
+          console.log(callback.error)
            toast.error(callback.error)
         }
 
@@ -86,7 +89,7 @@ const Login = () => {
     <div className=" my-28 flex">
       {/* Login Form */}
       <div className="md:w-1/2 mx-auto">
-        <form className="lg:w-[80%] flex flex-col py-4 px-5 gap-6 mx-auto text-lg" aria-label="Login form" onClick={login}>
+        <form className="lg:w-[80%] flex flex-col py-4 px-5 gap-6 mx-auto text-lg" aria-label="Login form"  >
           {/* Heading */}
           <h2 className="mx-auto text-2xl md:text-3xl font-bold text-indigo-600">
             Login to Informatician
@@ -123,19 +126,21 @@ const Login = () => {
           <div className="w-full flex flex-col items-start gap-2">
             <label htmlFor="pass">Your Password</label>
             <div className="relative w-[100%]">
-            <input
-              type={showPass? "text":"password"}
-              name="password"
-              placeholder="Enter Password"
-              value={data.password}
-              onChange={handleChange}
-              aria-labelledby="pass-label"
-
-              className="w-[100%] text-gray-800 bg-slate-100 py-2 px-4 focus:outline-indigo-500"
-
-            />
-             <FontAwesomeIcon icon={showPass? faEye: faEyeSlash} className="absolute top-4 right-2 cursor-pointer" onClick={()=>setShowPass(!showPass)}/>
-            </div>
+          <input
+            type={showPass ? "text" : "password"}
+            name="password"
+            placeholder="Enter Password"
+            value={data.password}
+            onChange={handleChange}
+            aria-labelledby="pass-label"
+            className="w-[100%] text-gray-800 bg-slate-100 py-2 px-4 focus:outline-indigo-500"
+          />
+          <FontAwesomeIcon
+            icon={showPass ? faEyeSlash : faEye}
+            className={`absolute top-4 right-2 cursor-pointer text-black`}
+            onClick={togglePasswordVisibility}
+          />
+        </div>
            
           </div>
 
@@ -180,6 +185,7 @@ const Login = () => {
           <button
             className="w-full bg-indigo-600 px-4 py-2 rounded-md text-lg text-white hover:bg-indigo-800 duration-200 ease-out "
             type="submit"
+            onClick={login}
           >
             Login
           </button>
