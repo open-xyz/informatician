@@ -1,6 +1,5 @@
 /** @format */
 
-"use client";
 import BkCards from "@/components/BkCards/BkCards";
 import CgCards from "@/components/Home/CgCards/CgCards";
 import TNYCards from "@/components/TNYCards/BkCards";
