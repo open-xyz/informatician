@@ -1,7 +1,5 @@
 /** @format */
 
-"use client";
-
 import "@/styles/globals.css";
 import { Inter } from "next/font/google";
 
@@ -11,10 +9,12 @@ import Footer from "@/components/Footer/Footer";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import ScrollToTopButton from "@/components/ScrollButton/ScrollButton";
 import { Suspense } from "react";
-import ToasterContext from "@/context/ToasterContext";
 import Provider from "@/context/AuthContext";
+import { Toaster } from "react-hot-toast";
 
 // Import & exporting the metadata
+import { metadata } from "./metadata";
+export {metadata}
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
             <Suspense fallback={<div>Loading...</div>}>
               <Navbar />
             </Suspense>
-            <ToasterContext />
+            <Toaster />
             {children}
             <Footer />
             <ScrollToTopButton />
