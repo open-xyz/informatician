@@ -33,7 +33,7 @@ export default function BookComponent() {
   }, [bookId]);
 
   if (!bookDetails) {
-    return <div>Loading...</div>;
+    return <div className="mt-32 text-4xl">Loading...</div>;
   }
 
   return (
