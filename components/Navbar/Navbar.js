@@ -33,7 +33,6 @@ export default function Navbar(props) {
     }
 
     try {
-      console.log("called");
       const result = await searchBooks(query);
       console.log(result);
       console.log(result[0].selfLink);
