@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 
 import img1 from "@/public/assets/benefits/benefit-1.webp";
