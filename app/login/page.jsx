@@ -1,12 +1,11 @@
-import Image from 'next/image';
-import React from 'react'
-import Login from './Login';
+import Image from "next/image";
+import Login from "./Login";
 import loginIMG from "@/public/assets/auth/login.jpg";
 
 export default function page() {
   return (
-    <section className=" my-28 flex">
-        <Login />
+    <section className="my-28 flex">
+      <Login />
 
       {/* right part image */}
       <div className="hidden md:block md:w-1/2">
