@@ -11,6 +11,13 @@ import { FaSyncAlt } from "react-icons/fa";
 import { toast } from "react-hot-toast";
 import axios from "axios";
 import { signIn } from "next-auth/react";
+import {
+  FaUser,
+  FaEnvelope,
+  FaLock,
+  FaShieldVirus,
+  FaCheckCircle,
+} from "react-icons/fa";
 
 const SignUp = () => {
   let navigate = useRouter();
@@ -61,8 +68,8 @@ const SignUp = () => {
   }, []);
 
   return (
-      <div className="md:w-1/2 mx-auto">
-      {/* Signup Form */}
+   <div className="md:w-1/2 mx-auto">
+        {/* Signup Form */}
         <form
           className="lg:w-[80%] flex flex-col items-start p-4 px-6 mx-auto gap-2 text-lg"
           aria-label="Signup Form"
@@ -91,36 +98,43 @@ const SignUp = () => {
           {/* Name input */}
           <div className="w-full flex flex-col items-start gap-2">
             <label htmlFor="name">Full Name</label>
-            <input
-              type="text"
-              name="name"
-              placeholder="Enter Your Full Name"
-              value={user.name}
-              onChange={handleChange}
-              aria-label="Username"
-              className="w-[100%] bg-slate-100 py-2 px-4 focus:outline-indigo-500"
-              required
-            />
+            <div className="relative w-full">
+              <input
+                type="text"
+                name="name"
+                placeholder="Enter Your Full Name"
+                value={user.name}
+                onChange={handleChange}
+                aria-label="Username"
+                className="pl-8 w-[100%] bg-slate-100 py-2 px-4 focus:outline-indigo-500"
+                required
+              />
+              <FaUser className="text-[#4f46e5] absolute top-[12px] left-2" />
+            </div>
           </div>
           {/* Email input */}
           <div className="w-full flex flex-col items-start gap-2">
             <label htmlFor="email">Your Email</label>
-            <input
-              type="email"
-              placeholder="Enter Email"
-              name="email"
-              value={user.email}
-              onChange={handleChange}
-              aria-label="Your Email"
-              className="w-[100%] bg-slate-100 py-2 px-4 focus:outline-indigo-500"
-              required
-            />
+            <div className="relative w-full">
+              <input
+                type="email"
+                placeholder="Enter Email"
+                name="email"
+                value={user.email}
+                onChange={handleChange}
+                aria-label="Your Email"
+                className="pl-8 w-full bg-slate-100 py-2 px-4 focus:outline-indigo-500"
+                required
+              />
+              <FaEnvelope className="text-[#4f46e5] absolute top-[12px] left-2" />
+            </div>
           </div>
           {/* Password input */}
           <div className="w-full flex flex-row items-center justify-between gap-8">
             <div className="flex flex-col items-start gap-2 relative">
               <label htmlFor="password">Create Password</label>
               <div className="relative w-[100%]">
+                <FaLock className="text-[#4f46e5] absolute top-[12px] left-2" />
                 <input
                   type={showPass1 ? "text" : "password"}
                   name="password"
@@ -129,7 +143,7 @@ const SignUp = () => {
                   onChange={handleChange}
                   aria-label="Create Password"
                   autoComplete="current-password"
-                  className="w-[100%] bg-slate-100 py-2 px-4 focus:outline-indigo-500"
+                  className="pl-8 w-full bg-slate-100 py-2 px-4 focus:outline-indigo-500"
                   required
                 />
                 <FontAwesomeIcon
@@ -143,10 +157,12 @@ const SignUp = () => {
             <div className="flex flex-col items-start gap-2">
               <label htmlFor="confirmPassword">Confirm Password</label>
               <div className="relative w-[100%]">
+              <FaCheckCircle className="text-[#4f46e5] absolute top-[12px] left-2" />
+
                 <input
                   type={showPass2 ? "text" : "password"}
                   name="confirmPassword"
-                  placeholder="Enter Confirm Password"
+                  placeholder="Password"
                   value={user.confirmPassword}
                   onChange={handleChange}
                   aria-label="Confirm Password"
@@ -155,8 +171,8 @@ const SignUp = () => {
                       user.confirmPassword.length === 0 &&
                       user.confirmPassword === user.password
                     )
-                      ? "w-[100%] bg-slate-100 py-2 px-4 focus:outline-green-500"
-                      : "w-[100%] bg-slate-100 py-2 px-4 focus:outline-red-500"
+                      ? "pl-8 w-full bg-slate-100 py-2 px-4 focus:outline-green-500"
+                      : "pl-8 w-full bg-slate-100 py-2 px-4 focus:outline-red-500"
                   }
                   required
                 />
@@ -169,7 +185,7 @@ const SignUp = () => {
             </div>
           </div>
 
-          <div className="w-[100%] flex flex-col items-start gap-2">
+          <div className="w-full flex flex-col items-start gap-2">
             <label htmlFor="captcha">Captcha</label>
             <div className="flex flex-row gap-3 justify-center items-center">
               <div
@@ -183,14 +199,17 @@ const SignUp = () => {
                 className="spin-icon text-3xl cursor-pointer"
                 onClick={genrateCaptcha}
               />
-              <input
-                type="text"
-                name="captch"
-                value={captchaVal}
-                placeholder="Enter Captcha Here"
-                onChange={(e) => setCaptchaVal(e.target.value)}
-                className="w-[100%] self-end bg-slate-100 py-2 px-4 focus:outline-indigo-500"
-              />
+              <div className="relative w-ful">
+                <input
+                  type="text"
+                  name="captch"
+                  value={captchaVal}
+                  placeholder="Enter Captcha Here"
+                  onChange={(e) => setCaptchaVal(e.target.value)}
+                  className="pl-8 w-full self-end bg-slate-100 py-2 px-4 focus:outline-indigo-500"
+                />
+                 <FaShieldVirus className="text-[#4f46e5] absolute top-[12px] left-2" />
+              </div>
             </div>
           </div>
 

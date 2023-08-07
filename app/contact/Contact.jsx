@@ -8,6 +8,7 @@ import { AuthErrorMessage } from "@/utils/validation";
 import Link from "next/link";
 import Image from "next/image";
 import { toast } from "react-hot-toast";
+import { FaUser, FaEnvelope, FaComment } from "react-icons/fa";
 
 export default function Contact() {
   useEffect(() => {
@@ -81,24 +82,30 @@ export default function Contact() {
               >
                 Full Name
               </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Name"
-                className="w-full px-4 py-2 border border-gray-300 rounded focus:ring-blue-600 focus:border-blue-600"
-                required
-                value={form.name}
-                onChange={handleChange}
-                data-aos="fade-left"
-                data-aos-duration="500"
-                aria-labelledby="name"
-                aria-describedby={
-                  error.name && error.nameError ? "nameError" : null
-                }
-                aria-required="true"
-                aria-invalid={error.name && error.nameError ? "true" : "false"}
-              />
+              <div className="relative">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Name"
+                  className="pl-8 w-full px-4 py-2 border border-gray-300 rounded focus:ring-blue-600 focus:border-blue-600"
+                  required
+                  value={form.name}
+                  onChange={handleChange}
+                  data-aos="fade-left"
+                  data-aos-duration="500"
+                  aria-labelledby="name"
+                  aria-describedby={
+                    error.name && error.nameError ? "nameError" : null
+                  }
+                  aria-required="true"
+                  aria-invalid={
+                    error.name && error.nameError ? "true" : "false"
+                  }
+                />
+                <FaUser className="text-[#4f46e5] absolute top-[12px] left-2 " />
+              </div>
+
               {error.name && error.nameError ? (
                 <AuthErrorMessage
                   message={error.nameError}
@@ -117,26 +124,29 @@ export default function Contact() {
               >
                 Email
               </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Email"
-                className="w-full px-4 py-2 border border-gray-300 rounded focus:ring-blue-600 focus:border-blue-600"
-                required
-                value={form.email}
-                onChange={handleChange}
-                data-aos="fade-left"
-                data-aos-duration="500"
-                aria-labelledby="email"
-                aria-describedby={
-                  error.email && error.emailError ? "emailError" : null
-                }
-                aria-required="true"
-                aria-invalid={
-                  error.email && error.emailError ? "true" : "false"
-                }
-              />
+              <div className="relative">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Email"
+                  className="pl-8 w-full px-4 py-2 border border-gray-300 rounded focus:ring-blue-600 focus:border-blue-600"
+                  required
+                  value={form.email}
+                  onChange={handleChange}
+                  data-aos="fade-left"
+                  data-aos-duration="500"
+                  aria-labelledby="email"
+                  aria-describedby={
+                    error.email && error.emailError ? "emailError" : null
+                  }
+                  aria-required="true"
+                  aria-invalid={
+                    error.email && error.emailError ? "true" : "false"
+                  }
+                />
+                <FaEnvelope className="text-[#4f46e5] absolute top-[12px] left-2 " />
+              </div>
               {error.email && error.emailError ? (
                 <AuthErrorMessage
                   message={error.emailError}
@@ -155,25 +165,29 @@ export default function Contact() {
               >
                 Message
               </label>
-              <textarea
-                id="message"
-                placeholder="Message"
-                name="message"
-                className="w-full px-4 py-2 border border-gray-300 rounded resize-none focus:ring-blue-600 focus:border-blue-600"
-                required
-                value={form.message}
-                onChange={handleChange}
-                data-aos="fade-left"
-                data-aos-duration="500"
-                aria-labelledby="message"
-                aria-describedby={
-                  error.message && error.messageError ? "messageError" : null
-                }
-                aria-required="true"
-                aria-invalid={
-                  error.message && error.messageError ? "true" : "false"
-                }
-              />
+              <div className="relative">
+                <textarea
+                  id="message"
+                  placeholder="Message"
+                  name="message"
+                  className="pl-8 w-full px-4 py-2 border border-gray-300 rounded resize-none focus:ring-blue-600 focus:border-blue-600"
+                  required
+                  value={form.message}
+                  onChange={handleChange}
+                  data-aos="fade-left"
+                  data-aos-duration="500"
+                  aria-labelledby="message"
+                  aria-describedby={
+                    error.message && error.messageError ? "messageError" : null
+                  }
+                  aria-required="true"
+                  aria-invalid={
+                    error.message && error.messageError ? "true" : "false"
+                  }
+                />
+                <FaComment className="text-[#4f46e5] absolute top-[12px] left-2 " />
+              </div>
+
               {error.message && error.messageError ? (
                 <AuthErrorMessage
                   message={error.messageError}
