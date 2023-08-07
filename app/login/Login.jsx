@@ -70,7 +70,7 @@ const Login = () => {
       <form
         className="lg:w-[80%] flex flex-col py-4 px-5 gap-6 mx-auto text-lg"
         aria-label="Login form"
-        onClick={login}
+   
       >
         {/* Heading */}
         <h2 className="mx-auto text-2xl md:text-3xl font-bold text-indigo-600">
@@ -123,7 +123,8 @@ const Login = () => {
             />
             <FontAwesomeIcon
               icon={showPass ? faEye : faEyeSlash}
-              className="absolute top-4 right-2 cursor-pointer"
+              className={`absolute top-4 right-2 cursor-pointer text-black`}
+
               onClick={() => setShowPass(!showPass)}
             />
           </div>
@@ -175,6 +176,7 @@ const Login = () => {
         <button
           className="w-full bg-indigo-600 px-4 py-2 rounded-md text-lg text-white hover:bg-indigo-800 duration-200 ease-out "
           type="submit"
+          onClick={login}
         >
           Login
         </button>
