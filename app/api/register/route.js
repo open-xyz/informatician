@@ -21,7 +21,7 @@ export const POST = async (req)=>{
         throw new Error("Email already exists")
     }
 
-    const hashedPassword = await bcrypt.hash(password, 12) 
+    const hashedPassword = await bcrypt.hash(password, 10) 
 
     const user = await prisma.user.create({
         data:{

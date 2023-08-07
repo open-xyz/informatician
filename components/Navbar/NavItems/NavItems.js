@@ -1,8 +1,22 @@
+"use client"
 import "../Navbar.css";
 import { FaRegBookmark, FaSearch } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
+import { useSession, signOut } from 'next-auth/react'
+import { useState } from "react";
+
+
 export default function NavItems(props) {
+  const { data:session } = useSession()
+  const [user, setUser] = useState(session?.user?.email)
+
+  const handleSignOut = () => {
+    signOut();
+    setUser(null);
+  }
+
+
   return (
     <div style={{}}>
       <ul
@@ -70,7 +84,9 @@ export default function NavItems(props) {
             className={props.pathname === "/login" ? "active" : "dark:text-white"}
             onClick={props.handleOptionClick}
           >
-            LogIn
+          {user ? (
+            <button onClick={handleSignOut}>Sign Out</button>
+          ) : "Login"} 
           </Link>
         </li>
 

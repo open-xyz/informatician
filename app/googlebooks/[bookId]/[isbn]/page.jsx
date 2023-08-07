@@ -15,7 +15,6 @@ const BookPreview = ({ params }) => {
 
   // Create a template string for the newsletter HTML with a placeholder for the ISBN
   const newsletterHtmlTemplate = `
-    <!DOCTYPE html>
     <html xmlns="http://www.w3.org/1999/xhtml">
       <head>
       <style>     

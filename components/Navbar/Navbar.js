@@ -4,9 +4,9 @@ import { usePathname } from "next/navigation";
 import { searchBooks } from "@/utils/searchBooks";
 import NavItems from "./NavItems/NavItems.js";
 import Link from "next/link";
-import { FaSearch } from "react-icons/fa";
 import { ThemeToggle } from "@/components/theme/theme-toggle.jsx";
 import Logo from "../Logo.js";
+import Image from "next/image";
 
 function handleSubmit(event) {
   event.preventDefault(); // Prevent the default form submission
@@ -33,7 +33,6 @@ export default function Navbar(props) {
     }
 
     try {
-      console.log("called");
       const result = await searchBooks(query);
       console.log(result);
       console.log(result[0].selfLink);
@@ -76,13 +75,15 @@ export default function Navbar(props) {
                   }}
                 >
                   <div className="flex items-center p-2 border-b-2 my-1 transition duration-200 hover:bg-gray-300 cursor-pointer">
-                    <img
+                    <Image
                       src={
                         book?.volumeInfo.imageLinks?.thumbnail ||
                         "placeholder.png"
                       }
                       alt="Book Cover"
-                      className="w-12 h-16 object-cover mr-2 rounded-sm"
+                      className="object-cover mr-2 rounded-sm"
+                      width={12}
+                      height={16}
                     />
                     <div className="flex-1">
                       <h1 className="text-lg font-semibold text-blue-600 hover:text-blue-800 line-clamp-1">

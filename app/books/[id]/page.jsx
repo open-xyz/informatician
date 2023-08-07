@@ -1,10 +1,9 @@
-"use client";
 import Link from "next/link";
-import ReactStars from "react-stars";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark } from "@fortawesome/free-regular-svg-icons";
 import { Books } from "@/utils/Constants";
 import Image from "next/image";
+import RStar from "@/components/RStar";
 
 export default function BookComponent({ params }) {
   const { id } = params;
@@ -23,7 +22,7 @@ export default function BookComponent({ params }) {
           </Link>
         </div>
         <div className="flex items-center mt-4 text-gray-500">
-          <ReactStars count={5} size={24} value={5} color2={"#ffd700"} />
+          <RStar count={5} size={24} value={5} color2={"#ffd700"} />
           <span className="ml-2">{bookDetails?.ratings} Ratings</span>
         </div>
         <div className="mt-6">
