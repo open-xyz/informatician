@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+  scroll-behavior: smooth;
+}
+
+[id] {
+  scroll-margin-top: 120px;
+}
+
 @layer base {
   .light {
     --bgPrimary: #eff6ff !important;
