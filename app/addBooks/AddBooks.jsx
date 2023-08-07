@@ -119,7 +119,7 @@ const AddBooks = () => {
                         </h1>
                         <form className="px-8 py-6 space-y-6 flex flex-col" onSubmit={handleSubmit}>
                             <div>
-                                <label for="bookName">Enter the Book Name: </label>
+                                <label htmlFor="bookName">Enter the Book Name: </label>
                                 <input
                                     className="w-[100%] mb-1 border border-gray-300 dark:border-gray-700 px-4 py-2 rounded"
                                     type="text"
@@ -134,7 +134,7 @@ const AddBooks = () => {
                                 {error.bookName && error.bookNameError && <AuthErrorMessage message={error.bookNameError} />}
                             </div>
                             <div>
-                                <label for="authorName">Enter the Author Name: </label>
+                                <label htmlFor="authorName">Enter the Author Name: </label>
                                 <input
                                     className="w-[100%] border border-gray-300 dark:border-gray-700 px-4 py-2 rounded"
                                     type="text"
@@ -150,7 +150,7 @@ const AddBooks = () => {
                             </div>
 
                             <div>
-                                <label for="publisher">Enter the Publisher Name: </label>
+                                <label htmlFor="publisher">Enter the Publisher Name: </label>
                                 <input
                                     className="w-[100%] border border-gray-300 dark:border-gray-700 px-4 py-2 rounded"
                                     type="text"
@@ -166,7 +166,7 @@ const AddBooks = () => {
                             </div>
 
                             <div>
-                                <label for="pages">Enter the Number of Pages: </label>
+                                <label htmlFor="pages">Enter the Number of Pages: </label>
                                 <input
                                     className="w-[100%] border border-gray-300 dark:border-gray-700 px-4 py-2 rounded"
                                     type="number"
@@ -182,7 +182,7 @@ const AddBooks = () => {
                                 {error.pages && error.pagesError && <AuthErrorMessage message={error.pagesError} />}
                             </div>
                             <div>
-                                <label for="img">Enter the Book's Cover Image URL: </label>
+                                <label htmlFor="img">Enter the Book's Cover Image URL: </label>
                                 <input
                                     className="w-[100%] border border-gray-300 dark:border-gray-700 px-4 py-2 rounded"
                                     type="text"

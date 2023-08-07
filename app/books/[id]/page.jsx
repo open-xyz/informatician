@@ -5,6 +5,10 @@ import { Books } from "@/utils/Constants";
 import Image from "next/image";
 import RStar from "@/components/RStar";
 
+export const metadata = {
+  title: "Book",
+};
+
 export default function BookComponent({ params }) {
   const { id } = params;
   const bookDetails = Books[id - 1];
