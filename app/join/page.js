@@ -5,6 +5,10 @@ import Employee from "@/components/join/Employee";
 import Community from "@/components/join/Community";
 import JobSection from "@/components/join/JobSection";
 
+export const metadata = {
+  title: "Join",
+};
+
 export default function JoinPage() {
   return (
     <main className="join py-5">

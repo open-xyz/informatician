@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
 
 const testimonials = [
   {
@@ -9,8 +9,9 @@ const testimonials = [
     image: 'https://avatars.githubusercontent.com/u/33249782?v=4',
     quote:
       "This application is excellent! It's like the Netflix of books! As a college student, this app has greatly aided me in reading science and mathematics. I have encountered no issues and found most of the books I needed. Thanks! I genuinely adore this app!",
-      github: "https://github.com/rohansx",
-      linkedin: "https://www.linkedin.com/in/rohansx/"
+    linkedIn:"https://www.linkedin.com/in/rohansx/",
+    github:"https://github.com/rohansx",
+    twitter:"https://twitter.com/therohanx"
   },
   {
     id: 2,
@@ -19,8 +20,9 @@ const testimonials = [
     image: 'https://avatars.githubusercontent.com/u/96341431?v=4',
     quote:
       "The assortment of ebooks and audiobooks is abundant. I have discovered and saved numerous books to read and listen to that would have otherwise cost me a fortune elsewhere. There's no comparison at all!",
-    github: "https://github.com/k-deepak04",
-    linkedin: "https://www.linkedin.com/in/k-deepak04/"
+    linkedIn:"https://www.linkedin.com/in/k-deepak04/",
+    github:"https://github.com/k-deepak04",
+    twitter:"https://twitter.com/k_deepak04",
   },
   {
     id: 3,
@@ -29,8 +31,9 @@ const testimonials = [
     image: 'https://avatars.githubusercontent.com/u/85052056?v=4',
     quote:
       "From significant literary works and comprehensive historical and scientific studies to popular fiction and self-help books, it's remarkable how much there is to discover on Informatician. Fantastic!",
-      github: "https://github.com/SiddhantPawar03",
-      linkedin: "https://www.linkedin.com/in/siddhant-pawar-398a05201/?originalSubdomain=in"
+    linkedIn:"https://www.linkedin.com/in/siddhant-pawar-398a05201/",
+    github:"https://github.com/SiddhantPawar03",
+    twitter:"https://twitter.com/Siddhan56824277",
   },
   // Add more testimonials here
 ];
@@ -41,7 +44,7 @@ export default function Testimonial() {
     <div className="mt-20 mb-28">
       <h1 className="text-center text-4xl font-bold">Our Core Team</h1>
       <p className="text-center mt-2 mb-5">
-        What Our Core Team Say About The Books.
+        What Our Core Team Say About Informatician.
       </p>
       <div className="flex flex-wrap justify-center gap-8 mt-12">
         {testimonials.map((testimonial) => (
@@ -57,23 +60,26 @@ export default function Testimonial() {
               src={testimonial.image}
               alt={testimonial.name}
             />
-            <div className='flex justify-center mt-6 gap-3'>
+
+            <div className='flex justify-center mt-6 gap-3 alignment'>
             <a href={testimonial.github} target='_blank' className='text-white text-[20px] rounded-[5px] p-2 bg-[#0f498f]'>
               <FaGithub />
             </a>
             <a href={testimonial.linkedin} target='_blank' className='text-white text-[20px] rounded-[5px] p-2 bg-[#0f498f]'>
               <FaLinkedin />
             </a>
+
+
             </div>
-            <div className="p-6">
+            <div className="p-6 alignment">
               <p className="text-base text-gray-800 dark:text-gray-200">
                 {testimonial.quote}
               </p>
-              <div className="mt-4 ">
+              <div className="mt-4 alignment">
                 <span className="font-semibold text-lg text-gray-900 dark:text-gray-100">
                   {testimonial.name}
                 </span>
-                <span className="text-sm text-gray-700 dark:text-gray-400">
+                <span className="text-sm text-gray-700 dark:text-gray-400 alignment">
                   {testimonial.job}
                 </span>
               </div>

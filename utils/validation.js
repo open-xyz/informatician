@@ -1,7 +1,7 @@
 // ----Auth Message ----//
 
 export const AuthErrorMessage = ({message})=>{
-  return <p className="block text-start text-red-600 text-sm w-[200px] m-0 mb-2">{message}</p>
+  return <p className="block text-start !text-red-600 text-sm w-[200px] m-0 mb-2">{message}</p>
 }
 
 

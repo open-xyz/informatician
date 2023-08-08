@@ -1,3 +1,7 @@
+export const metadata = {
+  title: "Accessibility",
+};
+
 export default function Accessibility() {
   return (
     <div className="py-20 mt-8">

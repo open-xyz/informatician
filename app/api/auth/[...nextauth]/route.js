@@ -19,7 +19,7 @@ export const authOptions = {
 
                password: { label: "Password", type: "Enter your Password" },
 
-              username: { label: "Username", type: "text", placeholder: "Enter your Username" },
+              confirmPassword: { label: "Confirm Password", type: "Confirm your Password" },
            },
 
            async authorize(credentials){

@@ -1,6 +1,5 @@
 /* feature styles */
 
-
 .feature .feature_card {
   margin: 10px;
   padding: 50px 20px;
@@ -17,7 +16,7 @@
 .feature_card_outer {
   display: flex;
   gap: 10px;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
   margin-bottom: 50px;
 }
@@ -122,8 +121,14 @@
 
 
 @media screen and (max-width: 576px) {
-  .feature .feature_card {
+   .feature_card_outer {
     margin: 10px;
     width: 50%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+   .feature_card_outer {
+    align-items: center;
   }
 }

@@ -34,12 +34,12 @@ function Contributors() {
   };
 
   return (
-    <div className="contact-container">
-      <h1 className="  text-center text-very-dark-desaturated-blue text-3xl leading-8 font-bold text-shadow-md mb-3 mt-3  ">
+    <div className="mx-auto max-w-7xl px-4">
+      <h1 className="text-center text-very-dark-desaturated-blue text-3xl leading-8 font-bold text-shadow-md my-3  ">
         Our Valuable Contributors
       </h1>
 
-      <div className="flex flex-wrap justify-center p-6 gap-4 shadow-md rounded-xl sm:p-12 bg-gray-100 text-gray-900 ml-2">
+      <div className="flex flex-wrap justify-center p-4 gap-12 shadow-md rounded-xl sm:p-12 bg-gray-100 dark:bg-gray-950 dark:text-gray-100 border text-gray-900">
         {loading ? (
           <p>Loading...</p>
         ) : (
@@ -61,8 +61,8 @@ function Contributors() {
                     src={contributor.avatar_url}
                     alt="avatar"
                     className="mx-auto rounded-full bg-gray-500 aspect-square"
-                    width={32}
-                    height={32}
+                    width={120}
+                    height={120}
                   />
                 </Link>
                 <div className="my-2 space-y-1">

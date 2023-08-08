@@ -1,3 +1,7 @@
+export const metadata = {
+  title: "Privacy",
+};
+
 export default function PrivacyPolicy() {
   return (
     <div className="py-20 mt-8">

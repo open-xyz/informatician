@@ -3,7 +3,7 @@ export const metadata = {
     metadataBase: new URL('https://www.informatician.in/'),
     title: {
       default: 'Informatician - Unleash an Open Source Book Platform where Literature Meets Community',
-      template: '%s | Informatician',
+      template: '%s - Informatician',
     },
     description: 'Unleash an open source book platform where literature meets community, and knowledge knows no bounds. Explore a diverse collection of books and information in the domain of books and reading.',
     keywords: ["informatician", "books", "reading", "literature", "open source", "book platform", "community", "knowledge"],
