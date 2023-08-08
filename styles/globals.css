@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
-  scroll-behavior: smooth;
-}
-
 @layer base {
   .light {
     --bgPrimary: #eff6ff !important;
