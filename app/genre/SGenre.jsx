@@ -43,8 +43,12 @@ export default function SGenre({ genre }) {
             ))}
           </div>
           <div className="mt-8">
-            <button className="px-4 py-2 font-semibold text-white bg-black dark:text-black dark:bg-white rounded-lg pointer-events-none">
-              <Link href="#">Explore more</Link>
+            <button className="px-4 py-2 font-semibold text-white bg-black dark:text-black dark:bg-white rounded-lg">
+              <Link
+                href={`/genre/${genre.slug}`}
+                prefetch>
+                Explore more
+              </Link>
             </button>
           </div>
         </div>
