@@ -2,8 +2,15 @@
 import Image from "next/image";
 import Login from "./Login";
 import loginIMG from "@/public/assets/auth/login.jpg";
+
 import { useState,useEffect } from "react";
 import Preloader from "@/components/Preloader/Preloader";
+
+
+export const metadata = {
+  title: "Login",
+};
+
 export default function page() {
   const [loading, setLoading] = useState(true);
 

@@ -6,6 +6,10 @@ import img3 from "@/public/assets/benefits/benefit-3.webp";
 import img4 from "@/public/assets/benefits/benefit-4.webp";
 import img5 from "@/public/assets/benefits/benefit-5.webp";
 
+export const metadata = {
+  title: "Benefits",
+};
+
 export default function BenefitsOfReading(props) {
   return (
     <div className="mt-16">

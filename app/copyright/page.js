@@ -1,3 +1,7 @@
+export const metadata = {
+  title: "Copyright",
+};
+
 export default function CopyrightPage() {
   return (
     <div className="py-20 mt-8">

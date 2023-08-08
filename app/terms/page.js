@@ -1,5 +1,9 @@
 import { FaCheckCircle } from "react-icons/fa";
 
+export const metadata = {
+  title: "Terms & Services",
+};
+
 const TermsAndService = () => {
   return (
     <div className="py-20 mt-8">

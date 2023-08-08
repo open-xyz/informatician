@@ -49,8 +49,14 @@
   display: none;
   background-color: black;
 }
-
+.my-2{
+  text-align: center !important;
+}
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(transparent, #ffffff);
   border-radius: 6px;
+}
+.alignment{
+  margin: auto;
+  text-align: center;
 }
