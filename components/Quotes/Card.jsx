@@ -27,6 +27,8 @@ const Card = ({ quote, author, category }) => {
         alignItems: "center",
         height: "360px",
         position: "relative",
+        textAlign:"center"
+
       }}
       className="max-w-screen-md text-center bg-yellow-200 mr-5 rounded-md w-full px-[10px]"
     >
