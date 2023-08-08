@@ -7,6 +7,7 @@ import magazines from "@/public/assets/Formats/magazines.webp";
 const bookFormatsData = [
   {
     title: "Ebooks",
+    slug:"ebook",
     image: ebook,
     description:
       "E-books are digital versions of printed books that can be read on electronic devices such as e-readers, tablets, or smartphones. They offer a convenient way for readers to access a wide range of literature without the need for physical books.",
@@ -27,6 +28,7 @@ const bookFormatsData = [
   },
   {
     title: "Audiobooks",
+    slug:"audiobook",
     image: audiobook,
     description:
       "Audiobooks provide an immersive storytelling experience by allowing readers to listen to narrators who bring the characters and narratives to life through spoken word. They are particularly beneficial for readers who prefer to listen to stories rather than read them.",
@@ -38,6 +40,7 @@ const bookFormatsData = [
   },
   {
     title: "Paperback Books",
+    slug:"paperback",
     image: paperback,
     description:
       "Paperback books are the most common and affordable format. They are lightweight and portable, making them easy to carry and hold. Paperback books offer a tactile experience, allowing readers to flip through pages and physically interact with the text.",
@@ -58,6 +61,7 @@ const bookFormatsData = [
   },
   {
     title: "Digital Magazines",
+    slug:"magazines",
     image: magazines,
     description:
       "Digital magazines provide a visual and interactive reading experience. They cover a wide range of topics and interests, from lifestyle and fashion to technology and science. Digital magazines often include multimedia elements, enhancing the reading experience.",
@@ -69,6 +73,7 @@ const bookFormatsData = [
   },
   {
     title: "Comics and Graphic Novels",
+    slug:"comics",
     image: comics,
     description:
       "Comics and graphic novels combine illustrations and text to tell stories in a visually engaging format. They cover various genres, including superheroes, fantasy, science fiction, memoirs, and more. Comics and graphic novels offer a unique reading experience.",
