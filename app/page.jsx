@@ -5,7 +5,7 @@ import CgCards from "@/components/Home/CgCards/CgCards";
 import TNYCards from "@/components/TNYCards/BkCards";
 import ImgSection from "@/components/Home/ImgSection/ImgSection";
 import { Books } from "@/utils/Constants";
-import NewsLetter from "@/components/Footer/NewsLetter/NewsLetter";
+// import NewsLetter from "@/components/Footer/NewsLetter/NewsLetter";
 
 export default function Home() {
   return (
@@ -17,7 +17,7 @@ export default function Home() {
           <BkCards bkhead="Bestselling Books & Audiobooks" books={Books} />
           <TNYCards bkhead="Current New York Times Bestsellers" />
         </div>
-        <NewsLetter />
+        {/* <NewsLetter /> */}
       </section>
     </>
   );

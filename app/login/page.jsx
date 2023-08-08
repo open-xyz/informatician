@@ -2,6 +2,10 @@ import Image from "next/image";
 import Login from "./Login";
 import loginIMG from "@/public/assets/auth/login.jpg";
 
+export const metadata = {
+  title: "Login",
+};
+
 export default function page() {
   return (
     <section className="my-28 flex">

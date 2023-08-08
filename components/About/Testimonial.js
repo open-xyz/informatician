@@ -60,26 +60,26 @@ export default function Testimonial() {
               src={testimonial.image}
               alt={testimonial.name}
             />
-            <div className='flex justify-center mt-6 gap-3'>
-              <a href={testimonial.github} target='_blank' className='text-white text-[20px] rounded-[5px] p-2 bg-black'>
-                <FaGithub />
-              </a>
-              <a href={testimonial.linkedIn} target='_blank' className='text-white text-[20px] rounded-[5px] p-2 bg-[#0f498f]'>
-                <FaLinkedin />
-              </a>
-              <a href={testimonial.twitter} target='_blank' className='text-white text-[20px] rounded-[5px] p-2 bg-[#00acee]'>
-                <FaTwitter />
-              </a>
+
+            <div className='flex justify-center mt-6 gap-3 alignment'>
+            <a href={testimonial.github} target='_blank' className='text-white text-[20px] rounded-[5px] p-2 bg-[#0f498f]'>
+              <FaGithub />
+            </a>
+            <a href={testimonial.linkedin} target='_blank' className='text-white text-[20px] rounded-[5px] p-2 bg-[#0f498f]'>
+              <FaLinkedin />
+            </a>
+
+
             </div>
-            <div className="p-6">
+            <div className="p-6 alignment">
               <p className="text-base text-gray-800 dark:text-gray-200">
                 {testimonial.quote}
               </p>
-              <div className="mt-4 ">
+              <div className="mt-4 alignment">
                 <span className="font-semibold text-lg text-gray-900 dark:text-gray-100">
                   {testimonial.name}
                 </span>
-                <span className="text-sm text-gray-700 dark:text-gray-400">
+                <span className="text-sm text-gray-700 dark:text-gray-400 alignment">
                   {testimonial.job}
                 </span>
               </div>

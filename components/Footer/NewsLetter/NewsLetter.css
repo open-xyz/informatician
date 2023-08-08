@@ -8,7 +8,9 @@ img {
 p {
   margin: 12px 0;
 }
-
+.my-2{
+  text-align: center !important;
+}
 .section-heading {
   font-size: 45px;
   color: rgb(15, 73, 143);
@@ -94,6 +96,10 @@ p {
 }
 .btn:focus {
   outline: none;
+}
+::placeholder { 
+  color: white;
+  opacity: 1;
 }
 
 .subscribe {

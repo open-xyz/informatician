@@ -4,6 +4,10 @@ import Link from "next/link";
 import faqData from "./faqData";
 import AccordionItem from "./Accordion";
 
+export const metadata = {
+  title: "FAQ",
+};
+
 export default function page() {
   return (
     <div className="faq-help p-8 text-center my-12 max-w-6xl mx-auto">

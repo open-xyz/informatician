@@ -11,7 +11,7 @@ const Footer = () => {
   const footerComponents = footerItems?.map((columnItems, index) => {
     return (
       <div key={index}>
-        <h2 className="mb-6 text-m font-bold">{columnNames[index]}</h2>
+        <h2 className={`mb-6 text-m font-bold`} style={{ color:'aliceblue', fontSize: '1.3rem', borderBottom: '2.5px solid #0096FF', width:'66px'}}>{columnNames[index]}</h2>
         <ul className="font-medium">
           {columnItems.map((item, index) => {
             return (

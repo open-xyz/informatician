@@ -1,6 +1,10 @@
 import genreDetailsData from "./genreDetailsData";
 import SGenre from "./SGenre";
 
+export const metadata = {
+  title: "Genre",
+};
+
 const GenrePage = () => {
   return (
     <div className="mt-24 px-4 md:px-0 py-6">
