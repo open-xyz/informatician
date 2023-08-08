@@ -1,6 +1,10 @@
 import construct from '@/public/assets/error/construct.webp';
 import Image from 'next/image';
 
+export const metadata = {
+  title: "Develop",
+};
+
 const Develop = (props) => {
   return (
     <div className="container shadow-md p-8 mt-20 rounded-lg text-center">

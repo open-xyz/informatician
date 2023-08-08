@@ -1,5 +1,9 @@
 import Contact from "./Contact";
 
+export const metadata = {
+  title: "Contact",
+};
+
 export default function page() {
   return (
     <section className="container max-w-5xl mt-16 py-16 mx-auto px-4">

@@ -2,6 +2,10 @@ import BkCards from "@/components/BkCards/BkCards";
 import { Books } from "@/utils/Constants";
 import Biography from "./Biography";
 
+export const metadata = {
+  title: "Biography",
+};
+
 export default function page() {
   return (
     <div className="mx-auto max-w-6xl mt-32 text-center p-4">

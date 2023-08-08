@@ -1,6 +1,10 @@
 import React from "react";
 import BookList from "./BookList";
 
+export const metadata = {
+  title: "Books",
+};
+
 export default function page() {
   return (
     <section className="p-6 sm:p-12 grid place-items-center gap-4 mt-16 max-w-7xl mx-auto">
