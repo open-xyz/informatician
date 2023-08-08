@@ -56,3 +56,7 @@
   background: linear-gradient(transparent, #ffffff);
   border-radius: 6px;
 }
+.alignment{
+  margin: auto;
+  text-align: center;
+}
