@@ -4,9 +4,9 @@ import { FaTimes } from "react-icons/fa";
 const FileUploadComponent = ({bookPdf, setBookPdf}) => {
 
   return (
-  <div className="py-5 px-10 w-[95%] lg:w-[60%] m-auto flex flex-col items-center justify-center rounded-lg shadow-[0_10px_15px_-3px_rgb(59,130,246,0.3)] border">
+  <div className="py-5 px-10 w-[95%] lg:w-[50%] m-auto flex flex-col items-center justify-center rounded-lg shadow-[0_10px_15px_-3px_rgb(59,130,246,0.3)] border">
      
-      <h2 className="text-xl font-bold mb-4">Upload Books</h2>
+      <h2 className="text-xl text-center font-bold mb-4">Upload Book</h2>
       <div className="border-2 rounded-lg my-5 p-5 sm:p-10 flex flex-col items-center justify-center">
         <input
           type="file"
@@ -20,7 +20,7 @@ const FileUploadComponent = ({bookPdf, setBookPdf}) => {
           htmlFor="upload-btn"
           className="text-center mb-5 cursor-pointer bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
         >
-          Select Books To Upload
+          Select Book To Upload
         </label>
         {bookPdf && (
           <p className="flex justify-center items-center rounded-md gap-5 bg-[#eff6ff] p-2 m-1">

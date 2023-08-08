@@ -19,12 +19,12 @@ const bookSchema = new Schema({
     required: true,
   },
   img: {
-    type: String,
+    type: File,
     default: "",
     required: true,
   },
   bookpdf: {
-    type: String,
+    type: File,
     default:"",
   },
   category:{
