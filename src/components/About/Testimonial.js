@@ -59,9 +59,9 @@ export default function Testimonial({ theme }) {
               <span className="testimoonial_name" style={{ color: theme === 'dark' ? '#fff' : "black" }}>{testimonial.name}</span>
               <span className="testimoonial_job">{testimonial.job}</span>
               <a
-                href={testimonial.github} // Replace 'testimonial.github' with the actual GitHub URL
+                href={testimonial.github}
                 target="_blank" 
-                rel="noopener noreferrer" // Recommended for security to prevent 'noopener' and 'noreferrer' vulnerabilities
+                rel="noopener noreferrer" 
               >
                 <i className='bx bxl-github' style={{ fontSize: '2rem' }}></i>
               </a>

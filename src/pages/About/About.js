@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "./About.css";
 import aboutUs from "../../assets/mainPages/aboutUs.webp";
 import Tilt from 'react-parallax-tilt';
-import { useMediaQuery } from "react-responsive";
+// import { useMediaQuery } from "react-responsive";
 import ScrollToTopButton from "../../components/ScrollButton/ScrollButton";
 import Feature from "../../components/About/Feature";
 import Testimonial from "../../components/About/Testimonial";
@@ -11,10 +11,8 @@ import AOS from "aos";
 import Contributors from "../../components/About/Contributors";
 import "aos/dist/aos.css";
 import '../../components/About/Feature.css'
-
 const About = (props) => {
-  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
-
+  // const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   useEffect(() => {
     AOS.init({
       once: false,
@@ -59,5 +57,4 @@ const About = (props) => {
     </div>
   );
 };
-
 export default About;
