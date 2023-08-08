@@ -1,3 +1,7 @@
+export const metadata = {
+  title: "Cookie",
+};
+
 export default function CookiePolicy() {
   return (
     <div className="py-20 mt-8">

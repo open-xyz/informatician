@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 
 import img1 from "@/public/assets/benefits/benefit-1.webp";
@@ -6,6 +5,10 @@ import img2 from "@/public/assets/benefits/benefit-2.webp";
 import img3 from "@/public/assets/benefits/benefit-3.webp";
 import img4 from "@/public/assets/benefits/benefit-4.webp";
 import img5 from "@/public/assets/benefits/benefit-5.webp";
+
+export const metadata = {
+  title: "Benefits",
+};
 
 export default function BenefitsOfReading(props) {
   return (
