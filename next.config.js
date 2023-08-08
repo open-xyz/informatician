@@ -13,6 +13,7 @@ const nextConfig = {
       "media.newyorker.com",
       "laurencecoupe.co.uk",
       "s-f.scribdassets.com",
+      "img.freepik.com",
       "avatars.githubusercontent.com",
       "images.weserv.nl",
       "img.icons8.com",
