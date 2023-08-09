@@ -8,6 +8,7 @@ import mystery from "@/public/assets/Genre/mystery.webp";
 const genreDetailsData = [
   {
     title: "Mystery",
+    slug: "mystery",
     image: mystery,
     description:
       "The Mystery genre keeps readers on the edge of their seats with its suspenseful narratives and captivating plot twists. It revolves around solving perplexing crimes, untangling intricate puzzles, and uncovering hidden secrets.",
@@ -19,6 +20,7 @@ const genreDetailsData = [
   },
   {
     title: "Romance",
+    slug: "romance",
     image: romance,
     description:
       "Romance novels are known for their exploration of love, passion, and emotional connections between characters. They depict heartwarming and often tumultuous relationships that captivate readers and evoke a range of emotions.",
@@ -30,6 +32,7 @@ const genreDetailsData = [
   },
   {
     title: "Science Fiction",
+    slug: "science",
     image: science,
     description:
       "Science Fiction is a genre that takes readers beyond the realm of reality, offering imaginative and futuristic narratives. It explores speculative ideas, advanced technology, and the impact of scientific advancements on society and individuals.",
@@ -41,6 +44,7 @@ const genreDetailsData = [
   },
   {
     title: "Thriller",
+    slug: "thriller",
     image: thriller,
     description:
       "The Thriller genre is synonymous with gripping suspense, adrenaline-pumping action, and unexpected plot twists. These books keep readers on the edge of their seats, holding their breath as they follow characters caught in dangerous and high-stakes situations.",
@@ -52,6 +56,7 @@ const genreDetailsData = [
   },
   {
     title: "Horror",
+    slug: "horror",
     image: horror,
     description:
       "Horror books aim to evoke fear and create a sense of dread in readers. They delve into the darkest corners of the human psyche, exploring supernatural entities, psychological terrors, and the macabre.",
@@ -63,6 +68,7 @@ const genreDetailsData = [
   },
   {
     title: "Biography",
+    slug: "biography",
     image: biography,
     description:
       "Biography is a genre that offers a glimpse into the lives of real people, providing a captivating exploration of their experiences, achievements, and challenges.",
