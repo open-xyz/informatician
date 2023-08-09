@@ -10,7 +10,7 @@ const Preloader = ({ onLoadingComplete }) => {
       setLoader(false);
       onLoadingComplete();
     }, 2000);
-  }, []);
+  });
 
   return loader ? (
     <div className="preloader">

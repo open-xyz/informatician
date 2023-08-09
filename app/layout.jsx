@@ -1,10 +1,7 @@
-/** @format */
 
 import "@/styles/globals.css";
 import { Inter } from "next/font/google";
-
-const Navbar = dynamic(() => import("@/components/Navbar/Navbar"));
-import dynamic from "next/dynamic";
+import Navbar from "@/components/Navbar/Navbar"
 import Footer from "@/components/Footer/Footer";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import ScrollToTopButton from "@/components/ScrollButton/ScrollButton";
