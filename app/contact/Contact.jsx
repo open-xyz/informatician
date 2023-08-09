@@ -38,7 +38,7 @@ export default function Contact() {
     });
 
     if (submitable) {
-      await fetch("https://informaticonserver.onrender.com/mail", {
+      await fetch("/api/mail", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

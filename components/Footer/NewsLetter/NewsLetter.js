@@ -3,8 +3,6 @@ import Image from 'next/image';
 import './NewsLetter.css';
 import React, { useState } from 'react';
 import { toast } from 'react-hot-toast';
-import { backendURL } from '@/utils/Constants';
-
 
 export default function NewsLetter() {
   const [isInputValid, setInputValid] = useState(false);
@@ -19,7 +17,7 @@ export default function NewsLetter() {
     setSubmitted(true);
     try {
       const response = await fetch(
-        `${backendURL}/api/addUser`,
+        "/api/newsletter/user",
         {
           method: "POST",
           headers: {

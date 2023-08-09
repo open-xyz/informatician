@@ -1,6 +1,7 @@
-import { Moon, SunMedium, } from 'lucide-react'
+import LightModeIcon from '@mui/icons-material/LightMode';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
 
 export const Icons = {
-  sun: SunMedium,
-  moon: Moon,
+  sun: LightModeIcon,
+  moon: DarkModeIcon,
 }
