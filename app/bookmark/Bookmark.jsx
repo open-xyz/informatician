@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useState } from "react";
 
 const Bookmark = () => {
@@ -7,19 +8,19 @@ const Bookmark = () => {
       id: 1,
       title: "Book 1 Title",
       description: "Book 1 Description",
-      imageUrl: "https://example.com",
+      imageUrl: "https://img.freepik.com/free-vector/hand-drawn-bookmark-template_23-2149336542.jpg?w=2000",
     },
     {
       id: 2,
       title: "Book 2 Title",
       description: "Book 2 Description",
-      imageUrl: "https://example.com",
+      imageUrl: "https://img.freepik.com/free-vector/hand-drawn-bookmark-template_23-2149336542.jpg?w=2000",
     },
     {
       id: 3,
       title: "Book 3 Title",
       description: "Book 3 Description",
-      imageUrl: "https://example.com",
+      imageUrl: "https://img.freepik.com/free-vector/hand-drawn-bookmark-template_23-2149336542.jpg?w=2000",
     },
     // Add more book items here
   ];
@@ -32,22 +33,22 @@ const Bookmark = () => {
   };
 
   return (
-    <div className="container mx-auto px-4">
+    <div className="container mx-auto px-4 mt-4">
       <div className="bookmarks-list grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {bookmarks.map((bookmark) => (
           <div
             key={bookmark.id}
             className="border border-gray-300 rounded-md p-4"
           >
-            <img
+            <Image
               src={bookmark.imageUrl}
               alt={bookmark.title}
               style={{
-                width: "100%",
-                height: "auto",
                 borderRadius: "0.5rem",
                 marginBottom: "1rem",
               }}
+              width={100}
+              height={100}
             />
             <h2
               style={{

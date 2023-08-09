@@ -6,6 +6,7 @@ import { useParams, useRouter } from "next/navigation";
 import { toast } from "react-hot-toast"
 import { validate, AuthErrorMessage } from "@/utils/validation"
 import { backendURL } from "@/utils/Constants";
+import { FaTimes } from "react-icons/fa";
 
 const AddBooks = () => {
     const id = useParams();
@@ -109,117 +110,160 @@ const AddBooks = () => {
         "Universe",
     ];
 
-    return (
-        !isLogIn ? <ShowLogin /> :
-            (<div className="py-8">
-                <div className="flex gap-6 max-md:flex-col items-center justify-center mt-20 md:mx-20">
-                    <div className="mx-8 sm:mx-8 sm:w-3/4 md:w-1/2 lg:w-[60%]  rounded-lg shadow-[0_10px_15px_-3px_rgb(59,130,246,0.3)] border">
-                        <h1 className="text-4xl font-bold text-center mt-8 mb-4">
-                            Add Books
-                        </h1>
-                        <form className="px-8 py-6 space-y-6 flex flex-col" onSubmit={handleSubmit}>
-                            <div>
-                                <label htmlFor="bookName">Enter the Book Name: </label>
-                                <input
-                                    className="w-[100%] mb-1 border border-gray-300 dark:border-gray-700 px-4 py-2 rounded"
-                                    type="text"
-                                    id="bookName"
-                                    name="bookName"
-                                    value={book.bookName}
-                                    onChange={handleChange}
-                                    placeholder="Book Name"
-                                    aria-label="Book Name"
-                                    required
-                                />
-                                {error.bookName && error.bookNameError && <AuthErrorMessage message={error.bookNameError} />}
-                            </div>
-                            <div>
-                                <label htmlFor="authorName">Enter the Author Name: </label>
-                                <input
-                                    className="w-[100%] border border-gray-300 dark:border-gray-700 px-4 py-2 rounded"
-                                    type="text"
-                                    id="authorName"
-                                    placeholder="Author Name"
-                                    name="authorName"
-                                    value={book.authorName}
-                                    onChange={handleChange}
-                                    aria-label="Author Name"
-                                    required
-                                />
-                                {error.authorName && error.authorNameError && <AuthErrorMessage message={error.authorNameError} />}
-                            </div>
+    return !isLogIn ? (
+      <ShowLogin />
+    ) : (
+      <div className="py-8">
+        <div className="flex gap-6 max-md:flex-col items-center justify-center mt-20 md:mx-20">
+          <div className="mx-8 sm:mx-8 sm:w-3/4 md:w-1/2 lg:w-[70%]  rounded-lg shadow-[0_10px_15px_-3px_rgb(59,130,246,0.3)] border">
+            <h1 className="text-4xl font-bold text-center mt-8 mb-4">
+              Add Books
+            </h1>
+            <form
+              className="px-8 py-6 space-y-6 flex flex-col"
+              onSubmit={handleSubmit}
+            >
+              <div>
+                <label htmlFor="bookName">Enter the Book Name: </label>
+                <input
+                  className="w-[100%] mb-1 border border-gray-300 dark:border-gray-700 px-4 py-2 rounded"
+                  type="text"
+                  id="bookName"
+                  name="bookName"
+                  value={book.bookName}
+                  onChange={handleChange}
+                  placeholder="Book Name"
+                  aria-label="Book Name"
+                  required
+                />
+                {error.bookName && error.bookNameError && (
+                  <AuthErrorMessage message={error.bookNameError} />
+                )}
+              </div>
+              <div>
+                <label htmlFor="authorName">Enter the Author Name: </label>
+                <input
+                  className="w-[100%] border border-gray-300 dark:border-gray-700 px-4 py-2 rounded"
+                  type="text"
+                  id="authorName"
+                  placeholder="Author Name"
+                  name="authorName"
+                  value={book.authorName}
+                  onChange={handleChange}
+                  aria-label="Author Name"
+                  required
+                />
+                {error.authorName && error.authorNameError && (
+                  <AuthErrorMessage message={error.authorNameError} />
+                )}
+              </div>
 
-                            <div>
-                                <label htmlFor="publisher">Enter the Publisher Name: </label>
-                                <input
-                                    className="w-[100%] border border-gray-300 dark:border-gray-700 px-4 py-2 rounded"
-                                    type="text"
-                                    id="publisher"
-                                    placeholder="Publisher"
-                                    name="publisher"
-                                    value={book.publisher}
-                                    onChange={handleChange}
-                                    aria-label="Publisher"
-                                    required
-                                />
-                                {error.publisher && error.publisherError && <AuthErrorMessage message={error.publisherError} />}
-                            </div>
+              <div>
+                <label htmlFor="publisher">Enter the Publisher Name: </label>
+                <input
+                  className="w-[100%] border border-gray-300 dark:border-gray-700 px-4 py-2 rounded"
+                  type="text"
+                  id="publisher"
+                  placeholder="Publisher"
+                  name="publisher"
+                  value={book.publisher}
+                  onChange={handleChange}
+                  aria-label="Publisher"
+                  required
+                />
+                {error.publisher && error.publisherError && (
+                  <AuthErrorMessage message={error.publisherError} />
+                )}
+              </div>
 
-                            <div>
-                                <label htmlFor="pages">Enter the Number of Pages: </label>
-                                <input
-                                    className="w-[100%] border border-gray-300 dark:border-gray-700 px-4 py-2 rounded"
-                                    type="number"
-                                    id="pages"
-                                    min="0"
-                                    placeholder="Pages"
-                                    value={book.pages}
-                                    name="pages"
-                                    onChange={handleChange}
-                                    aria-label="Number of Pages"
-                                    required
-                                />
-                                {error.pages && error.pagesError && <AuthErrorMessage message={error.pagesError} />}
-                            </div>
-                            <div>
-                                <label htmlFor="img">Enter the Book's Cover Image URL: </label>
-                                <input
-                                    className="w-[100%] border border-gray-300 dark:border-gray-700 px-4 py-2 rounded"
-                                    type="text"
-                                    id="img"
-                                    placeholder="Img Url"
-                                    name="img"
-                                    value={book.img}
-                                    onChange={handleChange}
-                                    aria-label="Image URL"
-                                    required
-                                />
-                            </div>
-                            <div>
-                                <label htmlFor="category">Select Book Category</label>
-                                <select id="category" className="w-[100%] border border-gray-300 dark:border-gray-700 px-4 py-2 rounded" value={book.category} onChange={handleChange} name="category" >
-                                    {categories.map((category, index) => (
-                                        <option key={index} value={category}>
-                                            {category}
-                                        </option>
-                                    ))}
-                                </select>
-                            </div>
-                            <Upload bookPdf={bookPdf} setBookPdf={setBookPdf} />
-                            <button
-                                className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
-                                type="submit"
-                                role="button"
-                                aria-label="Add Book"
-                            >
-                                Add Book
-                            </button>
-                        </form>
-                    </div>
-
+              <div>
+                <label htmlFor="pages">Enter the Number of Pages: </label>
+                <input
+                  className="w-[100%] border border-gray-300 dark:border-gray-700 px-4 py-2 rounded"
+                  type="number"
+                  id="pages"
+                  min="0"
+                  placeholder="Pages"
+                  value={book.pages}
+                  name="pages"
+                  onChange={handleChange}
+                  aria-label="Number of Pages"
+                  required
+                />
+                {error.pages && error.pagesError && (
+                  <AuthErrorMessage message={error.pagesError} />
+                )}
+              </div>
+              <div>
+                <label htmlFor="category">Select Book Category</label>
+                <select
+                  id="category"
+                  className="w-[100%] border border-gray-300 dark:border-gray-700 px-4 py-2 rounded"
+                  value={book.category}
+                  onChange={handleChange}
+                  name="category"
+                >
+                  {categories.map((category, index) => (
+                    <option key={index} value={category}>
+                      {category}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div className="flex justify-around w-100% gap-5 items-stretch content-center flex-col lg:flex-row">
+              <div className="py-5 px-10 w-[95%] lg:w-[50%] m-auto flex flex-col items-center justify-center rounded-lg shadow-[0_10px_15px_-3px_rgb(59,130,246,0.3)] border">
+                <h2 className="text-xl font-bold mb-4 text-center">Upload Book's Cover Image</h2>
+                <div className="border-2 rounded-lg my-5 p-5 sm:p-10 flex flex-col items-center justify-center">
+                  <input
+                    type="file"
+                    name="img"
+                    id="img"
+                    accept=".jpg, .jpeg, .png, .webp"
+                    onChange={(e) => setBook((prev)=>{
+                        return {...prev, img: e.target.files[0]}
+                    })}
+                    className="hidden"
+                    required
+                  />
+                  <label
+                    htmlFor="img"
+                    className="text-center mb-5 cursor-pointer bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+                  >
+                    Select Image To Upload
+                  </label>
+                  {book.img && (
+                    <p className="flex justify-center items-center rounded-md gap-5 bg-[#eff6ff] p-2 m-1">
+                      {book.img.name.slice(0, 21)}
+                      {book.img.name.length > 20 ? "..." : null}
+                      <FaTimes
+                        onClick={() => setBook((prev)=>{
+                            return {...prev, img: null}
+                        })}
+                        className="cursor-pointer"
+                      />
+                    </p>
+                  )}
                 </div>
-            </div>
-            ));
+
+                <p className="mt-0 text-center">
+                  Supported file types: .jpg, .jpeg, .png, and .webp
+                </p>
+              </div>
+              <Upload bookPdf={bookPdf} setBookPdf={setBookPdf} />
+              </div>
+              <button
+                className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+                type="submit"
+                role="button"
+                aria-label="Add Book"
+              >
+                Add Book
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    );
 };
 
 const ShowLogin = () => {
