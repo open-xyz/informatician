@@ -4,6 +4,9 @@ import thriller from "@/public/assets/Genre/thriller.webp";
 import horror from "@/public/assets/Genre/horror.webp";
 import science from "@/public/assets/Genre/science.webp";
 import mystery from "@/public/assets/Genre/mystery.webp";
+import fantasy from "@/public/assets/Genre/fantasy.jpeg";
+import historical from "@/public/assets/Genre/historical.jpeg";
+import adventure from "@/public/assets/Genre/adventure.jpeg";
 
 const genreDetailsData = [
   {
@@ -79,6 +82,42 @@ const genreDetailsData = [
         author: "Malcolm X and Alex Haley",
       },
       { title: "Steve Jobs", author: "Walter Isaacson" },
+    ],
+  },
+  {
+    title: "Fantasy",
+    slug: "fantasy",
+    image: fantasy,
+    description:
+      "Fantasy is a genre that invites readers into enchanting worlds filled with magic, mythical creatures, and epic quests. It sparks imagination and explores realms beyond reality.",
+    topBooks: [
+      { title: "The Lord of the Rings", author: "J.R.R. Tolkien" },
+      { title: "Harry Potter and the Sorcerer's Stone", author: "J.K. Rowling" },
+      { title: "A Song of Ice and Fire (Game of Thrones)", author: "George R.R. Martin" },
+    ],
+  },
+  {
+    title: "Historical Fiction",
+    slug: "historical",
+    image: historical,
+    description:
+      "Historical Fiction transports readers to different eras in history, offering a blend of real events and imaginative storytelling. It provides insights into past cultures, societies, and events.",
+    topBooks: [
+      { title: "The Book Thief", author: "Markus Zusak" },
+      { title: "All the Light We Cannot See", author: "Anthony Doerr" },
+      { title: "The Nightingale", author: "Kristin Hannah" },
+    ],
+  },
+  {
+    title: "Adventure",
+    slug: "adventure",
+    image: adventure,
+    description:
+      "Adventure novels take readers on thrilling journeys, often filled with daring escapades, exploration, and challenges. These stories ignite a sense of excitement and curiosity.",
+    topBooks: [
+      { title: "The Hobbit", author: "J.R.R. Tolkien" },
+      { title: "Treasure Island", author: "Robert Louis Stevenson" },
+      { title: "The Call of the Wild", author: "Jack London" },
     ],
   },
 ];
