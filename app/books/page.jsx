@@ -16,7 +16,121 @@ export default function page() {
           From Art to Universe , we have a lots of textbooks to offer you.
         </p>
       </div>
+
+      <form
+        className="max-w-xl w-full border-2 rounded-full"
+        aria-label="Book Search Form"
+      >
+        <div className="relative">
+          <input
+            id="default-search" style={{height:'3.5rem !important'}}
+            className="w-full px-5 py-2 rounded-full bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+            onChange={(event) => setSerachQuery(event.target.value)}
+            placeholder="Title / Author / ISBN"
+            required
+          />
+          <button
+            type="submit"
+            id="search-button-2" style={{height:'3.5rem !important'}}
+            onClick={handleClick}
+            className="absolute bg-gray-200  top-1/2  w-12 h-8 p-1  right-2 rounded-xl transform -translate-y-1/2"
+          >
+            <Image
+              loading="lazy"
+              className="w-full h-full"
+              width="10"
+              height="10"
+              src="/search-svgrepo-com.svg"
+              alt="Icon of a magnifying glass for search functionality"
+            />
+          </button>
+        </div>
+      </form>
+
+      <div
+        className={`cursor-pointer text-blue-600 my-2 font-medium transition-all duration-300 ${
+          showCategories ? "max-h-96" : "max-h-0"
+        }`}
+        onClick={toggleCategories}
+      >
+        {showCategories ? "Hide Categories" : "Select Categories"}
+      </div>
+
+      {showCategories && (
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {categories.map((category, index) => (
+            <div key={index}>
+              {category.map((link, linkIndex) => (
+                <a
+                  href="#"
+                  className="block p-1.5 no-underline mx-14 font-medium text-emerald-700"
+                  key={linkIndex}
+                >
+                  {link}
+                </a>
+              ))}
+            </div>
+          ))}
+        </div>
+      )}
+
+      <div className="sm:max-w-xl md:max-w-3xl lg:max-w-5xl mx-auto">
+        {filteredBooks.length === 0 ? (
+          hasSearched ? (
+            <div>No results found</div>
+          ) : null
+        ) : (
+          <BkCards books={filteredBooks} />
+        )}
+      </div>
+
+      <h3
+        id="sub-head"
+        className="text-2xl sm:text-3xl font-bold mt-12 mb-6 sm:mb-10 text-sky-700"
+      >
+        Quotes
+      </h3>
+
+      {loading ? (
+        <span class="loader"></span>
+      ) : (
+        <Swiper
+          slidesPerView={1}
+          spaceBetween={25}
+          loop={true}
+          autoplay={{ delay: 5000 }}
+          pagination={{ clickable: true }}
+          breakpoints={{
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
+            1024: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
+          }}
+          navigation={true}
+          className="space-y-12 w-full"
+        >
+          {quotes?.map((quote, index) => (
+            <SwiperSlide
+              key={index}
+              className="shadow-lg rounded-lg hover:shadow-md duration-150 w-[5rem]"
+            >
+              <Card
+                key={quote.id}
+                author={quote.author}
+                quote={quote.content}
+                category={quote.tags[0]}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      )}
+    </div>
       <BookList />
     </section>
+
   );
 }
