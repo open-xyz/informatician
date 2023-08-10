@@ -614,98 +614,110 @@ export const Books = [
     releaseDate: "Oct 17, 2001",
     language: "English",
   },
-  
 ];
-
-
 
 // -----Books Card Data-------//
 
 export const categories = [
-  ['Art','Biography','Buisness','children','classic','Christian'],
-  ['Comics','Comicbooks','Ebooks','Fantasy','Fiction','Novel'],
-  ['History','Horror','Music','Mystery','Non-fiction','Poetry'],
-  ['Psychology','Prejudice','Romance','Science','Thriller','Universe'],
+  ["Art", "Biography", "Buisness", "children", "classic", "Christian"],
+  ["Comics", "Comicbooks", "Ebooks", "Fantasy", "Fiction", "Novel"],
+  ["History", "Horror", "Music", "Mystery", "Non-fiction", "Poetry"],
+  ["Psychology", "Prejudice", "Romance", "Science", "Thriller", "Universe"],
 ];
 
 export const Quotes = [
   {
-      image:"https://lit216.pbworks.com/f/1363869393/stephen%20king.jpg",
-      title:"Stephen King",
-      quote:"If you don't have time to read, you don't have the time to write. Simple as that.",
+    image: "https://lit216.pbworks.com/f/1363869393/stephen%20king.jpg",
+    title: "Stephen King",
+    quote:
+      "If you don't have time to read, you don't have the time to write. Simple as that.",
   },
   {
-      image:"http://laurencecoupe.co.uk/wp-content/uploads/2018/01/kerouac-picture.jpg",
-      title:"Jack Kerouac",
-      quote:"One day I will find the right words, and they will be simple.",
+    image:
+      "http://laurencecoupe.co.uk/wp-content/uploads/2018/01/kerouac-picture.jpg",
+    title: "Jack Kerouac",
+    quote: "One day I will find the right words, and they will be simple.",
   },
   {
-      image:"https://media.newyorker.com/photos/59096d586552fa0be682ff3d/master/w_1920,c_limit/Brody-Saul-Bellow-Film-Critic.jpg",
-      title:"Saul Bellow",
-      quote:"You never have to change anything you got up in the middle of the night to write.",
+    image:
+      "https://media.newyorker.com/photos/59096d586552fa0be682ff3d/master/w_1920,c_limit/Brody-Saul-Bellow-Film-Critic.jpg",
+    title: "Saul Bellow",
+    quote:
+      "You never have to change anything you got up in the middle of the night to write.",
   },
   {
-    image: "https://images2.minutemediacdn.com/image/upload/c_fill,w_1080,ar_16:9,f_auto,q_auto,g_auto/shape%2Fcover%2Fsport%2Fgettyimages-2665140-a1c77ccabe8660fb5123c8b6c5741316.jpg",
+    image:
+      "https://images2.minutemediacdn.com/image/upload/c_fill,w_1080,ar_16:9,f_auto,q_auto,g_auto/shape%2Fcover%2Fsport%2Fgettyimages-2665140-a1c77ccabe8660fb5123c8b6c5741316.jpg",
     title: "Aldous Huxley",
-    quote: "Words can be like X-rays if you use them properly they'll go through anything. You read and you're pierced."
+    quote:
+      "Words can be like X-rays if you use them properly they'll go through anything. You read and you're pierced.",
   },
   {
-    image: "https://media.npr.org/assets/img/2015/03/13/ap070308060493-67009388c842c192821be288e72bbc06977b72ce-s400-c85.webp",
+    image:
+      "https://media.npr.org/assets/img/2015/03/13/ap070308060493-67009388c842c192821be288e72bbc06977b72ce-s400-c85.webp",
     title: "Anne Frank",
-    quote: "I can shake off everything as I write; my sorrows disappear, my courage is reborn."
+    quote:
+      "I can shake off everything as I write; my sorrows disappear, my courage is reborn.",
   },
   {
     image: "https://ychef.files.bbci.co.uk/1600x900/p09pxt8c.webp",
     title: "Sylvia Plath",
-    quote: "Let me live, love, and say it well in good sentences."
+    quote: "Let me live, love, and say it well in good sentences.",
   },
   {
-    image: "https://www.theparisreview.org/il/c625e7c0b9/large/JohnSteinbeck-thumb.jpg",
+    image:
+      "https://www.theparisreview.org/il/c625e7c0b9/large/JohnSteinbeck-thumb.jpg",
     title: "John Steinbeck",
-    quote: "Ideas are like rabbits. You get a couple and learn how to handle them, and pretty soon you have a dozen."
+    quote:
+      "Ideas are like rabbits. You get a couple and learn how to handle them, and pretty soon you have a dozen.",
   },
   {
-    image: "https://upload.wikimedia.org/wikipedia/en/c/c9/Madeleine_lengle.jpg",
+    image:
+      "https://upload.wikimedia.org/wikipedia/en/c/c9/Madeleine_lengle.jpg",
     title: "Madeleine L'Engle",
-    quote: "You have to write the book that wants to be written & if the book will be too difficult for grown-ups, then you write it for children."
-  },    
-  {
-    image: "https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcQOLm-wO7ASW0rjpzKi_J_e5J_zFr5W9xRYt9DBQA8Z4c18zD0OdawmPsFUENcfEArcVW6DG8eqlhQDDe8",
-    title: "Nelson Mandela",
-    quote: "Education is the most powerful weapon which you can use to change the world."
-  },    
-  {
-    image: "https://i.natgeofe.com/n/37c3c776-b8cb-4be1-988a-cf593c776b88/01-leonardo-da-vinci-book-talk_3x4.jpg",
-    title: "Leonardo da Vinci",
-    quote: "The mind once enlightened cannot again become dark."
-  },    
-  {
-    image: "https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcQ44y8GDrAqF3jd3uQMJsXYGoHvVCgehhiWfJxRVAIARHEroI-hPqMg3V7rBV3e6JFwjnxnHoc8ICrSK6o",
-    title: "Mark Twain",
-    quote: "I have never let my schooling interfere with my education."
+    quote:
+      "You have to write the book that wants to be written & if the book will be too difficult for grown-ups, then you write it for children.",
   },
   {
-    image: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT8unx4jVJh1Wku9vk5aTJeIyIJWNuIIgyphDlhwfSOXD1eNcao",
-    title: "Cicero",
-    quote: "A room without books is like a body without a soul."
-  },    
+    image:
+      "https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcQOLm-wO7ASW0rjpzKi_J_e5J_zFr5W9xRYt9DBQA8Z4c18zD0OdawmPsFUENcfEArcVW6DG8eqlhQDDe8",
+    title: "Nelson Mandela",
+    quote:
+      "Education is the most powerful weapon which you can use to change the world.",
+  },
   {
-    image: "https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcTvOW8CstkKErnexn85MahekKkrEYIAv44fu7HcgDOw6hnTbPJdmagIlds_fDOh8VZjUdkQ93-m5Iv4yXs",
+    image:
+      "https://i.natgeofe.com/n/37c3c776-b8cb-4be1-988a-cf593c776b88/01-leonardo-da-vinci-book-talk_3x4.jpg",
+    title: "Leonardo da Vinci",
+    quote: "The mind once enlightened cannot again become dark.",
+  },
+  {
+    image:
+      "https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcQ44y8GDrAqF3jd3uQMJsXYGoHvVCgehhiWfJxRVAIARHEroI-hPqMg3V7rBV3e6JFwjnxnHoc8ICrSK6o",
+    title: "Mark Twain",
+    quote: "I have never let my schooling interfere with my education.",
+  },
+  {
+    image:
+      "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT8unx4jVJh1Wku9vk5aTJeIyIJWNuIIgyphDlhwfSOXD1eNcao",
+    title: "Cicero",
+    quote: "A room without books is like a body without a soul.",
+  },
+  {
+    image:
+      "https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcTvOW8CstkKErnexn85MahekKkrEYIAv44fu7HcgDOw6hnTbPJdmagIlds_fDOh8VZjUdkQ93-m5Iv4yXs",
     title: "J.K. Rowling",
-    quote: "If you don't like to read, you haven't found the right book."
-  },{
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Matthew_Kelly_-_Living_Every_Day_with_Passion_and_Purpose_-_Headphone_shot.JPG/330px-Matthew_Kelly_-_Living_Every_Day_with_Passion_and_Purpose_-_Headphone_shot.JPG",
+    quote: "If you don't like to read, you haven't found the right book.",
+  },
+  {
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Matthew_Kelly_-_Living_Every_Day_with_Passion_and_Purpose_-_Headphone_shot.JPG/330px-Matthew_Kelly_-_Living_Every_Day_with_Passion_and_Purpose_-_Headphone_shot.JPG",
     title: "Matthew Kelly",
-    quote: "The more you know, the further you'll go."
-  }    
-]
-
-
-
-
+    quote: "The more you know, the further you'll go.",
+  },
+];
 
 // -----Join Page Data-------//
-
 
 export const benefitsData = [
   {
@@ -758,8 +770,6 @@ export const benefitsData = [
   },
 ];
 
-
-
 export const communityData = [
   {
     title: "Community",
@@ -787,8 +797,6 @@ export const communityData = [
   },
 ];
 
-
-
 export const employeesData = [
   {
     name: "Rohan Sharma",
@@ -804,7 +812,6 @@ export const employeesData = [
       "If you're motivated and persistent, your impact will definitely be felt by the company. There is nothing more rewarding than seeing your hard work turned into something fruitful that directly helps the company.",
   },
 ];
-
 
 export const positionsData = [
   {
@@ -837,9 +844,7 @@ export const positionsData = [
   },
 ];
 
-
 // -----Footer Data-------//
-
 
 export const footerItems = [
   [
@@ -847,28 +852,26 @@ export const footerItems = [
     { itemName: "Book Formats", itemLinks: "/formats" },
     { itemName: "Genre", itemLinks: "/genre" },
   ],
-    [
-      { itemName: "About Us", itemLinks: "/about" },
-      { itemName: "Our Team", itemLinks: "/team" },
-      { itemName: "Contact Us", itemLinks: "/contact" },
-      { itemName: "Join our team!", itemLinks: "/join" },
-    ],
-    [
-      { itemName: "Help/FAQ", itemLinks: "/faq" },
-      { itemName: "Accessibility", itemLinks: "/accessibility" },
-      { itemName: "Publishers", itemLinks: "/publishers" },
-      { itemName: "AdChoices", itemLinks: "/adchoices" },
-    ],
-    [
-      { itemName: "Privacy Policy", itemLinks: "/privacy" },
-      { itemName: "Terms & Conditions", itemLinks: "/terms" },
-      { itemName: "CopyRight", itemLinks: "/copyright" },
-      { itemName: "Cookie Preference", itemLinks: "/cookie" },
-    ],
-  ];
+  [
+    { itemName: "About Us", itemLinks: "/about" },
+    { itemName: "Our Team", itemLinks: "/team" },
+    { itemName: "Contact Us", itemLinks: "/contact" },
+    { itemName: "Join our team!", itemLinks: "/join" },
+  ],
+  [
+    { itemName: "Help/FAQ", itemLinks: "/faq" },
+    { itemName: "Accessibility", itemLinks: "/accessibility" },
+    { itemName: "Publishers", itemLinks: "/publishers" },
+    { itemName: "AdChoices", itemLinks: "/adchoices" },
+  ],
+  [
+    { itemName: "Privacy Policy", itemLinks: "/privacy" },
+    { itemName: "Terms & Conditions", itemLinks: "/terms" },
+    { itemName: "CopyRight", itemLinks: "/copyright" },
+    { itemName: "Cookie Preference", itemLinks: "/cookie" },
+  ],
+];
 
-  export const columnNames = ["Explore","About", "Support", "Legal"];
+export const columnNames = ["Explore", "About", "Support", "Legal"];
 
-  export const backendURL = "https://informaticonserver.onrender.com";
-
-  
+export const backendURL = "https://informaticonserver.onrender.com";

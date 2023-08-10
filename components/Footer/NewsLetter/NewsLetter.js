@@ -1,8 +1,8 @@
-"use client"
-import Image from 'next/image';
-import './NewsLetter.css';
-import React, { useState } from 'react';
-import { toast } from 'react-hot-toast';
+"use client";
+import Image from "next/image";
+import "./NewsLetter.css";
+import React, { useState } from "react";
+import { toast } from "react-hot-toast";
 
 export default function NewsLetter() {
   const [isInputValid, setInputValid] = useState(false);
@@ -16,33 +16,36 @@ export default function NewsLetter() {
     e.preventDefault();
     setSubmitted(true);
     try {
-      const response = await fetch(
-        "/api/newsletter/user",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ email: e.target.email.value }),
-        }
-      );
+      const response = await fetch("/api/newsletter/user", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email: e.target.email.value }),
+      });
 
       if (response.status === 200) {
-        toast.success("Subscribed", { position: 'top-center', autoClose: 3000, theme: 'colored' })
+        toast.success("Subscribed", {
+          position: "top-center",
+          autoClose: 3000,
+          theme: "colored",
+        });
       } else {
-        setSubmitted(false)
+        setSubmitted(false);
         toast.error("Failed to subscribe. Please try again!", {
           position: "top-right",
           autoClose: 5000,
-         
         });
       }
     } catch (error) {
-      setSubmitted(false)
+      setSubmitted(false);
       console.error(error);
-      toast.error("There was a problem with server, Please try again!", { position: 'top-center', autoClose: 3000, theme: 'colored' })
+      toast.error("There was a problem with server, Please try again!", {
+        position: "top-center",
+        autoClose: 3000,
+        theme: "colored",
+      });
     }
-
   };
 
   return (
@@ -51,10 +54,15 @@ export default function NewsLetter() {
       <div className="subscribe">
         <div
           className={`subscribe__image ${
-            isSubmitted ? 'subscribe__image--success' : ''
+            isSubmitted ? "subscribe__image--success" : ""
           }`}
         >
-          <Image src="https://user-images.githubusercontent.com/23297041/53905033-9570ad00-4058-11e9-809d-c090c0468264.png" alt="Subscribe Success" width={100} height={100}/>
+          <Image
+            src="https://user-images.githubusercontent.com/23297041/53905033-9570ad00-4058-11e9-809d-c090c0468264.png"
+            alt="Subscribe Success"
+            width={100}
+            height={100}
+          />
         </div>
         <div className="subscribe__text">
           <p className="heading">Stay tuned</p>
@@ -62,30 +70,35 @@ export default function NewsLetter() {
             A newsletter about books, reading, and writing.
           </p>
         </div>
-        <form className="form" id="form" onSubmit={handleSubmit} aria-label='Email Subscription Form'>
+        <form
+          className="form"
+          id="form"
+          onSubmit={handleSubmit}
+          aria-label="Email Subscription Form"
+        >
           <input
             type="email"
             name="email"
             placeholder="Enter your email"
             required
             className={`subscribe__input input ${
-              isSubmitted ? 'disabled' : ''
+              isSubmitted ? "disabled" : ""
             }`}
             onChange={handleInputChange}
             disabled={isSubmitted}
-            aria-label='Email'
+            aria-label="Email"
           />
           <button
             type="submit"
             value="Subscribe"
             className={`subscribe__btn btn ${
-              isInputValid ? 'btn--active' : ''
-            } ${isSubmitted ? 'btn--success' : ''}`}
+              isInputValid ? "btn--active" : ""
+            } ${isSubmitted ? "btn--success" : ""}`}
             disabled={isSubmitted}
-            id='btn'
-            aria-label='Subscribe'
+            id="btn"
+            aria-label="Subscribe"
           >
-            {isSubmitted ? "You're on the list! 👍" : 'Subscribe'}
+            {isSubmitted ? "You're on the list! 👍" : "Subscribe"}
           </button>
         </form>
       </div>
