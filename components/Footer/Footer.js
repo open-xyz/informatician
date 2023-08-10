@@ -11,14 +11,22 @@ const Footer = () => {
   const footerComponents = footerItems?.map((columnItems, index) => {
     return (
       <div key={index}>
-        <h2 className={`mb-6 text-m font-bold`} style={{ color:'aliceblue', fontSize: '1.3rem', borderBottom: '2.5px solid #0096FF', width:'66px'}}>{columnNames[index]}</h2>
+        <h2
+          className={`mb-6 text-m font-bold`}
+          style={{
+            color: "aliceblue",
+            fontSize: "1.3rem",
+            borderBottom: "2.5px solid #0096FF",
+            width: "66px",
+          }}
+        >
+          {columnNames[index]}
+        </h2>
         <ul className="font-medium">
           {columnItems.map((item, index) => {
             return (
               <li key={index} className="mb-4">
-                <Link href={item.itemLinks}>
-                  {item.itemName}
-                </Link>
+                <Link href={item.itemLinks}>{item.itemName}</Link>
               </li>
             );
           })}
@@ -56,10 +64,7 @@ const Footer = () => {
           <div className="copyright_footer p-6 mx-6 mt-2 flex flex-wrap max-sm:flex-wrap-reverse justify-center gap-8 sm:justify-between">
             <span className="text-sm font-bold text-blue-500 max-sm:text-center">
               © {year}{" "}
-              <Link
-                href="/"
-                className="hover:underline text-white"
-              >
+              <Link href="/" className="hover:underline text-white">
                 Informatician™
               </Link>
               . All Rights Reserved.

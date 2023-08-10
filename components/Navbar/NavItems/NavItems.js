@@ -1,21 +1,19 @@
-"use client"
+"use client";
 import "../Navbar.css";
 import { FaRegBookmark, FaSearch } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
-import { useSession, signOut } from 'next-auth/react'
+import { useSession, signOut } from "next-auth/react";
 import { useState } from "react";
 
-
 export default function NavItems(props) {
-  const { data:session } = useSession()
-  const [user, setUser] = useState(session?.user?.email)
+  const { data: session } = useSession();
+  const [user, setUser] = useState(session?.user?.email);
 
   const handleSignOut = () => {
     signOut();
     setUser(null);
-  }
-
+  };
 
   return (
     <div style={{}}>
@@ -37,7 +35,12 @@ export default function NavItems(props) {
         <li>
           <div className="search-container search-mobile-view">
             <form action="" className="search-bar">
-              <input type="text" placeholder="search..." name="q" className="bg-white" />
+              <input
+                type="text"
+                placeholder="search..."
+                name="q"
+                className="bg-white"
+              />
               <button type="submit">
                 <FaSearch className="text-gray-500 ml-2" />
               </button>
@@ -54,7 +57,9 @@ export default function NavItems(props) {
         <li>
           <Link
             href="/books"
-            className={props.pathname === "/books" ? "active" : "dark:text-white"}
+            className={
+              props.pathname === "/books" ? "active" : "dark:text-white"
+            }
             onClick={props.handleOptionClick}
           >
             Books
@@ -63,7 +68,9 @@ export default function NavItems(props) {
         <li>
           <Link
             href="/about"
-            className={props.pathname === "/about" ? "active" : "dark:text-white"}
+            className={
+              props.pathname === "/about" ? "active" : "dark:text-white"
+            }
             onClick={props.handleOptionClick}
           >
             About
@@ -72,7 +79,9 @@ export default function NavItems(props) {
         <li>
           <Link
             href="/contact"
-            className={props.pathname === "/contact" ? "active" : "dark:text-white"}
+            className={
+              props.pathname === "/contact" ? "active" : "dark:text-white"
+            }
             onClick={props.handleOptionClick}
           >
             Contact Us
@@ -81,12 +90,12 @@ export default function NavItems(props) {
         <li>
           <Link
             href="/login"
-            className={props.pathname === "/login" ? "active" : "dark:text-white"}
+            className={
+              props.pathname === "/login" ? "active" : "dark:text-white"
+            }
             onClick={props.handleOptionClick}
           >
-          {user ? (
-            <button onClick={handleSignOut}>Sign Out</button>
-          ) : "Login"} 
+            {user ? <button onClick={handleSignOut}>Sign Out</button> : "Login"}
           </Link>
         </li>
 

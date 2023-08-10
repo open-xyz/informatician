@@ -1,10 +1,10 @@
-'use client';
-import CardContent from './CardContent/CardContent';
-import { Navigation, Pagination, Autoplay } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import cardComponentData from './cardComponentData';
-import 'swiper/swiper-bundle.min.css';
-import 'swiper/swiper.min.css';
+"use client";
+import CardContent from "./CardContent/CardContent";
+import { Navigation, Pagination, Autoplay } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import cardComponentData from "./cardComponentData";
+import "swiper/swiper-bundle.min.css";
+import "swiper/swiper.min.css";
 
 export default function CgCards() {
   return (
