@@ -8,7 +8,7 @@ img {
 p {
   margin: 12px 0;
 }
-.my-2{
+.my-2 {
   text-align: center !important;
 }
 .section-heading {
@@ -97,7 +97,7 @@ p {
 .btn:focus {
   outline: none;
 }
-::placeholder { 
+::placeholder {
   color: white;
   opacity: 1;
 }

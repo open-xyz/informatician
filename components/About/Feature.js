@@ -1,9 +1,20 @@
-'use client'
+"use client";
 import React from "react";
-import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import { MdMenuBook, MdUpload, MdOutlineMoneyOff, MdPeople, MdEmail, MdDrafts, MdEmojiEvents, MdTimeline, MdMoreTime, MdPark } from "react-icons/md";
-import "./Feature.css"
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import {
+  MdMenuBook,
+  MdUpload,
+  MdOutlineMoneyOff,
+  MdPeople,
+  MdEmail,
+  MdDrafts,
+  MdEmojiEvents,
+  MdTimeline,
+  MdMoreTime,
+  MdPark,
+} from "react-icons/md";
+import "./Feature.css";
 
 export default function Feature(props) {
   return (

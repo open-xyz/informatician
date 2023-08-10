@@ -12,7 +12,7 @@ export default function Team() {
     });
     AOS.refresh();
   }, []);
-  
+
   return (
     <div className="w-11/12 flex flex-wrap mx-auto justify-center gap-12 items-center mt-28 mb-5 max-w-screen-2xl">
       <div className="" data-aos="fade-left" data-aos-duration="500">

@@ -1,4 +1,3 @@
-
 import Contributors from "./Contributors";
 import Team from "./Team";
 
@@ -14,4 +13,4 @@ export default function page() {
       <Contributors />
     </div>
   );
-};
+}

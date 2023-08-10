@@ -1,5 +1,5 @@
 /** @format */
-"use client"
+"use client";
 
 import "@/styles/globals.css";
 import { Inter } from "next/font/google";
@@ -12,11 +12,11 @@ import ScrollToTopButton from "@/components/ScrollButton/ScrollButton";
 import { Suspense } from "react";
 import Provider from "@/context/AuthContext";
 import { Toaster } from "react-hot-toast";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 
 // Import & exporting the metadata
 import { metadata } from "./metadata";
-export { metadata }
+export { metadata };
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -33,20 +33,19 @@ export default function RootLayout({ children }) {
         <Provider>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             {/* Add the Preloader component here */}
-      {loading ? (
-    <Preloader />
-  ) : (
-  <>
-   <Suspense fallback={<div>Loading...</div>}>
-  <Navbar />
-</Suspense>
-<Toaster />
-{children}
-<Footer />
-<ScrollToTopButton /></>
- )}
-
-            
+            {loading ? (
+              <Preloader />
+            ) : (
+              <>
+                <Suspense fallback={<div>Loading...</div>}>
+                  <Navbar />
+                </Suspense>
+                <Toaster />
+                {children}
+                <Footer />
+                <ScrollToTopButton />
+              </>
+            )}
           </ThemeProvider>
         </Provider>
       </body>

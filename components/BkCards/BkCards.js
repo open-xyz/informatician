@@ -1,11 +1,10 @@
-'use client'
+"use client";
 import { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper";
 import Link from "next/link";
 import CardContent from "./CardContent/CardContent";
 import { useSwiper } from "swiper/react";
-
 
 SwiperCore.use([Autoplay]);
 
