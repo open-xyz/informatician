@@ -1,8 +1,10 @@
-## INFORMATICIAN - An open source book reading platform
+# INFORMATICIAN - An Open Source Book Reading Platform
 
-- Welcome to Informatician, an open-source book platform where literature meets community, and knowledge knows no bounds. Our web application is designed to revolutionize the way you engage with books, offering a comprehensive book listing and reading experience similar to popular platforms like Kindle and Scribd.
-- The application goes beyond a mere reading experience, as it allows you to rate and review books, fostering a sense of community and sharing insights with fellow book enthusiasts.
-- You can explore a vast collection of books, search for your favourite titles, and even contribute by adding new books to the platform. Whether you're an avid reader, a literary connoisseur, or simply seeking new knowledge, Informatician is here to provide you with an exceptional platform to explore, learn, and connect.
+Welcome to Informatician, an open-source book platform where literature meets community, and knowledge knows no bounds. Our web application is designed to revolutionize the way you engage with books, offering a comprehensive book listing and reading experience similar to popular platforms like Kindle and Scribd.
+
+The application goes beyond a mere reading experience, as it allows you to rate and review books, fostering a sense of community and sharing insights with fellow book enthusiasts.
+
+You can explore a vast collection of books, search for your favorite titles, and even contribute by adding new books to the platform. Whether you're an avid reader, a literary connoisseur, or simply seeking new knowledge, Informatician is here to provide you with an exceptional platform to explore, learn, and connect.
 
 ---
 
@@ -29,10 +31,11 @@
 
 ## Tech Stack
 
-![reactjs](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![nodejs](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
-![expressjs](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
-![mongodb](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
+
 
 ## Note:
 
