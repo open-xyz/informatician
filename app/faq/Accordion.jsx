@@ -1,6 +1,6 @@
 "use client";
 
-import { MinusCircle, PlusCircle } from "lucide-react";
+// use client
 import { useState } from "react";
 
 export default function AccordionItem({ title, content }) {
@@ -27,11 +27,11 @@ export default function AccordionItem({ title, content }) {
             expanded ? "rotate-90" : "rotate-0"
           }`}
         >
-          {expanded ? <PlusCircle size={18} /> : <MinusCircle size={18} />}
+          {expanded ? "-" : "+"}
         </span>
       </button>
       <div
-        className={`mt-3 overflow-hidden  duration-300 ${
+        className={`mt-3 overflow-hidden duration-300 ${
           expanded ? "max-h-60" : "max-h-0"
         }`}
       >
