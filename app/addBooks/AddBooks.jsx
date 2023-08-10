@@ -12,6 +12,7 @@ const AddBooks = () => {
     const id = useParams();
     const navigate = useRouter();
     const [bookPdf, setBookPdf] = useState(null)
+    const [previewImg, setPreviewImg] = useState(null)
     const isLogIn = true;
 
     const [book, setBook] = useState({
@@ -43,6 +44,23 @@ const AddBooks = () => {
         }
     };
 
+    const handleBookImage = (e)=>{
+      const file = e.target.files[0];
+  
+      if (file) {
+        const reader = new FileReader();
+  
+        reader.onload = () => {
+          setPreviewImg(reader.result);
+        };
+  
+        reader.readAsDataURL(file);
+      }
+      setBook((prev)=>{
+        return {...prev, img: file}
+      })
+    }
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         let submitable = true;
@@ -53,7 +71,6 @@ const AddBooks = () => {
                 return;
             }
         });
-
 
         if (submitable) {
             if (!bookPdf) { toast.error("Please upload book."); return }
@@ -110,10 +127,26 @@ const AddBooks = () => {
         "Universe",
     ];
 
+    const showImage = ()=>{
+      document.getElementById("previewImage").classList.remove("hidden")
+      document.getElementById("previewImage").classList.add("block")
+    }
+
+    const closeImage = ()=>{
+      document.getElementById("previewImage").classList.remove("block")
+      document.getElementById("previewImage").classList.add("hidden")
+    }
+
+
     return !isLogIn ? (
       <ShowLogin />
     ) : (
       <div className="py-8">
+          <div id="previewImage" className="hidden fixed w-[100vw] h-[100vh] top-[0] bg-[#000000b8] p-[12%]">
+          <img src={previewImg} alt="Book Cover Image" className="m-auto w-[50vw] h-[60vh]"/>
+            
+              <FaTimes className="absolute z-1 right-8 text-white top-32 text-lg cursor-pointer" onClick={closeImage} />
+            </div>
         <div className="flex gap-6 max-md:flex-col items-center justify-center mt-20 md:mx-20">
           <div className="mx-8 sm:mx-8 sm:w-3/4 md:w-1/2 lg:w-[70%]  rounded-lg shadow-[0_10px_15px_-3px_rgb(59,130,246,0.3)] border">
             <h1 className="text-4xl font-bold text-center mt-8 mb-4">
@@ -219,10 +252,8 @@ const AddBooks = () => {
                     name="img"
                     id="img"
                     accept=".jpg, .jpeg, .png, .webp"
-                    onChange={(e) => setBook((prev)=>{
-                        return {...prev, img: e.target.files[0]}
-                    })}
                     className="hidden"
+                    onChange={handleBookImage}
                     required
                   />
                   <label
@@ -232,16 +263,22 @@ const AddBooks = () => {
                     Select Image To Upload
                   </label>
                   {book.img && (
+                    <div>
                     <p className="flex justify-center items-center rounded-md gap-5 bg-[#eff6ff] p-2 m-1">
                       {book.img.name.slice(0, 21)}
                       {book.img.name.length > 20 ? "..." : null}
                       <FaTimes
-                        onClick={() => setBook((prev)=>{
+                        onClick={() => {
+                          setBook((prev)=>{
                             return {...prev, img: null}
-                        })}
+                        });
+                          setPreviewImg(null);
+                        }}
                         className="cursor-pointer"
                       />
                     </p>
+                    <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded w-[100%] mt-[10px]"  type="button" onClick={showImage}>Preview Image</button>
+                    </div>
                   )}
                 </div>
 
