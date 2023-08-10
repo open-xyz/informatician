@@ -32,6 +32,7 @@
   box-shadow: 1px 2px 8px 3px lightgray;
   transform: scale(1.005);
 }
+
 .cg-card:hover p {
   color: rgb(14, 13, 13);
 }
@@ -41,4 +42,8 @@
   width: 100px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+html, body {
+  scroll-behavior: smooth;
 }
