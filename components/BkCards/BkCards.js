@@ -87,7 +87,7 @@ export default function BkCards(props) {
                 },
               }}
               modules={[Autoplay, Pagination, Navigation]}
-              className="dark:bg-[#161313] h-[30rem]"
+              className="dark:bg-[#151212] h-[30rem]"
             >
               <GhostPrevButton refprop={prevButton} />
               {props.books?.map((book) => {
